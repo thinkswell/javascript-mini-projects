@@ -1,0 +1,71 @@
+@font-face {
+  font-family: my-font;
+  src: url("./font/TLLeChatNoir.ttf");
+}
+
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: inherit;
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("back.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pads {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.key {
+  display: flex;
+  flex-direction: column;
+  width: 9.5rem;
+  height: 9.5rem;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 2.5px solid rgba(94, 92, 92, 0.651);
+  background-color: rgba(179, 178, 178, 0.295);
+  margin: 1rem 1rem;
+  color: rgb(187, 180, 180);
+  text-shadow: 0 0 0.5rem black;
+  transition: all 0.08s;
+  border-radius: 0.5rem;
+}
+
+.active {
+  transform: scale(1.1);
+  color: rgb(92, 2, 165);
+  text-shadow: 0 0 0.5rem rgb(92, 2, 165);
+  border: 2px solid rgb(70, 44, 131);
+  box-shadow: 0 0 5rem rgb(92, 2, 165);
+}
+
+p {
+  font-size: 4.5rem;
+  font-family: my-font, sans-serif;
+}
+footer {
+  font-family: monospace;
+  font-size: 2.3rem;
+  text-shadow: 0 0rem 0.8rem rgb(0, 0, 0);
+}
