@@ -1,0 +1,110 @@
+<html>
+
+<head>
+    <title>Random quotes</title>
+    <link rel="icon" href="thought.jpg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .header{
+font-family:Monotype Corsiva;
+font-size:50px;
+text-align:center;
+}
+body.hello{
+background-color:black;
+  
+  background-size: cover;
+}
+
+}
+footer{
+text-align:center;
+}
+.card{
+box-shadow:0 4px 8px;
+color:black;
+width:auto;
+height:auto;
+background-color:rgb(68, 182, 138);
+text-align:center;
+  opacity:0.8;
+  border-radius:30px;
+}
+.card:hover{
+box-shadow:0 8px 16px ;
+}
+
+#font{
+font-size:27px;
+opacity:0.7;
+}
+.fa:hover{
+opacity:1.0;
+}
+.quote{
+padding:20px;
+font-family:Monotype Corsiva;
+font-size:30px;
+}
+.author{
+    padding:20px;
+font-family:Monotype Corsiva;
+font-size:24px;
+}
+.button{
+    color:black;
+    background-color: rgb(68, 182, 138);
+}
+.button:hover{
+    background-color: rgb(8, 26, 19);
+    color:white;
+}
+.bulb{
+    border: 5;
+    border-radius: 30%;
+    border-color: white;
+}
+    </style>
+</head>
+
+<body class="hello">
+    <div class="container">
+        <center>
+            <h1 class="header" style="color:white">
+                 <u>Random Quote Machine</u></h1>
+        </center>
+        </br>
+        <center>
+        <img src="bulb.jpg" height="200" width="200" class="bulb">
+        </center>
+        </br>
+        </br>
+
+        <center>
+            <div class="card">
+                <p id="quote" class="quote"></p>
+                <p id="author" class="author"></p>
+            </div>
+        </center>
+        <center>
+            <ul class="list-inline">
+                <button class="button" id="get-quote">
+                    <i class="fa fa-quote-left"></i>&nbsp;&nbsp;Next Quote&nbsp;&nbsp;<i class="fa fa-quote-right"></i></button>
+                
+            </ul>
+
+
+          
+        </center>
+        <center>
+          
+        </center>
+        <script src="quote.js"></script>
+    </div>
+</body>
+
+</html>
