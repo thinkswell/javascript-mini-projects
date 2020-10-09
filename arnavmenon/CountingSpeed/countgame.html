@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Speedcount Game</title>
+      <link rel="stylesheet" href="style.css" />
+
+ </head>
+
+
+  <body>
+
+    <audio id="clicksound">
+        <source src="btnsound.mp3" type="audio/mpeg">
+        <source src="sound.wav">
+          Your browser does not support this audio type.
+    </audio>
+
+
+    <h1>
+      Speedcounter
+    </h1>
+
+<main>
+
+<p class="diffchoose">Choose Difficulty:
+
+  <span class="diffchoose">
+   <input type="radio" id="easy" name="diff" onclick="toeasy()">
+
+   <label for="easy">Easy</label>
+ </span>
+
+ <span class="diffchoose">
+   <input type="radio" id="hard" name="diff" onclick="tohard()">
+   <label for="hard">Hard</label>
+ </span>
+</p>
+    <p class="text">
+      Click numbers as fast as you can
+    </p>
+    <p class="scroll">
+      (Scroll down to see leaderboard)
+    </p>
+
+<p class="plscentre">
+<div id="buttongrid">
+<div class="btns">
+      <button id="b1" class="button" onclick="btclick(this)">1</button>
+      <button id="b2" class="button" onclick="btclick(this)">2</button>
+      <button id="b3" class="button" onclick="btclick(this)">3</button>
+      <button id="b4" class="button" onclick="btclick(this)">4</button>
+</div>
+
+
+<div class="btns">
+      <button id="b5" class="button" onclick="btclick(this)">5</button>
+      <button id="b6" class="button" onclick="btclick(this)">6</button>
+      <button id="b7" class="button" onclick="btclick(this)">7</button>
+      <button id="b8" class="button" onclick="btclick(this)">8</button>
+</div>
+
+
+<div class="btns">
+      <button id="b9" class="button" onclick="btclick(this)">9</button>
+      <button id="b10" class="button" onclick="btclick(this)">10</button>
+      <button id="b11" class="button" onclick="btclick(this)">11</button>
+      <button id="b12" class="button" onclick="btclick(this)">12</button>
+</div>
+</div>
+</p>
+
+
+<p style="clear:both" class="text" ><u>Time Taken</u></p>
+
+<div id="demo">0</div>
+
+<p class="plscentre">
+  <button id="reset" onClick="window.location.reload()">New Game</button>
+</p>
+
+<h3 id="lbsign"><u>Leaderboard</u></h3>
+<p class="plscentre">
+
+  <div class="lbd">1. <span id="p1"></span></div>
+  <div class="lbd">2. <span id="p2"></span></div>
+  <div class="lbd">3. <span id="p3"></span></div>
+  <div class="lbd">4. <span id="p4"></span></div>
+  <div class="lbd">5. <span id="p5"></span></div>
+
+</p>
+
+</main>
+
+
+
+ <script src="main.js"></script>
+
+</body>
+
+</html>
