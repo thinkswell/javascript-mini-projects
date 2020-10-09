@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>VoiceBox</title>
+</head>
+<body>
+
+    <div id="container">
+
+        <div id="info">
+            <p>Click the button and say move upwards/move downwards/move left/move right!</p>
+            <button id='entercommand'>Enter Command</button>
+            <p>Command:&nbsp&nbsp<span id="command" style="color: aqua;"></span></p>
+        </div>
+
+    <canvas></canvas>
+
+    </div>
+
+    
+    <script>
+
+        var givencommand = document.getElementById("command");
+
+        var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+        var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
+
+        var grammar = '#JSGF V1.0;'
+
+        var recognition = new SpeechRecognition();
+        var speechRecognitionList = new SpeechGrammarList();
+        speechRecognitionList.addFromString(grammar, 1);
+        recognition.grammars = speechRecognitionList;
+        recognition.lang = 'en-US';
+        recognition.interimResults = false;
+
+        
+
+        const canvas = document.querySelector('canvas');
+        const ctx = canvas.getContext('2d');
+
+        const width = canvas.width = 900;
+        const height = canvas.height = 600;
+        const offset=40;
+
+        var xcoord=width/2,ycoord=height/2;
+
+
+        function drawBox(x,y){
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = 'rgba(25, 0, 50, 1)';
+        ctx.fillRect(0, 0, width, height);
+        ctx.fillStyle = 'rgba(256, 0, 0, 1)';
+        ctx.fillRect(x-20, y-20, 40, 40);
+
+        }
+
+
+        drawBox(xcoord,ycoord);
+
+        recognition.onresult = function(event) {
+
+            var last=event.results.length-1;
+            var instruction=event.results[last][0].transcript;
+            givencommand.textContent=instruction;
+
+            if(instruction.toLowerCase()==='move upwards'||instruction.toLowerCase().includes('upwards')){
+                ycoord-=offset;
+                drawBox(xcoord,ycoord);
+
+            }
+            else if (instruction.toLowerCase()==='move downwards'||instruction.toLowerCase().includes('downwards')){
+                ycoord+=offset;
+                drawBox(xcoord,ycoord);
+            }
+            else if (instruction.toLowerCase()==='move left'||instruction.toLowerCase().includes('left')){
+                xcoord-=offset;
+                drawBox(xcoord,ycoord);
+            }
+            else if (instruction.toLowerCase()==='move right'||instruction.toLowerCase().includes('right')){
+                xcoord+=offset;
+                drawBox(xcoord,ycoord);
+            }
+
+        };
+
+        recognition.onspeechend = function() {
+
+            recognition.stop();
+        };
+
+        recognition.onerror = function(event) {
+
+            givencommand.innerHTML='Error';
+        } 
+               
+
+        document.getElementById("entercommand").addEventListener('click', function(){
+
+            givencommand.innerHTML='';
+            recognition.start();
+
+        });
+
+
+    </script>
+</body>
+</html>
