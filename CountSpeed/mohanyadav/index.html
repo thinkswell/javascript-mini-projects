@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Speed App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./assests/speedometer.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-wrapper">
+        <h1>Calculate Speed</h1>
+        <div class="input-wrapper">
+            <input type="number" name="distance" id="distance" placeholder="Distance in meters *">
+            <div class="quantity-section">
+                <p>meters</p>
+            </div>
+        </div>
+        
+        <div class="input-wrapper">
+            <input type="number" name="time" id="time" placeholder="Time in seconds *">
+            <div class="quantity-section">
+                <p>seconds</p>
+            </div>
+        </div>
+
+        <h3 class="final-answer"></h3>
+            
+        <button class="submit-btn" id="calculate-btn">Calculate</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
