@@ -49,21 +49,23 @@ function checkAnswer(currentLevel) {
             $("body").removeClass("game-over");
         }, 200); // 200 milliseconds
         $("#level-title").text("You Lose!");
-        $(".again").text("Press 'Start' to play again.");
+        // $(".again").text("Press 'Start' to play again.");
         score();
-        startOver();
         setTimeout(function () {
             restartGame();
-        }, 1100);
+        }, 1200);
     }
 }
 
 function restartGame() {
-    let restart = confirm("Restart the game?");
+    let restart = confirm("Your score - "+temp+"\nRestart the game?");
     if (restart) {
+        startOver();
         restartingGame();
     } else {
         $("#level-title").text("Thanks for playing!");
+        started = false;
+        startOver();
     }
 }
 
@@ -121,7 +123,7 @@ function score() {
     $('#highestLevel').text("Your previous score: " + temp);
 }
 
-// How to play info
+// (How to play) Instructions.
 const info = document.getElementById("instruction");
 const close = document.getElementById("close");
 const card = document.getElementById("card");
