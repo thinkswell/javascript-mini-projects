@@ -1,0 +1,84 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;700&family=Pragati+Narrow&family=Quicksand:wght@400;500;600&display=swap');
+*{
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+h1{
+    text-transform: uppercase;
+    font-size: 50px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+    margin-top: 100px;
+    height: 350px;
+    /* grid-column-gap: 50% 50%; */
+}
+#imagen{
+    height: 320px;
+    
+}
+#opciones{
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+input{
+    margin: 15px;
+}
+#opcion{
+    width: 230px;
+}
+.btn{
+    width: 230px;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: black;
+    border:1px solid rgb(17, 141, 163);
+    color: white;
+    font-size: 16px;
+}
+.btn:hover{
+    background-color: rgb(17, 141, 163);
+    color: white;
+}
+section{
+    display: inline-grid;
+    border: 1px solid black;
+    justify-content: center;
+    align-content: center;
+    margin-top: 50px;
+    padding: 10px;
+}
+.resultado{
+    display: grid;
+    height: 300px;
+    grid-gap: 1rem;
+    grid-template-columns: 3fr 1fr 3fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-content: center;
+    margin-top: 40px;
+}
+
+.info{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.infoTotal{
+    background-color: rgb(160, 142, 142);
+    padding: 2px;
+}
+
+#total{
+    grid-column: 1 / 3;
+}
+
+#usuario, #maquina{
+    text-transform: uppercase;
+}

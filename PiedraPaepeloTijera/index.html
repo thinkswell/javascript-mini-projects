@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <title>Piedra Papel o Tijera</title>
+</head>
+<body>
+    <h1>Piedra, Papel o Tijera</h1>
+    <h2>Desafie a la maquina</h2>
+    <div class="container">
+        <div id="imagen">
+            <img src="IMAGENES/piedra.png" alt="" id="jugada">
+        </div>
+        <div id="opciones">
+            <h3>OPCIONES:</h3>
+            <label><input type="radio" name="opcion" class="opcion" value="1" checked onfocus="CambiarImagen(1)">Piedra: 1</label><br>
+            <label><input type="radio" name="opcion" class="opcion" value="2" onfocus="CambiarImagen(2)">Papel: 2</label><br>
+            <label><input type="radio" name="opcion" class="opcion" value="3" onfocus="CambiarImagen(3)">Tijera: 3</label><br>
+            <label>Ingrese el numero de su jugada: <br><input type="numbre" name="opcion" id="opcion" min="1" max="3" placeholder="Ej: 1"></label><br>
+            <button class="btn" onclick="confirmaJuego();">Jugar!</button>
+        </div>
+    </div>
+    <section>
+        <div class="resultado">
+            <div><img src="IMAGENES/icognito.png" alt="" id="incognitoUsuario"></div>
+            <div><h3>VS</h3 id="vs"></div>
+            <div><img src="IMAGENES/icognito.png" id="incognitoMaquina"></div>
+        </div>
+        <div class="info">
+            <h4 id="usuario">Tu jugada: </h4>
+            <h4 id="maquina">Jugada de la maquina: </h4>
+        </div>
+        <div class="infoTotal"> 
+            <h3 id="total">RESULTADO: </h3>
+        </div>
+
+    </section>
+    
+    
+    
+    <script src="JS/Juego.js"></script>
+</body>
+</html>
