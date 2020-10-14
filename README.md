@@ -7,7 +7,7 @@
 ### Steps to contribute
 # 👉 Fork this repository
 # 👉 Clone the repository
-# 👉 Create a branch
+# 👉 Create a branch ```projectname-username-branch```
 # 👉 Add your projects in a new directory, the name of directory should be your ```ProjectName/USERNAME```
 # 👉 Add ```One project``` at a time
 # 👉 Add & commit
