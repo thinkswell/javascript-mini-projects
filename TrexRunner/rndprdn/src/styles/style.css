@@ -12,6 +12,14 @@ body {
   text-align: center;
 }
 
+.intro {
+  position: absolute;
+  font-size: 24px;
+  left: 50%;
+  top: 100px;
+  transform: translateX(-50%);
+}
+
 .game {
   position: relative;
   width: 100%;
