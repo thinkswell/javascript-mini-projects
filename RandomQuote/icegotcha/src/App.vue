@@ -1,16 +1,19 @@
 <template>
   <div id="app" class="full-height">
     <QuoteArea />
+    <RefreshButton />
   </div>
 </template>
 
 <script>
 import QuoteArea from './components/QuoteArea.vue'
+import RefreshButton from './components/RefreshButton'
 
 export default {
   name: 'App',
   components: {
-    QuoteArea
+    QuoteArea,
+    RefreshButton
   }
 }
 </script>
@@ -18,7 +21,6 @@ export default {
 <style>
 html, body {
   height: 100%;
-  overflow: hidden;
 }
 
 body {

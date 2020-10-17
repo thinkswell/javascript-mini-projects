@@ -2,17 +2,33 @@
   <div id="quote-area">
     <span class="message">{{ message }}</span>
     <span class="author">{{ author }}</span>
-    <button class="btn">Find New Quote</button>
   </div>
 </template>
 
 <script>
+const COR_PROXY = 'https://cors-anywhere.herokuapp.com/';
+
 export default {
   name: 'QuoteArea',
   data () {
     return {
-      message: 'Message',
-      author: 'Author'
+      message: 'Loading Quote...',
+      author: ''
+    }
+  },
+  mounted () {
+    this.setQuote()
+  },
+  methods: {
+    setQuote: async function () {
+      const response = await fetch(`${COR_PROXY}https://zenquotes.io/api/random`)
+      if (response.ok) {
+        const data = await response.json()
+        this.message = `"${data[0].q}"`
+        this.author = data[0].a
+      } else {
+        this.message = 'Can not random quote. Please try again.'
+      }
     }
   }
 }
@@ -33,30 +49,10 @@ export default {
 }
 
 #quote-area .message {
-  font-size: calc(72px + 1vw);
+  font-size: calc(48px + 1vw);
 }
 
 #quote-area .author {
-  font-size: calc(36px + 1vw);
-}
-
-.btn {
-  background-color: #2e70ff;
-  border: 3px solid white;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  font-size: calc(16px + 1vw);
-  margin: 4px 2px;
-  text-decoration: none;
-  opacity: 1;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: transparent;
-  border: 3px solid #2e70ff;
-  color: #2e70ff;
+  font-size: calc(24px + 1vw);
 }
 </style>
