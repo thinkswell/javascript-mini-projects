@@ -1,5 +1,5 @@
 <template>
-  <div id="quote-area">
+  <div id="quote-area" class="flex-content">
     <span class="message">{{ message }}</span>
     <span class="author">{{ author }}</span>
   </div>
@@ -35,24 +35,15 @@ export default {
 </script>
 
 <style scoped>
-#quote-area {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 100px;
-  height: 50%;
-}
-
 #quote-area span {
   margin: 20px;
 }
 
 #quote-area .message {
-  font-size: calc(48px + 1vw);
+  font-size: 4vw;
 }
 
 #quote-area .author {
-  font-size: calc(24px + 1vw);
+  font-size: 2vw;
 }
 </style>

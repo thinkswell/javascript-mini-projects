@@ -1,7 +1,12 @@
 <template>
-  <div id="app" class="full-height">
-    <QuoteArea />
-    <RefreshButton />
+  <div id="app" class="flex-content">
+    <div id="content" class="flex-content">
+      <QuoteArea />
+      <RefreshButton />
+    </div>
+    <div id="credit">
+        Quotes From: <a href="https://zenquotes.io/">zenquotes.io</a>
+    </div>
   </div>
 </template>
 
@@ -13,22 +18,26 @@ export default {
   name: 'App',
   components: {
     QuoteArea,
-    RefreshButton
+    RefreshButton,
   }
 }
 </script>
 
 <style>
 html, body {
-  height: 100%;
-}
-
-body {
+    height: 100%;
     background: #000000;
 }
 
-.full-height {
-  height: 100%;
+a {
+    color: #ffffff;
+}
+
+.flex-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #app {
@@ -36,9 +45,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
+}
+
+#content {
+  flex: 1 0 auto;
+}
+
+#credit {
+  flex-shrink: 0;
+  width: 100%;
 }
 </style>
