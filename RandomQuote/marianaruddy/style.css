@@ -1,0 +1,21 @@
+body {
+    font-family: sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    max-width: fit-content;
+    padding: 8px;
+    background-color: aliceblue;
+    color: cadetblue;
+    border: 1px solid cadetblue;
+}
+
+button:hover {
+    cursor: pointer;
+}
