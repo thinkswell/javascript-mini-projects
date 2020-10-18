@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+*{
+    outline: none;
+    box-sizing: border-box;
+    box-shadow: none;
+}
+
+body{
+    padding: 0;
+    margin : 0;
+    background-image : url("https://source.unsplash.com/random/1920x1080");
+    background-size : cover;
+    background-repeat: no-repeat;
+}
+
+.main-box{
+    width : 50%;
+    padding : 30px;
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+
+}
