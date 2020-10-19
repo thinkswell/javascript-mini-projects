@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Web Clock</title>
+  </head>
+  <body>
+    <div class="App">
+      <div class="clock">
+        <div class="hand sec"></div>
+        <div class="hand min"></div>
+        <div class="hand hrs"></div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const secHand = document.querySelector(".sec");
+    const minHand = document.querySelector(".min");
+    const hrsHand = document.querySelector(".hrs");
+
+    function setTime() {
+      const now = new Date();
+
+      const sec = now.getSeconds();
+      const min = now.getMinutes();
+      const hrs = now.getHours();
+
+      console.log(`${hrs}   ${min}   ${sec}`);
+
+      const secDegree = (sec / 60) * 360;
+      const minDegree = (min / 60) * 360;
+      const hrsDegree = (hrs / 12) * 360;
+
+      secHand.style.transform = `rotate(${secDegree + 90}deg)`;
+      minHand.style.transform = `rotate(${minDegree}deg)`;
+      hrsHand.style.transform = `rotate(${hrsDegree}deg)`;
+    }
+    setInterval(setTime, 1000);
+  </script>
+</html>
