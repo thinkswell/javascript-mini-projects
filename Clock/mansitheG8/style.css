@@ -1,0 +1,45 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: inherit;
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.clock {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  border: 2rem solid rgb(255, 177, 8);
+  position: relative;
+  transform: rotate(90deg);
+}
+.hand {
+  position: absolute;
+  width: 50%;
+  height: 1rem;
+  background: rgb(255, 177, 8);
+  top: 50%;
+  transform-origin: 100%;
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 0 50%);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1.2);
+  border-radius: 0 1rem 1rem 0;
+}
