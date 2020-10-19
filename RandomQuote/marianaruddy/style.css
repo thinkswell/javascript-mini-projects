@@ -1,16 +1,29 @@
-body {
-    font-family: sans-serif;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.wrapper {
-    display: flex;
+body {
+    font-family: Snell Roundhand, cursive;
+}
+
+.content-wrapper {
+    display: inline-flex;
     align-items: center;
     flex-direction: column;
+    height: 100vh;
+}
+
+.wrapper{
+    background-image: url("https://picsum.photos/2000/1000?grayscale");
+    display: flex;
+    justify-content: center;
 }
 
 button {
     max-width: fit-content;
-    padding: 8px;
+    margin-top: 16px;
+    padding: 12px;
     background-color: aliceblue;
     color: cadetblue;
     border: 1px solid cadetblue;
@@ -18,4 +31,21 @@ button {
 
 button:hover {
     cursor: pointer;
+}
+
+#quote {
+    font-style: italic;
+    margin: 20px 0;
+}
+
+#quote:before {
+    content: "\0022";
+}
+
+#quote:after {
+    content: "\0022";
+}
+
+#author {
+    align-self: flex-end;
 }
