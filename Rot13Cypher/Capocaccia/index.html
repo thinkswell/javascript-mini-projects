@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Rot13</title>
+    <link rel="stylesheet" type="text/css" href="./normalize.css">
+    <link rel="stylesheet" type="text/css" href="./skeleton-legacy.css">
+    <link rel="stylesheet" type="text/css" href="./barebones.css">
+  </head>
+  <body>
+    
+    <div class="container">
+      <div class="grid-container halves">
+        <div>
+          <h1>Rot13 Encrypt</h1>
+          <textarea onkeydown="rot13()" placeholder="Enter Message To Encrypt" id="myInput"></textarea>
+          <div>
+            Your encrypted message:             
+            <p id="myMessage"></p>
+          </div>
+        </div>
+        <div>
+          <h1>Rot13 Decrypt</h1>
+          <textarea id="toDecrypt" oninput="decryptMe()" placeholder="Enter Message to Decrypt"></textarea>
+          <div>
+            Your de-crypted message:             
+            <p id="myDecryptedMessage"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src='./index.js'></script>
+</html>

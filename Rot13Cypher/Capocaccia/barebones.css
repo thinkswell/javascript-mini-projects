@@ -1,0 +1,473 @@
+/*
+* Barebones V3
+* Copyright 2019 Steve Cochran
+*
+* Based of Skeleton by Dave Gamache
+*
+* Free to use under the MIT license.
+*/
+
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Media Breakpoints
+- Variables
+- Grid
+- Base Styles
+- Typography
+- Links
+- Buttons
+- Forms
+- Lists
+- Code
+- Tables
+- Spacing
+- Utilities
+- Clearing
+- Media Queries
+*/
+
+/* ENV Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Media breakpoint variables for use in media queries
+* 	Note: this section is currently commented out pending release of 
+* 	final CSS env() spec
+*  Breakpoints based on 
+*	 https://medium.freecodecamp.org/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862
+* 
+*/
+
+
+
+/* CSS Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+
+	/* default theme: light background, dark text, blue accent */
+	--theme-hue: 0;					/* white */
+	--accent-hue: 194;			/* blue */
+
+	--text-color-richer: hsl(var(--theme-hue), 0%, 5%);			/* #0d0d0d		*/
+	--text-color-normal: hsl(var(--theme-hue), 0%, 13%);		/* #222222 		text color; button:hover:focus color */
+	--text-color-softer: hsl(var(--theme-hue), 0%, 33%);		/* #555555 		button color; button:hover border */
+
+  --accent-color: hsl(var(--accent-hue), 86%, 57%);				/* #33C3F0 		link; button-primary bg+border; textarea,select:focus border */
+  --accent-color-hover: hsl(var(--accent-hue), 76%, 49%);	/* #1EAEDB 		link hover; button-primary:hover:focus bg+border */
+
+  --border-color: hsl(var(--theme-hue), 0%, 73%);					/* #bbbbbb		button border */
+	--border-color-softer: hsl(var(--theme-hue), 0%, 82%);	/* #d1d1d1		textarea,select,code,td,hr border	 */
+	
+	--background-color: white;														/* transparent body background; textarea,select background */
+	--background-color-softer: hsl(var(--theme-hue), 0%, 95%);
+  --code-background: hsl(var(--theme-hue), 0%, 95%);			/* #f1f1f1 		code background*/
+
+	--button-primary-color: white;
+  
+	
+	/* Note: Skeleton was based off a 10px font sizing for REM  */
+	/* 62.5% of typical 16px browser default = 10px */
+	--base-font-size: 62.5%;
+	
+	/* Grid Defaults - default to match orig skeleton settings */
+	--grid-max-width: 960px;
+}
+
+/*  Dark Theme
+	Note: prefers-color-scheme selector support is still limited, but 
+	included for future and an example of defining a different base 'theme'
+*/
+@media (prefers-color-scheme: dark) {
+	:html {
+		/* dark theme: light background, dark text, blue accent */
+		--theme-hue: 0;					/* black */
+		--accent-hue: 194;			/* blue */
+
+		--text-color-richer: hsl(var(--theme-hue), 0%, 95%);		/* 		*/
+		--text-color-normal: hsl(var(--theme-hue), 0%, 80%);		/* text color; button:hover:focus color */
+		--text-color-softer: hsl(var(--theme-hue), 0%, 67%);		/* button color; button:hover border */
+
+		--accent-color: hsl(var(--accent-hue), 76%, 49%);				/* link; button-primary bg+border; textarea,select:focus border */
+		--accent-color-hover: hsl(var(--accent-hue), 86%, 57%);	/* link hover; button-primary:hover:focus bg+border */
+
+		--border-color: hsl(var(--theme-hue), 0%, 27%);					/* button border */
+		--border-color-softer: hsl(var(--theme-hue), 0%, 20%);	/* textarea,select,code,td,hr border	 */
+	
+		--background-color: hsl(var(--theme-hue), 0%, 12%);			/* body background; textarea,select background */
+		--background-color-softer: hsl(var(--theme-hue), 0%, 18%);
+		--code-background: hsl(var(--theme-hue), 0%, 5%);				/* code background*/
+
+		--button-primary-color: white;
+  }
+	
+	img.value-img {
+		filter: invert(0.8);
+	}
+	/* TODO - test dialing back image intensity on dark background
+  img {
+    opacity: .80;
+    transition: opacity .5s ease-in-out;
+  }
+  img:hover {
+    opacity: 1;
+  }
+  */
+}
+
+
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* CSS Grid depends much more on CSS than HTML, so there is less boilerplate
+	 than with skeleton. Only basic 1-4 column grids are included.
+	 Any additional needs should be made using custom CSS directives */
+
+
+.grid-container {
+	position: relative;
+	max-width: var(--grid-max-width);
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+	display: grid;
+	grid-gap: 20px;
+	gap: 20px;
+	
+	/* by default use min 200px wide columns auto-fit into width */
+	grid-template-columns: minmax(200px, 1fr);
+}
+
+/* grids to 3 columns above mobile sizes */
+@media (min-width: 600px) {
+	.grid-container {
+		grid-template-columns: repeat(3, 1fr);
+		padding: 10px 0;
+	}
+	
+	/* basic grids */
+	.grid-container.fifths {
+		grid-template-columns: repeat(5, 1fr);
+	}
+	.grid-container.quarters {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	.grid-container.thirds {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.grid-container.halves {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.grid-container.full {
+		grid-template-columns: 1fr;
+	}
+	
+}
+
+
+
+
+
+
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+  font-size: var(--base-font-size);
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 1.6rem;		/* changed from 15px in orig skeleton */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--text-color-normal); 
+  background-color: var(--background-color);;
+}
+
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 300; }
+h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+
+/* Larger than phablet */
+@media (min-width: 600px) {
+  h1 { font-size: 5.0rem; }
+  h2 { font-size: 4.2rem; }
+  h3 { font-size: 3.6rem; }
+  h4 { font-size: 3.0rem; }
+  h5 { font-size: 2.4rem; }
+  h6 { font-size: 1.5rem; }
+}
+
+p {
+  margin-top: 0; }
+
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: var(--accent-color); }
+a:hover {
+  color: var(--accent-color-hover); }
+
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: var(--text-color-softer);
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  box-sizing: border-box; }
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: var(--text-color-normal);
+  border-color: var(--text-color-softer);
+  outline: 0; }
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: var(--button-primary-color);
+  background-color: var(--accent-color);
+  border-color: var(--accent-color); }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: var(--button-primary-color);
+  background-color: var(--accent-color-hover);
+  border-color: var(--accent-color-hover); }
+
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color-softer);
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+input[type="button"],
+input[type="submit"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid var(--accent-color);
+  outline: 0; }
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+fieldset {
+  padding: 0;
+  border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
+
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul {
+  list-style: circle inside; }
+ol {
+  list-style: decimal inside; }
+ol, ul {
+  padding-left: 0;
+  margin-top: 0; }
+ul ul, ul ol, ol ol, ol ul {
+	font-size: 100%;
+	margin: 1rem 0 1rem 3rem;
+	color: var(--text-color-softer);
+}
+li {
+  margin-bottom: 0.5rem; }
+
+
+/* Code
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+code {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  background: var(--code-background);
+  border: 1px solid var(--border-color-softer);
+  border-radius: 4px; }
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre; 
+  overflow: auto; }
+
+
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color-softer); }
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+
+
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+.button {
+  margin-bottom: 1rem; }
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem; }
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 2.5rem; }
+
+
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box; }
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box; }
+.u-pull-right {
+  float: right; }
+.u-pull-left {
+  float: left; }
+.u-align-left {
+	text-align: left; }
+.u-align-right {
+	text-align: right; }
+
+
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid var(--border-color-softer); }
+
+
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+
+/* Larger than mobile (default point when grid becomes active) */
+@media (min-width: 600px) {}
+
+/* Larger than phablet */
+@media (min-width: 900px) {}
+
+/* Larger than tablet */
+@media (min-width: 1200px) {}
+
