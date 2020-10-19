@@ -1,0 +1,84 @@
+:root {
+  --angle: -2deg;
+}
+
+*,
+*:after,
+*:before {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100%;
+  background: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.list {
+  cursor: pointer;
+  width: 30rem;
+  background-color: #fff;
+  transform: perspective(90px) rotateY(var(--angle)) translateY(-2px);
+  box-shadow: 0rem 0rem 0.5rem 0rem #888, 4rem 0rem 0rem -3rem #eee,
+    4rem 0rem 0.5rem -3rem #888, 8rem 0rem 0rem -6rem #eee,
+    8rem 0rem 0.5rem -6rem #888;
+}
+.item {
+  padding: 2.5rem 0;
+  display: flex;
+  font-size: 2rem;
+  margin: 0 2rem;
+  border-bottom: 1px solid rgba(3, 99, 207, 0.39);
+}
+.item:last-child {
+  border: none;
+}
+input[type="checkbox"] {
+  padding: 2rem;
+  width: 2rem;
+  height: 2rem;
+  border-right: 1px solid #efefef;
+}
+.addItem {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin: 0.5rem 0;
+  border: 2px solid yellow;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  background: #fff;
+  color: rgb(192, 192, 0);
+}
+
+.addItem:active {
+  color: #fff;
+  background: yellow;
+}
+
+input[type="checkbox"]:checked + p {
+  text-decoration: line-through;
+}
+
+input[type="range"] {
+  margin: 5rem 0;
+}
+label {
+  font-size: 3rem;
+  color: #888;
+}
