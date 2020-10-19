@@ -1,0 +1,38 @@
+{
+  "name": "MA",
+  "version": "1.0.1",
+  "description": "Motivação: Desenvolvimento de um jogo casual",
+  "main": "index.js",
+  "engines": {
+    "node": "12.16.3"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --config ./webpack.dev.js",
+    "build": "webpack --config ./webpack.prod.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhudsonsg/MA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhudsonsg/MA/issues"
+  },
+  "homepage": "https://github.com/jhudsonsg/MA#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "babel-loader": "^8.1.0",
+    "html-webpack-plugin": "^4.0.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "phaser": "^3.22.0"
+  }
+}

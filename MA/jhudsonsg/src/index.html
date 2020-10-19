@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinhaTerra</title>
+    <link rel="icon" href="assets/imgs/icon.png" type="image/png" sizes="16x16">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            outline: 0;
+        }
+
+        @font-face {
+            font-family: 'dpcomic';
+            src: url('assets/fonts/dpcomic.ttf');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'logo';
+            src: url('assets/fonts/logo.TTF');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            background: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'dpcomic';
+        }
+
+        .fontLoader {
+            position: absolute;
+            left: -1000px;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fontLoader" style="font-family: dpcomic;">-</div>
+    <div class="fontLoader" style="font-family: logo;">-</div>
+
+</body>
+
+</html>

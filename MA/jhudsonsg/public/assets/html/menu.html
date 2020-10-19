@@ -1,0 +1,72 @@
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button {
+        width: 200px;
+        display: block;
+        color: #fff;
+        font-weight: 900;
+        font-size: 32px;
+        margin-bottom: 30px;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 10px;
+        font-family: 'dpcomic';
+    }
+
+    #logo {
+        font-family: 'logo';
+        color: #2d3c3c;
+        background: -webkit-linear-gradient(#6b7b39, #2d3c3c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 37px;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+
+    #iniciar_jogo {
+        background-color: transparent;
+        color: #6b7b39;
+        transition: .5s
+    }
+
+    #rank {
+        background-color: transparent;
+        color: #3a5339;
+        transition: .5s
+    }
+    
+    #controles {
+        background-color: transparent;
+        color: #232b23;
+        transition: .5s
+    }
+
+    #sair {
+        background-color: transparent;
+        color: #2d3c3c;
+        transition: .5s
+    }
+
+    #iniciar_jogo:hover,
+    #rank:hover,
+    #sair:hover {
+        opacity: .5;
+    }
+</style>
+
+<div>
+    <form action="#">
+        <label id="logo">MinhaTerra</label>
+        <button id="iniciar_jogo">Iniciar Missão</button>
+        <button id="rank">Rank</button>
+        <button id="controles">Controles</button>
+        <button id="sair">Sair</button>
+    </form>
+</div>
