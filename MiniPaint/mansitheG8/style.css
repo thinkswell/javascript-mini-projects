@@ -1,0 +1,86 @@
+:root {
+  --color: #4400ff;
+  --eraser: 1rem;
+}
+
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  position: relative;
+}
+.controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  background-color: #ddd;
+  display: flex;
+  flex-direction: column;
+  color: var(--color);
+  justify-content: space-around;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  font-weight: 600;
+  padding: 0 0.7rem;
+  border-radius: 0 2rem 2rem 0;
+}
+.control__group {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+}
+
+.color {
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  background: #ddd;
+  overflow: hidden;
+}
+
+input[type="number"] {
+  border: none;
+  width: 4rem;
+  border: 2px solid var(--color);
+}
+
+.eraser {
+  width: var(--eraser);
+  height: var(--eraser);
+  background: #fff;
+  margin: 1rem auto;
+  border-radius: 50%;
+}
+
+input[type="range"] {
+  width: 6rem;
+  height: 1rem;
+  background: transparent;
+  cursor: pointer;
+  margin: 0.5rem auto;
+}
+input[type="range"],
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 0.4rem;
+  background: #aaa;
+}
+input[type="range"]::-webkit-slider-thumb {
+  position: relative;
+  height: 1.5rem;
+  width: 1.5rem;
+  background: steelblue;
+  border-radius: 50%;
+  border: 2px solid white;
+  transform: translateY(-0.6rem);
+}

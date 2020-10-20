@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Cool Canvas Practice 😎</title>
+  </head>
+  <body>
+    <canvas id="draw"></canvas>
+
+    <div class="controls">
+      <div class="control__group" id="pen">
+        <input type="color" name="colorPicker" value="#4400ff" class="color" />
+        <label for="colorPicker">Pen Color</label>
+      </div>
+      <div class="control__group">
+        <input
+          type="number"
+          name="lineWidth"
+          min="1"
+          max="100"
+          value="1"
+          onkeydown="return false"
+        />
+        <label for="lineWidth">Brush Size</label>
+      </div>
+      <div class="control__group" id="erase">
+        <div class="eraser" id="eraser"></div>
+        <input
+          type="range"
+          for="erase"
+          min="10   "
+          max="100"
+          value="1"
+          data-sizing="rem"
+        />
+        <p>Eraser</p>
+      </div>
+    </div>
+  </body>
+
+  <script src="./script.js"></script>
+</html>

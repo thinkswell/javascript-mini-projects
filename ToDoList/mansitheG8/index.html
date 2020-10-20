@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cool To Do List 😎</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="App">
+      <label for="angle">Rotating List</label>
+      <input
+        type="range"
+        name="angle"
+        min="-20"
+        max="20"
+        value="0"
+        data-sizing="deg"
+      />
+
+      <div class="list">
+        <div class="item">
+          <input type="checkbox" />
+          <p>Item first is the List</p>
+        </div>
+        <div class="item">
+          <input type="checkbox" />
+          <p>Item Second is the List</p>
+        </div>
+        <div class="item">
+          <input type="checkbox" />
+          <p>Item Third is the List</p>
+        </div>
+        <div class="item">
+          <input type="checkbox" />
+          <p>Item Fourth is the List</p>
+        </div>
+        <div class="item">
+          <input type="checkbox" />
+          <p>Item Fifth is the List</p>
+        </div>
+        <div class="item">
+          <input type="checkbox" />
+          <p>Item Sixth is the List</p>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    // const items = document.querySelectorAll(".item");
+    // const addBtn = document.querySelector(".addItem");
+    // const addPlace = document.querySelector(".allEle");
+
+    // function toggleCheck(e) {
+    //   this.children[0].checked = !this.children[0].checked;
+    //   if (this.children[0].checked) {
+    //     this.children[1].style.textDecoration = "line-through";
+    //   } else {
+    //     this.children[1].style.textDecoration = "none";
+    //   }
+    // }
+
+    // items.forEach(item => {
+    //   item.addEventListener("click", toggleCheck);
+    // });
+
+    // window.addEventListener("keypress", e => {
+    //   if (e.keyCode === 16) console.log(e.keyCode);
+    // });
+
+    const checkboxes = document.querySelectorAll(
+      ".list input[type='checkbox']"
+    );
+
+    let lastChecked;
+
+    function handleCheck(e) {
+      //check if they had shift key down
+      //and check that they are checking it
+      let inBetween = false;
+      if (e.shiftKey && this.checked) {
+        //go ahead and do what we please
+        checkboxes.forEach(checkbox => {
+          if (checkbox == this || checkbox === lastChecked) {
+            inBetween = !inBetween;
+            console.log("Starting to Check inBetween");
+          }
+          if (inBetween && lastChecked) {
+            checkbox.checked = true;
+          }
+        });
+      }
+      lastChecked = this;
+    }
+    checkboxes.forEach(checkbox =>
+      checkbox.addEventListener("click", handleCheck)
+    );
+
+    const slider = document.querySelector("input[type='range']");
+    console.log(slider);
+
+    function slided() {
+      const suffix = this.dataset.sizing;
+      console.log(this.name);
+      document.documentElement.style.setProperty(
+        `--${this.name}`,
+        `${this.value}${suffix}`
+      );
+      var distance = Math.abs(`${this.value}`);
+      document.documentElement.style.setProperty(`--dis`, `${distance}px`);
+    }
+
+    slider.addEventListener("mousemove", slided);
+    slider.addEventListener("change", slided);
+  </script>
+</html>
