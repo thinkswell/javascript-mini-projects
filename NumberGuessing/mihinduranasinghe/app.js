@@ -1,7 +1,7 @@
 //Game values
 let  min = 1,
      max = 10,
-     winningNum = getWinningNumRandom(min,max),
+     winningNum = Math.abs(getWinningNumRandom(min,max)),
      guessesLeft = 3;
 
 //UI Elements
