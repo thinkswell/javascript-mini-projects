@@ -1,0 +1,134 @@
+*{
+    box-sizing:border-box;
+  }
+  :root{
+    --small: 35px;
+    --medium: 50px;
+    --large: 65px;
+    --bar-height:10px;
+  }
+  body{
+    font-family:sans-serif;
+    user-select:none;
+    padding:0;
+    margin:0;
+    background: rgba(179,220,237,1);
+    background: -moz-linear-gradient(left, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+   
+  }
+  #overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index:9999;
+    display:none;
+  }
+  .container{
+    height:100vh;
+  }
+  .player{
+    border-radius: 20px;
+    width: 500px;
+    height: 350px;
+    position: absolute;
+    top:calc(50% - 175px);
+    left:calc(50% - 250px);
+    box-shadow:6px 6px 15px rgba(51,51,51,0.5);
+    overflow:hidden;
+    background:#fff;
+  }
+  .player #music-info{
+    padding: 15px;
+    background-image:url("https://www.bensound.com/bensound-img/evolution.jpg");
+    height: 238px;
+    background-repeat:no-repeat;
+    background-size:100%;
+    color: #fff;
+  }
+  .player #music-info .title{
+    font-size: 23px;
+    margin-bottom: 8px;
+    z-index:1;
+  }
+  .player #music-info .bg{
+    width: 100%;
+    box-shadow: 0 -100px 100px 100px rgba(0,0,0,0.5);
+  }
+  .player #music-info .author{
+    font-size: 14px;
+    float: right;
+  }
+  .player #music-info .album{
+    font-size: 14px;
+  }
+  .player .timestamp{
+    position: absolute;
+    width: 100%;
+    bottom: 110px;
+  }
+  .player .timestamp #bar{
+    width: 100%;
+    height: var(--bar-height);
+    background: #bbb;
+  }
+  .player .timestamp #current-time{
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: var(--bar-height);
+    background: #5453af;
+    pointer-events:none;
+  }
+  .player .timestamp #current-time:after{
+    content:"";
+    width: 16px;
+    height: 16px;
+    background: #5453af;
+    position: absolute;
+    right: -8px;
+    bottom: -4px;
+    z-index: 9;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 2px #eee;
+  }
+  .player .buttons{
+    position: absolute;
+    bottom: 0px;
+    border-top: 1px solid #ddd;
+    width:100%;
+    height:110px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .player .buttons .button{
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    text-align:center;
+    margin:7px;
+    color: #333;
+  }
+  .player .buttons .button-small{
+    width: var(--small);
+    height: var(--small);
+    line-height: var(--small);
+  }
+  .player .buttons .button-medium{
+    width: var(--medium);
+    height: var(--medium);
+    line-height: var(--medium);
+    font-size: 25px;
+  }
+  .player .buttons .button-large{
+    width: var(--large);
+    height: var(--large);
+    line-height: var(--large);
+    font-size: 35px;
+  }
+  .player .buttons .button-small:hover, .player .buttons .button-medium:hover, .player .buttons .button-large:hover{
+    background: #5453cf;
+    color: #fff;
+  }
