@@ -471,3 +471,9 @@ there.
 /* Larger than tablet */
 @media (min-width: 1200px) {}
 
+
+.centered-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

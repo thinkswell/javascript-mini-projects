@@ -11,20 +11,22 @@
     
     <div class="container">
       <div class="grid-container halves">
-        <div>
+        <div class="centered-column">
           <h1>Rot13 Encrypt</h1>
-          <textarea onkeydown="rot13()" placeholder="Enter Message To Encrypt" id="myInput"></textarea>
+          <textarea placeholder="Enter Message To Encrypt" id="myInput"></textarea>
+          <button class="button button-primary" onClick="rot13()">Encrypt</button>
           <div>
             Your encrypted message:             
-            <p id="myMessage"></p>
+            <h4 id="myMessage"></h4>
           </div>
         </div>
-        <div>
+        <div class="centered-column">
           <h1>Rot13 Decrypt</h1>
-          <textarea id="toDecrypt" oninput="decryptMe()" placeholder="Enter Message to Decrypt"></textarea>
+          <textarea id="toDecrypt" placeholder="Enter Message to Decrypt"></textarea>
+          <button class="button button-primary" onClick="decryptMe()">Decrypt</button>
           <div>
             Your de-crypted message:             
-            <p id="myDecryptedMessage"></p>
+            <h4 id="myDecryptedMessage"></h4>
           </div>
         </div>
       </div>
