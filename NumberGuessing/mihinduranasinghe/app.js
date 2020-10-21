@@ -2,8 +2,12 @@
 let  min = 1,
      max = 10,
      winningNum = Math.abs(getWinningNumRandom(min,max)),
-     guessesLeft = 3;
-
+    guessesLeft = 3;
+     
+if (winningNum % 2 == 0)
+    var isEven= "Even";
+else var isEven = "Odd";
+        
 //UI Elements
 const UIgame = document.querySelector('#game'),
       UIminNum = document.querySelector('.min-num'),
@@ -11,10 +15,13 @@ const UIgame = document.querySelector('#game'),
       UIguessBtn = document.querySelector('#guess-btn'),
       UIguessInput = document.querySelector('#guess-input'),
       UImessage = document.querySelector('.message');
+      UIhint = document.querySelector('.hint');
 
 //Assign UI min and max
 UIminNum.textContent = min;
 UImaxNum.textContent = max;
+
+
 
 //Play again event listener
 UIgame.addEventListener('mousedown',function(e){
@@ -33,6 +40,9 @@ UIguessBtn.addEventListener('click', function(){
         setMessage(`Please enter a number between ${min} and ${max}`, 'red');
         UIguessInput.style.borderColor = 'red'; 
     }
+
+    //Absolute Difference
+    var diff = Math.abs(guess-winningNum);
 
     //Check if won
     if(guess === winningNum){
@@ -61,9 +71,17 @@ UIguessBtn.addEventListener('click', function(){
             //Change border color
             UIguessInput.style.borderColor = 'red';
             //clear input
-            UIguessInput.value='';
+            UIguessInput.value = '';
+            
             //game continues -  answer wrong 
-            setMessage(`${guess} is not correct, ${guessesLeft} guesses left`,'red');   
+            setMessage(`${guess} is not correct, ${guessesLeft} guesses left`, 'red'); 
+            
+            //Giving Hints
+            if (diff >= 5)
+                var diffHint = "User has chosen too big number";
+            else
+                var diffHint = "User is close to the number";
+            setHint(`HINT : Correct number is a ${isEven} number. ${diffHint}`,'green');   
             
         }
     }
@@ -74,6 +92,10 @@ UIguessBtn.addEventListener('click', function(){
 function setMessage(msg, color){
     UImessage.style.color = color;
     UImessage.textContent = msg; 
+}
+function setHint(msg, color){
+    UIhint.style.color = color;
+    UIhint.textContent = msg; 
 }
 
 //game over
