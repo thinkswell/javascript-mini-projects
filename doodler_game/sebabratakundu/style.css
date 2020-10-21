@@ -1,7 +1,7 @@
 .grid {
   width: 400px;
   height: 600px;
-  background: yellow;
+  background-image: url("background.png");
   position: relative;
   font-size: 200px;
   text-align: center;
@@ -10,13 +10,13 @@
 .doodler {
   width: 60px;
   height: 85px;
-  background: red;
+  background-image: url("doodler-guy.png");
   position: absolute;
 }
 
 .platform {
   width: 85px;
   height: 15px;
-  background: green;
+  background-image: url("platform.png");
   position: absolute;
 }

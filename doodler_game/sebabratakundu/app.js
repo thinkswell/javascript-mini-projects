@@ -69,14 +69,16 @@ document.addEventListener("DOMContentLoaded",() => {
     }
 
     function jump(){
+        clearInterval(downTimeId)
         isJumping = true
         upTimerId = setInterval(function(){
             doodlerBottomSpace +=20
             doodler.style.bottom = doodlerBottomSpace + "px"
             if(doodlerBottomSpace > startPoint + 200){
                 fall()
+                isJumping = false
             }
-        },30)
+        },20)
     }
 
     function fall(){
@@ -100,9 +102,11 @@ document.addEventListener("DOMContentLoaded",() => {
                     console.log("landed");
                     startPoint = doodlerBottomSpace
                     jump()
+                    console.log("start","startPoint")
+                    isJumping = true
                 }
             })
-        },30)
+        },20)
     }
 
     function gameOver(){
@@ -111,6 +115,7 @@ document.addEventListener("DOMContentLoaded",() => {
         while(grid.firstChild){
             grid.removeChild(grid.firstChild)
         }
+        grid.innerHTML = score
         clearInterval(upTimerId)
         clearInterval(downTimeId)
         clearInterval(leftTimerId)
@@ -118,6 +123,7 @@ document.addEventListener("DOMContentLoaded",() => {
     }
 
     function control(e){
+        doodler.style.bottom = doodlerBottomSpace + "px"
         if(e.key === "ArrowLeft"){
         // move left
         moveLeft()
@@ -146,7 +152,7 @@ document.addEventListener("DOMContentLoaded",() => {
                 moveRight()
             }
             
-        },30)
+        },20)
     }
 
     function moveRight(){
@@ -156,14 +162,14 @@ document.addEventListener("DOMContentLoaded",() => {
         }
         isGoingRight = true
         rightTimerId = setInterval(function(){
-            if(doodlerLeftSpace <= 340){
+            if(doodlerLeftSpace <= 313){
                 doodlerLeftSpace += 5
                 doodler.style.left = doodlerLeftSpace+ "px"
             }
             else{
                 moveLeft()
             }
-        })
+        },20)
     }
 
     function moveStright(){
@@ -177,7 +183,7 @@ document.addEventListener("DOMContentLoaded",() => {
         if(!isGameOver){
             createPlatforms()
             createDoodler()
-            setInterval(movePlatforms,30)
+            setInterval(movePlatforms,20)
             jump()
             document.addEventListener("keyup",control)
         }
