@@ -1,56 +1,51 @@
-<!DOCTYPE HTML>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>
-        Generate a Random Password
-        using JavaScript
-    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WulfPlasma's Random Password Generator</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+
 </head>
+<body>
 
-<body style="text-align:center;">
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">WulfPlasma's Random Password Generator</a>
+    </nav>
 
-    <h1 style="color: blue">
-        WulfPlasma's password generator
-    </h1>
+    <div class="container">
 
-    <h3>
-        Click on the button to
-        generate random password.
-    </h3>
+        <div class="row">
 
-    <button onclick="gfg_Run()">
-        Click Here
-    </button>
-    <br>
+            <div class="col-lg-8 col-sm-12 mx-auto">
 
-    <div>
-        <p id="WulfPlasma"></p>
+                <div class="content">
+                    <h4>WulfPlasma's Random Password Generator</h4>
+                    <br />
+                    <input type="text" id="display">
+                    <br />
+                    <input type="range" min="0" max="50" name="slider" id="slider">
+                    <br />
+                    <button onclick="generate()">Generate</button>
+                    <button onclick="copyPassword()">Copy to Clipboard</button>
+                    <div id="length"></div>
+                </div>
+
+                <div class="previous_passwords">
+                    <b>Already Generated Passwords</b>
+                    <br />
+                    <div id="lastNums"></div>
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
-
-    <script>
-        var el_down = document.getElementById("WulfPlasma");
-
-        /* Function to generate combination of password */
-        function generateP() {
-            var pass = '';
-            var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
-                    'abcdefghijklmnopqrstuvwxyz0123456789@#$';
-
-            for (i = 1; i <= 8; i++) {
-                var char = Math.floor(Math.random()
-                            * str.length + 1);
-
-                pass += str.charAt(char)
-            }
-
-            return pass;
-        }
-
-        function gfg_Run() {
-            el_down.innerHTML = generateP();
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
-
-</html> 
+</html>
