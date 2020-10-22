@@ -85,7 +85,7 @@ fs.writeFile(`./output/${ fileName }`, markdown,  function(err) {
     return console.log(err);
   }
 
-  console.log(`Success! Your ${ fileName } file can be found in the output folder. \n(Make sure to copy the file or it's contents before running this generator again, or your current  ${ fileName } will be overwritten.)`);
+  console.log(`Success! Your ${ fileName } file can be found in the output folder. \n(Make sure to copy the file or its contents before running this generator again, or your previously-generated ${ fileName } will be overwritten.)`);
 
 });
 
