@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import bulbOnImage from "./assets/on.jpeg";
+import bulbOffImage from'./assets/off.jpg'
+import bulbBrokenImage from './assets/broken.jpg'
 
 const App = () => {
   const [bulb, setBulb] = useState("bulb");
@@ -17,7 +20,7 @@ const App = () => {
           {bulb === "bulb" && (
             <img
               alt="Light Bulb"
-              src="https://www.industrytap.com/wp-content/uploads/2016/02/incandescent-e1456179151174.jpg"
+              src={bulbOffImage}
               width="300px"
               height="400px"
             />
@@ -26,8 +29,8 @@ const App = () => {
           {bulb === "on" && (
             <img
               alt="Glow Bulb"
-              src="https://toppng.com/uploads/preview/light-bulb-on-off-png-11553940186lbyqngqg1y.png"
-              width="400px"
+              src={bulbOnImage}
+              width="300px"
               height="400px"
             />
           )}
@@ -35,7 +38,7 @@ const App = () => {
           {bulb === "off" && (
             <img
               alt="Off Bulb"
-              src="https://www.industrytap.com/wp-content/uploads/2016/02/incandescent-e1456179151174.jpg"
+              src={bulbOffImage}
               width="300px"
               height="400px"
             />
@@ -44,8 +47,8 @@ const App = () => {
           {bulb === "break" && (
             <img
               alt="Break Bulb"
-              src="https://media.istockphoto.com/vectors/brokendown-light-bulb-vector-id164446736"
-              width="300px"
+              src={bulbBrokenImage}
+              width="260px"
               height="400px"
             />
           )}
@@ -59,13 +62,25 @@ const App = () => {
           }}
         >
           <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary" onClick={()=>setBulb("on")}>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onClick={() => setBulb("on")}
+            >
               ON
             </button>
-            <button type="button" class="btn btn-secondary" onClick={()=>setBulb("off")}>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onClick={() => setBulb("off")}
+            >
               OFF
             </button>
-            <button type="button" class="btn btn-secondary" onClick={()=>setBulb("break")}>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onClick={() => setBulb("break")}
+            >
               BREAK
             </button>
           </div>
