@@ -42,7 +42,7 @@ Download the files and use `npm install` (or your preferred package manager) to 
 
   to run the application.
 
-![Application Demo Gif - 2 mins](.\assets\node-readme-generator-demo-gif.gif)
+![Application Demo Gif - 2 mins](./assets/node-readme-generator-demo-gif.gif)
 
 
 
