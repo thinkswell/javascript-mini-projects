@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=1920, initial-scale=1">
+        <style>
+            .buttonClimb {
+            background-color: green;
+            border: none;
+            color: black;
+            padding: 35px 35px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 1px 1px;
+            cursor: pointer;
+            border-radius: 100%;
+            position: absolute;
+            left: 150vh;
+            top: 80vh;
+            touch-action: manipulation;}
+
+            #game {
+                position: absolute;
+                top:0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin:auto;
+            }
+            #image {
+                
+                background: 
+                    url('climber_sprite.png') 0px 0px;
+            }
+        </style>
+    </head>
+    
+    <body onload="startGame()">
+        <canvas id="game" style="z-index: -1">            
+        </canvas>
+        <button class="buttonClimb" onclick="accelerate(-0.2)">Climb</button>
+        <div id="demo">
+            <!--<p id="image" onmouseover="animateScript()" onmouseout="stopAnimate()">-->
+            <p id="image"></p>
+        </div>
+        
+    </body>
+    <script src="climbing_the_flagpole.js"></script>
+</html>   
