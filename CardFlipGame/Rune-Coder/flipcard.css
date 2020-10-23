@@ -15,6 +15,10 @@ h1
 	color:  red;
 	font-size:  2em;
 	font-family: 'Nosifer', cursive;
+	text-shadow: 1.5px 1.5px rgba(0,255,0,.9) ;
+	letter-spacing: 0.02em;
+	font-weight: lighter;
+	box-shadow: 0 2px 4px -1px rgba(0,0,0,.32), 0 4px 5px 0 rgba(0,0,0,.32), 0 1px 10px 0 rgba(0,0,0,.32);
 }
 h2
 {
@@ -43,15 +47,24 @@ h2
 	border-radius: 20px;
 	color: green;
 }
+.op:hover{
+	transition: all .2s ease-out;
+	filter:hue-rotate(-47deg);
+	transform: scale(1.1);
+  overflow-x: hidden;
+}
 .btn:focus, .op:focus
 {
 	outline: none !important;
 }
 #inst
 {
-	width:  320px;
+	width:  400px;
 	margin-left:  auto;
 	margin-right:  auto;
+	letter-spacing: 0.1em;
+	text-shadow: 1.5px 1.5px black;
+	font-weight:lighter;
 }
 #gameinfo
 {
@@ -68,6 +81,9 @@ h2
 	float:  left;
 	color:  #FFBB89;
 	font-family: 'Creepster', cursive;
+	letter-spacing: 0.1em;
+	text-shadow: 1.5px 1.5px black;
+	font-weight:lighter;
 }
 #flp
 {
@@ -95,6 +111,12 @@ img
 	margin-bottom:  20px;
 	margin-left:  20px;
 	position:  relative;
+}
+.cards:hover img{
+	transition: all .2s ease-in;
+	filter: blur(2px) hue-rotate(-47deg);
+	transform: scale(1.1);
+  overflow-x: hidden;
 }
 .card-face
 {
@@ -131,4 +153,5 @@ img
 {
 	color:  #FFBB89;
 	font-family: 'Creepster', cursive;
+	letter-spacing: 0.1em;
 }
