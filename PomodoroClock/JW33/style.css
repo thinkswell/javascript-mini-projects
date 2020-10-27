@@ -1,0 +1,84 @@
+#pomodoro-page {
+  background-color: red;
+}
+
+#pomodoro-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#pomodoro-clock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+#pomodoro-clock-circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  border: 5px solid lightgrey;
+}
+
+#pomodoro-clock-timer {
+  font-size: 3rem;
+}
+
+#pomodoro-clock-circle * {
+  color: black;
+}
+
+#pomodoro-clock-task {
+  display: inline-block;
+  margin-top: 10px;
+  width: 200px;
+  padding: 5px 10px;
+  border: 1px solid lightgrey;
+  border-radius: 3px
+}
+
+#pomodoro-clock-title {
+  margin-top: 20px;
+  width: 200px
+}
+
+#pomodoro-clock-actions {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100px;
+}
+
+#pomodoro-clock-actions button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.pomodoro-input {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  margin-right: 10px;
+}
+
+.pomodoro-input input {
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  padding: 5px;
+}
