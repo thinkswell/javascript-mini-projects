@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <script src="logic.js"></script>
+
+    <div class="windowshell">
+
+        <div class="game">
+            <div id="gamearea" class="gamearea">
+
+                <label>Take your pick:</label>
+
+                <div class="optionshell">
+                    <img id="rock" src="img/rock.png" class="image" onclick="userAction(1)" />
+                    <img id="paper" src="img/paper.gif" class="image" onclick="userAction(2)" />
+                    <img id="scissor" src="img/scissor.png" class="image" onclick="userAction(3)" />
+                </div>
+            </div>
+
+            <div class="verdict" id="verdict">
+                <label id="verdictmessage" class="verdictmessage"></label>
+                <button class="button" onclick="reload()">Again?</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

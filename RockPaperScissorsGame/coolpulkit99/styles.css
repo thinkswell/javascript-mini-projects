@@ -1,0 +1,69 @@
+body{
+    display: flex;
+}
+.windowshell{
+    background-color: rgba(127, 246, 255, 0.849);
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game{
+    border-radius: 5%;
+    background-color: whitesmoke;
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.gamearea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.optionshell{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.image{
+    border: solid 1px black;
+    height: 100px;
+    width : 100px;
+    margin: 10px;
+    border-radius: 50%;
+    padding: 2px ;
+}
+
+.verdict{
+display: none;
+flex-direction: column;
+margin: 20px;
+}
+
+.verdictmessage{
+    margin: 20px;
+
+}
+
+.button{
+    color: aliceblue;
+    background-color: blueviolet;
+    border-radius: 10%;
+    padding: 20px;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+label{
+    font-family: fantasy;
+    font-size: xx-large;
+    /* font: outline; */
+}
