@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>
+        Timer
+    </title>
+</head>
+
+<body>
+    <script src="logic.js"></script>
+    <div class="windowshell">
+        <div class="outershell">
+
+            <div class="userinputscreen" id="userinputscreen">
+                <label>Countdown Timer</label>
+
+                <input class="input" id="input" placeholder="Enter time in seconds..."></input>
+
+                <button class="submit button" onclick="startTimer()">Start</button>
+
+            </div>
+
+            <div class="timerscreen" id="timerscreen">
+
+                <label class="timer" id="timer"></label>
+                <label>Seconds remaining</label>
+
+                <button class="reset button" onclick="resetTimer()">
+                    Reset
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
