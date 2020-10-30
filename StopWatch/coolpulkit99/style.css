@@ -1,0 +1,75 @@
+body{
+    display: flex;
+}
+
+.windowshell{
+    background-color: rgba(127, 246, 255, 0.849);
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outershell{
+    border-radius: 5%;
+    background-color: whitesmoke;
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.userinputscreen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.input{
+    margin: 10px;
+    font-size: large;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: solid 4px grey ;
+    border-style: groove;
+    display: flex;
+    align-items: center;
+}
+
+.submit{}
+
+.button{
+    margin: 20px;
+    color: rgb(255, 255, 255);
+    background-color: blueviolet;
+    border-radius: 10%;
+    padding: 20px;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.milli{
+    font-size: large;
+}
+.timerscreen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer{
+padding: 10px;
+}
+
+.reset{
+}
+
+
+label{
+    font-variant: small-caps;
+    font-family: fantasy;
+    font-size: xx-large;
+} 
