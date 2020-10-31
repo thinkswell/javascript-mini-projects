@@ -1,0 +1,30 @@
+
+
+.xyz{
+    background-color: grey;
+    height: 100%;
+}
+
+.app{
+    background-color: white;
+}
+.input-group{
+    margin: 40px 0px;
+}
+
+h1{
+    text-align: center;
+    
+}
+
+td, th{
+    vertical-align:  middle;
+    text-align: center;
+    margin: 10px 0px;
+   
+}
+
+td:first-of-type, td:first-of-type> div{
+    height: 200px;
+    width:250px;
+} 
