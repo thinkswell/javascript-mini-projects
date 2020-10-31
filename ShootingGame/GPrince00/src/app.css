@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #cccccc;
+  text-align: center;
+  overflow: hidden;
+}
+
+canvas {
+  margin-top: 50px;
+  background-color: #fff;
+  background-color: rgba(256, 256, 256, 0.7);
+}
+
+img {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}

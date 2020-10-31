@@ -1,0 +1,45 @@
+body{
+	text-align: center;
+}
+.themainbox{
+
+float: left;
+height: 100%;
+padding: 50px; 
+margin: 0px;
+padding-bottom: 0px;
+padding-top: 0px;
+background-color: aliceblue;
+
+
+}
+.timer
+{
+margin-top:0px;
+
+height: 10%;
+font-size: 20px;
+} 
+.random{
+margin-top:20px;
+margin-bottom:0px;
+
+
+height: 10%;
+width: 100%;
+font-size: 15px;
+}
+.number{
+  background-color:lightgrey;
+  width: 10%;
+  
+  height: 50px;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+ 
+  text-align: center;
+  text-decoration: none;
+ 
+  font-size: 20px;
+  
+  }
