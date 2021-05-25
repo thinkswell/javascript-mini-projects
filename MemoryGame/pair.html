@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #097054;
+        }
+
+        .memoryGame {
+            width: 60vw;
+            height: 45vw;
+            background-color: #097054;
+            display: flex;
+            flex-wrap: wrap;
+            perspective: 1000px;
+            margin-left: 20vw
+        }
+
+        .memoryCard {
+            width: 20%;
+            height: 22.333%;
+            position: relative;
+            border: 0.1vw solid black;
+            border-radius: 1vw;
+            margin: 1vw;
+            transition: transform .5s;
+            transform: scale(1);
+            transform-style: preserve-3d;
+            
+
+        }
+
+
+        .backface,
+        .frontface {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-color: lightblue;
+            border-radius: 1vw;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .memoryCard:active {
+            transform: scale(0.9);
+            transition: transform .2s;
+        }
+
+        .memoryCard.flip {
+            transform: rotateY(180deg);
+        }
+
+        .frontface {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="memoryGame">
+        <div class="memoryCard" data-name="linux">
+            <img src="linux.png" alt="" class="frontface">
+            <img src="js.png" alt="" class="backface">
+        </div>
+        <div class="memoryCard" data-name="linux">
+            <img src="linux.png" alt="" class="frontface">
+            <img src="js.png" alt="" class="backface">
+        </div>
+        <div class="memoryCard" data-name="window">
+            <img src="window.png" alt="" class="frontface">
+            <img src="js.png" alt="" class="backface">
+        </div>
+        <div class="memoryCard" data-name="window">
+            <img src="window.png" alt="" class="frontface">
+            <img src="js.png" alt="" class="backface">
+        </div>
+        <div class="memoryCard" data-name="starbuck">
+            <img src="starbuck.png" alt="" class="frontface">
+            <img src="js.png" alt="" class="backface">
+        </div>
+        <div class="memoryCard" data-name="starbuck">
+            <img src="starbuck.png" alt="" class="frontface">
+            <img src="js.png" alt="" class="backface">
+        </div>
+        <div class="memoryCard" data-name="python">
+            <img src="python.png" alt="" class="frontface">
+            <img src="js.png" alt="" class="backface">
+        </div>
+        <div class="memoryCard" data-name="python">
+            <img src="python.png" alt="" class="frontface">
+            <img src="js.png" alt="" class="backface">
+        </div>
+        <!-- <div class="memoryCard">
+            <img src="google.png" alt="" class="frontface">
+            <img src="js.png" alt="" class="backface">
+        </div>
+        <div class="memoryCard">
+            <img src="google.png" alt="" class="frontface">
+            <img src="js.png" alt="" class="backface">
+        </div> -->
+        <div class="memoryCard" data-name="java">
+            <img src="java.png" alt="" class="frontface">
+            <img src="js.png" alt="" class="backface">
+        </div>
+        <div class="memoryCard" data-name="java">
+            <img src="java.png" alt="" class="frontface">
+            <img src="js.png" alt="" class="backface">
+        </div>
+    </section>
+    <script src="pair.js"></script>
+</body>
+
+</html>
