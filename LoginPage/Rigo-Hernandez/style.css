@@ -6,16 +6,30 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: #f6f5f7;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: -20px 0 50px;
-
 }
-
+.ico{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    align-items: center;
+    justify-content: space-between;
+}
+.icon:hover{
+    cursor: pointer;
+}
+.nite{
+    background-color: rgb(19, 8, 8)
+}
+.nite1{
+    color : white;
+    cursor: pointer;
+}
 h1 {
     font-weight: bold;
     margin: 0;
