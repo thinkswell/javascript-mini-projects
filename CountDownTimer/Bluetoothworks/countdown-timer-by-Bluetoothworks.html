@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        background-color: yellow;
+      }
+      #main {
+        position: relative;
+        width: 70vw;
+        height: 10vw;
+        border: 2px solid black;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        background-image: url('https://images.freeimages.com/images/large-previews/f12/wood-texture-1145610.jpg');
+      }
+      .part {
+        top: 11%;
+        position: relative;
+        width: 8vw;
+        height: 8.6vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: top;
+      }
+      .block {
+        width: 99%;
+        height: 80%;
+        padding-top: 0;
+        margin-top: 0;
+        background-color: #ceff0075;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4em;
+        color: white;
+        text-shadow: 1px 1px black;
+      }
+      .id {
+        color: rgb(72, 255, 209);
+        padding-top: 4%;
+        text-align: center;
+        text-shadow: 1px 1px black;
+        font-size: 1.2vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div class="part">
+        <div class="block" id="days"></div>
+        <div class="id">DAYS</div>
+      </div>
+      <div class="part">
+        <div class="block" id="hrs"></div>
+        <div class="id">HOURS</div>
+      </div>
+      <div class="part">
+        <div class="block" id="mins"></div>
+        <div class="id">MINUTES</div>
+      </div>
+      <div class="part">
+        <div class="block" id="s"></div>
+        <div class="id">SECONDS</div>
+      </div>
+    </div>
+
+    <script>
+      var countDownDate = new Date('Nov 1, 2021 00:00:00').getTime()
+      var x = setInterval(function () {
+        var now = new Date().getTime()
+
+        var distance = countDownDate - now
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24))
+        var hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        )
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000)
+        document.getElementById('days').innerHTML = days
+        document.getElementById('hrs').innerHTML = hours
+        document.getElementById('mins').innerHTML = minutes
+        document.getElementById('s').innerHTML = seconds
+        if (distance < 0) {
+          clearInterval(x)
+          document.getElementById('demo').innerHTML = 'EXPIRED'
+        }
+      }, 1000)
+    </script>
+  </body>
+</html>
