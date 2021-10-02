@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="shortcut icon" href="assets/images/icon.png" type="image/x-icon" />
+        <title>Block Game</title>
+        <!-- Importing Bootstrap Styles -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+        <!-- Importing Animate.css Library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+        <!-- Importing My Styles -->
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <!-- Importing Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Adding Background Music -->
+        <audio loop autoplay>
+            <source src="assets/music/Background.mp3" type="audio/mpeg" />
+        </audio>
+
+        <!-- Start Section -->
+        <section class="container fluid animate__animated animate__fadeInDown" id="main">
+            <img
+                src="assets/images/logo.jpg"
+                class="animate__animated animate__lightSpeedInLeft animate__delay-1s"
+                alt="Logo"
+                width="600"
+            />
+            <br /><br /><br />
+            <button id="start" onclick="getDetail()">START GAME</button>
+            <br /><br />
+            <h5>Made with &hearts; By <a href="https://github.com/shivamsingh-07">Shivam Singh</a></h5>
+        </section>
+
+        <!-- Detail Section -->
+        <section class="container fluid animate__animated animate__flip" id="detail">
+            <img src="assets/images/logo.jpg" alt="Logo" width="300" /> <br /><br /><br />
+            <table>
+                <tr>
+                    <td>Enter Your Name :</td>
+                    <td>
+                        <input id="username" type="text" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select Difficulty Level :</td>
+                    <td>
+                        <select id="getmode" class="form-control">
+                            <option disabled selected value="null">-- Select --</option>
+                            <option value="0">Easy (2x2)</option>
+                            <option value="1">Medium (4x4)</option>
+                            <option value="2">Hard (6x6)</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+            <br /><br />
+            <button id="play" onclick="startGame()">Play</button>
+        </section>
+
+        <!-- Game Section -->
+        <section class="container fluid animate__animated animate__bounceIn" id="game">
+            <img src="assets/images/logo.jpg" alt="Logo" width="300" /> <br />
+            <div class="container header">
+                <span>Welcome <i id="user">--user--</i></span>
+                <span>Difficulty : <i id="mode">--select--</i></span>
+                <span>Time Elapsed : <i id="time">--00:00--</i></span>
+            </div>
+
+            <!-- Game Difficulty Divisions -->
+
+            <!-- Easy Level -->
+            <div class="easy" id="0">
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,1)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/easy/ball.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,1)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/easy/ball.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,2)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/easy/pikachu.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,2)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/easy/pikachu.svg" alt="" srcset="" />
+                </div>
+            </div>
+
+            <!-- Medium Level -->
+            <div class="medium" id="1">
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,1)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/medium/courage.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,2)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/medium/dexter.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,3)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/medium/frozen.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,4)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/medium/teen.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,5)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/medium/jerry.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,6)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/medium/kick.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,5)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/medium/jerry.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,7)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/medium/sofia.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,8)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/medium/doraemon.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,7)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/medium/sofia.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,1)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/medium/courage.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,6)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/medium/kick.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,2)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/medium/dexter.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,4)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/medium/teen.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,8)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/medium/doraemon.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,3)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/medium/frozen.svg" alt="" srcset="" />
+                </div>
+            </div>
+
+            <!-- Hard Level -->
+            <div class="hard" id="2">
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,1)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/cartoon1.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,2)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/mickey4.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,3)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/pikachu1.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,4)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/powerpuff2.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,5)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/mickey1.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,6)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/pikachu2.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,7)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/pikachu3.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,8)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/powerpuff1.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,9)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/mickey2.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,10)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/pikachu4.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,11)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/scooby1.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,12)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/pooh.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,13)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/pikachu5.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,14)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/scooby3.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,7)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/pikachu3.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,15)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/tom-and-jerry.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,16)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/cartoon2.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,17)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/mickey3.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,9)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/mickey2.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,4)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/powerpuff2.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,1)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/cartoon1.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,17)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/mickey3.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,14)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/scooby3.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,10)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/pikachu4.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,6)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/pikachu2.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,12)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/pooh.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,18)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/scooby2.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,13)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/pikachu5.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,16)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/cartoon2.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,8)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/powerpuff1.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,5)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/mickey1.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,11)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/scooby1.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,3)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/pikachu1.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,15)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/tom-and-jerry.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,18)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/scooby2.svg" alt="" srcset="" />
+                </div>
+                <div class="img-box">
+                    <div class="img-splash" onclick="check(this,2)">
+                        <img src="assets/images/splash.svg" alt="" srcset="" />
+                    </div>
+                    <img src="assets/images/hard/mickey4.svg" alt="" srcset="" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Result Section -->
+        <section class="container fluid animate__animated animate__zoomInDown" id="result">
+            <img src="assets/images/logo.jpg" alt="Logo" width="300" />
+            <br /><br />
+            <h1>Congratulations <span id="player">--user--</span></h1>
+            <br />
+            <h4>Difficulty : <span id="mode_selected">--select--</span></h4>
+            <h4>Time Taken : <span id="time_taken">--00:00--</span></h4>
+            <br /><br />
+            <button onclick="restart()">Play Again</button>
+        </section>
+
+        <!-- Importing Javascript -->
+        <script src="assets/js/script.js"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.12/dist/sweetalert2.all.min.js"></script>
+    </body>
+</html>
