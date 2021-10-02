@@ -1,0 +1,13 @@
+/* body{
+    overflow: hidden;
+} */
+.card-img-top
+{
+    height:200px;
+    margin: 0;
+    padding: 0;
+}
+#searchInput
+{
+    font-weight: 500;
+}
