@@ -1,0 +1,3 @@
+[submodule "realtime-chat"]
+	path = realtime-chat
+	url = https://github.com/Sooraj-s-98/reactjs-socket-io
