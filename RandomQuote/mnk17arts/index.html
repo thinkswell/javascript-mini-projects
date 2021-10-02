@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    <link rel="icon" href="https://assets.codepen.io/5987189/internal/avatars/users/default.png?fit=crop&format=auto&height=80&version=1617549988&width=80" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+    rel="stylesheet"    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <title> mnk17arts' Quote Machine
+    </title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <script type="module" src="./scripts/index.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="i-title" style="margin-bottom: 20px;">
+    <h1 style="font-family:candara;text-align:center;color:white;" title="mnk17arts' Quote Machine"> <img src="https://user-images.githubusercontent.com/71878747/117575481-a8cba700-b0ff-11eb-988d-0bf5a583ddc2.png" height=40px width=50px style="background:#fff;border-radius:50%;vertical-align:middle"/>   mnk17arts' Quote Machine</h1>
+  </div>
+      <div id="quote-box">
+        <div id="quote-text">
+          <i class="fa fa-quote-left"> </i><span id="text"></span> <i class="fa fa-quote-right"> </i>
+        </div>
+        <div id="quote-author">
+          - <span id="author"></span>
+        </div>
+        <div id="buttons">
+          <a class="btn" target="_top" 
+             id="tweet-quote" title="tweet this quote!!">
+            <span class="fa fa-twitter" ></span></a>
+          <a class="btn" target="_blank" 
+             id="tumblr-quote" title="post this quote on tumbler!!">
+            <span class="fa fa-tumblr" ></span></a>
+          <a class="btn" target="_top" 
+             id="fb-quote" title="post this quote on facebook!!">
+            <span class="fa fa-facebook" ></span></a>
+          
+          <a class="btn" target="_blank" 
+             id="wa-quote" title="send this quote on whatsapp!!">
+            <span class="fa fa-whatsapp" ></span></a>
+          <a class="btn" href="https://github.com/mnk17arts/myWebProjects/tree/main/quote-machine" target="_blank" 
+             id="git-like" title="cool right? make sure to give it a star on Github :)">
+            <span class="fa fa-github" ></span></a>
+
+          <button class="btn" id="new-quote">New quote</button>
+        </div>
+        </div>
+      <div id="footer">made with <span class="fa fa-heart" style="color:red"></span> by <a href="https://mnk17arts.github.io/">mnk17arts</a></div>
+      </div>  
+  </body>
+</html>
