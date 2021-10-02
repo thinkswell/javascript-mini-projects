@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+body {
+    background-color: #2ecc71;
+}
+section {
+    background-color: #fff;
+    border-radius: 50px;
+    margin: 100px 0;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+a,
+a:hover {
+    text-decoration: none;
+    color: #000;
+}
+#detail,
+#game,
+#result {
+    display: none;
+}
+button {
+    padding: 10px 40px;
+    border: 0;
+    border-radius: 50px;
+    background-color: #fff;
+    color: #2ecc71;
+    font-family: Helvetica;
+    font-size: 18px;
+    letter-spacing: 3px;
+    box-shadow: 0 0 15px 5px rgba(46, 204, 113, 0.5);
+    transition-duration: 500ms;
+}
+button:focus {
+    outline: none;
+}
+button:hover {
+    background-color: #2ecc71;
+    color: #fff;
+}
+table {
+    width: 500px;
+    margin: 0 auto;
+}
+table tr td {
+    padding: 10px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+/* Easy Division */
+.easy {
+    margin: 50px 0;
+    display: flex;
+    width: 220px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.easy .img-box {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 5px 0;
+}
+.easy .img-splash {
+    width: 100%;
+    height: 100%;
+    background-color: #2ecc71;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+/* Medium Division */
+.medium {
+    margin: 50px 0;
+    display: flex;
+    width: 360px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.medium .img-box {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin: 5px 0;
+}
+.medium .img-splash {
+    width: 100%;
+    height: 100%;
+    background-color: #2ecc71;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+.medium .img-splash img {
+    width: 30px;
+}
+/* Hard Division */
+.hard {
+    margin: 50px 0;
+    display: flex;
+    width: 410px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.hard .img-box {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin: 5px 0;
+}
+.hard .img-splash {
+    width: 100%;
+    height: 100%;
+    background-color: #2ecc71;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+.hard .img-splash img {
+    width: 20px;
+}
+/* Hiding Difficulty Modes */
+.easy,
+.medium,
+.hard {
+    display: none;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 770px) {
+    section {
+        border-radius: 0;
+    }
+    #main img {
+        width: 400px;
+    }
+    table {
+        width: 400px;
+    }
+    .header {
+        flex-direction: column;
+        font-size: 25px;
+    }
+}
