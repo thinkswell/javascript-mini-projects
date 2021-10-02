@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #efefef;
+  color: #333333;
+  font-family: "Patrick Hand", cursive;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+}
+.buttons button {
+  margin: 0.2rem;
+  padding: 0.3rem 0.6rem;
+}
+
+.app-graph {
+  display: flex;
+  flex-wrap: wrap;
+  width: 49%;
+}
