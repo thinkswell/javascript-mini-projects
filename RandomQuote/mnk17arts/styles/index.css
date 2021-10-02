@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+div {
+  position: relative;
+  z-index: 2;
+}
+
+body {
+  background-color: #333;
+  color: #000;
+  font-family: 'Raleway',sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#footer {
+  width: 450px;
+  text-align: center;
+  display: block;
+  margin: 15px auto 30px auto;
+  font-size: 0.8em;
+  color: #fff;
+}
+
+#footer a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+}
+
+#footer a:hover {
+  color: black;
+  text-shadow: 2px 1px orange;
+}
+
+#quote-box {
+  border-radius: 3px;
+  box-shadow: 2px 2px 7px #000;
+  position: relative;
+  width: 450px;
+  padding: 40px 50px;
+  display: table;
+  background-color: #fff;
+}
+
+#quote-box #quote-text {
+  text-align: center;
+  width: 450px;
+  height: auto;
+  clear: both;
+  font-weight: 500;
+  font-size: 1.75em;
+}
+
+#quote-box #quote-text i {
+  font-size: 1em;
+  margin-right: 0.4em;
+}
+
+#quote-box #quote-author {
+  width: 450px;
+  height: auto;
+  clear: both;
+  padding-top: 20px;
+  font-size: 1em;
+  text-align: right;
+}
+
+#quote-box #buttons {
+  width: 450px;
+  margin: auto;
+  display: block;
+}
+
+#quote-box #buttons .btn {
+  height: 38px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px #000;
+  color: #fff;
+  background-color: #333;
+  outline: none;
+  font-size: 0.85em;
+  padding: 8px 18px 6px 18px;
+  margin-top: 30px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+#quote-box #buttons .btn:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+#quote-box #buttons .btn#tweet-quote, #quote-box #buttons .btn#tumblr-quote, #quote-box #buttons .btn#fb-quote, #quote-box #buttons .btn#wa-quote, #quote-box #buttons .btn#git-like {
+  float: left;
+  padding: 0px;
+  padding-top: 8px;
+  text-align: center;
+  font-size: 1.2em;
+  margin-right: 5px;
+  height: 30px;
+  width: 40px;
+}
+
+#quote-box #buttons .btn#new-quote {
+  float: right;
+}
+
+@media screen and (max-width: 570px) {
+  #wrapper {
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 460px) {
+  #wrapper {
+    transform: scale(0.6);
+  }
+}
