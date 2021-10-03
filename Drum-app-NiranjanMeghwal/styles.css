@@ -1,0 +1,77 @@
+body {
+  text-align: center;
+  background-color: #FF5C58;
+  margin: auto;
+}
+
+h1{
+  margin: 5%;
+}
+
+.cymbal{
+  display: inline-block;
+}
+
+.drums{
+  display: inline-block;
+}
+
+.elements{
+  display: inline;
+  margin: 10% auto;
+}
+
+.icon {
+  outline: none;
+  line-height: 2;
+  border-radius: 15px;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+}
+
+.drums{
+position: relative;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+.high_tom {
+  background-image: url("images/tom1.png");
+  object-fit: fill;
+}
+
+.medium_tom {
+  background-image: url("images/tom2.png");
+  position: absolute;
+  left: 200px;
+}
+
+.snare {
+  background-image: url("images/snare.png");
+  position: absolute;
+  top: 200px;
+  right: 500px
+}
+
+.floor_tom{
+  background-image: url("images/tom3.png");
+  position: relative;
+  top: 200px;
+  left:200px;
+}
+
+.bass {
+  background-image: url("images/bass.png");
+  position: relative;
+  top: 200px;
+  right: 250px;
+}
+
+.cymbal{
+  background-image: url("images/cymbal.png");
+}
