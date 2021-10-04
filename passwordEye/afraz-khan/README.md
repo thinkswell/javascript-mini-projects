@@ -2,4 +2,7 @@
 Made with bootstrap and vanilla js.
 
 ### Sample
-![sample video](https://media.giphy.com/media/Z8kQkRG3wwJrUcc7TS/giphy.gif)
+
+
+https://github.com/afraz-khan/javascript-mini-projects/blob/passwordEye-afraz-khan-branch/passwordEye/afraz-khan/visual.mp4
+
