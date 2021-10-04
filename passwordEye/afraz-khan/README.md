@@ -4,5 +4,6 @@ Made with bootstrap and vanilla js.
 ### Sample
 
 
-https://github.com/afraz-khan/javascript-mini-projects/blob/passwordEye-afraz-khan-branch/passwordEye/afraz-khan/visual.mp4
+https://user-images.githubusercontent.com/25581456/135930375-17e0d99d-9260-430b-8895-ddd480021ab0.mp4
+
 
