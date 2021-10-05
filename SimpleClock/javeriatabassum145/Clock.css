@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(rgba(83, 85, 185, 0.8), rgba(124, 8, 16, 0.678)), url('purple.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Andika New Basic', sans-serif;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.box1,
+.box2,
+.box3 {
+    background-color: rgb(14, 13, 13, 0.5);
+    margin: 0px 20px 0px 20px;
+    width: 200px;
+    height: 300px;
+    border-radius: 30px;
+    display: flex;
+    /* flex-basis: 300; */
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+span {
+    font-size: 60px;
+}
+
+
+.container0 {
+    color: white;
+    margin-top: 2em;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#date {
+    font-size: 40px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(14, 13, 13, 0.5);
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+}
+
+@media (max-width: 600px) and (min-width: 0) {
+
+    .container {
+        position: absolute;
+        width: 100%;
+        height: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    .box1,
+    .box2,
+    .box3 {
+        background-color: rgb(14, 13, 13, 0.5);
+        margin: 0px 10px 0px 10px;
+        width: 100px;
+        height: 200px;
+        border-radius: 30px;
+        display: flex;
+        /* flex-basis: 300; */
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    span {
+        font-size: 20px;
+    }
+
+
+    .container0 {
+        color: white;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    #date {
+        font-size: 30px;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: rgb(14, 13, 13, 0.5);
+        text-align: center;
+        color: white;
+        font-size: 10px;
+    }
+
+}
