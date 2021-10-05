@@ -1,0 +1,27 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(171, 231, 74);
+    align-items: center;
+}
+.container{
+    padding: 30px 0;
+    width: 50%;
+    height: max-content;
+    background-color: rgb(218, 236, 189);
+    align-items: center;
+    text-align: center;
+    border-radius: 80rem;
+}
+input{
+    width: 50px;
+}
+#minutes, #seconds, #yess{
+    font-size: 5rem;
+}
+#minInput, #secInput{
+    background-color: rgb(216, 216, 195);
+    border: 1px solid black;
+    padding: 0.2rem;
+}
