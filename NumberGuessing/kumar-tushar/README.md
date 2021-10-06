@@ -1,4 +1,4 @@
-# Number Guess using HTML, CSS & JavaScript
+# Number Guessing
 
 > https://kumar-tushar.github.io/Number-Guess-JavaScript
 
