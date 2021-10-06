@@ -1,0 +1,34 @@
+{
+  "name": "covid19-cases-cli",
+  "version": "1.0.7",
+  "description": "list of covid19 cases worldwide",
+  "main": "index.js",
+  "bin": {
+    "covid19": "index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "covid19",
+    "covid19 cases",
+    "covid19 cli",
+    "CLI",
+    "corona virus"
+  ],
+  "author": "Koddi Evangelista",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "clear": "^0.1.0",
+    "clui": "^0.3.6",
+    "figlet": "^1.5.0",
+    "inquirer": "^7.3.3",
+    "node-fetch": "^2.6.1",
+    "table": "^6.0.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Koddi-Evangelista/covid19-cases-cli.git"
+  }
+}
