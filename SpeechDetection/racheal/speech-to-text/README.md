@@ -1,4 +1,9 @@
-# speech-to-text
+# speech-to-text-app
+This is a speech to text app Written in Vue3 Js
+
+- It responds to voice
+- Has Paper UI
+- words spoken are written
 
 ## Project setup
 ```
