@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Breaker</title>
+
+     <style media="screen">
+
+       body{
+         margin: 0;
+         padding: 0;
+       }
+       #canvas{
+         margin: 0;
+         padding: 0;
+         height: 100vh;
+         width: 100%;
+         background-color:#eee;
+       }
+     </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+
+    <script type="text/javascript">
+
+        var can=document.getElementById('canvas');
+        var ctx=can.getContext("2d");
+        var ballx=can.width/2;
+        var bally=can.height/2;
+        var dx=1;
+        var dy=-1;
+        var padwidth=20;
+        var padheight=5;
+        var padx=can.width/2;
+        var pady=can.height-padheight;
+        var leftPressed=false;
+        var rightPressed=false;
+        var brickwidth=40;
+        var brickheight=10;
+        var brickpadding=8;
+        var bricktopset=15;
+        var bricksideset=10;
+        var c=6;
+        var r=3;
+        var k=0;
+        var score=0;
+        var lives=3;
+        var brick=[];
+
+        for (var i = 0; i <c; i++) {
+          for(var j=0;j<r;j++){
+        brick[k++]={x:bricksideset+i*(brickwidth+brickpadding),
+        y:bricktopset+j*(brickheight+brickpadding),
+        status:1};
+
+         }
+        }
+
+
+
+
+        document.addEventListener("keydown",keydownfun);
+        document.addEventListener("keyup",keyupfun);
+        function keydownfun(e) {
+           if(e.key == "Right" || e.key == "ArrowRight")
+           { rightPressed = true;
+           }
+            if(e.key == "Left" || e.key == "ArrowLeft")
+             { leftPressed = true; }
+        }
+        function keyupfun(e) {
+          if(e.key == "Right" || e.key == "ArrowRight")
+          { rightPressed = false;
+          }
+           if(e.key == "Left" || e.key == "ArrowLeft")
+            { leftPressed = false; }
+        }
+        let interval=setInterval(draw,10);
+      function draw() {
+
+
+
+
+           if (rightPressed) {
+             padx+=2;
+           }
+           if (leftPressed) {
+             padx-=2;
+           }
+           if (ballx+5>can.width||ballx-5<0) {
+             dx=-dx;
+          }
+          for(k=0;k<brick.length;k++)
+          if((bally-5<brick[k].y+brickheight)||(bally+5>brick[k]))
+          {
+            if(ballx>brick[k].x && ballx<(brick[k].x+brickwidth))
+            {
+            dy=-dy;
+            brick[k].x=0;
+            brick[k].y=0;
+            brick[k].status=0;
+            score+=10;
+          }
+        }
+          if (bally-5<bricktopset) {
+            dy=-dy;
+          }
+          else if (bally+5>can.height-padheight) {
+            if (ballx+10>padx && ballx-10<padx+padwidth) {
+                   dy=-dy;
+            }
+            else {
+              if(lives>0)
+              {lives--;
+                dy=-dy;
+
+              }
+              else{
+              alert("GAME OVER");
+              document.location.reload();
+              clearInterval(interval);
+            }
+          }
+
+          }
+          if(score==180){
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillText("YOU WON!!!",can.width/2-20,can.height/2);
+          }else{
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ballx+=dx;
+        bally-=dy;
+         ctx.beginPath();
+         for(k=0;k<brick.length;k++)
+         if(brick[k].status==1)
+         ctx.rect(brick[k].x,brick[k].y,brickwidth,brickheight);
+         ctx.rect(padx,pady,padwidth,padheight);
+          ctx.fillText("Score: "+score, 190, 10);
+           ctx.fillText("Lives: "+lives, 0, 10);
+         ctx.arc(ballx,bally,5,0,Math.PI*2,false);
+         ctx.fill();
+         ctx.closePath();
+       }
+          }
+    </script>
+
+  </body>
+</html>

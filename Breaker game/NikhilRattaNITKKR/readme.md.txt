@@ -1,0 +1,4 @@
+The Brick Breaker is a simple Web game developed using HTML and Javascript. The game uses the 
+canvas HTML tag .  This game is about breaking the breaks with the help of bouncing ball and sliding plane. You can play the game until you are able to break all the bricks without dropping the ball to the ground. The player has to move the sliding plane using arrow keys.
+
+Taking about the features of this game, the user has to move the sliding plane to bounce the ball back to break the brick. The ball has to touch the brick to break it and it should not fall on the ground. The PC controls of this game are also simple. You just have to use the left and right to move the sliding plane according to their requirements. The player loses the game if he/she is loses for than 3 time.
