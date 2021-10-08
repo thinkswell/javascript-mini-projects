@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    overflow: hidden;
+}
+
+h1 {
+    position: relative;
+}
+
+h1 button {
+    position: absolute;
+    right: 0;
+    transform: translate(120%, -50%);
+    z-index: 2;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 10px 15px;
+}
+
+.btn-small {
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+.btn-ghost {
+    border: 0;
+    background-color: transparent;
+}
+
+.btn-clear {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+}
+
+.card-container {
+    position: relative;
+    height: 300px;
+    width: 500px;
+    max-width: 100%;
+    perspective: 1000px;
+}
+
+.card {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 1.5em;
+    transform: translateX(50%) rotateY(-10deg);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.card.active {
+    opacity: 1;
+    cursor: pointer;
+    z-index: 10;
+    transform: translateX(0) rotateY(0deg);
+}
+
+.card.left {
+    transform: translateX(-50%) rotateY(10deg);
+}
+
+.card.show-answer .inner-card {
+    transform: rotateX(180deg);
+}
+
+.inner-card {
+    box-shadow: 0 1px 10px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    transform: rotateX(0deg);
+    z-index: 2;
+}
+
+.card-back {
+    transform: rotateX(180deg);
+}
+
+.card-front::after, .card-back::after {
+    content: '\f021  Flip';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #bdc3c7;
+    font-family: 'Font Awesome 5 Free','Lato', sans-serif;
+}
+
+.navigation {
+    display: flex;
+    margin: 20px 0;
+}
+
+.navigation .nav-btn {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.navigation p {
+    margin: 0 25px;
+}
+
+.add-card-container {
+    opacity: 0;
+    z-index: -1;
+    background-color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+.add-card-container.show {
+    opacity: 1;
+    z-index: 2;
+}
+
+.add-card-container h1 {
+    margin: 10px 0;
+}
+
+.form-control label {
+    display: block;
+    margin: 20px 0 10px;
+}
+
+.form-control textarea {
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
+    min-width: 500px;
+    max-width: 100%;
+}
