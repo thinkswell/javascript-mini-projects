@@ -13,7 +13,7 @@ npm start
 #
 
 <div align="center">
-<img src="/Screenshot (218).png"  />
+<img src="./Screenshot (218).png"  />
 </div>
 
 #
