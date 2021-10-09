@@ -13,7 +13,7 @@ npm start
 #
 
 <div align="center">
-<img src="https://github.com/kumar-tushar/javascript-mini-projects/blob/NumberGuessing-kumar-tushar-branch/NumberGuessing/kumar-tushar/Screenshot%20(218).png"  />
+<img src="Screenshot(218).png"  />
 </div>
 
 #
