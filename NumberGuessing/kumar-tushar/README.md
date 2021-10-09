@@ -19,6 +19,6 @@ npm start
 #
 
 <div align="center">
-<img src="https://github.com/kumar-tushar/javascript-mini-projects/blob/NumberGuessing-kumar-tushar-branch/NumberGuessing/kumar-tushar/Screenshot%20(219).png"  />
+<img src="./Screenshot (219).png"  />
 </div>
 
