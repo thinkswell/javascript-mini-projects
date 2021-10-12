@@ -18,7 +18,11 @@ function start(duration, display_counter, currentTime, display_time){
 
         var curTime = convert(currentTime++);
 
-        display_time.textContent = curTime[1] + ":" + curTime[2] + ":" + curTime[3];
+        curTime[1] = curTime[1] < 10 ? "0" + curTime[1] : curTime[1];
+        curTime[2] = curTime[2] < 10 ? "0" + curTime[2] : curTime[2];
+        curTime[3] = curTime[3] < 10 ? "0" + curTime[3] : curTime[3];
+
+        display_time.textContent = curTime[1] + ":" + curTime[2] + ":" + curTime[3] + " " + curTime[4];
 
 
     }, 1000)
@@ -38,11 +42,13 @@ function convert(seconds){
     var dd = Math.floor(seconds/86400);
 
     var hh = parseInt((seconds%86400)/3600);
+    var turno = hh <= 12 ? "AM" : "PM"
+
     hh = hh <= 12 ? hh : hh - 12;
     var mm = parseInt(((seconds%86400)%3600)/60);
     var ss = parseInt(((seconds%86400)%3600)%60);
 
-    return [dd, hh, mm, ss];
+    return [dd, hh, mm, ss, turno];
 }
 
 function getCurrentSeconds(){
