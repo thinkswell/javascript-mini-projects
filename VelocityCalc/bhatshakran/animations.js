@@ -9,7 +9,7 @@ const animation = anime.timeline({
     grid: [test.list[0].length, test.list.length],
     from: "center",
   }),
-  loop: false,
+  loop: true,
 });
 
 animation

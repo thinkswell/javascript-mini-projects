@@ -35,6 +35,7 @@
         width: 400px;
         margin: 0 auto;
     }
+    
     .animate-me{
         width: 400px;
     }
@@ -42,6 +43,14 @@
         margin: 0 auto;
         margin-top: 2rem;
         height: 500px;
+    }
+    @media (max-width:400px) {
+        .inner__wrapper{
+            width: 100%;
+        }
+        .card__wrapper{
+            height: 580px;
+        }
     }
     .top{
         background:linear-gradient(to bottom,#3D9DEA, #4A4EEE) ;
@@ -54,6 +63,7 @@
         border-bottom: 1px solid #fff;
         height: 20px;
         font-size: 0.75rem;
+       
       
     }
     input:focus{
@@ -120,7 +130,7 @@
         </div>
     </div>
 
-        <div class="card__wrapper text-white w-1/3 rounded-3xl ">
+        <div class="card__wrapper text-white lg:w-1/3 rounded-3xl w-3/4 sm:w-1/2  ">
             <div class="top h-1/2 p-3 rounded-t-3xl">
                 <!-- <h3>Velocity Calculator</h3> -->
                 <div class="input_group my-6 flex items-center">
@@ -161,7 +171,7 @@
                 </div>
                
             </div>
-            <div class="bottom h-1/2 rounded-b-3xl pt-3 px-2">
+            <div class="bottom h-1/2  rounded-b-3xl pt-3 px-2">
                 <h3 class="text-white text-2xl">Velocity Calculator</h3>
                 <p class="mt-4 text-sm text-gray-300">Velcotiy calculator lets 
                     you derive the value of one of the
