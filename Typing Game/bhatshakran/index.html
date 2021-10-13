@@ -7,7 +7,7 @@
     <title>Typerformance</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
 </head>
@@ -20,17 +20,17 @@
     .main__wrapper{
         min-height: 100vh;
         min-width: 100%;
-        background-color: #3E6C61;
+        background: #142850;
     }
     .heading{
-        color: #F35F3A;
+        color: white;
         font-family: 'Playfair Display', serif;
         font-size: 3rem;
         width: 100%;
         display: flex;
         justify-content: center;
-        padding-top: 3rem;
-        letter-spacing: 2px;
+        padding-top: 3.2rem;
+        letter-spacing: 5px;
 
     }
     .header{
@@ -41,12 +41,45 @@
 
     }
     .header div {
-        color: wheat;
+        color: #fcd1d1;
         font-size: 1.5rem;
         font-family: 'Source Sans Pro', sans-serif;
     }
     .header span{
-        color:#7BD1B8 ;
+        color:#0c7b93 ;
+    }
+
+    .typing-text{ 
+        width: calc(100% - 8rem);
+        margin: 0 4rem;
+        margin-top: 7rem;
+        color: #FBFFFE;
+        opacity: 0.8;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        font-family: 'Source Sans Pro', sans-serif;
+
+    }
+    .inp_box{
+        width: 100%;
+        background: none;
+        height: 15rem;
+        line-height: 1.4rem;
+        font-size: 1.4rem;
+        width: calc(100% - 8rem);
+        margin: 0 4rem;
+        border: none;
+        color: #FBFFFE;
+        padding-top:1rem;
+        margin-top: 2.5rem;
+        resize: none;
+        
+    }
+    .inp_box:focus{
+        outline: none;
+    }
+    .inp_box::placeholder{
+        color: #446f9e;
     }
 </style>
 <body>
@@ -56,14 +89,25 @@
         </div>
         <div class="header pure-g">
             <div class="words pure-u-1-3">
-               <span>Words:</span> 23/100
+               <span>Words:</span> 0/100
             </div>
             <div class="wpm pure-u-1-3">
-                <span>WPM:</span> 62
+                <span>WPM:</span> 0
             </div>
             <div class="time pure-u-1-3">
-               <span>Time:</span> 15
+               <span>Time:</span> 15s
             </div>
+        </div>
+
+        <div class="typing-text">
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Sint magnam eaque veniam, dolorum soluta omnis ea eius ex vero 
+                 voluptas saepe optio, mollitia impedit quis expedita sunt ab. 
+                 Corrupti, est? </p>
+        </div>
+
+        <div class="input__wrapper">
+            <textarea  class="inp_box" spellcheck="false" placeholder="Click here and type your input text..."></textarea>
         </div>
     </div>
 </body>
