@@ -9,6 +9,7 @@ let text_samples_arr = [
 
 let time_text = document.querySelector(".time");
 let wpm_text = document.querySelector(".wpm");
+let acc_text = document.querySelector(".accuracy");
 let act_text = document.querySelector(".text");
 let inp_area = document.querySelector(".inp_box");
 
@@ -29,6 +30,7 @@ let actTextArr;
 let totalErrors = 0;
 let timer = null;
 let wpm = 0;
+let accuracy = 0;
 
 function updateText() {
   act_text.textContent = null;
@@ -68,6 +70,11 @@ function processCurrentText() {
       errors++;
     }
   });
+
+  //   update accuracy text
+  let correctCharacters = charactersTyped - (totalErrors + errors);
+  let accuracyVal = (correctCharacters / charactersTyped) * 100;
+  acc_text.textContent = Math.round(accuracyVal);
 
   if (userTypedInput.length == currentText.length) {
     updateText();
@@ -123,6 +130,6 @@ function finishTest() {
 
   wpm = Math.round((charactersTyped / 5 / timeElapsed) * 60);
 
-  wpm_text.textContent = "WPM: " + wpm;
+  wpm_text.textContent = wpm;
   console.log(wpm);
 }
