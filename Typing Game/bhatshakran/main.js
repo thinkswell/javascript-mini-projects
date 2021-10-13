@@ -13,9 +13,14 @@ let acc_text = document.querySelector(".accuracy");
 let act_text = document.querySelector(".text");
 let inp_area = document.querySelector(".inp_box");
 
-// inp_area.addEventListener("change", processCurrentText);
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Backspace") {
+    startTest();
+    inp_area.focus();
+  }
+});
 
-const TIME_LIMIT = 25;
+const TIME_LIMIT = 5;
 
 let timeElapsed = 0;
 let timeLeft = TIME_LIMIT;
@@ -31,6 +36,7 @@ let totalErrors = 0;
 let timer = null;
 let wpm = 0;
 let accuracy = 0;
+let accArr = [];
 
 function updateText() {
   act_text.textContent = null;
@@ -74,7 +80,8 @@ function processCurrentText() {
   //   update accuracy text
   let correctCharacters = charactersTyped - (totalErrors + errors);
   let accuracyVal = (correctCharacters / charactersTyped) * 100;
-  acc_text.textContent = Math.round(accuracyVal);
+  accArr.push(Math.round(accuracyVal));
+  acc_text.textContent = Math.round(accuracyVal) + "%";
 
   if (userTypedInput.length == currentText.length) {
     updateText();
@@ -100,12 +107,15 @@ function resetValues() {
   totalErrors = 0;
   accuracy = 0;
   charactersTyped = 0;
-  quoteNo = 0;
+  textNo = 0;
   inp_area.disabled = false;
+  wpm = 0;
 
   inp_area.value = "";
   act_text.textContent = "Click on the area below to start the test.";
   time_text.textContent = timeLeft + "s";
+  wpm_text.textContent = null;
+  acc_text.textContent = null;
 }
 
 function updateTimer() {
@@ -131,5 +141,7 @@ function finishTest() {
   wpm = Math.round((charactersTyped / 5 / timeElapsed) * 60);
 
   wpm_text.textContent = wpm;
+  let sum = accArr.reduce((acc, curr) => acc + curr);
+  acc_text.textContent = parseInt(sum / accArr.length);
   console.log(wpm);
 }
