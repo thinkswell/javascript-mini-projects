@@ -10,78 +10,100 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <script src="./main.js" defer></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main__wrapper{
+            min-height: 100vh;
+            min-width: 100%;
+            background: #142850;
+        }
+        .heading{
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 3.2rem;
+            letter-spacing: 5px;
+    
+        }
+        .header{
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 5rem;
+    
+        }
+        .header div {
+            color: #fcd1d1;
+            font-size: 1.5rem;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        .header span{
+            color:#0c7b93 ;
+        }
+    
+        .typing-text{ 
+            width: calc(100% - 8rem);
+            margin: 0 4rem;
+            margin-top: 7rem;
+            color: #FBFFFE;
+            opacity: 0.8;
+            font-size: 1.4rem;
+            line-height: 2rem;
+            font-family: 'Source Sans Pro', sans-serif;
+    
+        }
+        .inp_box{
+            width: 100%;
+            background: none;
+            height: 15rem;
+            line-height: 1.4rem;
+            font-size: 1.4rem;
+            width: calc(100% - 8rem);
+            margin: 0 4rem;
+            border: none;
+            color: #FBFFFE;
+            padding-top:1rem;
+            margin-top: 2.5rem;
+            resize: none;
+            
+        }
+        .inp_box:focus{
+            outline: none;
+        }
+        .inp_box::placeholder{
+            color: #446f9e;
+        }
+        .correct_char{
+            color: gray;
+            opacity: 1;
+        }
+        .incorrect_char{
+            color: red;
+        }
+
+        .restart__wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .restart_btn{
+            cursor: pointer;
+        }
+        .restart_btn:hover{
+            
+            background: rgba(0, 0, 0, 0.308);
+        }
+    </style>
 </head>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    .main__wrapper{
-        min-height: 100vh;
-        min-width: 100%;
-        background: #142850;
-    }
-    .heading{
-        color: white;
-        font-family: 'Playfair Display', serif;
-        font-size: 3rem;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding-top: 3.2rem;
-        letter-spacing: 5px;
 
-    }
-    .header{
-        width: 90%;
-        margin: 0 auto;
-        text-align: center;
-        margin-top: 5rem;
-
-    }
-    .header div {
-        color: #fcd1d1;
-        font-size: 1.5rem;
-        font-family: 'Source Sans Pro', sans-serif;
-    }
-    .header span{
-        color:#0c7b93 ;
-    }
-
-    .typing-text{ 
-        width: calc(100% - 8rem);
-        margin: 0 4rem;
-        margin-top: 7rem;
-        color: #FBFFFE;
-        opacity: 0.8;
-        font-size: 1.4rem;
-        line-height: 2rem;
-        font-family: 'Source Sans Pro', sans-serif;
-
-    }
-    .inp_box{
-        width: 100%;
-        background: none;
-        height: 15rem;
-        line-height: 1.4rem;
-        font-size: 1.4rem;
-        width: calc(100% - 8rem);
-        margin: 0 4rem;
-        border: none;
-        color: #FBFFFE;
-        padding-top:1rem;
-        margin-top: 2.5rem;
-        resize: none;
-        
-    }
-    .inp_box:focus{
-        outline: none;
-    }
-    .inp_box::placeholder{
-        color: #446f9e;
-    }
-</style>
 <body>
     <div class="main__wrapper">
         <div class="heading">
@@ -95,19 +117,31 @@
                 <span>WPM:</span> 0
             </div>
             <div class="time pure-u-1-3">
-               <span>Time:</span> 15s
+               <span>Time:</span> 
             </div>
         </div>
 
         <div class="typing-text">
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Sint magnam eaque veniam, dolorum soluta omnis ea eius ex vero 
-                 voluptas saepe optio, mollitia impedit quis expedita sunt ab. 
-                 Corrupti, est? </p>
+            <p class="text"></p>
         </div>
 
         <div class="input__wrapper">
-            <textarea  class="inp_box" spellcheck="false" placeholder="Click here and type your input text..."></textarea>
+            <textarea  class="inp_box" spellcheck="false" oninput="processCurrentText()" onfocus="startTest()" placeholder="Click here to start the test..."></textarea>
+        </div>
+        <div class="restart__wrapper">
+            <svg
+            width="80"
+            height="80"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="restart_btn"
+            >
+            <path
+                d="M13.1459 11.0499L12.9716 9.05752L15.3462 8.84977C14.4471 7.98322 13.2242 7.4503 11.8769 7.4503C9.11547 7.4503 6.87689 9.68888 6.87689 12.4503C6.87689 15.2117 9.11547 17.4503 11.8769 17.4503C13.6977 17.4503 15.2911 16.4771 16.1654 15.0224L18.1682 15.5231C17.0301 17.8487 14.6405 19.4503 11.8769 19.4503C8.0109 19.4503 4.87689 16.3163 4.87689 12.4503C4.87689 8.58431 8.0109 5.4503 11.8769 5.4503C13.8233 5.4503 15.5842 6.24474 16.853 7.52706L16.6078 4.72412L18.6002 4.5498L19.1231 10.527L13.1459 11.0499Z"
+                fill="white"
+            />
+            </svg>
         </div>
     </div>
 </body>
