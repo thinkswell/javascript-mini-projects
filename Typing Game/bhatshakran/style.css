@@ -7,6 +7,7 @@
     min-height: 100vh;
     min-width: 100%;
     background: #142850;
+    position: relative;
 }
 .heading{
     color: #fcd1d1;
@@ -97,6 +98,15 @@
 .restart_btn:hover{
     
     background: rgba(0, 0, 0, 0.308);
+}
+
+.tip{
+    position: absolute;
+    bottom: 2rem;
+    margin: 0 5rem;
+    color: #fbfffeb0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1rem;
 }
 
 @media (max-width:500px){
