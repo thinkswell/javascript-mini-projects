@@ -1,0 +1,129 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+p{
+
+  
+  border-radius:10px;
+  padding:5px;
+  border:2px solid white;
+  background:lightgray;
+  color:black;
+  font-size:18px;
+}
+button{
+  font-family: 'Sniglet', cursive;
+}
+body {
+  background: linear-gradient(45deg, rgba(189,245,152,1) 0%, rgba(50,87,81,1) 100%);
+  height:100%;
+}
+h1,h2{
+  text-align:center;
+  margin-bottom:20px;
+  margin-top:10px;
+  font-family: 'Londrina Outline', cursive;
+}
+#control{width:200px;margin: 20px auto;}
+#control h2{font-family: 'Sniglet', cursive;}
+#control button{padding:5px;}
+#container{
+  width:400px;
+  height:500px;
+  background: linear-gradient(to bottom, rgba(242,246,248,1) 0%, rgba(216,225,231,0.54) 49%, rgba(181,198,208,0.52) 51%, rgba(224,239,249,0.06) 100%);
+  border-radius: 16px 16px 16px 16px;
+  border: 1px solid #d6ced6;
+  box-shadow: 0px 14px 30px -9px rgba(0,0,0,0.74);
+  margin: 20px auto;
+  overflow:hidden;
+  z-index:5;
+}
+.screen{
+ width:inherit; 
+ height:inherit;
+}
+#splash{
+  display:none;
+  text-align:center;
+}
+  #splash h1{
+      margin-top:70px;
+      font-size:80px;
+  }
+  #splash h1 .char1{
+      color:#93C683;
+  }
+  #splash h1 .char2{
+      color:rgb(75, 160, 108);
+  }
+  #splash #start{
+      background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+      color:black;
+      border-radius: 10px;
+      margin-top:140px;
+      padding:10px;
+      font-size:50px;
+  }
+#pause{
+  display:none;
+  position:absolute;
+  background: rgba(50,50,50,0.4);
+  z-index:1;
+  border-radius: 16px 16px 16px 16px;
+  text-align:center;
+}
+  #pause h1{
+      margin-top:150px;
+      color:orange;
+  }
+  #pause button{
+      display:block;
+      background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+      border-radius: 10px;
+      padding:10px;
+      color:black;
+      margin:20px auto;
+      font-size:30px;
+  }
+#end{
+  display:none;
+}
+#game{
+ padding:10px 10px; 
+ position:relative;
+ display:none;
+}
+#game #info{
+  padding:5px 10px;
+  background:gray; 
+  margin:0 auto;
+  width:200px;
+}
+#game #info #pausebtn {
+  float:right;
+}
+#game #gamearea{
+  position:absolute;
+  bottom:50px;
+  left:50px;
+  width:300px;
+  height:300px;
+  background:gray;
+}
+#game #gamearea .element {
+  width:75px;
+  height:75px;
+  background: transparent;
+  border: 1px solid #d6ced6;
+  display:inline-block;
+  margin-right:-4px;
+  margin-bottom:-4px;
+  overflow:hidden;
+  font-size:30px;
+  line-height:2.2;
+  text-align:center;
+  font-family: 'Sniglet', cursive;
+  color:white;
+} 
