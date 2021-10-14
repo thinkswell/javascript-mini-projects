@@ -21,3 +21,7 @@ The calculator consists of the following components:
 - The display() function accesses the DOM using the id of the result and appends the value of the clicked button to the result.
 
 - The calculate() function accesses the DOM using the id of the result and evaluates the expression using the eval() function. The evaluated value of the expression is again assigned to the result.
+
+
+# Demo ( screenshot ) - 
+![Calculator](https://github.com/aayushi-kunwar13/javascript-mini-projects/blob/master/simpleCalculator/aayushi-kunwar13/simpleCalc.png)
