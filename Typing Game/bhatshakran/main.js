@@ -14,13 +14,13 @@ let act_text = document.querySelector(".text");
 let inp_area = document.querySelector(".inp_box");
 
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Backspace") {
+  if (e.key === "Control") {
     startTest();
     inp_area.focus();
   }
 });
 
-const TIME_LIMIT = 5;
+const TIME_LIMIT = 25;
 
 let timeElapsed = 0;
 let timeLeft = TIME_LIMIT;
