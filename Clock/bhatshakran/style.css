@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #6C4A4A;
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+
+.heading{
+    color: #DDBEBE;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 8rem !important;
+}
+span{
+    color: #C89595;
+    font-size: 8rem !important; 
+}
+
+.left__wrapper{
+    height: 80vh;
+    width: 100%;
+    position: relative;
+
+}
+
+.menu{
+    font-size: 4rem;
+    color: #d5d5d569;
+    margin-left: 2rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu >  div{
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.menu > div:hover{
+    color: white;
+    transition: all 0.25s ease-in-out;
+}
