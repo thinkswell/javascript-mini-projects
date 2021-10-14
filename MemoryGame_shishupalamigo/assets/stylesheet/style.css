@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 20px 0;
+  background: #6589f9;
+}
+.heading {
+  text-align: center;
+  background: rgb(0, 15, 46);
+  padding: 1rem;
+  color: bisque;
+}
+.count-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: auto auto;
+  padding: 2rem 0;
+}
+.attempts {
+  font-size: 2rem;
+  color: antiquewhite;
+} 
+.reset {
+  font-size: 2rem;
+  color: antiquewhite;
+  cursor: pointer;
+  border: 1px solid grey;
+  padding: .5rem;
+}
+.reset:hover {
+  transform: scale(1.2);
+}
+.time {
+  font-size: 2rem;
+  color: antiquewhite;
+}
+.grid {
+  max-width: 750px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  position: relative;
+  transition: all 0.4s linear;
+  transform-style: preserve-3d;
+  margin: 5px;
+}
+
+.card,
+.back,
+.front {
+  height: 100px;
+  width: 100px;
+}
+
+.back,
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+}
+.front {
+  background: #fab942 url('../media/question.gif') no-repeat center center /
+    contain;
+}
+.back {
+  transform: rotateY(180deg);
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.selected {
+  border: 4px solid blue;
+  transform: rotateY(180deg);
+}
+
+.match .front {
+  border: 0px;
+  background: rgb(4, 44, 2) url("../media/celebrate.gif") no-repeat center center /
+  contain !important;
+  cursor: not-allowed;
+  transform: none !important;
+}
