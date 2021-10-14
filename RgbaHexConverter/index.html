@@ -1,0 +1,163 @@
+<html>
+  <head>
+    <title>Rgba to hex/rgb converter</title>
+  </head>
+  <style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        background-color: #f5f5f5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .header {
+        font-size: 24px;
+        font-family: monospace;  
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content p {
+        font-size: 18px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    form label {
+      font-family: monospace;
+      font-size: 28px;
+      line-height: 28px;
+      width: 250px;
+      display: flex;
+      align-items: center;
+    }
+
+    form label:nth-child(1) {
+        color: red;
+    }
+
+    form label:nth-child(2) {
+        color: green;
+    }
+
+    form label:nth-child(3) {
+        color: blue;
+    }
+
+    form input {
+        color: black;
+        height: 28px;
+        width: 100%;
+        border: none;
+        margin-left: 10px;
+    }
+
+
+    form button {
+        background-color: yellow;
+        height: 30px;
+        padding: 4px 12px;
+        color: black;
+        font-weight: bold;
+        border: 1px solid black;
+        border-radius: 6px;
+        font-family: monospace;  
+    }
+
+    #resultcontainer {
+        width: 100%;
+        height: 100px;
+        background-color: #fdfff7;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #result {
+        font-family: monospace;  
+        font-size: 24px;
+    }
+
+  </style>
+  <body>
+      <div class="header">
+          <h1>RGBA to HEX converter</h1>
+      </div>
+      <div class="content">
+          <form onsubmit="return convert(event)">
+              <label>
+                  Red
+                  <input type="number" min="0" max="256" name="red" id="red" placeholder="Red value" title="Red" required/>
+              </label>
+              <br/>
+              <label>
+                  Green
+                  <input type="number" min="0" max="256" name="red" id="green" placeholder="Green value" title="Green" required/>
+              </label>
+              <br/>
+              <label>
+                  Blue
+                  <input type="number" min="0" max="256" name="red" id="blue" placeholder="Blue value" title="Blue" required/>
+              </label>
+              <br/>
+              <label>
+                  Alpha
+                  <input type="number" min="0" max="100" name="alpha" id="alpha" placeholder="Alpha value (0-100)" title="Alpha" required/>
+              </label>
+              <br/>
+              <button type="submit">Calculate</button>
+          </form>
+          
+          <div id="resultcontainer">
+              <div id="result"></div>
+          </div>
+      </div>
+    </body>
+
+    <script>
+      function colorAlphaAjusted(c, a) {
+          // against white background
+          return c * a + 255 * (1 - a);
+      }
+
+      function rgbaToRgb(r, g, b, a) {
+          return [colorAlphaAjusted(r, a), colorAlphaAjusted(g, a), colorAlphaAjusted(b, a) ];
+      }
+
+      function componentToHex(c) {
+          var hex = c.toString(16);
+          return hex.length == 1 ? "0" + hex : hex;
+      }
+
+      function convert(e) {
+          e.preventDefault();
+          var red = document.getElementById('red');
+          var green = document.getElementById('green');
+          var blue = document.getElementById('blue');
+          var alpha = document.getElementById('alpha');
+          var rValue = red && red.value;
+          var gValue = green && green.value;
+          var bValue = blue && blue.value;
+          var aValue = alpha && alpha.value;
+          aValue /= 100;
+          var [r, g, b] = rgbaToRgb(rValue, gValue, bValue, aValue);
+          document.getElementById('result').innerHTML = "#" + componentToHex(Math.round(r)) + componentToHex(Math.round(g)) + componentToHex(Math.round(b));
+          return false;
+      }
+  
+  </script>
+</html>
