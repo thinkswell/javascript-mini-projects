@@ -1,3 +1,3 @@
 # GYM Web UI
 
-![Screenshot](fitworld.jpg)
+![Screenshot](Fitworld.jpg)
