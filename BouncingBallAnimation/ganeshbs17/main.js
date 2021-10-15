@@ -5,7 +5,7 @@ var ty = window.innerHeight;
 disp_area.width = tx;
 disp_area.height = ty;
 
-
+//mouse pointer
 var mousex = 0;
 var mousey = 0;
 
