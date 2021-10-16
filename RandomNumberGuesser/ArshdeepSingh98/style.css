@@ -1,0 +1,87 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #b485ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+h1 {
+    padding: 0;
+    margin: 0 0 12px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+form {
+    display: flex;
+    width: 100%;
+    margin: 20px 0 20px 0;
+}
+
+#user-guess {
+    border: 0.5px solid rgb(196, 196, 196);
+    width: 100%;
+    height: 44px;
+    padding: 0 10px;
+}
+
+#user-guess::placeholder {
+    padding-left: 10px;;
+}
+
+button {
+    background-color: black;
+    border: none;
+    color: white;
+    width: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.guesses {
+    display: flex;
+    flex-direction: column;
+    max-height: 200px;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.guess-history {
+    width: 100%;
+}
+
+.float-left {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+
+.float-right-red {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+    color: red;
+}
+
+.float-right-yellow {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+    color: #37009f;
+}
