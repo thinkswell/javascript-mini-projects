@@ -65,6 +65,7 @@ function loop() {
   requestAnimationFrame(loop);
 
   for (const point of points) point.update();
+
   render();
 
   ctx.fillStyle = '#000';
