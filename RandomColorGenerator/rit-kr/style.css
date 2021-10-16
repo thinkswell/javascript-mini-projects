@@ -1,0 +1,93 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  background: #f2f4f8;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  height: 100%;
+  max-width: 1280px;
+  padding: 5rem;
+  margin: 0 auto;
+}
+h1 {
+  padding-bottom: 10px;
+}
+
+.banner {
+  display: inline-block;
+  color: #424242;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background: white;
+  border-radius: 4px;
+  min-width: 24px;
+  font-size: 20px;
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+  border: 2px solid;
+}
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.box {
+  border: 4px solid firebrick;
+  height: 100%;
+  width: 50%;
+}
+.text {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first {
+  margin-right: 20px;
+}
