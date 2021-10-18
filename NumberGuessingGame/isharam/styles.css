@@ -1,10 +1,16 @@
+.img {
+    background-image: url('./bg.jpg');
+    height: 100vh;
+}
+
 .topic {
     font-family: "Trebuchet MS";
-    font-size: 4rem;
-    text-shadow: 1px 1px 1px rgb(231, 135, 25),
-                3px 3px 2px rgb(236, 233, 37);
+    font-size: 3rem;
+    text-shadow: 1px 1px 1px rgb(12, 102, 129),
+                3px 3px 2px rgb(55, 245, 245);
     text-align: center;
     font-weight: bold;
+    color: #e7f3fe;
 
 }
 
@@ -13,8 +19,8 @@
     background-color: #4CAF50;
     border: none;
     color: white;
-    width: 120px;  
-    height: 60px;  
+    width: 200px;  
+    height: 50px;  
     display: flex;  
     justify-content: center;  
     align-items: center;  
@@ -23,54 +29,52 @@
 .attempts-left {
     display: flex;
     margin: auto;
-    width: 50%;
-    padding: 10px;
-    margin-top: 15px;
-    box-shadow: 5px 5px 5px 5px #aaa;
-    height: 100px;
-    width: 500px;
+    padding: 5px;
+    margin-right: 15px;
     justify-content: center;  
     align-items: center;  
-    margin-bottom: 15px;
+    margin-bottom: 2px;
+    width: 250px;  
+    height: 50px;  
+    color: white;
+    background-color: #f5904d;
 }
 
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    margin: 2px auto 0;
-    width: 1000px;
+    justify-content: center;  
+    align-items: center;
 }
   
 .card {
-    box-shadow: 5px 5px 5px 0 #aaa;
+    box-shadow: 2px 2px 2px 0 #aaa;
     cursor: pointer;
-    height: 100px;
     position: relative;
-    width: 100px;
-    margin: 5px;
+    margin: 2px;
+    font-family: "Trebuchet MS";
 }
- 
+
 .hints {
-    width: 50%;
-    margin: 0 auto;
-    margin-top: 50px;
+    color: #e7f3fe;
 }
 .danger {
-    background-color: #ffdddd;
-    border-left: 6px solid #f44336;
+    background-color: #d85151;
+    border-left: 10px solid #e7f3fe;
+    height: 50px; 
+    margin-top: 10px;
 }
 
 .success {
-    background-color: #ddffdd;
-    border-left: 6px solid #04AA6D;
+    background-color: #04AA6D;
+    border-left: 10px solid #e7f3fe;
+    height: 50px; 
+    margin-top: 10px;
 }
 
 .info {
-    background-color: #e7f3fe;
-    border-left: 6px solid #2196F3;
-}
-
-.warning {
-    background-color: #ffffcc;
-    border-left: 6px solid #ffeb3b;
+    background-color: #2196F3;
+    border-left: 6px solid #e7f3fe;
+    height: 50px; 
+    margin-top: 10px;
 }

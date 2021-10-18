@@ -5,7 +5,7 @@ const hints = document.getElementById("hints");
 const remainingAttempts = document.getElementById("attempts-left");
 
 const min = 1;
-const max = 20;
+const max = 100;
 let gameWon;
 
 /**
@@ -14,7 +14,7 @@ let gameWon;
  const startGame = () => {
     cardDeck.innerHTML = '';
     hints.innerHTML = '';
-    attemptsLeft = 5;
+    attemptsLeft = 10;
     gameWon = false;
 
     remainingAttempts.innerHTML = attemptsLeft;
@@ -26,10 +26,8 @@ let gameWon;
  * Generate 20 cards on card deck
  */
 const generateDeck = () => {
-    document.body.style.backgroundColor = '#D8DBA8';
-
     for (let cardId=min; cardId<=max; cardId++) {
-        let cardTitle = document.createElement('h2');
+        let cardTitle = document.createElement('h6');
         cardTitle.className = "card-title";
         cardTitle.textContent = cardId;
 
@@ -71,7 +69,7 @@ const giveHint = (guessedNumber) => {
     let hintDiv = document.createElement('div');
     hintDiv.className = 'danger';
 
-    let hint = document.createElement('p');
+    let hint = document.createElement('h5');
     let hintText;
 
     if (guessedNumber > correctNumber) {
@@ -90,9 +88,9 @@ const giveHint = (guessedNumber) => {
  */
  const giveGameOverHint = () => {
     let hintDiv = document.createElement('div');
-    hintDiv.className = 'warning';
+    hintDiv.className = 'info';
 
-    let hint = document.createElement('p');
+    let hint = document.createElement('h5');
     let hintText = `Game Over! The correct number was ${correctNumber}`;
 
     hint.innerHTML = hintText;
@@ -108,9 +106,9 @@ const giveHint = (guessedNumber) => {
     gameWon = true;
 
     let hintDiv = document.createElement('div');
-    hintDiv.className = 'info';
+    hintDiv.className = 'success';
 
-    let hint = document.createElement('p');
+    let hint = document.createElement('h5');
     let hintText = `Congratulations! The correct number is ${correctNumber}.`;
 
     hint.innerHTML = hintText;
