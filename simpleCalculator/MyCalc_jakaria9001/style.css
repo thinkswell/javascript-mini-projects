@@ -1,0 +1,101 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    /* color: red; */
+    background-color: blue;
+}
+#container{
+    width: 1000px;
+    height: 550px;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(bgImg1.jpg);
+    /* background-color: azure; */
+    margin: 100px auto;
+}
+#calculator{
+    width: 350px;
+    height: 530px;
+    background-color: rgb(235, 225, 225);
+    margin: 0 auto;
+    top: 10px;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.15);
+}
+#result{
+    height: 120px;
+}
+#keyboard{
+    height: 410px;
+}
+#history{
+    text-align: right;
+    height: 20px;
+    margin: 0 20px;
+    padding-top: 20px;
+    font-size: 15px;
+    color: rebeccapurple;
+}
+#output{
+    text-align: right;
+    height: 60px;
+    margin: 10px 20px;
+    font-size: 30px;
+}
+.operator, .number, .empty{
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+    float: left;
+    border-radius: 50% ;
+    border-width: 0;
+    font-weight: bolder;
+    font-size: 15px;
+}
+.number, .empty{
+    background-color: rgb(235, 225, 225);
+}
+.number, .operator{
+    cursor: pointer;
+}
+.number:active, .operator:active{
+    font-size: 13px;
+}
+.operator:focus, .number:focus, .empty:focus{
+    outline: 0;
+}
+button:nth-child(1){
+    font-size: 20px;
+    background-color: rgb(100, 177, 240) ;
+}button:nth-child(2){
+    font-size: 20px;
+    background-color: rgb(84, 233, 158) ;
+}button:nth-child(3){
+    font-size: 20px;
+    background-color: rgb(138, 83, 202) ;
+}button:nth-child(17){
+    /* font-size: 20px; */
+    background-color: rgb(193, 231, 105) ;
+}button:nth-child(19){
+    /* font-size: 20px; */
+    background-color: rgb(163, 10, 61) ;
+}
+button:nth-child(4){
+    font-size: 25px;
+    background-color: red ;
+}
+button:nth-child(8){
+    font-size: 25px;
+    background-color: yellowgreen ;
+}
+button:nth-child(12){
+    font-size: 25px;
+    background-color: pink;
+}
+button:nth-child(16){
+    font-size: 20px;
+    background-color: blue;
+}
+button:nth-child(20){
+    font-size: 20px;
+    background-color: rgb(104, 70, 32) ;
+}
+
