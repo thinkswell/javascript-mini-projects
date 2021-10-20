@@ -1,0 +1,167 @@
+body {
+  background-image: linear-gradient(45deg, #ff4d4d 90%, #fb0100, #33ff33 10%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #ff4d4d;
+}
+
+#stop {
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+}
+
+#stop:hover {
+  background-color: #fff;
+  box-shadow: 5px 5px 3px #000;
+  cursor: pointer;
+}
+
+#footer {
+  width: 450px;
+  text-align: center;
+  display: block;
+  margin: 15px auto 30px auto;
+  font-size: 0.8em;
+  font-family: candara;
+}
+
+#footer a {
+  font-weight: 800;
+  text-decoration: none;
+  color: #fff;
+}
+
+#footer a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+#i-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#i-app {
+  width: 400px;
+  height: 450px;
+  cursor: default;
+  background-image: linear-gradient(45deg, #aaa, #999, #888, #777, #666, #555, #444, #333, #222, #111);
+  background-color: #999;
+  border-radius: 9px 100px;
+  border-top: 10px inset #444;
+  border-left: 10px inset #777;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#i-screen, #i-controls {
+  border-radius: 5px;
+  height: 200px;
+  width: 300px;
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#screen {
+  width: 200px;
+  height: 120px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 2px;
+  border: 4px inset #555;
+}
+
+#screen-controls {
+  width: 250px;
+  height: 50px;
+  margin-top: 5px;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#screen-controls .fa:hover {
+  transform: scale(1.1);
+  color: #fff;
+  text-shadow: 5px 5px 3px #000;
+  cursor: pointer;
+}
+
+#screen-controls .fa-play {
+  display: block;
+}
+
+#screen-controls .fa-pause {
+  display: none;
+}
+
+#screen-controls .active .fa-play {
+  display: none;
+}
+
+#screen-controls .active .fa-pause {
+  display: block;
+}
+
+#timer-label {
+  font-family: candara;
+  font-weight: 1000;
+  font-size: 20px;
+  color: #f00;
+}
+
+#time-left {
+  font-size: 65px;
+  font-family: arial;
+  font-weight: 1000;
+}
+
+#i-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 130px;
+  border-radius: 5px;
+  width: 300px;
+  margin-top: 2px;
+}
+
+#session, #break {
+  font-size: 30px;
+  font-weight: 800;
+  display: flex;
+}
+
+#session .fa, #break .fa {
+  margin: auto 5px;
+}
+
+#session .fa:hover, #break .fa:hover {
+  transform: scale(1.09);
+  color: #fff;
+  text-shadow: 5px 5px 15px #000;
+  cursor: pointer;
+}
+
+#break-label, #session-label {
+  font-family: candara;
+  font-weight: 1000;
+}
+
+@media screen and (max-width: 480px) {
+  #i-main {
+    transform: scale(0.8);
+  }
+  body {
+    background-image: none;
+  }
+}
