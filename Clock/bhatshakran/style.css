@@ -32,7 +32,7 @@ span{
 
 .switch{
   border: 1px solid var(--primary-color);
-  width: 80px;
+  width: 120px;
   text-align: center;
   font-family: 'Gill Sans';
   font-size: 3rem;
@@ -44,6 +44,7 @@ span{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
 }
 
 .left__wrapper{
@@ -226,4 +227,23 @@ span{
     background: #ee791a;
     width: 45%;
     height: 2px;
+  }
+
+
+  @media (max-width:600px) {
+    .menu{
+      text-align: center;
+    }
+    .menu > div{
+      display: inline;
+      margin: 0;
+      width: 50%;
+
+    }
+    .left__wrapper{
+      height: 30vh;
+    }
+    .switch{
+      margin: 0 auto;
+    }
   }
