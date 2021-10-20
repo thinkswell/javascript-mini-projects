@@ -1,0 +1,159 @@
+:root {
+  --color-1: #3c3045;
+  --color-2: #a94b45;
+  --color-3: #e25f37;
+  --color-4: #d1c98e;
+  --color-5: #e3ddbd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-2);
+  box-shadow: 1px 1px 10px black;
+}
+
+h1 {
+  color: var(--color-5);
+  text-shadow: 1px 1px 2px var(--color-1), -1px -1px 2px var(--color-1);
+  padding: 0.25rem;
+}
+
+body {
+  background: linear-gradient(var(--color-1), var(--color-2));
+  min-height: 100vh;
+  font-size: medium;
+  color: var(--color-4);
+  text-shadow: 0px 0px 2px var(--color-1), 1px 1px 2px black;
+}
+
+body,
+button {
+  font-family: 'Cabin', sans-serif;
+  font-weight: 600;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+#game-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 700px;
+  margin-top: 1rem;
+}
+
+#game-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.6rem;
+  position: relative;
+}
+
+#win-lose-message {
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+}
+
+/* Top Button starts here */
+#start-button-container {
+  position: relative;
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+#button-start-or-play-again {
+  padding: 6px 15px;
+}
+/* Top Button ends here */
+
+/* All buttons start here */
+button {
+  border-radius: 150px;
+  padding: 3px 10px;
+  background: linear-gradient(10deg, var(--color-4), var(--color-5));
+  color: var(--color-1);
+  box-shadow: 0 2px 10px black;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  position: absolute;
+}
+
+button:active {
+  color: var(--color-5);
+  background: linear-gradient(10deg, var(--color-2) 0%, var(--color-1) 120%);
+  box-shadow: none;
+}
+/* All buttons end here */
+
+/* Button area starts here */
+#buttons-area {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  position: relative;
+}
+
+.section {
+  position: relative;
+  flex: 1 0 23%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+}
+
+#buttons-area button {
+  position: absolute;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.moved-1 {
+  top: 20px;
+  left: 0;
+}
+
+.moved-2 {
+  transform: rotate(25deg);
+}
+
+.moved-3 {
+  top: -20px;
+  transform: rotate(25deg);
+  left: 50px;
+}
+
+.moved-win {
+  transform: rotate(-10deg);
+  height: auto;
+  width: 150px;
+}
+/* Button area ends here */
+
+/* Game Timer Stuff starts here */
+#countdown-timer {
+  width: 2rem;
+  display: inline-block;
+}
+/* Game Timer Stuff ends here */
