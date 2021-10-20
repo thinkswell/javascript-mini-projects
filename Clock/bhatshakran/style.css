@@ -4,9 +4,9 @@
     box-sizing: border-box;
 }
 :root{
-    --main--color:#1F441E;
-    --primary-color:#CEE6B4;
-    --secondary-color:#9ECCA4;
+    --main--color:#091353;
+    --primary-color:#9D84B7;
+    --secondary-color:#D5D5D5;
 }
 body{
     background: var(--main--color);
