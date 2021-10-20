@@ -4,9 +4,9 @@
     box-sizing: border-box;
 }
 :root{
-    --main--color:#053742;
-    --primary-color:#a2dbfa8c;
-    --secondary-color:#4f808a;
+    --main--color:#1F441E;
+    --primary-color:#CEE6B4;
+    --secondary-color:#9ECCA4;
 }
 body{
     background: var(--main--color);
@@ -28,6 +28,22 @@ body{
 span{
     color: var(--secondary-color);
     font-size: 8rem !important; 
+}
+
+.switch{
+  border: 1px solid var(--primary-color);
+  width: 80px;
+  text-align: center;
+  font-family: 'Gill Sans';
+  font-size: 3rem;
+  margin-left: 4rem;
+  color:#fff;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .left__wrapper{
@@ -53,6 +69,11 @@ span{
     align-items: center;
     flex-wrap: wrap;
 
+}
+
+
+.menu .analog{
+  color: #fff;
 }
 
 .menu > div:hover{

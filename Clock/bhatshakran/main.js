@@ -7,6 +7,7 @@ const analogBtn = document.querySelector(".analog");
 const stopwatchBtn = document.querySelector(".stopwatch");
 const digitalClock = document.querySelector(".digital__clock");
 const analogClock = document.querySelector(".clock");
+const switchBtn = document.querySelector(".switch");
 
 function setDate() {
   const now = new Date();
@@ -33,10 +34,35 @@ setDate();
 
 digitalBtn.addEventListener("click", () => {
   digitalClock.style.display = "block";
+  digitalBtn.style.color = "#fff";
+  analogBtn.style.color = "#d5d5d569";
   analogClock.style.display = "none";
 });
 
 analogBtn.addEventListener("click", () => {
   digitalClock.style.display = "none";
+  analogBtn.style.color = "#fff";
+  digitalBtn.style.color = "#d5d5d569";
   analogClock.style.display = "block";
+});
+
+switchBtn.addEventListener("click", () => {
+  if (
+    window
+      .getComputedStyle(document.documentElement)
+      .getPropertyValue("--main--color") == "#1F441E"
+  ) {
+    document.documentElement.style.setProperty("--main--color", "black");
+    document.documentElement.style.setProperty("--primary-color", "#fff");
+    document.documentElement.style.setProperty(
+      "--secondary-color",
+      "lightgrey"
+    );
+    switchBtn.textContent = "Night";
+  } else {
+    document.documentElement.style.setProperty("--main--color", "#1F441E");
+    document.documentElement.style.setProperty("--primary-color", "#CEE6B4");
+    document.documentElement.style.setProperty("--secondary-color", "#9ECCA4");
+    switchBtn.textContent = "Day";
+  }
 });
