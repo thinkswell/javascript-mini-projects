@@ -1,0 +1,103 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  font-family: sans-serif;
+  z-index: 0;
+}
+
+#menu {
+  border-bottom: 2px solid #000000;
+  height: 75px;
+}
+
+#menu table {
+  width: 100%;
+  height: 100%;
+}
+
+#menu td {
+  width: 50%;
+  text-align: center;
+  height: 100%;
+  font-size: 30px;
+  transition-duration: 0.5s;
+}
+
+#menu td:hover {
+  background-color: #DDDDDD;
+  cursor: pointer;
+}
+
+#content {
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+#content table {
+  text-align: center;
+  width: 75%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+#content table button {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+#content #mode {
+  margin-top: 50px;
+}
+
+.flashcard {
+  background-color: #4089be;
+  border-radius: 30px;
+  width: 400px;
+  height: 300px;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-right: 40px;
+  float: left;
+}
+
+.flashcard p {
+  font-size: 50px;
+  text-shadow: 0 2px #000000, 2px 0 #000000, 0 -2px #000000, -2px 0px #000000;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+#shade {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  z-index: 1;
+}
+
+#window {
+  padding: 50px;
+  position: absolute;
+  left: 40%;
+  right: 40%;
+  top: 30%;
+  border-radius: 50px;
+  background-color: #FFFFFF;
+  visibility: hidden;
+  text-align: center;
+}
+
+#window button, input {
+  padding: 10px;
+  margin-bottom: 10px;
+}
