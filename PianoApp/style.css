@@ -1,0 +1,81 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(65, 63, 63);
+    margin: 0;
+}
+
+.head{
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+    margin-top: 1rem;
+}
+
+span{
+    color: black;
+}
+
+h5{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    margin-top: 0.2rem;
+}
+
+.piano{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.key{
+    height: calc(var(--width)*4);
+    width: var(--width);
+}
+
+.white{
+    --width: 100px;
+    background-color: white;
+    border: 1px solid #333;
+}
+
+.white.active{
+    background-color: #CCC;
+}
+
+.black.active{
+    background-color: #333;
+}
+
+.black{
+    --width: 60px;
+    background-color: black;
+    margin-left: calc(var(--width)/-2);
+    margin-right: calc(var(--width)/-2);
+    z-index: 2;
+}
+
+footer{
+    position: relative;
+    bottom: 20px;
+    width: 100%;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover{
+    color: black;
+}
