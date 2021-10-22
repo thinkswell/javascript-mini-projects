@@ -1,0 +1,112 @@
+:root {
+  --primaryColor: #2b4e7c;
+  --offWhite: #fef1e6;
+}
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+html,
+body {
+  min-height: 100vh;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background: var(--offWhite);
+}
+
+.app {
+  max-width: 140rem;
+  margin: auto;
+  padding: 9rem 2rem 0 2rem;
+  display: grid;
+  grid-gap: 3rem;
+}
+
+.hero .title {
+  margin: 0 0 4rem;
+  font-size: 6rem;
+  text-transform: uppercase;
+  line-height: 0.8;
+  text-align: center;
+}
+
+.hero .title span {
+  color: var(--primaryColor);
+}
+.hero img {
+  max-width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.generate-btn {
+  appearance: none;
+  padding: 1rem 2rem;
+  line-height: 1;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border: 0;
+  background-color: var(--primaryColor);
+  color: var(--offWhite);
+  border-radius: 9px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.generate-btn .icon {
+  margin-left: 1rem;
+  display: inline-block;
+}
+.generate-btn .icon > svg {
+  fill: var(--offWhite);
+  transition: 700ms ease;
+}
+.generate-btn:not(:disabled):hover .icon > svg {
+  transform: rotate(1turn);
+}
+.generate-btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.joke {
+  margin-top: 3rem;
+  font-size: 1.8rem;
+  padding: 2rem;
+  background: var(--offWhite);
+  border: 4px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 700px) {
+  .app {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero .title {
+    text-align: left;
+    font-size: 12rem;
+  }
+  .hero img {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 200px;
+  }
+  .generate-btn {
+    width: auto;
+  }
+}
