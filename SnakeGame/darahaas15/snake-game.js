@@ -42,21 +42,14 @@ function main() {
   }, 100);
 }
 
-// draw a border around the canvas
 function empty_board() {
-  //  Select the colour to fill the drawing
   snakecanvas_ctx.fillStyle = board_background;
-  //  Select the colour for the border of the canvas
   snakecanvas_ctx.strokestyle = board_border;
-  // Draw a "filled" rectangle to cover the entire canvas
   snakecanvas_ctx.fillRect(0, 0, snakecanvas.width, snakecanvas.height);
-  // Draw a "border" around the entire canvas
   snakecanvas_ctx.strokeRect(0, 0, snakecanvas.width, snakecanvas.height);
 }
 
-// Draw the snake on the canvas
 function makeSnake() {
-  // Draw each part
   snake.forEach(makeSnakePart);
 }
 
