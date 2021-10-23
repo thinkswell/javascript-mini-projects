@@ -143,9 +143,7 @@
     }
 
     function move_snake() {
-        // Create the new Snake's head
         const head = { x: snake[0].x + dx, y: snake[0].y + dy };
-        // Add the new head to the beginning of snake body
         snake.unshift(head);
         snake.pop();
     }
