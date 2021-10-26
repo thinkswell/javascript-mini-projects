@@ -1,13 +1,21 @@
 # BaseX
 ## Number System Converter
-#### This app interconverts binary, ocatal, decimal or hexadecimal numbers.
+#### This app interconverts binary, ocatal, decimal and hexadecimal numbers.
 
-![BaseX Overview](/readme_res/overview.png "BaseX Overview")
+#
 
-![BaseX In Action](/readme_res/inaction.png "BaseX In Action")
+## BaseX In Action
+![BaseX In Action](./readme_res/inaction.png "BaseX In Action")
 
-![Responsive design](/readme_res/responsive.png "Responsive design")
+#
 
-![Invalid character handling](/readme_res/invalidchars.png "Invalid character handling")
+## Features
 
-![Copy text feature](/readme_res/copyfunction.png "Copy text feature")
+### Responsive design
+![Responsive design](./readme_res/responsive.png "Responsive design")
+
+### Invalid character handling
+![Invalid character handling](./readme_res/invalidchars.png "Invalid character handling")
+
+### Copy text feature
+![Copy text feature](./readme_res/copyfunction.png "Copy text feature")
