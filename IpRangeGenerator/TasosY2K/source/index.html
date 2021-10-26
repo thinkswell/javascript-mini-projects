@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Generate Random IP Adresses.">
+  <meta name="author" content="L34ND3V">
+  <meta name="theme-color" content="#2c86e0">
+  <title>Random IP Generator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.2/gh-fork-ribbon.min.css">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="main.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Random IPv4 Generator</h1>
+      </div>
+    </div>
+    <div class="row" oninput="rangeSet()">
+      <div class="col-md-12">
+        <h4>Range</h4>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Start</span>
+          </div>
+          <input id="rangeStart1" class="form-control wheelable" type="number" value="0" min="0" max="255">
+          <input id="rangeStart2" class="form-control wheelable" type="number" value="0" min="0" max="255">
+          <input id="rangeStart3" class="form-control wheelable" type="number" value="0" min="0" max="255">
+          <input id="rangeStart4" class="form-control wheelable" type="number" value="0" min="0" max="255">
+        </div>
+      </div>
+    </div><br>
+    <div class="row" oninput="rangeSet()">
+      <div class="col-md-12">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">End</span>
+          </div>
+          <input id="rangeEnd1" class="form-control wheelable" type="number" value="255" min="0" max="255">
+          <input id="rangeEnd2" class="form-control wheelable" type="number" value="255" min="0" max="255">
+          <input id="rangeEnd3" class="form-control wheelable" type="number" value="255" min="0" max="255">
+          <input id="rangeEnd4" class="form-control wheelable" type="number" value="255" min="0" max="255">
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Amount</h4>
+        <div class="input-group">
+          <input id="ipAmount" class="form-control wheelable" type="number" value="1" min="1" max="256"
+            oninput="amountSet()">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <br>
+        <h4>Output</h4>
+        <div>
+          <button id="ipGenBtn" class="btn btn-outline-light" onclick="ipGen()">Generate</button>
+          <button id="copyBtn" class="btn btn-outline-light" onclick="autoCopy()">Copy</button>
+          <button id="copyBtn" class="btn btn-outline-light" onclick="downloadText()">Download</button><br>
+          <br>
+          <div class="alert-success" id="log">Page loaded successfuly</div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="input-group">
+                <textarea id="ipOut" class="form-control" rows="6"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
