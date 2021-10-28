@@ -1,0 +1,115 @@
+#footer {
+  width: 450px;
+  text-align: center;
+  display: block;
+  margin: 15px auto 30px auto;
+  font-size: 0.8em;
+  font-family: candara;
+}
+
+#footer a {
+  font-weight: 800;
+  text-decoration: none;
+  color: #fff;
+}
+
+#footer a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+#i-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#i-main #i-app {
+  align-self: center;
+  width: 400px;
+  height: 350px;
+  padding: 1rem;
+  border: 10px outset #555;
+  border-radius: 4px;
+  background-image: linear-gradient(45deg, #333, #666, #999);
+  background-color: #ccc;
+  display: grid;
+  grid-template: repeat(5, 1fr)/repeat(4, 1fr);
+  grid-gap: 0.8rem;
+  cursor: pointer;
+}
+
+#i-main #i-app .k {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 1000;
+  font-size: 20px;
+  color: #fff;
+  font-family: arial, sans-serif;
+}
+
+#i-main #i-app .s {
+  font-family: arial;
+  grid-column: 2 / span 3;
+  justify-content: flex-end;
+  padding-right: 5px;
+  border: 5px inset #555;
+  border-radius: 2px;
+  color: #000;
+  letter-spacing: 2px;
+  overflow: hidden;
+  background-color: #bccd95;
+  cursor: default;
+}
+
+#i-main #i-app .n, #i-main #i-app .o, #i-main #i-app .c, #i-main #i-app .d, #i-main #i-app .e {
+  border-radius: 5px;
+  box-shadow: 0 4px #000;
+}
+
+#i-main #i-app .n:hover, #i-main #i-app .o:hover, #i-main #i-app .c:hover, #i-main #i-app .d:hover, #i-main #i-app .e:hover {
+  background-color: #595959;
+}
+
+#i-main #i-app .n:active, #i-main #i-app .o:active, #i-main #i-app .c:active, #i-main #i-app .d:active, #i-main #i-app .e:active {
+  background-color: #262626;
+  box-shadow: none;
+}
+
+#i-main #i-app .o {
+  background-color: #1e1e1e;
+}
+
+#i-main #i-app .c {
+  background-color: #f00;
+}
+
+#i-main #i-app .c:hover {
+  background-color: #ff4d4d;
+}
+
+#i-main #i-app .c:active {
+  background-color: #cc0000;
+  box-shadow: none;
+}
+
+@media screen and (max-width: 500px) {
+  #i-app {
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #i-app {
+    transform: scale(0.7);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #i-app {
+    transform: scale(0.6);
+  }
+}
