@@ -1,0 +1,82 @@
+body{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, #3786cd, #005bb7, #142c98);
+    box-sizing: border-box;
+}
+.heading{
+    font-family: 'Bree Serif', serif;
+}
+.score, .time-left{
+    font-family: 'Indie Flower', cursive;
+    font-weight: 700px;
+}
+#your-score,#time{
+    color: rgb(0, 0, 95);
+    font-weight: 900;
+}
+.grid-box{
+    width:456px;
+    height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 2px 2px 10px #252525, -2px -2px 10px #252424;
+}
+.startt,.start-over{
+    font-family: 'Bree Serif', serif;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-weight: 550;
+    border: 2px solid rgb(0, 0, 95);
+    font-size: 18px;
+}
+.startt:hover,.start-over:hover{
+    font-weight: 800px;
+    color: #eee;
+    background-color: rgb(0, 0, 95);
+}
+.endd{
+    font-size: 20px;
+    font-family: cursive;
+    color: rgb(0, 0, 95);
+    font-weight: 600;
+}
+.square{
+    height:150px;
+    width: 150px;
+    border: 1px solid black;
+}
+.mole{
+    background-image: url('mole.jpg');
+    background-size: cover;
+}
+.overlay{
+    position:fixed;
+    top:0;bottom:0;left:0;right:0;
+    background-color: rgba(255,255,255,.82);
+    color: rgb(1, 1, 26);
+    opacity:1;
+    display:none;
+}
+.overlay-inner{
+    margin-top:300px;
+}
+body.overlay-is-open .main-ui{
+    filter:blur(4px);
+}
+@media screen and (max-width: 500px){
+    .grid-box{
+        width: 306px;
+        height: 300px;
+    }
+    .square{
+        height:100px;
+        width:100px;
+    }
+    .score,.time-left{
+        font-size: 13px;
+    }
+}
+
