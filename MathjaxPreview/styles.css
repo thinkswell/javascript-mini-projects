@@ -1,0 +1,45 @@
+body {
+  background: #292d35;
+  color: #ffffff;
+  font-family: "Roboto",sans-serif;
+}
+
+h1 {
+  text-align: center
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+textarea, #result {
+  flex: 1;
+  border: none;
+  padding: 20px;
+  min-height: 400px;
+  background: #ffffff;
+  border-radius: 3px;
+}
+
+textarea {
+  resize: none;
+  margin-right: 40px;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+#result {
+  flex: 1;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: baseline;
+  align-content: start;
+  color: #555555
+}
+
+#result mjx-container {
+  margin: 5px;
+}
