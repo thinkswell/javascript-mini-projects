@@ -1,0 +1,111 @@
+h1 {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body {
+    background-color: rgb(152, 58, 240);
+}
+h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    color: greenyellow;
+}
+.box1 {
+    padding: 20px;
+    border : 3px solid black;
+    width : 300px;;
+    margin : 10px;
+    margin-left: 600px;
+    background-color: seagreen;
+    align-items: center;
+}
+#ins {
+    text-align: center;
+    font-family: monospace;
+    font-size: 20px;
+    color: black;
+}
+.ins-box {
+    padding : 20px;
+    border : 3px solid rgb(34, 33, 33);
+    border-radius: 10px;
+    background-color: rgb(11, 105, 27);  
+    transition: 1s ease;
+    margin: 30px;
+}
+.ins-box:hover{
+    transition: 1s ease;
+    background: mediumseagreen;
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+.buttons {
+    padding : 15px;
+    margin-left : 680px;
+    display: inline-block;
+}
+.buttonR {
+    padding: 5px;
+    border: 5px solid rgb(161, 38, 165);
+    background: lightgreen;
+    transition: 1s ease;
+}
+.buttonP {
+    padding: 5px;
+    border: 5px solid rgb(161, 38, 165);
+    background: lightgreen;
+    transition: 1s ease;
+}
+.buttonS {
+    padding: 5px;
+    border: 5px solid rgb(161, 38, 165);
+    background: lightgreen;
+    transition: 1s ease;
+}
+.buttonR:hover{
+    cursor: pointer;
+    transition: 1s ease;
+    background: tomato;
+    border-radius: 50%;
+}
+.buttonP:hover{
+    cursor: pointer;
+    transition: 1s ease;
+    background: tomato;
+    border-radius: 50%;
+}
+.buttonS:hover{
+    cursor: pointer;
+    transition: 1s ease;
+    background: tomato;
+    border-radius: 50%;
+}
+#userscorebox {
+    padding: 25px;
+    margin-left: 600px;
+    margin-right: 600px;
+    background: rgb(3, 112, 98);
+    text-align: center;
+    border-radius: 50%;   
+    border: 3px solid black;
+}
+#computerscorebox {
+    padding: 25px;
+    margin-left: 600px;
+    margin-right: 600px;
+    background: rgb(3, 112, 98);
+    border-radius: 50%;   
+    text-align: center;
+    border: 3px solid black; 
+}
+#resultmessage {
+    padding: 25px;
+    margin-left: 500px;
+    margin-right: 500px;
+    background: rgb(15, 89, 158);
+    border: 3px solid black;
+}

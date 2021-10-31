@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Kodchasan&display=swap');
+::-moz-selection {
+     color: #ffffff;
+     background: #000000;
+}
+ ::selection {
+     color: #ffffff;
+     background: #000000;
+}
+ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+}
+ input:focus, select:focus, textarea:focus, button:focus {
+     outline: none !important;
+     box-shadow: none !important;
+}
+ body {
+    font-family: 'Kodchasan';
+     text-align: center;
+     color: #ffffff;
+     background-color: #2c86e0;
+}
+ #ipOut {
+     margin-bottom: 20px;
+     border-top-left-radius: 0px;
+     border-top-right-radius: 0px;
+     border-bottom-left-radius: 0.25rem;
+     border-bottom-right-radius: 0.25rem;
+ }
+ #log {
+     border-top-left-radius: 0.25rem;
+     border-top-right-radius: 0.25rem;
+     border-bottom-left-radius: 0px;
+     border-bottom-right-radius: 0px;
+ }
+ @media only screen and (max-width: 680px) {
+   .github-fork-ribbon {
+     display: none;
+   }
+ }
+ @media only screen and (max-width: 465px) {
+   h1 {
+     font-size: 1.7em;
+   }
+ }

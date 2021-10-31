@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Akaya+Kanadaka&family=Lobster+Two&family=Permanent+Marker&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+#alert {
+    border-radius: 0.4em;
+    display: flex;
+    width: max-content;
+    position: absolute;
+    right: 0.7em;
+    top: 5em;
+    padding: 2vh 3vh;
+    font-weight: bold;
+    transition: opacity 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+    background-color: azure;
+    box-shadow: #0000005b 0 0 20px 12px;
+    z-index: 1;
+}
+
+.alert-img {
+    width: 5vh;
+    height: 5vh;
+    margin-right: 1em;
+}
+
+#error-img {
+    background-color: #ff7777;
+    padding: 0.7vh;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+#alert > div {
+    margin: auto;
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-self: flex-start;
+    box-shadow: #0000006c 0px 10px 20px;
+}
+header > h1 {
+    font-size: xx-large;
+    margin-left: 5vw;
+}
+
+h1,
+h1 > sub {
+    font-family: "Permanent Marker", cursive;
+}
+
+form {
+    width: 100%;
+    padding: 3vh 5% 12vh 5%;
+    height: 90vh;
+    background-color: #ffffff69;
+    display: grid;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-template-columns: 1fr;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 15vh;
+}
+
+.info {
+    width: 100%;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.base {
+    /* font-family: 'Lobster Two', cursive; */
+    font-family: "Akaya Kanadaka", cursive;
+    /* font-family: "Indie Flower", cursive; */
+    font-weight: bold;
+    font-size: x-large;
+}
+
+input {
+    width: 100%;
+    height: 5vh;
+    border: 0.3vh dashed;
+    border-radius: 1vh;
+    outline: none;
+    padding: 1vh 1em;
+    font-size: large;
+}
+
+.options {
+    display: flex;
+    height: 4vh;
+    width: 10vh;
+    justify-content: space-evenly;
+}
+
+.copy {
+    filter: brightness(90%);
+    cursor: pointer;
+    width: 3.5vh;
+}
+.copy:hover {
+    box-shadow: 0 0 20px 1px #ff2;
+    filter: brightness(100%);
+}
+
+@media only screen and (min-width: 768px) {
+    form {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4vw;
+    }
+    #expl{
+        width: 60vw;
+        height: 80vh;
+    }
+}
+
+[hidden] {
+    display: none !important;
+}

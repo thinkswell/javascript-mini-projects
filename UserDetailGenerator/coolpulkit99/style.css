@@ -1,0 +1,36 @@
+.contClass{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.setup{
+    color:red;
+
+}
+
+.buttonClass{
+
+    padding: 10px;
+    margin: 10px;
+    color: aliceblue;
+    background-color: blueviolet;
+
+    border: black 2px solid;
+    border-radius: 50%;
+}
+
+.info{
+    font-style: italic;
+    /* border: black 2px solid; */
+    
+    /* font-weight: bolder; */
+}
+
+.title{
+    font-weight: bolder;
+    font-size: 20px;
+}
