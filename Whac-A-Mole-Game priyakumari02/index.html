@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="favicon2.png" type="image/png" rel="shortcut icon">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- font-family: 'Prompt', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+     <!--font-family: 'Indie Flower', cursive;  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+     <!-- font-family: 'Pacifico', cursive; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Whac A mole</title>
+</head>
+<body>
+    <div class="main-ui">
+    <h1 class="text-center heading pt-3 pb-2">Whac A Mole</h1>
+    <div class="scoreboard text-center pb-2">
+        <div class="score pb-0 mb-0">
+            <h2>Your Score: <span class="your-score">0</span></h2>
+        </div>
+        <div class="time-left">
+             <h2>Time Left: <span class="time">60</span></h2>
+        </div>
+    </div>
+        <div class="grid-box text-center container-fluid">
+            <div class="row">
+           <div class="square col-4" id="1"></div>
+           <div class="square col-4" id="2"></div>
+           <div class="square col-4" id="3"></div>
+           <div class="square col-4" id="4"></div>
+           <div class="square col-4" id="5"></div>
+           <div class="square col-4" id="6"></div>
+           <div class="square col-4" id="7"></div>
+           <div class="square col-4" id="8"></div>
+           <div class="square col-4" id="9"></div>
+           </div>
+        </div>
+        <div class="start-game text-center pt-3">
+            <button class="startt btn">START</button>
+        </div>
+    </div>
+    <div class="overlay text-center">
+        <div class="overlay-inner container text-center">
+            <div class="endd text-center">
+                Your Score is <span id="final-score">0</span><br>
+                <button class="start-over mt-2">START OVER</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
