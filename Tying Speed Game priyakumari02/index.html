@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link href="favicon.png" rel="shortcut icon">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- font-family: 'Prompt', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+     <!--font-family: 'Indie Flower', cursive;  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+     <!-- font-family: 'Pacifico', cursive; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Typing Speed Game</title>
+</head>
+<body>
+    <div class="main-ui">
+     <!-- header -->
+     <header class="container-fluid d-flex align-items-center text-center justify-content-center p-2 p-md-4" id="heading">
+         <h1 class="titlee">Typing Speed Test</h1>
+     </header>
+     <!-- content -->
+     <div class="scoreboard pb-md-2">
+          <div class="speed text-center">
+              <i class="fas fa-clock "></i> Speed:
+              <span id="typingSpeed"><span id="spd"style="font-size: larger">0</span><sub>WPM</sub></span>
+          </div>
+          <div class="accuracy text-center d-none">
+              <i class="fas fa-bullseye "></i> Accuracy: 
+              <span id="typingAccuracy"><span id="acc" style="font-size: larger">100</span><sub>%</sub></span>
+          </div>
+     </div>
+      <br>
+     <div class="container pl-2 px-md-4 py-2 list-group" id="para">
+         <div class="guidelines ">
+         <h4 class="text-center" style="font-weight:600; font-family: 'Indie Flower', cursive;">Instructions</h4>
+         <ul class="mb-1 mb-md-2 list-group list-group-flush">
+             <li class="list-group-item" >The typing speed is measured in WPM (words per minute). It is a calculation of how fast you type words with no typos.</li>
+             <li class="list-group-item" >The 'word' means an average of 5 characters including spaces. The gross speed is measured in our typing test.</li>
+             <li class="list-group-item" >Click on the start button to start your test 🌼</li>
+         </ul>
+         </div>
+         <div class="answer mt-1 ">
+             <div class="randomParagraphGenerated" style="font-weight: bold"></div>
+             <textarea placeholder="Type here......" id="paragraphInput"></textarea>
+             <div class="text-center"><button class="btn donee text-center"style="border: 1.5px solid darkblue"><b>DONE</b></button></div>
+         </div>
+     </div>
+     <div class="container text-center mb-1 mb-md-3 pt-3 pt-md-6 mt-md-5">
+        <button class="btn startt" type="button">START TYPING TEST</button>
+    </div>
+     </div>
+     <div class="overlay" >
+         <div class="overlay-inner container text-center">
+             <div class="text-center endd" style="color:rgb(1, 1, 26); font-weight: 700px"> You typed at the speed of <span id="wpm" style="font-size: 1.2rem;">0</span> words per minute with an accuracy of <span id="ac" style="font-size: 1.2rem;">100</span> percent 🎆🎊</div>
+             <div class="text-center pt-md-3"><button class="btn btn-info startOver">Start Over</button></div>
+         </div>
+     </div>
+    <!-- JS -->
+    <script src="app.js"></script>
+</body>
+</html>

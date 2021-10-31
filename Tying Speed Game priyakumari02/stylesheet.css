@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(1, 1, 26);
+    color: whitesmoke;
+    min-height: 100vh;
+}
+.scoreboard{
+    font-family: cursive;
+}
+.startt{
+    color: #b1e5ff;
+    text-decoration: none;
+    border: 1px solid #71b1de;
+    box-shadow: 0 2px 2px #71b1de;
+}
+.donee{
+    border: 1.5px solid rgb(13, 99, 99);
+    border-radius: 0.7rem;
+    font-weight:550px;
+}
+.donee:hover{
+    color: #eee;
+    background-color: rgb(8, 8, 94);
+    font-weight: 750;
+}
+.startt:hover{
+    color: rgb(8, 8, 94);
+    background-color:  #71b1de;
+    font-weight: 700;
+}
+.correct{
+    color: rgb(24, 207, 24);
+}
+.incorrect{
+    color: red;
+    text-decoration: underline;
+}
+.titlee{
+    font-family: 'Bree Serif', serif;
+    letter-spacing: 0.2rem;
+}
+#para{
+    border-radius: 1.5rem;
+    background-image: linear-gradient(to right, #3786cd, #005bb7, #142c98);
+    color: black;
+    letter-spacing: 0.04rem;
+    position: relative;
+    resize: none;
+    border:rgb(1, 1, 26);
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.493);
+}
+ul li{
+    background-image: linear-gradient(to right, #3786cd, #005bb7, #142c98);
+    font-family:'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight:500px;
+}
+.endd{
+    color: whitesmoke;
+    font-family: cursive;
+    font-size: 1.2rem;
+}
+.overlay{
+    position:fixed;
+    top:0;bottom:0;left:0;right:0;
+    background-color: rgba(255,255,255,.82);
+    color: rgb(1, 1, 26);
+    opacity:1;
+    display:none;
+}
+.overlay-inner{
+    margin-top:200px;
+}
+body.overlay-is-open .main-ui{
+    filter:blur(4px);
+}
+.answer{
+    display: none;
+}
+.randomParagraphGenerated{
+    padding-bottom: 0.4rem;
+}
+#typingSpeed, #typingAccuracy{
+    color:  #3786cd;
+}
+.speed{
+    display:none;
+}
+#paragraphInput{
+    width: 100%;
+    padding: 0.4rem;
+    min-height: 8rem;
+    border-radius: 0.5rem;
+    border: 1.5px solid rgb(13, 99, 99);
+    outline: hidden;
+}
+#paragraphInput:focus{
+    outline: hidden;
+    border: 1.5px solid black;
+    border-radius: 0.5rem;
+}
+@media screen and (max-width: 400px){
+    #para{
+        border-radius: 3%;
+        letter-spacing: 0rem;
+        font-size: 13px;
+    }
+    .endd, #wpm{
+        font-size: 1rem;
+    }
+    .titlee{
+        font-size: 26px;
+    }
+}
