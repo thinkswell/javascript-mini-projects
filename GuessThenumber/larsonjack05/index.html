@@ -1,11 +1,29 @@
-﻿<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title>Guess the number</title>
-</head>
-<body>
+    <title>Guess the number between 1 to 100</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Guess the number between 1 to 100</h1>
+        <div id="status"></div>
+        <input class="form-control form-control-lg" type="number" id="number" placeholder="Enter number here" aria-label=".form-control-lg example">
+		        <button id="button" onclick="check()">Check</button>
 
-</body>
+        <p>Guess a the number between 1 to 100 and check weather it is correct.</p>
+        <p>If it is larger or smaller then try again and repeat</p>
+
+    </div>>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+   
+  </body>
 </html>
