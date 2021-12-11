@@ -1,4 +1,4 @@
--### This is an open-source repository that collects different projects.
+### This is an open-source repository that collects different projects.
 
 # Make some awesome projects, put them in your directory and create a pull request.
 
