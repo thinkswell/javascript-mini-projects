@@ -1,46 +1,63 @@
+let numInput = document.querySelector('#numInput');
+let stepInput = document.querySelector('#stepInput');
+let charInput = document.querySelector('#charInput');
+let clearButton = document.querySelector('#clearButton');
+
 function cleanString(str, invalidRegex) {
     return str.replace(invalidRegex, '');
 }
 
-function remove_sep_char(x, sep_char) {
+function removeSepChar(str, sepChar) {
     let specialChars = ['*', '.'];
-    if (specialChars.includes(sep_char)) {
-        sep_char = '\\' + sep_char;
-    }
-    let reg = new RegExp(sep_char, 'g');
-    return x.toString().replace(reg, '');
+    if (specialChars.includes(sepChar)) sepChar = '\\' + sepChar;
+    let reg = new RegExp(sepChar, 'g');
+    return str.toString().replace(reg, '');
 }
 
-function super_separator(x, step_length = 4, sep_char = '-') {
-    let str = remove_sep_char(x, sep_char);
-    if (str.length > step_length) {
-        let re = new RegExp(`.{1,${step_length}}`, 'g');
-        let matcher = str.match(re);
-        let result = '';
-        matcher.forEach((element, index, array) => {
-            console.log(matcher);
-            result += element;
-            if (index !== array.length - 1)
-                result += sep_char;
-        });
-        return result;
-    } else {
-        return str;
-    }
+function doSeparate(inputStr, stepLength = 4, sepChar = '-') {
+    let str = removeSepChar(inputStr, sepChar);
+    if (str.length <= stepLength || stepLength < 1) return str;
+    let re = new RegExp(`.{1,${stepLength}}`, 'g');
+    let matcher = str.match(re);
+    let result = '';
+    matcher.forEach((element, index, array) => {
+        result += element;
+        if (index !== array.length - 1)
+            result += sepChar;
+    });
+    return result;
 }
 
 function getCharOption() {
-    let e = document.querySelector('#charInput');
-    let char = e.options[e.selectedIndex].text;
-    return char;
+    return charInput.options[charInput.selectedIndex].text;
 }
 
-document.querySelector('#numInput').addEventListener('input', (event) => {
-    let input = event.target;
-    let value = input.value;
-    let step_length = parseInt(document.querySelector('#stepInput').value);
+function getStepOption() {
+    return parseInt(stepInput.value);
+}
+
+function separate() {
+    let value = numInput.value;
+    let stepLength = getStepOption();
     let char = getCharOption();
-    console.log(value, step_length, char);
-    value = super_separator(x = cleanString(value, /[^\d]/g), step_length, char);
-    input.value = value;
+    value = doSeparate(inputStr = cleanString(value, /[^\d]/g), stepLength, char);
+    numInput.value = value;
+}
+
+numInput.addEventListener('input', () => {
+    separate();
+});
+
+stepInput.addEventListener('input', () => {
+    separate();
+});
+
+charInput.addEventListener('input', () => {
+    separate();
+});
+
+clearButton.addEventListener('click', () => {
+    numInput.value = '';
+    stepInput.value = 4;
+    charInput.value = 0;
 });

@@ -15,23 +15,25 @@
 
 <body>
     <div class="container py-4 my-4">
-        <div class="card text-center">
+        <div class="card">
             <div class="card-header">
                 Featured
             </div>
             <div class="card-body">
                 <form>
                     <div class="form-row align-items-center">
-                        <div class="col-sm-5 my-1">
-                            <label class="sr-only" for="numInput">Number</label>
+                        <div class="col-sm-6 my-1">
+                            <label for="numInput">Number</label>
                             <input id="numInput" type="text" class="form-control" class="form-control mb-2"
                                 placeholder="Enter a number" maxlength="19" autocomplete="off">
                         </div>
                         <div class="col-sm-3 my-1">
+                            <label for="stepInput">Step</label>
                             <input id="stepInput" type="number" class="form-control" class="form-control mb-2"
-                                placeholder="Enter a step" maxlength="2" value="4" autocomplete="off">
+                                placeholder="Enter a step" min="1" maxlength="2" value="4" autocomplete="off">
                         </div>
-                        <div class="col-sm-2 my-1">
+                        <div class="col-sm-3 my-1">
+                            <label for="charInput">Char</label>
                             <select class="custom-select mr-sm-2" id="charInput">
                                 <option value="0" selected>-</option>
                                 <option value="1">.</option>
@@ -40,14 +42,18 @@
                                 <option value="4">_</option>
                             </select>
                         </div>
-                        <div class="col-sm-2 pt-2">
-                            <button type="button" class="btn btn-primary mb-2">Clear</button>
-                        </div>
                     </div>
                 </form>
             </div>
             <div class="card-footer text-muted">
-                enter a number - separation step - separation character
+                <div class="row">
+                    <div class="col-9">
+                        Enter a number - separation step - separation character
+                    </div>
+                    <div class="col-3 text-center">
+                        <button id="clearButton" type="button" class="btn btn-primary mb-2">Clear</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
