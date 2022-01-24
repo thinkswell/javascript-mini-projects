@@ -44,7 +44,7 @@ function convert(userchoice,computerchoice) {
         return("PAPER");
     }
     else{
-        return("SCISSROS");
+        return("SCISSORS");
     }
 }
 
