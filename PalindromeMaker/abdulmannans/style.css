@@ -1,0 +1,92 @@
+html { 
+    height:100%; 
+}
+body{
+    position:absolute; 
+    top:0; 
+    bottom:0; 
+    right:0; 
+    left:0;
+    font-family: "Lucida Console", "Courier New", monospace;
+    display: block;
+    align-content: center;
+    align-items: center;
+    background-repeat:no-repeat; 
+    background-size: 100%;
+    background-image: linear-gradient(to bottom right,  #1d976c , #93f9b9);
+}
+
+h1 {
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+    padding: 3rem;
+    margin: 3rem;
+}
+
+input {
+    font-family: "Lucida Console", "Courier New", monospace;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    margin: auto;
+    padding: 10px;
+    height: 1.5rem;
+    border-radius: 0.25rem ;
+    text-align: center;
+    
+}
+
+input:placeholder-shown{
+    color: black;
+    text-align: center;
+}
+
+input:hover{
+    border-color: black;
+    border : 2px solid;
+}
+
+input:focus{
+    outline:none;
+    border-color: black;
+    box-shadow:0 0 10px black;
+}
+
+button{
+    font-family: "Lucida Console", "Courier New", monospace;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    margin: auto;
+    padding: 10px;
+    height: 2.5rem;
+    border-radius: 1rem ;
+    background-color: white;
+    opacity: .5;
+    margin-bottom: 10px;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+pre {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    margin: auto;
+    padding: 10px;
+    border : 3px black;
+    border-radius: .25rem; 
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.label{
+    border: 2px white;
+}
