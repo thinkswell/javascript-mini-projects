@@ -1,0 +1,33 @@
+.btn {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-danger {
+    background-color: red;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #d30303;
+}
+
+.btn-success {
+    background-color: limegreen;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #2fbd2f;
+}
+
+.btn-primary {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1c7fe0;
+}
