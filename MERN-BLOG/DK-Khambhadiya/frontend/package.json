@@ -1,0 +1,69 @@
+{
+    "name": "frontend",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@ckeditor/ckeditor5-build-classic": "^18.0.0",
+        "@ckeditor/ckeditor5-react": "^2.1.0",
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.5.0",
+        "@testing-library/user-event": "^7.2.1",
+        "ansi-html": "^0.0.7",
+        "ansi-regex": "^6.0.1",
+        "axios": "^0.22.0",
+        "bad-words": "^3.0.3",
+        "browserlist": "^1.0.1",
+        "browserslist": "^4.17.2",
+        "color-string": "^1.6.0",
+        "dns-packet": "^5.3.0",
+        "elliptic": "^6.5.4",
+        "glob-parent": "^6.0.2",
+        "hosted-git-info": "^4.0.2",
+        "http-proxy": "^1.18.1",
+        "immer": "^9.0.6",
+        "ini": "^2.0.0",
+        "is-svg": "^4.3.1",
+        "lodash": "^4.17.21",
+        "merge-deep": "^3.0.3",
+        "node-forge": "^0.10.0",
+        "node-notifier": "^10.0.0",
+        "nth-check": "^2.0.1",
+        "object-path": "^0.11.8",
+        "path-parse": "^1.0.7",
+        "postcss": "^8.3.8",
+        "react": "^16.13.1",
+        "react-dev-utils": "^11.0.4",
+        "react-dom": "^16.13.1",
+        "react-scripts": "3.4.1",
+        "serialize-javascript": "^6.0.0",
+        "set-value": "^4.1.0",
+        "sockjs": "^0.3.21",
+        "ssri": "^8.0.1",
+        "tmpl": "^1.0.5",
+        "url-parse": "^1.5.3",
+        "websocket-extensions": "^0.1.4",
+        "ws": "^8.2.3",
+        "y18n": "^5.0.8"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}
