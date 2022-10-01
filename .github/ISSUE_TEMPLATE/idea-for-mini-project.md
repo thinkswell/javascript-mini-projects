@@ -14,7 +14,7 @@ assignees: ''
 * Add requirements for your project.
 * Example: 
 * What the app must-haves.
-* What the app can-haves.
+* What the app can have.
 * What additional can be added.
 
 ### Bonuses 🎉🎉:
