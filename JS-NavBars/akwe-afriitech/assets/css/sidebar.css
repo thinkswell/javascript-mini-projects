@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+}
+body {
+  background-color: rgba(39, 186, 186, 0.172);
+}
+.header {
+  display: flex;
+  background-color: rgb(99, 200, 168);
+  z-index: 2;
+  width: 100%;
+  position: fixed;
+}
+.logodiv,
+.togglediv {
+  flex: 50%;
+}
+.togglediv {
+  display: grid;
+  place-items: center;
+}
+.btn1 {
+  background-color: transparent;
+  border: 0;
+}
+
+.btn1 i {
+  font-size: 2vw;
+  color: white;
+}
+.btn1 i:hover {
+  color: rgb(83, 105, 98);
+  transition-duration: 1s;
+  font-size: 2.5vw;
+}
+.logo {
+  color: white;
+}
+.sidebar {
+  background-color: aquamarine;
+  position: fixed;
+  width: 25vw;
+  height: 100%;
+  z-index: 3;
+  transform: translateX(-25vw);
+  transition-duration: 1s;
+}
+.logodiv2 {
+  padding: 2vw;
+  display: flex;
+}
+.close {
+  flex: 35%;
+}
+.logo {
+  flex: 65%;
+}
+.closebtn {
+  background-color: transparent;
+  border: 0;
+}
+.fa-close {
+  font-size: 2vw;
+  color: red;
+}
+.li {
+  list-style: none;
+  height: 40px;
+  display: grid;
+  place-items: center;
+}
+.li:hover {
+  background-color: rgb(83, 163, 136);
+}
+.icons {
+  bottom: 0;
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 25vw;
+  padding-bottom: 2vw;
+}
+
+.appear {
+  transition-duration: 1s;
+  transform: translateX(0vw);
+}
+
+.body {
+  background-color: white;
+  height: 100vh;
+}
