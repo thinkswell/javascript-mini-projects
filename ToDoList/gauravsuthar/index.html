@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List🔖</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="w-full flex justify-center items-center mt-10">
+      <div class="shadow-lg rounded-lg bg-gray-50 p-6 w-96">
+        <div class="mb-8 flex">
+          <ul class="flex space-x-2 w-3/4">
+            <li>
+              <a
+                href="#"
+                class="focus:outline-none focus:ring-2 focus:border-blue-300 rounded-full shadow-md inline-block p-2 bg-white"
+                ><svg
+                  class="w-5 h-5 text-red-500"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                    clip-rule="evenodd"
+                  ></path></svg
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="focus:outline-none text-gray-400 focus:ring-2 focus:border-blue-300 icon-delete rounded-full shadow-md inline-block p-2 bg-white"
+                ><svg
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                    clip-rule="evenodd"
+                  ></path></svg
+              ></a>
+            </li>
+            <!--         <li><a href="#" class="focus:outline-none focus:ring-2 focus:border-blue-300 rounded-full shadow-md inline-block p-2 bg-white"><svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 9.5A3.5 3.5 0 005.5 13H9v2.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 15.586V13h2.5a4.5 4.5 0 10-.616-8.958 4.002 4.002 0 10-7.753 1.977A3.5 3.5 0 002 9.5zm9 3.5H9V8a1 1 0 012 0v5z" clip-rule="evenodd"></path></svg></a></li>
+              <li><a href="#" class="focus:outline-none focus:ring-2 focus:border-blue-300 rounded-full shadow-md inline-block p-2 bg-white"><svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path></svg></a></li> -->
+          </ul>
+          <div class="w-1/4">
+            <!--         <button class="new flex items-center justify-evenly bg-white focus:outline-none border-2 border-blue-600 shadow-md p-2 w-full text-blue-600 rounded-md">New<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></button> -->
+            <button
+              class="focus:outline-none focus:ring-2 focus:border-blue-300 add-new-todo-button flex items-center justify-evenly bg-blue-600 transition-color duration-300 hover:bg-blue-700 text-gray-50 focus:outline-none shadow-md p-2 w-full rounded-md"
+            >
+              <span class="items-baseline">New</span
+              ><svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!--                 LIST TAB -->
+        <div class="space-y-4 list-container">
+          <!--        LIST -->
+
+          <!--        End list -->
+        </div>
+        <div class="add-new-content hidden">
+          <textarea
+            class="add-new-content--textarea text-gray-500 w-full p-4 pb-8 rounded-md mt-6 resize-none outline-none focus:ring-2 focus:border-blue-300 border-2 border-gray-200"
+            name=""
+            id=""
+            placeholder="Write something here..."
+            rows="5"
+            autofocus
+          ></textarea>
+          <div class="relative">
+            <div
+              class="avatar-container absolute -top-28 -left-6 hidden w-1/2 grid gap-2 grid-cols-3 p-3 auto-rows-auto justify-items-center z-50 rounded shadow-2xl bg-white"
+            >
+              <a
+                href="#"
+                class="avatar-link focus:outline-none focus:ring-2 focus:border-blue-300 rounded-full"
+                ><img
+                  src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light"
+                  width="40"
+                  alt="avatar 1"
+              /></a>
+              <a
+                href="#"
+                class="avatar-link focus:outline-none focus:ring-2 focus:border-blue-300 rounded-full"
+                ><img
+                  src="https://avataaars.io/?avatarStyle=Circle&topType=Hijab&accessoriesType=Round&hatColor=Red&clotheType=ShirtVNeck&clotheColor=Black&eyeType=Surprised&eyebrowType=RaisedExcited&mouthType=Smile&skinColor=Pale"
+                  width="40"
+                  alt="avatar 2"
+              /></a>
+              <a
+                href="#"
+                class="avatar-link focus:outline-none focus:ring-2 focus:border-blue-300 rounded-full"
+                ><img
+                  src="https://avataaars.io/?avatarStyle=Transparent&topType=LongHairDreads&accessoriesType=Kurt&hairColor=Black&facialHairType=Blank&clotheType=GraphicShirt&clotheColor=Red&graphicType=Bear&eyeType=Dizzy&eyebrowType=Default&mouthType=Twinkle&skinColor=Pale"
+                  width="40"
+                  alt=""
+              /></a>
+              <a
+                href="#"
+                class="avatar-link focus:outline-none focus:ring-2 focus:border-blue-300 rounded-full"
+                ><img
+                  src="https://avataaars.io/?avatarStyle=Transparent&topType=WinterHat4&accessoriesType=Prescription02&hatColor=Black&facialHairType=Blank&clotheType=CollarSweater&clotheColor=Heather&eyeType=Dizzy&eyebrowType=DefaultNatural&mouthType=Serious&skinColor=Pale"
+                  width="40"
+                  alt="avatar 3"
+              /></a>
+              <a
+                href="#"
+                class="avatar-link focus:outline-none focus:ring-2 focus:border-blue-300 rounded-full"
+                ><img
+                  src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairTheCaesarSidePart&accessoriesType=Prescription02&hairColor=Auburn&facialHairType=BeardMedium&facialHairColor=Auburn&clotheType=Hoodie&clotheColor=Blue03&eyeType=Surprised&eyebrowType=Default&mouthType=Smile&skinColor=Pale"
+                  width="40"
+                  alt=""
+              /></a>
+              <a
+                href="#"
+                class="avatar-link focus:outline-none focus:ring-2 focus:border-blue-300 rounded-full"
+                ><img
+                  src="https://avataaars.io/?avatarStyle=Circle&topType=ShortHairTheCaesarSidePart&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=Overall&clotheColor=Heather&eyeType=Wink&eyebrowType=RaisedExcitedNatural&mouthType=Smile&skinColor=Brown"
+                  width="40"
+                  alt="avatar 4"
+              /></a>
+            </div>
+            <div class="">
+              <a
+                href="#"
+                class="avatar-selector focus:outline-none focus:ring-2 focus:border-blue-300 rounded-full p-1 inline-block bg-white"
+                ><img
+                  src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairTheCaesarSidePart&accessoriesType=Prescription02&hairColor=Auburn&facialHairType=BeardMedium&facialHairColor=Auburn&clotheType=Hoodie&clotheColor=Blue03&eyeType=Surprised&eyebrowType=Default&mouthType=Smile&skinColor=Pale"
+                  alt="avatar"
+                  width="25"
+              /></a>
+            </div>
+          </div>
+          <div id="footer-buttons">
+            <button
+              id="footer-button"
+              data-action="cancel"
+              class="footer-buttons--cancel w-full p-2 text-red-500 border border-red-500 tracking-wide rounded mt-1 transition-all duration-300 hover:bg-red-600 hover:text-gray-100 focus:outline-none focus:ring-2 focus:border-blue-300"
+            >
+              Cancel
+            </button>
+            <button
+              id="footer-button"
+              data-action="submit"
+              class="footer-buttons--submit w-full p-2 bg-blue-600 text-gray-50 tracking-wide rounded mt-1 transition-all duration-300 hover:bg-blue-700 hover:text-gray-100 focus:outline-none focus:ring-2 focus:border-blue-300"
+              disabled
+            >
+              Add
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

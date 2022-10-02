@@ -1,0 +1,15 @@
+button:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+  }
+  
+  .xyz {
+    opacity: 1;
+    transition: all .3s;
+  }
+  
+  .cross-button {
+    opacity: 0;
+    transition: all .2s;
+  }
+  
