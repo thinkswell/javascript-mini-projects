@@ -1,0 +1,34 @@
+body{
+    background-color: #161623;
+    color: white;
+    min-height: 150vh;
+}
+
+.welcome span{
+    font-family: 'Courier New', Courier, monospace;
+    color: blue;
+}
+
+.score,
+.timeLeft{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.grid{
+    width: 606px;
+    height: 606px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square{
+    width: 200px;
+    height: 200px;
+    border: 1px solid white;
+}
+
+.mole{
+    background-image: url('mole.jpg');
+    background-size: cover;
+    background-position: center;
+}
