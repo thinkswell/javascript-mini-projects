@@ -1,0 +1,13 @@
+body{
+    background: rgb(255,96,249);
+    background: linear-gradient(0deg, rgba(255,96,249,1) 0%, rgba(206,100,255,1) 53%, rgba(145,0,255,1) 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+h1 {
+    color: azure;
+}
