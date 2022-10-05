@@ -1,0 +1,129 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container{
+	height:200vh;
+	width:100vw;
+	padding:20px;
+
+	background:linear-gradient(to left,#bf5421,#875ab1);
+
+	color:#171212;
+}
+
+.headline-primary{
+	font-size:45px;
+	font-weight:300;
+	letter-spacing:2px;
+
+	text-align:center;
+}
+
+.item{
+	display:flex;
+	align-items:center;
+	padding-bottom:5px;
+}
+
+.item>span{
+	padding: 0 5px;
+	white-space:nowrap;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+
+.item>span>a{
+	color:inherit;
+}
+
+.button{
+	background:transparent;
+	border:1px solid #171212;
+	padding:5px;
+	cursor:pointer;
+
+	transition:all 0.1s ease-in;
+}
+
+.button:hover{
+	background:skyblue;
+	color:red;
+}
+
+.button:hover>svg{
+	fill:#ffffff;
+	stroke:#ffffff;
+}
+.button_small{
+	padding:4px;
+}
+
+.button_large{
+	padding:8px;
+	margin:3px;
+}
+
+.search-form{
+	padding:10px 0 20px 0;
+	
+	
+}
+
+.label{
+	border-top:3px solid #172171;
+	border-left:3px solid #172172;
+        padding:10px 3px 0 3px;	
+	font-size:16px;
+	
+	margin-right:5px;
+	
+}
+
+.label:hover>svg{
+	stroke:#274179;
+	fill:#162191;
+}
+.input{
+	border:none;
+	border-bottom:1px solid #172172;
+	background-color:transparent;
+        margin-left:5px;
+	font-size:14px;
+}
