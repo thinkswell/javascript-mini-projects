@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card trick by Stian Martinsen - 2021</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YR9H73G6D2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-YR9H73G6D2");
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Card trick</h1>
+      <h2>Instructions</h2>
+      <p class="instructions">
+        1. Find a card to remember and click the Start-button
+      </p>
+      <p class="instructions">
+        2. Select the pile where your card is located. (do this three times)
+      </p>
+      <p class="instructions">3. Your card will then magically be revealed.</p>
+      <button class="startButton">Start Game</button>
+      <button class="changeCardsButton">Change Cards</button>
+    </header>
+    <main>
+      <h2 class="mainheader"></h2>
+      <div class="correctCardArea"></div>
+      <div class="allcards"></div>
+      <div class="piles">
+        <div class="pile1">
+          <div class="pile1cards"></div>
+          <button class="pile1button pileselection">Pile 1</button>
+        </div>
+        <div class="pile2">
+          <div class="pile2cards"></div>
+          <button class="pile2button pileselection">Pile 2</button>
+        </div>
+        <div class="pile3">
+          <div class="pile3cards"></div>
+          <button class="pile3button pileselection">Pile 3</button>
+        </div>
+      </div>
+      <div class="continue">
+        <button class="continueButton">Continue</button>
+      </div>
+    </main>
+    <footer>
+      <p>
+        <a href="https://www.linkedin.com/in/stian-martinsen-1662a515/"
+          >Created by Stian Martinsen - July 2021</a
+        >
+      </p>
+      <p>
+        Cards provided by
+        <a href="http://deckofcardsapi.com/" target="_blank"
+          >http://deckofcardsapi.com/</a
+        >
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
