@@ -6,6 +6,8 @@ function App() {
   const [quote, setQuote] = useState('Loading...');
   const [author, setAuthor] = useState('Unknown');
   const [isLoading, setIsLoading] = useState(true);
+  const fiveMinutesInMS = 300000;
+  let timer = null;
 
   const fetchQuote = async () => {
     setIsLoading(true);
@@ -18,7 +20,10 @@ function App() {
       setQuote('Sorry, something went wrong.');
     }
     setIsLoading(false);
+    clearTimeout(timer);
+    timer = setTimeout(() => fetchQuote(), fiveMinutesInMS);
   };
+
 
   useEffect(() => {
     fetchQuote();
