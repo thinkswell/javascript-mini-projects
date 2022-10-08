@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<header>
+    <nav><h1 class="headline">Quiz app</h1>
+        <div class="hamburger"><div></div></div>
+
+    </nav>
+</header>
+
+
+<section>
+
+<div class="main__body">
+	<div class="lds-ring show">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="form hide">
+	<label class="que"></label>
+	<div class="grid">
+		<input type="radio" id="op-1" name="option" value="op-1" class="option"  >
+		<label id="op-1a" for="op-1" class="ans"></label>
+
+		<br>
+		<input type="radio" id="op-2" name="option" value="op-2" class="option">
+		<label id="op-2a" for="op-2" class="ans"></label>
+
+		<br>
+		<input type="radio" id="op-3" name="option" value="op-3" class="option">
+		<label id="op-3a" for="op-3" class="ans"></label>
+		<br>
+		<input  type="radio" id="op-4" name="option" value="op-4" class="option">
+		<label id="op-4a" for="op-4" class="ans"></label>
+
+	</div>
+	<button type="submit" onclick=onHandleSubmit()>Submit</button>
+</div>
+
+<div id="question_switch_info">
+	<p>Next question will be shown in: </p><span id="timer"></span>
+</div>
+
+<div class="reset_container"><button class="reset__btn" onclick=onHandleReset()>Reset</button>
+</div>
+<button class="theme_mode" onclick="darkMode()">Dark Mode</button>
+
+</div>
+<h1 class="value">result: <span class="total__score"></span></h1>
+<div class="score__container">
+
+<h1 class="score"></h1>
+<h1>/10</h1>
+</div>
+
+</section>
+<footer>
+
+    <h6>created by john</h6>
+</footer>
+
+<div class="alert__box">
+    <h1>YOUR SCORE IS :<span></span></h1>
+    <button class="reset__btn" onclick=onHandleReset()>Reset<i class="fa fa-refresh fa-spin" style="font-size:24px"></i></button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<script src="scripts.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <script src="my-timelinemax-animation.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js"></script>
+</body>
+
+</html>

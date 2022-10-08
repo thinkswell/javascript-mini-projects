@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <title>Formatter</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="header__tag">
+        <h1>Formatter</h1>
+    </div>s
+    <nav class="navigation__panel">
+        <button class="btn bold" onclick="makeBold(this)">Bold</button>
+        <button class="btn italic" onclick="makeItalic(this)">Italic</button>
+        <button class="btn underline" onclick="makeUnderline(this)">Underline</button>
+        <button class="align btn left" onclick="alignText(this,'left')">Left Align</button>
+        <button class="align btn center" onclick="alignText(this,'center')">Center Align</button>
+        <button class="align btn right" onclick="alignText(this,'right')">Right Align</button>
+    </nav>
+    <main class="main-panel">
+        <div class="input-text">
+            <label class="tagname input-text-tagname">Text Input:</label>
+            <textarea placeholder="Enter your text here.." id="text-input" class="input-area" oninput="updateText()"></textarea>
+        </div>
+        <div class="output-text">
+            <label class="tagname output-text-tagname">Formatted Text:</label>
+            <div id="text-output" class="output-area" ></div>
+        </div>
+    </main>
+</body>
+</html>

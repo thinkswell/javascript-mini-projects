@@ -1,0 +1,3 @@
+<footer>
+    <p>Created by {{name}}</p>
+</footer>

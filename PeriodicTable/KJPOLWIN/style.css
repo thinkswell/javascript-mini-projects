@@ -1,0 +1,79 @@
+table {
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#buttons {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.legendentry {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 20px;
+  padding: 5px;
+  width: 200px;
+  text-align: center;
+  float: left;
+}
+
+button {
+  margin-right: 20px;
+  padding: 5px;
+}
+
+#periodictable td {
+  border: 1px solid #000000;
+  width: 50px;
+  height: 50px;
+}
+
+#periodictable td:hover {
+  background-color: #DDDDDD;
+}
+
+#periodictable .blank, .blank {
+  border: 0px;
+}
+
+#periodictable .blank:hover {
+  border: 0px;
+  background-color: #FFFFFF;
+}
+
+#element {
+  width: 200px;
+  height: 200px;
+}
+
+#weight {
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000000;
+  width: 50px;
+
+}
+
+#number {
+  border-bottom: 1px solid #000000;
+  border-left: 1px solid #000000;
+}
+
+#symbol {
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  border-right: 1px solid #000000;
+  font-size: 50px;
+  width:100px;
+  height: 150px;
+}
+
+#info {
+  visibility: hidden;
+  margin-bottom: 50px;
+  clear: both;
+}
+
+#name, #config {
+  font-weight: bold;
+}

@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    font-family: 'Gowun Dodum', sans-serif;
+    color: #0fa781;
+}
+body{
+    overflow:hidden;
+	width: 100vw;
+	height: 100vh;
+    transition: ease-in-out 0.5s;
+}
+body.dark{
+    transition: ease-in-out 0.5s;
+     background-color: #202124;
+}
+header{
+    width: 100%;
+    height: 50px;
+}
+nav{
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    height:100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.hamburger{
+ position: relative;
+    width: 20px;
+    text-align: left;
+    height: 2px;
+    background: linear-gradient(to right, #4cb8c4, #3cd3ad); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin-right: 12px;
+}
+.hamburger::before{
+    content: "";
+    position: absolute;
+    margin-top:5px;
+    top: 0;
+  left:0;
+    width: 18px;
+    height:2px;
+    background: linear-gradient(to right, #4cb8c4, #3cd3ad); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.hamburger::after{
+    content:"";
+    position: absolute;
+    margin-top:10px;
+    top:0;
+left:0;
+    width:16px;
+    height: 2px;
+    background: linear-gradient(to right, #4cb8c4, #3cd3ad); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.main__body{
+    display: grid;
+    place-items: center;
+    height: 70vh;
+}
+
+
+.que{
+    padding-bottom: 20px;
+}
+.form{
+    position: relative;
+    background-color: white;
+    padding: 40px;
+    max-width: 100vw;
+    min-width: 400px;
+    border-radius:20px;
+    box-shadow: 2px 1px 3px 2px rgba(158, 125, 125, 0.3);
+    transition: ease-in-out 0.5s;
+}
+.form.dark{
+    transition: ease-in-out 0.5s;
+
+    background-color: #303134;
+}
+.form label{
+    font-family: 'Gowun Dodum', sans-serif;
+
+}
+button{
+    position: absolute;
+    right:0;
+    bottom:10px;
+    margin-right: 20px;
+    transition: all 0.7s  ease;
+box-shadow: 2px 2px 5px  rgba(0,0,0,0.3);
+    background:linear-gradient(to right, #4cb8c4, #3cd3ad) ;
+    border:none;
+    padding:7px 10px;
+    border-radius:10px;
+    color:white;
+    outline:none;
+}
+button:hover{
+	background: linear-gradient(to right,#317f88, #0fa781);
+	cursor:pointer;
+}
+.blackhover{
+    width: 32px;
+    height: 32px;
+    margin-left: -6px;
+    margin-top: -10px;
+    background-color: black;
+    opacity: 0.1;
+    border-radius: 50%;
+}
+
+
+footer,.score__container,.value{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.reset__btn{
+    position:absolute;
+    left: 20px;
+}
+.alert__box ,.alert__box >h1{
+    font-family: 'Gowun Dodum', sans-serif;
+
+    width: 100vw;
+    height: 90vh;
+    background-color: white;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top:50px;
+    left:0
+}
+.correct-answer{
+    color: #00ff07;
+    font-size:18px !important;
+    font-weight:bold !important;
+}
+.wrong-answer{
+   color: red;
+    font-size:18px !important;
+    font-weight:bold !important;
+}
+
+.question_switch_info {
+    display: block;
+    visibility: hidden;
+}
+.hide{
+	display: none !important;
+}
+
+.show{
+	display: block;
+}
+
+.lds-ring {
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 80px;
+}
+
+.lds-ring div {
+	box-sizing: border-box;
+	display: block;
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 8px;
+	border: 8px solid #0fa781;
+	border-radius: 50%;
+	animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+	border-color: #0fa781 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+	animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+	animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+	animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+
+@media (max-width: 1224px) {
+	.main__body {
+		padding: 0 2rem;
+		width: 100%;
+	}
+	.form{
+		min-width: auto;
+	}
+
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    font-family: 'Style Script', cursive;
+    color: #0fa781;
+}
+body{
+    overflow:hidden;
+	width: 100vw;
+	height: 100vh;
+    transition: ease-in-out 0.5s;
+}
+body.dark{
+    transition: ease-in-out 0.5s;
+    background-color: #000000;
+}
+header{
+    width: 100%;
+    height: 50px;
+    box-shadow: 0 2px 20px 2px rgba(0,0,0,0.3);
+}
+nav{
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    height:100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.hamburger{
+ position: relative;
+    width: 20px;
+    text-align: left;
+    height: 2px;
+    background: linear-gradient(to right, #4cb8c4, #3cd3ad); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin-right: 12px;
+}
+.hamburger::before{
+    content: "";
+    position: absolute;
+    margin-top:5px;
+    top: 0;
+  left:0;
+    width: 18px;
+    height:2px;
+    background: linear-gradient(to right, #4cb8c4, #3cd3ad); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.hamburger::after{
+    content:"";
+    position: absolute;
+    margin-top:10px;
+    top:0;
+left:0;
+    width:16px;
+    height: 2px;
+    background: linear-gradient(to right, #4cb8c4, #3cd3ad); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.main__body{
+    display: grid;
+    place-items: center;
+    height: 70vh;
+}
+
+
+.que{
+    padding-bottom: 20px;
+}
+.form{
+    position: relative;
+    background-color: white;
+    padding: 40px;
+    max-width: 100vw;
+    min-width: 400px;
+    border-radius:20px;
+    box-shadow: 2px 1px 3px 2px rgba(158, 125, 125, 0.3);
+    transition: ease-in-out 0.5s;
+}
+.form.dark{
+    transition: ease-in-out 0.5s;
+    background-color: #1d1d1d;
+}
+.form label{
+    font-family: 'Gowun Dodum', sans-serif;
+
+}
+button{
+    position: absolute;
+    right:0;
+    bottom:10px;
+    margin-right: 20px;
+    transition: all 0.7s  ease;
+box-shadow: 2px 2px 5px  rgba(0,0,0,0.3);
+    background:linear-gradient(to right, #4cb8c4, #3cd3ad) ;
+    border:none;
+    padding:7px 10px;
+    border-radius:10px;
+    color:white;
+    outline:none;
+}
+button:hover{
+	background: linear-gradient(to right,#317f88, #0fa781);
+	cursor:pointer;
+}
+.blackhover{
+    width: 32px;
+    height: 32px;
+    margin-left: -6px;
+    margin-top: -10px;
+    background-color: black;
+    opacity: 0.1;
+    border-radius: 50%;
+}
+
+
+footer,.score__container,.value{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.reset__btn{
+    position:absolute;
+    left: 20px;
+}
+.alert__box ,.alert__box >h1{
+    font-family: 'Gowun Dodum', sans-serif;
+
+    width: 100vw;
+    height: 90vh;
+    background-color: white;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top:50px;
+    left:0
+}
+.correct-answer{
+    color: #00ff07;
+    font-size:18px !important;
+    font-weight:bold !important;
+}
+.wrong-answer{
+   color: red;
+    font-size:18px !important;
+    font-weight:bold !important;
+}
+
+.hide{
+	display: none !important;
+}
+
+.show{
+	display: block;
+}
+
+.lds-ring {
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 80px;
+}
+
+.lds-ring div {
+	box-sizing: border-box;
+	display: block;
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 8px;
+	border: 8px solid #0fa781;
+	border-radius: 50%;
+	animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+	border-color: #0fa781 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+	animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+	animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+	animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+
+@media (max-width: 1224px) {
+	.main__body {
+		padding: 0 2rem;
+		width: 100%;
+	}
+	.form{
+		min-width: auto;
+	}
+}
+}
+}

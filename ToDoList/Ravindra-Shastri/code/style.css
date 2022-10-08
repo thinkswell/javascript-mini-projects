@@ -1,0 +1,257 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --------PAGE STYLE------------ */
+
+  body{
+    background: linear-gradient(70deg
+  ,rgb(70, 177, 177),rgb(79, 184, 184));
+
+  }
+  
+  .container{
+    max-width: 34rem;
+    margin: 0rem 4rem;
+    box-shadow: 1px 4px 6px 3px aqua;
+    text-align: center;
+    padding: 2rem;
+    float: right;
+    border-radius: 1rem;
+  }
+  h1{
+    text-align: center;
+    color:rgb(39, 39, 122);
+    font-size: 5rem;
+    margin:1rem;
+    padding: 1rem;
+    border-radius: .6rem;
+    box-shadow: 1px 4px 5px 3px aqua;
+  }
+  
+  .input-area{
+    padding: 1rem 6rem;
+    width: 54%;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color:red;
+    margin: 0 auto;
+    border: 0;
+    border: 2px solid rgb(6, 141, 153);
+    border-radius: .4rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 2px 3px 3px white;
+  }
+  
+  li{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    list-style: none;
+    margin: 0 10rem 0rem 10rem;
+    border: 1px dotted rgb(255, 255, 255);
+    margin-bottom: 1rem;
+  }
+  span:hover{
+    display: block;
+  }
+  span{
+    margin-right: 5rem;
+  }
+  .btn{
+    background-color:rgb(31, 139, 158);
+    color:rgb(241, 236, 236);
+    border-radius: 1rem;
+    margin: 1rem .3rem;
+    font-size: 1.12rem;
+    padding: .3rem;
+    box-shadow: .1rem .1rem .1rem .1rem aqua;
+  }
+  .btn:hover{
+    background-color:lightcoral;
+    color: rgb(255, 255, 255);
+    /* font-size: 1.5rem; */
+  }
+  .selected{
+    background-color: white !important;
+    border: 1px solid !important;
+    color: black !important;
+  }
+  
+  p{
+    color: rgb(5, 5, 5);
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+   .timer{
+  font-size: 8rem;
+  width: 56rem;
+  margin: 1rem;
+  text-align: center;
+  }
+  /* ------------------------------------------ */
+.smile{
+  font-size: 5rem;
+  padding: 1.2rem 0;
+}
+.smile p{
+  color: red;
+  font-size:2rem;
+  padding: .2rem;
+}
+  #calendar{
+    width: 130px;
+    height: 180px;
+    background-color: cornflowerblue;
+    color: #fff;
+    border-radius: 5%;
+    box-shadow: 0 4px 4px aqua;
+}
+
+#calendar>p{
+    font-family: Verdana, Arial, sans-serif;
+    padding: 2rem 0;
+    margin-left: 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+#calendar-day{
+    font-size: 1.2rem;
+    color:rgb(39, 39, 122);
+}
+
+#calendar-month-year{
+    font-size: 1.1rem;
+    color: rgb(39, 39, 122);
+}
+
+#calendar-date{
+    font-size: 4rem;
+    padding-top: 10px;
+    padding-bottom: 0;
+    color: rgb(39, 39, 122);
+}
+.calender-time{
+  font-size: 1.2rem;
+  width: 64rem;
+  margin: 2rem;
+  text-align: center;
+  border: 2px solid aqua;
+  border-radius: 20px;
+  box-shadow: 1px 2px 4px 2px aqua;
+  display: flex;
+  padding: 1rem;
+  color: rgb(39, 39, 122);
+}
+.cal-content{
+  padding: 1rem;
+  box-shadow: 1px 2px 4px 2px aqua;
+  border-radius:1rem ;
+}
+/* ------------------------------------------- */
+.nav-main{
+  float: left;
+  margin-top: 1.2rem;
+  padding-left: 1.8rem;
+} 
+.nav{
+  text-align: center; 
+} 
+.nav a{
+  font-size: 3rem;
+ padding: 1rem 1.3rem;
+ border-radius: .8rem;
+ margin-right: 1.7rem;
+ box-shadow: 1px 4px 5px 3px aqua;
+ color:rgb(140, 88, 88);
+}
+ /*------------------------------------------  */
+h5{
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: .5rem;
+  color:rgb(93, 42, 129);
+}
+.cheetsheet{
+  width: 55%;
+  margin-top: 18.8rem;
+ text-align: center;
+ margin-left: 1.8rem;
+}
+  
+.command{
+    font-size: 4rem;
+    margin-top:.6rem;
+    padding: .5rem;
+    color:rgb(39, 39, 122);
+    border-radius: 1rem;
+    box-shadow: .3rem .2rem .3rem .1rem aqua;
+}
+
+.para-cheet{
+    font-size: 30px;
+    margin: 30px 1.8rem;
+    color: rgb(39, 39, 122);
+    box-shadow: .3rem .1rem .2rem .1rem aqua;
+    border-radius: 1rem;
+    padding: 1.2rem;
+}
+
+.cheet-btn{
+    font-size: 1.4rem;
+    color:rgb(241, 236, 236);
+    border-radius: 2rem;
+    background-color:rgb(31, 139, 158);
+    box-shadow: .1rem .1rem .1rem .1rem aqua;
+    padding: .5rem 3rem;
+}
+.cheet-btn:hover{
+    background-color:lightcoral;
+}

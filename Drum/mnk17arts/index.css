@@ -1,0 +1,177 @@
+#footer {
+  width: 450px;
+  text-align: center;
+  display: block;
+  margin: 15px auto 30px auto;
+  font-size: 0.8em;
+  font-family: candara;
+}
+
+#footer a {
+  font-weight: 800;
+  text-decoration: none;
+  color: #fff;
+}
+
+#footer a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+#i-main #i-app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#i-main #i-app #drum-machine {
+  background-color: #555;
+  border-radius: 5px;
+  min-height: 320px;
+  width: 664px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#i-main #i-app #drum-machine .box {
+  width: 400px;
+  background-color: #666;
+  margin: 2px 0.5vw;
+  border-radius: 5px;
+}
+
+#i-main #i-app #drum-machine .box1 .pad-bank {
+  width: 332px;
+  height: 272px;
+  display: inline-block;
+  margin: 20px;
+}
+
+#i-main #i-app #drum-machine .box1 .pad-bank .drum-pad {
+  position: relative;
+  float: left;
+  width: 100px;
+  height: 80px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  padding-top: 20px;
+  font-family: candara;
+  font-weight: 1000;
+  font-size: 33.33333px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 1px 1px #aaa,5px 5px 9px #000;
+          box-shadow: 1px 1px #aaa,5px 5px 9px #000;
+  cursor: pointer;
+}
+
+#i-main #i-app #drum-machine .box1 .pad-bank .drum-pad:active {
+  background-color: #fff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #000;
+}
+
+#i-main #i-app #drum-machine .box2 {
+  display: inline-block;
+  width: 300px;
+}
+
+#i-main #i-app #drum-machine .box2 #display {
+  max-width: 200px;
+  text-align: center;
+  font-weight: 600;
+  color: #fff;
+  font-family: arial;
+  background-color: #888;
+  margin: 15px auto;
+  padding: 15px;
+  border: 2px solid #bbb;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#i-main #i-app #drum-machine .box2 #volume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#i-main #i-app #drum-machine .box2 #volume input {
+  margin: 20px;
+}
+
+#i-main #i-app #drum-machine .box2 #controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#i-main #i-app #drum-machine .box2 #controls .control {
+  border: 1px solid #777;
+  border-radius: 5px;
+  margin: 1px 5px;
+  padding: 1px 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#i-main #i-app #drum-machine .box2 #controls .control .select {
+  width: 40px;
+  height: 20px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  background-color: #000;
+  border: 1.5px solid #000;
+  cursor: pointer;
+}
+
+#i-main #i-app #drum-machine .box2 #controls .control .select .inner {
+  width: 18px;
+  height: 18px;
+  border: 1px outset #bbb;
+  background-color: #0f0;
+  position: right;
+}
+
+@media screen and (max-width: 650px) {
+  #drum-machine {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #drum-machine {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
