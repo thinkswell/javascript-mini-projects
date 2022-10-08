@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Lovely Movies</title>
+    <!--    http://www.omdbapi.com/?s=irishman&apiKey=3ef4ab9e -->
+</head>
+<body>
+<header class="main-header">
+    <h1 class="main-header__branding">Lovely Movies</h1>
+    <div class="main-header__search">
+        <span class="loader"></span>
+        <input type="search" placeholder="Search in movies..."
+               autocomplete="off" id="search">
+    </div>
+</header>
+<main class="content">
+    <section class="content__result">
+        <h3>Result for "<strong id="search-trend">Lovely</strong>"&nbsp;<span id="page-number"></span></h3>
+        <span class="loader"></span>
+        <div class="content__result__list" id="result-wrapper"></div>
+        <button class="content__result__next-btn" id="next-btn">Next Page</button>
+    </section>
+    <section class="movie-details" id="id-details-wrapper">
+        <span class="movie-details__close">×</span>
+    </section>
+</main>
+<footer class="main-footer"></footer>
+<script src="scripts/services.js"></script>
+<script src="scripts/index.js"></script>
+</body>
+</html>
