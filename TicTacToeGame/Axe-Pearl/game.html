@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="game.css">
+  </head>
+  <body>
+    <h1 style="font-size:30px;font-family:cursive;text-align:center;">Tic Tac Toe</h1>
+    <div id="winner" style="visibility:hidden;">X has won the game</div>
+    <button class="button" type="button" name="button" onclick="reset()">Restart</button>
+    <button class="auto-player" type="button" name="button" onclick="rplay()">Play with Robot</button>
+    <div class="Game-Container">
+      <div class="type1" id="0" onclick="playerturn(this.id)"></div>
+      <div class="type1" id="1" style="left:710px;border-color:blue;" onclick="playerturn(this.id)"></div>
+      <div class="type2" id="2" style="border-color:violet;" onclick="playerturn(this.id)"></div>
+
+      <div class="type1" id="3" style="top:315px;border-color:yellow; "onclick="playerturn(this.id)"></div>
+      <div class="type1" id="4" style="top:315px;left:710px;border-color:red; "onclick="playerturn(this.id)"></div>
+      <div class="type2" id="5" style="top:315px;border-color:violet;" onclick="playerturn(this.id)" ></div>
+
+      <div class="type3" id="6" onclick="playerturn(this.id)"></div>
+      <div class="type3" id="7" style="left:710px;padding-left:20px;width:85px;" onclick="playerturn(this.id)"></div>
+      <div class="type4" id="8" onclick="playerturn(this.id)"></div>
+    </div>
+    <script type="text/javascript" src="game.js"></script>
+  </body>
+</html>
