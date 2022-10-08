@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;800&display=swap');
+
+:root {
+  --hover-width: 99%;
+  --other-width: 1%;
+  --font-family: "Work Sans", sans-serif
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family);
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: normal;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  z-index: 1;
+}
+h2 strong {
+    font-weight: 800;
+}
+
+.container {
+  background: url("../static/img/bg-bw.jpg") no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split.left:before {
+  content: "";
+  position: absolute;
+  background: url("../static/img/bg-colored.jpg") no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.split.right {
+  right: 0;
+}
+
+.split.left,
+.split.right {
+  transition: 1000ms all ease-in-out;
+}
+
+.split.left *,
+.split.right * {
+  opacity: 0;
+  transition: 1000ms all ease-out;
+}
+
+.hover-left .left {
+  width: var(--hover-width);
+}
+
+.hover-left .left * {
+  opacity: 1;
+}
+.hover-left .right {
+  width: var(--other-width);
+}
+
+.hover-right .right {
+  width: var(--hover-width);
+}
+
+.hover-right .right * {
+  opacity: 1;
+}
+
+.hover-right .left {
+  width: var(--other-width);
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+.credit {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  color: black;
+  padding: 0.5rem 1rem;
+}
