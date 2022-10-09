@@ -1,11 +1,26 @@
 .container {
     width: 375px;
-    height: 525px;
+    /* height: 525px; */
+    min-height: fit-content;
     margin-left: 350px;
     margin-top: 65px;
     background-color: yellow;
     padding-left: 30px;
+    padding-bottom: 30px;
 }
+
+.units {
+  width: 100%;
+  
+}
+
+#units {
+  width: 150px;
+  height: 25px;
+
+}
+
+
 #height, #weight {
     width: 150px;
     height: 25px;
