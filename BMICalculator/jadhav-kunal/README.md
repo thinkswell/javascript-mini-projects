@@ -10,6 +10,6 @@ Body mass index (BMI) is a measure of body fat based on height and weight that a
 ![image](https://user-images.githubusercontent.com/54142448/136647179-b912802f-4bc9-4634-a0a6-b24f97f95cdd.png)
 
 
-Updated to accept metric or imperial measurments.
+Updated to accept metric or imperial measurements.
 
 ![](BMICalculator-standardized.gif)
