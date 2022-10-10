@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Montserrat&family=Shizuru&display=swap" rel="stylesheet">
+
+    <title>Game of Life</title>
+
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+</head>
+<body>
+
+    <div id="header">
+        <h3 id="sub-heading">John Conway's</h3>
+        <h1 id="main-heading">Game Of Life</h1>
+    </div>
+
+    <div id="navbar">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">Wiki</a>
+            </li>
+            <li class="nav-item">
+                <a href="#rules" id="rule-menu">Rules</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="rules">
+        <ul class="rule-list">
+            <li class="rule-item">Any live cell with fewer than two live neighbours dies, as if by underpopulation.</li>
+            <li class="rule-item">Any live cell with two or three live neighbours lives on to the next generation.</li>
+            <li class="rule-item">Any live cell with more than three live neighbours dies, as if by overpopulation.</li>
+            <li class="rule-item">Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>
+        </ul>
+        <div id="drop-down-icon">
+            <img src="imgaes/slideUp.svg" alt="">
+        </div>
+    </div>
+
+    <div class="main-section">
+        <div id="world"></div>
+    </div>
+
+    <div class="user-buttons">
+        <Input type='button' id='btnstartstop' value='Start Reproducing' onclick='startStopGol();'/>
+        <Input type='button' id='btnreset' value='Reset World' onclick='resetWorld();'/>
+    </div>
+   
+    <footer>
+        <p>&copy John Conway's Game of Life</p>
+    </footer>
+
+    <!-- JavaScrpit -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
