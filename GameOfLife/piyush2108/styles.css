@@ -1,0 +1,160 @@
+::-webkit-scrollbar{
+    width: .7rem;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #19282F;
+    border-radius: 20px;
+    margin-block: .5em; 
+    opacity: .3;
+}
+
+::-webkit-scrollbar-thumb{
+    background: hsl(0, 0%, 10%);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: hsl(0, 100%, 0%);
+}
+
+body{
+    background-color: #19282F;
+    color: #D3ECA7;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: #E6DDC4;
+}
+
+input{
+    border: 2px solid black;
+    margin: 0 4%;
+    padding: 1%;
+    background-color:#B33030;
+    color: #E6DDC4;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    border-radius: 30px;
+}
+
+input:hover{
+    background-color: #7c2222;
+}
+
+#header{
+    padding: 1% 15%;
+}
+
+#main-heading{
+    margin: 1%;
+    font-family: 'Shizuru', cursive;
+    font-size: 3rem;
+}
+
+#sub-heading{
+    margin: 1%;
+    color: #A1B57D;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+#navbar{
+    background-color: #B33030;
+    text-align: center;
+    min-height: fit-content;
+}
+
+.nav-list{
+    padding: 1% 10%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.nav-item{
+    margin: 4% 10%;
+    list-style: none;
+    display: inline;
+}
+
+.main-section{
+    margin: 5% 10%;
+}
+
+#world {
+    padding: 10px;
+}
+
+#worldgrid{
+    margin: 0 auto;
+}
+
+table {
+    background-color: #A1B57D;
+    border: 5px solid black;
+}
+
+td {
+    border: 1.2px solid black;
+    width: 12px;
+    height: 12px;
+}
+
+td.dead {
+    background-color: transparent;
+}
+
+td.alive {
+    background-color:black;
+}
+
+.user-buttons{
+    text-align: center;
+}
+
+#rules{
+    margin: 4% 15%;
+    background-color: #A1B57D;
+    border-radius: 50px;
+}
+
+.rule-list{
+    padding: 2% 5%;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+
+}
+
+.rule-item{
+    margin: 2%;
+    list-style: url("imgaes/bullet.svg");
+}
+
+#drop-down-icon{
+    padding: 1%;
+    text-align: center;
+}
+
+footer{
+    margin-bottom: 0;
+    padding: 4% 10% 0 2%;
+    font-family: 'Montserrat', sans-serif;
+    color: #678983;
+    font-size: 1rem;
+    text-align: left;
+}
