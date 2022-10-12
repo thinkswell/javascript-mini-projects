@@ -16,6 +16,7 @@ html {
 
 body {
   display: flex;
+  font-family: "Poppins";
   justify-content: center;
   align-items: center;
   color: rgb(107 114 128);
