@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="card w-50 m-auto text-center">
+                <div class="card-header text-center bg-info text-white"> BMI Calculator </div>
+                <div class="card-body">
+                    <form class="w-auto m-auto" onsubmit="return false">
+                        <div class="form-group">
+                            <label> Weight: </label>
+                            <input type="text" name="" placeholder="Weight in kg" required id="weight"
+                                class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label> Height: </label>
+                            <input type="text" name="" placeholder="Height in feet" required id="height"
+                                class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="text-danger"> BMI Value: </label>
+                            <input type="number" name="" id="bmivalue" class="form-control">
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-success" onclick="getbmivalue()">Check BMI</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center bg-light" id="healthStatus">A healthy BMI ranges between 19 and 25.
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
