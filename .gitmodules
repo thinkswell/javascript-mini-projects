@@ -1,9 +1,0 @@
-[submodule "quiz-app"]
-	path = quiz-app
-	url = https://github.com/johnbabu021/quiz-app
-[submodule "quiz"]
-	path = quiz
-	url = https://github.com/johnbabu021/quiz-app
-[submodule "quizer"]
-	path = quizer
-	url = https://github.com/johnbabu021/quiz-app
