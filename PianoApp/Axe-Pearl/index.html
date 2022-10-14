@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Piano</title>
+</head>
+<body>
+  <h1>Virtual Piano</h1>
+  <h3>Enjoy Virtual piano with real experience.</h3>
+  <h2>KeyNode- <span id="keyNote"><strong>None</strong></span></h2>
+  <div class="piano">
+    <div  id="A4" onclick="play_note(this.id)" class="white_key keys"></div>
+    <div  id="Ab4" onclick="play_note(this.id)"  class="black_key keys"></div>
+    <div  id="B4" onclick="play_note(this.id)" class="white_key keys"></div>
+    <div  id="Bb4"onclick="play_note(this.id)"  class="black_key keys"></div>
+    <div  id="C4" onclick="play_note(this.id)" class="white_key keys"></div>
+    <div  id="C5" onclick="play_note(this.id)" class="black_key keys"></div>
+    <div  id="D4"onclick="play_note(this.id)"  class="white_key keys"></div>
+    <div  id="D5" onclick="play_note(this.id)" class="black_key keys"></div>
+    <div  id="Db4"onclick="play_note(this.id)"  class="white_key keys"></div>
+    <div  id="Db5"onclick="play_note(this.id)"  class="black_key keys"></div>
+    <div  id="E4" onclick="play_note(this.id)" class="white_key keys"></div>
+    <div  id="E5" onclick="play_note(this.id)" class="black_key keys"></div>
+    <div  id="Eb4"onclick="play_note(this.id)"  class="white_key keys"></div>
+    <div  id="Eb5"onclick="play_note(this.id)"  class="black_key keys"></div>
+    <div  id="F4"onclick="play_note(this.id)"  class="white_key keys"></div>
+    <div  id="G4"onclick="play_note(this.id)"  class="black_key keys"></div>
+    <div  id="Gb4"onclick="play_note(this.id)"  class="white_key keys"></div>
+
+
+  </div>
+
+  <audio class="A4" src="sounds/A4.mp3"></audio>
+  <audio class="Ab4" src="sounds/Ab4.mp3"></audio>
+  <audio class="B4" src="sounds/B4.mp3"></audio>
+  <audio class="Bb4" src="sounds/Bb4.mp3"></audio>
+  <audio class="C4" src="sounds/C4.mp3"></audio>
+  <audio class="C5" src="sounds/C5.mp3"></audio>
+  <audio class="D4" src="sounds/D4.mp3"></audio>
+  <audio class="D5" src="sounds/D5.mp3"></audio>
+  <audio class="Db4" src="sounds/Db4.mp3"></audio>
+  <audio class="Db5" src="sounds/Db5.mp3"></audio>
+  <audio class="E4" src="sounds/E4.mp3"></audio>
+  <audio class="E5" src="sounds/Eb5.mp3"></audio>
+  <audio class="E5" src="sounds/Eb5.mp3"></audio>
+  <audio class="Eb4" src="sounds/F4.mp3"></audio>
+  <audio class="Eb5" src="sounds/F4.mp3"></audio>
+  <audio class="F4" src="sounds/F4.mp3"></audio>
+  <audio class="G4" src="sounds/G4.mp3"></audio>
+  <audio class="Gb4" src="sounds/Gb4.mp3"></audio>
+
+  <script src="index.js"></script>
+</body>
+</html>
