@@ -6,7 +6,7 @@
 .wrapper {
   width: 100%;
   height: 100vh;
-  display: flex;
+  display: flexbox;
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;

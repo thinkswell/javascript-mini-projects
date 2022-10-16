@@ -38,7 +38,7 @@ firstCols.forEach((item) => {
     }
   });
 });
-
+// function to check the winner of the game
 function checkWinner(firstPlayer) {
   return winningCombinations.some((rows) => {
     return JSON.stringify(rows) === JSON.stringify(firstPlayer);
