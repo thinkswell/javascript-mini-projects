@@ -1,4 +1,0 @@
-sqlite3
-requests
-flask_session
-flask
