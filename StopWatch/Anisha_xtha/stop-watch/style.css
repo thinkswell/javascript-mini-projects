@@ -1,0 +1,40 @@
+body{
+    background-color: yellow;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100%;
+}
+
+.container{
+    width: 800px;
+    margin: 30px auto;
+    color: brown;
+    text-align: center;
+}
+ 
+h1, h2, h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 2.6em;
+    text-transform: uppercase;
+}
+#seconds, #tens{
+    font-size: 2em;
+}
+button{
+    background: orange;
+    color: white;
+    border: solid 2px white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 18px 10px;
+    width: 180px;
+    margin: 10px;
+    outline: none;
+    border-radius: 5px;
+}
+
+button:hover{
+    background: grey;
+    transition: all;
+}
