@@ -1,0 +1,32 @@
+.row {
+    display: flex;
+    justify-content: center;
+  }
+  .col {
+    border-top: 2px solid lightgrey;
+    border-bottom: 2px solid grey;
+    border-left: 2px solid lightgrey;
+    border-right: 2px solid grey;
+    background-color: #b6b6b6;
+    padding: 15px;
+    width: 1vw;
+    height: 1vw;
+    font-size: 1em;
+  }
+  .col:hover {
+    background-color: #dddddd;
+  }
+  .bomb {
+    background-color: rgb(228, 70, 70) !important;
+  }
+  .safe {
+    background-color: #49bc07 !important;
+  }
+  .points {
+    color: green;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
