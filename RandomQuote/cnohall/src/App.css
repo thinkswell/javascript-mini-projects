@@ -1,0 +1,32 @@
+.layout {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background: linear-gradient(white, gray);
+  overflow: hidden;
+}
+
+.button {
+  margin-top: 20px;
+  height: 40px;
+  width: 120px;
+  text-align: center;
+  background: linear-gradient(white, gray);
+  overflow: hidden;
+}
+
+.loader {
+  border: 5px solid #f3f3f3; /* Light grey */
+  border-top: 5px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  animation: spin 0.5s linear infinite;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
