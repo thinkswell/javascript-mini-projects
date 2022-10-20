@@ -1,0 +1,32 @@
+.contClass{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titletext{
+    /* border: black 2px solid; */
+    color: red;
+    margin-bottom: 30px;
+}
+
+.buttonClass{
+
+    padding: 10px;
+    margin: 10px;
+    color: aliceblue;
+    background-color: green;
+
+    border: black 2px solid;
+    border-radius: 50%;
+}
+
+.info{
+    /* border: black 2px solid; */
+
+    /* font-style: italic; */
+    /* font-weight: bolder; */
+}

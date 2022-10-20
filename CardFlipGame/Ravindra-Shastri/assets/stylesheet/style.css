@@ -1,0 +1,139 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20pi0226
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h2, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Custom styles */
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 20px 0;
+    background: linear-gradient(to right, #fdb2b2, #ffa7ff);
+    font-family: 'Roboto Mono', monospace;
+}
+h1{
+    text-align: center;
+    font-size: 3rem; 
+    color: rgb(255, 0, 0);
+ 
+}
+
+.grid{
+    max-width: 668px;
+    margin:  2rem auto;
+    display:  flex;
+    flex-wrap: wrap;
+    border: 4px solid gray;
+    justify-content: space-evenly;
+}
+
+.card{
+    position: relative;
+    transition: all 0.4s linear;
+    transform-style: preserve-3d;
+    margin: 5px;
+    cursor: pointer;
+}
+.card,
+.front,
+.back{
+    width: 6.25rem;
+    height: 6.25rem;
+}
+.back,
+.front{
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+
+.front{
+    background: dimgray;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    background-image: url(../media/question2.gif);
+    border: 10px solid dimgray;
+    z-index: 2;
+}
+
+.back{
+    transform: rotateY(180deg);
+    background-color: #d88080;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.selected{
+    transform: rotateY(180deg);
+}
+
+.match .front{
+    background-image: url(../media/celebrate.gif)!important;
+
+}
+.count_div{
+    width: 22rem;
+    height: 4rem;
+    font-size: 2.4rem;
+    text-align: center;
+    border:3px solid dimgray;
+    border-radius: 28rem;
+    color: crimson;
+    margin: 0 auto;
+    padding: .6rem;
+
+    
+}
+

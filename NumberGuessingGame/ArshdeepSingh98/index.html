@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css"></link>
+    <title>Random Number Guesser | ArshdeepSingh98</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Random Number Guesser</h1>
+        <p>I am thinking of number between 1 and 1000</p>
+        <br/>
+        <p>Can you guess it in least amount of tries!</p>
+        
+        <form onsubmit="return check(event)">
+            <input id="user-guess" type="number" min="1" max="1000" placeholder="Enter your guess" required/>
+            <button type="submit">Try</button>
+        </form>
+
+        <div id="guess-history" class="guesses"></div>
+        
+    </div>
+    <script src="./guess.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<html>
+  <head>
+    <title>Drive Clone</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- contains buttons -->
+    <div id="header">
+      <button id="addFolder">Add Folder</button>
+      <button id="addTextFile">Add Text File</button>
+      <button id="addAlbum">Add Album</button>
+    </div>
+
+    <!-- breadcrumb(showing where we are) containing navigation between folders -->
+    <div id="breadcrumb">
+      <a purpose="path" rid="-1">Root</a>
+    </div>
+
+    <!-- displaying folder and file icons -->
+    <div id="container"></div>
+
+    <!-- opening files like notepad and other apps -->
+    <div id="app">
+      <div id="app-title-bar">
+        <div id="app-title">title goes here</div>
+        <div id="win-actions">
+          <span class="material-icons"> minimize </span>
+          <span class="material-icons"> fullscreen </span>
+          <span id="app-close" class="material-icons"> close </span>
+        </div>
+      </div>
+      <div id="app-menu-bar"></div>
+      <div id="app-body"></div>
+    </div>
+
+    <!-- template for folder and file icons -->
+    <template id="templates">
+      <div class="folder" rid="" pid="">
+        <span action="rename">rename</span>
+        <span action="delete">delete</span>
+        <span action="view">view</span>
+        <div purpose="name"></div>
+      </div>
+      <div class="text-file" rid="" pid="">
+        <span action="rename">rename</span>
+        <span action="delete">delete</span>
+        <span action="view">view</span>
+        <div purpose="name"></div>
+      </div>
+      <div class="album" rid="" pid="">
+        <span action="rename">rename</span>
+        <span action="delete">delete</span>
+        <span action="view">view</span>
+        <div purpose="name"></div>
+      </div>
+      <a purpose="path" rid="-1"></a>
+      <div purpose="notepad-menu" class="notepad-menu">
+        <span action="save" class="material-icons">save</span>
+        <span pressed="false" action="bold" class="material-icons"
+          >format_bold</span
+        >
+        <span pressed="false" action="italic" class="material-icons"
+          >format_italic</span
+        >
+        <span pressed="false" action="underline" class="material-icons"
+          >format_underline</span
+        >
+        <input type="color" action="bg-color" />
+        <input type="color" action="fg-color" />
+        <select action="font-family">
+          <option value="monospace">monospace</option>
+          <option value="serif">serif</option>
+          <option value="sans-serif">sans-serif</option>
+          <option value="cursive">cursive</option>
+        </select>
+        <select action="font-size">
+          <option value="8">8</option>
+          <option value="10">10</option>
+          <option value="12">12</option>
+          <option value="14">14</option>
+          <option value="16">16</option>
+          <option value="18">18</option>
+          <option value="20">20</option>
+          <option value="22">22</option>
+        </select>
+        <span action="download" class="material-icons">download</span>
+        <span action="forupload" class="material-icons">upload</span>
+        <input action="upload" type="file" />
+        <a purpose="download" href="http://www.google.com" target="_blank"
+          >Link</a
+        >
+      </div>
+      <div purpose="notepad-body" class="notepad-body">
+        <textarea>I am the notepad's body</textarea>
+      </div>
+      <div purpose="album-menu" class="album-menu">
+        <span action="save" class="material-icons">save</span>
+        <span action="download" class="material-icons">download</span>
+        <span action="upload" class="material-icons">upload</span>
+
+        <span action="add" class="material-icons">add</span>
+        <span action="delete" class="material-icons">delete</span>
+        <span action="left" class="material-icons"
+          >keyboard_double_arrow_left</span
+        >
+        <span action="right" class="material-icons"
+          >keyboard_double_arrow_right</span
+        >
+
+        <span action="play" class="material-icons">play_arrow</span>
+        <span action="pause" class="material-icons">pause</span>
+      </div>
+      <div purpose="album-body" class="album-body">
+        <div class="picture-list"></div>
+        <div class="picture-view">
+          <div class="move-left">
+            <span action="left" class="material-icons"
+              >keyboard_double_arrow_left</span
+            >
+          </div>
+          <div class="picture-main">
+            <img src="" alt="Please select an image" />
+          </div>
+          <div class="move-right">
+            <span action="right" class="material-icons"
+              >keyboard_double_arrow_right</span
+            >
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

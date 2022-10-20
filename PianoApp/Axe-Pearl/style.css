@@ -1,0 +1,49 @@
+body {
+    background-color:mediumspringgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+  }
+
+.piano
+{
+    display: flex;
+    border-left: black 5px solid;
+    border-right: black 5px solid;
+    background-color: wheat;
+    justify-content: space-evenly;
+    justify-self: flex-end;
+    height: 320px;
+    margin-top: 100px;
+}
+
+.white_key{
+    display: flex;
+    background-color:white;
+    width: 80px;
+    height: 300px;
+    box-shadow: blue;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+.white_key:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+}
+.black_key{
+    display: flex;
+    background-color:black;
+    width: 40px;
+    height: 200px;
+    margin-left:-30px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    z-index: 2;
+}
+.black_key:active {
+    transform: scale(0.99);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+}

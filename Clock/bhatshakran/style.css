@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main--color:#091353;
+    --primary-color:#9D84B7;
+    --secondary-color:#D5D5D5;
+}
+body{
+    background: var(--main--color);
+    min-height: 100vh;
+    width: 100%;
+}
+
+.main__wrapper{
+    position: relative;
+}
+
+
+.heading{
+    color: var(--primary-color);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 8rem !important;
+}
+span{
+    color: var(--secondary-color);
+    font-size: 8rem !important; 
+}
+
+.switch{
+  border: 1px solid var(--primary-color);
+  width: 120px;
+  text-align: center;
+  font-family: 'Gill Sans';
+  font-size: 3rem;
+  margin-left: 4rem;
+  color:#fff;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+.left__wrapper{
+    height: 80vh;
+    position: relative;
+
+}
+
+.menu{
+    font-size: 4rem;
+    color: #d5d5d569;
+    margin-left: 2rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu >  div{
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+
+.menu .analog{
+  color: #fff;
+}
+
+.menu > div:hover{
+    color: white;
+    transition: all 0.25s ease-in-out;
+}
+
+.right__wrapper{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.digital__clock{
+    margin: 0;
+    font-size: 12rem;
+    color: #EDEDED;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+}
+
+
+.clock {
+    width: 30rem;
+    height: 30rem;
+    border: 7px solid var(--main--color);
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow: 4px 4px 30px 2px --main--color, -4px 4px 30px 2px --main--color, 4px -4px 30px 2px --main--color, -4px -4px 30px 2px --main--color ;
+   
+  }
+  
+  .outer-clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background: var(--main--color);
+    
+   
+    overflow: hidden;
+  }
+  
+  .outer-clock-face::after {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg)
+  }
+  
+  .outer-clock-face::before,
+  .outer-clock-face::after,
+  .outer-clock-face .marking{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: #EDEDED;
+    z-index: 0;
+    left: 49%;
+  }
+  
+  .outer-clock-face .marking {
+    background: #bdbdcb;
+    width: 3px;
+  }
+  
+  .outer-clock-face .marking.marking-one {
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    transform: rotate(30deg)
+  }
+  
+  .outer-clock-face .marking.marking-two {
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    transform: rotate(60deg)
+  }
+  
+  .outer-clock-face .marking.marking-three {
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    transform: rotate(120deg)
+  }
+  
+  .outer-clock-face .marking.marking-four {
+    -webkit-transform: rotate(150deg);
+    -moz-transform: rotate(150deg);
+    transform: rotate(150deg)
+  }
+  
+  .inner-clock-face {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background: var(--main--color);
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    z-index: 1;
+  }
+  
+  .inner-clock-face::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    border-radius: 18px;
+    margin-left: -9px;
+    margin-top: -6px;
+    background: #bdbdcb2d;
+    z-index: 11;
+  }
+  
+  .hand {
+    width: 50%;
+    right: 50%;
+    height: 6px;
+    background: #be5b5b;
+    position: absolute;
+    top: 50%;
+    border-radius: 6px;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  }
+  
+  .hand.hour-hand {
+    width: 30%;
+    z-index: 3;
+  }
+  
+  .hand.min-hand {
+    height: 3px;
+    z-index: 10;
+    width: 40%;
+  }
+  
+  .hand.second-hand {
+    background: #ee791a;
+    width: 45%;
+    height: 2px;
+  }
+
+
+  @media (max-width:600px) {
+    .menu{
+      text-align: center;
+    }
+    .menu > div{
+      display: inline;
+      margin: 0;
+      width: 50%;
+
+    }
+    .left__wrapper{
+      height: 30vh;
+    }
+    .switch{
+      margin: 0 auto;
+    }
+  }

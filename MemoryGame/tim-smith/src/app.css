@@ -1,0 +1,60 @@
+:root {
+  font-family: 'Poppins', Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background: rgb(55, 0, 49);
+  background: linear-gradient(150deg, rgb(32, 1, 28) 0%, rgb(2, 59, 70) 100%);;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --grid-width: 80vh;
+  --card-size: calc(var(--grid-width) / 4.3);
+  --card-icon-size: calc(var(--card-size) / 1.25);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  padding: 2rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background: rgb(255, 172, 246);
+    background: linear-gradient(150deg, rgba(255, 172, 246, 1) 0%, rgba(64, 160, 177, 1) 100%);
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

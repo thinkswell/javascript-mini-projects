@@ -1,0 +1,102 @@
+@import "assets/scss/variables";
+@media screen and (min-width: 992px) {
+  .container {
+    margin: 0 10%;
+  }
+}
+.row {
+  display: block;
+
+  .col-md-2,
+  .col-lg-2 {
+    display: inline-block;
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  .col-lg-3,
+  .col-md-3,
+  .col-sm-3 {
+    display: inline-block;
+    width: 33.333%;
+    box-sizing: border-box;
+  }
+
+  .col-md-4,
+  .col-lg-4 {
+    display: inline-block;
+    width: 25%;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 992px) {
+  .row {
+    display: block;
+
+    .col-md-2 {
+      display: inline-block;
+      width: 50%;
+      box-sizing: border-box;
+    }
+  }
+  .container {
+    margin: 0 10%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 0%;
+  }
+  .row {
+    display: block;
+
+    .col-lg-3,
+    .col-lg-2,
+    .col-md-2,
+    .col-md-3,
+    .col-sm-2 {
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+.m-10 {
+  margin: 10px;
+}
+
+.btn {
+    font-size: 20px;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+
+    &-primary {
+      background-color: $primaryBgColor;
+      color: $primaryTextColor;
+      border: 1px solid $primaryBgColor;
+    }
+
+    &-default {
+      background-color: #ccc;
+      color: rgba(0, 0, 0, 0.5);
+      border: 1px solid #a2a2a2;
+    }
+    &-warning {
+      background-color: $warnBgColor;
+      color: $warnTextColor;
+      border: 1px solid #a2a2a2;
+    }
+  }

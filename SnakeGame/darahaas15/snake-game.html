@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Snake Game - darahaas15</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="score">0</div>
+    <canvas id="snakecanvas" width="400" height="400"></canvas>
+    <button class="restartButton btn-outline-dark" onClick="window.location.reload();"> Restart</button>
+
+    <style>
+        body {
+            background: #fffde7;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #snakecanvas {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .restartButton {
+            position: relative;
+            background: #fffde7;
+            display: flex;
+            margin-left: 47.5%;
+        }
+
+        #score {
+            text-align: center;
+            font-size: 140px;
+        }
+
+        .footer {
+            padding-top: 10px;
+        }
+    </style>
+</body>
+
+<script src="./snake-game.js" type="module"></script>
+<footer class="footer text-center">
+
+    <div class="text-muted" style="font-size: small;">
+        <span>&copy; Snake Game made by darahaas15 for hacktoberfest 2021</span>
+    </div>
+
+</footer>
+
+</html>
