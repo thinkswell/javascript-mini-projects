@@ -1,0 +1,34 @@
+@import "../../assets/scss/variables.scss";
+nav.navbar {
+  background: $primaryBgColor;
+  align-items: center;
+  padding: 10px;
+  .navbar-brand {
+    a {
+      display: inline-flex;
+      justify-content: left;
+      align-items: center;
+      text-decoration: none;
+      font-size: 36px;
+      color: $primaryTextColor
+    }
+  }
+  img.navbar-logo {
+    height: 36px;
+    border-radius: 3px;
+    margin-right: 10px;
+    background-color: #fff;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .m-lg-10 {
+    margin: 0 10%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .m-lg-10 {
+    margin: 0;
+  }
+}

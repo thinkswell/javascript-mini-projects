@@ -1,0 +1,43 @@
+.layout {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background: linear-gradient(white, gray);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button {
+  margin: 20px 10px 20px 10px;
+  height: 40px;
+  width: 120px;
+  text-align: center;
+  background: linear-gradient(white, gray);
+  overflow: hidden;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 300px;
+  min-width: 200px;
+  align-items: center;
+}
+
+.rangeInput {
+  max-width: 300px;
+  min-width: 200px;
+}
+
+.guessNumberWrapper {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
