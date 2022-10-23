@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;600&display=swap');
+
+* {
+  font-family: 'Raleway', sans-serif;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F9F2ED;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 75px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.container-input {
+  max-width: 400px;
+  margin: 14px 0;
+}
+
+.container-input span {
+  font-size: 22px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  border-radius: 10px;
+  background: #DFDFDD;
+  height: 20px;
+  outline: none;
+  margin-top: 17px;
+}
+
+fieldset {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+
+.options{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input{
+  width: 60px;
+}
+
+.button-action {
+  height: 45px;
+  margin-top: 10px;
+  border: 0;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.container-password {
+  max-width: 450px;
+  margin: 14px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+  color: black;
+  font-size: 25px;
+  margin-top: 22px;
+  margin-bottom: 8px;
+}
+
+.password {
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: 1px solid #313131;
+  transition: transform 0.5s;
+}
+
+.password:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+
+}
+
+.tooltip {
+  position: relative;
+  top: 20px;
+  padding: 6px 8px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 6px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.25s;
+}
+
+.container-password:hover .tooltip {
+  visibility: visible;
+  bottom: 30px;
+  opacity: 1;
+}
+
+.hide {
+  display: none;
+}
+
+.bold {
+  font-weight: bold;
+}
