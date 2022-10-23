@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    background-color: rgb(87, 180, 130);
+    transition: background-color 0.5s;
+    position: relative;
+}
+
+.field__name,
+.field__email,
+.field__password,
+.field__finish{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    height: 50px;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.field__name i,
+.field__email i,
+.field__password i,
+.field__finish i{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.field__name input,
+.field__email input,
+.field__password input{
+    background: none;
+    border: none;
+    outline: none;
+    height: 100%;
+    flex: 1;
+    font-size: 1.1rem;
+}
+
+div.inactive{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 50%);
+}
+
+div.active{
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes shake {
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50%{
+        transform: translate(-50%, -50%) rotate(10deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
