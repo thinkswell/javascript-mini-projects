@@ -1,0 +1,33 @@
+<!doctype HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Flashcards</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="menu">
+      <table>
+        <tr>
+          <td id="learn" onclick="switchTab(0)">Learn</td>
+          <td id="manage" onclick="switchTab(1)">Manage</td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="content">
+      <h1>Welcome to Flashcards</h1>
+
+      <p>Click on 'manage' tab to add new flashcards</p>
+      <p>Click on 'learn' tab to use your flashcards. Click on flashcard to flip it. Remember that you have to add some flashcard beforehand.</p>
+    </div>
+
+    <div id="shade">
+      <div id="window">
+        <button onclick="hideWindow();">Hide window</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

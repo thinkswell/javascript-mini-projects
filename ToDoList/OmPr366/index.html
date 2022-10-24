@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do By OP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    <style>
+        
+       
+
+    </style>
+</head>
+
+<body>
+    <!-- Nav BAr -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">OPNotes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <input id="searchTxt" class="form-control me-2" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <button class="btn btn-outline-success " type="submit">Search</button>
+
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- //Selct
+         BAck Ground -->
+
+
+    <div class="container my-3 ">
+        <h1 class="mainHead ">Welcome To OP To Do</h1>
+        <div class="card" ">
+            <div class=" card-body">
+            <h5 class="card-title">Title</h5>
+            <form action="">
+                <div class="mb-3">
+                    <textarea class="form-control" id="addTitle" rows="1" placeholder="Enter Title"
+                        required>Title</textarea>
+                </div>
+                <h5 class="card-title">Content</h5>
+                <div class="mb-3">
+                    <textarea class="form-control" id="addTxt" rows="3" placeholder="Notes" required></textarea>
+                </div>
+                <select id="mySelector">
+                    <option value="0" selected>Select Background</option>
+                    <option value="1" id="pink">pink</option>
+                    <option value="2" id="Red">Red</option>
+                    <option value="3" id="Green">Green</option>
+                    <option value="4" id="yellowgreen">yellowgreen</option>
+                </select>
+                <br>
+                <a href="#" class="btn btn-primary" id="addBtn">Add New</a>
+            </form>
+        </div>
+
+    </div>
+    <hr>
+    <p class="allNotes">All Notes</p>
+    <hr>
+    <div id="allNotes" class="row container-fluid">
+
+
+    </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+</body>
+<script src="script.js"></script>
+
+</html>

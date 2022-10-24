@@ -1,0 +1,80 @@
+.img {
+    background-image: url('./bg.jpg');
+    height: 100vh;
+}
+
+.topic {
+    font-family: "Trebuchet MS";
+    font-size: 3rem;
+    text-shadow: 1px 1px 1px rgb(12, 102, 129),
+                3px 3px 2px rgb(55, 245, 245);
+    text-align: center;
+    font-weight: bold;
+    color: #e7f3fe;
+
+}
+
+.play-again {
+    margin: auto;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    width: 200px;  
+    height: 50px;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+}
+
+.attempts-left {
+    display: flex;
+    margin: auto;
+    padding: 5px;
+    margin-right: 15px;
+    justify-content: center;  
+    align-items: center;  
+    margin-bottom: 2px;
+    width: 250px;  
+    height: 50px;  
+    color: white;
+    background-color: #f5904d;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;  
+    align-items: center;
+}
+  
+.card {
+    box-shadow: 2px 2px 2px 0 #aaa;
+    cursor: pointer;
+    position: relative;
+    margin: 2px;
+    font-family: "Trebuchet MS";
+}
+
+.hints {
+    color: #e7f3fe;
+}
+.danger {
+    background-color: #d85151;
+    border-left: 10px solid #e7f3fe;
+    height: 50px; 
+    margin-top: 10px;
+}
+
+.success {
+    background-color: #04AA6D;
+    border-left: 10px solid #e7f3fe;
+    height: 50px; 
+    margin-top: 10px;
+}
+
+.info {
+    background-color: #2196F3;
+    border-left: 6px solid #e7f3fe;
+    height: 50px; 
+    margin-top: 10px;
+}

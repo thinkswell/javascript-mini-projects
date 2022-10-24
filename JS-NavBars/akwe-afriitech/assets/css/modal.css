@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+}
+.header {
+  display: flex;
+  background-color: rgb(1, 174, 174);
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+}
+.header1 {
+  flex: 50%;
+  display: grid;
+  place-items: center;
+}
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(231, 248, 251);
+  z-index: 3;
+  transition-duration: 1s;
+  transform: translateY(-100%);
+}
+.btnsec {
+  margin-top: 2vh;
+  margin-bottom: 10vh;
+}
+.li {
+  list-style: none;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+li:hover {
+  background-color: aliceblue;
+}
+.alinks {
+  text-decoration: none;
+  color: rgb(1, 156, 156);
+}
+.appear {
+  transition-duration: 1s;
+  transform: translateY(0);
+}
+.fa-close {
+  color: red;
+  font-size: 7vw;
+}
+.closebtn {
+  border-radius: 100%;
+  background-color: transparent;
+}

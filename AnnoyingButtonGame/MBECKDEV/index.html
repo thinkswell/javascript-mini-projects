@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Annoying Button Game</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="#" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header><h1>Annoying Button Game</h1></header>
+    <main>
+      <div id="game-area">
+        <div id="game-info">
+          <p>Click the correct button</p>
+          <p id="highscore-container" class="hidden">
+            Highscore: <span id="high-score-seconds"></span> seconds left
+          </p>
+          <p id="win-lose-message"></p>
+          <div id="countdown-timer-container" class="hidden">
+            <span id="countdown-timer"></span> seconds left
+          </div>
+          <div id="start-button-container">
+            <button id="button-start-or-play-again">Start</button>
+          </div>
+        </div>
+        <div id="buttons-area"></div>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

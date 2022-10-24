@@ -1,0 +1,62 @@
+/* General Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #f1fcee;
+}
+
+/* Content styles */
+
+h2 {
+  font-size: 4.5rem;
+  font-weight: bold;
+  padding: 2rem;
+  color: #1d3557;
+}
+
+.coming-soon {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.day,
+.hour,
+.min,
+.sec {
+  font-size: 3rem;
+  color: #457b9d;
+}
+
+.waiting {
+  height: 50vh;
+  margin-top: 20px;
+}
+
+.p-tag {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  right: 0;
+  bottom: 0;
+}
+
+.p-tag a {
+  text-decoration: none;
+  cursor: pointer;
+  color: rgb(255, 82, 111);
+}

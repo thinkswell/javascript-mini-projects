@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ToDo List</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div id="app" class="container">
+      <div class="todo-add-task">
+        <button class="todo-delete-task-btn" disabled>Delete</button>
+        <button class="todo-add-task-btn">
+          <span>Add</span>
+          <span class="todo-add-task-btn--icon">
+            <svg
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+              ></path>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="todo-list"></div>
+      <div class="todo-add-box">
+        <input
+          type="text"
+          class="todo-add-title"
+          placeholder="Enter title here"
+        />
+        <textarea
+          class="todo-textarea--input"
+          rows="6"
+          placeholder="Write something here(min 10)..."
+        ></textarea>
+        <select class="todo-add-select-badge">
+          <option>🎨 Design</option>
+          <option>💰 Marketing</option>
+          <option>🎨 Design</option>
+        </select>
+        <div class="todo-submit-btn-container">
+          <button class="todo-btn--cancel todo-btn">Cancel</button>
+          <button class="todo-btn--add todo-btn" disabled>Add</button>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

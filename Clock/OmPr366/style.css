@@ -1,0 +1,56 @@
+body {
+    /* background-color: rgb(119, 129, 219);*/
+    background-image: url(img/wall.jpg);
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.clockBox {
+    position: relative;
+    margin: auto;
+    /* border-color: linear-gradient(#14ffe9, #ffeb3b, #ff00e0); */
+    height: 40vw;
+    width: 40vw;
+    border-radius: 50%;
+    background: url(img/kisspng-social-media-marketing-time-management-clock-clock-without-hands-5a87ba8f81de81.570464611518844559532.png) no-repeat;
+    background-size: 100%;
+}
+
+#hr,
+#min,
+#sec {
+    position: absolute;
+    background: #000;
+    border-radius: 5px;
+    transform-origin: bottom;
+}
+
+#hr {
+    height: 19%;
+    width: 1.8%;
+    top: 31%;
+    left: 48.86%;
+    opacity: 0.8;
+    /* display: none; */
+}
+
+
+
+#min {
+    height: 27%;
+    width: 1.7%;
+    top: 23%;
+    left: 48.79%;
+    opacity: 0.8;
+}
+
+#sec {
+    height: 37%;
+    width: 1%;
+    top: 13%;
+    left: 49.2%;
+    opacity: 0.8;
+    background-color: rgb(235, 12, 12);
+    /* display: none; */
+}

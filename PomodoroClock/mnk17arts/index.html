@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!----------------jquery------------------->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!----------------ICONS--------------------> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!---------------PAGE ICON-------------------> 
+  <link rel="icon" href="https://assets.codepen.io/5987189/internal/avatars/users/default.png?fit=crop&format=auto&height=80&version=1617549988&width=80" type="image/png" sizes="16x16">
+  <title>mnk17arts' Pomodoro Clock</title>
+  <!---------------EXTERNAL CSS N JS FILES----->
+  <link rel="stylesheet" href="./styles/index.processed.css" />
+  <script type="module" src="./scripts/index.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div id="i-main">
+      <div id="i-title">
+    <h1 style="font-family:candara;text-align:center;color:white;" title="mnk17arts' Pomodoro Clock"> 
+      <img src="https://user-images.githubusercontent.com/71878747/117575481-a8cba700-b0ff-11eb-988d-0bf5a583ddc2.png"
+           height=40px width=50px style="background:#fff;border-radius:50%;vertical-align:middle"/>   
+      mnk17arts' Pomodoro Clock</h1>
+  </div>
+      <div id='i-app'>
+        <div id="app-title"><!--@mnk17arts--></div>
+        <div id="i-screen">
+          <div id="screen">
+            <div id="timer-label">Session Time</div>
+            <div id="time-left">
+              25:00
+            </div>
+            <audio id="beep"     src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"></audio>
+          </div>
+          <div id="screen-controls">
+            <div id="stop"></div>
+            <div id="start_stop" class="">
+              <i class="fa fa-play" title="play"></i>
+              <i class="fa fa-pause" title="pause"></i>               
+            </div>
+            <div id="reset"><i class="fa fa-refresh" title="reset"></i></div>
+          </div>
+        </div>
+        <div id="i-controls">
+          <div id="i-break">
+            <div id="break">
+              <span id="break-decrement" class="fa fa-minus" title="decrease 1 min"></span>
+              <div id="break-length">5</div>
+              <span id="break-increment" class="fa fa-plus" title="increase 1 min"></span>
+            </div>
+            <div id="break-label"> Break Length</div>
+          </div>
+          <div id="i-session">
+            <div id="session">
+              <span id="session-decrement" class="fa fa-minus" title="decrease 1 min"></span>
+              <div id="session-length">25</div>
+              <span id="session-increment" class="fa fa-plus" title="increase 1 min"></span>
+            </div>
+            <div id="session-label"> Session Length</div>            
+          </div>
+        </div>
+      </div>
+      <div id="footer" style="color:white;">made with <span class="fa fa-heart" style="color:#000"></span> by <a href="https://mnk17arts.github.io/">mnk17arts</a></div>
+  </div>
+</body>
+</html>  

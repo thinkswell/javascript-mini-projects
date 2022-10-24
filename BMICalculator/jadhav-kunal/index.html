@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <div class="container">
+    <h1>BMI Calculator</h1>
+    <form>
+    <p class="units"><label>Units: </label><select type="select" id="units">
+      <option>Metric</option>
+      <option>Imperial</option>
+    </select></p>
+    <p><label id="height-label">Height in CM: </label><input type="text" name="height" id="height"></p>
+    <p><label id="weight-label">Weight in KG: </label><input type="text" name="weight" id="weight"></p>
+    <button type="submit">Calculate</button>
+    <div id="results"></div>
+    <div id="weight-guide">
+    <h3>BMI Weight Guide</h3>
+    <p>Under Weight = Less than 18.6</p>
+    <p>Normal Range = 18.6 and 24.9</p>
+    <p>Overweight = Greater than 24.9</p>
+    </div>
+    </form>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

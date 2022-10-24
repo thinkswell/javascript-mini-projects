@@ -1,0 +1,129 @@
+body{
+    font-family: 'Arial Unicode MS', sans-serif;
+    margin: 0;
+}
+
+.main-header{
+    font-family: 'Ubuntu', sans-serif;
+    background-color:#0E0C0A;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+}
+
+.text-section{
+    margin: 50px auto auto auto; /* place center */
+    max-width: 750px;
+    background-color: #E1DFDD;
+    padding: 15px;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 10px;
+    box-shadow:  0 0 15px black;
+}
+.text-section p{
+    margin: 0;
+}
+
+.text-area-section{
+    text-align: center;
+}
+.text-area-div{
+    margin: auto; /* place center */
+    max-width: 750px;
+}
+
+#text-area{
+    border: 10px solid gray;
+    border-radius: 20px;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+#text-area:focus{
+    outline: none;
+}
+
+.result-section {
+    margin-bottom: 20px;
+}
+
+.result-section-div{
+    margin: 0 auto; /* place center */
+    max-width: 750px;
+}
+
+.result-section-div span{
+    font-size: 50px;
+}
+
+.result-section-div button{
+    background-color: orangered;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 4px;
+    float: right;
+    box-shadow:  0 0 15px black;
+}
+
+.result-section-div button:hover{
+    background-color: red;
+}
+
+.timer{
+    font-family: "Old English Text MT",sans-serif;
+}
+#minutes,#seconds{
+    font-size: 60px;
+    font-family: "Arial Unicode MS",sans-serif;
+    text-shadow: 2px 2px green;
+}
+
+.cong-section{
+    margin: auto; /* place center */
+    max-width: 750px;
+    background-color: seagreen;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 35px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px black;
+    display: none; /* to hide this */
+}
+
+.cong-section-div p{
+    margin: 0;
+}
+
+.cong-section-div{
+    margin: 0 auto; /* place center */
+    max-width: 750px;
+}
+
+footer{
+    background-color: #0E0C0A;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: 10px;
+
+}
+
+footer small{
+    color: orangered;
+}
+
+#minutes , #seconds{
+    color: red;
+}

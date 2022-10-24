@@ -1,0 +1,16 @@
+{
+  "name": "dadjokegenerator",
+  "version": "1.0.0",
+  "description": "dad joke generator",
+  "main": "app.js",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "humbl3man",
+  "license": "ISC",
+  "dependencies": {
+    "snowpack": "^3.8.8"
+  }
+}

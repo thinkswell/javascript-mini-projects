@@ -1,0 +1,46 @@
+@import "../../assets/scss/variables";
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .img-container
+    img {
+        margin-top: 50px;
+        max-width: 300px;
+        border-radius: 10%;
+        background-color: #fff;
+  }
+
+  .formGroup {
+      padding-top: 20px;
+    .formControl {
+      font-size: 20px;
+      padding: 7px;
+      border: 1px solid #a2a2a2;
+      border-radius: 7px 0px 0px 7px;
+      border-right: 0px;
+      width: 300px;
+    }
+  }
+
+  .btn {
+    font-size: 20px;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 0px 7px 7px 0px;
+
+    &-primary {
+      background-color: $primaryBgColor;
+      color: $primaryTextColor;
+      border: 1px solid #05555e;
+    }
+
+    &-default {
+      background-color: #ccc;
+      color: rgba(0, 0, 0, 0.5);
+      border: 1px solid #a2a2a2;
+    }
+  }
+}

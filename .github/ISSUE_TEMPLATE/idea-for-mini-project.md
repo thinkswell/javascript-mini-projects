@@ -25,8 +25,8 @@ assignees: ''
 
 ------------------------------------------
 
-Any number of people can work in a single issue,
-This issue is open for all.
+Any number of people can work on a single issue,
+This issue is open to all.
 
 Project location 👉🏻 {AppName}/Username/
 ---

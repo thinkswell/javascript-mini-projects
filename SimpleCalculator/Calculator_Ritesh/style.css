@@ -1,0 +1,86 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  .flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .center{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  body {
+    background-color:#f2f4f8;
+  }
+  .container{
+    max-width:1000px;
+    width: 60%;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    border: 0.4rem solid rgba(0, 0, 0, 0.651);
+  }
+  .header{
+    font-size: 3rem;
+  }
+
+  .result{
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.877);
+    font-size: 2.5rem;
+    text-align: right;
+    padding: 1rem 1.8rem;
+    border-radius: 0.6rem;
+    width: 100%;
+  }
+  .operator{
+    background-color:#710133;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 0.6rem;
+    padding: 2rem;
+    width: 23%;
+    text-align: center;
+    margin: 0.8rem 0;
+  }
+  .num-container{
+    width:75%;
+  }
+  .num, .clear{
+    background-color:#cfcfcf;
+    color: #000;
+    font-size: 2rem;
+    border-radius: 0.6rem;
+    padding: 2rem;
+    width: 30%;
+    text-align: center;
+    margin: 0.8rem 0;
+  }
+  .clear{
+    background-color: #3d1b10;
+    color: #fff;
+  }
+  .equal{
+    background-color:#018080;
+    color: #000;
+    font-size: 2rem;
+    border-radius: 0.6rem;
+    padding: 14rem 0;
+    width: 23%;
+    margin: 0.8rem 0;
+  }
+
+  @media only screen and (max-width: 760px) {
+    .container{
+      max-width:7200px;
+    }
+  }

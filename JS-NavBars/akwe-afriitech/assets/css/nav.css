@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+}
+body {
+  background-color: rgba(39, 186, 186, 0.172);
+}
+/* header */
+.header {
+  background-color: rgb(39, 186, 186);
+}
+.header1 {
+  display: flex;
+  height: 6vh;
+}
+.logodiv {
+  flex: 20;
+}
+.desktopnav {
+  flex: 80%;
+  display: grid;
+  place-items: center;
+}
+.hamdiv {
+  display: none;
+}
+.desktoplinks {
+  text-decoration: none;
+  color: white;
+  margin-left: 2vw;
+  font-size: 1.5vw;
+}
+.header2 {
+  display: none;
+}
+.logo {
+  color: white;
+}
+.li {
+  list-style: none;
+  height: 8vh;
+  display: grid;
+  place-items: center;
+  margin-left: -3vw;
+}
+.li:hover {
+  background-color: rgb(88, 171, 144);
+}
+.alinks {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* MAIN */
+.main {
+  display: flex;
+}
+.container {
+  flex: 33%;
+  padding: 1.95vw;
+}
+.boxlink {
+  text-decoration: none;
+  color: black;
+}
+.modal,
+.sidebar,
+.bottomnav {
+  background-color: aliceblue;
+  border: 1px solid grey;
+}
+.cardtext {
+  margin: 1vw;
+}
+.cardtext p {
+  color: rgb(38, 77, 64);
+}
+@media (max-width: 680px) {
+  .desktopnav {
+    display: none;
+  }
+  .hamdiv {
+    display: block;
+    flex: 30%;
+    display: grid;
+    place-items: center;
+  }
+  .appear {
+    display: block;
+  }
+}

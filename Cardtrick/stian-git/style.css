@@ -1,0 +1,159 @@
+body {
+  background-color: #308834;
+  font-family: Helvetica, Verdana, serif;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main h2 {
+  font-size: 1em;
+  margin: 2em 0em;
+}
+button {
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.pileselection,
+.continueButton {
+  margin: 1em 0em;
+}
+.instructions {
+  font-size: 0.7em;
+}
+
+.changeCardsButton,
+.continueButton,
+.pileselection {
+  display: none;
+}
+
+.allcards {
+  text-align: center;
+}
+.allcards img {
+  height: 7em;
+  margin: 0px 5px;
+}
+
+main .piles {
+  display: inline-flex;
+  text-align: center;
+}
+
+.cardpiles {
+  height: 7em;
+  margin: 2px;
+}
+
+.newrow {
+  position: relative;
+  top: -3em;
+}
+
+.correctCard {
+  margin: 2em;
+}
+.newCardLine {
+  display: none;
+}
+
+footer {
+  font-size: 0.7em;
+  margin-top: auto;
+}
+footer a {
+  color: white;
+}
+
+@media only screen and (min-width: 396px) {
+  .allcards img {
+    height: 9em;
+    margin: 3px 5px;
+  }
+}
+
+@media only screen and (min-width: 488px) {
+  .allcards img {
+    height: 6em;
+    margin: 3px 3px;
+  }
+}
+
+@media only screen and (min-width: 634px) {
+  .allcards img {
+    height: 6em;
+    margin: 3px 3px;
+  }
+  .allcards {
+    max-width: 600px;
+  }
+  .instructions {
+    font-size: 1em;
+    line-height: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 784px) {
+  .allcards img {
+    height: 9em;
+    margin: 3px 3px;
+  }
+  .allcards {
+    max-width: 850px;
+  }
+}
+
+@media only screen and (min-width: 795px) {
+  .newCardLine {
+    display: flex;
+  }
+  .cardpiles {
+    height: 6em;
+    margin: 3px;
+  }
+  .piles div {
+    padding: 0px 0.3em 0px 0em;
+  }
+}
+@media only screen and (min-width: 990px) {
+  .piles div {
+    padding: 0px 0.5em 0px 0.3em;
+  }
+  .newCardLine {
+    display: flex;
+  }
+  .cardpiles {
+    height: 8em;
+    margin: 3px;
+  }
+
+  .allcards img {
+    height: 10em;
+    margin: 3px 3px;
+  }
+  .allcards {
+    max-width: 1000px;
+  }
+}
+@media only screen and (min-width: 1245px) {
+  .allcards img {
+    height: 11em;
+    margin: 3px 3px;
+  }
+}
+@media only screen and (min-width: 1315px) {
+  .newCardLine {
+    display: flex;
+  }
+  .cardpiles {
+    height: 10em;
+    margin: 5px;
+  }
+  .allcards {
+    max-width: 1000px;
+  }
+}

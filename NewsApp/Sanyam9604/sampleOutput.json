@@ -1,0 +1,32 @@
+{
+    "status": "ok",
+    "totalResults": 38,
+    "articles": [
+        {
+            "source": {
+                "id": "the-times-of-india",
+                "name": "The Times of India"
+            },
+            "author": "TIMESOFINDIA.COM",
+            "title": "If you take this medicine wear the mask even after the COVID vaccination - Times of India",
+            "description": "As per the recent directives of the Centers for Disease Control and Prevention (CDC), people who take immunosuppressants should keep their masks on when out in public spaces.",
+            "url": "https://timesofindia.indiatimes.com/life-style/health-fitness/health-news/if-you-take-this-medicine-wear-the-mask-even-after-the-covid-vaccination/photostory/85925745.cms",
+            "urlToImage": "https://static.toiimg.com/photo/85925783.cms",
+            "publishedAt": "2021-09-05T10:30:00Z",
+            "content": "There is no alternative to cut down the risk of infection except following the COVID-19 regulatory norms. Even after getting two doses of COVID shot, a person is still at the risk of developing a res… [+452 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Livemint"
+            },
+            "author": "Livemint",
+            "title": "Android phone alarm didn't go off? New bug in Google Clock may be the reason. How to fix - Mint",
+            "description": "While many users who registered the complaint against Google Clock were using Pixel devices, even owners of other smartphone manufacturers have made a similar complaint",
+            "url": "https://www.livemint.com/technology/apps/android-phone-alarm-didn-t-go-off-new-bug-in-google-clock-may-be-the-reason-how-to-fix-11630832831498.html",
+            "urlToImage": "https://images.livemint.com/img/2021/09/05/600x338/Google_Clock_1630836398409_1630836417285.PNG",
+            "publishedAt": "2021-09-05T10:10:23Z",
+            "content": "Android users are reporting some erratic behaviour with the alarms set using Google Clock. Many users have raised complaints via reviews on the Google Play Store, bringing down the overall rating of … [+1408 chars]"
+        }
+    ]
+}
