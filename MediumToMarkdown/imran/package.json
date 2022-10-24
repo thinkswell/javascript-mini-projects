@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "medium-2-md": "^0.6.2",
+    "medium-to-markdown": "^0.0.3",
+    "mediumexporter": "^0.1.6"
+  }
+}
