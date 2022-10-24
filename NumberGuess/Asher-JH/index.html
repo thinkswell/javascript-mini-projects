@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guessing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="card mb-1 title">Number Guessing</div>
+      <div class="card mb-1">
+        <div class="scores-text">
+          Total Count: <span id="total-count">0</span>
+        </div>
+        <div class="scores-text">
+          Total Wins: <span id="total-wins">0</span>
+        </div>
+
+        <div class="form-container">
+          <div class="answer-container">
+            <div id="answer">?</div>
+          </div>
+
+          <form id="number-guess-form">
+            <div class="number-input">
+              <input name="number" id="number-input" type="text" placeholder="?" />
+            </div>
+            <button class="btn" type="submit">Guess</button>
+          </form>
+        </div>
+
+        <div id="result-text"></div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

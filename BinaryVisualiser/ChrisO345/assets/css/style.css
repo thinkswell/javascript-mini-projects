@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
+
+#bin {
+  background: blue;
+}
+#hex {
+  background: fuchsia;
+}
+#dec {
+  background: yellow;
+}
+table, th, td {
+  border: 5px inset black;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 50pt;
+  font-family: 'Balsamiq Sans', cursive;
+  color: white;
+  font-weight: 400;
+}
+.header {
+  color: black;
+  font-weight: 700;
+  font-family: 'Balsamiq Sans', cursive;
+  text-align: center;
+  width: 100px;
+}
