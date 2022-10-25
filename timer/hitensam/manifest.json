@@ -1,0 +1,11 @@
+{
+    "name": "Timer",
+    "version": "1.0.0",
+    "description": "It's a timer!!",
+    "manifest_version": 3,
+    "author": "Hiten Samalia",
+    "action":{
+        "default_popup": "timer.html",
+        "default_title": "Timer"
+    }
+}
