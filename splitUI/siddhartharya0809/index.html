@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Split Screen UI</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="splitview skewed">
+    <div class="panel bottom">
+      <div class="content">
+        <div class="description">
+          <h1>The Original Image.</h1>
+          <p>Ths is how the image looks like before applying a duotone effect.</p>
+        </div>
+
+        <img src="images/original.jpg" alt="Original">
+      </div>
+    </div>
+
+    <div class="panel top">
+      <div class="content">
+        <div class="description">
+          <h1>The duotone image.</h1>
+          <p>This is how the image looks like after applying a duotone effect</p>
+        </div>
+        <img src="images/duotoned.jpg" alt="Duotone">
+      </div>
+    </div>
+
+    <div class="handle"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
