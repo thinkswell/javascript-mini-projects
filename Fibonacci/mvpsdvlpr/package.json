@@ -1,0 +1,14 @@
+{
+  "name": "mvpsdvlpr",
+  "version": "1.0.0",
+  "description": "Find a fibonaccio sequence number",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
