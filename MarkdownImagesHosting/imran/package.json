@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "firebase": "^9.10.0"
+  },
+  "type": "module",
+  "name": "imagehosting",
+  "version": "1.0.0",
+  "description": "parsing markdown to host images",
+  "main": "reader.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node src/parser.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "parser"
+  ],
+  "author": "imran",
+  "license": "ISC"
+}
