@@ -1,0 +1,111 @@
+/* Knockout Pink (#FF3EA5FF), Safety Yellow (#EDFF00FF) and Out of the Blue (#00A4CCFF) */
+/* Island Green (#2BAE66FF) and White (#FCF6F5FF) */
+
+:root {
+  --green: #2BAE66FF;
+  --white: #FCF6F5FF;
+  --pink: #FF5959;
+}
+
+body {
+  background-color: var(--green);
+}
+
+h1 {
+  font-size: 55px;
+  color: var(--white);
+  text-shadow: 3px 3px 5px #000;
+  text-align: center;
+  margin-top: 30px;
+  padding-bottom: 50px;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  width: 73.5%;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 170px;
+}
+
+h2 {
+  color: var(--white);
+  text-shadow: 2px 2px 2px #000;
+  font-size: 33px;
+  text-decoration: underline var(--white);
+  align-self: flex-start;
+}
+
+button {
+  font-size: 25px;
+  padding: 5px 0;
+  border-radius: 7px;
+  border: 2px solid var(--white);
+  background-color: var(--green);
+  color: var(--white);
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+button:hover {
+  background-color: var(--pink);
+}
+
+.color-choices {
+  width: 164px;
+  height: 200px;
+  margin-top: -35px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 3px solid var(--white);
+  border-left: 3px solid var(--white);
+  border-right: 3px solid var(--white);
+  border-radius: 7px;
+}
+
+.color-choices button {
+  width: 170px;
+  font-size: 18px;
+  border-radius: 0;
+  background-color: var(--pink);
+  margin: 1px 0;
+}
+
+.color-choices button:hover {
+  color: #000;
+}
+
+.color-choices input {
+  width: 154px;
+  height: 40px;
+}
+
+.color-choices label {
+  margin-top: 23px;
+  width: 160px;
+  text-shadow: 2px 2px 2px #000;
+  color: var(--white);
+  font-size: 20px;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  background-color: var(--white);
+  border: 3px solid #000;
+  display: grid;
+}
+
+p {
+  text-align: center;
+  color: var(--white);
+  font-size: 30px;
+  text-shadow: 2px 2px 2px #000;
+  padding-top: 10px;
+}
