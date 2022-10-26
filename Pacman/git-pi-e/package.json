@@ -1,0 +1,19 @@
+{
+  "name": "pacmanjs",
+  "author": "git-pi-e",
+  "version": "1.0.0",
+  "description": "A Pacman game implemented using Vanilla Javascript",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@parcel/transformer-sass": "^2.4.1",
+    "parcel": "latest"
+  }
+}
