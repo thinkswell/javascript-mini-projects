@@ -1,0 +1,55 @@
+@import '../../assets/scss/variables';
+
+.repo {
+    text-align: center;
+    vertical-align: auto;
+    .card {
+        a {
+            text-decoration: none;
+            color: $primaryBgColor;
+            overflow-wrap: anywhere;
+        }
+    }
+    .owner-avatar {
+        img {
+            max-height: 100%;
+            width: 100%;
+        }
+    }
+    .center {
+        text-align: center;
+    }
+
+    .issue-list {
+        vertical-align: top;
+        a {
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 3px;
+            padding: 2px;
+            margin: 2px;
+            background-color: $primaryBgColor;
+            color: $primaryTextColor;
+        }
+        a.open {
+            background-color: $warnBgColor;
+            color: $warnTextColor;
+        }
+        a.closed {
+            background-color: $successBgColor;
+            color: $successTextColor;
+        }
+        .alert {
+            background-color: $warnBgColor;
+            display: inline-block;
+            padding: 7px;
+            border-radius: 5px;
+            color: $warnTextColor;
+            margin: 5px;
+        }
+    }
+}
+
+.strong {
+    font-weight: bold;
+}
