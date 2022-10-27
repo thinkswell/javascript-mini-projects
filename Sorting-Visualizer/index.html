@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Sorting Visualiser</title>
+  </head>
+  <body>
+    <div class="sidenav">
+      <center><b><h4>Algorithms</h4></b><center>	
+      <a href="#" id="quick-sort">Quick Sort</a>
+      <a href="#" id="bubble-sort">Bubble Sort</a>
+      <a href="#" id="selection-sort">Selection Sort</a>
+      <a href="#" id="linear-sort">Linear Sort</a>
+      <br>
+      <center><b><h4>Speed</h4></b><center>
+      <input id='speed'  type="range" min="1" max="10" value="5" class="slider" id="myRange">
+      <br>
+      <button id="start" onclick="start()" >Run</button>   
+    </div>
+    <nav  style="background: #324ca8;">
+      <a  href="#" class="title">Sorting Visualiser</a>
+      <a style ="margin-left: 30%; margin-right:8%" href="#" class="title" id="title">Algorithm</a>
+    
+        &nbsp;&nbsp;
+        <b>Size of Array to Generate</b> &nbsp;&nbsp; &nbsp;
+        <input  type="text" placeholder="10" id="noe"  maxlength="2" size="2" >
+       &nbsp; &nbsp; <button id="gen-new" onclick="generateNumbers()">Randomize Array</button>
+    </nav>
+
+    <div class="main">
+      <div id="element">
+    </div>	
+    <footer>
+      <p><h6>&nbsp;&nbsp;Author: Akshat Jaiswal<br></h6></p>
+    </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script  src="script.js"></script>
+  </body>
+</html>
