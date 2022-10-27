@@ -1,0 +1,51 @@
+.footer {
+    width: 100vw;
+    .attribution {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 11px;
+        color: white;
+        letter-spacing: 1px;
+        &:visited {
+            color: blue;
+        }
+    }
+    button {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        padding: 7px 25px;
+        border: 2px solid $HeaderOutline;
+        background-color: transparent;
+        color: white;
+        letter-spacing: 1px;
+        font-size: 1.2rem;
+        border-radius: 0.625rem;
+        &:hover {
+            background-color: rgba(21, 3, 3, 0.292);
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width:425px) {
+    .footer {
+        .attribution {
+            bottom: 0rem;
+            font-size: 8px;
+            width: 100%;
+            text-align: center;
+        }
+        button {
+            right: 9rem;
+        }
+    }
+}
+
+@media (max-height:670px) {
+    .footer button {
+        bottom: 0;
+    }
+}

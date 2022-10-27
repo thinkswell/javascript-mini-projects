@@ -1,0 +1,16 @@
+@mixin icons($icon-color) {
+    position: relative;
+    z-index: 10;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border: 1.5rem solid $icon-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: inset 0px 8px hsl(217deg 23% 66% / 55%), 0px 8px darken($color: $icon-color, $amount: 30);
+    img {
+        transform: scale(1.3);
+    }
+}
