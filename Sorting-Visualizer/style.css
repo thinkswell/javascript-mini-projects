@@ -1,0 +1,122 @@
+.title {
+  color: white;
+  size: 3em;
+}
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+.sidenav {
+  margin-top: 58px;
+  height: 100%;
+  width: 150px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow: scroll;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.bg-dark {
+  background: black;
+}
+html,
+body {
+  background: black;
+  color: white;
+  font-family: "Solway", serif;
+}
+h1 {
+  margin: auto;
+  margin-left: 15%;
+}
+button {
+  height: 100%;
+  background: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  padding: 10px;
+  margin-right: 1%;
+  color: black;
+  cursor: pointer;
+  font-family: "Solway", serif;
+}
+button:hover {
+  background: black;
+  color: white;
+  transition: 0.4s;
+}
+#gen-new {
+  margin-right: 3%;
+}
+
+.bar {
+  background: white;
+  width: 100%;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  position: relative;
+  margin: auto;
+  margin: 10px;
+  padding: 3px;
+  text-align: center;
+  font-family: "Solway", serif;
+}
+select {
+  font-family: "Solway", serif;
+  padding: 10px;
+  margin: 10px;
+  background: white;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.bar div {
+  border: 1px solid black;
+  position: relative;
+}
+.bar a {
+  display: block;
+  height: 15px;
+  font-size: 13px;
+  font-weight: bold;
+  color: black;
+}
+#element {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 5%;
+}
+.buttons {
+  margin: auto;
+}
