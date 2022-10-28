@@ -1,0 +1,89 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="maincontent">
+        <h1>Send us feedback</h1>
+        <div class="feedback-status">
+          <% if(locals.validationErrors){ %>
+          <div class="alert alert-danger">
+            <ul>
+              <% validationErrors.forEach(error => { %>
+              <li><%= error.msg %></li>
+              <% }); %>
+            </ul>
+          </div>
+          <% } else if(successMessage){ %>
+          <div class="alert alert-success">
+            <p><%= successMessage %></p>
+          </div>
+          <% } %>
+        </div>
+        <form class="feedback-form" method="post" action="/feedback">
+          <div class="form-group">
+            <label for="feedback-form-name">Name</label>
+            <input
+              type="text"
+              name="name"
+              class="form-control"
+              id="feedback-form-name"
+              placeholder="Enter your name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="feedback-form-email">E-Mail</label>
+            <input
+              type="text"
+              name="email"
+              class="form-control"
+              id="feedback-form-email"
+              placeholder="Enter your email address"
+            />
+          </div>
+          <div class="form-group">
+            <label for="feedback-form-title">Title</label>
+            <input
+              type="text"
+              name="title"
+              class="form-control"
+              id="feedback-form-title"
+              placeholder="Title of your feedback"
+            />
+          </div>
+          <div class="form-group">
+            <label for="feedback-form-message">Message</label>
+            <textarea
+              type="text"
+              name="message"
+              placeholder="Enter your message, then hit the submit button"
+              class="form-control"
+              id="feedback-form-message"
+              rows="6"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-secondary float-right">Submit</button>
+        </form>
+      </div>
+    </div>
+    <aside class="col-md-8">
+      <div class="maincontent feedback">
+        <h1>Recent Feedback</h1>
+
+        <div class="feedback-items">
+          <% feedbacks.forEach(feedback =>{ %>
+          <div class="feedback-item item-list media-list">
+            <div class="feedback-item media">
+              <div class="feedback-info media-body">
+                <div class="feedback-head">
+                  <div class="feedback-title"><%- feedback.title %></div>
+                  <small>by <%= feedback.name %></small>
+                </div>
+                <div class="feedback-message"><%= feedback.message %></div>
+              </div>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>

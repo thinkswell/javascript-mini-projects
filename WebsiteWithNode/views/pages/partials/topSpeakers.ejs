@@ -1,0 +1,24 @@
+<article class="speakerslist jumbotron d-none d-sm-block">
+  <div class="container">
+    <div class="row">
+      <% topSpeakers.forEach(speaker => { %>
+      <div class="col-md text-center">
+        <h4 class="speakerslist-title"><%= speaker.title %></h4>
+        <div class="speakerslist-name">
+          with
+          <a href="<%= speaker.shortname %>"><%= speaker.name %> </a>
+        </div>
+        <div class="speakerslist-info mt-2">
+          <a href="<%= speaker.shortname %>">
+            <img
+              class="speakerslist-img rounded-circle"
+              src="/images/speakers/<%= speaker.shortname %>_tn.jpg"
+              alt="Photo of Lorenzo Garcia"
+            />
+          </a>
+        </div>
+      </div>
+      <%});%>
+    </div>
+  </div>
+</article>
