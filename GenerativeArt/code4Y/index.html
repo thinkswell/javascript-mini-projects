@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rangoli Generative Art</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="canvas1"></canvas>
+    <div id="controls">
+        <button id="randomizeButton">Randomize!</button>
+        <div>
+            <input id="spread" type="range" min="-3.1" max="3.1" step="0.1" value="1">
+            <label for="spread">Spread: </label>
+        </div>
+        <div>
+            <input id="sides" type="range" min="2" max="15" step="1" value="5">
+            <label for="sides">Sides: </label>
+        </div>
+        <button id="resetButton">Reset</button>
+    </div> 
+
+    <script src="script.js"></script>
+
+</body>
+</html>
