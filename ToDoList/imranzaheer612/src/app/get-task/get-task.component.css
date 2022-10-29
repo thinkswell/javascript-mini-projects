@@ -1,0 +1,52 @@
+
+div {
+    margin: auto;
+}
+
+div *{
+    display: block;
+}
+
+div *{
+    color: rgb(0, 0, 0);
+    font-family: 'Courier New', Courier;
+}
+
+div textarea{
+    height: 150px;
+    width: 95%;
+    padding:10px;
+    border-radius: 7px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    font-size: 1.1rem;
+    margin-top: 50px;
+
+    box-shadow:
+    0 0.6px 9.7px -11px rgba(0, 0, 0, 0.08),
+    0 1.8px 26.9px -11px rgba(0, 0, 0, 0.115),
+    0 4.2px 64.8px -11px rgba(0, 0, 0, 0.15),
+    0 14px 215px -11px rgba(0, 0, 0, 0.23)
+  ;
+}
+
+div button {
+    height: 40px;
+    width: 120px;
+    position: relative;
+    top: -20px;
+    margin: auto;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(166, 180, 185);
+    color: white;
+}
+
+div button:hover {
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+}
+
+div button:active {
+    transform: scale(0.96);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
