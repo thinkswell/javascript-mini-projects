@@ -1,0 +1,53 @@
+.header {
+    display: flex;
+    max-width: 700px;
+    width: 100%;
+    margin: 3rem auto;
+    justify-content: space-between;
+    border: 4px solid $HeaderOutline;
+    border-radius: 1rem;
+    background: none;
+    &__titles {
+        display: flex;
+        flex-direction: column;
+        font-size: 2.5rem;
+        line-height: 0.8;
+        color: white;
+        margin: 2rem;
+    }
+    &__score {
+        background-color: white;
+        width: 150px;
+        text-align: center;
+        border-radius: 1rem;
+        padding: 1rem;
+        margin: 1rem;
+        span {
+            color: $ScoreText;
+            letter-spacing: 2px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        h1 {
+            color: $DarkText;
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+    .header {
+        transform: scale(0.8);
+        &__titles {
+            font-size: 2rem;
+        }
+        &__score {
+            width: 110px;
+            h1 {
+                font-size: 3rem;
+            }
+        }
+    }
+}
