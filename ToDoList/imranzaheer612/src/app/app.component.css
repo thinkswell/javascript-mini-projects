@@ -1,0 +1,14 @@
+h1 {
+    text-align: center;
+    font-family: 'Courier New', Courier;
+    font-size: 2rem;  
+    color: rgb(139, 102, 131);
+}
+
+div {
+    /* border: 2px solid black; */
+    width: 450px;
+    height: 100%;
+    margin: auto;
+    /* overflow: auto; */
+}

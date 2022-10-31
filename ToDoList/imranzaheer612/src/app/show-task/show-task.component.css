@@ -1,0 +1,72 @@
+div {
+    font-family: 'Courier New', Courier;
+    /* border: 2px solid black; */
+}
+
+.task {
+    height: auto;
+    width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+
+    /* background-color: whitesmoke; */
+    overflow: hidden;
+    /* margin-top: 10px; */
+    box-shadow:
+  0 5.4px 49.6px -11px rgba(0, 0, 0, 0.09),
+  0 43px 396px -11px rgba(0, 0, 0, 0.18)
+;
+}
+
+.text {
+    min-height: 50px;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    word-wrap: break-word;
+
+    background-color: rgba(209, 111, 201, 0.664);
+    box-shadow:
+    0 0.6px 9.7px -11px rgba(0, 0, 0, 0.08),
+    0 1.8px 26.9px -11px rgba(0, 0, 0, 0.115),
+    0 4.2px 64.8px -11px rgba(0, 0, 0, 0.15),
+    0 14px 215px -11px rgba(0, 0, 0, 0.23);
+
+}
+
+.task:hover {
+    box-shadow:
+  0 1.2px 3.8px -11px rgba(0, 0, 0, 0.152),
+  0 2.9px 9.2px -11px rgba(0, 0, 0, 0.218),
+  0 5.4px 17.3px -11px rgba(0, 0, 0, 0.27),
+  0 9.6px 30.8px -11px rgba(0, 0, 0, 0.322),
+  0 18px 57.7px -11px rgba(0, 0, 0, 0.388),
+  0 43px 138px -11px rgba(0, 0, 0, 0.54)
+;
+}
+
+button {
+    height: 40px;
+    width: 50px;
+    padding: 5px;
+    border-radius: 15px;
+    margin-right: 15px;
+    background-color: rgb(235, 27, 27);
+    font-size: 0.8rem;
+    color: white;
+    border: none;
+    float: right;
+    transform: translateY(-10px);
+
+}
+
+div button:hover {
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+}
+
+div button:active {
+    transform: scale(0.99);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}

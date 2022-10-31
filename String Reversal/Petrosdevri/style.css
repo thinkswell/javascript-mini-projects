@@ -1,0 +1,36 @@
+body {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: #253854;
+}
+
+.container {
+    width: 200px;
+    height: 150px;
+}
+
+h1 {
+    font-family: cursive;
+    color: orange;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+#str-reverse {
+    color: #ffffff;
+}
+
+input {
+    height: 20px;
+    margin-top: 3px;
+    padding: 2px;
+    background-color: #253854;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+}
+
+button {
+    height: 20px;
+    float: right;
+}

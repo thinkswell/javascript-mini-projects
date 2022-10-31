@@ -1,0 +1,144 @@
+.game {
+    display: flex;
+    margin: 1rem;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        margin: 2rem auto;
+    }
+    .image {
+        @include icons(black);
+        transform: scale(1.2);
+    }
+    .paper {
+        border-color: $Paper;
+    }
+    .scissors {
+        border-color: $Scissors;
+    }
+    .rock {
+        border-color: $Rock;
+    }
+    &__result {
+        margin: auto 3rem;
+        font-size: 1.5rem;
+    }
+    .play_again {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 50px;
+        background-color: white;
+        border-radius: 1rem;
+        a {
+            text-decoration: none;
+            color: $DarkText;
+            letter-spacing: 1px;
+            width: 100%;
+            font-size: 1.3rem;
+            &:hover {
+                color: red;
+            }
+        }
+    }
+    .winner {
+        position: relative;
+        z-index: -1;
+        box-shadow: inset 0px 8px hsl(217deg 23% 66% / 55%), 0px 8px black, 0px 0px 0 50px rgb(128 128 128 / 15%), 0px 0px 0 100px rgb(128 128 128 / 10%), 0px 0px 0 150px rgb(128 128 128 / 5%);
+    }
+    &__counter {
+        width: 200px;
+        height: 200px;
+        background-color: rgba(0, 0, 0, 0.382);
+        border-radius: 50%;
+        margin: 0 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 7rem;
+    }
+}
+
+@media (max-width:600px) and (min-width:425px) {
+    .game {
+        h1 {
+            font-weight: 100;
+            font-size: 1rem;
+            margin: 2rem auto;
+            position: absolute;
+            transform: translateY(10.6rem) translateX(3rem);
+            letter-spacing: 1px;
+        }
+        .image {
+            transform: scale(0.8);
+        }
+        &__pc h1 {
+            transform: translateY(10.59rem) translateX(1rem);
+        }
+        &__counter {
+            transform: scale(0.7);
+            font-size: 4rem;
+            margin: 0;
+        }
+    }
+}
+
+@media (min-width:425px) and (max-width:670px) {
+    .game {
+        &__result {
+            font-size: 1.3rem;
+            margin: auto 2rem;
+        }
+        .play_again {
+            width: 158px;
+            height: 40px;
+        }
+        &__user {
+            .image {
+                transform: translateY(25px);
+            }
+        }
+        &__pc {
+            .image {
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+@media (max-width:425px) {
+    .game {
+        h1 {
+            font-weight: 100;
+            font-size: 1rem;
+            margin: 2rem auto;
+            position: absolute;
+            transform: translateY(10.6rem) translateX(3rem);
+            letter-spacing: 1px;
+        }
+        .image {
+            transform: scale(0.8);
+        }
+        &__pc h1 {
+            transform: translateY(10.59rem) translateX(1rem);
+        }
+        &__counter {
+            transform: scale(0.7);
+            font-size: 4rem;
+            margin: 0;
+        }
+        &__result {
+            margin: auto 3rem;
+            font-size: 1.5rem;
+            position: absolute;
+            transform: translateY(260px) scale(0.8);
+            h1 {
+                transform: translate(80px, -90px);
+                font-size: 2rem;
+            }
+        }
+    }
+}

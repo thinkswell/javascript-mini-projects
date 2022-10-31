@@ -1,0 +1,6 @@
+<div class="container">  
+    <div class="task" *ngFor="let task of alltasks" #taskContainer>
+        <div class="text">{{task}}</div>
+        <button class="deleteTask" (click)="taskContainer.remove()">Del</button>
+    </div>
+</div>
