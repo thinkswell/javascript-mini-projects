@@ -1,0 +1,111 @@
+* {
+  font-family: 'Varela Round', sans-serif;
+}
+
+body {
+  background-color:hsl(230, 13%, 18%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+h1 {
+  font-size: 4em;
+  margin-bottom: 0;
+}
+
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px;
+  /* border: solid rgb(255, 0, 0) 1px; */
+}
+
+[square] {
+  border: solid black 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+[square=empty]:hover {
+  background-color:hsl(230, 10%, 35%);
+}
+
+.symbol {
+  font-size: 10em;
+  font-weight: bold;
+  user-select: none; /* Non-prefixed version, currently
+                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+[cor=red] {
+  color: red;
+}
+
+[cor=blue] {
+  color: blue;
+}
+
+.pontuacao {
+  display: flex;
+  flex-direction: row;
+  border: solid black 3px;
+  height: 50px;
+  width: 600px;
+  margin: 10px;
+}
+
+.pontuacao div{
+  flex-grow: 1;
+  border: solid red 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pontuacao div#vez {
+  flex-grow: 7;
+}
+
+#sq1 {
+  border-left: none;
+  border-top: none;
+}
+
+#sq2 {
+  border-top: none;
+}
+
+#sq3 {
+  border-right: none;
+  border-top: none;
+}
+
+#sq4 {
+  border-left: none;
+}
+
+#sq5 {
+
+}
+
+#sq6 {
+  border-right: none;
+}
+
+#sq7 {
+  border-left: none;
+  border-bottom: none;
+}
+
+#sq8 {
+  border-bottom: none;
+}
+
+#sq9 {
+  border-right: none;
+  border-bottom: none;
+}
