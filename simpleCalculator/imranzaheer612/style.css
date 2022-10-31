@@ -1,0 +1,96 @@
+/* 
+div {
+    border: 2px solid green;
+} */
+
+
+
+
+.keys {
+    height: 370px;
+}
+
+.screen {
+    height: 150px;
+    text-align: right;
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: snow;
+    /* padding: 10px; */
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    word-wrap: break-word;
+    /* background-color: rgb(223, 223, 223); */
+    /* background-color: rgba(163, 82, 163, 0.925); */
+    background-color: rgba(43, 187, 127, 0.842);
+
+}
+
+.cal_box {
+    width: 450px;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-collapse: separate;
+    overflow: hidden;
+    /* border: 2px solid pink; */
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0
+}
+
+button:hover {background-color: #868686a1}
+
+button:active {
+  background-color: #adaceb;
+  /* box-shadow: 0 5px #666; */
+  transform: translateY(1px);
+}
+
+
+.keys button {
+    border-radius: 35px;
+    margin: 5px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.num {
+    /* background-color: rgba(143, 192, 143, 0.822); */
+}
+
+#clear {
+    background-color: rgba(204, 55, 55, 0.911);
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-areas: 'left center right';
+    padding: 10px;
+}
+
+.operators {
+    /* background-color: rgba(75, 146, 158, 0.418); */
+    background-color: rgb(150, 152, 155);
+}
+
+.sub {
+    grid-column-start: 4;
+    grid-row-start: 4;
+}
+
+.add {
+    grid-column-start: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.equal {
+    grid-column-start: 4;
+    grid-row-start: 5;
+    grid-row-end: 8;
+    background-color: rgba(43, 187, 127, 0.842);
+}
+

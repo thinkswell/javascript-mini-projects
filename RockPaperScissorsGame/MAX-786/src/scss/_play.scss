@@ -1,0 +1,117 @@
+.play {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-top: 5rem;
+    &__triangle {
+        position: absolute;
+        z-index: 1;
+        margin-top: 5rem
+    }
+    &__paper {
+        @include icons($Paper);
+        transform: translateX(3rem);
+        &:hover {
+            transform: translateX(3rem) rotate(360deg);
+            transition: transform 1s;
+            box-shadow: inset 0px 8px hsl(217deg 23% 66% / 55%), inset 0px 0px 20px 5px #33ae3f;
+        }
+    }
+    &__rock {
+        @include icons($Rock);
+        transform: translateY(14rem);
+        &:hover {
+            transform: translateY(14rem) rotate(360deg);
+            transition: transform 1s;
+            box-shadow: inset 0px 8px hsl(217deg 23% 66% / 55%), inset 0px 0px 20px 5px #33ae3f;
+        }
+    }
+    &__scissors {
+        @include icons($Scissors);
+        transform: translateX(-3rem);
+        &:hover {
+            transform: translateX(-3rem) rotate(360deg);
+            transition: transform 1s;
+            box-shadow: inset 0px 8px hsl(217deg 23% 66% / 55%), inset 0px 0px 20px 5px #33ae3f;
+        }
+    }
+}
+
+@media (max-width:600px) and (min-width:425px) {
+    .play {
+        &__triangle {
+            width: 250px;
+        }
+        &__paper {
+            @include icons($Paper);
+            width: 180px;
+            height: 160px;
+            border-width: 1rem;
+            img {
+                transform: scale(1);
+            }
+        }
+        &__rock {
+            @include icons($Rock);
+            width: 180px;
+            height: 160px;
+            border-width: 1rem;
+            transform: translateY(12rem);
+            &:hover {
+                transform: translateY(12rem) rotate(360deg);
+            }
+            img {
+                transform: scale(1);
+            }
+        }
+        &__scissors {
+            @include icons($Scissors);
+            width: 180px;
+            height: 160px;
+            border-width: 1rem;
+            img {
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+@media (max-width:425px) {
+    .play {
+        &__triangle {
+            width: 230px;
+            margin-top: 4rem;
+        }
+        &__paper {
+            @include icons($Paper);
+            width: 200px;
+            height: 140px;
+            border-width: 1rem;
+            img {
+                transform: scale(0.9);
+            }
+        }
+        &__rock {
+            @include icons($Rock);
+            width: 200px;
+            height: 140px;
+            border-width: 1rem;
+            transform: translateY(10rem);
+            &:hover {
+                transform: translateY(10rem) rotate(360deg);
+            }
+            img {
+                transform: scale(0.9);
+            }
+        }
+        &__scissors {
+            @include icons($Scissors);
+            width: 200px;
+            height: 140px;
+            border-width: 1rem;
+            img {
+                transform: scale(0.9);
+            }
+        }
+    }
+}
