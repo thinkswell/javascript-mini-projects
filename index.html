@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Language Translator | Nitin</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" media="screen" href="css/style.css">
+  <!-- Font Awesome CDN Link for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- particles.js container -->
+  <div id="particles-js">
+
+    <!-- scripts -->
+    <script src="particle/particles.js"></script>
+    <script src="js/app.js"></script>
+
+
+
+
+    <div class="container" style="margin: 15% 15% 15% 15%;">
+      <div class="wrapper">
+        <div class="text-input">
+          <textarea spellcheck="false" class="from-text" placeholder="Enter text"></textarea>
+          <textarea spellcheck="false" readonly disabled class="to-text" placeholder="Translation"></textarea>
+        </div>
+        <ul class="controls">
+          <li class="row from">
+            <div class="icons">
+              <i id="from" class="fas fa-volume-up"></i>
+              <i id="from" class="fas fa-copy"></i>
+            </div>
+            <select></select>
+          </li>
+          <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
+          <li class="row to">
+            <select></select>
+            <div class="icons">
+              <i id="to" class="fas fa-volume-up"></i>
+              <i id="to" class="fas fa-copy"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button onclick="generateColor()" class="generateBtn">Real time Language Translation app</button>
+    </div>
+
+  </div>
+<!-- KEEP YOU AD CODE HERE -->
+
+
+  <script>
+    function generateColor() {
+      var randomColor = (Math.floor(Math.random() * 16777216)).toString(16);
+      console.log(randomColor)
+      document.#particles-js.#canvas.style.backgroundColor = "#" + randomColor;
+      var text = document.getElementById("text");
+      text.innerText = "#" + randomColor;
+    }
+
+  </script>
+
+  
+  <script src="js/countries.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
