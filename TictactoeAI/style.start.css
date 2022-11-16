@@ -1,0 +1,35 @@
+#wrappe {
+    text-align: center;
+}
+
+#start-game {
+    display: inline-block;
+    margin-top: 9%;
+}
+
+#start-start-game {
+    width: 150px;
+    height: 100px;
+    background-color: aquamarine;
+    border-radius: 15%;
+    font-size: 30px;
+    text-align: center;
+}
+
+#start-start-game:hover {
+    background-color: aqua;
+}
+
+body {
+    background-color: rgb(170, 170, 231);
+}
+
+#start-start-game:hover {
+    background-color: aqua;
+}
+
+h1 {
+    text-align: center;
+    font-style: italic;
+    font-size: 100px;
+}

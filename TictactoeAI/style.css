@@ -1,0 +1,92 @@
+td {
+    border: 2px solid #333;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 70px;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    position: absolute;
+    left: 50%;
+    margin-left: -155px;
+    top: 50px;
+    margin-top: 10%;
+}
+
+
+/*table tr:first-child td {border-top: 0;}
+
+table tr:last-child td {border-bottom: 0;}
+
+table tr td:first-child {border-left: 0;}
+
+table tr td:last-child {border-right: 0;}*/
+
+.endgame {
+    display: none;
+    width: 200px;
+    top: 120px;
+    background-color: rgba(139, 73, 7, 0.8);
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 2em;
+    margin-top: 11%;
+}
+
+.checkBox {
+    height: 30px;
+    width: 30px;
+}
+
+#header {
+    font-size: 50px;
+    font-style: italic;
+    height: 25px;
+    color: rgb(226, 43, 43);
+    margin-top: 5%;
+    text-align: center;
+}
+
+body {
+    background-color: rgb(128, 161, 245);
+}
+
+button {
+    width: 200px;
+    color: #555;
+    background: none;
+    border: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    font-weight: 600;
+}
+
+button:hover i {
+    margin-right: 20px;
+}
+
+button:focus {
+    outline: none;
+}
+
+#btn-restart {
+    float: right;
+}
