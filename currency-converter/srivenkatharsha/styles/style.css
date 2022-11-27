@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body h1 {
+    text-align: center;
+    margin-top: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-size: 120%;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #222;
+    background-image: url("/bg.png");
+    background-size: cover;
+    overflow: hidden;
+}
+
+.card {
+    color: white;
+    background-color: #000000d0;
+    width: 100%;
+    padding: 2.26em 5em 2.26em 4em;
+}
+
+.swap {
+    margin: 0.5em;
+    border-radius: 50%;
+    border: none;
+    height: 44px;
+    width: 44px;
+    outline: none;
+    background-color: #7c7c7c52;
+    color: white;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+.swap:hover {
+    background-color: #7c7c7c8c;
+}
+
+.input input {
+    border: none;
+    outline: none;
+    padding: 0.5em 0.8em;
+    border-radius: 18px;
+    background-color: #7c7c7c2b;
+    color: white;
+    font-family: inherit;
+    font-size: 100%;
+    width: 100%;
+    margin: 0.02em;
+}
+
+
+.output{
+    
+    align-items: center;
+    justify-content: space-around;
+}
+
+.output p {
+    margin: 0;
+}
+
+.output h2 {
+    padding-bottom: 0.2em;
+    margin-top: 10px;
+}
+
+.from-currency {
+    padding-top: 1em;
+}
+
+.from-currency,
+.to-currency {
+    padding-bottom: 0.3em;
+}
+
+.submit {
+    display: inline-flex;
+    -moz-box-pack: center;
+    justify-content: center;
+    -moz-box-align: center;
+    align-items: center;
+    min-width: 0px;
+    width: auto;
+    cursor: pointer;
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    outline-offset: 4px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition-property: background-color, border-color;
+    transition-duration: 0.3s;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    background: rgb(0, 113, 235) none repeat scroll 0% 0%;
+    border: 2px solid rgb(0, 113, 235);
+    border-radius: 8px;
+}
+
+.submit:hover{
+    background: rgb(79, 161, 250) none repeat scroll 0% 0%;
+    border: 2px solid rgb(59, 136, 219);
+}
+
+.error{
+    color: rgb(179, 0, 33);
+    font-size: 1rem !important;
+    visibility: hidden;
+}
+
+.output.loading{
+    visibility: hidden;
+}
