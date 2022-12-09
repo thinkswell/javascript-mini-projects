@@ -1,0 +1,104 @@
+body {
+    background: black;
+    color: white;
+}
+
+.hud {
+    display: flex;
+    border: 1px solid white;
+    width: 30vw;
+    height: 5vh;
+}
+
+.hud_container {
+    border: 1px solid white;
+    width: 50%;
+}
+
+.hud_title {
+    margin-bottom: 0%;
+}
+
+.game_container {
+    display: flex;
+    width: 99vw;
+    height: 90vh;
+    border: 1px solid yellow;
+    justify-content: center;
+    position: relative;
+}
+
+
+.game_container_clown3 {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid yellow;
+}
+
+.clown {
+    width: 10vw;
+    height: 20vh;
+    /* border: 1px solid white; */
+    border-radius: 120px 100px 100px 130px ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: level1 3s infinite;
+    animation-direction: default;
+}
+
+.clown2 {
+    display: none;
+    width: 10vw;
+    height: 20vh;
+    /* border: 1px solid white; */
+    border-radius: 120px 100px 100px 130px ;
+    position: absolute;
+    top: -50%;
+    bottom: 0;
+    animation: level1 3s infinite;
+    margin: auto;
+}
+
+@keyframes level1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes level2 {
+    0% {
+      left: 0vw;
+    }
+    50% {
+      left: 85vw;
+    }
+    100% {
+      left: 0vw;    
+    }
+  }
+
+@keyframes level3 {
+0% {
+    left: 0vw;
+    top: 0%;
+}
+25% {
+    top: 35%;
+}
+50% {
+    left: 90vw;    
+}
+75% {
+    left: 45vw;
+    top: 0%;
+}
+100% {
+    left: 0vw;
+    top: 0%;
+}
+}

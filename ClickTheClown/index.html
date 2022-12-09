@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click le Clown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HUD -->
+    <section>
+        <div class="hud">
+            <div class="hud_container">
+                <span class="hud_title">Temps : <a id="time" class="time">0:00</a></span>
+            </div>
+            <div class="hud_container">
+                <span class="hud_title">Point : <a id="point" class="point">0</a></span>
+            </div>
+            <div class="hud_container">
+                <span class="hud_title">Level : <a id="level" class="level">1</a></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- GAME -->
+    <section>
+        <div class="game">
+            <div class="game_container">
+                <div class="game_container_clown">
+                    <img onclick="clickLeClown();" draggable="false" id="clown" src="clown.png" alt="clown" class="clown">
+                </div>
+                <div id="game_container_clown2" class="game_container_clown2">
+                    <img onclick="clickLeClown();"  draggable="false" id="clown2" src="clown.png" alt="clown" class="clown2">
+                </div>
+                <div id="game_container_clown3" class="game_container_clown3" onclick="play()">
+                </div>
+            </div>
+        </div>
+    
+</body>
+<audio id="audio" src="clown_laught.mp4"></audio>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    // Déclaration des variables
+    let point = 0;
+    let secondes = 0;
+    let minutes = 0;
+    let reset = false;
+    let level = 1;
+
+    // Fonction qui permet de compter le temps
+    var x = setInterval(function() {
+        secondes++;
+        if(secondes < 10)
+        {
+            document.getElementById("time").innerHTML = minutes+":0" + secondes;
+        }
+        else if(secondes >= 10  && secondes < 60)
+        {
+            document.getElementById("time").innerHTML = minutes+":" + secondes;
+        }
+        else if(secondes >= 60)
+        {
+            minutes++;
+            secondes = 0;
+            document.getElementById("time").innerHTML = minutes+":" + "00";
+        }
+    }, 1000);
+    
+
+    //Fonction qui permet de compter les et les niveaux
+    function clickLeClown() {
+        point++;
+        document.getElementById("point").innerHTML = point;
+        if(point % 10 == 0)
+        {
+            level = (point / 10)  + 1;
+            document.getElementById("level").innerHTML = level;
+            changeLevel(level);
+        }
+        if(point > 30)
+        {
+            if(reset == false)
+            {
+                clown = document.getElementById("clown");
+                clown.style.display = "none";
+                document.getElementById("clown2").style.display = "block";
+                reset = true;
+                animateDiv('.clown2');
+            }
+        }
+    }
+
+    //Fonction qui permet de changer le style et lanimation du clown
+    function changeLevel(level)
+    {
+        if(level == 2)
+        {
+            document.getElementById("clown").style.animation = "level2 8s infinite";
+        }
+        if(level == 3)
+        {
+            document.getElementById("clown").style.animation = "level3 7s infinite";
+        }
+    }
+
+    function makeNewPosition(){
+    
+    // Get viewport dimensions (remove the dimension of the div)
+    var h = $(window).height() - 220;
+    var w = $(window).width() - 100;
+    var negatif = Math.floor(Math.random() * 2);
+    
+    
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+    var newNeg = negatif == 1 ? "-" : "";
+    return [nh,nw, newNeg];    
+    
+}
+
+function animateDiv(myclass){
+    clownClicked = false;
+    gameSpeed = 2000 / (level /2);
+
+    // setTimeout(function(){
+        var newq = makeNewPosition();
+        console.log(newq);
+        $(myclass).animate({ top: newq[2]+ newq[0], right: newq[1] }, gameSpeed,   function(){
+                animateDiv(myclass, level);
+        });
+    // } , gameSpeed);
+    
+};
+
+function play() {
+    var audio = document.getElementById("audio");
+    audio.play();
+}
+
+</script>
+</html>
