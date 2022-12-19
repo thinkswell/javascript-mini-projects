@@ -1,4 +1,4 @@
-# Interval Machine
+# Interval Timer Generator
 
 Timer app for the browser. Programs are customizable and can be grouped by themes.
 
