@@ -1,5 +1,10 @@
 "use strict";
 
+const dom = {
+  input: document.getElementById("input"),
+  items: document.getElementById("search-items"),
+};
+
 const breeds = [
   {
     name: "item1",
@@ -7,37 +12,37 @@ const breeds = [
     life_span: 14,
   },
   {
-    name: "item1",
+    name: "item2",
     description: "dfsf sdfs fsdf sdfsdf sdfsdfs sdfsdfsf dsf",
     life_span: 14,
   },
   {
-    name: "item1",
+    name: "item3",
     description: "dfsf sdfs fsdf sdfsdf sdfsdfs sdfsdfsf dsf",
     life_span: 14,
   },
   {
-    name: "item1",
+    name: "item4",
     description: "dfsf sdfs fsdf sdfsdf sdfsdfs sdfsdfsf dsf",
     life_span: 14,
   },
   {
-    name: "item1",
+    name: "item5",
     description: "dfsf sdfs fsdf sdfsdf sdfsdfs sdfsdfsf dsf",
     life_span: 14,
   },
   {
-    name: "item1",
+    name: "item6",
     description: "dfsf sdfs fsdf sdfsdf sdfsdfs sdfsdfsf dsf",
     life_span: 14,
   },
   {
-    name: "item1",
+    name: "item7",
     description: "dfsf sdfs fsdf sdfsdf sdfsdfs sdfsdfsf dsf",
     life_span: 14,
   },
   {
-    name: "item1",
+    name: "item8",
     description: "dfsf sdfs fsdf sdfsdf sdfsdfs sdfsdfsf dsf",
     life_span: 14,
   },
@@ -46,11 +51,17 @@ const breeds = [
 const getBreeds = (e) => {
   let breed = e.target.value;
   console.log("🚀 ~ file: index.js:46 ~ getBreeds ~ breed", breed);
-  return breeds.filter((b) => b.name === breed);
+  dom.items.innerHTML = "";
+  breeds.filter((b) => {
+    if (b.name.includes(breed)) {
+      console.log("true");
+      let item = document.createElement("div");
+      item.className = "search__items__item";
+      item.textContent = b.name;
+      dom.items.append(item);
+    }
+    console.log("false");
+  });
 };
 
-const dom = {
-  input: document.getElementById("input"),
-};
-
-dom.input.addEventListener("change", getBreeds);
+dom.input.addEventListener("keyup", getBreeds);
