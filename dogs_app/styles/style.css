@@ -1,0 +1,169 @@
+:root {
+  --clr-primary-700: #1c1739;
+  --clr-primary-900: #120d32;
+  --clr-neutral-100: white;
+  --clr-neutral-200: #d8c6ff;
+  --clr-neutral-300: #ecb4f5;
+  --fs-s: 0.8rem;
+  --fs-m: 1rem;
+  --fs-l: 1.2rem;
+  --fs-xl: 1.5rem;
+  --fs-xxl: 2rem;
+  --fs-xxxl: 2.5rem;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+  --ff-primary: "EB Garamond", serif;
+  --rd-1: 0.5rem;
+  --rd-2: 1rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+textarea,
+input {
+  outline: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  background: linear-gradient(90deg, var(--clr-neutral-200), var(--clr-neutral-300));
+  font-family: var(--ff-primary);
+  font-size: var(--fs-l);
+  font-weight: var(--fw-regular);
+}
+
+.main__container * {
+  margin: 0 auto;
+}
+
+.logo {
+  margin-top: 20vh;
+}
+
+.search {
+  width: 20%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--clr-neutral-100);
+}
+.search__input {
+  width: 100%;
+  height: 4rem;
+  margin-top: 2vh;
+}
+.search__items {
+  width: 100%;
+  background-color: var(--clr-primary-900);
+  border-radius: var(--rd-1);
+  display: flex;
+  flex-direction: column;
+  max-height: 20vh;
+  overflow-y: auto;
+}
+.search__items__item {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--clr-primary-700);
+  border-radius: var(--rd-1);
+  text-align: center;
+  transition: all 0.1s ease-in-out;
+}
+.search__items__item:where(:hover) {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-primary-700);
+}
+.search__items::-webkit-scrollbar {
+  background-color: var(--clr-neutral-100);
+  border-radius: var(--rd-1);
+}
+.search__items::-webkit-scrollbar-thumb {
+  background-color: var(--clr-primary-700);
+  border: 0.1rem solid var(--clr-neutral-100);
+  border-radius: var(--rd-1);
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  color: inherit;
+  border-radius: inherit;
+  border: none;
+}
+
+.input {
+  background-color: var(--clr-primary-900);
+  color: var(--clr-neutral-100);
+  border-radius: var(--rd-1);
+  padding: 0 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */
