@@ -1,9 +1,8 @@
 :root {
-  --clr-primary-700: hsl(249deg, 43%, 25%);
-  --clr-primary-900: hsl(248deg, 59%, 12%);
+  --clr-primary-700: hsl(0deg, 0%, 21%);
+  --clr-primary-900: hsl(0deg, 0%, 20%);
   --clr-neutral-100: hsl(0deg, 0%, 100%);
-  --clr-neutral-200: hsl(259deg, 100%, 89%);
-  --clr-neutral-300: hsl(292deg, 76%, 83%);
+  --clr-neutral-200: hsl(0deg, 0%, 96%);
   --fs-s: 0.8rem;
   --fs-m: 1rem;
   --fs-l: 1.2rem;
@@ -16,7 +15,7 @@
   --fw-semi-bold: 600;
   --fw-bold: 700;
   --fw-extra-bold: 800;
-  --ff-primary: "EB Garamond", serif;
+  --ff-primary: "Nunito", sans-serif;
   --rd-1: 0.5rem;
   --rd-2: 1rem;
 }
@@ -93,9 +92,9 @@ select {
 }
 body,
 html {
-  background: linear-gradient(90deg, var(--clr-neutral-200), var(--clr-neutral-300));
+  background-color: var(--clr-neutral-200);
   font-family: var(--ff-primary);
-  font-size: var(--fs-l);
+  font-size: var(--fs-m);
   font-weight: var(--fw-regular);
   display: grid;
   height: 100%;
@@ -182,10 +181,49 @@ input {
 .results {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  row-gap: 2rem;
+  width: 70%;
 }
-.results__chars--content {
-  width: 50%;
+.results img {
+  max-height: 20vh;
+  max-width: auto;
+  border-radius: var(--rd-1);
+}
+.results__chars {
+  width: 100%;
+  grid-column: 2/3;
+  margin-right: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+.results__chars li {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-around;
+}
+.results__chars li > div {
+  display: flex;
+  justify-content: flex-start;
+}
+.results__chars li > div:nth-child(1) {
+  width: 20%;
+}
+.results__chars li > div:nth-child(2) {
+  width: 80%;
+}
+.results__description {
+  width: 100%;
   height: 100%;
+}
+.results__description div {
+  width: 70ch;
+  margin-top: 2rem;
+  margin-right: calc(100% - 70ch);
 }
 
 .progress-bar {
@@ -201,7 +239,7 @@ input {
   top: 10%;
   right: 50%;
 }
-.progress-bar__number[dark-state=true] {
+.progress-bar__number[data-dark=true] {
   color: var(--clr-neutral-100);
 }
 .progress-bar__chunk {
@@ -215,7 +253,7 @@ input {
 .progress-bar__chunk:nth-child(5) {
   border-radius: 0 var(--rd-2) var(--rd-2) 0;
 }
-.progress-bar__chunk[progress-state=true] {
+.progress-bar__chunk[data-progress=true] {
   background-color: var(--clr-primary-900);
 }
 
