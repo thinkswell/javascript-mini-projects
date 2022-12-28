@@ -1,19 +1,222 @@
-/* Error: Expected expression.
- *    ,
- * 35 |       width: 95git%;
- *    |                    ^
- *    '
- *   sass/pages/_main.scss 35:20  @forward
- *   sass/pages/_index.scss 1:1   @use
- *   sass/style.scss 2:1          root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected expression.\a    \2577 \a 35 \2502        width: 95git%;\a    \2502                     ^\a    \2575 \a   sass/pages/_main.scss 35:20  @forward\a   sass/pages/_index.scss 1:1   @use\a   sass/style.scss 2:1          root stylesheet";
+:root {
+  --clr-primary-700: hsl(249deg, 43%, 25%);
+  --clr-primary-900: hsl(248deg, 59%, 12%);
+  --clr-neutral-100: hsl(0deg, 0%, 100%);
+  --clr-neutral-200: hsl(259deg, 100%, 89%);
+  --clr-neutral-300: hsl(292deg, 76%, 83%);
+  --fs-s: 0.8rem;
+  --fs-m: 1rem;
+  --fs-l: 1.2rem;
+  --fs-xl: 1.5rem;
+  --fs-xxl: 2rem;
+  --fs-xxxl: 2.5rem;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+  --ff-primary: "EB Garamond", serif;
+  --rd-1: 0.5rem;
+  --rd-2: 1rem;
 }
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+textarea,
+input {
+  outline: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body,
+html {
+  background: linear-gradient(90deg, var(--clr-neutral-200), var(--clr-neutral-300));
+  font-family: var(--ff-primary);
+  font-size: var(--fs-l);
+  font-weight: var(--fw-regular);
+  display: grid;
+  height: 100%;
+}
+
+.main__container * {
+  margin: 0 auto;
+}
+
+.logo {
+  margin-top: 20vh;
+}
+
+.search {
+  width: 20%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--clr-neutral-100);
+}
+.search__input {
+  width: 100%;
+  height: 4rem;
+  margin-top: 2vh;
+}
+.search__items {
+  width: 100%;
+  background-color: var(--clr-primary-900);
+  border-radius: var(--rd-1);
+  display: flex;
+  flex-direction: column;
+  max-height: 30vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-size: var(--fs-m);
+  cursor: pointer;
+}
+.search__items__item {
+  width: 95%;
+  padding: 1rem;
+  margin: 0.5rem;
+  background-color: var(--clr-primary-700);
+  border-radius: var(--rd-1);
+  text-align: center;
+  transition: all 0.1s ease-in-out;
+}
+.search__items__item:where(:hover) {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-primary-700);
+}
+.search__items::-webkit-scrollbar {
+  border-radius: var(--rd-1);
+}
+.search__items::-webkit-scrollbar-track {
+  background-color: var(--clr-neutral-100);
+  border: solid 0.2rem var(--clr-primary-900);
+  border-radius: var(--rd-1);
+}
+.search__items::-webkit-scrollbar-thumb {
+  background-color: var(--clr-primary-900);
+  border: 0.25rem solid transparent;
+  background-clip: content-box;
+  border-radius: var(--rd-1);
+  cursor: default;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  color: inherit;
+  border-radius: inherit;
+  border: none;
+}
+
+.input {
+  background-color: var(--clr-primary-900);
+  color: var(--clr-neutral-100);
+  border-radius: var(--rd-1);
+  padding: 0 2rem;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.results__chars--content {
+  width: 50%;
+  height: 100%;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.progress-bar__number {
+  position: absolute;
+  max-height: 80%;
+  top: 10%;
+  right: 50%;
+}
+.progress-bar__number[dark-state=true] {
+  color: var(--clr-neutral-100);
+}
+.progress-bar__chunk {
+  width: 20%;
+  height: 1.5rem;
+  background-color: var(--clr-neutral-100);
+}
+.progress-bar__chunk:nth-child(1) {
+  border-radius: var(--rd-2) 0 0 var(--rd-2);
+}
+.progress-bar__chunk:nth-child(5) {
+  border-radius: 0 var(--rd-2) var(--rd-2) 0;
+}
+.progress-bar__chunk[progress-state=true] {
+  background-color: var(--clr-primary-900);
+}
+
+/*# sourceMappingURL=style.css.map */
