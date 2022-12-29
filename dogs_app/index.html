@@ -16,14 +16,16 @@
   </head>
   <body>
     <main class="main__container">
-      <div class="logo"><img src="styles/assets/logo.png" alt="" /></div>
+      <div id="logo" class="logo" data-show="true">
+        <img src="styles/assets/logo.png" alt="" />
+      </div>
       <div class="search">
         <div class="search__input input">
           <input id="input" type="text" />
         </div>
         <div id="search-items" class="search__items"></div>
       </div>
-      <div class="results">
+      <div id="results" class="results bg-primary-900 text-neutral-100 p-2" data-show="false">
         <img id="results-img" src="./styles//assets/logo.png" alt="#" />
         <div class="results__description">
           <div>

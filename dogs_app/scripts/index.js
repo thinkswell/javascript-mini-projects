@@ -12,6 +12,8 @@ const api = axios.create({
 });
 
 const dom = {
+  logo: document.getElementById("logo"),
+  results: document.getElementById("results"),
   input: document.getElementById("input"),
   items: document.getElementById("search-items"),
 };
@@ -52,6 +54,12 @@ const HandleResultRendering = (breed) => {
     if (intel < 3) span.dataset.dark = "false";
     else span.dataset.dark = "true";
   });
+
+  // hide the logo on search
+  dom.logo.dataset.show = "false";
+
+  // desplay the results
+  dom.results.dataset.show = "true";
 };
 
 const getBreeds = (e) => {
