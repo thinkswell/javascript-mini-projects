@@ -27,7 +27,6 @@ get_breeds.then((res) => {
 const HandleResultRendering = (breed) => {
   dom.items.innerHTML = "";
   document.getElementById("input").value = breed.name;
-  console.log("🚀 ~ file: index.js:22 ~ HandleResultRendering ~ breed", breed);
   document.getElementById("results-img").src = breed.image.url;
   document.getElementById("temperament").textContent = breed.temperament;
   document.getElementById("life_span").textContent = breed.life_span;
@@ -39,7 +38,6 @@ const HandleResultRendering = (breed) => {
   );
 
   progress_bars.map((p, i) => {
-    console.log("Amineee ", i);
     let intel = getRandomInt(5);
 
     [1, 2, 3, 4, 5].map((i, index) => {
@@ -64,12 +62,10 @@ const HandleResultRendering = (breed) => {
 
 const getBreeds = (e) => {
   let breed = e.target.value;
-  console.log("🚀 ~ file: index.js:46 ~ getBreeds ~ breed", breed);
   dom.items.innerHTML = "";
   if (e.target.value === "") return false;
   breeds.filter((b, i) => {
     if (b.name.includes(breed)) {
-      console.log("true");
       let item = document.createElement("div");
       item.className = "search__items__item";
       item.textContent = b.name;
