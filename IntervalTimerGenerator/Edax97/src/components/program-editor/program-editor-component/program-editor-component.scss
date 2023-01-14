@@ -1,0 +1,14 @@
+#loops-input {
+  width: 3.8rem;
+  padding-left: 0.5rem;
+  padding-right: 0.4rem;
+  @media screen and (min-width: 662px) {
+    width: 4rem;
+  }
+}
+#program-name {
+  width: 8.5rem;
+  @media screen and (min-width: 662px) {
+    width: 12rem;
+  }
+}

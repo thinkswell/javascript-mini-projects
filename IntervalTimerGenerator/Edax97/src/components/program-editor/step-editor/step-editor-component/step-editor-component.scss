@@ -1,0 +1,16 @@
+.hint {
+  border-radius: 50%;
+  height: 1.7rem;
+  width: 1.7rem;
+  @media screen and (min-width: 662px) {
+    height: 2rem;
+    width: 2rem;
+  }
+}
+
+.step-name {
+  width: 10rem;
+  @media screen and (min-width: 662px) {
+    width: 12rem;
+  }
+}
