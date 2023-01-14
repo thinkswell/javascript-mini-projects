@@ -1,0 +1,185 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #40e0d0;
+    color: #F28C5D;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    margin: 2em auto 0;
+    color: #008080;
+}
+
+main {
+    width: 70%;
+    margin-top: 0;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    background: #008080;
+    padding: .5em .25em;
+}
+
+#color-wheel {
+    border: none;
+    background: inherit;
+    margin-right: .5em;
+    height: 4vh;
+    border-radius: 100%;
+}
+
+#color-selector-drop {
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+    transform: translate(0, 20%);
+    padding: .15em .3em .35em;
+}
+
+#color-columns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+    cursor: pointer;
+}
+
+#zero,
+#one,
+#two,
+#three,
+#four {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hex-color-values {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .75em 0;
+    background: #008080;
+    color: #afeeee;
+}
+
+#get-color-btn {
+    background: #054950;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #afeeee;
+    border-radius: 2px;
+    padding: 0em .75em;
+    margin-right: 5px; 
+}
+
+#get-color-btn:hover {
+    color: #054950;
+    background: #afeeee;
+ }
+
+p {
+    font-size: 1.25rem;
+    letter-spacing: 1.3px;
+    text-align: center;
+}
+
+a {
+    font-size: .65rem;
+    display: block;
+    text-align: center;
+    letter-spacing: .25px;
+}
+
+#mouse_over {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    color: rgba(250,250,250,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mouse_over:hover {
+    background: linear-gradient(0deg, #00000050 30%, #00000022 100%);
+    opacity: 1
+}
+
+@media screen and (max-width:590px) {
+    main {
+        width: 95%;
+        border: 15px solid #008080;
+    }
+  
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: #008080;
+        padding: 0
+    }
+    
+    .form-selector-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: .5em
+    }
+    
+    #color-selector-drop {
+        position: relative;
+        transform: translate(0, 1%)
+    }
+    
+    #get-color-btn {
+        padding: 1.5em;
+    }
+    
+    #color-columns {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    
+    #get-color-btn {
+        margin-right: 0;
+  }
+    
+    #zero,
+    #one,
+    #two,
+    #three,
+    #four {
+        width: 100%;
+    }
+    
+    
+    #hex-color-values {
+        padding: 1.5em;
+    }
+    
+    #hex-color-values > div {
+        display: none;
+    }
+    
+    p {
+        font-size: .75rem;
+    }
+
+    a {
+        font-size: .45rem;
+    }
+}

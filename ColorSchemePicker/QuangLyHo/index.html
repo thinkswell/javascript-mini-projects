@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Color Picker</title>
+</head>
+<body>
+    <header>
+        <h1>Gong's Color Picker</h1>
+    </header>
+    <main>
+        
+        <form id="generator-form">
+            <div class="form-selector-left">
+                
+                <input id="color-wheel" type="color" value="#F59C73">
+                <label for="color-selector-drop"></label>
+                
+                <select id="color-selector-drop" name="color-selector-drop">
+                    <option value="monochrome">Monochrome</option>
+                    <option value="monochrome-dark">Monochrome-dark</option>
+                    <option value="monochrome-light">Monochrome-light</option>
+                    <option value="analogic">Analogic</option>
+                    <option value="complement">Complement</option>
+                    <option value="analogic-complement">Analogic-complement</option>
+                    <option value="triad">Triad</option>
+                    <option value="quad">Quad</option>
+                </select>
+                
+            </div>
+            
+            <input id="get-color-btn" type="submit" value="Get Color Scheme">
+        </form>
+        
+        <div id="color-columns">
+           
+            <div id="zero" class="color-col-0">
+                <div id="mouse_over">
+                    <p class="hex-value-display-zero"></p>
+                </div>
+            </div>
+            
+            <div id="one" class="color-col-1">
+                <div id="mouse_over">
+                    <p class="hex-value-display-one"></p>
+                </div>
+            </div>
+            
+            <div id="two" class="color-col-2">
+                <div id="mouse_over">
+                    <p class="hex-value-display-two"></p>
+                </div>
+            </div>
+            
+            <div id="three" class="color-col-3">
+                <div id="mouse_over">
+                    <p class="hex-value-display-three"></p>
+                </div>
+            </div>
+            
+            <div id="four" class="color-col-4">
+                <div id="mouse_over">
+                    <p class="hex-value-display-four"></p>
+                </div>
+            </div>
+            
+        </div> 
+        
+        <div id="hex-color-values">
+            <div class="hex-value-0">#D55114</div>
+            <div class="hex-value-1">#ED6B2F</div>
+            <div class="hex-value-2">#F28C5D</div>
+            <div class="hex-value-3">#F6AD8B</div>
+            <div class="hex-value-4">#FACEBA</div>
+        </div>
+        
+    </main>
+    <footer>
+        <p>Built using <a href="https://www.thecolorapi.com/">The Color API</a></p>
+    </footer>
+    
+    <script src="index.js"></script>
+
+</body>
+</html>
