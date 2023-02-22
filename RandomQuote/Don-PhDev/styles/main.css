@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  height: 100vh;
+  font-size: 1.125rem;
+  background: url(../images/library_with_pendant_lights.jpg) no-repeat center center/cover;
+}
+
+.container {
+  width: 550px;
+  margin: 150px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .header {
+  width: 80%;
+  margin: 20px auto;
+  padding: 5px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #262626;
+  border: solid 2px #fff;
+  border-radius: 5px;
+}
+.container .header h2 {
+  text-align: center;
+}
+.container .main-content {
+  width: 100%;
+  padding: 30px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px;
+}
+.container .main-content .text-area {
+  text-align: center;
+}
+.container .main-content .text-area .quote {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  letter-spacing: 0.7px;
+}
+.container .main-content .author {
+  float: right;
+  color: #ff0000;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: italic;
+  margin-top: 20px;
+}
+.container .btn-area button {
+  background-color: #262626;
+  color: #fff;
+  font-size: 1.3rem;
+  padding: 10px 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.container .btn-area button button:active {
+  background-color: lightblue;
+}/*# sourceMappingURL=main.css.map */
