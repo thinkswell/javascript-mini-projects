@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height:100vh;
+    display: flex;
+}
+
+#container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    gap:1rem;
+    max-width: 800px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  #quote-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+   
+}
+
+#quote-btn:hover {
+    background-color: #db2e2c;
+  }
+  #quote-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
