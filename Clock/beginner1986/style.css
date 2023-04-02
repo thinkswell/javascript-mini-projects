@@ -1,14 +1,28 @@
 body {
-    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 90vh;
     background-color: black;
 }
 
 #clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 30%;
     aspect-ratio: 1;
     background-color: tan;
     border-radius: 50%;
+}
+
+.number {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
 }
