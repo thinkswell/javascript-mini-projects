@@ -1,0 +1,14 @@
+body {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+#clock {
+    width: 30%;
+    aspect-ratio: 1;
+    background-color: tan;
+    border-radius: 50%;
+}
