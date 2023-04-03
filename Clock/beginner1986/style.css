@@ -3,6 +3,8 @@ body {
     align-items: center;
     justify-content: center;
     height: 90vh;
+    margin: 0;
+    padding: 0;
     background-color: black;
 }
 
@@ -14,6 +16,18 @@ body {
     aspect-ratio: 1;
     background-color: tan;
     border-radius: 50%;
+}
+
+#hours,
+#minutes,
+#seconds {
+    background-color: black;
+    transform-origin: bottom center;
+}
+
+#seconds {
+    width: 6px;
+    height: 30%;
 }
 
 .number {
