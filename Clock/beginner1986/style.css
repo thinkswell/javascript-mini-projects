@@ -12,22 +12,42 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 50%;
     aspect-ratio: 1;
     background-color: tan;
     border-radius: 50%;
 }
 
+#clock div {
+    display: flex;
+}
+
 #hours,
 #minutes,
 #seconds {
+    position: absolute;
+    left: 50%;
     background-color: black;
     transform-origin: bottom center;
+    border-radius: 20%;
+}
+
+#hours {
+    width: 10px;
+    height: 15%;
+    top: 30%;
+}
+
+#minutes {
+    width: 8px;
+    height: 20%;
+    top: 25%;
 }
 
 #seconds {
     width: 6px;
     height: 30%;
+    top: 15%;
 }
 
 .number {
