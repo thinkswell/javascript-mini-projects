@@ -12,14 +12,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    aspect-ratio: 1;
+    width: 80%;
+    height: 80%;
     background-color: tan;
     border-radius: 50%;
 }
 
-#clock div {
-    display: flex;
+@media only screen and (orientation: portrait) {
+    #clock {
+        width: 80vw;
+        height: 80vw;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    #clock {
+        width: 80vh;
+        height: 80vh;
+    }
 }
 
 #hours,
