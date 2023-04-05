@@ -44,8 +44,17 @@ const updateClockHands = () => {
     }, 1000);
 };
 
+const placeClockHands = () => {
+    setTimeout(() => {
+        hourHand.style.visibility = 'visible';
+        minuteHand.style.visibility = 'visible';
+        secondHand.style.visibility = 'visible';
+    }, 1000);
+};
+
 placeNumbers();
 updateClockHands();
+placeClockHands();
 
 window.addEventListener('resize', () => {
     clearNumbers();
