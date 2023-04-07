@@ -10,6 +10,7 @@ body {
 
 #clock {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     width: 80%;
@@ -44,21 +45,21 @@ body {
 }
 
 #hours {
-    width: 10px;
+    width: 3%;
     height: 15%;
-    top: 30%;
+    top: 35%;
 }
 
 #minutes {
-    width: 8px;
-    height: 20%;
-    top: 25%;
+    width: 2%;
+    height: 30%;
+    top: 20%;
 }
 
 #seconds {
-    width: 6px;
-    height: 30%;
-    top: 15%;
+    width: 1%;
+    height: 40%;
+    top: 10%;
 }
 
 .number {
