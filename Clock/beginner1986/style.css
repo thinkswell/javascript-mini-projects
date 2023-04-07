@@ -46,8 +46,8 @@ body {
 
 #hours {
     width: 3%;
-    height: 15%;
-    top: 35%;
+    height: 20%;
+    top: 30%;
 }
 
 #minutes {
@@ -58,8 +58,16 @@ body {
 
 #seconds {
     width: 1%;
-    height: 40%;
-    top: 10%;
+    height: 42%;
+    top: 8%;
+}
+
+.line {
+    width: 0.3%;
+    height: 5%;
+    background-color: black;
+    position: absolute;
+    transform-origin: top center;
 }
 
 .number {

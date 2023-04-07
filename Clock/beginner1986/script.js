@@ -1,4 +1,5 @@
 const clockContainer = document.querySelector('#clock');
+const linesContainer = document.querySelector("#lines-container");
 const hourHand = document.querySelector('#hours');
 const minuteHand = document.querySelector('#minutes');
 const secondHand = document.querySelector('#seconds');
@@ -24,6 +25,32 @@ const clearNumbers = () => {
 
     numbers.forEach((number => {
         number.remove();
+    }));
+};
+
+const placeLines = () => {
+    for(let i=1; i<=60; i++) {
+        if(i%5 === 0)
+            continue;
+
+        const lineDiv = document.createElement('div');
+        lineDiv.classList.add('line');
+        linesContainer.appendChild(lineDiv);
+        
+        const angle = i * 6 + 1;
+        const radians = angle * Math.PI / 180;
+        const offset = clockContainer.clientWidth / 2 * 0.01;
+        const x = Math.sin(radians) * (clockContainer.clientWidth / 2 - offset);
+        const y = -Math.cos(radians) * (clockContainer.clientHeight / 2 - offset);
+        lineDiv.style.transform = `translate(${x}px, ${y}px) rotate(${angle}deg)`;
+    }
+};
+
+const clearLines = () => {
+    const lines = document.querySelectorAll('.line');
+
+    lines.forEach((line => {
+        line.remove();
     }));
 };
 
@@ -53,10 +80,13 @@ const placeClockHands = () => {
 };
 
 placeNumbers();
+placeLines();
 updateClockHands();
 placeClockHands();
 
 window.addEventListener('resize', () => {
     clearNumbers();
+    clearLines();
     placeNumbers();
+    placeLines();
 });
