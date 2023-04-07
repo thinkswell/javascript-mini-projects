@@ -62,6 +62,14 @@ body {
     top: 8%;
 }
 
+#central-circle {
+    position: absolute;
+    width: 4%;
+    height: 4%;
+    border-radius: 50%;
+    background-color: black;
+}
+
 .line {
     width: 0.3%;
     height: 5%;
