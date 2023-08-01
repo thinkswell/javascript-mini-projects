@@ -1,0 +1,170 @@
+@import url('https://fonts.cdnfonts.com/css/source-sans-pro');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Source Sans Pro, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar {
+  background: rgb(5, 5, 5);
+  color: white;
+  padding: 1rem 5%;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header > .logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: Segoe Script, Source Sans Pro;
+}
+header ul {
+  margin: 0;
+  list-style: none;
+}
+header ul li {
+  display: inline;
+  margin-right: 12px;
+  font-size: 18px;
+}
+.hero_section {
+  width: 100%;
+  height: 85vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.container-images {
+  position: relative;
+  height: 100%;
+}
+.image_slder {
+  height: 100%;
+}
+.image_slder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.animate {
+  animation: animate 1s ease-in-out;
+}
+@keyframes animate {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.dots-track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: -50px;
+  gap: 5px;
+}
+.dots-track > div {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff33;
+}
+
+.current {
+  background: #ffffffcc !important;
+  animation: opacity 1s ease-in-out;
+}
+@keyframes opacity {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.next {
+  color: white;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  padding: 10px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 0.3rem;
+  top: 40%;
+  font-size: 1.5rem;
+  transition: background 500ms ease;
+  user-select: none;
+}
+.previous {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  padding: 10px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 0.3rem;
+  top: 40%;
+  font-size: 1.5rem;
+  transition: background 500ms ease;
+  user-select: none;
+}
+.next:hover {
+  background: rgba(68, 63, 63, 0.7);
+}
+.previous:hover {
+  background: rgba(68, 63, 63, 0.7);
+}
+.hero-text {
+  position: absolute;
+  top: 35%;
+  color: white;
+  left: 5%;
+  padding-left: 30px;
+  animation: slidein 1s ease-out;
+  /* transform: translate(-20%, -20%); */
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(400px);
+    opacity: 0.3;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.header-text h1 {
+  font-size: 2em;
+}
+.header-text p {
+  max-width: 70%;
+  padding-block: 1em;
+  font-size: 20px;
+}
+.btn-group {
+  display: flex;
+  gap: 2rem;
+}
+.btn-group button {
+  text-align: center;
+  padding: 0.5rem 2rem;
+  font-family: Source Sans Pro, Poppins, verdana;
+  border: 1px solid white;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+.btn-group button:hover {
+  background: white;
+  color: black;
+}
