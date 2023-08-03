@@ -40,6 +40,10 @@ header input:focus{
     background-color: rgba(255, 255, 255, 0.6);
 }
 
+header input::placeholder{
+    color: white;
+}
+
 main{
     flex: 1 1 100%;
     padding: 25px 25px 50px;
