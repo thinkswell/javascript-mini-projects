@@ -1,0 +1,28 @@
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+.container > * {
+    color: var(--font-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-start;
+    height: 500px;
+    width: 500px;
+    border: 0.5px solid var(--border-color);
+    border-radius: 0.35rem;
+    background-color: var(--background-color-alternate);
+    margin: 5rem;
+    justify-content: center;
+    box-shadow: 6px 6px 20px var(--border-color);
+    animation: fadeIn 0.3s ease-in forwards;
+}
