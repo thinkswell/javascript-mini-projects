@@ -1,0 +1,106 @@
+body {
+  overflow-y: hidden;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+.image {
+  display: none;
+}
+
+/* Next & previous buttons */
+#prev {
+  position: absolute;
+  top: 43%;
+  left: 0;
+  cursor: pointer;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+#next {
+  position: absolute;
+  top: 43%;
+  right: 0;
+  cursor: pointer;
+  padding: 16px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+#prev:hover,
+#next:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.dots {
+  text-align: center;
+  margin-top: 2%;
+}
+
+.dot {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  /* transition from one do to the next */
+  transition: background-color 0.6s ease;
+}
+
+/* We create this class with JavaScript. It makes the current dot darker gray */
+.active {
+  background-color: #717171;
+}
+
+/* create fade animation when switching between images */
+.fade {
+  /* Animation support for different browsers */
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}

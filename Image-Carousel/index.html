@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image fade">
+        <img src="./img/friends.jpg" alt="friends" width="100%" />
+      </div>
+      <div class="image fade">
+        <img src="./img/breakingBad.jpg" alt="breaking bad" width="100%" />
+      </div>
+      <div class="image fade">
+        <img src="./img/peakyBlinder.jpg" alt="peaky blinder" width="100%" />
+      </div>
+      <div class="image fade">
+        <img src="./img/prisonBreak.jpg" alt="prison break" width="100%" />
+      </div>
+      <i id="prev" onclick="show_slide(-1)" class="fa-solid fa-arrow-left"></i>
+      <i id="next" onclick="show_slide(+1)" class="fa-solid fa-arrow-right"></i>
+      <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
