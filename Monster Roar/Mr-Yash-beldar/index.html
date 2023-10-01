@@ -28,8 +28,17 @@
     <title>Monster Roar - A web app that roars</title>
 
     <style>
+        a{
+            text-decoration: inherit;
+            color: red;
+        }
+        body{
+            background-image: url("background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
         .sized-box {
-            height: 250px;
+            height: 470px;
         }
 
         p {
@@ -41,7 +50,7 @@
         }
 
         button {
-            background-color: #4CAF50;
+            background-color: #201809;
             /* Green */
             border: none;
             color: white;
@@ -61,16 +70,25 @@
 <body>
 
     <nav>
-        <div class="nav-wrapper green">
-            <a href="#" class="brand-logo center">Monster Roar</a>
+        <div class="nav-wrapper bg-black">
+            <a href="#" class="brand-logo center  ">Monster Roar</a>
         </div>
     </nav>
     <div class="sized-box"></div>
-    <p><b>Hey there, please click over this button ...</b></p>
-    <button type="button" class="roar-btn">Roar</button>
+    <p><b class="white-text">Hey there, please click over this button ...</b></p>
+    <button type="button" class="red-text roar-btn"><b>Roar</b></button>
     <audio src="roar.wav" id="roar"></audio>
     <div class='s-box'></div>
-    <p class="footer-copyright">Made proudly by <b>Yashodip Beldar</b> ...</p>
+    
+    
+<footer class="bg-black text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(248, 218, 218, 0.2);">
+        <p class="white-text footer-copyright white-text ">Made proudly by <b class="red-text"> <a href="https://github.com/Mr-Yash-beldar">Yashodip Beldar</b></a> ...</p>
+     
+    </div>
+    <!-- Copyright -->
+  </footer>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
