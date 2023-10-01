@@ -1,0 +1,47 @@
+.registration-form {
+  margin: 4rem 6rem;
+  color: #2a2a2a;
+}
+
+.registration-form form {
+  margin: 1rem 6rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+.registration-form input {
+  height: 3rem;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  border-radius: 9px;
+  border: 1px solid #7825c6;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.registration-form input::placeholder {
+  color: #7825c6;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.registration-form textarea {
+  height: 5rem;
+  padding: 1 1rem;
+  margin-bottom: 1rem;
+  border-radius: 9px;
+  border: 1px solid #7825c6;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.registration-form textarea::placeholder {
+  color: #7825c6;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media screen and (max-width: 555px) {
+  .registration-form {
+    margin: 3rem 2rem;
+  }
+  .registration-form form {
+    padding-top: 2rem;
+    width: 90%;
+    margin: 0;
+  }
+}

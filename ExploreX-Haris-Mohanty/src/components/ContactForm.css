@@ -1,0 +1,39 @@
+.form {
+  margin: 4rem 6rem;
+  color: #2a2a2a;
+}
+
+.form form {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+}
+.form input {
+  height: 3rem;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+  border-radius: 9px;
+  border: 1px solid #2a2a2a;
+}
+.form textarea {
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+  border-radius: 9px;
+  border: 1px solid #2a2a2a;
+}
+
+.form button {
+  display: inline;
+}
+
+@media screen and (max-width: 555px) {
+  .form {
+    margin: 3rem 2rem;
+  }
+  .form form {
+    padding-top: 2rem;
+    width: 90%;
+  }
+}
