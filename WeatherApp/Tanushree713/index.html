@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Weather</title>
+    <style>
+    body{
+         background-color:#fff;    
+         display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+    .container{
+        height: 60vh;
+        width: 68%;
+       text-align: center;
+        border: 2px solid grey;
+    }
+    #input{
+        width:  48%;
+        height: 5vh;
+        font-size: 25px ;
+        font-weight: 600 ;
+        border-radius: 20px;
+        border: none;
+        box-shadow:  0px 0 px 5px solid grey;
+        margin-top: 10px;
+        background-color: rgb(37, 64, 64);
+        padding-left: 20px;
+        color: rgb(12, 215, 147);
+
+
+    }
+    #font{
+      margin-right: 10px;
+      position: absolute;
+      z-index: 1;
+      top: 4%;
+      right: 33%;
+      color: rgb(250, 253, 255);
+
+    }
+    img[alt="img"]{
+      padding-top: 20px;
+      height: 27vh;
+      width: 16vw;
+     
+    }   
+    #temp{
+        font-size: 36px;
+        font-weight: 600;
+        color: rgb(34, 92, 143);
+        position: absolute;
+        top: 39%;
+        left: 45%;
+    } 
+    #submit{
+        font-size:24px ;
+        font-weight:600 ;
+        color: rgb(167, 227, 78);
+        margin-top: 57px;
+        padding: 8px 20px;
+        border-radius: 16px;
+        border: none;
+        background-color: rgb(4, 66, 20);
+
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" value="" id="input" placeholder="Enter Your City">
+        <i  class="fa-solid fa-magnifying-glass"  id="font"></i>
+        <div class="container1">
+            <span id="img"><img src="./weatherimg.png" alt="img"></span>
+            <span id="temp"> 25 &deg; Celsius</span>
+        </div>
+        <button id="submit" onclick="weather()">Submit</button>
+    </div>
+    <script src="./server.js"></script>
+</body>
+</html> 
