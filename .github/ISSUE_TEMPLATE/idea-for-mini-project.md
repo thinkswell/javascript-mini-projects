@@ -1,8 +1,8 @@
 ---
-name: Idea for Mini-Project
-about: Suggest an idea for this project...
+name: {APPNAME} <- Update this with the app's name 
+about: Create a new issue for javascript mini-projects...
 title: ''
-labels: good first issue, hacktober2020, hacktoberfest
+labels: good first issue, hacktoberfest, hacktoberfest2023
 assignees: ''
 
 ---
