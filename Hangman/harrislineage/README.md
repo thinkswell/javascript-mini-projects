@@ -5,7 +5,7 @@ A simple take on the classic Hangman game, implemented in pure JavaScript. Test 
 Can you beat the High Score: 98.57?
 
 ## Demo
-![Hangman Game Screenshot](screenshot.png)
+![Hangman Game Screenshot](https://github.com/harrislineage/javascript-mini-projects/assets/80127898/6b861503-d46e-4eed-bfda-e2b369761cb7)
 
 ## Features
 
