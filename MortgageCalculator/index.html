@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <h1>Mortgage Calculator</h1>
+    <div id="calculator-container">
+        <form id="mortgage-form">
+            <div class="form-group">
+                <label for="homePrice">Home Price ($):</label>
+                <input type="number" id="homePrice" placeholder="Enter home price">
+            </div>
+
+            <div class="form-group">
+                <label for="downPayment">Down Payment ($):</label>
+                <input type="number" id="downPayment" placeholder="Enter down payment">
+            </div>
+
+            <div class="form-group">
+                <label for="interestRate">Interest Rate (%):</label>
+                <input type="number" id="interestRate" placeholder="Enter interest rate">
+            </div>
+
+            <div class="form-group">
+                <label for="loanTerm">Loan Term (years):</label>
+                <input type="number" id="loanTerm" placeholder="Enter loan term">
+            </div>
+
+            <input type="button" value="Calculate" id="calculateButton">
+        </form>
+        <div id="result" style="display: none;">
+            <div class="result-item">
+                <div class="result-label">Loan Amount</div>
+                <div class="result-value" id="totalLoanAmount">$...</div>
+            </div>
+
+            <div class="result-item">
+                <div class="result-label"> + Loan Interest</div>
+                <div class="result-value" id="totalInterest">$...</div>
+            </div>
+
+            <div class="result-item">
+                <div class="result-label"> = Total of Loan Payments</div>
+                <div class="result-value" id="totalLoanPayments">$...</div>
+            </div>
+
+            <hr>
+
+            <div class="result-item">
+                <div class="result-label">Monthly Principal</div>
+                <div class="result-value" id="monthlyPrincipal">$...</div>
+            </div>
+
+            <div class="result-item">
+                <div class="result-label"> + Monthly Interest</div>
+                <div class="result-value" id="monthlyInterest">$...</div>
+            </div>
+
+            <div class="result-item" id="monthlyValue">
+                <div class="result-label"> = Total Monthly Payment</div>
+                <div class="result-value" id="monthlyPayment">$...</div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
