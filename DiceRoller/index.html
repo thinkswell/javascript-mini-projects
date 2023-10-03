@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+    <!-- Defer attribute to make sure document is loaded before executing JS -->
+</head>
+
+<body>
+    <div class="dice-container"></div>
+    <div class="row"><h1>Total:&nbsp;</h1><h1 class="total"></h1></body></div>
+    <div class="dice-inputs">
+        <label for="numberOfDice">Number of Dice</label>
+        <input class="numberOfDice" name="numberofDice" />
+
+        <label for="dieSize">Choose a size:</label>
+
+        <select name="diesizes" id="dieSize">
+            <option value="d4">D4</option>
+            <option value="d6">D6</option>
+            <option value="d10">D10: 1-10</option>
+            <option value="d100">D10: 10-100</option>
+            <option value="d12">D12</option>
+            <option value="d20">D20</option>
+        </select>
+        <label for="modifier">Modifier</label>
+        <input class="modifier" name="modifier" />
+    </div>
+    <div class="row"><button type="button" class="btn-roll-dice">Roll Dice</button>&nbsp;<button type="button" class="reset">Reset</button></div>
+</body>
+
+</html>
