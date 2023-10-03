@@ -1,10 +1,9 @@
 ---
-name: {APPNAME} <- Update this with the app's name 
+name: APPNAME <- Update this with the app's name 
 about: Create a new issue for javascript mini-projects...
 title: ''
 labels: good first issue, hacktoberfest, hacktoberfest2023
 assignees: ''
-
 ---
 
 # Develop a Javascript {APPNAME} app.
