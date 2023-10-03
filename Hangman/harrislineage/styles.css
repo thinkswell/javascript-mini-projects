@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    width: 35px;
+}
+
+canvas {
+    margin-top: 30px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+#data {
+    float: right;
+}
+
+.hangman-container {
+    max-width: 75vw;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.hangman-phrase {
+    font-size: 24px;
+    margin: 20px 0;
+    letter-spacing: 3px;
+}
+
+.hangman-ascii {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.hangman-input button {
+    padding: 5px 10px;
+    font-size: 20px;
+    background-color: #0080ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.hangman-input button:hover {
+    background-color: #004fa3;
+}
