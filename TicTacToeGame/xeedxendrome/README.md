@@ -1,10 +1,10 @@
 A website built with HTML,CSS,Javascript
 <div align="center">
-    <img src="/screenshots/z.png" width="400px"</img> 
+    <img src="TicTacToeGame\xeedxendrome\screenshots\z.png" width="400px"</img> 
 </div>
 
 <div align="center">
-    <img src="/screenshots/a.png" width="400px"</img> 
+    <img src="TicTacToeGame\xeedxendrome\screenshots\a.png" width="400px"</img> 
 </div>
 
 ## How to use
