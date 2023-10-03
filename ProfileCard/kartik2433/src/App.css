@@ -1,0 +1,14 @@
+button{
+  background-color : green;
+  color: yellow;
+  font-size: 25px;
+  height: 35px;
+  width: auto;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
