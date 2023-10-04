@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronomy Picture Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Astronomy Picture of the Day</h1>
+        <div id="picture-container">
+            <img id="apod-image" alt="Astronomy Picture">
+            <div id="apod-details">
+                <h2 id="apod-title"></h2>
+                <p id="apod-explanation"></p>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
