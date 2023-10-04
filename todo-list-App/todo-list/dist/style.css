@@ -1,0 +1,417 @@
+:root {
+  --primary-dark: #333;
+  --secondary-dark: #444;
+  --primary-light: #eee;
+  --secondary-light: #ddd;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  /* footer support */
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  /* footer support */
+  margin-bottom: 48px;
+}
+
+button,
+input {
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+i {
+  margin-right: 10px;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-check-double {
+  font-size: 40px;
+}
+
+.page-name {
+  font-family: 'Yusei Magic', sans-serif;
+  font-size: 40px;
+}
+
+.button-open-nav {
+  display: none;
+  width: 40px;
+  padding: 0;
+  background-color: var(--primary-dark);
+  font-size: 40px;
+}
+
+.button-open-nav i {
+  margin-right: 0;
+}
+
+/* Main */
+
+.main {
+  display: flex;
+  /* navbar support */
+  min-height: calc(100vh - 104px - 48px); /*  - header_height - footer_height */
+}
+
+.nav {
+  width: 300px;
+  min-width: 250px;
+  padding: 20px;
+  background-color: var(--secondary-light);
+}
+
+.nav.active {
+  display: block;
+}
+
+.button-default-project {
+  background-color: var(--secondary-light);
+  text-align: left;
+}
+
+.fa-inbox {
+  margin-right: 6px;
+}
+
+.projects-title {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.button-project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--secondary-light);
+  text-align: left;
+}
+
+.button-add-project {
+  margin-top: 10px;
+  margin-left: 2px;
+  background-color: var(--secondary-light);
+  text-align: left;
+}
+
+.button-add-project.active {
+  display: none;
+}
+
+.button-project.active,
+.button-default-project.active {
+  background-color: #ccc;
+  font-weight: bold;
+}
+
+.button-project:hover,
+.button-default-project:hover,
+.button-add-project:hover {
+  background-color: #ccc;
+}
+
+.right-project-panel {
+  visibility: hidden;
+}
+
+.button-project:hover .right-project-panel {
+  visibility: visible;
+}
+
+.fa-times {
+  margin-right: 0;
+}
+
+.add-project-popup {
+  display: none;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.add-project-popup.active {
+  display: block;
+}
+
+.input-add-project-popup {
+  border: 1px solid #aaa;
+  margin-bottom: 10px;
+}
+
+.add-project-popup-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.button-add-project-popup {
+  border: 1px solid #99dd99;
+  background-color: #aaffaa;
+  font-weight: bold;
+}
+
+.button-cancel-project-popup {
+  border: 1px solid #eeadad;
+  background-color: #ffbebe;
+  font-weight: bold;
+}
+
+.button-add-project-popup:hover {
+  background-color: #a6f0a6;
+}
+
+.button-cancel-project-popup:hover {
+  background-color: #f5b2b2;
+}
+
+.project-preview {
+  width: 900px;
+  padding: 20px 40px;
+  margin: 0 auto;
+}
+
+.project-preview h1 {
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+.button-task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: var(--primary-light);
+  cursor: default;
+}
+
+.button-task:hover {
+  background-color: var(--secondary-light);
+}
+
+.left-task-panel {
+  display: flex;
+  align-items: center;
+}
+
+.fa-circle {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.task-content {
+  cursor: pointer;
+}
+
+.task-content.active {
+  display: none;
+}
+
+.input-task-name {
+  display: none;
+  height: 24px;
+  padding: 5px;
+  border: 1px solid #555;
+  background-color: var(--primary-light);
+  color: inherit;
+  font-family: inherit;
+}
+
+.input-task-name.active {
+  display: block;
+}
+
+.right-task-panel {
+  display: flex;
+  align-items: center;
+}
+
+.due-date {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.due-date.active {
+  display: none;
+}
+
+.input-due-date {
+  display: none;
+  height: 24px;
+  padding: 5px;
+  border: 1px solid #555;
+  margin: 0 10px;
+  background-color: var(--primary-light);
+  color: inherit;
+  font-family: inherit;
+}
+
+.input-due-date.active {
+  display: block;
+}
+
+.button-task .right-task-panel i {
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.button-task:hover .right-task-panel i {
+  visibility: visible;
+}
+
+.button-add-task {
+  display: block;
+  padding-left: 15px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.button-add-task.active {
+  display: none;
+}
+
+.button-add-task:hover {
+  background-color: var(--secondary-light);
+}
+
+.add-task-popup {
+  display: none;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.add-task-popup.active {
+  display: block;
+}
+
+.input-add-task-popup {
+  border: 1px solid #aaa;
+  margin-bottom: 10px;
+}
+
+.add-task-popup-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.button-add-task-popup {
+  border: 1px solid #99dd99;
+  background-color: #aaffaa;
+  font-weight: bold;
+}
+
+.button-cancel-task-popup {
+  border: 1px solid #eeadad;
+  background-color: #ffbebe;
+  font-weight: bold;
+}
+
+.button-add-task-popup:hover {
+  background-color: #a6f0a6;
+}
+
+.button-cancel-task-popup:hover {
+  background-color: #f5b2b2;
+}
+
+/* Footer */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  font-size: 18px;
+}
+
+.fa-github {
+  color: var(--primary-light);
+  font-size: 22px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+/* Media queries */
+
+@media (max-width: 650px) {
+  .button-open-nav {
+    display: block;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .nav {
+    width: 100%;
+    display: none;
+  }
+
+  .project-preview {
+    width: 100%;
+  }
+
+  .right-task-panel {
+    justify-content: flex-end;
+    max-width: 33%;
+  }
+}
