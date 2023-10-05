@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: bubkoo/welcome-action@v1
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{***}}
           FIRST_ISSUE: >
             👋 @{{ author }}
             
