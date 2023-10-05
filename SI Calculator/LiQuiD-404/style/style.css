@@ -1,0 +1,117 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(135deg,#8E2DE2,#4A00E0);
+}
+.container{
+    background-color: #202020;
+    height: 567px;
+    width: 400px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 8px;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.35);
+    padding: 0 50px;
+}
+.container *{
+    border: none;
+    outline: none;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+input{
+    display: block;
+    height: 40px;
+    width: 300px;
+    position: absolute;
+    background-color: #4d4d4d;
+    color: #ffffff;
+    padding: 0 15px;
+    font-weight: 300;
+    border-radius: 5px;
+    
+}
+label{
+    display: inline-block;
+    color: #e5e5e5;
+    cursor: pointer;
+    font-size: 12px;
+    position: absolute;
+    
+    
+}
+#principal{
+    bottom: 423px;
+}
+label[for = "principal"]{
+    bottom: 474px;
+}
+#rate{
+    bottom: 338px;
+}
+label[for = "rate"]{
+    bottom: 391px;
+}
+#time{
+    bottom: 260px;
+}
+label[for = "time"]{
+    bottom: 310px;
+}
+#result{
+    bottom: 91px;
+}
+label[for = "result"]{
+    bottom: 148px;
+}
+
+::placeholder{
+    color: transparent;
+}
+.my-style::placeholder{
+    color: #a5a5a5;
+}
+button{
+    width: 300px;
+    position: absolute;
+    bottom: 193px;
+    padding: 15px 0;
+    background-color: #8E2DE2;
+    color: #ffffff;
+    border-radius: 5px;
+}
+#title{
+    border: none;
+    outline: none;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    position: relative;
+    color: #ffffff;
+    top: 29px;
+    left: 26px;
+}
+#reset{
+    width: 85px;
+    position: absolute;
+    bottom: 25px;
+    left: 263px;
+    padding: 15px 0;
+    background-color: #8E2DE2;
+    color: #ffffff;
+    border-radius: 5px;
+}
+

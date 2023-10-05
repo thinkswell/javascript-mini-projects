@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest Calculator</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div class="container"> 
+        <p id="title">Simple Interest Calculator</p>   
+            <input type="text" id="principal">
+            <label for="principal">Enter Principal Amount ( ₹ ) :</label>
+            <input type="text" id="rate">
+            <label for="rate">Rate of Interest ( % ) :</label>
+            <input type="text" id="time">
+            <label for="time">Time Period involved in Years :</label>
+
+            <input type="text" id="result" readonly value="0.0">
+            <label for="result">Total Accrued Amount ( ₹ ) :</label>
+
+            <button onclick="getInputValue()">Calculate</button>
+            <button id="reset" onclick="reset()">Reset</button>
+    </div>
+
+
+</body>
+<script src="script/script.js"></script>
+
+</html>
