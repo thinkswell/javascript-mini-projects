@@ -1,4 +1,4 @@
-#### Develoer Checklist
+#### Developer Checklist
 - [ ] Followed guidelines mentioned in the readme file.
 - [ ] Followed directory structure. (e.g. ProjectName/{USERNAME}/...yourfiles)
 - [ ] Starred ⭐ the Repo (Optional)
