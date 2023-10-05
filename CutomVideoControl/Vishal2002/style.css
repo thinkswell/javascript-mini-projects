@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:wght@700&display=swap');
+body{
+   
+    font-family: 'Gabarito', cursive;
+
+background: linear-gradient(-45deg, #ee7752, #ebeb6a, #23a6d5, #b363ba);
+background-size: 500% 500%;
+animation: gradient 15s ease infinite;
+}
+
+.video-js .vjs-big-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+#video-title {
+    font-size: 3rem;
+    color: black;
+    
+
+    text-align: center;
+}
+
+/* Animation for the video title */
+.animated-title {
+    animation: fadeInUp 1.5s ease;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
