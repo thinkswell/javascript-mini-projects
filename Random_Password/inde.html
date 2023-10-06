@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Password Generator</title>
+</head>
+<body>
+  <div class="container">
+    <h2 class="title">Password Generator</h2>
+    <label class="box">
+      <input id="range" class="range" type="range" min="7" max="15"/>
+      <span>Length: <span id="length">11</span></span>
+    </label>
+    <div class="box">
+      <label class="toggle">
+        <span>Include uppercase</span>
+        <input id="uppercase" type="checkbox" value="1" />
+      </label>
+    </div>
+    <div class="box">
+      <label class="toggle">
+        <span>Include numbers</span>
+        <input id="number" type="checkbox" value="1" />
+      </label>
+    </div>
+    <div class="box">
+      <label class="toggle">
+        <span>Include symbols</span>
+        <input id="symbols" type="checkbox" value="1" />
+      </label>
+    </div>
+    <div class="action">
+      <div class="field">
+        <input id="password" class="password" type="text" placeholder="Password" readonly/>
+        <svg id="clipboard" class="icon" viewBox="0 0 384 512" width="12" title="clipboard">
+          <path d="M384 112v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112c0-26.51 21.49-48 48-48h80c0-35.29 28.71-64 64-64s64 28.71 64 64h80c26.51 0 48 21.49 48 48zM192 40c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24m96 114v-20a6 6 0 0 0-6-6H102a6 6 0 0 0-6 6v20a6 6 0 0 0 6 6h180a6 6 0 0 0 6-6z" />
+        </svg>
+      </div>
+      <div class="buttons">
+          <button id="generate_button">Generate Password</button> 
+          <span class="message" id="message"></span>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
+
+
