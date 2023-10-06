@@ -1,0 +1,167 @@
+:root{
+    --primary:#7c26fc;
+    --fade:#7c26fc20;
+  }
+  
+  *{
+    box-sizing:border-box;
+  }
+  
+  html, body{
+    height:100%;
+    margin:0;
+    font-family:Arial;
+    font-size:12px;
+  }
+  
+  body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:var(--primary);
+  }
+  
+  label{
+    display:block;
+  }
+  
+  .container{
+    max-width:500px;
+    width:100%;
+    height:375px;
+    
+    background:#fff;
+    border-radius:8px;
+    box-shadow:0 0 5px #00000080;
+    padding:0.75em;
+    
+    overflow:hidden;
+  }
+  
+  .title{
+    text-align:center;
+  }
+  
+  .range{
+    -webkit-appearance: none;
+    width:100%;
+    background:#884fe3;
+    height:6px;
+    border-radius:6px;
+    margin:0;
+  }
+  
+  .range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    cursor:pointer;
+    width:16px;
+    height:16px;
+    background:#fff;
+    box-shadow:0 0 5px #00000040;
+    border:1px solid #00000040;
+    border-radius:50%;
+  }
+  
+  .box{
+    background:var(--fade);
+    padding:0.5em;
+    border-radius:6px;
+    margin:0.5em 0;
+  }
+  
+  .toggle{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:1.25em;
+  }
+  
+  input[type=checkbox]{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+    width:2.5em;
+    height:1.5em;
+    position:relative;
+    background:#fff;
+    border-radius:50px;
+  }
+  
+  input[type=checkbox]:before{
+    content:'';
+    width:16px;
+    height:16px;
+    position:absolute;
+    top:50%;
+    left:0;
+    transform:translateY(-50%);
+    background:#666666;
+    border-radius:50%;
+    transition:all ease 0.25s;
+  }
+  
+  input[type=checkbox]:checked:before{
+    left:50%;
+    background:var(--primary);
+  }
+  
+  .field{
+    display:flex;
+    align-items:center;
+    padding:0.5em;
+    border:1px solid #00000040;
+    outline:none;
+    border-radius:8px;
+  }
+  
+  .field .icon{
+    cursor:pointer;
+    fill:#666;
+  }
+  
+  .password{
+    width:100%;
+    text-align:center;
+    padding:0.5em;
+    border:none;
+    outline:none;
+    transition:all ease 0.25s;
+  }
+  
+  .buttons{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:0.25em;
+    margin:1em 0;
+  }
+  
+  .buttons button{
+    cursor:pointer;
+    width:100%;
+    padding:0.75em;
+    color:#fff;
+    background:var(--primary);
+    border:none;
+    border-radius:6px;
+    transition:all ease 0.5s;
+  }
+  
+  .buttons button:active{
+    transform:scale(0.95);
+  }
+  
+  .message{
+    color:#09ad3d;
+    padding:0.5em;
+  }
+  
+  .message:not(:empty){
+    animation:fade ease 0.5s forwards;
+  }
+  
+  @keyframes fade{
+    from{ opacity:0; }
+    to{ opacity:1; }
+  }
