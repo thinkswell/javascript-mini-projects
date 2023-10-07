@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="Index.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="/TicTac.png">
+    <link rel="stylesheet" href="Index.css" />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <div id="loading-screen">
+      <h3>Play VS</h3>
+      <button class="load-btn" onclick="setRival('human')">Human</button>
+      <span> or </span>
+      <button class="load-btn" onclick="setRival('computer')">Computer</button>
+    </div>
+    <div id="game-box">
+      <div class="board" id="board">
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+      </div>
+      <button disabled id="undo-btn">Undo</button>
+      <div class="winning-message" id="wMessage">
+        <div id="text"></div>
+      </div>
+    </div>
+  </body>
+</html>
