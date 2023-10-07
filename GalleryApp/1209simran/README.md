@@ -1,1 +1,0 @@
-React-Redux Photogallery application
