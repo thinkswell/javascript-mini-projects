@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* header ............................... */
+header {
+    background-color: rgb(8, 32, 110);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: red;
+}
+
+.navlist ul {
+    display: flex;
+}
+
+.navlist ul li {
+    /* border: 1px solid red; */
+    margin: 0 0.5rem;
+}
+
+.navlist ul li a {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.header-right {
+    display: flex;
+    gap: 2rem;
+}
+
+
+/* main seciton ......................................  */
+
+.password-section {
+    background-color: #063e5e;
+    border-radius: 0% 0 0 0;
+}
+
+/* .password-section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #063e5e;
+    z-index: -1;
+    border-radius: 0 0 50% 50%;
+    transform: scale(1.5);
+} */
+.password-section-container {
+    max-width: 70vw;
+    margin: auto;
+    padding: 5rem 0;
+}
+
+.password-section-container h1 {
+    color: white;
+    text-align: center;
+}
+
+.password-generator-container {
+    padding: 5rem 0;
+}
+
+.password-container h2 {
+    color: rgb(255, 199, 57);
+}
+
+.password {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.password h2 {
+    letter-spacing: 4px;
+    color: rgb(0, 47, 255);
+    word-wrap: break-word;
+}
+
+.generator-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.generate-btn {
+    background: linear-gradient(40deg, rgb(7, 234, 241), rgb(214, 7, 255));
+    font-size: 1.5rem;
+    padding: 0.4rem 0.3rem;
+    border-radius: 20px;
+    border: none;
+}
+
+.generate-btn:hover {
+    cursor: pointer;
+    background: linear-gradient(40deg, rgb(214, 7, 255), rgb(7, 234, 241));
+}
+
+.copy-btn {
+    font-size: 1.3rem;
+    padding: 0.2rem 0.4rem;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.copy-btn:hover {
+    background: linear-gradient(40deg, rgb(214, 7, 255), rgb(7, 234, 241));
+    cursor: pointer;
+}
+
+.copy-text-alert {
+    color: rgb(15, 218, 245);
+    font-size: 1.8rem;
+    text-align: center;
+    display: none;
+}
+
+.show-copy-alert {
+    display: block;
+}
+
+/* .customization-section.......................... */
+.customization-section {
+    border: 1px solid red;
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 2rem 0;
+    text-align: center;
+    color: white;
+}
+
+.length-section {
+    font-size: 1.5rem;
+
+}
+
+.num {
+    padding: 1rem 0;
+    font-size: 1.4rem;
+}
+
+label {
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+}
+
+.symbol {
+    font-size: 1.4rem;
+}
+
+input[type=checkbox] {
+    transform: scale(1.7);
+}
+
+input[type=checkbox]:hover {
+    cursor: pointer;
+}
+
+#length {
+    /* -webkit-appearance: none; */
+    height: 10px;
+    border-radius: 5px;
+    background: #ff6767;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+#length:hover {
+    opacity: 1;
+}
+
+/* .c-password-generator__slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    outline: none;
+} */
+
+
+/* add responsive for mobile devices. ................ */
+@media (max-width:600px) {
+
+    .password-section-container {
+        max-width: 90vw;
+    }
+
+
+
+}

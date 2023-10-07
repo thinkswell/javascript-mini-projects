@@ -1,0 +1,130 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --cell-size: 100px;
+  --mark-size: calc(var(--cell-size) * 0.5);
+}
+
+body {
+  margin: 0;
+  text-align: center;
+}
+
+.board {
+  width: 100vw;
+  margin: 20px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+}
+
+.board.game-ended, .board.disabled {
+  pointer-events: none;
+}
+
+.load-btn {
+  background: lightskyblue;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 15px;
+  box-shadow: rgb(16 24 28 / 50%) -1px 5px 8px 0px;
+}
+
+.cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border: 1px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+#game-box {
+  display: none;
+}
+
+.cell.x,
+.cell.circle {
+  pointer-events: none;
+}
+
+.cell.x::before,
+.cell.x::after,
+.cell.circle::before {
+  background-color: blue;
+}
+
+.cell.x::before,
+.cell.x::after {
+  content: '';
+  position: absolute;
+  width: calc(var(--mark-size) * 0.15);
+  height: var(--mark-size);
+}
+
+.cell.x::before {
+  transform: rotate(45deg);
+}
+
+.cell.x::after {
+  transform: rotate(-45deg);
+}
+
+.cell.circle::before,
+.cell.circle::after,
+.board.circle .cell:not(.x):not(.circle):hover::before,
+.board.circle .cell:not(.x):not(.circle):hover::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+
+.cell.circle::before,
+.board.circle .cell:not(.x):not(.circle):hover::before {
+  width: var(--mark-size);
+  height: var(--mark-size);
+}
+
+.cell.circle::after,
+.board.circle .cell:not(.x):not(.circle):hover::after {
+  width: calc(var(--mark-size) * 0.7);
+  height: calc(var(--mark-size) * 0.7);
+  background-color: white;
+}
+
+.winning-message {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  flex-direction: column;
+}
+
+.winning-message button {
+  font-size: 3rem;
+  background-color: white;
+  border: 1px solid blue;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+}
+
+.winning-message button:hover {
+  background-color: blue;
+  color: white;
+  border-color: white;
+}
+
+.winning-message.show {
+  display: flex;
+}
