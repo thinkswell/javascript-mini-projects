@@ -1,0 +1,381 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: auto;
+}
+
+body{
+    background-image: url('1091423.webp');
+}
+header{
+    text-align: center;
+    padding: 1rem 0;
+    background-image: url('OIP\ \(3\).jpeg');   
+    color: rgb(0, 0, 2);
+}
+
+.uil-github{
+    font-size: 3rem;
+}
+.uil-github:hover{
+    color: red;
+}
+.about{
+    text-align: center;
+     font-size: 1.3rem;
+}
+.about h3{
+    font-size: 2rem;
+    color: aquamarine;
+}
+.about p{
+    font-size: 1.2rem;
+}
+.container{
+    background-color: rgb(245, 28, 28);
+    width: 80%;
+    height: auto;
+    max-width: 1100px;
+    margin: 5rem auto;
+    border-radius: 20px;
+   box-shadow: 30px 25px 32px rgb(17, 75, 233);
+}
+
+.score-time{
+    background-color: rgb(208, 247, 234);
+    display: flex;
+    justify-content: space-around;
+}
+.score-board{
+ background-color: aquamarine;
+ display: flex;
+ justify-content: center;
+ margin: 0 1rem;
+}
+.score{
+ font-size: 1.5rem;
+ background-color: rgb(27, 118, 160);
+ padding-left: 1rem;
+ color: rgb(220, 238, 253);
+
+}
+.score h3{
+    color: white;
+    
+}
+.score p{
+    text-decoration: underline;
+}
+.time-board{
+ background-color: rgb(153, 255, 192);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.time-left{
+    font-size: 1.4rem;
+    padding-left: 1rem;
+    background-color: rgb(252, 179, 179);
+}
+.time-left p{
+    text-decoration: underline;
+    color: rgb(110, 106, 110);
+}
+.time{
+  font-size: 1.4rem;
+  
+}
+.uil-clock-nine{
+  font-size: 2rem;
+  color: brown;
+}
+.uil-medal{
+    font-size: 2.5rem;
+    color: red;
+    
+}
+.about-user{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.about-user p{
+    font-size: 1.4rem;
+    color: red;
+    font-weight: bold;
+    background-color: rgb(215, 234, 250);
+}
+.display-massage{
+    background-color: rgb(221, 219, 219);
+    text-align: center;
+    padding: 0.8rem 0;
+     margin: 0.5rem 0;
+     font-size: 1.7rem;
+}
+
+.quiz-container{
+    background-color: #e6f0ff;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.question-section{
+    border: 1px solid rgb(43, 7, 207);
+    width: 85%;
+    border-radius: 20px;
+    margin: auto;
+}
+.question-title-no{
+ text-align: center;
+ font-size: 2rem;
+  color: rgb(130, 131, 136);
+  text-shadow: 9px 2px 5px  rgb(0, 0, 0);
+  padding: 0.6rem 0;
+}
+.question{
+    color: rgb(10, 10, 10);
+    padding: 1rem 0;
+    text-align: center;
+    text-shadow: 4px 5px 4px rgb(116, 113, 113);
+    font-size: 1.6rem;
+}
+.answers{
+  padding: 1rem;
+}
+.ans{
+    border: 1px solid rgb(247, 181, 181);
+    margin-bottom: 1rem;
+    height: auto;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+ label{
+    font-size: 1.2rem;
+    
+    margin: 2rem 0;
+    color: rgb(0, 0, 0);
+    padding-left: 0.3rem;
+    word-wrap: break-word;
+}
+.check{
+  cursor: pointer;
+}
+.swap-btns{
+    display:flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+.btn{
+    border: none;
+    background-color: aqua;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.btn:hover{
+    background-color: rgb(58, 112, 58);
+}
+.prev-btn{
+    background-color: rgb(150, 150, 150);
+}
+.submit-btn{
+    background-color: rgb(9, 204, 42);
+    display: none;
+}
+.submit-btn:hover{
+    color: white;
+}
+@media (max-width:600px) {
+
+    body{
+        font-size: 1rem;
+    }
+   .container{
+    width: 100%;
+    font-size: 2rem;
+   }
+   .question-section{
+    width: 100%;
+   }
+   .about-user{
+    font-size: 1rem;
+   }
+
+}
+.start-section{
+    position: absolute;
+    top: 20%;
+    padding: 6rem 0;
+    width: 100%;
+    /* left: 10%; */
+    text-align: center;
+    background-color: rgb(192, 243, 192);
+    border: 1px solid red;
+}
+.start-section-hide{
+    display: none;
+}
+.start-btn{
+    background-color: red;
+}
+.start-section .start-btn{
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: rgb(243, 144, 120);
+    border-radius: 10px;
+    font-size: 1rem;
+}
+.start-section button:hover{
+    background-color: rgb(153, 240, 218);
+    cursor: pointer;
+}
+.start-section h1{
+    color: green;
+    font-size: 2.5rem;
+    
+}
+.name-btn{
+    background-color: green;
+    padding: 0.3rem 1rem;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 20px;
+    border: none;
+}
+
+.start-section h3{
+    color: rgb(228, 72, 72);
+    padding: 1rem 0 0.5rem 0;
+}
+.entry-form{
+    margin: 1rem 0;
+}
+.collect-name{
+    width: 30%;
+    border: none;
+    padding: 0.4rem 0.6rem;
+    border-radius: 10px;
+}
+@media (max-width:600px) {
+    .start-section{
+        position: absolute;
+        top: 10%;
+        padding: 7rem 1rem;
+        left: 0%;
+        height: fit-content;
+    }
+    .collect-name{
+        width: 100%;
+    }
+}
+ .flex{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 2rem 1rem 2rem;
+ }
+.complete{
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    right: 15%;
+   padding: 0 ;
+}
+.complete-hide{
+    display: none;
+}
+.cirtificate{
+    background-color: rgb(255, 253, 236);
+    border: 8px dashed red;
+    border-radius: 10px;
+    padding: 2rem 2rem;
+} 
+.complete h1{
+    font-size: 3rem;
+    text-align: center;
+    color: rgb(122, 97, 97);
+}
+.complete h2{
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(175, 136, 212);
+    padding-bottom: 1rem;
+}
+
+.complete .uil-medal{
+    font-size: 5rem;
+    color: gold;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+}
+.complete p{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.cirtificate-name{
+    color: rgb(128, 59, 255);
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 1px solid rgb(212, 172, 172);
+}
+.current-date{
+    font-size: 1.4rem;
+    color: rgb(189, 145, 145);
+   border-bottom: 1px solid rgb(94, 50, 50);
+}
+.signature{
+    color: red;
+   font-weight: lighter;
+    font-family: 'Herr Von Muellerhoff', cursive;
+    border-bottom: 1px solid rgb(78, 38, 38);
+}
+.cirtificate-score{
+    color: rgb(231, 28, 231);
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.cirtificate-btns{
+   display: flex;
+   justify-content: center;
+   column-gap: 1rem;
+   padding: 1rem 0;
+   
+}
+.download-btn{
+   padding: 0.3rem 0.7rem;
+   background-color: rgb(255, 88, 88);
+   color: white;
+   cursor: pointer;
+   border-radius: 20px;
+}
+.cancel-btn{
+    padding: 0.3rem 0.7rem;
+    background-color: rgb(32, 235, 82);
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+}
+@media (max-width:800px) {
+     .complete{
+        left: 0;
+       right: 0;
+       padding: 0;
+     }
+     .cirtificate{
+        padding: 0;
+     }
+     .cancel-btn{
+        font-size: 1.4rem;
+     }
+    .cirtificate-id{
+        text-align: center;
+    }
+}
