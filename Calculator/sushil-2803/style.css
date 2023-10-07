@@ -1,6 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
-  width: 500px;
-  margin: 4% auto;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+  width: 100%;
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 5px;
   font-size: 1.8rem;
@@ -10,16 +19,29 @@ body {
 }
 
 .calculator {
-  padding: 20px;
-  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 1px;
+    border-radius: 2rem;
+    background-color: rgb(225, 225, 255);
+    height: 80%;
+    width: min(400px,95%);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    box-shadow: rgb(38, 57, 77) 0rem 1rem 1.5rem -0.5rem;
+    flex-direction: column;
+
+  /* padding: 20px; */
+ 
+ 
 }
 
 .input {
+    width: 90%;
+    height: 35%;
+    border-radius: 1.5rem;
+    background-color: white;
   border: 1px solid #ddd;
-  border-radius: 1px;
-  height: 60px;
+
+
   padding-right: 15px;
   padding-top: 10px;
   text-align: right;
@@ -35,7 +57,99 @@ body {
   box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
 }
 
-.buttons {}
+.buttons {
+    height: 60%;
+    width: 90%;
+    display: grid;
+    grid-template-rows:repeat(5,1fr);
+    grid-template-columns: repeat(4,1fr);
+   justify-content: space-around;
+   align-items: center;
+    grid-template-areas: 
+    "o1 o2 o3 o4"
+    "n1 n2 n3 eq"
+    "n4 n5 n6 eq"
+    "n7 n8 n9 eq"
+    "n10 n11 n12 eq";
+}
+.o,.n,.eq,.g{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    height: 90%;
+    width: 90%;
+    font-weight: 600;
+    border-radius: 1rem;
+    background-color: white;
+    align-self: center;
+}
+.o{
+    /* height: 100%; */
+    /* width: 96%; */
+    background-color: white;
+    color: #59a800;
+  
+    /* background-color: #c5d8f6; */
+    border-radius: 1rem;
+  
+  
+}
+.g{
+    color: rgb(249, 165, 19);
+}
+.o1{
+    grid-area: o1;
+}
+.o2{
+    grid-area: o2;
+}
+.o3{
+    grid-area: o3;
+}
+.o4{
+    grid-area: o4;
+}
+.n1{
+    grid-area: n1;
+}
+.n2{
+    grid-area: n2;
+}
+.n3{
+    grid-area: n3;
+}
+.n4{
+    grid-area: n4;
+}
+.n5{
+    grid-area: n5;
+}
+.n6{
+    grid-area: n6;
+}
+.n7{
+    grid-area: n7;
+}
+.n8{
+    grid-area: n8;
+}
+.n9{
+    grid-area: n9;
+}
+.n10{
+    grid-area: n10;
+}
+.n11{
+    grid-area: n11;
+}
+.n12{
+    grid-area: n12;
+}
+.eq{
+    grid-area: eq;
+}
+
 
 .operators {}
 
@@ -64,7 +178,8 @@ body {
 }
 
 .leftPanel {
-  display: inline-block;
+ 
+  width: 100%;
 }
 
 .numbers div {
@@ -93,24 +208,20 @@ body {
 
 div.equal {
   display: inline-block;
-  border: 1px solid #3079ED;
-  border-radius: 1px;
-  width: 17%;
+  height: 97%;
+
   text-align: center;
-  padding: 127px 10px;
-  margin: 10px 6px 10px 0;
-  vertical-align: top;
+ display: flex;
+ justify-content: center;
+ align-items: center;
   cursor: pointer;
   color: #FFF;
-  background-color: #4d90fe;
+  background-color: #3f45ff;
   transition: all .2s ease-in-out;
 }
 
 div.equal:hover {
-  background-color: #307CF9;
-  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-  border-color: #1857BB;
+  background-color: #242ef6;
 }
 
 div.equal:active {

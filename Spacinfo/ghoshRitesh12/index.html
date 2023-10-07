@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#1c1c1c">
+	<meta name="description" content="Search for everyday's Astronomy Picture of the 
+    Day-APOD OR for Mars Rover photos taken by the Perseverance Rover OR for Information
+    about planets present in our Solar System. 
+    This website Spacinfo is powered by NASA apis and The Solar System OpenData api">
+
+	<title> Spacinfo | Apod </title>
+	<link rel="stylesheet" href="/Spacinfo/ghoshRitesh12/src/css/main.css" type="text/css">
+	<link rel="stylesheet" href="/Spacinfo/ghoshRitesh12/src/css/page-1.css">
+	<link rel="stylesheet" href="/Spacinfo/ghoshRitesh12/src/css/page-2.css">
+	<link rel="stylesheet" href="/Spacinfo/ghoshRitesh12/src/css/page-3.css">
+
+	<link rel="shortcut icon" href="/Spacinfo/ghoshRitesh12/src/images/galaxy.png" type="image/x-icon">
+	<script type="module" src="/Spacinfo/ghoshRitesh12/src/js/index.js"></script>
+</head>
+
+<body>
+
+	<header class="head">
+
+		<nav class="nav-bar">
+
+			<section class="nav-bar__logo">
+				<div class="nav-bar__logo--text">
+					Spacinfo
+				</div>
+			</section>
+
+			<ul class="nav-bar__menu ">
+
+				<!-- page 1  active class for indication-->
+				<li class="nav-bar__items">
+					<a href="apod" class="nav-bar__links active" data-title="Apod">
+						apod
+					</a>
+				</li>
+
+				<!-- page 2 -->
+				<li class="nav-bar__items">
+					<a href="mars-rover" class="nav-bar__links" data-title="Mars-Rover">
+						mars-rover
+					</a>
+				</li>
+
+				<!-- page 3 -->
+				<li class="nav-bar__items">
+					<a href="planets" class="nav-bar__links" data-title="Planets">
+						planets
+					</a>
+				</li>
+
+			</ul>
+
+			<!-- external overlay -->
+			<div class="nav-bar__menu--overlay"> </div>
+
+		</nav>
+
+		<aside class="hamburger">
+			<span class="top--bar bars"></span>
+			<span class="middle--bar bars"></span>
+			<span class="bottom--bar bars"></span>
+		</aside>
+
+	</header>
+
+
+	<!-- (page__apod) // page__mars-rover // page__planets -->
+	<main class="root page__apod">
+
+		<!-- Page 1 - Apod -->
+		<section class="apod-page--wrapper">
+
+			<section class="apod-sapod__wrap">
+
+				<!-- apod -->
+				<div class="apod__container hstretch"> </div>
+				<template id="apod__template">
+					<section class="apod-section--wrap">
+
+						<div class="apod">
+
+							<section class="apod__topic">
+
+								<h1 class="apod__topic--title">
+									Astronomy Picture of the Day (APOD)
+								</h1>
+								<p class="apod__date"> </p>
+
+							</section>
+
+
+							<section class="apod__image--info-wrap">
+
+								<!-- image -->
+								<figure class="apod__image">
+
+									<div class="apod__image--wrap skeleton skeleton-image">
+										<img class="apod__image--src"
+											src="https://apod.nasa.gov/apod/image/2204/mars_saturn_2022_04_04dp1024.jpg"
+											alt="astronomy picture of the day" />
+
+										<a class="apod__image--hdurlsrc"
+											href="https://apod.nasa.gov/apod/image/2204/IssSunspot_Letian_2400.jpg" target="_blank">
+											See the higher quality image here
+										</a>
+
+										<div class="apod__image--understyle1"> </div>
+										<div class="apod__image--understyle2"> </div>
+									</div>
+
+									<figcaption class="apod__image--copyright">
+										<!-- &copy; name || NASA -->
+									</figcaption>
+
+								</figure>
+
+								<!-- explanation -->
+								<section class="apod__info">
+
+									<h2 class="apod__info--title">
+										<!-- apod image -->
+									</h2>
+
+									<p class="apod__info--explanation">
+
+										<!-- apod image explanation -->
+
+									</p>
+
+									<p class="apod__info--hdurl-wrap skeleton skeleton-apod__hdurl">
+										See the higher
+										<a class="apod__info--hdurl" href="https://apod.nasa.gov/apod/image/2204/IssSunspot_Letian_2400.jpg"
+											target="_blank">
+											quality image here
+										</a>
+									</p>
+
+								</section>
+
+							</section>
+
+						</div>
+
+					</section>
+				</template>
+
+
+				<!-- sapod -->
+				<section class="sapod-section--wrap">
+
+					<!-- s-APOD -->
+					<div class="sapod">
+
+						<!-- for searching APOD -->
+						<section class="sapod__search">
+
+							<h1 class="sapod__search--title">
+								Search for an Astronomy Picture of the Day
+							</h1>
+
+							<input class="sapod__search--date" type="date" value="2012-12-12" aria-label="enter previous dates" />
+
+							<p class="sapod__search--note">
+								(not applicable for future dates)
+							</p>
+
+						</section>
+
+
+						<section class="sapod--info__container"> </section>
+						<template id="sapod__template">
+							<section class="sapod__image--info-wrap">
+
+								<!-- serched-apod image -->
+								<figure class="sapod__image">
+
+									<div class="sapod__image--wrap skeleton skeleton-image">
+										<img class="sapod__image--src"
+											src="https://apod.nasa.gov/apod/image/2204/mars_saturn_2022_04_04dp1024.jpg"
+											alt="searched astronomy picture of the day" />
+
+										<a class="sapod__image--hdurlsrc"
+											href="https://apod.nasa.gov/apod/image/2204/IssSunspot_Letian_2400.jpg" target="_blank">
+											See the higher quality image here
+										</a>
+
+										<div class="sapod__image--understyle1"> </div>
+										<div class="sapod__image--understyle2"> </div>
+									</div>
+
+									<figcaption class="sapod__image--copyright">
+										<!-- &copy; Josh Lake -->
+									</figcaption>
+
+								</figure>
+
+
+								<!-- searched-apod explanation -->
+								<section class="sapod__info">
+
+									<h2 class="sapod__info--title">
+										<!-- Conjunction of Mars-Saturn -->
+									</h2>
+
+									<p class="sapod__info--explanation"></p>
+
+									<p class="sapod__info--hdurl-wrap skeleton skeleton-apod__hdurl">
+										See the higher
+										<a class="sapod__info--hdurl"
+											href="https://apod.nasa.gov/apod/image/2204/mars_saturn_2022_04_04dp.jpg" target="_blank">
+											quality image here
+										</a>
+									</p>
+
+								</section>
+
+							</section>
+						</template>
+
+					</div>
+
+				</section>
+
+			</section>
+
+		</section>
+
+
+		<!-- Page 2 - Mars-rover -->
+		<section class="mars-rover-page--wrapper">
+
+			<section class="mars-rover">
+
+				<div class="mars-rover__topic">
+					<h1 class="mars-rover__topic--title">
+						Mars Rover Photos
+					</h1>
+
+					<nav class="mars-rover__topic--nav">
+						<!-- <  *toggle hidden class* -->
+						<button class="btn previous-btn hidden"> &lt; </button>
+						<!-- > -->
+						<button class="btn next-btn"> &gt; </button>
+					</nav>
+				</div>
+
+				<!-- container for storing <template-list> -->
+				<ul class="mars-rover__list"> </ul>
+
+				<!-- template for filling ul list acc to api data -->
+				<template id="mars-rover__template--list">
+					<li class="mars-rover__items">
+
+						<figure class="mars-rover__card">
+
+							<div class="mars-rover__card--header">
+								<!-- loading="lazy" -->
+								<img class="mars-rover__card--header--img-src skeleton skeleton-image"
+									src="https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/03450/opgs/edr/ncam/NRB_703757935EDR_S0941102NCAM00594M_.JPG"
+									alt="latest mars-rover photo" />
+							</div>
+
+							<figcaption class="mars-rover__card--body">
+
+								<div class="mars-rover__card--body-date">
+
+									<p class="photoInfo skeleton skeleton-text">
+										Photo #<span class="photo-id" id="skeleton-text">961070</span> taken:
+									</p>
+
+									<p class="earth-date skeleton skeleton-text">on April 23, 2022</p>
+
+									<p class="marsDate-wrap skeleton skeleton-text">Mars date(sol) - <span class="mars-date">3450</span>
+									</p>
+
+								</div>
+
+								<p class="mars-rover__card--body-rover skeleton skeleton-text">
+									by <span class="rover-name">Curiosity</span> Rover <span class="rover-status"
+										id="skeleton-text">[active]</span>
+								</p>
+
+								<a class="full-image skeleton" id="skeleton-text"
+									href="https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/03450/opgs/edr/ncam/NRB_703757935EDR_S0941102NCAM00594M_.JPG"
+									target="_blank">
+									Full image
+								</a>
+
+							</figcaption>
+
+						</figure>
+
+					</li>
+				</template>
+
+
+				<!-- for bottom navigation -->
+				<nav class="mars-rover__topic--nav">
+					<button class="btn previous-btn hidden"> &lt; </button>
+					<!-- > -->
+					<button class="btn next-btn"> &gt; </button>
+				</nav>
+
+			</section>
+
+		</section>
+
+
+		<!-- Page 3 - Planets -->
+		<section class="planets-page--wrapper">
+
+			<section class="planets">
+
+				<div class="planets__topic">
+
+					<h1 class="planets__topic--title">
+						Information about planets
+						in our Solar System
+					</h1>
+
+					<section class="planets__topic--select-menu__wrap">
+
+						<select class="planets__topic--select-menu">
+
+							<option selected value="earth"> --Planets-- </option>
+							<option value="mercury"> Mercury </option>
+							<option value="venus"> Venus </option>
+							<option value="earth"> Earth </option>
+							<option value="mars"> Mars </option>
+							<option value="jupiter"> Jupiter </option>
+							<option value="saturn"> Saturn </option>
+							<option value="uranus"> Uranus </option>
+							<option value="neptune"> Neptune </option>
+
+						</select>
+						<span class="custom-arrow"></span>
+
+					</section>
+
+				</div>
+
+
+				<!-- container for <planet template> -->
+				<section class="planets__container"> </section>
+
+				<!-- planet card <template> -->
+				<template id="planets__card--template">
+
+					<section class="planets__card">
+
+						<h1 class="planets__card--title skeleton" id="skeleton-text2">
+							<!-- planet name fillup -->
+						</h1>
+
+						<p class="planets__card--info-local" data-view="mobile">
+							<!-- local information fillup [mobile] -->
+						</p>
+
+						<figure class="planets__card--img-info--wrap">
+
+							<div class="planets__card--img center">
+								<img class="planets__card--img-src skeleton skeleton-image"
+									src="https://images.unsplash.com/photo-1630839437035-dac17da580d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1615&q=80">
+							</div>
+
+
+							<figcaption class="planets__card--info">
+
+								<p class="planets__card--info-local" data-view="desktop">
+									<!-- local information fillup [desktop] -->
+								</p>
+
+								<article class="planets__card--info-foreign">
+
+									<p class="discovered-by bs">
+										<!-- discovered by information fillup -->
+									</p>
+
+									<p class="technical-info">
+										<!-- technical information fillup -->
+									</p>
+
+									<section class="moon">
+										<p class="moon__of skeleton skeleton-text2">The Moon(s) of <span class="name">
+											</span> :</p>
+
+										<ul class="moon__list skeleton" id="skeleton-list">
+
+										</ul>
+
+									</section>
+
+								</article>
+
+							</figcaption>
+
+						</figure>
+
+
+					</section>
+
+				</template>
+
+			</section>
+
+
+
+		</section>
+
+
+	</main>
+
+
+	<footer class="footer">
+		<p class="footer__content">
+			Powered by
+			<a style="margin-left: .3rem;" class="footer__link" href="https://www.nasa.gov/" target="_blank">
+				NASA
+			</a>
+		</p>
+	</footer>
+
+	<noscript>
+		Your need to enable JavaScript in your browser
+		in order to view and run this website
+	</noscript>
+
+</body>
+
+</html>
