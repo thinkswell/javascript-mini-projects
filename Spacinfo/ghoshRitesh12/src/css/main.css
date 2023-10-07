@@ -1,0 +1,405 @@
+/* open-sans-regular - latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/open-sans-v28-latin-regular.woff2") format("woff2"), url("../fonts/open-sans-v28-latin-regular.woff") format("woff");
+  font-display: swap;
+}
+/* open-sans-500 - latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/open-sans-v28-latin-500.woff2") format("woff2"), url("../fonts/open-sans-v28-latin-500.woff") format("woff");
+  font-display: swap;
+}
+/* ubuntu-500 - latin */
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/ubuntu-v19-latin-500.woff2") format("woff2"), url("../fonts/ubuntu-v19-latin-500.woff") format("woff");
+  font-display: swap;
+}
+/*-- General Styles --*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -ms-scroll-chaining: chained;
+      overscroll-behavior: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+svg {
+  display: block;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/*-- End General Styles --*/
+.skeleton {
+  -webkit-animation: skeleton-loading 1s linear infinite alternate;
+          animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@-webkit-keyframes skeleton-loading {
+  0% {
+    background-color: hsl(0deg, 0%, 30%);
+  }
+  100% {
+    background-color: hsl(0deg, 0%, 20%);
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(0deg, 0%, 30%);
+  }
+  100% {
+    background-color: hsl(0deg, 0%, 20%);
+  }
+}
+::-moz-selection {
+  color: #fff;
+  background-color: hsl(265deg, 90%, 70%);
+}
+::selection {
+  color: #fff;
+  background-color: hsl(265deg, 90%, 70%);
+}
+
+html {
+  height: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: hsla(0deg, 0%, 85%, 0.8) #252525;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: hsla(0deg, 0%, 85%, 0.8);
+  border-radius: 1rem;
+  border: 0.3rem solid #252525;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background-color: hsla(0deg, 0%, 85%, 0.6);
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #252525;
+}
+
+body {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: sans-serif;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  z-index: 200;
+  padding-inline: 1rem;
+  width: 100%;
+  margin-inline: auto;
+  background-color: #1c1c1c;
+}
+@media (min-width: 40em) {
+  .head {
+    padding-inline: 1.5rem;
+  }
+}
+@media (min-width: 64em) {
+  .head {
+    padding: 0.5rem 0 0 0;
+  }
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  max-width: 87rem;
+  width: 100%;
+  margin-inline: auto;
+  padding-block: 1rem;
+  background-color: #1c1c1c;
+}
+@media (min-width: 64em) {
+  .nav-bar {
+    padding: 0.7rem 1rem;
+  }
+}
+.nav-bar__logo {
+  display: grid;
+  place-items: center;
+  padding-block: 0.15rem 0;
+}
+.nav-bar__logo--text {
+  font-family: sans-serif;
+  color: hsl(0deg, 100%, 70%);
+  font-size: clamp(1.25rem, 3vmin, 1.4rem);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+@media (min-width: 64em) {
+  .nav-bar__logo {
+    padding-block: 0.2rem;
+  }
+}
+.nav-bar__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: absolute;
+  z-index: 50;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 0 0 0.3rem 0.3rem;
+  text-align: center;
+  background-color: #1c1c1c;
+  transition: 0.4s ease height;
+}
+@media (min-width: 64em) {
+  .nav-bar__menu {
+    gap: 3rem;
+    position: relative;
+    flex-direction: row;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-radius: 0;
+    border: none;
+  }
+}
+.nav-bar__menu.toggle--on {
+  transition: 200ms ease height;
+  height: clamp(12.5rem, 46vmin + 1rem, 18rem);
+}
+.nav-bar__items {
+  padding: 0 0.2rem;
+}
+.nav-bar__items:first-child {
+  margin-top: 0.8rem;
+}
+@media (min-width: 40em) {
+  .nav-bar__items:first-child {
+    margin-top: 1.25rem;
+  }
+}
+@media (min-width: 64em) {
+  .nav-bar__items:first-child {
+    margin-top: 0;
+  }
+}
+.nav-bar__links {
+  display: block;
+  position: relative;
+  padding-block: clamp(0.7rem, 3vmin, 1.5rem);
+  padding-inline: 0;
+  width: 100%;
+  font-size: clamp(1rem, 3vmin, 1.032rem);
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
+  border-radius: 0.5rem;
+  color: #fff;
+  transition: 0.2s ease background-color;
+}
+.nav-bar__links:hover, .nav-bar__links:focus, .nav-bar__links:active, .nav-bar__links:visited {
+  background-color: #3f3b44;
+}
+.nav-bar__links::after {
+  content: "";
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+  width: 100%;
+  transform: scale(0);
+  height: 3px;
+  background-color: hsl(0deg, 100%, 70%);
+  border-radius: 2rem;
+  transition: 0.25s ease transform;
+}
+@media (min-width: 40em) {
+  .nav-bar__links {
+    margin-bottom: 0.5rem;
+  }
+}
+@media (min-width: 64em) {
+  .nav-bar__links {
+    padding: 0.2rem 0 0.3rem 0;
+  }
+  .nav-bar__links:hover, .nav-bar__links:focus, .nav-bar__links:active, .nav-bar__links:visited {
+    background-color: #1c1c1c;
+    border-radius: 0.5rem;
+  }
+  .nav-bar__links.active::after, .nav-bar__links:hover::after {
+    transform: scale(1);
+  }
+}
+.nav-bar__menu--overlay {
+  opacity: 0;
+  display: none;
+  position: absolute;
+  z-index: -1;
+  top: 100%;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.45);
+  transition: 0.4s ease-in opacity, 0.2s ease display;
+}
+.nav-bar__menu--overlay.on {
+  opacity: 1;
+  display: block;
+}
+
+.hamburger {
+  display: grid;
+  place-items: center;
+  position: relative;
+  padding: 0.8rem;
+  cursor: pointer;
+  width: 1.5rem;
+  min-height: 1rem;
+  -webkit-tap-highlight-color: transparent;
+}
+.hamburger span {
+  pointer-events: none;
+}
+.hamburger .bars {
+  position: absolute;
+  width: clamp(1.2rem, 4vmin, 1.3rem);
+  height: clamp(1px, 1vmin + 0.1rem, 2.4px);
+  background-color: #fff;
+  transition: 0.3s ease opacity, 0.3s ease-out transform, 0.2s ease margin;
+  border-radius: 2rem;
+}
+.hamburger .top--bar {
+  margin-bottom: 0.95rem;
+}
+.hamburger .bottom--bar {
+  margin-top: 0.95rem;
+}
+.hamburger.expanded .top--bar {
+  margin-bottom: 0;
+  transform: rotate(45deg);
+}
+.hamburger.expanded .middle--bar {
+  opacity: 0;
+}
+.hamburger.expanded .bottom--bar {
+  margin-top: 0;
+  transform: rotate(-45deg);
+}
+@media (min-width: 64em) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.footer {
+  display: block;
+  margin-top: auto;
+  width: 100%;
+  background-color: #1c1c1c;
+  color: #fff;
+  word-spacing: 1px;
+  letter-spacing: 0.5px;
+}
+.footer__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: clamp(0.8rem, 2.5vmin, 0.95rem);
+}
+.footer__link {
+  display: inline-block;
+  color: hsl(0deg, 100%, 70%);
+}
+
+.root .apod-page--wrapper,
+.root .mars-rover-page--wrapper,
+.root .planets-page--wrapper {
+  display: none;
+}
+
+.page__apod .apod-page--wrapper {
+  display: block;
+}
+
+.page__mars-rover .mars-rover-page--wrapper {
+  display: block;
+}
+
+.page__planets .planets-page--wrapper {
+  display: block;
+}/*# sourceMappingURL=main.css.map */

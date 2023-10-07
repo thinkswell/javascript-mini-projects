@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body {
+    background:rgb(181, 181, 255);
+}
+.outer-box {
+    border: 0px solid red;
+    border-radius: 12px;
+    height: 90vh;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
+.panel-top {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 30%;
+    justify-content: space-around;
+    border: 0px solid red;
+    background: rgb(33, 33, 88);
+    color: white;
+}
+.score {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.score h2 {
+    font-size: 25px;
+}
+.score p{
+    font-size: 25px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background: white;
+    color: rgb(33, 33, 88);
+    font-weight: 400;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+}
+.panel-bottom {
+   background:rgb(255, 255, 255);
+   height: 90%;
+}
+
+
+.bubble {
+    display: inline-block;
+    padding-left: 18px;
+    padding-top: 10px;
+    font-size: 25px;
+    background: rgb(26, 26, 98);
+    margin: 8px;
+    color: white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+.bubble:hover {
+    background: rgb(11, 11, 60);
+    color: rgb(117, 117, 235);
+    cursor: pointer;
+}
