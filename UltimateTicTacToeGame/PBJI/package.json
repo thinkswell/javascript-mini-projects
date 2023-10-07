@@ -1,0 +1,20 @@
+{
+  "name": "uttt",
+  "version": "1.0.0",
+  "description": "Utlimate tictactoe is variant of the popular board game tictactoe",
+  "main": "script.js",
+  "scripts": {
+    "test": "browser-sync start --server --files \"script.js\" \"style.css\""
+  },
+  "keywords": [
+    "ultimate",
+    "tictactoe",
+    "uttt",
+    "vanilla-js"
+  ],
+  "author": "Purshotam",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.29.3"
+  }
+}
