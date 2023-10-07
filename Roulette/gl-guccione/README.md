@@ -1,1 +1,0 @@
-I am going to build a simple roulette game with HTML CSS and JS
