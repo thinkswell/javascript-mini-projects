@@ -1,0 +1,324 @@
+/* open-sans-regular - latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/open-sans-v28-latin-regular.woff2") format("woff2"), url("../fonts/open-sans-v28-latin-regular.woff") format("woff");
+  font-display: swap;
+}
+/* open-sans-500 - latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/open-sans-v28-latin-500.woff2") format("woff2"), url("../fonts/open-sans-v28-latin-500.woff") format("woff");
+  font-display: swap;
+}
+/* ubuntu-500 - latin */
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/ubuntu-v19-latin-500.woff2") format("woff2"), url("../fonts/ubuntu-v19-latin-500.woff") format("woff");
+  font-display: swap;
+}
+/*-- General Styles --*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -ms-scroll-chaining: chained;
+      overscroll-behavior: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+svg {
+  display: block;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/*-- End General Styles --*/
+.skeleton {
+  -webkit-animation: skeleton-loading 1s linear infinite alternate;
+          animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@-webkit-keyframes skeleton-loading {
+  0% {
+    background-color: hsl(0deg, 0%, 30%);
+  }
+  100% {
+    background-color: hsl(0deg, 0%, 20%);
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(0deg, 0%, 30%);
+  }
+  100% {
+    background-color: hsl(0deg, 0%, 20%);
+  }
+}
+.skeleton-text {
+  color: transparent;
+  margin-bottom: 0.5rem;
+  border-radius: 0.4rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#skeleton-text {
+  color: transparent;
+  margin-bottom: 0.5rem;
+  border-radius: 0.4rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.mars-rover-page--wrapper {
+  min-height: 100vh;
+  background: linear-gradient(75deg, #242424 80%, #1f1f1f 80%);
+  background-attachment: scroll;
+  background-size: cover;
+}
+@media (min-width: 64em) {
+  .mars-rover-page--wrapper {
+    background: repeating-linear-gradient(45deg, #1f1f1f 60%, #1c1c1c 100%);
+    background-attachment: fixed;
+  }
+}
+
+.mars-rover {
+  position: relative;
+  padding: 1.5rem 1.3rem;
+  margin-inline: auto;
+  background-color: inherit;
+}
+@media (min-width: 40em) {
+  .mars-rover {
+    padding: 2rem;
+  }
+}
+@media (min-width: 64em) {
+  .mars-rover {
+    max-width: 87rem;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    background-color: transparent;
+  }
+}
+.mars-rover__topic {
+  padding: 0 0 1.2rem 0;
+}
+@media (min-width: 64em) {
+  .mars-rover__topic {
+    padding: 0 0 3rem 0;
+  }
+}
+.mars-rover__topic--title {
+  font-size: clamp(1.4rem, 3.3vmin, 2.8rem);
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  font-weight: 700;
+  line-height: 1.5;
+  border-radius: 0.4rem;
+  color: #fff;
+}
+@media (min-width: 64em) {
+  .mars-rover__topic--title {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+.mars-rover__topic--nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1rem 0 1rem;
+  min-width: 100%;
+}
+@media (min-width: 40em) {
+  .mars-rover__topic--nav {
+    padding: 2rem 1rem 0.5rem 1rem;
+  }
+}
+@media (min-width: 64em) {
+  .mars-rover__topic--nav {
+    padding: 2.5rem 1rem 0 1rem;
+  }
+}
+.mars-rover__topic--nav .btn {
+  display: block;
+  padding: 0.2rem 1rem;
+  font-size: 1.8rem;
+  color: #fff;
+  background-color: hsl(199deg, 100%, 45%);
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: 0.2s ease background-color;
+  -webkit-tap-highlight-color: transparent;
+}
+@media (min-width: 40em) {
+  .mars-rover__topic--nav .btn {
+    padding: 0.25rem 1.2rem;
+  }
+}
+@media (min-width: 64em) {
+  .mars-rover__topic--nav .btn {
+    font-size: 2rem;
+    padding: 0.3rem 1.5rem;
+  }
+}
+.mars-rover__list {
+  display: grid;
+  align-items: start;
+  align-content: start;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2.8rem;
+  margin-block: 1rem;
+  min-height: 30vh;
+}
+.mars-rover__list .mars-404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  line-height: 2;
+  color: white;
+}
+.mars-rover__items {
+  display: block;
+  padding-inline: 1rem;
+}
+.mars-rover__card {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  min-height: 14rem;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.3rem 0.5rem 0 rgba(0, 0, 0, 0.75);
+  background-color: hsl(0deg, 0%, 12%);
+  overflow: hidden;
+}
+@media (min-width: 40em) {
+  .mars-rover__card {
+    margin-bottom: 1.5rem;
+  }
+}
+.mars-rover__card--header {
+  display: grid;
+  place-items: center;
+  min-width: 100%;
+  overflow: hidden;
+}
+.mars-rover__card--header--img-src {
+  min-width: 100%;
+  min-height: 14rem;
+  max-height: 14rem;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+@media (min-width: 64em) {
+  .mars-rover__card--header--img-src {
+    transition: 0.3s ease transform;
+  }
+  .mars-rover__card--header--img-src:hover {
+    transform: scale(1.5);
+  }
+}
+.mars-rover__card--body {
+  width: 100%;
+  padding: 0.5rem 1rem 1rem 1rem;
+  font-size: clamp(0.92rem, 3vmin, 1.02rem);
+  font-weight: 500;
+  word-spacing: 1px;
+  letter-spacing: 0.4px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.mars-rover__card--body-date {
+  line-height: 1.6;
+}
+.mars-rover__card--body-date .photo-id {
+  color: hsl(199deg, 100%, 80%);
+}
+.mars-rover__card--body-rover {
+  padding-top: 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.mars-rover__card .rover-status {
+  color: hsl(115deg, 100%, 85%);
+}
+.mars-rover__card .full-image {
+  display: block;
+  margin: 1rem 0 0 auto;
+  padding: 0.5em 0.65em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: clamp(0.8rem, 3vmin, 0.92rem);
+  font-size: 500;
+  border-radius: 0.4rem;
+  outline: 1px solid hsl(199deg, 100%, 45%);
+  outline-offset: 1px;
+  background-color: hsl(199deg, 100%, 92%);
+  color: #333;
+}/*# sourceMappingURL=page-2.css.map */
