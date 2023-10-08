@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: linear-gradient(to top left, lightblue, cyan, lightblue);
+}
+
+.wrapper {
+  width: 420px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  padding: 28px 28px 45px;
+}
+
+.wrapper header {
+  font-size: 28px;
+  font-weight: 500;
+  font-family: monospace;
+  text-align: center;
+}
+
+.wrapper .search {
+  position: relative;
+  margin: 35px 0 18px;
+}
+
+.search input {
+  height: 53px;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  padding: 0 42px;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+.search input:focus {
+  padding: 0 41px;
+  border: 2px solid black;
+}
+
+.search input::placeholder {
+  color: #b8b8b8;
+}
+.search :where(i, span) {
+  position: absolute;
+  top: 50%;
+  color: #999;
+  transform: translateY(-50%);
+}
+
+.search i {
+  left: 18px;
+  font-size: 16px;
+  pointer-events: none;
+}
+.search input:focus ~ i {
+  color: rgb(35, 182, 231);
+}
+.search span {
+  right: 15px;
+  font-size: 1;
+  cursor: pointer;
+  display: none;
+}
+
+.search input:valid ~ span {
+  display: block;
+}
+
+.wrapper .info-text {
+  position: relative;
+  font-size: 12px;
+  color: #9a9a9a;
+  top: -15px;
+  left: 15px;
+}
+.wrapper.active .info-text {
+  display: none;
+}
+.info-text span {
+  font-weight: bold;
+}
+
+.wrapper ul li {
+  display: flex;
+  margin-bottom: 14px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrapper ul {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.wrapper.active ul {
+  height: fit-content;
+  opacity: 1;
+}
+ul li:last-child {
+  margin: 0px;
+  padding: 0px;
+  border-bottom: 0px;
+}
+ul .word p {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+ul .word span {
+  font-size: 12px;
+  color: #6f6e6e;
+  font-style: italic;
+}
+
+ul .word i {
+  cursor: pointer;
+  font-size: 15px;
+  color: #999;
+}
+
+.content li .details {
+  padding-left: 10px;
+  border-radius: 4px 0 0 4px;
+  border-left: 3px solid rgb(35, 182, 231);
+}
+
+.content li .details p {
+  font-size: 17px;
+  font-weight: bolder;
+}
+.content li .details span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.content li .details span {
+  display: block;
+  max-height: 45px;
+  overflow: scroll;
+}
+
+.synonyms .details .list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  text-decoration: underline;
+}
+
+.synonyms .details .list span {
+  cursor: pointer;
+}
