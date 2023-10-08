@@ -8,7 +8,7 @@
 Hello Community,
 The password generator generates passwords of different lengths and can include or
  exclude special characters based on user selection. 
-  wuth the help of HTML layout, CSS styling, and JavaScript functions.
+  with the help of HTML layout, CSS styling, and JavaScript functions.
 
 ## Requirements
 
