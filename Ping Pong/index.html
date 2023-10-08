@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong Multiplayer</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div>
+        <header>
+            <div class="player">
+                <span class="player__score" data-player="1"></span>
+                <span class="player__keys">W: Up / S: Down</span>
+            </div>
+            <h1>PING PONG</h1>
+            <div class="player">
+                <span class="player__score" data-player="2"></span>
+                <span class="player__keys">↑: Up / ↓: Down</span>
+            </div>
+        </header>
+        <main>
+            <canvas id="game" width="600" height="480"></canvas>
+        </main>
+        <div class="controls">
+            <button id="pause">Pause</button>
+            <button id="resume">Resume</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
