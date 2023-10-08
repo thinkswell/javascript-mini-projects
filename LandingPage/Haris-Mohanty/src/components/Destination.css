@@ -1,0 +1,85 @@
+.destination {
+  margin: 4rem 6rem;
+}
+.tagline {
+  font-size: 1.3rem;
+}
+.first-desc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4.5rem;
+}
+.first-desc-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4.5rem;
+}
+.first-desc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4.5rem;
+}
+.des-text {
+  width: 45%;
+  text-align: start;
+  font-size: 1.1rem;
+}
+.des-text h3 {
+  padding-bottom: 1rem;
+}
+.image {
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  z-index: -99;
+}
+.image img {
+  width: 49%;
+  height: 405px;
+  object-fit: cover;
+  border-radius: 9px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+.image img:nth-child(2) {
+  position: absolute;
+  top: -10%;
+  right: 0;
+}
+
+@media screen and (max-width: 555px) {
+  .destination {
+    margin: 2rem 2rem;
+  }
+  .tagline {
+    font-size: 1.1rem;
+  }
+  .first-desc {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+  }
+  .first-desc-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 4.5rem;
+  }
+  .des-text {
+    width: 95%;
+    text-align: start;
+    font-size: 0.9rem;
+  }
+  .image {
+    width: 100%;
+    margin: 1.2rem 0;
+  }
+  .image img {
+    height: 250px;
+  }
+}

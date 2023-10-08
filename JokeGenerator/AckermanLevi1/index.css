@@ -1,0 +1,134 @@
+/* common styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  a {
+    color: #111;
+    text-decoration: none;
+  }
+  
+  .btn {
+    padding: 10px 20px; /* top-bottom left-right */
+    margin: 0 5px; /* top-bottom left-right */
+    font-size: 0.99rem;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: blue; /* default color */
+    transition:cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+  
+  .btn:hover {
+    cursor: pointer; /* hand symbol */
+  }
+  
+  /* body */
+  body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center; /* horizontally center */
+    align-items: center; /* vertically center */
+    text-align: center;
+  }
+  
+  /* container */
+  .container {
+    width: 450px;
+    padding: 50px 20px; /* top-bottom left-right */
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  /* h1 */
+  h1 {
+    font-size: 1.1rem;
+    color: #888;
+    margin-bottom: 20px;
+    text-decoration: underline;
+  }
+  
+  /* .joke-text */
+  .joke-text {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    font-family: monospace;
+  }
+  
+  /* .new-joke-btn */
+  .new-joke-btn {
+    background-color: #FF0000;
+  }
+  
+  /* .tweet-btn link */
+  .tweet-btn {
+    background-color: #00ACEE;
+  }
+  body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: bg-animation 10s infinite;
+  }
+  
+  @-webkit-keyframes bg-animation {
+    0% {
+      background-color: red;
+    }
+    15% {
+      background-color: yellow;
+    }
+    30% {
+      background-color: green;
+    }
+    45% {
+      background-color: blue;
+    }
+    60% {
+      background-color: purple;
+    }
+    75% {
+      background-color: pink;
+    }
+    90% {
+      background-color: brown;
+    }
+    100% {
+      background-color: red;
+    }
+  }
+  
+  @keyframes bg-animation {
+    0% {
+      background-color: red;
+    }
+    15% {
+      background-color: yellow;
+    }
+    30% {
+      background-color: green;
+    }
+    45% {
+      background-color: blue;
+    }
+    60% {
+      background-color: purple;
+    }
+    75% {
+      background-color: pink;
+    }
+    90% {
+      background-color: brown;
+    }
+    100% {
+      background-color: red;
+    }
+  }
