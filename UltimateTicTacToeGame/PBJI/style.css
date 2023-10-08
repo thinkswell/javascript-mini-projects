@@ -1,0 +1,128 @@
+		@charset "UTF-8";
+		/*Css to plot a background and center the game plot in the middle of 
+		the viewport, its 30 percent of width of the screen. Will make it more responsive in future */
+		body{
+			display: block;
+		}
+
+		#Plot {
+			z-index: 1;
+			line-height: 1vw;
+			flex-wrap: wrap;
+			position: absolute;
+			transform: translate(-50%,-50%);
+			top: 50%;
+			left: 50%;
+			width: 70vmin;
+			height: 70vmin;
+			padding: 0vw 5vw;
+		}
+
+		/*Css to plot big squares in a flex wrap so that they align inline and gave grey
+		color to them*/
+		#Plot .MS{
+			padding-right: 0.5%;
+			padding-left: 0.5%;
+			padding-top: 1%;
+			flex-wrap: wrap;
+			display: inline-flex;
+			width:28%;
+			height:28%;
+			background-color: grey;
+			margin-bottom: 1%;
+
+		}
+
+
+		/*This are to margin big squares properly*/
+		#Plot .MS:nth-child(3n+1){
+			margin-left: 1vw;
+		}
+
+
+		#Plot .MS:nth-child(1), #Plot .MS:nth-child(2), #Plot .MS:nth-child(3){
+			margin-top: 1vw;
+		}
+
+		/*Small tiles inside the big squares and color white*/
+		.MS .Tile {
+			display: inline-block;
+			width:30%;
+			height:30%;
+			background-color: white;
+		}
+
+		/*For margining and aligning tiles properly inside the big squares */
+		.MS .Tile:nth-child(3n+2) {
+			
+			margin-right: 2%;
+			margin-left: 2%;
+		}
+
+		/*For margining and aligning x and o inside tiles */
+		.Tile{
+			margin: 0 auto;
+		}
+
+		.Tile p{
+			position: absolute;
+			transform: translate(60%,-70%);
+			font-size: 3.7vmin;
+			color: white;
+		}
+
+		.Sbutton {
+			font-size: 3vmin;
+			width: 21vmin;
+			height: 9vmin;
+			position: absolute;
+			top: 85%;
+			left: 49.5%;
+			transform: translateX(-50%);
+		}
+
+		.Conclusion {
+			color:white;
+			text-align: center;
+			display: none;
+			z-index: 2;
+			position: absolute;
+			transform: translate(-53%,-53%);
+			top: 50%;
+			left:50%;
+			width: 30vmin;
+			height: 30vmin;
+			background-color: grey;
+			opacity: 0.9;
+		}
+
+		.Conclusion p{
+
+			font-weight: bold;
+			font-size: 3vmin;
+			position: absolute;
+			top: 35%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		#CurrentPlayer {
+			text-align: center;
+			height: 7vmin;
+			width: 7vmin;
+			color: white;
+			font-size: 6vmin;
+			position: absolute;
+			left: 49.5%;
+			transform: translateX(-50%);
+		}
+
+		#Heading {
+			height: 3vmin;
+			display: block;
+			font-family: Tahoma, sans-serif;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			font-size: 5vmin;
+		}
