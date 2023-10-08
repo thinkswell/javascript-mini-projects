@@ -6,6 +6,9 @@
     background: url(clock.png) no-repeat;
     background-size: 100%;
 }
+body{
+    background-color: aqua;
+}
 
 #hour, #minute, #second{
     position: absolute;
