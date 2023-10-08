@@ -23,7 +23,7 @@ These instructions will help you get a copy of the project up and running on you
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/javascripts-mini-projects/age-calculator.git
+   git clone https://github.com/javascripts-mini-projects.git
 
    ```
 
@@ -31,7 +31,7 @@ These instructions will help you get a copy of the project up and running on you
 
 
 ```bash
-cd age-calculator
+cd NoveltyCalculator
 ```
 Open the index.html file in your preferred web browser.
 
