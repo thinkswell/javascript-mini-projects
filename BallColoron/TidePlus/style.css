@@ -1,0 +1,738 @@
+@mixin bubble_shape ($width: 4px) {
+    border-radius: 50%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.12);
+    border-color: rgba(0, 0, 0, 0.12);
+    border-width: $width;
+}
+
+@mixin bubble ($size, $top, $left) {
+    height: $size;
+    width: $size;
+    top: $top;
+    left: $left;
+}
+
+@mixin bubble_hollow ($size, $top, $left) {
+    @include bubble ($size, $top, $left);
+    background-color: transparent;
+    border-style: solid;
+}
+
+@mixin triangle ($height, $width, $top, $left) {
+    border-left: ($height/2) solid transparent;
+    border-right: ($height/2) solid transparent;
+    border-bottom: $width solid rgba(0, 0, 0, 0.12);
+    background-color: transparent;
+    left: $left;
+    top: $top;
+}
+
+@mixin triangle_hollow ($height, $width, $top, $left) {
+    @include triangle( $height, $width, $top, $left );
+    &:after {    
+        content: " ";
+        display: block;
+        position: absolute;
+        border-left: ($height/4-1) solid transparent;
+        border-right: ($height/4-1) solid transparent;
+        border-bottom: ($height/2-3) solid transparent;
+        top: 6px;
+        left: -($width/4);
+        transition: border-bottom-color 0.4s ease;
+
+        .red & {
+            border-bottom-color: #fc5c82;
+        }
+        .yellow & {
+            border-bottom-color: #fcd45c;
+        }
+        .purple & {
+            border-bottom-color: #9174f5;
+        }
+    }
+}
+
+@mixin block ($height, $width, $top, $left) {
+    height: $height;
+    width: $width;
+    top: $top;
+    left: $left;
+}
+
+@mixin block_hollow ($height, $width, $top, $left) {
+    @include block ($height, $width, $top, $left);
+    & .inner {
+        background-color: transparent !important;
+        border-style: solid;
+        box-sizing: border-box;
+    }
+}
+
+.bubble {
+    @include bubble_shape;
+}
+.bubble-1 {
+    @include bubble(15px, 21px, 59px);
+}
+.bubble-2 {
+    @include bubble(27px, 36px, 16px);
+}
+.bubble-3 {
+    @include bubble(21px, 63px, 49px);
+}
+.bubble-4 {
+    @include bubble(15px, 98px, 37px);
+}
+.bubble-5 {
+    @include bubble_hollow(5px, 116px, 20px);
+}
+.bubble-6 {
+    @include bubble(6px, 128px, 63px);
+}
+.bubble-7 {
+    @include bubble(27px, 150px, 52px);
+}
+.bubble-8 {
+    @include bubble(19px, 154px, 18px);
+}
+.bubble-9 {
+    @include bubble(10px, 189px, 13px);
+}
+.bubble-10 {
+    @include bubble_hollow(5px, 199px, 52px);
+}
+.bubble-11 {
+    @include bubble(21px, 220px, 29px);
+}
+.bubble-12 {
+    @include bubble(21px, 263px, 48px);
+}
+.bubble-13 {
+    @include bubble_hollow(5px, 275px, 16px);
+}
+.bubble-14 {
+    @include bubble(15px, 296px, 34px);
+}
+.triangle {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.12);
+    border-color: rgba(0, 0, 0, 0.12);
+}
+.triangle-1 {
+    @include bubble_shape;
+    @include bubble(10px, 22px, 55px);
+}
+.triangle-2 {
+    @include triangle_hollow(16px, 14px, 27px, 15px);
+}
+.triangle-3 {
+    @include triangle_hollow(24px, 19px, 60px, 43px);
+}
+.triangle-4 {
+    @include bubble_shape(3px);
+    @include bubble_hollow(8px, 61px, 17px);
+}
+.triangle-5 {
+    @include triangle(10px, 8px, 101px, 25px);
+    transform: rotate(180deg);
+}
+
+.triangle-6 {
+    @include triangle(8px, 6px, 103px, 60px);
+    transform: rotate(-90deg);
+}
+
+.triangle-7 {
+    @include triangle(25px, 19px, 126px, 17px);
+    transform: rotate(180deg);
+}
+
+.triangle-8 {
+    @include triangle(21px, 16px, 149px, 50px);
+}
+
+.triangle-9 {
+    @include triangle(11px, 8px, 177px, 21px);
+}
+
+.triangle-10 {
+    @include bubble_shape;
+    @include bubble(10px, 177px, 60px);
+}
+
+.triangle-11 {
+    @include triangle(18px, 13px, 213px, 33px);
+    transform: rotate(180deg);
+}
+
+.triangle-12 {
+    @include bubble_shape(2px);
+    @include bubble_hollow(10px, 233px, 65px);
+}
+
+.triangle-13 {
+    @include bubble_shape;
+    @include bubble(10px, 250px, 22px);
+}
+
+.triangle-14 {
+    @include triangle_hollow(16px, 14px, 270px, 45px);
+    transform: rotate(180deg);
+}
+
+.stick {
+    .block {
+        position: absolute;
+        overflow: hidden;
+        z-index: 999;
+        border-radius: 7px;
+        .inner {
+            border-radius: 7px;
+            background-color: rgba(0, 0, 0, 0.12);
+            border-color: rgba(0, 0, 0, 0.12);
+            border-width: 3px;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+        &:nth-child(2n+1) .inner-2 {
+            left: -200%;
+        }
+        &:nth-child(2n+2) .inner-2 {
+            left: 200%;
+        }
+    }
+    .block-1 {
+        @include block_hollow(16px, 31px, 16px, 30px);
+    }
+    .block-2 {
+        @include block(14px, 42px, 50px, 15px);
+    }
+    .block-3 {
+        @include block(18px, 9px, 73px, 64px);
+    }
+    .block-4 {
+        @include block(9px, 14px, 84px, 26px);
+    }
+    .block-5 {
+        @include block(15px, 15px, 109px, 45px);
+        .inner { 
+            border-radius: 50%;
+        }
+    }
+    .block-6 {
+        @include block(9px, 27px, 135px, 19px);
+    }
+    .block-7 {
+        @include block(12px, 12px, 144px, 60px); 
+        .inner { 
+            border-radius: 50%;
+            border-style: solid;
+            box-sizing: border-box;
+            background-color: transparent;
+        }
+    }
+    .block-8 {
+        @include block(27px, 14px, 164px, 24px);
+    }
+    .block-9 {
+        @include block(8px, 8px, 188px, 64px);
+    }
+    .block-10 {
+        @include block_hollow(12px, 22px, 219px, 11px);
+    }
+    .block-11 {
+        @include block(22px, 22px, 226px, 50px);
+        .inner {
+            border-radius: 50%;
+        }
+    }
+    .block-12 {
+        @include block(18px, 9px, 248px, 26px);
+    }
+    .block-13 {
+        @include block(8px, 8px, 278px, 50px);
+        .inner {    
+            border-radius: 50%;
+        }
+    }
+    .block-14 {
+        @include block_hollow(12px, 22px, 297px, 18px);
+    }
+    .block-15 {
+        @include block(9px, 27px, 307px, 48px);
+    }
+}
+
+body {
+    background-color: #28DAD4;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    cursor: url(https://greghub.github.io/coloron/public/svg/cursor.svg), pointer;
+    &:focus, &:active {
+    cursor: url(https://greghub.github.io/coloron/public/svg/cursor-tap.svg), pointer;
+    }
+}
+.container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+.waves, .mounts {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+.waves div, .mounts div {
+    position: absolute;
+    width: 100%;
+}
+.clouds {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 77px;
+    height: 151px;
+    background: url(https://greghub.github.io/coloron/public/svg/clouds.svg) repeat-x;
+    background-position-x: 170px; 
+}
+.top_wave {
+    background: url(https://greghub.github.io/coloron/public/svg/top_wave.png) repeat-x 0 -1px;
+    height: 35px;
+    bottom: 0;
+    z-index: 10001;
+}
+.wave1 {
+    background: url(https://greghub.github.io/coloron/public/svg/wave1.svg) repeat-x;
+    height: 150px;
+    bottom: 0;
+    z-index: 23;
+}
+.wave2 {
+    background: url(https://greghub.github.io/coloron/public/svg/wave2.svg) repeat-x;
+    height: 180px;
+    bottom: 30px;
+    z-index: 22;
+}
+.wave3 {
+    background: url(https://greghub.github.io/coloron/public/svg/wave3.svg) repeat-x;
+    height: 180px;
+    bottom: 90px;
+    z-index: 21;
+}
+.wave4 {
+    background: url(https://greghub.github.io/coloron/public/svg/wave4.svg) repeat-x;
+    height: 180px;
+    bottom: 120px;
+    z-index: 20;
+}
+.mount1 {
+    background: url(https://greghub.github.io/coloron/public/svg/mount1.svg) repeat-x;
+    height: 150px;
+    bottom: 280px;
+    z-index: 11;
+}
+.mount2 {
+    background: url(https://greghub.github.io/coloron/public/svg/mount2.svg) repeat-x;
+    height: 150px;
+    bottom: 290px;
+    z-index: 10;
+}
+.noise {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1010;
+    background: url(https://greghub.github.io/coloron/public/svg/noise.png);
+}
+.glow {
+    position: absolute;
+    left: -350px;
+    top: -350px;
+    width: 800px;
+    height: 800px;
+    background-color: rgba(81, 237, 200, 0.34);
+    border-radius: 50%;
+    box-shadow: 0 0 100px 100px rgba(81, 237, 200, 0.34);
+    z-index: 1010;
+}
+.sun {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 1px;
+    height: 1px;
+    background-color: rgba(255, 227, 69, 1);
+    border-radius: 50%;
+    box-shadow: 0 0 32px 32px rgba(255, 227, 69, 1), 
+                0 0 150px 150px rgba(103, 244, 210, 0.4);
+}
+.small-glow {
+    z-index: 99;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.34);
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.34);
+}
+.small-glow.yellow {
+    background-color: rgba(255, 227, 69, 0.34);
+    box-shadow: 0 0 4px 4px rgba(255, 227, 69, 0.34);
+}
+.sticks {
+    z-index: 1011;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.stick {
+    height: 362px;
+    width: 90px;
+    border-radius: 14px;
+    background-image: url(https://greghub.github.io/coloron/public/svg/noise.png);
+    position: relative;
+    overflow: hidden;
+    float: left;
+    margin-right: 90px;
+    transition: background-color 0.4s ease;
+    cursor: url(https://greghub.github.io/coloron/public/svg/cursor.svg), pointer;
+    &:focus, &:active {
+        cursor: url(https://greghub.github.io/coloron/public/svg/cursor-tap.svg), pointer;
+    }
+}
+.stick.red {
+    background-color: #FF4571;
+}
+.stick.yellow {
+    background-color: #FFD145;
+}
+.stick.purple {
+    background-color: #8260F6;
+}
+.stick.inactive {
+    background-color: #4C4660;
+}
+.ball, .ball-demo {
+    background: url(https://greghub.github.io/coloron/public/svg/ball.svg) right bottom;
+    background-size: 64px 64px;
+    width: 53px;
+    height: 53px;
+    z-index: 1011;
+    background-color: #FF4571;
+    border-radius: 50%;
+}
+.ball {
+    margin-bottom: 250px;
+}
+.controls {
+    z-index: 999999;
+    position: relative
+}
+.game-full-flex {
+    position: fixed;
+    display: none; // gets updated to flex with JS
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+}
+.start-game {
+    .start-game-top {
+        min-height: 20%;
+        .play-full-page {
+            display: none;
+            border: 3px solid #fff;
+            border-radius: 100px;
+            color: #fff;
+            width: 260px;
+            height: 50px;
+            font-size: 28px;
+            text-align: center;
+            font-weight: 900;
+            letter-spacing: -1px;
+            line-height: 52px;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin-top: 24px;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+    .logo-holder {
+        width: 513px;
+        height: 162px;
+        background-color: #4C4660;
+        border: 4px solid #FF4571;
+        border-radius: 68px;
+        text-align: center;
+        margin-top: -10%;
+        .logo {
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 100px;
+            letter-spacing: -0.1em;
+            margin-top: 10px;
+            margin-bottom: 4px;
+            text-align: center;
+            span {
+                margin-left: -8px;
+                margin-right: -8px;
+            }
+        }
+        .play-button {
+            display: inline-block;
+            background-color: #FF4571;
+            border: 4px solid #fff;
+            border-radius: 100px;
+            color: #fff;
+            width: 200px;
+            height: 56px;
+            font-size: 42px;
+            text-align: center;
+            font-weight: 900;
+            letter-spacing: -3px;
+            line-height: 56px;
+            text-decoration: none;
+            &:hover {
+                background-color: lighten(#FF4571, 5%);
+            }
+        }
+        .hint {
+            color: #fff;
+            font-size: 20px;
+            span {
+                color: #FF4571;
+            }
+        }
+    }
+    .how-to-play {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        .section-1, .section-3 {
+            flex: 1;
+            .content {
+                justify-content: center;
+            }
+        }
+        h4 {
+            color: #fff;
+            font-weight: 400;
+            font-size: 22px;
+            text-align: center;
+        }
+        .content {
+            height: 200px;
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+        }
+        .bar {
+            width: 60px;
+            border-radius: 7px;
+            margin-top: auto;
+            transition: background-color 0.4s ease;
+            &.bar-1 {
+                height: 180px;
+                background: #FF4571;
+            }
+            &.bar-2 {
+                height: 120px;
+                background: #FFD145;
+            }
+            &.bar-3 {
+                height: 150px;
+                background: #4C4660;
+            }
+        }
+        .section-2 {
+            .bar {
+                cursor: url(https://greghub.github.io/coloron/public/svg/cursor.svg), pointer;
+                &:focus, &:active {
+                    cursor: url(https://greghub.github.io/coloron/public/svg/cursor-tap.svg), pointer;
+                }
+            }
+        }
+        .section-3 {
+            .ball-demo {
+                background-color: #815FF8;
+            }
+            .bar-1 {
+                height: 120px;
+                background-color: #815FF8;
+            }
+        }
+    }
+}
+.stop-game {
+    justify-content: center;
+    .score-container {
+        background-color: #4C4660;
+        width: 433px;
+        height: 386px;
+        border-radius: 38px;
+        text-align: center;
+        h1 {
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: -0.1em;
+            margin-top: 20px;
+            margin-bottom: 4px;
+            font-size: 64px;
+        }
+        .final-score {
+            color: #FFE345;
+            font-weight: 900;
+            font-size: 130px;
+            letter-spacing: -6px;
+            line-height: 110px;
+        }
+        .result {
+            color: #FF4571;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 30px;
+        }
+        h4 {
+            color: #fff;
+            margin-top: 12px;
+        }
+        .tweet {
+            background: #fff;
+            padding: 8px 20px;
+            border-radius: 4px;
+            color: #55ACEE;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 24px;
+            display: inline-block;
+            &:hover {
+                background-color: #55ACEE;
+                color: #fff;
+            }
+            i {
+                font-size: 24px;
+                top: 2px;
+                right: 2px;
+                position: relative;
+            }
+        }
+        .play-again {
+            background-color: #FF4571;
+            border: 2px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: -1px;
+            font-size: 26px;
+            padding: 6px 24px;
+            border-radius: 22px;
+            margin: 6px 4px;
+            display: inline-block;
+            &:hover {
+                background-color: lighten(#FF4571, 5%);
+            }
+        }
+        .main-menu {
+            background-color: #44BFA3;
+            border: 2px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: -1px;
+            font-size: 26px;
+            padding: 6px 24px;
+            border-radius: 22px;
+            margin: 6px 4px;
+            display: inline-block;
+            &:hover {
+                background-color: lighten(#44BFA3, 5%);
+            }
+        }
+    }
+}
+.scene {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 9997;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    .ball-holder {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-left: 558px;
+    }
+    .score {
+        position: fixed;
+        right: 54px;
+        top: 20px;
+        color: #33485F;
+        font-size: 90px;
+        font-weight: 900;
+        letter-spacing: -0.1em;
+    }
+    .learn-to-play {    
+        z-index: 9999;
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        top: 20%;
+        font-size: 48px;
+        color: rgba(255,255,255,0.85);
+        font-weight: 700;
+        letter-spacing: -2px;
+        opacity: 0;
+    }
+}
+
+.splash {
+  display: none;
+}
+
+@media print {
+  .splash {
+    display: block;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #28DAD4;
+    background-image: url(https://greghub.github.io/coloron/public/images/coloron-image.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  } 
+}
+
+.nominee {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+}
