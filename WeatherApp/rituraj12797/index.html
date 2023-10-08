@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lottie-web"></script>
+
+    <style>
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Style for the scrollbar track */
+        ::-webkit-scrollbar {
+            width: 0;
+            /* Width of the scrollbar */
+        }
+
+        /* Style for the scrollbar thumb */
+        ::-webkit-scrollbar-thumb {
+            background: black;
+            width: 0;
+            /* Gradient from blue to cyan to lime */
+            border-radius: 6px;
+            /* Rounded corners for the thumb */
+        }
+
+        /* Style for the scrollbar track when thumb is being hovered or dragged */
+        ::-webkit-scrollbar-thumb:hover {
+            background: black;
+            /* Add more lime to simlulate glowing effect */
+        }
+
+        /* Style for the scrollbar track */
+        ::-webkit-scrollbar-track {
+            background: black;
+            /* Black background for the track */
+        }
+
+
+        body {
+
+            margin-top: 0;
+            height: 106vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: #010124;
+        }
+
+        .wrapper {
+            height: 100%;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+            position: absolute;
+            z-index: 1;
+        }
+
+        .display {
+            justify-self: center;
+            align-self: self-start;
+            height: 100%;
+            width: 100%;
+            transform: scale(1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .redisplay {
+            align-self: self-start;
+            height: 100%;
+            width: 0;
+            margin-top: -2vh;
+            transform: scale(0);
+            background-color: rgb(1, 1, 1);
+            border-radius: 10px;
+            display: grid;
+
+
+
+            grid-template-rows: 0.5fr 0.1fr 2fr;
+
+            grid-template-columns: 1fr 1.5fr;
+            justify-content: center;
+            align-content: center;
+        }
+
+
+        .maininfo,
+        .levels,
+        .forecast,
+        .graph {
+            background-image: url('./assets/background.png');
+            height: 98%;
+            transform: scale(0.9);
+            margin-left: 2vw;
+            margin-right: 2vw;
+            width: 95%;
+            background-position: center;
+            background-repeat: none;
+            background-size: cover;
+            border-radius: 10px;
+
+        }
+
+        .maininfo {
+
+            height: 90%;
+
+            display: grid;
+            grid-template-rows: 2fr 8fr;
+
+
+        }
+
+        .city-input {
+
+            padding-left: 2vh;
+            justify-self: center;
+            align-self: stretch;
+            width: 100%;
+
+
+            border-top-left-radius: 2.5vh;
+            border-bottom-left-radius: 2.5vh;
+
+            /* background-color: #000000; */
+            background-image: linear-gradient(to right, #1a0b4f, rgb(14, 82, 82));
+            border: none;
+        }
+
+        .city-input:focus {
+            outline: none;
+            /* Additional styling if needed */
+        }
+
+        input[type=text] {
+            color: white;
+            font-size: 1.2rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .searchbar {
+            justify-self: stretch;
+            
+            align-self: center;
+            margin-top: 2vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .forecast {
+            position: relative;
+            color: white;
+            font-size: 2rem;
+            background-image: url('./assets/bg3.png');
+            overflow-y: auto;
+            margin-top: -5%;
+            height: 105%;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+
+
+
+        }
+
+        .forecast-container {
+            height: auto;
+
+            width: 110%;
+        }
+
+        .main-container {
+            
+            justify-self: start;
+            height: 100%;
+            width: 100%;
+            display: grid;
+            gap:5%;
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+
+
+        }
+
+        .imagecontainer {
+
+            width: 100%;
+
+            grid-row-start: 1;
+            grid-row-end: 5;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            display: flex;
+            justify-content: center;
+
+            align-items: center;
+        }
+
+        .feel,
+        .temprature,
+        .weatherinfo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin-left: 2vw;
+            justify-self: start;
+            align-self: end;
+            font-size: 2.1rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            text-align: start;
+        }
+
+        .temprature {
+            font-size: 2.1rem;
+            align-items: center;
+        }
+
+        .feel {
+            align-items: end;
+            font-size: min(2.1rem, 25px, 10vw);
+        }
+
+        .weatherinfo {
+            color: rgb(148, 148, 148);
+            font-size: 1rem;
+        }
+
+        .contr {
+            width: 110%;
+            border-top: 1px solid grey;
+            padding-top: 1vh;
+            height: 100%;
+            margin-left: 2vw;
+            justify-self: start;
+            align-self: end;
+            font-size: 0.9rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(148, 148, 148);
+            text-align: start;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+        }
+
+        .levels {
+            background-image: url('./assets/background2.png');
+            background-position: right;
+            display: grid;
+            padding: 1vh;
+            height: 90%;
+            grid-template-rows: 1fr 13fr;
+            grid-template-columns: 1fr;
+
+            row-gap: 10px;
+        }
+
+        .levelheading {
+
+            color: rgba(255, 255, 255, 0.877);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .levels-container {
+            display: grid;
+
+            grid-template-rows: 1.5fr 0.6fr;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: space-evenly;
+            align-items: center;
+            grid-gap: 5%;
+        }
+
+        .levels-containee {
+            height: 100%;
+            width: 100%;
+
+            border-radius: 5%;
+            background-color: rgba(0, 0, 0, 1);
+            background-position: center;
+            background-size: cover;
+            background-repeat: none;
+        }
+
+        .levels-containee:active {
+            box-shadow: 0px 0px 5px 1px white;
+        }
+
+        .uvindex,
+        .sunset,
+        .humidity,
+        .winds,
+        .wind-data,
+        .visibility {
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            border-radius: 5px;
+        }
+
+        .sunset {
+            position: relative;
+            right: 1vw;
+        }
+
+        .visibility {
+            position: relative;
+            right: 1vw;
+            display: grid;
+            grid-template-columns: 4fr 2fr;
+            text-align: center;
+            font-size: 1rem;
+            justify-content: center;
+            align-items: center;
+            color: white;
+
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .uvindex {
+            display: flex;
+            flex-direction: column;
+            margin-left: 1vw;
+        }
+
+        .headingprecipitation {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.3rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .wrapper-range {
+            align-self: end;
+            transform: scale(0.9);
+            height: 12rem;
+            width: 12rem;
+            position: relative;
+            z-index: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .div1-range {
+            height: 12rem;
+            width: 12rem;
+            border-radius: 6rem;
+            background-image: conic-gradient(from -90deg, rgba(0, 0, 0, 0.1) 180deg, rgb(36, 132, 201), #4d21ea);
+            position: absolute;
+            z-index: 1;
+            transform: 0.5s all linear;
+
+        }
+
+        .div2-range {
+            height: 10rem;
+            border-radius: 5rem;
+
+            width: 10rem;
+            border: 0.1rem solid rgba(255, 255, 255, 0.795);
+            box-shadow: 0px 0px 1px 8px rgba(255, 255, 255, 0.1);
+            position: absolute;
+            z-index: 2;
+        }
+
+        .div3-range {
+            height: 8rem;
+            width: 8rem;
+            background-color: rgba(0, 0, 0, 1);
+            position: absolute;
+            z-index: 5;
+            border-radius: 4rem;
+
+        }
+
+        .precipitation {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .div4-range {
+            align-self: end;
+            height: 6rem;
+            width: 12rem;
+            background-color: rgba(0, 0, 0, 0.9);
+            position: absolute;
+            z-index: 6;
+            text-align: center;
+            color: white;
+            font-size: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+        }
+
+        .wrapper-sun {
+            height: 80%;
+            width: 80%;
+
+            position: relative;
+            z-index: 0;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+
+        }
+
+        .display-sun {
+            height: 100%;
+            width: 100%;
+            align-self: center;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+
+        .semicircle-sun {
+            align-self: start;
+            height: 25.4vh;
+            width: 25.4vh;
+            border-radius: 12.7vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            background-image: conic-gradient(from -45deg, black, rgba(255, 166, 0, 0.607), black, rgba(0, 89, 255, 0.289), black);
+            background-repeat: none;
+            background-position: center;
+            transform: rotate(-135deg);
+            background-size: 60.5vh 60.5vh;
+            position: absolute;
+            z-index: 1;
+            animation: semi;
+            animation-timing-function: linear;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+
+        }
+
+        .div-sun {
+
+
+            width: 0vw;
+            transform: scale(1.17) rotate(45deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sun,
+        .moon {
+            height: 5vh;
+            width: 5vh;
+            border-radius: 2.5vh;
+        }
+
+        .sun {
+            background-image: url('./assets/sun.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            animation: sun;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+        }
+
+        @keyframes sun {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .moon {
+            background-image: url('./assets/moon.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+        .overlay-sun {
+            align-self: start;
+            height: 65%;
+            padding: 1rem;
+            width: 124%;
+            background-color: black;
+            position: absolute;
+            z-index: 2;
+            align-self: end;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+
+            color: white;
+            transform-origin: top;
+        }
+
+        .sunset-text {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+        }
+
+        .sunset-time {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0.3rem;
+        }
+
+        .sunsetext,
+        .sunrisetext {
+
+            color: yellow;
+            font-size: 1rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .sunsetime,
+        .sunrisetime {
+            font-size: 0.75rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .windtext {
+
+            height: 100%;
+            font-size: 0.9rem;
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 3fr 1fr 0.2fr;
+            align-items: center;
+            justify-content: center;
+            column-gap: 5%;
+
+        }
+
+        .windtext3 {
+            margin-left: -50%;
+        }
+
+        .wind-data {
+            text-align: center;
+            font-size: 1rem;
+            color: white;
+
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .humidity {
+            display: grid;
+            background-color: rgb(0, 0, 0);
+            grid-template-columns: 1fr 4fr 2fr;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 0.8rem;
+            color: white;
+
+
+            left: 1vw;
+        }
+
+        .humiditytext {
+            margin-left: 1vw;
+            font-size: 1rem;
+        }
+
+        .hmidity-data {
+            font-size: 1rem;
+        }
+
+        .fore {
+            justify-self: center;
+            height: 14vh;
+            width: 97%;
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1.2fr 2fr 2fr 2fr;
+            transition: all 0.1s linear;
+
+
+        }
+
+        .fore:hover {
+
+            filter: brightness(1.3);
+            height: 14vh;
+            width: 99%;
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1.2fr 2fr 2fr 2fr;
+            transition: all 0.1s linear;
+
+        }
+
+        .forecast-element {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(198, 198, 198);
+            font-size: 0.9rem;
+        }
+
+        .mintemp-day {
+            font-size: 0.95rem;
+            align-self: center;
+            position: relative;
+            top: 3%;
+        }
+
+        .maxtemp-day {
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .forecastone {
+            position: sticky;
+            z-index: 1;
+            margin-top: -3%;
+            top: 0%;
+            border-radius: 1vh;
+            background-image: linear-gradient(to bottom, rgb(39, 39, 39), rgb(0, 0, 0), rgb(0, 0, 0));
+
+
+        }
+
+        .TempGraph,
+        .graph {
+            margin-top: -3%;
+        }
+
+        .sevenday
+     {
+            margin-top: -4.5%;
+        }
+
+        .forecast-day-weather,
+        .forecast-day-maxmin,
+        .forecast-day-date,
+        .forecast-day-day {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .forecasttwo {
+            grid-row-start: 0;
+            grid-row-end: 2;
+        }
+
+        .forecastthree {
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        .forecastfour {
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+
+        .forecastfive {
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
+
+        .forecastsix {
+            grid-row-start: 4;
+            grid-row-end: 6;
+        }
+
+        .forecastseven {
+            grid-row-start: 5;
+            grid-row-end: 7;
+        }
+
+        .tempgraph {
+            height: 100%;
+            width: 100%;
+        }
+
+        .sevenday,
+        .TempGraph {
+            color: white;
+            justify-self: center;
+    
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.1rem;
+        }
+
+        .location {
+            background-color: black;
+            height: 100vh;
+            width: 0;
+            transform: scale(0);
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5vh;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .graph {
+            width: 93%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loading {
+            background-color: #010124;
+            height: 100vh;
+            width: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: scale(0);
+        }
+
+        .crrntdisplay {
+            width: 100%;
+            transform: scale(1);
+            top: 0vh;
+        }
+
+        #gps {
+            width: min(70%, 250px);
+        }
+
+        .wrapper_for_grant {
+            height: 5vh;
+            width: max(30%, 200px);
+            display: flex;
+            justify-content: center;
+
+            align-items: center;
+        }
+
+        .grant {
+            height: 8vh;
+            width: min(60%, 200px);
+            border: none;
+            padding: 1vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: min(4vw, 15px);
+            background-image: linear-gradient(to bottom, orange, rgb(255, 81, 0));
+            transform-origin: bottom;
+            font-weight: 600;
+            letter-spacing: 0.1vw;
+            border-radius: 4vh;
+            transition: 0.3s all ease-out;
+        }
+
+        .grant:hover {
+            filter: brightness(1.3);
+        }
+        .Go-Button {
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(to right, #3717aa, rgb(3, 152, 152));
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 600;
+            border-top-right-radius: 2.5vh;
+            border-bottom-right-radius: 2.5vh;
+            border: none;
+            transition: 0.12s all linear;
+        }
+        .Go-Button:active {
+            filter: brightness(1.3);
+        }
+        .location-container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .searchbutton-container {
+            justify-self: stretch;
+            width: 10%;
+        }
+        .searchbar-container {
+            justify-self: stretch;
+        }
+        .wrapper-for-loading {
+            height: 16rem;
+            width: 16rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .last_circle {
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(#4d21ea, cyan, lime, cyan, #4d21ea);
+            border-radius: 50%;
+
+        }
+        .smaller-circle {
+            z-index: 1;
+            position: absolute;
+            height: 14rem;
+            width: 14rem;
+            background-color: rgb(0, 0, 0);
+            border-radius: 7rem;
+        }
+        .manipulator-circle {
+            z-index: 2;
+            position: absolute;
+            height: 16.1rem;
+            width: 16.1rem;
+            border-radius: 8.05rem;
+            background-image: conic-gradient(rgba(0, 0, 0, 0) 45deg, black 45deg, black 135deg, rgba(0, 0, 0, 0) 135deg, rgba(0, 0, 0, 0) 225deg, black 225deg, black 315deg, rgba(0, 0, 0, 0) 315deg);
+            animation: animator 1s linear infinite;
+        }
+        #location-image {
+            height: 25px;
+        }
+        #calendar-image {
+            height: 40px;
+        }
+        @keyframes animator {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        @media screen and (max-width: 514px) and (min-width:260px) {
+            .location-container
+            {
+                gap: 5%;
+                position: absolute;
+                overflow: hidden;
+            }
+            .levels-containee
+            {
+                background-color:rgba(0, 0, 0, 1);
+            }
+            .feel,.temprature,.weatherinfo
+            {
+                font-size: 1.2rem;
+            }
+            .main-container
+            {
+                height: 40vh;
+            }
+             svg
+             {
+                height: 10vh;
+             }
+            body
+            {
+                height: 421vh;
+                width: 100vw;
+            }
+            .redisplay
+            {
+              grid-template-rows: 78vh 216vh 5vh 60vh 10vh 50vh;
+              grid-template-columns: 1fr;
+              align-items: start;
+              width: 100vw;
+
+            }
+            .levels
+            {
+                display: grid;
+                grid-template-rows: 0.5fr 50fr;
+                margin-top: -5%;
+                width: 100vw;
+               align-self: start;
+                grid-row-start: 2;
+                grid-row-end: 3;
+                background-image: linear-gradient(-45deg,rgba(0, 255, 255, 0.778),rgb(20, 19, 97),rgb(20, 19, 94),rgba(0, 255, 238, 0.734));
+            }
+            .maxtemp-day
+            {
+                font-size: 0.8rem;
+            }
+            .contr{
+                width: 95%;
+                font-size: 0.7rem;
+            }
+        .forecast-element,.mintemp-day
+        {
+            font-size: 0.7rem;
+        }
+            .uvindex, .sunset, .humidity, .winds, .wind-data, .visibility
+            {   
+                margin-right: 0;
+                margin-left: 0;
+                left:0;
+                right: 0;
+                justify-self: center;
+            }
+            .forecast{
+                width: 100vw;
+                grid-row-start: 4;
+                grid-row-end: 5;
+                margin-top: -10%;
+                
+            }
+            .levels-container
+            {
+              grid-template-rows: 42vh 10fr 50vh 10fr 40vh 10fr;
+              gap:1%;
+              grid-template-columns: 1fr;
+              height:180vh;
+            }
+            .humidity
+            {
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+            .wind-data
+            {
+                grid-row-start: 4;
+                grid-row-end: 5;
+            }
+            .visibility{
+                grid-row-start: 6;
+                grid-row-end: 7;
+            }
+            .TempGraph
+            {
+                width: 100vw;
+                align-self: center;
+                grid-row-start: 5;
+                grid-row-end: 6;
+                margin-top: -20%;
+            }
+            
+            .sevenday,.TempGraph{
+                font-size: 1rem;
+                text-align: center;
+            }
+            .sevenday
+            {
+                margin-top: -15%;
+            }
+        .levelheading
+        {
+            height: 7vh;
+        }
+        .wrapper-range
+        {
+            justify-self: center;
+            align-self: center;
+        }
+        .uvindex
+        {
+            display: grid;
+        }
+        #animationContainer
+        {
+            height: 40vh;
+            width: 40vh;
+            justify-self: center;
+            align-items: center;
+        }
+        .loading{
+            position: fixed;
+            top: 0vh;
+            left: 0;
+            overflow: hidden;
+        }
+        }
+        @media screen and (min-width:511px ) and (max-width:1440px)
+        {
+          
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="display">
+            <div class="redisplay">
+                <div class=" maininfo">
+                    <div class="searchbar">
+                        <div class="searchbar-container"><input type="text" class="city-input" id="city-input"
+                                placeholder="City"></div>
+                        <div class="searchbutton-container"><button class="Go-Button">Go</button></div>
+
+
+                    </div>
+
+                    <div class="main-container">
+                        <div class="feel">
+                            Feels like
+                        </div>
+                        <div class="temprature">
+                            <span id="span_temp"></span> &degC
+                        </div>
+                        <div class="weatherinfo">
+                            &#9729
+                            <div class="weather_info"></div>
+
+                        </div>
+                        <div class="contr">
+                            <div class="city"
+                                style="display: flex;justify-content:center;align-items:center ;margin-left:3px">
+                                <img src="./assets/location.png" alt="" id="location-image" style="margin-right: 5px;">
+                                <div class="city_text"></div>
+                            </div>
+                            <div class="date" style="display: flex;justify-content:center;align-items:center">
+                                <img id="calendar-image" src="./assets/calendar.png" alt="">
+                                <div class="datext">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="imagecontainer">
+                            <div id="animationContainer2" class="weather-image" style="height: 80%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" levels">
+                    <div class="levelheading">Today's Highlight</div>
+                    <div class="levels-container">
+                        <div class="uvindex levels-containee">
+                            <div class="headingprecipitation">
+                                precipitation
+                            </div>
+                            <div class="wrapper-range">
+                                <div class="div1-range">
+
+                                </div>
+                                <div class="div2-range">
+
+                                </div>
+                                <div class="div3-range"></div>
+                                <div class="div4-range">
+                                    <div class="precipitation">
+                                        <div class="precipitation-min">
+                                            <span style="color:yellow;font-size:1.05rem">Min:</span>0%
+                                        </div>
+                                        <div class="precipitation-max">
+                                            <span style="color:yellow;font-size:1.05rem">Max:</span>100%
+                                        </div>
+                                    </div>
+                                    <div id="precipitation-data">
+                                        <span
+                                            style="color:#ffffff;font-size:1.5rem;font-weight:600;margin-right: 0.5rem;"
+                                            class="precipitation-data">77
+                                        </span> %
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="winds levels-containee">
+                            <div id="animationContainer">
+                            </div>
+                        </div>
+                        <div class="sunset levels-containee">
+
+                            <div class="wrapper-sun">
+                                <div class="display-sun">
+
+                                    <div class="semicircle-sun">
+                                        <div class="div-sun">
+                                            <div class="sun"></div>
+                                            <div class="moon"></div>
+                                        </div>
+                                    </div>
+                                    <div class="overlay-sun">
+                                        <div class="sunset-text">
+                                            <div class="sunrisetext">
+                                                sunrise
+                                            </div>
+                                            <div class="sunsetext">
+                                                sunset
+                                            </div>
+                                        </div>
+                                        <div class="sunset-time">
+                                            <div class="sunrisetime">
+                                                time
+                                            </div>
+                                            <div class="sunsetime">
+                                                time
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="humidity levels-containee">
+                            <div class="icondiv">
+                                <img src="./assets/humidity.png" alt="" height="100%" width="100%">
+                            </div>
+                            <div class="humiditytext">
+                                Humidity:</div>
+                            <div class="hmidity-data">
+                            </div>
+                        </div>
+                        <div class="wind-data levels-containee">
+                            <div class="windtext">
+                                <div class="windtext1">Wind Speed:</div>
+                                <div class="windSpeed"></div>
+                                <div class="windtext3">Km/H</div>
+                            </div>
+                        </div>
+                        <div class="visibility levels-containee">
+                            <div class="visibilitytext">
+                                Visibility:
+                            </div>
+                            <div class="visibilitydata">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sevenday">7 Days Forecast</div>
+                <div class="TempGraph">Todays Temprature Forecast</div>
+
+                <div class=" forecast">
+                    <div class="forecast-container">
+                        <div class="forecastone fore">
+                            <div class="forecast-day-weather forecast-element"></div>
+                            <div class="forecast-day-maxmin forecast-element">
+                                <div class="maxtemp-day"></div>
+                                <div class="mintemp-day"></div>
+                            </div>
+                            <div class="forecast-day-date forecast-element"></div>
+                            <div class="forecast-day-day forecast-element"></div>
+                        </div>
+                        <div class="forecasttwo fore">
+                            <div class="forecast-day-weather forecast-element"></div>
+                            <div class="forecast-day-maxmin forecast-element">
+                                <div class="maxtemp-day"></div>
+                                <div class="mintemp-day"></div>
+                            </div>
+                            <div class="forecast-day-date forecast-element"></div>
+                            <div class="forecast-day-day forecast-element"></div>
+                        </div>
+                        <div class="forecastthree fore">
+                            <div class="forecast-day-weather forecast-element"></div>
+                            <div class="forecast-day-maxmin forecast-element">
+                                <div class="maxtemp-day"></div>
+                                <div class="mintemp-day"></div>
+                            </div>
+                            <div class="forecast-day-date forecast-element"></div>
+                            <div class="forecast-day-day forecast-element"></div>
+                        </div>
+                        <div class="forecastfour fore">
+                            <div class="forecast-day-weather forecast-element"></div>
+                            <div class="forecast-day-maxmin forecast-element">
+                                <div class="maxtemp-day"></div>
+                                <div class="mintemp-day"></div>
+                            </div>
+                            <div class="forecast-day-date forecast-element"></div>
+                            <div class="forecast-day-day forecast-element"></div>
+                        </div>
+                        <div class="forecastfive fore">
+                            <div class="forecast-day-weather forecast-element"></div>
+                            <div class="forecast-day-maxmin forecast-element">
+                                <div class="maxtemp-day"></div>
+                                <div class="mintemp-day"></div>
+                            </div>
+                            <div class="forecast-day-date forecast-element"></div>
+                            <div class="forecast-day-day forecast-element"></div>
+                        </div>
+                        <div class="forecastsix fore">
+                            <div class="forecast-day-weather forecast-element"></div>
+                            <div class="forecast-day-maxmin forecast-element">
+                                <div class="maxtemp-day"></div>
+                                <div class="mintemp-day"></div>
+                            </div>
+                            <div class="forecast-day-date forecast-element"></div>
+                            <div class="forecast-day-day forecast-element"></div>
+                        </div>
+                        <div class="forecastseven fore">
+                            <div class="forecast-day-weather forecast-element"></div>
+                            <div class="forecast-day-maxmin forecast-element">
+                                <div class="maxtemp-day"></div>
+                                <div class="mintemp-day"></div>
+                            </div>
+                            <div class="forecast-day-date forecast-element"></div>
+                            <div class="forecast-day-day forecast-element"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" graph">
+
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+            <div class="loading">
+                <div class="wrapper-for-loading">
+                    <div class="last_circle"></div>
+                </div>
+                <div class="smaller-circle">
+
+                </div>
+                <div class="manipulator-circle">
+
+                </div>
+            </div>
+            <div class="bluedsplay"></div>
+        </div>
+    </div>
+    <div class="location">
+        <div class="location-container">
+            <img src="./assets/gps.png" alt="" id="gps">
+            <div class="wrapper_for_grant">
+                <button class="grant">Grant Acess</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var body = document.querySelector('body')
+        var animation = bodymovin.loadAnimation({
+            container: document.getElementById('animationContainer'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path:`./winds.json`
+        });
+        // animation.style.cssText="height:30vh;width:30vw"
+        var redisplay = document.querySelector('.redisplay')
+        var bluedisplay = document.querySelector('.bluedsplay')
+        var locat = document.querySelector('.location')
+        var locatebutton = document.querySelector('.grant')
+        var currentdisplay = redisplay
+        var locatkey = { value: 0 }
+        var loading = document.querySelector('.loading')
+        var date = document.querySelector('.datext')
+        var lat_lon = {
+            lat: 22,
+            lon: 55
+        }
+        var dante = new Date()
+        var weather_info = document.querySelector('.weather_info')
+        const Montnames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+        document.querySelector('.datext').textContent = dante.getDate() + " " + Montnames[dante.getMonth()] + " " + dante.getFullYear();
+        var dailyData = { sunrise: 0, sunset: 0, }
+        var dailyTemp = { h0: 0, h1: 0, h2: 0, h3: 0, h4: 0, h5: 0, h6: 0, h7: 0, h8: 0, }
+        var city_input = document.querySelector('.city-input');
+        body.style.cssText = "overflow:hidden"
+        locat.classList.add("crrntdisplay")
+        locatebutton.addEventListener('click', getLocation)
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var Go_Button = document.querySelector('.Go-Button')
+        city_input.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                destroyChart();
+                Go_Button.click()
+            }
+        })
+        Go_Button.addEventListener('click', changeer)
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+                body.style.cssText = "overflow:auto"
+
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        function getUserTimeZone() {
+            return Intl.DateTimeFormat().resolvedOptions().timeZone;
+        }
+        async function showPosition(position) {
+            lat_lon.lat = position.coords.latitude;
+            lat_lon.lon = position.coords.longitude;
+            manipulator();
+        }
+        async function manipulator() {
+        
+            var lat = lat_lon.lat
+            var lon = lat_lon.lon
+            locat.classList.remove('crrntdisplay')
+            loading.classList.add('crrntdisplay')
+            const timeZone = getUserTimeZone();
+            var API_KEY = "d1845658f92b31c64bd94f06f7188c9c"
+            let p = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&timezone=${timeZone}`);
+            let data = await p.json();
+            console.log(data)
+            var data_weather = data.weather[0].main
+            weather_info.textContent = data_weather
+            document.querySelector('.windSpeed').textContent = data.wind.speed
+            var str = (data.main.temp - 274.5).toFixed(1)
+            document.querySelector('#span_temp').textContent = str
+            document.querySelector('.hmidity-data').textContent = data.main.humidity + "%"
+            document.querySelector('.visibilitydata').textContent = data.visibility / 1000 + "Km"
+            document.querySelector('#span_temp').textContent = str
+            document.querySelector('.city_text').textContent = `${data.name} ${data.sys.country}`;
+
+            const sunriseTimestamp = data.sys.sunrise;
+            const sunsetTimestamp = data.sys.sunset;
+            const sunriseDate = new Date(sunriseTimestamp * 1000);
+            var myChart;
+            const sunsetDate = new Date(sunsetTimestamp * 1000);
+            function formatTimeAMPM(date) {
+                const hours = date.getHours();
+                const minutes = date.getMinutes();
+                const period = hours >= 12 ? 'PM' : 'AM';
+                const formattedHours = (hours % 12) || 12;
+                const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+                return `${formattedHours}:${formattedMinutes} ${period}`;
+            }
+            const sunriseLocal = new Date(sunriseDate.toLocaleString('en-US', { timeZone: timeZone }));
+            const sunsetLocal = new Date(sunsetDate.toLocaleString('en-US', { timeZone: timeZone }));
+            const formattedSunrise = formatTimeAMPM(sunriseLocal);
+            const formattedSunset = formatTimeAMPM(sunsetLocal);
+            dailyData.sunrise = formattedSunrise
+            dailyData.sunset = formattedSunset
+            document.querySelector('.sunrisetime').textContent = dailyData.sunrise
+            document.querySelector('.sunsetime').textContent = dailyData.sunset
+            var dater = new Date()
+            var sunsettime_24hr = sunsetLocal.getHours(0)
+            var angle = ((dater.getHours() - sunriseLocal.getHours()) / (sunsettime_24hr - sunriseLocal.getHours())) * 180 - 135;
+            console.log(angle)
+            document.querySelector('.semicircle-sun').style.cssText = `transform:rotate(${angle}deg)`
+            locatkey.value = 1
+            const apiKey = 'q5WqpUHp8V2moyPE1PInHSTVEQiHkRoK';
+            var tus = 7;
+            var weatherMappings = { "Clouds": "scattered-clouds.json", "Drizzle": "rain.json", "Clear": "clear.json", "Snow": "snow-fall.json", "Rain": "rain2.json", "Thunderstorm": "thunder.json", "Mist": "smaug.json", "Smoke": "smaug.json", "Haze": "smaug.json", "Fog": "smaug.json" };
+            var currentAnimation; // Keep track of the current loaded animation
+            function loadWeatherAnimation(animationPath) {
+                if (animationPath) {
+                    var animationContainer = document.getElementById('animationContainer2');
+                    animationContainer.innerHTML = '';
+                    currentAnimation = bodymovin.loadAnimation({
+                        container: document.getElementById('animationContainer2'),
+                        renderer: 'svg',
+                        loop: true,
+                        autoplay: true,
+                        path: `./assets/${animationPath}`
+                    });
+                } else if (weatherType == "Mist" || weatherType == "Smoke" || weatherType == "Haze" || weatherType == "Fog") {
+                    var animation3 = bodymovin.loadAnimation({
+                        container: document.getElementById('animationContainer2'),
+                        renderer: 'svg', // You can use 'canvas', 'html', or 'svg'
+                        loop: true,       // Whether the animation should loop
+                        autoplay: true,   // Whether the animation should play automatically
+                        path: './assets/smaug.json' // Path to your Lottie JSON file
+                    });
+                }
+                else if (weatherType == "Dust" || weatherType == "Sand") {
+                    var animation3 = bodymovin.loadAnimation({
+                        container: document.getElementById('animationContainer2'),
+                        renderer: 'svg', // You can use 'canvas', 'html', or 'svg'
+                        loop: true,       // Whether the animation should loop
+                        autoplay: true,   // Whether the animation should play automatically
+                        path: './assets/Dust.json' // Path to your Lottie JSON file
+                    });
+                }
+                else if (weatherType == "Tornado" || weatherType == "Squall") {
+                    var animation3 = bodymovin.loadAnimation({
+                        container: document.getElementById('animationContainer2'),
+                        renderer: 'svg',
+                        loop: true,
+                        speed: 0.1,
+                        autoplay: true,
+                        path: './assets/tornado.json'
+                    });
+                }
+            }
+            var weatherType = data.weather[0].main
+            var animationPath = weatherMappings[weatherType];
+            var ap = animationPath
+            loadWeatherAnimation(animationPath);
+            var api2 = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=temperature_2m,&daily=precipitation_probability_max,temperature_2m_max,temperature_2m_min,weathercode,&timezone=${timeZone}`)
+            var data2 = await api2.json()
+            document.querySelector('.precipitation-data').textContent = data2.daily.precipitation_probability_max[0];
+            let angle2 = (data2.daily.precipitation_probability_max[0] / 100) * 180 - 90;
+            console.log(angle2);
+            document.querySelector('.div1-range').style.cssText = `background-image:conic-gradient(from ${angle2}deg, rgba(0, 0, 0, 0.1) 180deg, rgb(36, 132, 201), #4d21ea)`
+            console.log(data2);
+            let xur = document.querySelectorAll('.fore')
+            console.log(xur)
+            var currentDate = new Date();
+            let ite = 0
+            var months = ["january", "february", "March", "Aprill", "May", "June", "July", "August", "September", "October", "November", "December"]
+            var Days = ["sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+            var imageg_array = ["./assets/clearweather.png", "./assets/hazee.png", "./assets/partly-cloudy.png", "./assets/heavily-cloudy.png", "./assets/fog.png", "./assets/high winds.png", "./assets/rain.png", "./assets/thunderstorm.png"]
+            for (const key of Object.values(xur)) {
+                var x = document.createElement('img')
+                x.style.cssText = "width:12vh"
+                currentDate.setDate(currentDate.getDate() + 1);
+                key.querySelector('.maxtemp-day').textContent = data2.daily.temperature_2m_max[ite] + "°/"
+                key.querySelector('.mintemp-day').textContent = data2.daily.temperature_2m_min[ite]
+                let index = Math.floor((data2.daily.weathercode[ite]) / 10)
+                if (index >= 7) {
+                    x.src = imageg_array[7];
+                }
+                else {
+                    x.src = imageg_array[index];
+                }
+                key.querySelector('.forecast-day-weather').innerHTML = ''
+                key.querySelector('.forecast-day-weather').appendChild(x);
+
+                key.querySelector('.forecast-day-date').textContent = currentDate.getDate() + " " + months[currentDate.getMonth()];
+                key.querySelector('.forecast-day-day').textContent = Days[currentDate.getDay()];
+                ite++;
+            }
+            for (let i = 0; i < 9; i++) {
+                dailyTemp[`h${i}`] = data2.hourly.temperature_2m[i * 3];
+                console.log(dailyTemp[`h${i}`])
+            }
+            graph_maker();
+            loading.classList.remove('crrntdisplay')
+            redisplay.classList.add('crrntdisplay')
+        }
+        async function changeer() {
+            try {
+                redisplay.classList.toggle('crrntdisplay')
+                loading.classList.toggle('crrntdisplay')
+                var xio = await fetch(`https://geocode.maps.co/search?q=${city_input.value}`)
+                var pur = await xio.json()
+                lat_lon.lat = parseFloat(pur[0].lat)
+                lat_lon.lon = parseFloat(pur[0].lon)
+                console.log(lat_lon.lat, lat_lon.lon)
+
+            } catch (error) {
+                alert('enter valid city name'
+                )
+
+            }
+            finally { manipulator() }
+        }
+        function graph_maker() {
+            var graph = document.getElementById('myChart');
+            var ctx = graph.getContext('2d');
+            var gradientBg = ctx.createLinearGradient(0, 0, 0, 400);
+            gradientBg.addColorStop(0, '#4d21ea');
+            gradientBg.addColorStop(0.5, 'rgba(0, 255, 255, 0.648)');
+            gradientBg.addColorStop(1, 'lime');
+
+            myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ["12:00 AM", "03:00 AM", "06:00 AM", "09:00 AM", "12:00 PM", "03:00 PM", "06:00 PM", "09:00 PM", "12:00 AM"],
+            
+                    datasets: [{
+                        data: Object.values(dailyTemp), // Leave the initial data empty
+                        fill: true,
+                        lineTension: 0.5,
+                        borderColor: '#4d21ea',
+                        backgroundColor: gradientBg,
+                        pointBorderColor: "#4d21ea",
+                        pointBackgroundColor: "#4d21ea",
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true, // Instruct chart js to respond nicely.
+                    maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height
+                    scales: {
+                        x: {
+                            borderColor: '#4d21ea', // Set the X-axis color
+                            borderWidth: 5, // Increase the X-axis line width
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: 'white', // Set X-axis label color to white
+                            }
+                        },
+                        y: {
+                            borderColor: '#4d21ea', // Set the Y-axis color
+                            borderWidth: 5, // Increase the Y-axis line width
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: 'white',
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+
+        }
+        function destroyChart() {
+            if (myChart) {
+                myChart.destroy();
+                myChart = null;
+            }
+        }
+    </script>
+</body>
+
+</html>
