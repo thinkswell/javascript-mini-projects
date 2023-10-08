@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Young+Serif&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --bg-color: #034334;
+  --shadow-color: 166deg 100% 5%;
+  --shadow-elevation-low:
+    0.4px 0.4px 0.8px hsl(var(--shadow-color) / 0.11),
+    0.8px 0.6px 1.4px -0.4px hsl(var(--shadow-color) / 0.23),
+    1.6px 1.3px 2.8px -0.9px hsl(var(--shadow-color) / 0.36);
+  --shadow-elevation-medium:
+    0.4px 0.4px 0.8px hsl(var(--shadow-color) / 0.11),
+    1.7px 1.4px 3px -0.3px hsl(var(--shadow-color) / 0.21),
+    3.7px 3px 6.5px -0.6px hsl(var(--shadow-color) / 0.31),
+    8px 6.5px 14.1px -0.9px hsl(var(--shadow-color) / 0.41);
+  --shadow-elevation-high:
+    0.4px 0.4px 0.8px hsl(var(--shadow-color) / 0.09),
+    2.9px 2.4px 5.1px -0.1px hsl(var(--shadow-color) / 0.13),
+    5.2px 4.2px 9.1px -0.2px hsl(var(--shadow-color) / 0.16),
+    7.6px 6.2px 13.4px -0.3px hsl(var(--shadow-color) / 0.2),
+    10.6px 8.7px 18.7px -0.4px hsl(var(--shadow-color) / 0.24),
+    14.5px 11.9px 25.6px -0.6px hsl(var(--shadow-color) / 0.27),
+    19.9px 16.3px 35.1px -0.7px hsl(var(--shadow-color) / 0.31),
+    27.2px 22.3px 48px -0.8px hsl(var(--shadow-color) / 0.35),
+    36.8px 30.1px 64.9px -0.9px hsl(var(--shadow-color) / 0.38);
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: var(--bg-color);
+}
+
+.joke > span {
+  font-size: 100px;
+}
+
+.joke {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 400px;
+  min-height: 250px;
+  max-height: 800px;
+  max-width: 60%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ececec;
+  color: #111;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-elevation-high);
+}
+
+#joke-text {
+  text-align: center;
+  overflow: auto;
+}
+
+#btn-next {
+  font-family: 'Young Serif', serif;
+  padding: 0.5rem 1.25rem;
+  font-size: 2rem;
+  background-color: #ececec;
+  color: #023223;
+  border: #023223 3px solid;
+  border-radius: 0.5rem;
+}
+
+#btn-next:hover {
+  color: #ececec;
+  background-color: #023223;
+  transition: all ease-in-out 0.3s;
+}
