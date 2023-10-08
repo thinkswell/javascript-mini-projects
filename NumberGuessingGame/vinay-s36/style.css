@@ -1,0 +1,55 @@
+body {
+    background-image: linear-gradient(120deg, #C6EA8D 0%, #FE90AF 100%);
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+}
+
+.card{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 80%;
+    margin: 10% auto;
+    height: 320px;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff;
+}
+
+.card-content{
+    text-align: center;
+}
+
+.numberguess{
+    width: 130px;
+    padding:15px;
+    font-size: larger;
+    border-radius: 10px;
+}
+
+p{
+    font-size: larger;
+}
+button{
+    cursor: pointer;
+    width: 23%;
+    border-radius: 10px;
+    position: relative;
+    top: 15px;
+    padding: 10px;
+    font-size: larger;
+}
+
+button:hover{
+    background-color: #ccc;
+}
