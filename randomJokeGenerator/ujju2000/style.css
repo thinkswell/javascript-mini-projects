@@ -1,0 +1,40 @@
+
+*{
+    margin : 0px;
+    padding : 0px;
+    box-sizing: border-box;
+
+}
+
+body {
+    height : 100vh;
+    width : 100vw;
+    background-color: whitesmoke;
+    margin : auto;
+    font-size : 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+button {
+    height: 40px;
+    background-color: lightblue;
+    color : darkblue;
+    border-radius: 5px;
+    padding : 3px;
+    text-align: center;
+    width : 200px;
+    font-weight: 800;
+    cursor : pointer;
+}
+
+.container {
+    text-align : center;
+    min-height: 100px;
+    width : 80%;
+    background-color: whitesmoke;
+    background-color: white;
+    padding : 10px;
+}
