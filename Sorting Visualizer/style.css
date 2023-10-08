@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    font-size: 32px;
+    margin-top: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  #container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 500px;
+    width: 500px;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .bar {
+    width: 10px;
+    background-color: #03a9f4; /* Green color for bars */
+    margin: 1px;
+    transition: height 0.2s;
+  }
+  
+  .bar.voilet {
+    background-color: #673ab7; /* Red color for comparison bars */
+  }
+  
+  .bar.blue {
+    background-color: #2196f3; /* Blue color for swapped bars */
+  }
+  
+  /* Buttons */
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    margin: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  button.sort-btn {
+    background-color: #673ab7; /* Purple color for Sort button */
+  }
+  
+  button.randomize-btn {
+    background-color: #03a9f4; /* Light blue color for Randomize button */
+  }
