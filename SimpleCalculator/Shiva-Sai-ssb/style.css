@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+body {
+  background: linear-gradient(to top, rgb(1, 88, 88), rgb(1, 64, 83));
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.calc {
+  background: #222;
+  box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+input {
+  width: 352px;
+  height: 70px;
+  border: none;
+  background: transparent;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  font-size: 40px;
+  text-align: right;
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+input::placeholder {
+  color: #848282;
+}
+
+button {
+  color: whitesmoke;
+  background: transparent;
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  border: none;
+  margin: 10px;
+  font-weight: bold;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 23px;
+}
+
+.equal-btn {
+  background-color: rgb(223, 147, 5);
+  color: white;
+  font-size: 27px;
+}
+
+.operator {
+  color: rgb(245, 189, 4);
+}
