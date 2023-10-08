@@ -1,0 +1,55 @@
+body{
+    min-height:100vh;
+    transition: 0.5s;
+    display: flex;
+    background-color: lightgoldenrodyellow;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+ 
+ }
+ .boxSize {
+    margin: 10px;
+    border-radius: 10px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+ }
+ .fa-quote-left, .fa-quote-right {
+    font-size: 35px;
+    color: blue;
+ }
+ .QuoteText {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+ }
+ .author {
+    margin:10px;
+    text-align: right;
+    font-size: 25px;
+    font-style: italic;
+ }
+ .QuoteBtn {
+    width: 100%;
+    display: flex;
+    margin-top:10px;
+ }
+ .GenerateQuote_next {
+    font-size:18px;
+    border-radius: 5px;
+    cursor:pointer;
+    border: 2px solid black;
+    padding: 10px;
+    margin-top: 5px;
+    font-weight: bold;
+    background-color: #fff;
+ }
+ .GenerateQuote_next:hover{
+    background-color: lightcoral;
+ }
