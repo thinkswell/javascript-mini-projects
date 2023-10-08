@@ -1,0 +1,42 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #03071e;
+  }
+  
+  .quote {
+    min-height: 100vh;
+  }
+  
+  .quote .container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .quote .row {
+    min-width: 100%;
+  }
+  
+  .quote .card {
+    background-color: #ffba08;
+    color: #03071e;
+    padding: 0;
+  }
+  
+  .quote .card-body h5 {
+    font-size: 4rem;
+    font-weight: 900;
+  }
+  
+  .quote .card-body figure {
+    font-size: 2rem;
+  }
+  
+  .quote .btn {
+    background: #6a040f;
+    border-color: #6a040f;
+    color: #ffba08;
+    padding: 15px 40px;
+  }
+  
