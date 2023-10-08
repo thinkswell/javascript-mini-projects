@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❓</text></svg>"
+    />
+    <title>Guess It</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-content">
+        <h1>Guess My Number 😉</h1>
+        <p>Guess the number between 1 and 100</p>
+        <input type="text" class="numberguess" id="number" required /><br />
+        <button onclick="makeGuess()">Guess</button>
+        <span style="margin-right: 15px"></span>
+        <button onclick="newtarget()" style="width: 30%">New target</button>
+        <br /><br />
+        <p id="error-message" style="color: red"></p>
+        <p id="result"></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
