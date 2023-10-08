@@ -1,0 +1,80 @@
+.footer {
+  padding: 4rem 6rem;
+  background: #000;
+  color: #fff;
+}
+.top {
+  display: flex;
+  align-items: center;
+  text-align: start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.top i {
+  color: #fff;
+  font-size: 2rem;
+  margin-left: 1rem;
+  transition: 0.3s ease-in-out;
+}
+.top i:hover {
+  color: #01959a;
+  transform: scale(1.3);
+}
+.bottom {
+  padding: 2rem 2rem 1rem 2rem;
+  text-align: start;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.bottom div {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom h3 {
+  font-size: 1.7rem;
+  padding: 1rem 0.7rem 0;
+  margin-left: -1.2rem;
+}
+
+.bottom a {
+  text-decoration: none;
+  color: #fafafa;
+  padding-bottom: 0.4rem;
+  font-size: 1rem;
+}
+.copy {
+  font-size: 1.3rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0 0 0;
+}
+
+@media screen and (max-width: 555px) {
+  .footer {
+    padding: 2rem 2rem;
+  }
+  .footer i {
+    margin: 1rem 1rem 0 0;
+  }
+  .bottom {
+    padding: 2rem 0.9rem 0 0;
+  }
+  .bottom div {
+    width: 50%;
+    padding-left: 2rem;
+  }
+  .bottom h3 {
+    font-size: 1.2rem;
+  }
+  .bottom a {
+    font-size: 0.7rem;
+  }
+  .copy {
+    font-size: 0.7rem;
+  }
+}

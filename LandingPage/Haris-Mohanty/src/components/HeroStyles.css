@@ -1,0 +1,80 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.hero-mid {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+.hero-mid h2 {
+  padding-top: 4rem !important;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-text {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero-text h2 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  /* background: #fff; */
+  color: #fff;
+  text-shadow: 1px 1px 2px black, 0 5px 22px rgb(4, 62, 93), 0 0 5px rgb(2, 123, 88);
+
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  */
+  /** Add image in text background **/
+  /* background-image: url("https://www.color-meanings.com/wp-content/uploads/Black-and-white-paint-swirl-1024x683.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; */
+}
+.hero-text p {
+  font-size: 1.2rem;
+  color: #fff;
+  padding: 0.5rem 0 2rem 0;
+}
+.hero-text .show {
+  text-decoration: none;
+  background-color: #fff;
+  padding: 1rem 1.6rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #222;
+}
+.hero-text .hide {
+  display: none;
+}
+
+@media screen and (max-width: 555px) {
+  .hero-text h2 {
+    padding: 10px 20px;
+    font-size: 2.7rem;
+  }
+  .hero-text p {
+    font-size: 0.7rem;
+    padding: 0 0 0.9rem 0;
+  }
+  .hero-text .show {
+    padding: 0.6rem 1.1rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+  }
+}
