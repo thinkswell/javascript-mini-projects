@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="Style.css"> <!-- Include the CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Age Calculator</h1>
+        <div class="input-container">
+            <label for="birthdate" class="label">Enter your birth date:</label>
+            <input type="date" id="birthdate" class="input-field">
+            <button onclick="calculateAge()" class="button">Calculate</button>
+        </div>
+        <div class="results">
+            <h2>Your age:</h2>
+            <p id="age-in-years" class="result"></p>
+            <h2>Your age in novelty units:</h2>
+            <ul id="novelty-units" class="result"></ul>
+        </div>
+    </div>
+    <script src="Script.js"></script> <!-- Include the JavaScript file -->
+</body>
+</html>
