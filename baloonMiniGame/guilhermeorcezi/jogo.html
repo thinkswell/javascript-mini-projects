@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Estourando balões</title>
+
+	<style>
+		html, body, *{
+			border:0;
+			padding:0;
+		}
+
+		.container{
+			display:grid;
+			grid-template-columns: 15% 600px;
+			grid-template-rows: 100% 50px auto;	
+		}
+
+		.btn-restart{
+			font-family:arial;
+			font-weight:bolder;
+		}
+
+		.restart {
+	-moz-box-shadow: 3px 4px 0px 0px #899599;
+	-webkit-box-shadow: 3px 4px 0px 0px #899599;
+	box-shadow: 3px 4px 0px 0px #899599;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #bab1ba));
+	background:-moz-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:-webkit-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:-o-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:-ms-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#bab1ba',GradientType=0);
+	background-color:#ededed;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	border:1px solid #d6bcd6;
+	display:inline-block;
+	cursor:pointer;
+	color:#132124;
+	font-family:Trebuchet MS;
+	font-size:24px;
+	font-weight:bold;
+	padding:11px 26px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
+	margin-bottom: 10px;
+}
+.restart:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bab1ba), color-stop(1, #ededed));
+	background:-moz-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background:-webkit-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background:-o-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background:-ms-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bab1ba', endColorstr='#ededed',GradientType=0);
+	background-color:#bab1ba;
+}
+.restart:active {
+	position:relative;
+	top:1px;
+}
+
+		
+	</style>
+	<script src="game.js"></script>
+	</head>
+
+	<body onload="iniciaJogo()">
+		<section class="container">
+			<div class="imgs-lateral" style="font-size:30px; font-family:arial;">
+				<div class="img-total">
+						<img src="imagens/balao_azul_grande.png"/>
+						<span id="baloes_inteiros"></span>
+				</div>
+				<div class="img-pow">
+					<img src="imagens/balao_azul_grande_estourado.png"/>
+					<span id="baloes_estourados"></span>
+				</div>
+				
+				<div class="img-time" border:2px solid red;">
+					<img src="imagens/cronometro.png"/>
+					<span id="cronometro" style="position:relative; right:95px; bottom:55px;">
+				</div>
+				<div class="btn-restart">
+					<button class="restart" onclick="restart()">Restart</button>
+				</div>
+				<div class="btn-restart">
+					<button class="restart" onclick="pausar_tempo()">Pausar</button>
+				</div>
+				<div class="btn-restart">
+					<button class="restart" onclick="retomar_tempo()">continuar</button>
+				</div>
+				<div class="btn-restart">
+					<button class="restart" onclick="retorna_inicio()">Início</button>
+				</div>
+			</div>
+			<div class="img-cenario" id="cenario" style="background: url('imagens/cenario.png'); background-repeat: no-repeat;"></div>
+		</section>
+	</body>
+	
+</html>
