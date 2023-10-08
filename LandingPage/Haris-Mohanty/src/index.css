@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+3:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.font-sofias {
+  font-family: "Sofia", sans-serif;
+}
+.font-audiowide {
+  font-family: "Audiowide", sans-serif;
+}
+.font-lato {
+  font-family: "Lato", sans-serif;
+}
+.font-playfair {
+  font-family: "Playfair", sans-serif;
+}
