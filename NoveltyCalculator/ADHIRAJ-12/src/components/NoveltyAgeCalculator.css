@@ -1,0 +1,47 @@
+/* NoveltyAgeCalculator.css */
+.page-container {
+  background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12),
+              #aed9e0; /* Combined linear gradient and light greenish-blue background */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white; /* Text color changed to white */
+}
+
+.input-label {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Style for the input field */
+.input-field {
+  font-size: 2rem; /* Increased font size */
+  color: white; /* Text color changed to white */
+  font-weight: bold; /* Font made bold */
+}
+
+
+.calculate-button {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.result-label {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white; /* Text color changed to white */
+}
+
+.result-value {
+  font-size: 1.5rem;
+  color: white; /* Text color changed to white */
+}
