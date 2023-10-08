@@ -1,0 +1,89 @@
+q {
+    font-family: 'Libre Caslon Text', serif;
+  }
+  
+  p, button {
+    font-family: 'Catamaran', sans-serif;
+  }
+  
+  body {
+      margin: 0;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+  }
+  
+  @keyframes gradientBG {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+  
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .quote-area {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    max-width: 600px;
+    box-sizing: border-box;
+    padding: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+  
+  #quoteAuthor {
+    padding: 20px 0;
+  }
+  
+  button {
+    max-width: 200px;
+    text-align: center;
+    line-height: 1.3em;
+    margin-bottom: 10px;
+    border: none;
+    background: #23c6b9;
+    color: #fff;
+    font-weight: 900;
+    padding: 10px;
+    letter-spacing: .6px;
+    cursor: pointer;
+  }
+  
+  /* Reduce motion options. If on then background is static */
+  @media (prefers-reduced-motion: reduce) { 
+    body {
+      animation: none;
+    }
+  }
+  
+  /* Dark mode. If on then use dark stuff */
+  @media (prefers-color-scheme: dark) {
+    .quote-area {
+      background: #121212;
+      color: #fff;
+    }
+    body {
+      background: #000;
+    }
+  }
+  
+  @media screen and (max-width: 610px) {
+    .container {
+      width: 90%;
+      margin: auto;
+    }
+  }
