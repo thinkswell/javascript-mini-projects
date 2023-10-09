@@ -76,5 +76,11 @@ Have fun with the project!
 
 ***
 
+### Disclaimer
+
+We do not tolerate plazarized source code. In case our maintainers found that any of the PRs do not follow this TnC then that will be laballed as spam and closed subsequently.
+
+***
+
 # Hurray! Now you are a part of the open source community 🚀🚀🚀
  
