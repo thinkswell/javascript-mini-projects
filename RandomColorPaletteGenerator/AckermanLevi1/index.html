@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Palette Generator</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #colorPalette {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .colorBox {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 2px solid #333;
+        }
+
+        .colorCode {
+            font-size: 16px;
+        }
+
+        .heading {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .instructions {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    <div class="heading">Random Color Palette Generator</div>
+    <div class="instructions">Hit space bar to change color</div>
+
+    <div id="colorPalette">
+        <!-- Color boxes with hex codes will be added here -->
+    </div>
+
+    <script>
+        function getRandomColor() {
+            const letters = "0123456789ABCDEF";
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function generateRandomPalette() {
+            const colorPalette = document.getElementById("colorPalette");
+            colorPalette.innerHTML = '';
+
+            for (let i = 0; i < 5; i++) {
+                const colorBox = document.createElement("div");
+                colorBox.className = "colorBox";
+                const color = getRandomColor();
+                colorBox.style.backgroundColor = color;
+                colorPalette.appendChild(colorBox);
+
+                const colorCode = document.createElement("div");
+                colorCode.className = "colorCode";
+                colorCode.textContent = color;
+                colorPalette.appendChild(colorCode);
+            }
+        }
+
+        document.body.addEventListener("keydown", function (event) {
+            if (event.code === "Space") {
+                generateRandomPalette();
+            }
+        });
+
+        // Initial generation
+        generateRandomPalette();
+    </script>
+</body>
+</html>

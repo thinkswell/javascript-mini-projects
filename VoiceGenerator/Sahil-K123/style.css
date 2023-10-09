@@ -1,0 +1,34 @@
+body{
+    
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+    
+
+
+.hero{
+    width: 100%;
+    min-height: 100vh; 
+    background: linear-gradient(45deg,#010758,#490d61);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.hero h1{
+    font-size: 45px;
+    font-weight: 500;
+    margin-top: -50px;
+    margin-bottom: 50px;
+    
+} 
+
+textarea{
+    width: 600px;
+    height: 250px;
+    background: #403d84;
+}
