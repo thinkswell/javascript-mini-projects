@@ -1,0 +1,33 @@
+/* index.css */
+
+.container {
+    background-color: #FFA500; /* This is the color code for orange */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 100px;
+}
+
+#movieName {
+    padding: 10px;
+    margin: 10px;
+}
+
+#searchButton {
+    padding: 10px 20px;
+    background-color: #ff3300; /* A darker shade of orange for the button */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#searchButton:hover {
+    background-color: #FFA500; /* A slightly lighter shade of orange on hover */
+}
+body{
+    background-color: #FFA500;
+}
