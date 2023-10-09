@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif; ;
+}
+body{
+    background-color: rgb(185, 226, 226);
+}
+
+
+.incontainer{
+    border: 2px solid grey;
+    border-radius: 16px;
+    box-shadow: 1rem 0.9rem 0.5rem 0.4rem rgb(0,0,0,0.4);
+    display: grid;
+    place-content: center;
+    margin-top: 6rem;
+    height: 64vh;
+    width: 50vw;
+    margin-left: 24%;
+    background-color: rgb(244, 247, 251); 
+   
+}
+h2{
+    color: rgb(44, 41, 41);
+}
+.options{
+    color: rgb(47, 46, 46);
+    
+}
+input{
+    cursor: pointer;
+}
+li{
+    list-style: none;
+    
+    padding: 10px;
+}
+#submit{
+    cursor: pointer;
+    padding: 10px 20px ;
+    border-radius: 10px;
+    border: 2px solid grey;
+    margin-top: 2.3rem;
+    width: 43vw;
+    background-color: rgba(32, 152, 232, 0.73);
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+}
+#showScore{
+    background-color:rgba(158, 152, 152, 0.773);
+    margin-top: 1rem;
+    border-radius: 12px;
+    height: 17vh;
+    display: none;
+    transition: 8s ;
+}
+#showScore h3{
+    font-size: 22px ;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 0.8rem;
+    color: rgb(37, 36, 36);
+ 
+
+}
+#showScore #btn1{
+     font-size: 17px;
+     font-weight: bold;
+     padding: 12px 10px ;
+     border-radius: 13px;
+     border: 2px solid grey;
+     width: 20vw;
+     background-color:#00cecbd4;
+     color: white;
+     margin-top: 1rem;
+     margin-left: 11rem;
+}
