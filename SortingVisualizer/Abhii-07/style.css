@@ -1,0 +1,118 @@
+.mySlides {
+	display: none;
+}
+
+body {
+	background-color: rgb(252, 250, 247);
+	font-family: Verdana, sans-serif;
+}
+h1{
+	text-align: center;
+	background-color: rgb(121, 57, 180);
+	padding: 10px;
+	color: white;
+}
+.head {
+	margin-top: 1vw;
+	margin-right: 2vw;
+	margin-left: 2vw;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bolder;
+}
+
+.data-container {
+	width: 600px;
+	height: 384px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.bar {
+	width: 28px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background-color: rgb(0, 183, 255);
+	transition: 0.2s all ease;
+}
+
+.bar__id {
+	position: absolute;
+	top: -24px;
+	width: 100%;
+	text-align: center;
+    font-size: 1vw;
+}
+.btn1 {
+	padding: 12px;
+	font-weight: bolder;
+	background-color: #da981f;
+	border-radius: 10px;
+	color: white;
+	font-size: 16px;
+	border: white;
+	margin-left: 37vw;
+	margin-top: 4vw;
+	margin-right: 1vw;
+}
+.btn2 {
+	padding: 12px;
+	font-weight: bolder;
+	background-color: #2f1980;
+	border-radius: 10px;
+	color: white;
+	font-size: 16px;
+	border: white;
+	margin-left: 2vw;
+	margin-top: 1vw;
+	margin-right: 1vw;
+}
+.btn3 {
+	padding: 12px;
+	font-weight: bolder;
+	margin-left: 2vw;
+	margin-top: 1vw;
+	margin-right: 1vw;
+	background-color: rgb(14, 116, 14);
+	border-radius: 10px;
+	color: white;
+	font-size: 16px;
+	border: white;
+}
+
+.btn4 {
+	padding: 12px;
+	font-weight: bolder;
+	background-color: rgb(121, 57, 180);
+	border-radius: 10px;
+	color: white;
+	font-size: 16px;
+	border: white;
+}
+
+.btn5 {
+	padding: 12px;
+	font-weight: bolder;
+	margin-left: 2vw;
+	margin-top: 1vw;
+	margin-right: 1vw;
+	background-color:rgb(224, 62, 62);
+	border-radius: 10px;
+	color: white;
+	font-size: 16px;
+	border: white;
+}
+.sort
+{
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	overflow-x: hidden;
+	margin-left: 2vw;
+	margin-top: 12vw;
+	margin-right: 1vw;
+	padding-top: 2vw;
+	
+}
