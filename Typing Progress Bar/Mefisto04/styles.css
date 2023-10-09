@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#progress-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#progress-bar {
+    width: 0;
+    height: 30px;
+    background-color: #007BFF;
+    transition: width 0.3s ease;
+}
+
+#word-container {
+    margin-top: 20px;
+}
+
+#word-display {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#word-input {
+    font-size: 24px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
