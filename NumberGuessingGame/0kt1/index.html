@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 class="mt-5">Number Guessing Game (1-100)</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="container-bg mx-auto my-5">
+                    <p class="lead">Guess a number between 1 and 100:</p>
+                    <div class="form-group">
+                        <input type="number" id="guessInput" class="form-control" min="1" max="20">
+                    </div>
+                    <button id="submitGuess" class="btn btn-primary">Submit Guess</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="feedback-container">
+        <p id="feedback"></p>
+        <p id="hint"></p>
+    </div>
+    <div class="top-left">
+        <p class="mt-4">Attempts: <span id="guessCount">0</span></p>
+        <p>Guessed Numbers: <span id="guessedNumbers"></span></p>
+    </div>
+
+    <div class="image-container">
+        <img src="images/image1.png" alt="Image Description">
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

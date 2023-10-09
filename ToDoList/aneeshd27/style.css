@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: auto;
+    background: #56e2db;
+}
+#app{
+    display: grid;
+    grid-template-columns:repeat(auto-fill,200px) ;
+    padding:30px;
+    gap:30px;
+}
+.note{
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgb(246, 246, 138);
+    padding:10px;
+    box-sizing: border-box;
+    border:none;
+    box-shadow: 0 0 10px;
+    resize: none;
+    font-size: 18px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.note:hover{
+    cursor: pointer;
+    transform: scale(1.1,1.1);
+    rotate: -5deg;
+    background: rgb(243, 243, 152);
+}
+.add-note{
+    height: 200px;
+    border: none;
+    outline: none;
+    border-radius:10px;
+    font-size: 100px;
+    box-shadow: 0 0 10px;
+    transition-duration: 0.1s;
+    background-color: rgba(0,0,0,0.2);
+    color: rgba(0,0,0,0.6);
+    cursor: pointer;
+}
+.add-note:hover{
+    background-color: rgba(0,0,0,0.3);
+    font-size: 120px;
+} 

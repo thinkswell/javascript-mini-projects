@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task_manager</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body onload="update();">
+    <!-- site_add_page____________________________________-->
+    <!-- site_add_page____________________________________ -->
+    <div id="site_add">
+      <div>
+        <input type="text" id="url" placeholder="enter url" />
+        <input
+          type="text"
+          id="site_name"
+          placeholder="enter name (atlest 4 charecter)"
+        />.
+        <button onclick="save_site()">save</button>
+        <button onclick="cancel_site()">cancel</button>
+      </div>
+    </div>
+
+    <!-- date_______________________________ -->
+    <!-- date_______________________________ -->
+    <div id="boss">
+      <div id="time"></div>
+      <div id="date"></div>
+    </div>
+
+    <!-- google _____________________________________________________________-->
+    <!-- google _____________________________________________________________-->
+    <div id="search">
+      <form action="https://google.com/search" method="get" target="_blank">
+        <input type="text" name="q" id="google" placeholder="Search here" />
+      </form>
+    </div>
+
+    <!--Sites______________________________________________________________-->
+    <!--Sites______________________________________________________________-->
+    <div id="sites">
+      <div id="create_site" class="site_iteam">
+        <a> <div>+</div></a>
+        <i>add iteam</i>
+      </div>
+    </div>
+
+    <!-- to-do____________________________________________________________ -->
+    <!-- to-do____________________________________________________________ -->
+    <div id="note">
+      <div class="note">
+        <h2>TO_DO List</h2>
+
+        <input
+          type="text"
+          placeholder=" Write here ...."
+          id="input"
+          autofocus
+          value="  "
+        />
+        <ul id="in"></ul>
+      </div>
+      <!-- note_______________________________________________________ -->
+      <!-- note_______________________________________________________ -->
+
+      <div class="note" id="note2">
+        <h2>
+          <button id="save" onclick="save_note()">save</button>Note
+
+          <button style="margin-right: 5px" onclick="add_note()">add</button>
+        </h2>
+
+        <textarea name="" id="area" cols="30" rows="10"></textarea>
+        <div id="show">
+          <button id="pre_note" onclick="pre_note()">pre</button>
+          <div id="show_count">1/2</div>
+          <button id="next_note" onclick="next_note()">next</button>
+          <button id="remove_note" onclick="remove_note()">del</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

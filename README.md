@@ -76,5 +76,11 @@ Have fun with the project!
 
 ***
 
+### Disclaimer
+
+We have a strong commitment to genuine open source contributions and, therefore, do not tolerate plagiarized source code. If our maintainers discover that any Pull Requests (PRs) fail to adhere to this Terms and Conditions, they will be categorized as spam and subsequently closed.
+
+***
+
 # Hurray! Now you are a part of the open source community 🚀🚀🚀
  
