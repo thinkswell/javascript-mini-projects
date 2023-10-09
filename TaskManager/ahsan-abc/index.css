@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Roboto';
+}
+
+body 
+{
+    background-color: turquoise;
+}
+
+
+
+
+
+
+/* to-do__________________________________________ */
+/* to-do__________________________________________ */
+
+#note
+{
+    text-align: center;
+    background-color:turquoise;
+}
+
+
+.note
+{
+  display:inline-flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 1px  rgb(44, 44, 44);
+
+
+    height:500px;
+    width:40vw;
+    background-color: rgba(255, 255, 255, 0.806);
+    color: rgb(0, 0, 0);
+  
+    border-radius:5% ;
+    margin:20px;
+ 
+
+
+}
+ul{
+    color: white;
+    font-size: 1.2rem;
+   list-style: none;
+    margin : 0 12px;
+    text-align: left;
+
+   
+   
+}
+.note >h2
+{
+    margin-top: 5px;
+    color: rgb(85, 85, 85);
+}
+
+.note > input
+
+{
+    padding: 0 2%;
+    width: 91%;
+    height: 25px;
+
+ /* margin: 0 12px; */
+ margin:auto;
+ margin-top: 10px;
+
+}
+
+#in > li
+{
+   margin : 15px 0 ;
+    padding: 2px 2px ;
+    background-color:deepskyblue;
+    white-space: 3;
+    
+}
+
+.but 
+{
+    background-color: aquamarine;
+    visibility:hidden;
+}
+
+@media only screen and (max-width :800px)
+{
+    .note
+{
+    
+    display:inline-block;
+    width:90vw;
+  
+    
+
+}
+
+}
+
+
+/* search_____________________________________________________________ */
+/* search_____________________________________________________________ */
+
+#search 
+{
+    height: 50px;
+    background-color: turquoise;
+    text-align: center;
+}
+
+
+#google
+{
+    padding: 10px;
+
+    border: 0;
+    margin : 10px 0 ;
+    outline: 0;
+    height: 1rem;
+    width:45vw;
+    box-shadow: 1px 1px  rgb(55, 55, 55);
+    border-radius: 10px;
+    font-size: medium;
+}
+
+@media screen and (max-width:800px)
+{
+#google
+{
+
+
+    width:80vw;
+}
+}
+
+
+/* note________________________________ */
+/* note________________________________ */
+
+#note2{
+    position: relative;
+   height: 500px;
+}
+
+
+
+#area
+{
+    height: 85%;
+    width: 97%;
+    border: 0;
+    outline: 0;
+
+   
+
+
+    font-size: 1.3rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 3px;
+
+    background-color: unset;
+    color: rgba(45, 108, 255, 0.995);
+    resize: none;
+    position: relative;
+  
+   
+}
+
+
+#show_count
+{
+    position:relative;
+    z-index: 2;
+    top: 3px;
+    left: 2px;
+    background-color: unset;
+    display: inline;
+    margin-bottom: 5px;
+    text-align: center;
+    justify-content: space-around;
+
+}
+
+#next_note
+{
+    display: inline;
+    
+    
+    
+}
+
+/* date ________________________________ */
+/* date ________________________________ */
+
+#boss
+{
+  align-items: center;
+  justify-self: center;
+    text-align: center;
+   
+     height:160px;
+
+    width:15rem;
+    margin: auto;
+    margin: 6vh auto;
+
+}
+
+
+#date
+{
+
+  
+ background-color: bisque;
+ padding: 5px;
+    font-size: 1.2rem;
+    box-shadow: 1px 1px  rgb(55, 55, 55);
+    border-radius: 10px;
+}
+
+#time
+{
+    height: 60%;
+    color: white;
+    padding:10px;
+    padding-bottom: 0;
+    font-size: 3.5rem;
+    background-color: rgb(176, 11, 253);
+  
+    box-shadow: 1px 1px  rgb(55, 55, 55);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* sites_________________________________________________________________ */
+/* sites_________________________________________________________________ */
+#sites
+{
+    /* background-color: blue; */
+    display: flex;
+   
+    width:70%;  /* 90% - mobile*/
+    margin:auto;
+    padding: 2%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: max-content; 
+    flex-direction: row-reverse;
+
+}
+.site_iteam
+{
+    /* background-color: black; */
+     margin: 0 10px;
+     width:6rem;
+     height:8rem;
+     border-radius: 5px;
+     display: flex;
+     align-content: center;
+     justify-content: center;
+     text-align: center;
+     flex-wrap: wrap;
+     overflow: hidden;
+   
+   
+
+}
+
+ .site_iteam  > a 
+{
+    display: flex;
+    margin:4px;
+    width:4rem;
+    height:4rem;
+    background-color: white;
+    flex-wrap: wrap;
+ 
+    text-align: center;
+    border-radius: 51%;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+
+.site_iteam > a > img
+{
+    width:60%;
+    height:60%;
+    margin: auto;
+   
+}
+.site_iteam > i
+{
+    font-style:normal;
+    color: white;
+    width:100%;
+    font-size: 1.2rem;
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.site_iteam > button
+{
+    opacity: 50%;
+margin-top: 2px;
+display: none;
+}
+
+
+.site_iteam:hover
+{
+    background-color: rgba(186, 185, 185, 0.548);
+    
+}
+
+#site_add
+{
+    width:100vw;
+    height:100vh;
+    position:sticky;
+    background-color: rgba(187, 187, 187, 0.703);
+    z-index:2;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+#site_add > div
+{
+
+    width:30%;
+    height:30%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 3%;
+ 
+
+}
+
+#site_add > div > input
+{
+    display: block;
+    margin:10%;
+    width:80%;
+    height: 30px;
+    padding: 4px;
+    font-size: 1rem;
+    
+}
+
+
+@media screen and ( max-width:800px) {
+    #sites
+{
+
+   
+   
+    width:90%;  /* 90% - mobile*/
+    margin:auto;
+    padding: 2%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: max-content; 
+}
+
+.site_iteam 
+{
+    margin:0;
+    height: max-content;
+   padding-bottom: 5px;
+   width: 5rem;
+   height:7rem;
+}
+
+
+
+.site_iteam > a > img
+{
+    width:80%;
+    height:80%;
+    margin: auto;
+    border-radius: 51%;
+    
+   
+}
+
+#site_add > div
+{
+
+    width:90%;
+    height:43%;
+   
+ 
+
+}
+
+}
+
+
+.site_iteam > i
+{
+    font-size: 0.8rem;
+}
+    
+
+
+
+.push
+{
+    display: block;
+}
+
+.pull
+{
+    display: none;
+}
+
+
