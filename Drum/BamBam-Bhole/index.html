@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Drum Kit</title>
+    <meta name="title" content="Drum Kit">
+    <meta name="keywords" content="drum, drum kit, kit, js30, javascript 30, ">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="revisit-after" content="7 days">
+
+    <meta name="description" content="The drum kit that will make you want to play all day long.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://harsh98trivedi.github.io/Drum-Kit/">
+    <meta property="og:title" content="Drum Kit">
+    <meta property="og:description" content="The drum kit that will make you want to play all day long.">
+    <meta property="og:image" content="https://raw.github.com/harsh98trivedi/Drum-Kit/master/meta.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://harsh98trivedi.github.io/Drum-Kit/">
+    <meta property="twitter:title" content="Drum Kit">
+    <meta property="twitter:description" content="The drum kit that will make you want to play all day long.">
+    <meta property="twitter:image" content="https://raw.github.com/harsh98trivedi/Drum-Kit/master/meta.jpg">
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>Drum Kit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/609f7f6148.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            min-height: 100vh;
+            display: grid;
+            place-content: center;
+            text-align: center;
+            background-color: #efefef;
+            background: url();
+            font-family: 'DM Serif Display', serif;
+            -webkit-user-select: none;
+            /* Safari */
+            -ms-user-select: none;
+            /* IE 10 and IE 11 */
+            user-select: none;
+            /* Standard syntax */
+        }
+
+        h1 {
+            color: #240045;
+            font-family: 'Unbounded', cursive;
+            margin: auto;
+            transition: 0.25s;
+        }
+
+        h1:hover {
+            color: #FF9E00;
+        }
+
+        .fa-drum {
+            transform: scale(1.15);
+            margin: auto 0.5rem;
+        }
+
+        #drumkit {
+            margin: 1.5rem auto;
+            color: #240045;
+            text-align: center;
+        }
+
+        h2 {
+            margin: auto;
+        }
+
+        a,
+        a:visited {
+            color: #240045;
+        }
+
+        i {
+            font-weight: bold;
+        }
+
+        .element {
+            font-family: 'DM Serif Display', serif;
+            display: inline-grid;
+            place-content: center;
+            border-radius: 0.5rem;
+            width: 10vmax;
+            height: 10vmax;
+            padding: 1.5vmax 2.5vmax;
+            margin: 1.5vmax;
+            cursor: pointer;
+            transition: 0.15s;
+            box-shadow: 15px 15px 25px #e0e0e0, -15px -15px 25px #efefef;
+        }
+
+        .active {
+            background-color: #FF9E00;
+            transform: scale(1.05);
+            transition: 0.15s;
+        }
+
+        .footnote {
+            margin: 0.5rem auto;
+        }
+    </style>
+</head>
+
+<body>
+    <a class="title" href="" style="text-decoration: none;">
+        <h1>Drum Kit <i class="fa-solid fa-drum"></i></h1>
+    </a>
+    <div id="drumkit"></div>
+    <div class="footnote">Made with <i class="fas fa-heart" style="color: red;" aria-hidden="true"></i> by <a
+            href="https://harsh98trivedi.github.io" target="_blank">Harsh Trivedi</a></div>
+    <script type="text/javascript">
+        // Defining Types Of Drum Elements Available
+        var data = {
+            'A': {
+                name: 'Clap',
+                sound: 'sounds/clap.wav',
+            },
+            'S': {
+                name: 'HiHat',
+                sound: 'sounds/hihat.wav'
+            },
+            'D': {
+                name: 'Kick',
+                sound: 'sounds/kick.wav'
+            },
+            'F': {
+                name: 'OpenHat',
+                sound: 'sounds/openhat.wav'
+            },
+            'G': {
+                name: 'Boom',
+                sound: 'sounds/boom.wav'
+            },
+            'H': {
+                name: 'Ride',
+                sound: 'sounds/ride.wav'
+            },
+            'J': {
+                name: 'Snare',
+                sound: 'sounds/snare.wav'
+            },
+            'K': {
+                name: 'Tom',
+                sound: 'sounds/tom.wav'
+            },
+            'L': {
+                name: 'Tink',
+                sound: 'sounds/tink.wav'
+            }
+        };
+
+        // Get the drumkit element from the DOM
+        var drumkit = document.getElementById("drumkit");
+
+        // Create HTML elements for each drum element and add them to the DOM
+        function construct() {
+            for (var key in data) {
+                var drumElement = document.createElement('div');
+                drumElement.classList.add('element', data[key].name);
+                var h2 = document.createElement('h2');
+                h2.textContent = key;
+
+                var span = document.createElement('span');
+                span.textContent = data[key].name;
+
+                drumElement.appendChild(h2);
+                drumElement.append(span);
+                drumkit.appendChild(drumElement);
+
+                // Play the sound corresponding to the clicked drum element
+                drumElement.addEventListener('click', function (event) {
+                    var key = event.currentTarget.querySelector('h2').textContent;
+                    playDrum(key.toUpperCase());
+                });
+            }
+        };
+
+        // Play the sound corresponding to the pressed key
+        function playDrum(key) {
+            if (data.hasOwnProperty(key)) {
+                var drumElement = document.querySelector('.element.' + data[key].name);
+                drumElement.classList.add('active');
+                var audio = new Audio();
+                audio.src = data[key].sound;
+                audio.play();
+
+                // Remove the active class from the drum element after the sound finishes playing
+                audio.addEventListener('timeupdate', function () {
+                    if (audio.currentTime >= audio.duration / 32) {
+                        drumElement.classList.remove('active');
+                        audio.removeEventListener('timeupdate', arguments.callee);
+                    }
+                });
+            } else {
+                // Show an error message in the console for invalid keys
+                console.log(
+                    "OOPS!\nIt looks like you've pressed a key that isn't defined.\nCould you please try again with a valid key?\nThank you!"
+                );
+                // Clear the console after 2.5 seconds
+                setTimeout(function () {
+                    console.clear();
+                }, 10000);
+            }
+        };
+
+        // Handle key press events
+        function keyEvents(event) {
+            playDrum(event.key.toUpperCase());
+        };
+
+        // Listen for any key press events and call keyEvents function to handle the key press
+        window.addEventListener('keydown', keyEvents);
+
+        // Add drum elements to the drumkit
+        construct();
+    </script>
+</body>
+
+</html>
