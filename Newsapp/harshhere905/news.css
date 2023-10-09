@@ -1,0 +1,25 @@
+/* App.css */
+.App {
+    text-align: center;
+  }
+  
+  .news-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+  }
+  
+  .news-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+  }
+  
+  .news-item h3 {
+    margin-bottom: 10px;
+  }
+  
+  /* Add more styling as needed */
+  
