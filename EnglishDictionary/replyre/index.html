@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English Dictionary</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="dictionary.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>English Dictionary</header>
+      <div class="search">
+        <input type="text" placeholder="Search a world" required />
+        <i class="fas fa-search"></i>
+        <span class="material-icons">close</span>
+      </div>
+      <p class="info-text">Type the word and press enter</p>
+      <ul>
+        <li class="word">
+          <div class="details">
+            <p>_</p>
+            <span>__</span>
+          </div>
+          <i class="fas fa-volume-up"></i>
+        </li>
+
+        <div class="content">
+          <li class="meaning">
+            <div class="details">
+              <p>Meaning</p>
+              <span>__</span>
+            </div>
+          </li>
+
+          <li class="example">
+            <div class="details">
+              <p>Example</p>
+              <span>__</span>
+            </div>
+          </li>
+          <li class="synonyms">
+            <div class="details">
+              <p>Synonyms</p>
+              <div class="list"></div>
+            </div>
+          </li>
+        </div>
+      </ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
