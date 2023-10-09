@@ -1,0 +1,110 @@
+body, h1, h2, p, ul, li, table, th, td {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #caedf2;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styles */
+h1 {
+  background-color: #007BFF;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Input Section Styles */
+.input-section {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.input-section label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#category-select,
+#amount-input,
+#date-input,
+#add-btn {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#category-select {
+  background-color: #f0f0f0;
+}
+
+#add-btn {
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#add-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Expenses List Styles */
+.expenses-list {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.expenses-list h2 {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+#total-amount {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .input-section, .expenses-list {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
