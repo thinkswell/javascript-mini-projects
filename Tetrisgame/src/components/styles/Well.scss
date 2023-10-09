@@ -1,0 +1,56 @@
+@import './colors.scss';
+@import './size.scss';
+
+.well-container {
+  position: relative;
+  flex-basis: 295px;
+  @media #{$mobile-phone-6} {
+    flex-basis: 100%;
+  }
+  @media #{$mobile-phone-5} {
+    flex-basis: 440px;
+  }
+
+  background-color: $transparent-blue;
+  
+  .well-grid {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    li.square-block-container {
+      position: absolute;
+      .square-block {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .tetromino {
+    position: absolute;
+    .square-block-container {
+      position: absolute;
+      // Refer to *Tetromino.js* to see why it's 25%
+      width: 25%;
+      height: 25%;
+      .square-block {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    height: calc(100% - 30px);
+    color: $deepest-blue;
+    padding: 15px;
+    line-height: 2;
+    overflow: hidden;
+    background: $transparent-blue-transparent;
+    a {
+      text-decoration: none;
+    }
+  }
+}

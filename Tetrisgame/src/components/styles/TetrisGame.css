@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  height: 100%;
+  overflow: hidden; }
+
+ul li {
+  list-style: none; }
+
+button {
+  outline: none;
+  border: none; }
+
+#root {
+  margin: 0 auto;
+  overflow: auto;
+  position: relative;
+  top: 20px;
+  width: 530px;
+  height: 590px; }
+  @media screen and (max-width: 451px) {
+    #root {
+      width: 340px;
+      height: 100%;
+      top: 10px; } }
+  @media screen and (max-width: 321px) {
+    #root {
+      width: 260px;
+      height: 100%; } }
+  #root .tetris-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    width: 100%;
+    height: 100%; }
+    @media screen and (max-width: 451px) {
+      #root .tetris-container {
+        flex-direction: column;
+        height: 550px; } }
+
+.github-fork {
+  display: block; }
+  @media screen and (max-width: 751px) {
+    .github-fork {
+      display: none; } }
+  .github-fork img {
+    position: fixed;
+    top: 0;
+    right: 0;
+    border: 0; }

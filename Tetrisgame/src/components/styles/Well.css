@@ -1,0 +1,39 @@
+.well-container {
+  position: relative;
+  flex-basis: 295px;
+  background-color: #e4faff; }
+  @media screen and (max-width: 451px) {
+    .well-container {
+      flex-basis: 100%; } }
+  @media screen and (max-width: 321px) {
+    .well-container {
+      flex-basis: 440px; } }
+  .well-container .well-grid {
+    position: relative;
+    width: 100%;
+    height: 100%; }
+    .well-container .well-grid li.square-block-container {
+      position: absolute; }
+      .well-container .well-grid li.square-block-container .square-block {
+        width: 100%;
+        height: 100%; }
+  .well-container .tetromino {
+    position: absolute; }
+    .well-container .tetromino .square-block-container {
+      position: absolute;
+      width: 25%;
+      height: 25%; }
+      .well-container .tetromino .square-block-container .square-block {
+        width: 100%;
+        height: 100%; }
+  .well-container .overlay {
+    position: absolute;
+    top: 0;
+    height: calc(100% - 30px);
+    color: #0d2e6d;
+    padding: 15px;
+    line-height: 2;
+    overflow: hidden;
+    background: rgba(228, 250, 255, 0.5); }
+    .well-container .overlay a {
+      text-decoration: none; }

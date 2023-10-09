@@ -1,0 +1,66 @@
+@import './size.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+ul li {
+  list-style: none;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+#root {
+  margin: 0 auto;
+  overflow: auto;
+  position: relative;
+  top: 20px;
+  width: 530px;
+  height: 590px;
+  @media #{$mobile-phone-6} {
+    width: 340px;
+    height: 100%;
+    top: 10px;
+  }
+  @media #{$mobile-phone-5} {
+    width: 260px;
+    height: 100%;
+  }
+
+  .tetris-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    @media #{$mobile-phone-6} {
+      flex-direction: column;
+      height: 550px;
+    }
+    flex-wrap: nowrap;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.github-fork {
+  display: block;
+  @media #{$middle-size-screen} {
+    display: none;
+  }
+
+  img {
+    position: fixed;
+    top: 0;
+    right: 0;
+    border: 0;
+  }
+} 
