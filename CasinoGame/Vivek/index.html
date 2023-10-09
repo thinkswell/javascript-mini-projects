@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Mario Matching Game</title>
+</head>
+<body>
+    <h2>Mario Matching Game</h2>
+    <div class="box">
+        <label>
+            <input type="checkbox" name="checkbox" id="chk1">
+            <i></i>
+        </label>
+        <label>
+            <input type="checkbox" name="checkbox" id="chk2">
+            <i></i>
+        </label>
+        <label>
+            <input type="checkbox" name="checkbox" id="chk3">
+            <i></i>
+        </label>
+    </div>
+    <button class="reset">Reset Game</button>
+    <script>
+        let chk1=document.querySelector("#chk1");
+        let chk2=document.querySelector("#chk2");
+        let chk3=document.querySelector("#chk3");
+        let reset=document.querySelector(".reset");
+
+        chk1.addEventListener("click", ()=>{
+            if(chk1.checked === true){
+                chk1.disabled = 'true';
+            }
+        })
+
+        chk2.addEventListener("click", ()=>{
+            if(chk2.checked === true){
+                chk2.disabled = 'true';
+            }
+        })
+
+        chk3.addEventListener("click", ()=>{
+            if(chk3.checked === true){
+                chk3.disabled = 'true';
+            }
+        })
+
+        reset.addEventListener("click",()=>{
+            chk1.disabled = false;
+            chk1.checked = false;
+
+            chk2.disabled = false;
+            chk2.checked = false;
+
+            chk3.disabled = false;
+            chk3.checked = false;
+        })
+    </script>
+</body>
+</html>
