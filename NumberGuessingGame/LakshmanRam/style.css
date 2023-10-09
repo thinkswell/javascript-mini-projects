@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    background-color: #7296fa;
+  }
+  .container {
+    width: min(90%, 40.25em);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: #fffcfce4;
+    padding: 5em 2em;
+    border-radius: 0.5em;
+    box-shadow: 1.5em 1.5em #26233e;
+    text-align: center;
+  }
+
+  
+  #check-btn {
+    font-size: 1.2em;
+    font-weight: 800;
+  }
+  h3 {
+    font-size: 1.5em;
+    font-weight: 900;
+    line-height: 2em;
+    color: #303030;
+  }
+  .input-wrapper {
+    width: 70%;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 1em;
+    margin: 3em auto 1.5em auto;
+  }
+  input[type="number"] {
+    width: 100%;
+    padding: 1em;
+    font-size: 1.2em;
+    text-align: center;
+    border: 2px solid #adaeae;
+    border-radius: 0.3em;
+    outline: none;
+    appearance: text-field;
+    -moz-appearance: textfield;
+  }
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"]:focus {
+    border-color: #3c6fff;
+  }
+  button {
+    font-size: 1em;
+    background-color: #3c6fff;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 0.5em;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  #restart {
+    margin: 0 auto 0 auto;
+    padding: 0.9em 4.5em;
+    font-size: large;
+    font-weight: 800;
+    position: relative;
+  }
+  .result {
+    margin-top: 1em;
+  }
+  p {
+    font-size: 1em;
+    font-weight: 400;
+    color: #565b70;
+    word-break: break-all;
+  }
+  .error,
+  .success {
+    padding: 0.5em 0;
+    border-radius: 0.3em;
+    margin-bottom: 1em;
+    animation: pop 0.5s forwards;
+    transform: scale(0);
+  }
+  .error {
+    background-color: #ffcbcb;
+    color: #ff3e3e;
+  }
+  .success {
+    background-color: #b9ffd5;
+    color: #05c451;
+  }
+  @keyframes pop {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
