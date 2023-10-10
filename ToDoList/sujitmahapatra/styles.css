@@ -1,0 +1,157 @@
+body {
+    background: linear-gradient(to bottom, #6b46c1, #f9a8b6);
+    background-repeat: no-repeat; /* Prevent background repetition */
+    background-attachment: fixed; /* Keep the background fixed */
+    background-size: cover; /* Cover the entire background */
+    font-family: Arial, sans-serif;
+    color: #333;
+
+    /* Center the container both horizontally and vertically */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure the container takes the full viewport height */
+}
+
+/* Container Styles */
+.container {
+    width: 90%;
+    max-width: 450px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-x: hidden;  
+  overflow-y: auto;
+    max-height: 100vh; /* Set a maximum height for the container */
+}
+
+/* Title Styles */
+.title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    cursor: pointer; 
+    transition: color 0.3s, transform 0.4s;
+    font-family: "Montserrat", sans-serif;
+}
+.title:hover {
+    color: #6b46c1;
+  transform: scale(1.50);
+}
+/* Task Form Styles */
+.task-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.add-task-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-task-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Task List Styles */
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.delete-btn {
+    background-color: #ff3333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Expected Completion Styles */
+.expected-completion {
+    flex-grow: 1; /* Expand to fill available space */
+    margin-right: 10px; /* Add margin to separate from other buttons */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Completed Button Styles */
+.complete-btn {
+    background-color: #33cc33;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.complete-btn:hover {
+    background-color: #2ca02c;
+}
+/* Clear All Button Styles */
+.clear-all-btn {
+    display: none; /* Hide the button by default */
+    background-color: #ff3333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.clear-all-btn:hover {
+    background-color: #cc0000;
+}
+
+p{
+  color: grey;
+  font-size: 13px;
+  margin-top: 20px;
+}
