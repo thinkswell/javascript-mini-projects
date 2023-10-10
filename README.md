@@ -1,6 +1,6 @@
 # Welcome to the JavaScript Mini Projects Repository!
 ### Description
-"Welcome to our JavaScript Playground on GitHub! 🚀 Explore a bunch of cool projects that show off the awesome side of JavaScript. Whether you're new to coding or a seasoned pro, there's something here for you. It's not about fancy titles; it's about the joy of coding in JavaScript. Dive in, check out the code, and let the inspiration flow! Happy coding! 🌟"
+"Welcome to our JavaScript Playground on GitHub! 🚀 Explore a bunch of cool projects that show off the awesome side of JavaScript. Whether you're new to coding or a seasoned pro, there's something here for you. It's not about fancy titles; it's about the joy of coding in JavaScript. Dive in, check out the code, and let the love and inspiration flow! Happy coding! 🌟"
 
 ***
 
