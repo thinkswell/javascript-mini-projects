@@ -1,0 +1,212 @@
+.homepage{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.searchgradient{
+    width: 100%;
+    margin: 40px 0px;
+    height: 200px;
+    background-color: #231557;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: url(../images/image11.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.searchgradient h1{
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    text-shadow:0px 5px 25px rgba(65, 65, 65, 0.614);
+}
+.search_under_gradient{
+    background: none;
+    width: max-content;
+}
+.searchgradient .search_under_gradient input[type="text"]{
+    font-size: 15px;
+    height: 0px;
+    position: relative;
+    top: 100px;
+    width: 450px;
+    padding: 20px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(128, 128, 128, 0.351);
+    margin: 0px 10px;
+    border-radius: 10px;
+}
+.blocks{
+    margin: auto;
+    width: 82vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.not_found_img{
+    width: 75vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.not_found_img img{
+    width: 20%;
+    height: auto;
+}
+.not_found_img h1{
+    font-size: 20px;
+    color: rgb(53, 53, 53);
+}
+.categories{
+    padding-top: 30px;
+    display: flex;
+    list-style-type: none;
+    width: 95%;
+    justify-content: center;
+}
+.categories li{
+ cursor: pointer;
+}
+.categories li button{
+    margin: 0px 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+.categories li button:hover{
+    border-bottom: 1px solid grey;
+}
+.databuttonLoader{
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #000000;
+    width: 15px;
+    height: 15px;
+    margin-left: 20px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+.dataLoader {
+    margin-top: 100px;
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #000000;
+    width: 40px;
+    height: 40px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+@media only screen and (max-width: 1000px) {
+    .homepage{
+        width: 80%;
+    }
+    .searchgradient{
+        height: 170px;
+        border-radius: 20px;
+    }
+    .searchgradient h1{
+        position: absolute;
+        color: white;
+        font-size: 50px;
+        text-shadow:0px 5px 25px rgba(65, 65, 65, 0.614);
+    }
+    .searchgradient .search_under_gradient input[type="text"]{
+        top: 80px;
+        width: 420px;
+    }
+    .blocks{
+        margin: auto;
+        width: 82vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .categories{
+        padding:20px 0px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .homepage{
+        width: 100%;
+    }
+    .searchgradient{
+        width: 90%;
+        margin: 40px auto;
+        height: 150px;
+        border-radius: 20px;
+    }
+    .searchgradient h1{
+        font-size: 30px;
+    }
+    .searchgradient .search_under_gradient input[type="text"]{
+        font-size: 12px;
+        top: 70px;
+        left: 0%;
+        width: 70%;
+        padding: 20px;
+    }
+    .not_found_img{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+    }
+    .not_found_img img{
+        width: 70%;
+    }
+    .not_found_img h1{
+        font-size: 15px;
+    }
+    .blocks{
+        margin: auto;
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .categories{
+        width: 100%;
+        padding-top: 10px;
+        flex-wrap: wrap;
+        padding: 0px;
+    }
+    .categories li button{
+        margin: 0px 2px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 13px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid rgb(255, 255, 255);
+    }
+    .categories li button:hover{
+        border-bottom: 1px solid grey;
+    }.dataLoader {
+        margin-top: 150px;
+        top: 40%;
+        left: 45%;
+      }
+}

@@ -1,0 +1,140 @@
+.entire_addpage{
+  display: flex;
+  height: 100vh;
+  overflow-y: hidden;
+  flex-direction: row;
+  align-items: center;
+}
+.addpage_left{
+  width: 50vw;
+}
+.addpage_left img{
+  width:100%;
+}
+.addblogForm {
+  justify-content: center;
+  width: 40%;
+  height: max-content;
+  margin:20px auto 0px auto;
+}
+.addblogForm input[type="text"]{
+    width: 80%;
+    padding: 20px;
+    font-size: 12px;
+    border-radius: 5px;
+    border: 1px solid rgb(93, 93, 93);
+    background-color: white;
+} 
+.addblogForm select{
+    width: 90%;
+    padding: 20px;
+    font-size: 12px;
+    border-radius: 5px;
+    border: 1px solid rgb(93, 93, 93);
+    background-color: white;
+}
+.addblogForm button[type="submit"] {
+  width: 95%;
+  padding: 20px;
+  font-size: 13px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.reactquill{
+  height: 300px;
+  margin-top: 20px;
+  width: 95%;
+  margin-bottom: 40px;
+}
+.entire_fields{
+    width: 100%;
+}
+.details_field{
+  margin-left: auto;
+  margin-right: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content:baseline
+}
+.details_field p{
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(59, 59, 59);
+}
+.addblogForm textarea{
+  margin: 15px 0px;
+  width: 90%;
+  height: 50px;
+  padding: 20px;
+  font-size: 13px;
+}
+.description{
+  font-size: 13px;
+  font-weight: bold;
+  color: rgb(59, 59, 59);
+}
+.editsubmit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 1350px) {
+  .entire_addpage{
+    overflow-y:scroll;
+  }
+  .addpage_left{
+    width: 40vw;
+  }
+  .addblogForm textarea{
+    width: 87%;
+  }
+  .addblogForm {
+    margin-bottom: 30px;
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .entire_addpage{
+    flex-direction: column;
+  }
+  .addpage_left{
+    width: 400px;
+  }
+  .addblogForm {
+    width: 90%;
+    margin:10px auto 0px auto;
+  }
+  .addblogForm input[type="text"]{
+      width: 92%;
+      padding: 15px;
+  } 
+  .addblogForm select{
+      width: 100%;
+      padding: 15px;
+  }
+  .addblogForm button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+  }
+  .reactquill{
+    height: 180px;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  .entire_fields{
+      width: 100%;
+  }
+  .details_field{
+      grid-template-columns: auto;
+  }
+  .addblogForm textarea{
+    width: 88%;
+    height: 50px;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,221 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    overflow: hidden;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    background-color: rgb(246, 246, 246);
+}
+.nav button{
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 1vw;
+    border:none;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding:10px 20px;
+}
+.links{
+    display: flex;
+    align-items: center;
+}
+.links h3{
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    padding:0px 20px;
+}
+.links h3:hover{
+    color: black;
+}
+#addpost_link{
+    text-decoration: none;
+}
+#addpost_link h3{
+    font-size: 15px;
+}
+#portfolio_link{
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    padding:0px 20px;
+    text-decoration: none;
+    font-size: 1vw;
+}
+#profilename_sideimg{
+    width: 25px;
+    position: relative;
+    padding:0px 10px;
+}
+#portfolio_link_grid{
+    display: flex;
+    align-items: center;
+}
+#portfolio_link_grid p{
+    font-size: 15px;
+}
+#logo{
+    text-decoration: none;
+}
+#logo h2{
+    font-size: 30px;    
+    color: rgb(36, 36, 36);
+    margin:15px;
+    background-image: url(../images/image10.jpg);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-weight: 800;
+    -webkit-font-smoothing: antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+#signup_link{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 15px;
+}
+#signup_link:hover{
+    color: white;
+}
+.user{
+    display: flex;
+    align-items: center;
+}
+.search{
+    background:none;
+    width: max-content;
+}
+.search input[type="text"]{
+    font-size: 15px;
+    height: 0px;
+    width: 250px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(128, 128, 128, 0.074);
+    margin: 0px 10px;
+}
+.searchBarResult{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin: 5px 10px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.162);
+}
+.searchBarResult img{
+    width: 30px;
+    height: 30px;
+}
+.searchBarResult p{
+    margin-left: 15px;
+}
+.searchBar{
+    position: relative;
+}
+.searchBarResults{
+    width: 93%;
+    background-color: white;
+    position: absolute;
+    left: 3.5%;
+    border-radius: 0px 0px 5px 5px;
+}
+.searchBarResultLink{
+    text-decoration: none;
+    color: black;
+}
+@media only screen and (max-width: 900px) {
+    .nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100vw;
+        position: sticky;
+        top: 0px;
+        z-index: 100;
+        background-color: rgb(246, 246, 246);
+    }
+    .nav button{
+        border-radius: 5px;
+        margin: 10px;
+        font-size: 1vw;
+        border:none;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        padding:10px 20px;
+    }
+    .links{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .links h3{
+        padding:0px 20px;
+    }
+    #addpost_link h3{
+        font-size: 13px;
+    }
+    #portfolio_link{
+        font-size: 12px;
+    }
+    #profilename_sideimg{
+        width: 15px;
+        padding:0px 5px;
+    }
+    #portfolio_link_grid{
+        display: flex;
+        align-items: center;
+    }
+    #portfolio_link_grid p{
+        font-size: 15px;
+    }
+    #logo{
+        text-decoration: none;
+    }
+    #logo h2{
+        font-size: 30px;    
+        color: rgb(36, 36, 36);
+        margin:15px;
+        background-image: url(../images/image10.jpg);
+        background-repeat: no-repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: 'Steelfish Rg', 'helvetica neue',
+                    helvetica, arial, sans-serif;
+        font-weight: 800;
+        -webkit-font-smoothing: antialiased;
+    }
+    #signup_link{
+        font-size: 13px;
+    }
+    .user{
+        display: flex;
+        align-items: center;
+    }
+    .search{
+        background:none;
+        width: max-content;
+    }
+    .search input[type="text"]{
+        font-size: 13px;
+        height: 0px;
+        width: 80vw;
+        margin: 0px 10vw;
+    }
+    .searchBarResult{
+        padding: 0px;
+        margin: 0px 10px;
+    }
+    .searchBarResults{
+        box-shadow: 0px 5px 10px rgba(128, 128, 128, 0.404);
+        width: 80%;
+        left: 10%;
+    }
+}
