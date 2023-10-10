@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <style>
+        /* Add your CSS styling here */
+    </style>
+</head>
+<body>
+    <h1>Quiz Game</h1>
+    <div id="question-container">
+        <p id="question"></p>
+    </div>
+    <div id="choices-container">
+        <!-- Choices will be added here dynamically -->
+    </div>
+    <p>Score: <span id="score">0</span></p>
+    <button id="next-button">Next</button>
+
+    <script>
+        // Define quiz questions and answers
+        const questions = [
+            {
+                question: "What is the capital of France?",
+                choices: ["London", "Madrid", "Paris", "Berlin"],
+                correctAnswer: "Paris"
+            },
+            {
+                question: "Which planet is known as the Red Planet?",
+                choices: ["Mars", "Venus", "Earth", "Jupiter"],
+                correctAnswer: "Mars"
+            },
+            {
+                question: "What is the largest mammal?",
+                choices: ["Elephant", "Giraffe", "Blue Whale", "Hippopotamus"],
+                correctAnswer: "Blue Whale"
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        const questionElement = document.getElementById("question");
+        const choicesContainer = document.getElementById("choices-container");
+        const scoreElement = document.getElementById("score");
+        const nextButton = document.getElementById("next-button");
+
+        function displayQuestion() {
+            const currentQuestion = questions[currentQuestionIndex];
+            questionElement.textContent = currentQuestion.question;
+            choicesContainer.innerHTML = "";
+
+            currentQuestion.choices.forEach(choice => {
+                const choiceElement = document.createElement("button");
+                choiceElement.textContent = choice;
+                choiceElement.addEventListener("click", () => checkAnswer(choice));
+                choicesContainer.appendChild(choiceElement);
+            });
+        }
+
+        function checkAnswer(userChoice) {
+            const currentQuestion = questions[currentQuestionIndex];
+            if (userChoice === currentQuestion.correctAnswer) {
+                score++;
+                scoreElement.textContent = score;
+            }
+
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                displayQuestion();
+            } else {
+                endGame();
+            }
+        }
+
+        function endGame() {
+            questionElement.textContent = "Quiz completed!";
+            choicesContainer.innerHTML = "";
+            nextButton.style.display = "none";
+        }
+
+        // Initial display of the first question
+        displayQuestion();
+
+        nextButton.addEventListener("click", () => {
+            if (currentQuestionIndex < questions.length) {
+                displayQuestion();
+            } else {
+                endGame();
+            }
+        });
+    </script>
+</body>
+</html>
