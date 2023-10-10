@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="whatsapp">
+        <a href="https://wa.me/qr/VU4JYKV6IBH6K1"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt=""></a>
+    </div>
+    <div class="nav">
+        <a href="index.html"><img src="/logo.png" alt=""></a>
+    </div>
+    <div class="container">
+        <div>
+        <div class="input">
+            <input type="text" id="input_box" disabled>
+        </div>
+        <div class="buttons">
+            <div class="row">
+            <button id="button" onclick="clearans()">🆑</button>
+            <button id="button" onclick="backspace()">⬅️</button>
+            <button id="button" onclick="display('%')">%</button>
+            <button id="button" onclick="display('/')">/</button>
+            </div>
+            <div class="row">
+                <button id="button" onclick="display('7')">7</button>
+                <button id="button" onclick="display('8')">8</button>
+                <button id="button" onclick="display('9')">9</button>
+                <button id="button" onclick="display('*')">x</button>
+            </div>
+            <div class="row">
+                <button id="button" onclick="display('4')">4</button>
+                <button id="button" onclick="display('5')">5</button>
+                <button id="button" onclick="display('6')">6</button>
+                <button id="button" onclick="display('-')">-</button>
+            </div>
+            <div class="row">
+                <button id="button" onclick="display('1')">1</button>
+                <button id="button" onclick="display('2')">2</button>
+                <button id="button" onclick="display('3')">3</button>
+                <button id="button" onclick="display('+')">+</button>
+            </div>
+            <div class="row">
+                <button id="button_0" onclick="display('0')">0</button>
+                <button id="button" onclick="display('.')">.</button>
+                <button id="button" onclick="answer()">=</button>
+            </div>
+        </div>
+    </div>
+        <div class="history">
+            <div id="history_data">
+
+            </div>
+            <div class="clear">
+                <button id="btn">Clear</button>
+            </div>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
