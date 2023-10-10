@@ -1,0 +1,58 @@
+
+*{
+    box-sizing: border-box;
+}
+
+*{
+    margin:0px;
+}
+ h2{
+    margin:10px 10px 5px 10px;
+    color:white;
+  
+ }
+ .container{
+    position: relative;
+    margin:0px 10px 5px 10px;
+ }
+.container button{
+    position:absolute;
+    background-color: rgb(180, 217, 241);
+    color:rgb(68, 151, 178);
+    right:0.5px;
+}
+ .heading{
+    margin:10px;
+ }
+
+.heading{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.input-container{
+    height:100px;
+    width:250px;
+}
+.input-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:blueviolet;
+    flex-direction: column;
+
+}
+.task-container{
+    margin:5px;
+    padding:5px;
+    height:25px;
+    width:250px;
+    position: relative;
+    background-color: lightblue;
+    text-align: center;
+   
+}
+
+
+
