@@ -57,7 +57,3 @@ If you'd like to run this project locally, follow these steps:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-## Acknowledgments
-
-Special thanks to [OpenAI](https://www.openai.com/) for creating the AI-powered assistant that helped with this README.
