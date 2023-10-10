@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    
+    
+  </head>
+  <body>
+    <h1><center>My Todo List</center></h1>
+    <div id="todo-table" class="container">
+      <form action="/add/task" method="POST" class="d-flex">
+        <input type="text" name="task" class="form-control" placeholder="Enter your task to do.." required>
+        <input type="date" name="date" required>
+        <input type="submit" value="Add Todo" class="btn btn-md btn-primary mx-2">
+      </form>
+      <ul class="list-group my-5">
+        <% for(var i=0; i < todos.length; i++){ %>
+          <li class="list-group-item"><i class="my-5"><%=todos[i].date%></i><center><b><%=todos[i].task%></b></center><end><a href="/delete/<%= todos[i].task %>" class="btn btn-danger btn-sm">Delete</a></end></li>
+        <% }%>
+      </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    
+
+  </body>
+</html>

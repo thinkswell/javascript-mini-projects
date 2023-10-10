@@ -1,0 +1,17 @@
+.container{
+    display: block;
+    text-align: center;
+}
+input{
+    padding: 20px;
+    margin: 20px;
+    border-radius: 7px;
+    color: blue;
+}
+input::placeholder{
+    color: red;
+}
+*{
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
