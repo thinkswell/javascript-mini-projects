@@ -3,18 +3,18 @@ import { useCallback, useEffect, useState, useRef } from 'react'
 
 function App() {
   const [length, setLength] = useState(8)
-  const [numberAllowed, setNumberAllowed] = useState(false)
   const [charAllowed, setCharAllowed] = useState(false)
+  const [symbolAllowed, setSymbolAllowed] = useState(false)
   const [password, setPassword] = useState("")
   const passwordRef = useRef(null)
 
   const passwordGenerator = useCallback(() => {
 
     let pass = ""
-    let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-
-    if(numberAllowed) str += "0123456789"
-    if(charAllowed) str += "!@#$%^&*()_+`~"
+    let str = "0123456789"
+    // "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+    if(charAllowed) str += "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+    if(symbolAllowed) str += "!@#$%^&*()_+`~"
 
     for(let i = 1; i <= length; i++){
       let char = Math.floor(Math.random() * str.length + 1)
@@ -25,7 +25,7 @@ function App() {
 
     setPassword(pass)
 
-  }, [length, numberAllowed, charAllowed, setPassword])
+  }, [length, charAllowed, symbolAllowed, setPassword])
 
   const copyPasswordToClipboard = useCallback(() => {
     passwordRef.current?.select();
@@ -36,11 +36,11 @@ function App() {
 
   useEffect(() => {
     passwordGenerator()
-  }, [length, numberAllowed, charAllowed, passwordGenerator])
+  }, [length, charAllowed, symbolAllowed, passwordGenerator])
 
   return (
     <>
-     <div className='w-full b-5 max-w-md mx-auto shadow-md rounded-lg px-4 py-8 my-8 bg-amber-200  border-solid  border-black text-blue-900'>
+     <div className='w-full b-5 max-w-md mx-auto shadow-md rounded-lg px-4 py-8 my-8 bg-amber-200  border-solid border-2  border-black text-blue-900'>
         <h1 className='text-black font-bold text-xl text-center my-3'>Password Generator</h1>
         <div className='flex shadow rounded-lg font-semibold overflow-hidden mb-4'>
             <input
@@ -73,24 +73,24 @@ function App() {
         <div className='flex items-center gap-x-1'>
           <input
             type='checkbox'
-            defaultChecked={numberAllowed}
-            id='numberInput'
+            defaultChecked={charAllowed}
+            id='charInput'
             onChange={() => {
-              setNumberAllowed((prev) => !prev);
+              setCharAllowed((prev) => !prev);
           }}
           />
-          <label htmlFor='numberInput'>Numbers</label>
+          <label htmlFor='charInput'>Characters</label>
         </div>
         <div className='flex items-center gap-x-1'>
             <input
               type='checkbox'
-              defaultChecked={charAllowed}
-              id='characterInput'
+              defaultChecked={symbolAllowed}
+              id='symbolInput'
               onChange={() => {
-                setCharAllowed((prev) => !prev);
+                setSymbolAllowed((prev) => !prev);
             }}
           />
-          <label htmlFor='characterInput'>Characters</label>
+          <label htmlFor='symbolInput'>Symbols</label>
         </div>
         </div>
 
