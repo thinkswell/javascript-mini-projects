@@ -2,30 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="styles.css" rel="stylesheet">
-    <script defer src="script.js"></script>
-    <title>Quiz Game</title>
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-  <div class="container">
-    <div id="question-container" class="hide">
-      <div id="question">Question</div>
-      <div id="answer-buttons" class="btn-grid">
-        <button class="btn">Option 1</button>
-        <button class="btn">Option 2</button>
-        <button class="btn">Option 3</button>
-        <button class="btn">Option 4</button>
-      </div>
+    <div class="quiz-container">
+        <div class="quiz-content animate__animated animate__fadeIn">
+            <h1>Quiz App</h1>
+            <div id="question-container">
+                <p id="question-text"></p>
+                <div id="options" class="options-container"></div>
+            </div>
+            <p id="answer-feedback"></p>
+            <button id="next-button">Next</button>
+            <p id="score">Score: <span id="score-value">0</span></p>
+            <p id="timer">Time Left: <span id="time-left">20</span> seconds</p>
+        </div>
     </div>
-
-    <div class="controls">
-      <button id="start-btn" class="start-btn btn">Start</button>
-      <button id="next-btn" class="next-btn btn hide">Next</button>
-    </div>
-
-  </div>
+    <script src="script.js"></script>
 </body>
 </html>
