@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Huffman File Compressor</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles.css">
+
+	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+	<style>
+		.background-container {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+		}
+
+		.background-container canvas {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		#huffman-heading {
+			margin-top: 30px;
+			text-align: center;
+		}
+
+		#huffman-heading a {
+			text-decoration: none;
+			color: cyan;
+			font-size: 24px;
+			font-weight: bold;
+		}
+
+		/* New CSS styles for the Huffman Tree section */
+		.boxes {
+			margin-top: 30px;
+			text-align: center;
+		}
+
+		.sc {
+			width: 100%;
+			resize: none;
+		}
+
+		.digit {
+			font-size: 20px;
+			margin-top: 10px;
+		}
+
+		.box.graph {
+			width: 100%;
+			height: 400px;
+			margin-top: 30px;
+			border: 1px solid black;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6">
+				<h1 id="heading">FILE COMPRESSION</h1>
+				<h2 id="heading1">Using</h2>
+				<h3 id="heading2">HUFFMAN CODING</h3>
+				<div class="card" id="step1">
+					<h2>Upload File</h2>
+					<center>
+
+						<br>
+						<input class="btn btn-outline-warning" type="file" id="uploadfile"><br>
+						<input class="btn btn-outline-success" type="button" id="submitbtn" value="Submit">
+					</center>
+				</div>
+				<div class="card" id="step2">
+					<h2>Click On Your Choice</h2>
+					<center>
+						<br>
+						<button type="button" id="encode" class="btn btn-primary">Compress</button>
+						<button type="button" id="decode" class="btn btn-primary">De-Compress</button>
+					</center>
+				</div>
+				<div class="card" id="step3"></div>
+				<button id="startagain" class="btn btn-info btn-lg" type="button" onclick="location.reload()">Compress/DeCompress New File</button>
+			</div>
+
+			<div class="info" style="position: absolute; top: 10px; right: 10px;">
+    <h2 style="color: cyan;">For more information about Huffman Algorithm <a href="Huffman.pdf" target="_blank">Click Here</a></h2>
+</div>
+
+
+
+			<div class="boxes">
+					<div>
+						<textarea class="sc" id="paragraph_text" oninput="convert() ,main()" cols="51" rows="15" placeholder="Your Text For Generating Huffman Tree" style="color: white;"></textarea>
+
+							<div id="text_digit" class="digit">0</div>
+					</div>
+					<div>
+							<button id="bin_click"></button>
+							<div class="sc" id="binary"></div>
+							<div id="binary_digit" class="digit">0</div>
+					</div>
+					<div>
+							<div id="result">0</div>
+							<button id="code_click"></button>
+							<div class="sc" id="coded"></div>
+							<div id="encoded_digit" class="digit">0</div>
+					</div>
+			</div>
+
+			<div class="box graph" id="huffman"></div>
+
+			<button id="freq_btn"></button>
+			<div class="sc" id="freq"></div>
+
+			<script src="./js/index.js"></script>
+			<script src="./js/huffman.js"></script>
+			<script src="./js/draw.js"></script>
+			<script src="./js/d3js.js"></script>
+
+
+
+
+
+	<div class="background-container"></div>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+	<script src="script.js"></script>
+	<script src="./js/index.js"></script>
+	<script src="./js/huffman.js"></script>
+	<script src="./js/draw.js"></script>
+	<script src="./js/d3js.js"></script>
+
+	<!-- Vanta.js background -->
+	<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanta@0.5.22/dist/vanta.clouds.min.js"></script>
+	<script>
+		VANTA.CLOUDS({
+			el: ".background-container",
+			mouseControls: true,
+			touchControls: true,
+			minHeight: 500,
+			minWidth: 800,
+			skyColor: 0x000000,
+			cloudColor: 0x333333
+		});
+	</script>
+</body>
+
+</html>
