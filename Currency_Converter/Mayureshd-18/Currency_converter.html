@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #converter {
+            width: 300px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="converter">
+        <h2>Currency Converter</h2>
+        
+        <label for="fromCurrency">From:</label>
+        <select id="fromCurrency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <!-- Add more currencies as needed -->
+        </select>
+
+        <label for="toCurrency">To:</label>
+        <select id="toCurrency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <!-- Add more currencies as needed -->
+        </select>
+
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" placeholder="Enter amount">
+
+        <button onclick="convertCurrency()">Convert</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function convertCurrency() {
+            const fromCurrency = document.getElementById('fromCurrency').value;
+            const toCurrency = document.getElementById('toCurrency').value;
+            const amount = document.getElementById('amount').value;
+
+            const apiKey = 'YOUR_SAMPLE_API_KEY';
+            const apiUrl = `https://open.er-api.com/v6/latest/${fromCurrency}?apikey=${apiKey}`;
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const exchangeRate = data.rates[toCurrency];
+                    const convertedAmount = (amount * exchangeRate).toFixed(2);
+                    document.getElementById('result').innerHTML = `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`;
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        }
+    </script>
+
+</body>
+</html>
