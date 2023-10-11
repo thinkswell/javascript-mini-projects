@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <title>Janken Game</title>
+  </head>
+  <body style="background-image: url(assets/img/janken-bg.png)">
+    <div id="app">
+      <div class="summary">
+        <h1 class="title">Match Result</h1>
+        <h1 id="inGame"></h1>
+        <h3 id="result"></h3>
+      </div>
+      <div class="games">
+        <div class="tangan" onclick="pickOption('✌️')">✌️</div>
+        <div class="tangan" onclick="pickOption('👊')">👊</div>
+        <div class="tangan" onclick="pickOption('🖐️')">🖐️</div>
+      </div>
+      <div class="music">
+        <audio controls>
+          <source src="assets/audio/music.mp3" type="audio/mpeg" />
+          upgrade your browser to play music
+        </audio>
+      </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
