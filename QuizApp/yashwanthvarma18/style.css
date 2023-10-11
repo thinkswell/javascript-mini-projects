@@ -1,0 +1,168 @@
+/* Set the background image for the entire body and reset margins */
+body {
+    background-image: url('https://i.imgur.com/ZA491RE.png');
+    margin: 0;
+  }
+  
+  /* Style for the main content container */
+  .whole {
+    background-image: linear-gradient(to bottom, #ff6f61, #fdbb2d);
+    background-image: linear-gradient(to bottom, #6a0572, #5ceac9);
+    height: 800px;
+    width: 100%;
+  }
+  
+  /* Style for the header section */
+  header {
+    background-color: #191970;
+    background-image: url('https://i.imgur.com/Cze1FW4.png');
+    border-bottom: 2px solid black;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-evenly;
+    /* padding: 10px; */
+    width: 100%;
+  }
+  
+  /* Style for the main title */
+  h1 {
+    margin-top: 15px;
+  }
+  
+  /* Common style for h2 and legend */
+  h2,
+  legend {
+    font-family: 'Bangers', cursive;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+  
+  /* Style for secondary titles */
+  h2 {
+    font-size: 30px;
+  }
+  
+  /* Style for legends */
+  legend {
+    font-size: 25px;
+  }
+  
+  /* Style for buttons */
+  button {
+    background-color: #FFFFFF;
+    border: 2px solid #0099cc;
+    border-radius: 6px;
+    font-size: 18px;
+    margin-top: 15px;
+    padding: 5px;
+  }
+  
+  /* Hover effect for buttons */
+  button:hover {
+    background-color: #0099cc;
+  }
+  
+  /* Common style for fieldset, message, list items, and results */
+  fieldset,
+  #message,
+  li,
+  .results {
+    font-size: 18px;
+    font-family: 'Oxygen', sans-serif;
+    margin: 5px;
+  }
+  
+  /* Style for images */
+  img {
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Style for lists */
+  ul {
+    list-style-type: none;
+    margin-right: 15px;
+  }
+  
+  /* Style for list items */
+  li {
+    display: inline-block;
+  }
+  
+  /* Style for a specific container */
+  .box {
+    background-color: #D3D3D3;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    width: 50%;
+  }
+  
+  /* Style for feedback text */
+  .feedback {
+    font-weight: 700;
+  }
+  
+  /* Style for result text */
+  .results {
+    text-align: center;
+  }
+  
+  /* Hide elements with the "hidden" class */
+  .hidden {
+    display: none;
+  }
+  
+  /* Style for correct answers */
+  .right {
+    color: #008000;
+  }
+  
+  /* Style for wrong answers */
+  .wrong {
+    color: #FF0000;
+  }
+  
+  /* Media Query for small screens (max-width: 430px) */
+  @media screen and (max-width: 430px) {
+    /* Adjust image height */
+    img {
+      height: 100px;
+    }
+  
+    /* Adjust font sizes for smaller screens */
+    fieldset,
+    #message,
+    li,
+    .results {
+      font-size: 14px;
+    }
+  
+    legend {
+      font-size: 20px;
+    }
+  
+    h2 {
+      font-size: 25px;
+    }
+  
+    /* Adjust box width for smaller screens */
+    .box {
+      width: 95%;
+    }
+  }
+  
+  /* Media Query for medium screens (max-width: 900px) */
+  @media screen and (max-width: 900px) {
+    /* Adjust box width for medium screens */
+    .box {
+      width: 75%;
+    }
+  }
+  /* End of CSS */
+  
