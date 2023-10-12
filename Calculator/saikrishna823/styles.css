@@ -1,0 +1,63 @@
+*,body,html{
+ box-sizing: border-box;
+ margin:0px;
+
+}
+h1{
+    margin:5px;
+    color:brown;
+     text-transform: uppercase;
+    text-decoration:solid;
+
+}
+body{
+    background-color: beige;
+}
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:100px;
+}
+.input-buttons{
+    margin:10px;
+    display: grid;
+    grid-template-columns:repeat(4,55px);
+    grid-template-rows:repeat(4,35px);
+    gap:10px;
+    
+}
+.button{
+    padding:5px;
+    background-color: rgb(77, 10, 139);
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    font-size: x-large;
+}
+#evalButton{
+    background-color:rgb(239, 14, 194);
+    text-align: center;
+    color: white;
+    border-color:greenyellow;
+    border-radius: 10px;
+    font-size:x-large;
+
+}
+#evalButton:hover,focus,active{
+    outline: none;
+}
+#inputBtn{
+    border-radius:4px;
+    height:28px;
+    width:220px;
+}
+.clearBtn{
+    border-radius:3px;
+    padding:2px;
+    text-align: center;
+    font-size: larger;
+    color: white;
+    background-color:rgb(239, 14, 194);
+}

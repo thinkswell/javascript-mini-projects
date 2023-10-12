@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Crop</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      text-align: center;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #canvasContainer {
+      position: relative;
+      margin-top: 20px;
+    }
+
+    #canvas {
+      border: 2px solid #333;
+      cursor: crosshair;
+      background-color: #fff;
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .input-group input {
+      padding: 10px;
+      font-size: 16px;
+      margin-right: 10px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .input-group button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .input-group button:hover {
+      background-color: #2980b9;
+    }
+
+    .action-buttons button {
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .action-buttons button:hover {
+      background-color: #219653;
+    }
+
+    #downloadButton {
+      background-color: #e74c3c;
+    }
+
+    #downloadButton:hover {
+      background-color: #c0392b;
+    }
+
+    #cropDimensions {
+      display: flex;
+      align-items: center;
+    }
+
+    #cropDimensions input {
+      width: 50px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="input-group">
+  <input type="text" id="imageUrl" placeholder="Enter image URL">
+  <button id="loadImageButton">Load Image</button>
+</div>
+
+<div id="cropDimensions">
+  <span>Crop Dimensions:</span>
+  <input type="number" id="cropWidth" placeholder="Width">
+  <input type="number" id="cropHeight" placeholder="Height">
+</div>
+
+<div id="canvasContainer">
+  <canvas id="canvas" width="600" height="400"></canvas>
+</div>
+
+<div class="action-buttons">
+  <button id="cropButton">Crop Image</button>
+  <button id="resetButton">Reset Canvas</button>
+  <button id="downloadButton">Download Cropped Image</button>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    let img = new Image();
+    let crop = false;
+    let cropWidth = 400;
+    let cropHeight = 300;
+
+    document.getElementById('loadImageButton').addEventListener('click', () => {
+      const imageUrl = document.getElementById('imageUrl').value;
+      img.src = imageUrl;
+    });
+
+    document.getElementById('cropButton').addEventListener('click', () => {
+      crop = true;
+      drawImage();
+    });
+
+    document.getElementById('resetButton').addEventListener('click', () => {
+      crop = false;
+      drawImage();
+    });
+
+    document.getElementById('downloadButton').addEventListener('click', () => {
+      if (crop) {
+        const dataUrl = canvas.toDataURL();
+        const a = document.createElement('a');
+        a.href = dataUrl;
+        a.download = 'cropped_image.png';
+        a.click();
+      }
+    });
+
+    document.getElementById('cropWidth').addEventListener('change', (event) => {
+      cropWidth = parseInt(event.target.value) || 0;
+      drawImage();
+    });
+
+    document.getElementById('cropHeight').addEventListener('change', (event) => {
+      cropHeight = parseInt(event.target.value) || 0;
+      drawImage();
+    });
+
+    img.onload = function() {
+      drawImage();
+    };
+
+    function drawImage() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if (crop) {
+        // Draw a resizable rectangle for cropping
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+        ctx.fillRect((canvas.width - cropWidth) / 2, (canvas.height - cropHeight) / 2, cropWidth, cropHeight);
+        ctx.clearRect((canvas.width - cropWidth) / 2, (canvas.height - cropHeight) / 2, cropWidth, cropHeight);
+        ctx.drawImage(img, (canvas.width - cropWidth) / 2, (canvas.height - cropHeight) / 2, cropWidth, cropHeight,
+          (canvas.width - cropWidth) / 2, (canvas.height - cropHeight) / 2, cropWidth, cropHeight);
+      } else {
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      }
+    }
+  });
+</script>
+
+</body>
+</html>

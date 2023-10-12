@@ -1,0 +1,105 @@
+copied
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        form {
+            width: 80%;
+        }
+        
+        form * {
+            width: 100%;
+            height: 20px;
+            margin-top: 2px;
+        }
+        
+        table {
+            width: 80%;
+        }
+        
+        th,
+        td {
+            border: 1px solid #000;
+        }
+        
+        h1 {
+            color: brown;
+        }
+        
+        td[onclick] {
+            background-color: red;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Todo App</h1>
+    <form>
+        <input type="text" required>
+        <input type="submit">
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Todo's</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        // ["gfgf","hggbhd"]
+        let form = document.querySelector("form");
+        let ls = localStorage.getItem('todo');
+        let todo = ls ? JSON.parse(ls) : [];
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let inpData = form[0].value;
+            todo.push(inpData)
+            localStorage.setItem('todo', JSON.stringify(todo))
+            location.reload()
+        })
+        todo.map((data, index) => {
+            document.querySelector("tbody").innerHTML += `
+            <tr>
+            <td>${data}</td>    
+            <td onclick="del(${index})">Delete</td>    
+            </tr>
+            `;
+        })
+
+        function del(e) {
+            let deleted = todo.filter((data, index) => {
+                return index !== e;
+            })
+            localStorage.setItem('todo', JSON.stringify(deleted))
+            location.reload()
+        }
+    </script>
+</body>
+
+</html>
+
