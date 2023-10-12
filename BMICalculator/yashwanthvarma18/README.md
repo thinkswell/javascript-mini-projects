@@ -26,3 +26,7 @@ Underweight: BMI less than 18.5
 Normal Weight: BMI between 18.5 and 24.9
 Overweight: BMI between 25 and 29.9
 Obese: BMI of 30 or greater
+
+SCREENSHOTS:
+
+![BMI CALCULATOR](image.png)
