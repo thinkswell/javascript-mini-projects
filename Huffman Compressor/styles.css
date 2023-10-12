@@ -1,0 +1,171 @@
+body {
+  color: #0f3057;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  //  background-image: url('images/bgHuff2.JPG');
+  background-color: #161722;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+#heading {
+  font-size: 2.5rem;
+  margin-top: 7.5rem;
+  margin-bottom: 0.5rem;
+  color: cyan;
+}
+
+#heading1 {
+  color: cyan;
+
+}
+#heading2 {
+  color: cyan;
+}
+
+.card {
+  top: 3%;
+  width: 30rem;
+  height: 27rem;
+  text-align: center;
+  margin: 0 auto;
+  border: 4px double;
+  padding: 5rem 0;
+  background-color: #030524;
+}
+
+#uploadfile {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  width: 16rem;
+}
+
+#upload {
+  color: cyan;
+}
+
+#encode, #decode {
+  margin-top: 1rem;
+  margin-right: 0.2rem;
+}
+
+#step2, #step3 {
+  display: none;
+}
+
+#startagain {
+  visibility: hidden;
+  display: block;
+  margin: 2rem auto 0;
+}
+
+.text2 {
+  font-size: 1.5rem;
+}
+
+#doneImg {
+  width: 10rem;
+  margin: auto;
+}
+
+.container-fluid {
+  position: relative;
+  z-index: 2;
+  /* Increase the z-index to make it appear above the background */
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  /* Decrease the z-index to make it appear below the main content */
+}
+
+
+
+///  Graph Css ////
+
+#step4 {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background-container canvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+//// NEW////
+.boxes{
+    position: absolute;
+    display: block;
+    width: 40%;
+    height: 100%;
+    margin-left: 5%;
+}
+
+
+
+
+
+
+#binary_digit {
+  visibility: hidden;
+}
+#encoded_digit{
+  visibility: hidden;
+}
+#result{
+  visibility: hidden;
+}
+#text_digit{
+  visibility: hidden;
+}
+#paragraph_text {
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  width: 30%;
+  height: 20%;
+  border: 2px solid black;
+  font-size: xx-large;
+
+  background-color: #030524;
+}
+
+#huffman {
+  position: absolute;
+  top: 28%;
+  right: 5%;
+  width: 50%;
+  height: 40%;
+  border: 1px solid black;
+  overflow: auto;
+  display: flex;
+}
+
+
+
+svg {
+  position: absolute;
+  width: auto;
+  height: auto;
+}
