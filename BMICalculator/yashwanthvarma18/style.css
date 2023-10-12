@@ -1,0 +1,70 @@
+body {
+    font-family: 'Bebas Neue', sans-serif;
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Merriweather', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Signika', sans-serif;
+background-image: url('https://static.vecteezy.com/system/resources/previews/009/626/037/large_2x/silhouette-landscape-with-fog-forest-pine-trees-mountains-illustration-of-national-park-view-mist-black-and-white-good-for-wallpaper-background-banner-cover-poster-free-vector.jpg');
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+
+    background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background color to make text readable */
+    border-radius: 8px;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+    margin: 10px;
+    padding: 5px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Merriweather', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Signika', sans-serif;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); 
+}
+
+#result {
+    font-weight: bold;
+    margin: 20px 0;
+    font-size: 24px;
+}
