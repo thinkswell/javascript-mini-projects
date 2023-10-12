@@ -1,0 +1,67 @@
+body {
+  font-family: "Segoe UI";
+  font-weight: lighter;
+  overflow: hidden;
+  background-image: linear-gradient(
+    90deg,
+    hsl(1deg 52% 74%) 0%,
+    hsl(352deg 44% 72%) 3%,
+    hsl(342deg 37% 70%) 7%,
+    hsl(330deg 30% 67%) 11%,
+    hsl(313deg 24% 65%) 17%,
+    hsl(291deg 23% 63%) 24%,
+    hsl(273deg 27% 64%) 32%,
+    hsl(260deg 32% 64%) 41%,
+    hsl(249deg 37% 65%) 50%,
+    hsl(239deg 42% 65%) 61%,
+    hsl(231deg 51% 63%) 71%,
+    hsl(226deg 58% 60%) 82%,
+    hsl(220deg 66% 57%) 91%,
+    hsl(215deg 74% 51%) 100%
+  );
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+
+.card {
+  width: 450px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  background-color: #38465e;
+  background: #38465e;
+  border-radius: 6px;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.heading {
+  font-size: 25px;
+  color: #fcf3f3;
+  padding-top: 40px;
+  border-bottom: 1px solid #837171;
+  padding-bottom: 30px;
+  letter-spacing: 6px;
+}
+
+.desc {
+  font-size: 16px;
+  color: #fcf3f3;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.icon {
+  font-size: 27px;
+  color: #fcf3f3;
+  padding-top: 20px;
+  letter-spacing: 5px;
+}
