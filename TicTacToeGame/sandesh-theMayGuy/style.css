@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #0e283a;
+}
+
+
+
+ button{
+    border: none;
+    margin:-0.5px;
+    border: 2px solid white;
+    text-align: center;
+}
+
+
+
+
+
+
+h1#title{
+    color: white;
+    text-align: center;
+    margin-top: 4vh;
+}
+
+div#board{
+    /* background-color: white; */
+    padding-left: 35%;
+    height: 210px;
+    margin-top: 10vh;
+ 
+    
+    
+}
+
+div#board button{
+    width:10vw;
+    height:100px;
+    
+  
+
+
+}
+
+
+
+
+
+div#turns{
+    color: white;
+    text-align: center;
+    margin-top:40vh;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+div#aalu , div#cross{
+    color: white;
+   
+}
+
+div#aalu{
+    font-weight: 1000;
+    font-size: 10rem;
+    position: absolute;
+    margin-left:2rem;
+    margin-top:-7rem;
+    /* background-color: white; */
+    height: 0rem;
+    
+}
+div#cross{
+    font-weight: 100;
+    font-size: 7rem;
+    position: absolute;
+
+    height: 0rem;
+
+    margin-left: 2rem;
+    margin-top: -5rem;
+}
+
+
+
+h1#title{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+span#aalu{
+    color: red;
+}
+
+
+/* Winning message  */
+
+.popup-message {
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0e0e2a;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: center;
+    height: 30vh;
+    width: 30vw;
+    color: white;
+}
+
+.popup-close-button {
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    cursor: pointer;
+    font-size: 4rem;
+    background-color: #0e0e2a;
+    color: white;
+}
+
+.popup-message p{
+    font-size: 2rem;
+    margin-top: 8%;
+    background-color: #0e0e2a;
+}
+
+.popup-close-button:hover {
+    color: red;
+}
+
+img#emoji{
+    margin-top: 10px;
+    height:60%;
+    background-color: #0e0e2a;
+
+
+}
+
+
+
+
+@media screen and (max-width:1900px) {
+    div#board button{
+        width: 12vw;
+    }
+
+    div#board{
+        padding-left: 32%;
+    }
+
+
+    .popup-message{
+        width: 40vw;
+    }
+}
+
+
+@media screen and (max-width:1300px) {
+    div#board button{
+        width: 15vw;
+    }
+    div#board{
+        padding-left: 30%;
+    }
+
+
+}
+
+
+@media screen and (max-width:1100px) {
+    div#board button{
+        width: 18vw;
+    }
+    div#board{
+        padding-left: 20%;
+    }
+
+ 
+}
+
+@media screen  and (max-width:1000px){
+    div#aalu{
+        /* font-size: 10rem; */
+        margin-left: 1rem;
+    }
+
+    div#cross{
+        margin-left:2.5rem;
+    }
+
+    .popup-message{
+        width: 50vw;
+    }
+
+
+}
+
+
+@media screen and (max-width:900px) {
+    
+    .popup-message{
+        width: 60vw;
+    }
+}
+
+
+@media screen and (max-width:750px) {
+    div#board button{
+        width: 22vw;
+    }
+    div#board{
+        padding-left: 16%;
+    }
+
+    div#aalu{
+        font-size: 8rem;
+      margin-top:-5rem;
+        /* margin-left: 1rem; */
+        
+    }
+
+    div#cross{
+        margin-left:1rem;
+        margin-top: -4rem;
+        font-size: 6rem;
+    }
+
+    .popup-message{
+        width: 70vw;
+    }
+}
+
+
+
+@media screen and (max-width:500px) {
+    div#board button{
+        width: 22vw;
+    }
+    div#board{
+        padding-left: 13%;
+    }
+
+    div#aalu{
+        font-size: 5rem;
+      margin-top:-3rem;
+        margin-left: 2rem;
+        
+    }
+
+    div#cross{
+        font-size: 4rem;
+        margin-top: -2.1rem;
+    }
+
+    .popup-message{
+        width: 80vw;
+    }
+}
+
+
+
+@media screen and (max-width:425px) {
+    div#board button{
+        width: 22vw;
+    }
+    div#board{
+        padding-left: 14%;
+    }
+
+    div#aalu{
+        font-size: 5rem;
+      margin-top:-3rem;
+        margin-left: 0rem;
+        
+    }
+
+    div#cross{
+        font-size: 4rem;
+        margin-left: 0rem;
+        
+        
+    }
+
+    .popup-message{
+        width: 80vw;
+        height: 250px;
+       
+    }
+
+    img#emoji{
+        height: 40%;
+    }
+}
+
+
+@media screen and (max-width:250px) {
+    div#board button{
+        width: 22vw;
+    }
+    div#board{
+        padding-left: 10%;
+    }
+
+    div#aalu{
+        font-size: 50px;
+      margin-top:-3rem;
+        margin-left: 0rem;
+        
+    }
+
+    div#cross{
+        font-size: 50px;
+        margin-top:-3rem;
+    }
+
+    .popup-message{
+        width: 100%;
+    }
+
+    img#emoji{
+        height: 30%;
+    }
+}
