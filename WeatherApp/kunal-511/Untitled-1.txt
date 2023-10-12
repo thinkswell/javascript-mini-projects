@@ -1,0 +1,39 @@
+{"Cloud_pct": 100, 
+"Temp": 13,
+ "Feels_like": 12, 
+ "Humidity": 77, 
+ "Min_temp": 11,
+  "Wax_temp": 15, 
+  "Wind_speed": 4.63, 
+  "Wind_degrees": 250,
+   "Sunrise": 1684758254, 
+   "Sunset": 1684813682}
+
+
+
+   cloud_pct = response.cloud_pct
+temp = response.temp
+ feels_like = response.feels_like
+ humidity  = response.humidity
+ min_temp = response.min_temp
+  max_temp  = response.max_temp
+  wind_speed  = response.wind_speed
+  wind_degrees = response.wind_degrees
+   sunrise  = response.sunrise
+   sunset = response.sunset
+
+
+
+
+   {
+  "cloud_pct": 0,
+  "temp": 19,
+  "feels_like": 19,
+  "humidity": 69,
+  "min_temp": 17,
+  "max_temp": 19,
+  "wind_speed": 2,
+  "wind_degrees": 150,
+  "sunrise": 1684875241,
+  "sunset": 1684925291
+}

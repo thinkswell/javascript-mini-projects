@@ -1,0 +1,54 @@
+:root {
+  box-sizing: border-box;
+}
+
+html,
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  height: 100vh;
+}
+
+.summary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid blanchedalmond;
+  width: 400px;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  height: 400px;
+}
+.title {
+  text-align: center;
+}
+
+.games {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tangan {
+  margin: 10px 15px;
+  padding: 25px;
+  width: 30%;
+  background-color: bisque;
+  text-align: center;
+  font-size: 40px;
+}
+.tangan:hover {
+  cursor: pointer;
+  transform: scale(110%);
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) ease-in-out;
+  background-color: burlywood;
+}
+
+.music {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
