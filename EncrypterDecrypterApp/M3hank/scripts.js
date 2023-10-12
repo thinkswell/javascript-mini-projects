@@ -1,5 +1,5 @@
 /**
- * Encoder & Decoder Script
+ * EncrypterDecrypterApp Script
  * Author: M3hank
  */
 
