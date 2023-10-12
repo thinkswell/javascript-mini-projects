@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script&family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  background-color: #e3f2fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reader,
+.generator {
+  position: relative;
+  width: 50vw;
+}
+
+#container1 {
+  position: absolute;
+  height: 230px;
+  width: 400px;
+  background-color: #8675e7;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 7px;
+  box-shadow: 10px 10px 10px -5px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  transition: height 0.2s ease;
+}
+
+#container1.active {
+  height: 450px;
+}
+
+form {
+  position: relative;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+#container1.active form {
+  pointer-events: none;
+}
+
+form img {
+  position: relative;
+  height: 180px;
+  width: 180px;
+  display: none;
+}
+
+#container1.active form img {
+  display: block;
+}
+
+#container1.active form .upload {
+  position: relative;
+  display: none;
+}
+
+form .upload i {
+  font-size: 3rem;
+  color: #878dc7;
+}
+
+form .upload p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #878dc7;
+}
+
+.content {
+  margin-top: 15px;
+  /* background-color: red; */
+  height: 200px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  user-select: none;
+}
+
+#container1.active .content {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
+
+.content textarea {
+  width: 100%;
+  height: 70%;
+  resize: none;
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 7px;
+  font-size: 15px;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.content .button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .button button {
+  padding: 10px;
+  width: calc(100% / 2 - 15px);
+  outline: none;
+  border: none;
+  background-color: #fff;
+  font-size: 16px;
+  color: #3744bd;
+  cursor: pointer;
+}
+
+#container2 {
+  position: absolute;
+  width: 350px;
+  height: 190px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 10px 10px 10px -5px rgba(0, 0, 0, 0.3);
+  transition: height 0.2s ease;
+}
+
+#container2.activate {
+  height: 480px;
+}
+
+#container2 p {
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#container2 .form {
+  margin: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#container2 .form input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  background-color: transparent;
+}
+
+#container2 .form button,
+#container2 .qr-code button {
+  width: 100%;
+  margin: 10px 0px;
+  height: 40px;
+  font-size: 16px;
+  color: #fff;
+  background: #4754c5;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#container2 .qr-code button {
+  margin-top: 25px;
+}
+
+#container2 .qr-code img {
+  height: 200px;
+  width: 200px;
+}
+
+#container2 .qr-code {
+  position: relative;
+  /* background-color: #fff; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  user-select: none;
+  padding: 10px;
+  flex-direction: column;
+}
+
+#container2.activate .qr-code {
+  pointer-events: auto;
+  opacity: 1;
+  transition: opacity 0.5s 0.05s ease;
+}
