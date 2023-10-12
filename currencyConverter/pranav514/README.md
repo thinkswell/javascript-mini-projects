@@ -48,6 +48,6 @@ const currencyRates = {
 
 If you have any questions or suggestions, please feel free to contact us.
 
-Happy coding!
+Happy coding!:)
 ```
 
