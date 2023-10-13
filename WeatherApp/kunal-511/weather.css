@@ -1,0 +1,43 @@
+main{
+    margin-top: 100px;
+   
+}
+body{
+    background-color: darkblue;
+}
+
+.invisible{
+    display: block;
+    position: absolute;
+}
+
+/* .card-body{
+    height: 191.333px;
+}
+.mt-3 li {
+    font-size: 1.3rem;
+} */
+.container{
+    background-image: url(day-with-clouds-weather-app-screen-mobile-interface-design-forecast-weather-background-time-concept-vector-banner_87946-4137.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+.my-4{
+    color: white;
+
+}
+.common{
+    font-weight: bolder;
+}
+.py-3{
+    background-color: #0D6EFD;
+    color: white;
+    font-weight: bolder;
+}
+.btn:hover{
+    background-color: #0D6EFD;
+}
+.nav-link:hover{
+    color: #0D6EFD;
+}

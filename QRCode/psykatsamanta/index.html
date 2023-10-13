@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="download.png" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <title>QR-Code-Reader-Generator</title>
+  </head>
+  <body>
+    <div class="reader">
+      <div id="container1">
+        <form action="#">
+          <input type="file" hidden />
+          <img src="" alt="image not available" />
+          <div class="upload">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <p>Upload Your QR Code Here</p>
+          </div>
+        </form>
+        <div class="content">
+          <textarea disabled></textarea>
+          <div class="button">
+            <button type="submit" id="reset">Clear</button>
+            <button type="submit" id="copy">Copy Text</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="generator">
+      <div id="container2">
+        <p>Paste a URL or enter text here to create QR Code</p>
+        <div class="form">
+          <input type="text" placeholder="Enter Text Or URL Here" autofocus />
+          <button id="generate">Generate QR Code</button>
+        </div>
+        <div class="qr-code">
+          <img src="" alt="QR Code Not Available" />
+          <button id="download">Download QR Code</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

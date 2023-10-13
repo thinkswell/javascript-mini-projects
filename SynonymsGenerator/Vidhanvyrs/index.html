@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synonyms Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="heading">Synonyms Generator</h1>
+    <input
+      class="inputword"
+      type="text"
+      id="wordInput"
+      placeholder="Enter a word"
+    />
+    <button class="btn" onclick="getSynonyms()">Generate Synonyms</button>
+    <p class="para">Synonyms: <span id="synonyms"></span></p>
+    <p id="loading" class="loading-message"></p>
+    <script>
+      function getSynonyms() {
+        const uid = "12119";
+        const tokenid = "XHHMiMr0MLSf4Co6";
+        const wordInput = document.getElementById("wordInput").value;
+        const synonymsElement = document.getElementById("synonyms");
+        const loadingMessage = document.getElementById("loading");
+        loadingMessage.textContent = "Loading...";
+        loadingMessage.style.display = "block";
+        fetch(
+          `https://www.stands4.com/services/v2/syno.php?uid=${uid}&tokenid=${tokenid}&word=${wordInput}&format=json`,
+          {
+            method: "GET",
+          }
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            const results = data.result;
+            if (results.length > 0) {
+              const result = results[0];
+              const synonyms = result.synonyms.split(", ");
+              if (synonyms.length > 0) {
+                synonymsElement.textContent = synonyms.join(", ");
+              } else {
+                synonymsElement.textContent = "No synonyms found.";
+              }
+            } else {
+              synonymsElement.textContent = "No results found.";
+            }
+            loadingMessage.style.display = "none";
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            synonymsElement.textContent = "An error occurred: " + error.message;
+            loadingMessage.style.display = "none";
+          });
+      }
+    </script>
+  </body>
+</html>

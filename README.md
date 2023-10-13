@@ -1,39 +1,81 @@
-# Welcome to the JavaScript Mini Projects Repository!
-### Description
-"Welcome to our JavaScript Playground on GitHub! 🚀 Explore a diverse range of projects that showcase the capabilities of JavaScript. Whether you're just starting your coding journey or have been in the field for a while, there's something here for everyone. It's not about fancy titles; it's about the joy of coding in JavaScript. Dive in, explore the code, and let the love for coding and learning flow! Thank you for contributing to this collaborative space. Happy coding! 🌟"
+# <p align="center">Welcome to the JavaScript Mini Projects</p>
 
-### How to Contribute
+<p align="center">
+    <a href="https://github.com/thinkswell/javascript-mini-projects/blob/master/LICENSE" target="blank">
+      <img src="https://img.shields.io/github/license/thinkswell/javascript-mini-projects?style=for-the-badge&logo=appveyor" alt="License" />
+    </a>
+    <a href="https://github.com/thinkswell/javascript-mini-projects/fork" target="blank">
+      <img src="https://img.shields.io/github/forks/thinkswell/javascript-mini-projects?style=for-the-badge&logo=appveyor" alt="Forks"/>
+    </a>
+    <a href="https://github.com/thinkswell/javascript-mini-projects/stargazers" target="blank">
+    <img src="https://img.shields.io/github/stars/thinkswell/javascript-mini-projects?style=for-the-badge&logo=appveyor" alt="Star"/>
+    </a>
+    <a href="https://github.com/thinkswell/javascript-mini-projects/issues" target="blank">
+      <img src="https://img.shields.io/github/issues/thinkswell/javascript-mini-projects.svg?style=for-the-badge&logo=appveyor" alt="Issue"/>
+    </a>
+    <a href="https://github.com/thinkswell/javascript-mini-projects/pulls" target="blank">
+      <img src=" 	https://img.shields.io/github/issues-pr/thinkswell/javascript-mini-projects.svg?style=for-the-badge&logo=appveyor" alt="Open Pull Request"/>
+    </a>
+  </p>
+
+## Description 🚀
+
+Explore a diverse range of projects that showcase the capabilities of JavaScript. Whether you're just starting your coding journey or have been in the field for a while, there's something here for everyone. It's not about fancy titles; it's about the joy of coding in JavaScript. Dive in, explore the code, and let the love for coding and learning flow! Thank you for contributing to this collaborative space. Happy coding! 🌟"
+
+## How to Contribute
+
 Make some awesome projects, put them in your directory and create a pull request. and DONE ✅
 
 ### Steps to Raise and get your PR Merged successfully.
-👉 Fork this repository
 
-👉 Clone the repository into your local system
+1. Fork this repository
 
-👉 Create a branch ```projectname-username```, e.g. - ```git checkout -b ChatApp-thinkswell```
+2. Clone the repository into your local system
 
-👉 Add your projects in the respective directory (if exist otherwise create one), the name of directory should be your ```ProjectName/USERNAME```, e.g. - ChatApp/thinkswell
+   ```bash
+   git clone https://github.com/<username>/javascript-mini-projects.git
+   ```
 
-👉 **Add ```One project``` at a time**
+3. Create a branch `projectname-username`, e.g. - `git checkout -b ChatApp-thinkswell`
 
-👉 **Add & commit**, use ```git add -A```, than ```git commit -m "Your commit message about project"```
+   ```bash
+   git checkout -b ChatApp-thinkswell
+   ```
 
-👉 **Push changes to GitHub**, e.g. - ```git push origin ChatApp-thinkswell```
+4. Add your projects in the respective directory (if exist otherwise create one), the name of directory should be your `ProjectName/USERNAME`.
 
-👉 **Click** on `Create a Pull Request`.
+   Examples: `ChatApp/thinkswell`
 
-👉 Attach some **SCREENSHOTS/GIF** or **link of your working project** in the description _**❗Important❗**_. 
+5. **Add `One project` at a time**
 
-👉 **Submit** the PR.
+6. **Add & commit**
 
-👉 **Leave a ⭐ to the repo and `FOLLOW` me if you liked the project.**
+   ```bash
+   git add -A
+   git commit -m "Your commit message about project"
+   ```
 
-***
+7. **Push changes to GitHub**,
+
+   ```bash
+   git push origin ChatApp-thinkswell
+   ```
+
+8. **Click** on `Create a Pull Request`.
+
+9. Attach some **SCREENSHOTS/GIF** or **link of your working project** in the description _**❗Important❗**_.
+
+10. **Submit** the PR.
+
+11. **Leave a ⭐ to the repo and `FOLLOW` me if you liked the project.**
+
+---
 
 ### What You Can Contribute
+
 We welcome contributions from the community to enhance and expand our collection of mini JavaScript projects. Here are several ways you can contribute:
 
-👉 **Add New Projects** 
+👉 **Add New Projects**
 
 Do you have a creative JavaScript project that you think would be a great addition to our collection? Submit your project!
 
@@ -47,9 +89,10 @@ Have an idea for a new project? Create a new issue by clicking on the `New Issue
 
 We're happy to merge awesome portfolio to this repository!
 
-***
+---
 
-### Usage
+## Usage
+
 This repository contains a collection of mini JavaScript projects, each designed to demonstrate a specific concept or feature. Here's how you can use these projects:
 
 👉 **Choose a project**
@@ -66,19 +109,18 @@ Change directory to the specific project you want to explore.
 
 👉 **Open index.html or index.js in your browser**
 
-Most projects include an index.html or index.js file. Open this file in your web browser to interact with the project. 
+Most projects include an index.html or index.js file. Open this file in your web browser to interact with the project.
 
 👉 **Explore and interact**
 
 Have fun with the project!
 
-***
+---
 
-### Disclaimer
+## Disclaimer
 
 We have a strong commitment to genuine open source contributions and, therefore, do not tolerate plagiarized source code. If our maintainers discover that any Pull Requests (PRs) fail to adhere to this Terms and Conditions, they will be categorized as spam and subsequently closed.
 
-***
+---
 
-# Hurray! Now you are a part of the open source community 🚀🚀🚀
- 
+## <p align="center">Hurray! Now you are a part of the open source community 🚀🚀🚀</p>
