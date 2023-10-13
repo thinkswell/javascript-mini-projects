@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
+    <!-- Include external CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="whole">
+
+        <!-- Header Section -->
+        <header>
+            <!-- Title of the Quiz -->
+            <h1>Random Quiz</h1>
+            <!-- Scoreboard -->
+            <ul class='scoreboard'>
+                <!-- Correct answers count -->
+                <li class="scores">Correct: 0</li>
+                <!-- Incorrect answers count -->
+                <li class="scores">Incorrect: 0</li>
+            </ul>
+        </header>
+
+        <!-- Main Content Section -->
+        <main>
+            <!-- Quiz Form -->
+            <section class="box">
+                <form>
+                    <!-- Introduction to the Quiz -->
+                    <fieldset name="intro">
+                        <legend>Try It Out</legend>
+                        Test your knowledge with a random quiz!
+                    </fieldset>
+
+                    <!-- Quiz Options Section -->
+                    <fieldset name="options">
+                        <!-- Number of Questions Input -->
+                        <label for="numQ">Number of Questions</label>
+                        <input type="number" placeholder="10" id="numQ" s min="1" max="50" value="10" />
+                        <br>
+                        <!-- Difficulty Selection -->
+                        <label for="difficulty">Choose a difficulty</label>
+                        <select name="difficulty" id="difficulty">
+                            <!-- Option: Mixed Difficulty -->
+                            <option value="any">Mixed Difficulty</option>
+                            <!-- Option: Easy Questions -->
+                            <option value="easy">Easy Questions</option>
+                            <!-- Option: Medium Questions -->
+                            <option value="medium">Medium Questions</option>
+                            <!-- Option: Hard Questions -->
+                            <option value="hard">Hard Questions</option>
+                        </select>
+                        <br>
+                        <!-- Category Selection -->
+                        <label for="category">Select a Category: </label>
+                        <select name="category" id="category">
+                            <option value="any">Any Category</option>
+                            <option value="27">Animals</option>
+                            <option value="25">Art</option>
+                            <option value="16">Board Games</option>
+                            <option value="10">Books</option>
+                            <option value="32">Cartoon &amp; Animations</option>
+                            <option value="26">Celebrities</option>
+                            <option value="29">Comics</option>
+                            <option value="11">Film</option>
+                            <option value="9">General Knowledge</option>
+                            <option value="22">Geography</option>
+                            <option value="23">History</option>
+                            <option value="31">Japanese Anime &amp; Manga</option>
+                            <option value="12">Music</option>
+                            <option value="13">Musicals &amp; Theatres</option>
+                            <option value="20">Mythology</option>
+                            <option value="24">Politics</option>
+                            <option value="17">Science &amp; Nature</option>
+                            <option value="18">Science: Computers</option>
+                            <option value="30">Science: Gadgets</option>
+                            <option value="19">Science: Mathematics</option>
+                            <option value="21">Sports</option>
+                            <option value="14">Television</option>
+                            <option value="28">Vehicles</option>
+                            <option value="15">Video Games</option>
+
+                        </select>
+                    </fieldset>
+
+                    <!-- Begin Quiz Button -->
+                    <button id="begin">Begin</button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Include jQuery Library -->
+        <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <!-- Include Custom JavaScript -->
+        <script src="index.js"></script>
+    </div>
+</body>
+
+</html>
