@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Sriracha
+- Font Author: Copyright (c) 2015, Cadson Demak (info@cadsondemak.com), Copyright (c) 2014, Pablo Impallari (www.impallari.com|impallari@gmail.com)
+- Font Source: http://fonts.gstatic.com/s/sriracha/v10/0nkrC9D4IuYBgWcI9ObYRQDioeb0.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
