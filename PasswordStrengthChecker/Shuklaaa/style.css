@@ -1,0 +1,130 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+}
+
+.container{
+    position: relative;
+    width: 400px;
+    padding: 30px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #111;
+    gap: 10px;
+    padding-bottom: 70px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0005);
+}
+.container h2{
+    color: #666;
+    font-weight: 500;
+}
+
+.container .inputBox{
+    position: relative;
+    width: 100%;
+}
+.container .inputBox input{
+    position: relative;
+    width: 100%;
+    background: #222;
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+.container .strengthMeter{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #222;
+}
+.container .strengthMeter::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    transition: 0.5s;
+    background: #f00;
+}
+
+
+.container.weak .strengthMeter::before{
+    width: 10%;
+    background: #f00;
+    filter: drop-shadow(0 0 5px #f00) drop-shadow(0 0 10px #f00) drop-shadow(0 0 20px #f00);
+}
+.container.medium .strengthMeter::before{
+    width: 66.66%;
+    background: #ffa500;
+    filter: drop-shadow(0 0 5px #ffa500) drop-shadow(0 0 10px #ffa500) drop-shadow(0 0 20px #ffa500);
+}
+.container.strong .strengthMeter::before{
+    width: 100%;
+    background: #0f0;
+    filter: drop-shadow(0 0 5px #0f0) drop-shadow(0 0 10px #0f0) drop-shadow(0 0 20px #0f0);
+}
+
+.container .strengthMeter::after{
+    position: absolute;
+    top: -45px;
+    left: 30px;
+    color: #fff;
+    transition: 0.5s;
+}
+.container.weak .strengthMeter::after{
+    content: 'Your password is weak';
+    color: #f00;
+    filter: drop-shadow(0 0 5px #f00);
+}
+.container.medium .strengthMeter::after{
+    content: 'Your password is medium';
+    color: #ffa500;
+    filter: drop-shadow(0 0 5px #ffa500);
+}
+.container.strong .strengthMeter::after{
+    content: 'Your password is strong';
+    color: #0f0;
+    filter: drop-shadow(0 0 5px #0f0);
+}
+
+.show{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    background: #333;
+    border: 5px solid #222;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.show::before{
+    content: 'Show';
+    font-size: 0.6em;
+    color: #fff;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+}
+
+.show.hide::before{
+    content: 'Hide';
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Merriweather:wght@700&family=Montserrat:wght@200&family=Oswald:wght@200;500&family=Poppins:wght@300&family=Signika:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Currency Converter</title>
+</head>
+<body>
+    <div class="centered-container">
+        <h1>Currency Converter</h1>
+
+        <div id="currency-list" class="flex-container">
+            <div class="currency-dropdown">
+                <select id="from-currency">
+                </select>
+            </div>
+            <input type="number" id="amount" placeholder="Amount">
+            <div class="currency-dropdown">
+                <select id="to-currency">
+  
+                </select>
+            </div>
+            <button id="convert">Convert</button>
+        </div>
+        
+        <div id="result">
+            <p>Converted Amount: <span id="converted-amount"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

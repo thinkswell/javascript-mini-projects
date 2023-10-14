@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://e0.pxfuel.com/wallpapers/20/892/desktop-wallpaper-firewatch-green-forest-mountains-minimal.jpg'); 
+    display: flex;
+    background-size: cover; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    text-align: center;
+}
+
+
+.color-box {
+    background-color: #FFFFFF;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    position: relative; /* Add this for animation */
+    overflow: hidden; /* Add this for animation */
+    transition: transform 0.3s ease-in-out; /* Add this for animation */
+}
+
+.color-box:hover {
+    transform: scale(1.05); /* Add this for a smooth hover effect */
+}
+
+.color-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+
+#generate-color {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#color-value {
+    font-size: 20px;
+    margin: 0;
+}
+
+.color-box h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 20px;
+}
