@@ -19,7 +19,7 @@ body {
 
 
 .centered-container {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9); /* Set the alpha (fourth) value to control transparency */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -28,12 +28,13 @@ body {
     transform: scale(1);
 }
 
+
 .centered-container.enter {
     transform: scale(1.05);
 }
 
 h1 {
-    color: #333;
+    color: #000000;
 }
 
 .flex-container {
@@ -46,6 +47,7 @@ h1 {
 
 .currency-dropdown {
     max-height: 200px;
+    background-color: #007BFF;
     overflow-y: auto;
     transition: max-height 0.3s ease-in-out;
 }
