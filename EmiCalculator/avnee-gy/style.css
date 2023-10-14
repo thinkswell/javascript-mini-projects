@@ -1,0 +1,228 @@
+html{
+    scroll-behavior: smooth;
+}
+
+html,body{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #7883d3;
+    /* display: flex; */
+    /* align-items: center; */
+}
+
+nav{
+  height: 70px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #7883d3;
+  color: #fff;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center;
+}
+h2{
+  margin: 0 auto;
+}
+
+
+.inputs_{
+    /* margin-top: 50px; */
+    align-items: center;
+    margin-top: 30px;
+
+}
+
+.container{
+    display: flex;
+    padding: 20px 20px 20px 30px;
+    align-items: center;
+    place-content: center;
+    margin-right: 20px;
+}
+
+.inputs_labels{
+    margin-right: 20px;
+    color: #7883d3;
+    text-decoration: solid;
+}
+
+.sliders{
+    display: flex;
+    justify-content: space-around;
+}
+
+.container .sliders .sliderValue{
+    height: 40px;
+    width: 600px;
+    display: flex;
+}
+
+.container .sliders .sliderValue input{
+    height: 10px;
+    width: 100%;
+    margin-right: 20px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    outline: none;
+    background: #f2f2f2;
+    border-radius: 25px;
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+/* .sliderValue input::-moz-range-progress{
+    height: 10px;
+    border-radius: 25px;
+    background: #f9cf08;
+}
+
+.sliderValue input::-moz-range-thumb{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background-color: #7883d3;
+
+} */
+
+.sliderValue input::-webkit-slider-runnable-track {
+    height: 12px;
+    border-radius: 25px;
+    background: #f9cf08;
+    border: none;
+} 
+
+.sliderValue input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: #7883d3;
+}
+
+.sliderValue input:focus {
+    outline: none;
+}
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;    
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 100px;
+    margin-left: 600px;
+    position: relative;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.btn-3 {
+    background: rgb(1,196,223);
+    /* background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%); */
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    
+  }
+  .btn-3 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #7883d3;
+    text-decoration: solid;
+    align-items: center;
+  }
+  .btn-3:before,
+  .btn-3:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    /* left: 0;
+    bottom: 0; */
+    background: rgba(1,196,223,1);
+    transition: all 0.3s ease;
+  }
+  .btn-3:before {
+    height: 0%;
+    width: 2px;
+  }
+  .btn-3:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-3:hover{
+    background: transparent;
+    box-shadow: none;
+  }
+  .btn-3:hover:before {
+    height: 100%;
+    
+  }
+  .btn-3:hover:after {
+    width: 100%;
+  }
+  .btn-3 span:hover{
+     color: rgba(1,196,223,1);
+  }
+  .btn-3 span:before,
+  .btn-3 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    /* right: 0;
+    top: 0; */
+    background: rgba(1,196,223,1);
+    transition: all 0.3s ease;
+  }
+  .btn-3 span:before {
+    width: 2px;
+    height: 0%;
+  }
+  .btn-3 span:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-3 span:hover:before {
+    height: 100%;
+  }
+  .btn-3 span:hover:after {
+    width: 100%;
+  }
+.output_{
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 50px;
+}
+
+.labels{
+    border: 10px;
+    border-color: gray;
+    padding: 80px 65px 100px 45px;
+    background-color: white;
+    box-shadow :2px;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
+}
+
+.out{
+    color: rgb(1,196,223);
+    align-items: center;
+}
