@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Developper This</title>
+		<meta name="description" content="developper" />
+		<!--=============== FAVICON ===============-->
+		<link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" type="image/x-icon">
+		
+		<!--=============== BO  1XICONS ===============-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+		    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+
+
+	<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<!--  -->
+	<body class="loading">
+		    <!--==================== HEADER ====================-->
+    <!-- headerrrrr -->
+    <header class="header" id="header">
+        <nav class="nav container primary-navigation">
+            <a href="#" class="nav__logo "><img src="../assets/img/logoBlackMode.png" alt="">JCLothes</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="../index.html" class="nav__link ">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="design/index.html" class="nav__link">Design Own &dtrif;</a>
+                        <ul class="dropdown ">
+                            <li><a href="#">T-Shirt</a></li>
+                            <li><a href="#">Long Sleeves</a></li>
+                            <li><a href="#">Hoodie</a></li>
+                            <li><a href="#">Sweater</a></li>
+                            <li><a href="#">Crewneck</a></li>
+                            <li><a href="#">Jacket</a></li>
+                            <li><a href="#">Varsity</a></li>
+                        </ul>
+                            <li class="nav__item">
+                                <a href="product/index.html" class="nav__link">Our Product</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#new" class="nav__link active-link">Contact</a>
+                            </li>
+                        </ul>
+
+                        <!-- close tab navbar responsive -->
+
+                        <div class="nav__close" id="nav-close">
+                            <i class="bx bx-x"></i>
+                        </div>
+            </div>
+            <!-- navButton dark mode dan chart -->
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <!-- <i class='bx bx-moon change-theme' id="theme-button"></i> -->
+
+                <div class="nav__shop" id="cart-shop">
+                    <i class='bx bx-shopping-bag'></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt'></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== CART ====================-->
+    <div class="cart" id="cart">
+        <i class='bx bx-x cart__close' id="cart-close"></i>
+
+        <h2 class="cart__title-center">Keranjang saya</h2>
+
+        <div class="cart__container">
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="assets/img/product/tshirtDesign.png" alt="" class="cart__img">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">T-Shirt</h3>
+                    <span class="cart__price">Rp.55.000,00</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class='bx bx-minus'></i>
+                            </span>
+
+                            <span class="cart__amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class='bx bx-plus'></i>
+                            </span>
+                        </div>
+
+                        <i class='bx bx-trash-alt cart__amount-trash'></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="assets/img/product/satoru.png" alt="" class="cart__img">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">Long Sleeves Custom<class="cart__price">Rp. 70.000,00</span>
+
+                            <div class="cart__amount">
+                                <div class="cart__amount-content">
+                                    <span class="cart__amount-box">
+                                        <i class='bx bx-minus'></i>
+                                    </span>
+
+                                    <span class="cart__amount-number">1</span>
+
+                                    <span class="cart__amount-box">
+                                        <i class='bx bx-plus'></i>
+                                    </span>
+                                </div>
+
+                                <i class='bx bx-trash-alt cart__amount-trash'></i>
+                            </div>
+                </div>
+            </article>
+
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="assets/img/product/Longsleeves.png" alt="" class="cart__img">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">Varsity</h3>
+                    <span class="cart__price">Rp250.000,00</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class='bx bx-minus'></i>
+                            </span>
+
+                            <span class="cart__amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class='bx bx-plus'></i>
+                            </span>
+                        </div>
+
+                        <i class='bx bx-trash-alt cart__amount-trash'></i>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="cart__prices">
+            <span class="cart__prices-item">3 items</span>
+            <span class="cart__prices-total">Rp.375.000,00</span>
+        </div>
+    </div>
+		<main>
+			<div class="content">
+				<div class="grid">
+					<a class="grid__item" href="#preview-1">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/alfat.jpeg" alt="Some image"/>
+							<h3 class="box__title"><span class="box__title-inner" data-hover="Memo">Alfat</span></h3>
+							<h4 class="box__text"><span class="box__text-inner">Perusuh</span></h4>
+							<p class="box__content">"Digendong Dua Orang Backend dev dan harus berganti menjadi Frontend Dev"</p>
+						</div>
+					</a>
+					<a class="grid__item" href="#preview-2">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/ikhsandi.jpeg" alt="Some image"/>
+							<h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner" data-hover="Gun">Iksan</span></h3>
+							<h4 class="box__text box__text--bottom"><span class="box__text-inner box__text-inner--rotated1">Backend</span></h4>
+							<div class="box__deco box__deco--top">&#10115;</div>
+						</div>
+					</a>
+					<a class="grid__item" href="#preview-3">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/rubben.jpeg" alt="Some image"/>
+							<h3 class="box__title"><span class="box__title-inner" data-hover="West">Rubben</span></h3>
+							<h4 class="box__text box__text--topcloser"><span class="box__text-inner">Backend</span></h4>
+							<div class="box__deco">&#10032;</div>
+						</div>
+					</a>
+					<a class="grid__item" href="#preview-4">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/edge.jpg" alt="Some image"/>
+							<h3 class="box__title"><span class="box__title-inner" data-hover="Catch">Edge</span></h3>
+							<h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">Edge</span></h4>
+						</div>
+					</a>
+					<a class="grid__item" href="#preview-5">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/figma.jpg" alt="Some image"/>
+							<h3 class="box__title"><span class="box__title-inner" data-hover="Lim">Figma</span></h3>
+							<h4 class="box__text box__text--bottomcloser"><span class="box__text-inner">Figma</span></h4>
+						</div>
+					</a>
+					<a class="grid__item" href="#preview-6">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/internetjpg.jpg" alt="Some image"/>
+							<h3 class="box__title"><span class="box__title-inner" data-hover="Hard">Internet</span></h3>
+							<h4 class="box__text"><span class="box__text-inner">Fast</span></h4>
+							<p class="box__content">"Tanpa saya kalian bukan apa apa"</p>
+						</div>
+					</a>
+					<a class="grid__item" href="#preview-7">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/kami.jpeg" alt="Some image"/>
+							<h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner" data-hover="Red">AI</span></h3>
+							<h4 class="box__text box__title--bottom"><span class="box__text-inner box__text-inner--rotated1">Jawir</span></h4>
+						</div>
+					</a>
+					<a class="grid__item" href="#preview-8">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/laptop.jpg" alt="Some image"/>
+							<h3 class="box__title"><span class="box__title-inner" data-hover="Jack">laptop</span></h3>
+							<h4 class="box__text box__text--bottom"><span class="box__text-inner">laptop/span></h4>
+							<div class="box__deco">&#10108;</div>
+						</div>
+					</a>
+					<a class="grid__item" href="#preview-9">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/smecone.jpg" alt="Some image"/>
+							<h3 class="box__title"><span class="box__title-inner" data-hover="Wild">SMECONE</span></h3>
+							<h4 class="box__text box__text--bottom"><span class="box__text-inner">SMECONE</span></h4>
+						</div>
+					</a>
+					<a class="grid__item" href="#preview-10">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/iitc.jpg" alt="Some image"/>
+							<h3 class="box__title box__title--bottom"><span class="box__title-inner" data-hover="Lost">IITC</span></h3>
+							<h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2">Intermedia</span></h4>
+							<p class="box__content">"Saya yang mengadakan lombanya"</p>
+						</div>
+					</a>
+					<a class="grid__item" href="#preview-11">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/kami.jpeg" alt="Some image"/>
+							<h3 class="box__title box__title--straight box__title--left"><span class="box__title-inner" data-hover="Grit">US</span></h3>
+							<h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">Jantur</span></h4>
+							<div class="box__deco box__deco--top">&#10153;</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="overlay">
+				<div class="overlay__reveal"></div>
+				<div class="overlay__item" id="preview-1">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/alfat.jpeg" alt="Some image"/>
+						<a href="index.html"><h3 class="box__title"><span class="box__title-inner">Alfat</span></h3></a>
+						<h4 class="box__text"><span class="box__text-inner">Author</span></h4>
+						<div class="box__deco">&#10014;</div>
+					</div>
+					<p class="overlay__content">Halo Saya Alfat Taufik Nurhidayat, saya disini sebagai penggagas ide dan bisa dibilang design creator, saya ngoding beberapa aja karna device saya mau meledak</p>
+				</div>
+				<div class="overlay__item" id="preview-2">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/ikhsandi.jpeg" alt="Some image"/>
+						<h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner">Isan</span></h3>
+						<h4 class="box__text box__text--bottom"><span class="box__text-inner box__text-inner--rotated1">BE & FE</span></h4>
+						<div class="box__deco box__deco--top">&#10115;</div>
+					</div>
+					<p class="overlay__content">Saya Selalu Bekerja Disuruh Rubben dan Alfat tapi kusabar saja</p>
+				</div>
+				<div class="overlay__item" id="preview-3">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/rubben.jpeg" alt="Some image"/>
+						<h3 class="box__title"><span class="box__title-inner">Rubben</span></h3>
+						<h4 class="box__text box__text--topcloser"><span class="box__text-inner">Backend</span></h4>
+						<div class="box__deco">&#10032;</div>
+					</div>
+					<p class="overlay__content">Saya pusing bikin responsivve</p>
+				</div>
+				<div class="overlay__item" id="preview-4">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/edge.jpg" alt="Some image"/>
+						<h3 class="box__title"><span class="box__title-inner">EDGE</span></h3>
+						<h4 class="box__text box__text--bottomcloser"><span class="box__text-inner">Browser</span></h4>
+					</div>
+					<p class="overlay__content">Alfat Make saya buat dijadiin browser utama, jadi ya saya berperan</p>
+				</div>
+				<div class="overlay__item" id="preview-5">
+<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/figma.jpg" alt="Some image"/>
+						<h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner">Figma</span></h3>
+						<h4 class="box__text box__title--bottom"><span class="box__text-inner box__text-inner--rotated1">Prototype</span></h4>
+					</div>
+					<p class="overlay__content">Alfat Ikhsan make saya buat bikin designya hehe</p>
+				</div>
+				<div class="overlay__item" id="preview-6">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/internetjpg.jpg" alt="Some image"/>
+						<h3 class="box__title"><span class="box__title-inner">Internet</span></h3>
+						<h4 class="box__text"><span class="box__text-inner">Primary</span></h4>
+					</div>
+					<p class="overlay__content">Apa jadinya mereka tanpa saya</p>
+				</div>
+				<div class="overlay__item" id="preview-7">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/midjourney.jpg" alt="Some image"/>
+						<h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner">Midjourney</span></h3>
+						<h4 class="box__text box__title--bottom"><span class="box__text-inner box__text-inner--rotated1">AI Yak</span></h4>
+					</div>
+					<p class="overlay__content">Alfat generate gambar dari saya, biar unik katanya</p>
+				</div>
+				<div class="overlay__item" id="preview-8">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/laptop.jpg" alt="Some image"/>
+						<h3 class="box__title"><span class="box__title-inner">Laptop</span></h3>
+						<h4 class="box__text box__text--bottom">Device<span class="box__text-inner"></span></h4>
+						<div class="box__deco">&#10108;</div>
+					</div>
+					<p class="overlay__content">Udah tau lah ya. Alfat selalu maki maki saya</p>
+				</div>
+				<div class="overlay__item" id="preview-9">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/smecone.jpg" alt="Some image"/>
+						<h3 class="box__title"><span class="box__title-inner">SMK N 1 PWT</span></h3>
+						<h4 class="box__text box__text--bottom"><span class="box__text-inner">School</span></h4>
+					</div>
+					<p class="overlay__content">Tebak saya apanya mereka, yak saya tempat mereka bersekolah ygy</p>
+				</div>
+				<div class="overlay__item" id="preview-10">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/iitc.jpg" alt="Some image"/>
+						<h3 class="box__title box__title--bottom"><span class="box__title-inner">IITC</span></h3>
+						<h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2">Pantia</span></h4>
+					</div>
+					<p class="overlay__content">Saya yang ngadain lomba, makanya mereka bikin website ini</p>
+				</div>
+				<div class="overlay__item" id="preview-11">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/kami.jpeg" alt="Some image"/>
+						<h3 class="box__title box__title--straight box__title--left"><span class="box__title-inner">Kami</span></h3>
+						<h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">Team</span></h4>
+						<div class="box__deco box__deco--top">&#10153;</div>
+					</div>
+					<p class="overlay__content">Intinya banyak pihak yang terlibat bagi web ini, dan kami mengucapkan TERIMAKASIH
+					</p>
+				</div>
+				<button class="overlay__close"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
+			</div>
+		</main>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		    <!--=============== SWIPER JS ===============-->
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="../assets/js/main.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		<script src="js/demo.js"></script>
+	</body>
+</html>
