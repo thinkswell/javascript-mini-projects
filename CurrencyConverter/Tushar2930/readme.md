@@ -16,3 +16,4 @@ A simple currency converter web app that allows you to convert between different
 
 ## API
 This project uses API to fetch real-time exchange rates.
+![Screenshot (75)](https://github.com/Tushar2930/javascript-mini-projects/assets/110845672/76bfb55d-6ef0-4d0d-ade7-0fc33217e2ec)
