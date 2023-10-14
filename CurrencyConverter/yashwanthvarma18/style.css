@@ -1,0 +1,97 @@
+body {
+    background-image: url('https://wallpaperaccess.com/full/2326823.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Merriweather', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Signika', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.centered-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Set the alpha (fourth) value to control transparency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+
+.centered-container.enter {
+    transform: scale(1.05);
+}
+
+h1 {
+    color: #000000;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.currency-dropdown {
+    max-height: 200px;
+    background-color: #007BFF;
+    overflow-y: auto;
+    transition: max-height 0.3s ease-in-out;
+}
+
+input[type="number"] {
+    width: 100px;
+    margin: 10px 0;
+    padding: 3px;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out; /* Added transform property for smoother scaling */
+}
+
+button#convert {
+    padding: 5px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Added transform property for smoother scaling */
+}
+
+button#convert:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Add this line for the hover effect */
+}
+input[type="number"]:hover
+{
+    transform: scale(1.05); /* Add this line for the hover effect */
+}
+#result {
+    font-family: 'Bebas Neue', sans-serif;
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Merriweather', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Signika', sans-serif;
+    margin: 20px;
+    font-weight: bold;
+}
+
+#converted-amount {
+    color: #007BFF;
+}
