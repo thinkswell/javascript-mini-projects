@@ -4,7 +4,7 @@ import './App.css'
 function App() {
   return (
     <Fragment>
-      <h1 style={{color:'white'}}>Javascript-Mini-Project integration</h1>
+      <h1 style={{color:'white'}}>Javascript-Mini-Project integrations</h1>
     </Fragment>
   )
 }
