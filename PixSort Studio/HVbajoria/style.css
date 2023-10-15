@@ -1,0 +1,29 @@
+::after,
+::before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.custom-file-control::after {
+  content: "Choose image...";
+}
+
+.custom-file-control::before {
+  content: "Browse";
+}
+
+.custom-file-control::before {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  z-index: 6;
+  display: block;
+  height: 2.5rem;
+  padding: .5rem 1rem;
+  line-height: 1.5;
+  color: #464a4c;
+  background-color: #eceeef;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: 0 .25rem .25rem 0;
+}
