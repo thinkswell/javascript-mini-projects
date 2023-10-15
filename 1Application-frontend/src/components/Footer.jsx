@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import '../css/Footer.css';
+import "../css/Footer.css";
 import { Facebook, Twitter, Instagram, LinkedIn} from '@mui/icons-material'; // Import the shoes icon
 
 const Footer = () => {
