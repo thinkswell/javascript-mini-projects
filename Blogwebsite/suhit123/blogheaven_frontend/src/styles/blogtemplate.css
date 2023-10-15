@@ -1,0 +1,145 @@
+
+#vbtn_link{
+    width: max-content;
+    text-decoration: none;
+    color: rgb(55, 55, 55);
+}
+.container-bt{
+    position: relative;
+    background-color: white;
+    width: 18vw;
+    height: 450px;
+    border-radius: 5px;
+    box-shadow: 5px 10px 15px rgba(201, 201, 201, 0.327);
+    margin: 10px;
+    padding: 5px;
+}
+.container-bt:hover{
+    box-shadow: 5px 10px 15px rgba(139, 139, 139, 0.522);
+}
+#blog_image{
+    position: relative;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width:130%;
+}
+#blgimg{
+    border-radius: 5px 5px 0px 0px;
+    height:12vw;
+    overflow: hidden;
+}
+.content{
+    margin:0px 10px 10px 20px;
+}
+.author{
+    margin:10px 0px 0px 0px;
+    font-size: 13px;
+}
+.author a{
+    text-decoration: none;
+    color: black;
+}
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.topdetails{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.topdetails h2{
+    margin:10px 0px;
+    font-size: 15px;
+}
+.contenttext{ 
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    font-size: 13px;
+}
+.date{
+    font-size: 13px;
+}
+.editingOptions{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 10px;
+}
+.editingOptions button{
+    color: white;
+    margin: 2px;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}.eo1{
+    background-color: black;
+}
+.eo2{
+    background-color: rgb(142, 37, 37);
+}
+@media only screen and (max-width: 1400px) {
+    .container-bt{
+        height: 400px;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    .container-bt{
+        height: 380px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .container-bt{
+        width: 24vw;
+        height: 370px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .container-bt{
+        width: 35vw;
+        height: 380px;
+    }
+    #blgimg{
+        border-radius: 5px 5px 0px 0px;
+        height:20vw;
+        overflow: hidden;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .container-bt{
+        width: 45vw;
+        margin: 5px;
+        padding: 3px;
+        height: 330px;
+    }
+    #blog_image{
+        width:100%;
+    }
+    #blgimg{
+        height: 130px;
+    }
+    .content{
+        margin:0px 5px 5px 10px;
+    }
+    .author{
+        margin:10px 0px 0px 0px;
+        font-size: 12px;
+    }
+    .topdetails h2{
+        margin:5px 0px;
+        font-size: 13px;
+    }
+    .contenttext{ 
+        overflow: hidden;
+        height: 80px;
+        overflow: hidden;
+        font-size: 12px;
+    }
+    .date{
+        font-size: 12px;
+    }
+}
