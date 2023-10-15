@@ -1,0 +1,76 @@
+body{
+    background-image: linear-gradient(120deg, #2E3192 0%, #1BFFFF 100%);
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 16px;
+    margin: 0;
+    padding: 0; 
+}
+
+@media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+}
+
+.card{
+    border: 1px solid #ccc;
+    font-family: 'Open Sans', sans-serif;
+    /* border-radius: 10px; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2%;
+    max-width: 420px;
+    width: 80%;
+    margin: 8% auto;
+    background-color: #fff;
+    height: 400px;
+    overflow: auto;
+}
+
+.card-content{
+    position: relative;
+    top: -12px; 
+    text-align: center;
+}
+
+li{
+    margin-left: 0;
+    padding: 5px;
+    font-size: 19px;
+}
+
+ul{
+    position: relative;
+    top: -25px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.display-answers{
+    position: relative;
+    top: -25px;
+    font-size: 17px;
+}
+
+#display-result{
+    position: relative;
+    top: -38px;
+    font-size: 20px;
+}
+
+.instructions{
+    position: relative;
+    top: -13px;
+    font-weight: bold ;
+    font-size: 25px;
+}
+
+input{
+    position: relative;
+    top: -23px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100px;
+    padding: 10px;
+    font-size: larger;
+}
