@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👻</text></svg>"
+    />
+    <link href="./style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <title>Snake-Water-Gun</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-content">
+        <h1>Snake-Water-Gun</h1>
+        <p class="instructions">Instructions</p>
+        <ul style="text-align: left">
+          <li>1. Use S for Snake, W for Water and G for Gun</li>
+          <li>2. Snake defeats Water (Snake drinks Water) 🐍</li>
+          <li>3. Water defeats Gun (Water puts out Gun) 💧</li>
+          <li>4. Gun defeats Snake (Gun shoots Snake) 🔫</li>
+        </ul>
+        <input
+          type="text"
+          id="user-inp"
+          placeholder="S, W or G?"
+          onkeydown="checkEnter(event)"
+        />
+        <p class="display-answers">
+          <span id="comp-choice"></span
+          ><span id="user-choice" style="margin-left: 23px"></span>
+        </p>
+        <p id="display-result"></p>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
