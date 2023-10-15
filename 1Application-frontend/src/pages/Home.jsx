@@ -1,5 +1,5 @@
 import { Fragment } from "react"
-import "../Css/Home.css"
+import "../css/Home.css"
 
 const Home = () => {
   return (
