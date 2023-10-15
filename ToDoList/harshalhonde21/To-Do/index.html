@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+</head>
+<body>
+    <div class="popupbackground noneDisplay">
+        <div class="popup">
+         <h1 class="popupheading">Enter your <br/><span class="popupheading2">Todo...</span></h1>
+         <input class="popupinput"/>
+         <div class="buttonContainer"><button class="cancelbutton" onclick="removePopup()">Cancel</button><button class="createbutton" onclick="addTodo()">Add</button></div>
+        </div>
+    </div>
+    <p class="heading">List of things <br/><span class="heading2">Todo...</span></p>
+    <div class="EachTodo">Watch Anime<button class="deletebutton">X</button></div>
+    <button class="addbutton" onclick="displayPopup()">Add Todo</button>
+    <script src="script.js"></script>
+</body>
+</html>

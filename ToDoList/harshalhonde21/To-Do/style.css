@@ -1,0 +1,203 @@
+body{   
+   background-color: rgb(242, 242, 242);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   color: rgb(0, 0, 0);
+}
+.popupbackground{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    position: absolute;
+    background-color: #d5a5a590;
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(5px);
+}
+.popup{
+    padding: 20px;
+    height: 300px;
+    min-width: 300px;
+    width: 50vw;
+    max-width: 700px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+.popupheading{
+    margin: 0px;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.popupheading2{
+    color: rgb(233, 183, 113);
+    font-size: 80px;
+    font-weight: 100;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.popupinput{
+    padding: 10px;
+    font-size: 30px;
+    width: 90%;
+    margin: 5px;
+    border-radius: 10px;
+    border: 3px solid rgb(87, 87, 87);
+}
+.createbutton{
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 200;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(37, 101, 184);
+    height: 60px;
+    width: 150px;
+    outline: none;
+    border: 0px solid transparent;
+    transition: 0.5s;
+}
+.buttonContainer{
+    display: flex;
+    justify-content: space-around;
+}
+.cancelbutton{
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 200;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(254, 117, 107);
+    height: 60px;
+    width: 150px;
+    outline: none;
+    border: 0px solid transparent;
+    transition: 0.5s;
+}
+.cancelbutton:hover{
+    color: #ffffff;
+    scale: 1.1;
+    transition: 0.5s;
+}
+.createbutton:hover{
+    color: #ffffff;
+    scale: 1.1;
+    transition: 0.5s;
+}
+.noneDisplay{
+    display: none;
+}
+.heading{
+    margin: 0px;
+    font-size: 100px;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.heading2{
+    color: rgb(233, 183, 113);
+    font-size: 200px;
+    font-weight: 100;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.addbutton{
+    border-radius: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 200;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(95, 123, 163);
+    position: fixed;
+    bottom: -10px;
+    right: 0;
+    height: 70px;
+    width: 150px;
+    outline: none;
+    margin: 30px;
+    border: 0px solid transparent;
+    box-shadow:0px 0px 30px 2px rgba(0, 0, 0, 0.518);
+    transition: 0.5s;
+}
+.addbutton:hover{
+    color: #000;
+    background-color: aliceblue;
+    scale: 1.1;
+    transition: 0.5s;
+}
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 0px rgba(255, 255, 255, 0.3);
+	background-color: #f4f4f4;
+}
+::-webkit-scrollbar
+{
+	width: 2px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+	border: 0px solid #555555;
+}
+
+.EachTodo{
+    animation: downTotop;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    padding-left: 30px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(216, 149, 209);
+    box-shadow:0px 0px 60px 0px rgba(0, 0, 0, 0.221);
+    border-radius: 20px;
+    width: 90%;
+    font-size: 25px;
+    max-width: 650px;
+    min-width: 320px;
+    color: #474747;
+    border: 2px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.deletebutton{
+    background-color:rgb(236, 10, 240);
+    outline: none;
+    border: 0px solid transparent;
+    height: 100px;
+    border-top-right-radius:20px;
+    border-bottom-right-radius:20px;
+    width: 100px;
+    font-weight: 700;
+    font-size: 29px;
+    color: #3e3e3e;
+    transition: 0.5s;
+}
+.deletebutton:hover{
+    background-color:rgb(204, 0, 255);
+    width: 150px;
+}
+
+
+@media screen and (max-width:600px) {
+    .heading{
+        margin: 0px;
+        font-size: 15vw;
+        font-weight: 700;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .heading2{
+        color: rgb(233, 183, 113);
+        font-size: 20vw;
+        font-weight: 100;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+}
+@keyframes downTotop {
+    from {translate: 0px 100px;opacity: 0;}
+    to {translate: 0px 0px;opacity: 1;}
+  }
