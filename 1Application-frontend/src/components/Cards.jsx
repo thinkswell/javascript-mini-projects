@@ -6,14 +6,14 @@ import { Avatar, Card, CardActions, CardContent, CardHeader, CardMedia, IconButt
 export default function Cards( {projectName, imageUrl, altname, description} ) {
     return (
         <Card sx={{ maxWidth: 345 }}>
-      <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            {projectName[0].toUpperCase()}
+      <CardContent sx={{display: 'flex', justifyContent:'start'}}>
+          <Avatar sx={{ bgcolor: red[500], mr: 2}} aria-label="leter">
+            {projectName.match(/[0-9 A-Z]/g).join('').slice(0,2)}
           </Avatar>
-        }
-        title={projectName}
-      />
+        <Typography color="text.secondary" variant="h5">
+            {projectName}
+        </Typography>
+      </CardContent>
       <CardMedia
         component="img"
         height="200"
@@ -21,7 +21,7 @@ export default function Cards( {projectName, imageUrl, altname, description} ) {
         alt={altname}
       />
       <CardContent>
-        <Typography variant="body2" color="text.secondary">
+        <Typography color="text.secondary" variant="subtitle1">
           {description}
         </Typography>
       </CardContent>
