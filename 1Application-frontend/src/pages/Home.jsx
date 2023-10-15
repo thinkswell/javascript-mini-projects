@@ -1,12 +1,13 @@
+import { Fragment } from "react"
 import "../Css/Home.css"
 
 const Home = () => {
   return (
-    <div>
+    <Fragment>
       <div className="home-container">
 
       </div>
-    </div>
+    </Fragment>
   )
 }
 
