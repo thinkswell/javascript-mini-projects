@@ -1,0 +1,134 @@
+.signup_full{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.signup_left{
+    margin-right: 10%;
+    width: 40%;
+    height: 100%;
+    background-image: url('../images/image12.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+input[type="text"],input[type="email"],input[type="password"]{
+    width: 60%;
+    padding: 20px;
+    font-size: 12px;
+    border-radius: 5px;
+    border: 1px solid rgb(93, 93, 93);
+    background-color: white;
+} 
+button[type="submit"] {
+    width: 64.5%;
+    padding: 20px;
+    font-size: 18px;
+    background-color: rgb(50, 50, 50);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+.signupform{
+ width: 50%;
+}
+.genderSelect .genderSelectOptions .gso1{
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    margin: 10px;
+}
+.genderSelect .genderSelectOptions .hgso1{
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    margin: 10px;
+    filter: drop-shadow(5px 5px 5px #222);
+}
+.genderSelect .genderSelectOptions .gso2{
+    width: 110px;
+    height: auto;
+    cursor: pointer;
+    margin: 10px;
+}
+.genderSelect .genderSelectOptions .hgso2{
+    width: 110px;
+    height: auto;
+    cursor: pointer;
+    margin: 10px;
+    filter: drop-shadow(5px 5px 5px #222);
+}
+.signup_heading{
+    font-size: 20px;
+}
+@media only screen and (max-width: 1000px) {
+    .signupform{
+        width: 60%;
+       }
+       input[type="text"],input[type="email"],input[type="password"]{
+        width:65%;
+    } 
+    button[type="submit"] {
+        width: 75%;
+    }
+    .genderSelect .genderSelectOptions .gso1{
+        width: 65px;
+    }
+    .genderSelect .genderSelectOptions .hgso1{
+        width: 65px;
+    }
+    .genderSelect .genderSelectOptions .gso2{
+        width: 70px;
+    }
+    .genderSelect .genderSelectOptions .hgso2{
+        width: 70px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .signup_full{
+        height: 100vh;
+    }
+    .signup_left{
+        margin-right: 5%;
+        width: 40%;
+        height: 100%;
+        background-position-x: -50px;
+    }
+    input[type="text"],input[type="email"],input[type="password"]{
+        width:80%;
+        padding: 15px;
+        font-size: 12px;
+    } 
+    button[type="submit"] {
+        width: 96%;
+        padding: 15px;
+        font-size: 13px;
+        background-color: rgb(50, 50, 50);
+        color: white;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        margin-top: 0px;
+      }
+    .signupform{
+     width: 50%;
+    }
+    .signup_heading{
+        font-size: 15px;
+    }
+    .genderSelect .genderSelectOptions .gso1{
+        width: 50px;
+    }
+    .genderSelect .genderSelectOptions .hgso1{
+        width: 50px;
+    }
+    .genderSelect .genderSelectOptions .gso2{
+        width: 55px;
+    }
+    .genderSelect .genderSelectOptions .hgso2{
+        width: 55px;
+    }
+}

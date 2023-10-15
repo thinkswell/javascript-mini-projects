@@ -1,0 +1,62 @@
+body{
+    background-color: rgb(3, 34, 51);
+    margin: 0px;
+    padding: 0;
+}
+.row{
+    display: flex;
+}
+#button_0{
+    width: 22vh;
+    height: 10vh;
+    font-size: 40px;
+    margin: 1vh;
+    color: white;
+    background-color: rgb(50, 76, 92);
+}
+#button{
+    height: 10vh;
+    width: 10vh;
+    font-size: 40px;
+    margin: 1vh;
+    color: white;
+    background-color: rgb(50, 76, 92);
+}
+#button:hover,#button_0:hover{
+    background-color: rgb(34, 92, 128);
+}
+.container{
+    margin-top: 13vh;
+}
+.buttons{
+    width: 48vh;
+    margin: auto;
+}
+.input{
+    width: 48vh;
+    margin: auto;
+}
+#input_box{
+    width: 94%;
+    margin: 1vh;
+    height: 10vh;
+    font-size: 50px;
+    background-color: white;
+}
+.nav{
+    height: 8vh;
+    background-color: rgba(0, 0, 0, 0.342);
+}
+.nav img{
+    width: 50vh;
+}
+.whatsapp{
+    position: fixed;
+    top: 90vh;
+    width: 100%;
+}
+.whatsapp img{
+    padding-right: 4vh;
+    float: right;
+    width: 7vh;
+}

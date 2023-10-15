@@ -1,0 +1,56 @@
+.loader{
+  width: 100vw;
+  height: 110vh;
+  position: fixed;
+  z-index: 1000;
+  top: -50px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.animate-charcter
+{
+  position: fixed;
+  left: 50%;
+  top:30%;
+  transform: translate(-50%,-50%);
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 10vw;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .loader{
+    width: 100vw;
+    height: 120vh;
+  }
+  .animate-charcter
+  {
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-40%);
+    font-size: 50px;
+  }
+  
+}
