@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Croissant+One&family=Inconsolata:wght@200;900&family=Rubik:wght@300&display=swap");
+
+:root {
+  --color-2: black;
+  --color-6: whitesmoke;
+
+  /* font family */
+
+  --font-1: "Bebas Neue", sans-serif;
+  --font-2: "Croissant One", cursive;
+  --font-inconsolata: "Inconsolata", monospace;
+  --font-rubik: "Rubik", sans-serif;
+}
+
+/* Footer.css */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 130px;
+  background-color: var(--color-2);
+  color: var(--color-6);
+  padding: 85px 35px 35px 35px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+z {
+  font-family: var(--font-2);
+  font-size: 1rem;
+}
+
+.section h2 {
+  font-family: var(--font-1);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.email-signup {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-signup input[type="email"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.email-signup button {
+  background-color: var(--color-1);
+  color: var(--color-6);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border: 1px solid var(--color-6);
+}
+
+.email-signup button:hover {
+  background-color: var(--color-3);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 5px;
+  font-family: var(--font-2);
+  font-size: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.social-icons svg {
+  color: var(--color-6);
+  cursor: pointer;
+}
+
+.social-icons svg:hover {
+  color: rgb(255, 0, 251);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    gap: 50px;
+  }
+}
