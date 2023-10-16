@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("background");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+  }
+  
+  .music_box {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title {
+    font-size: 100px;
+    border-bottom: 1px solid #b1b9c19e;
+  }
+  
+  .footer_info,
+  .title,
+  small {
+    text-align: center;
+  }
+  
+  .box_bumps .key {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow: 15px 15px 40px #b3b3b3, -15px -15px 40px #ffffff;
+  
+    position: relative;
+    border-color: #f0f8ff9e;
+  }
+  
+  .box_bumps .key:focus {
+    outline: none;
+  }
+  
+  .box_bumps .key::before {
+    content: "";
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    left: auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }
+  
+  .key:active,
+  .playing {
+    transform: scale(0.95);
+    border: 2px solid rgba(206, 181, 135, 0.2) !important;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0) !important;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff !important;
+  }
+  
+  .box_bumps {
+    display: flex;
+  }
+  
+  .footer_info,
+  .box_bumps strong {
+    font-size: 15px;
+  }
+  
+  .footer_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer_info .heart {
+    display: inline-block;
+    -webkit-animation: 1s infinite beatHeart;
+    animation: 1s infinite beatHeart;
+    color: #ff0707;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 5px;
+  }
+  
+  @keyframes beatHeart {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  
+    25% {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+  
+    40% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  
+    60% {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+    }
+  
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  
+  .key[data-key="65"]::before {
+    background-image: url("https://arsen-nazaryan.github.io/drum_kit/media/icons/clap.png");
+  }
+  .key[data-key="83"]::before {
+    background-image: url("https://arsen-nazaryan.github.io/drum_kit/media/icons/snare.png");
+  }
+  .key[data-key="68"]::before {
+    background-image: url("https://arsen-nazaryan.github.io/drum_kit/media/icons/kick.png");
+  }
+  .key[data-key="70"]::before {
+    background-image: url("https://arsen-nazaryan.github.io/drum_kit/media/icons/hihat.png");
+  }
+  .key[data-key="74"]::before {
+    background-image: url("https://arsen-nazaryan.github.io/drum_kit/media/icons/boom.png");
+  }
+  .key[data-key="75"]::before {
+    background-image: url("https://arsen-nazaryan.github.io/drum_kit/media/icons/tom.png");
+  }
+  .key[data-key="76"]::before {
+    background-image: url("https://arsen-nazaryan.github.io/drum_kit/media/icons/tink.png");
+  }
+  .key[data-key="186"]::before {
+    background-image: url("https://arsen-nazaryan.github.io/drum_kit/media/icons/openhat.png");
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .box_bumps {
+      flex-direction: column;
+    }
+    .box_bumps strong {
+      display: none;
+    }
+  
+    .box_bumps .key::before {
+      top: calc(50% - 30px);
+    }
+  }
+  
+  @media only screen and (max-width: 420px) {
+    body {
+      background-size: 20vh auto;
+      background-position: center 3vh;
+    }
+  }
+  
+  @media only screen and (max-width: 380px) {
+    .box_bumps .key {
+      margin: 10px;
+    }
+    .music_box {
+      justify-content: space-around;
+    }
+  }
+  
