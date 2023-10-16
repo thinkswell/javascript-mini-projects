@@ -1,0 +1,42 @@
+*{
+    background-color: bisque;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 0%;
+    height: 87vh;
+    align-items: center;
+    border: 2px solid black;
+}
+
+h1{
+    font-family: 'Amatic SC', cursive;
+    font-size: 50px;
+    font-weight: bolder;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 10px;
+    margin-bottom: 0.5%;
+    margin-top: 0%;
+    background-image: url(imagebg.jpg);
+}
+
+
+
+button{
+    padding: 15px;
+    font-family: 'Bruno Ace', cursive;
+    font-size: larger;
+    font-weight: bold;
+    border: 3px solid black;
+    background-color: rgb(161, 139, 112);
+    border-radius: 5px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: rgb(253, 167, 62);
+}
