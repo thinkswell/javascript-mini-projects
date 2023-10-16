@@ -1,0 +1,66 @@
+body {
+    font-family: 'digital-7', sans-serif;
+    background-image: url('https://images6.alphacoders.com/133/1330235.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.clock-container {
+    background-color: rgba(0, 0, 0, 0.3); /* Grayish background with 50% opacity */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(237, 236, 236, 0.7);
+    backdrop-filter: blur(5px); /* Apply a blur effect */
+}
+
+
+
+.clock {
+    text-align: center;
+    font-size: 3em;
+}
+
+.time {
+    font-size: 3em;
+    font-family: 'digital-7', sans-serif;
+}
+
+.date {
+    font-size: 1.5em;
+    font-family: 'digital-7', sans-serif;
+}
+
+  
+  .top {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+    animation: rotateFade 2s infinite alternate linear;
+  }
+  
+  .bottom {
+    clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+    color: transparent;
+    background: -webkit-linear-gradient(177deg, black 53%, var(--text-color) 65%);
+    background: linear-gradient(177deg, black 53%, var(--text-color) 65%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transform: translateX(-0.02em);
+    animation: rotateFade 2s infinite alternate linear;
+  }
+  
+  @keyframes rotateFade {
+    0% {
+      transform: rotate(0deg) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(5deg) scale(0.9);
+      opacity: 0.7;
+    }
+  }
