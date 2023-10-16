@@ -1,0 +1,18 @@
+content idea 101: 
+    - File writer that writes a FOLDER named TITLE and has sub folders
+        - Genre, Characters, Summary, Script,
+    - File Reader that reads the FOLDER TITLE and the contexts from it.
+
+STRUCTURE:
+    - Home page:
+        - Nav bar with add idea.
+        - All ideas in a box
+            - box will contain TITLE only.
+    - Idea page:
+        -Nav bar with
+            - Edit, Delete
+        - TITLE 
+        - Genre
+        - Characters
+        - Summary
+        - Script

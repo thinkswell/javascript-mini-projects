@@ -1,0 +1,278 @@
+:root{
+    --p-color: #0D0D0D;
+    --s-color: #F2F2F2;
+
+    --text-size: 1.5vh;
+    --header-size: 2vh;
+
+    --font-family:'Roboto', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: var(--font-family);
+    color: var(--p-color);
+}
+
+svg{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    stroke: var(--p-color);
+    stroke-width: .2vh;
+}
+
+body{
+    background: var(--s-color);
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .everything{
+        width: 60%;
+        position: relative;
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        .nav-bar{
+            width: 100%;
+            padding: 2vh;
+            display: flex;
+            gap: 2vh;
+            align-items: center;
+            justify-content: center;
+            .add-idea{
+                width: 3vh;
+                height: 3vh;
+                cursor: pointer;
+                overflow: hidden;
+            }
+        }
+        .ideas{
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            padding: 2vh;
+            gap: 5vh;
+            .idea{
+                cursor: pointer;
+                border: .3vh solid var(--p-color);
+                padding: 2vh;
+                display: flex;
+                align-items: center;
+                position: relative;
+                justify-content: center;
+                box-shadow: 2vh 2vh var(--p-color);
+                min-height: 15vh;
+                .title{
+                    font-size: var(--header-size);
+                    font-weight: 900;
+                    text-transform: uppercase;
+                }
+                .id{
+                    position: absolute;
+                    top: 1vh;
+                    left: 1vh;
+                    font-size: var(--text-size);
+                }
+            }
+        }
+        .add-idea-page{
+            width: 100%;
+            min-height: 100%;
+            background: var(--s-color);
+            display: none;
+            position: absolute;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            .nav-bar{
+                .close-page{
+                    cursor: pointer;
+                    width: 3vh;
+                    height: 3vh;
+                    overflow: hidden;
+                }
+            }
+            //Input section
+            .input-section{
+                width: 100%;
+                padding: 2vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2vh;
+                .input{
+                    display: flex;
+                    flex-direction: column;
+                    gap:1vh;
+                    width: 100%;
+                    .header{
+                        font-size: var(--header-size);
+                        font-weight: 900;
+                        text-transform: uppercase;
+                    }
+                    textarea,input{
+                        width: 100%;
+                        padding: 1vh;
+                        border: none;
+                        outline: none;
+                        background: white;
+                        resize:vertical;
+                        font-size: var(--text-size);
+                    }
+                }
+                .add-btn{
+                    width:auto;
+                    cursor: pointer;
+                    padding: 2vh;
+                    background: var(--p-color);
+                    color: var(--s-color);  
+                    font-size: var(--header-size);
+                    font-weight: 900;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .idea-page{
+            position: absolute;
+            width: 100%;
+            min-height: 100dvh;
+            background: var(--s-color);
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            .nav-bar{
+                .close-page,.edit-page-btn,.delete-page-btn{
+                    cursor: pointer;
+                    width: 3vh;
+                    height: 3vh;
+                    overflow: hidden;
+                }
+            }
+            .idea-title{
+                width: 100%;
+                font-size: 5vh;
+                text-transform: capitalize;
+                font-weight: 900;
+                text-align: center;
+                padding: 2vh;
+            }
+            .header,.idea-script,.idea-summary,.idea-characters,.idea-genre{
+                width: 100%;
+                padding: 2vh;
+                font-size: var(--text-size);
+                font-weight: 400;
+                text-align: left;
+                padding-top: .5vh;
+            }
+            .idea-script{
+                overflow-x: auto;
+                white-space: pre-wrap;
+            }
+            .header{
+                font-weight: 900;
+                padding: 0 2vh;
+                text-transform: uppercase;
+                font-size: var(--header-size);
+            }
+            .download{
+                cursor: pointer;
+                padding: 2vh;
+                font-size: var(--header-size);
+                font-weight: 900;
+                text-decoration: none;
+                color: var(--p-color);
+                background: red;
+            }
+        }
+        .edit-page{
+            width: 100%;
+            min-height: 100%;
+            background: var(--s-color);
+            display: none;
+            position: absolute;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            .nav-bar{
+                .close-page{
+                    cursor: pointer;
+                    width: 3vh;
+                    height: 3vh;
+                    overflow: hidden;
+                }
+            }
+            //Input section
+            .edit-input-section{
+                width: 100%;
+                padding: 2vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2vh;
+                .input{
+                    display: flex;
+                    flex-direction: column;
+                    gap:1vh;
+                    width: 100%;
+                    .header{
+                        font-size: var(--header-size);
+                        font-weight: 900;
+                        text-transform: uppercase;
+                    }
+                    textarea,input{
+                        width: 100%;
+                        padding: 1vh;
+                        border: none;
+                        outline: none;
+                        background: white;
+                        resize:vertical;
+                        font-size: var(--text-size);
+                    }
+                }
+                .add-btn{
+                    width:auto;
+                    cursor: pointer;
+                    padding: 2vh;
+                    background: var(--p-color);
+                    color: var(--s-color);  
+                    font-size: var(--header-size);
+                    font-weight: 900;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 980px) {
+    body{
+        .everything{
+            width: 100% !important;
+            .ideas{
+                gap: 2vh !important;
+                .idea{
+                    box-shadow: none !important;
+                    min-height: auto !important;
+                }
+            }
+            .idea-page{
+                .idea-title{
+                    font-size: 3vh !important;
+                }
+            }
+        }
+    }
+}
