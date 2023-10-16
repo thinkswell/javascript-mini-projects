@@ -82,6 +82,7 @@ Make some awesome projects, put them in your directory and create a pull request
 4. Add your projects in the respective directory (if exist otherwise create one), the name of directory should be your `ProjectName/USERNAME`.
 
    Examples: `ChatApp/thinkswell`
+Use of PascalCase is necessary for the naming of directory.
 
 5. **Add `One project` at a time**
 
