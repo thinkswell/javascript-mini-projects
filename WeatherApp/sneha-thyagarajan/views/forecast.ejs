@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=DM+Serif+Display&family=Libre+Baskerville&family=Roboto+Slab:wght@500&family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+    <title>Weather Wizard</title>
+</head>
+
+<body>
+
+    <div class="secondSearch">
+        <form action="/search" method="POST" class="search">
+            <input type="text " placeholder="Enter city" name="search" style="height:50px; width:90%; " class="bar">
+            <input type="submit" value="search" class="searchbtn">
+        </form>
+    </div>
+    <% if(locals.data){ %>
+
+   
+
+    <div class="main">
+        <div class="name">
+            <h1><%=data.name%>, <%= data.sys.country%></h1>
+
+            <%const date= new Date();
+            const monthNames = [
+                     "January", "February", "March", "April", "May", "June",
+                     "July", "August", "September", "October", "November", "December"
+                    ];
+
+            const day = date.getDate();
+            const month = monthNames[date.getMonth() + 1];
+            const year = date.getFullYear();
+            const hours = date.getHours();
+            const minutes = date.getMinutes();
+
+            let period = "AM";
+            let displayHours = hours;
+
+            if (hours >= 12) {
+                period = "PM";
+                displayHours = hours === 12 ? 12 : hours - 12;
+            }
+
+            const formatted = `${displayHours}:${minutes.toString().padStart(2, "0")} ${period}`;%>
+            <p> <%= day + ", " + month + " " + year%> | <%= formatted%> </p>
+        </div>
+        <div class="description">
+            <div class="mini">
+                <h1><%= Math.round(data.main.temp)%>&deg C</h1>
+
+                <% const icon =data.weather[0].icon %>
+
+                <div class="icon">
+                    <img src="https://openweathermap.org/img/wn/<%=icon%>.png" alt="icon">
+                    <p><%= data.weather[0].main%></p>
+                </div>
+
+            </div>
+            <div class="minmax">
+                <div>
+                    <h3> Max Temp</h3>
+                    <p><%= data.main.temp_max%>&deg c</p>
+                </div>
+                <hr>
+                <div>
+                    <h3> Min Temp</h3>
+                    <p><%= data.main.temp_min %> &deg c</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tempcontainer">
+            <div class="box1 item">
+                <h3>Feels like</h3>
+                <p><%= data.main.feels_like%> &deg c</p>
+            </div>
+            <div class="box2 item">
+                <h3>Humidity</h3>
+                <p><%= data.main.humidity%>%</p>
+            </div>
+            <div class="box3 item">
+                <h3>Pressure</h3>
+                <p><%= data.main.pressure%> hPa</p>
+            </div>
+            <div class="box4 item">
+                <h3>Wind speed</h3>
+                <p><%= data.wind.speed%> km/h</p>
+            </div>
+
+        </div>
+
+
+        <div class="data">
+            <table>
+                <tr>
+                    <th colspan="2" style="text-align:center">Weather Data of <%=data.name%></th>
+
+                </tr>
+
+                <tr>
+                    <td>Sunrise Time</td>
+
+                    <% const unixTimestamp =data.sys.sunrise ;  
+
+                    const milliseconds = unixTimestamp * 1000;
+
+
+                    const dateObject = new Date(milliseconds);
+
+
+                    const formattedTime = dateObject.toLocaleTimeString(); %>
+
+                    <td><%=formattedTime %></td>
+
+                </tr>
+                
+                    <td>Sunset Time</td>
+
+                    <% const setTime =data.sys.sunset ;  
+                    const time = new Date(setTime * 1000).toLocaleTimeString();%>
+
+                    <td><%=time %></td>
+
+                </tr> 
+                
+                <tr>
+                    <td>Wind Degree</td>
+                    <td><%= data.wind.deg %>°</td>
+
+                </tr>
+                <tr>
+                    <td>Longitude</td>
+                    <td><%= data.coord.lon%>°</td>
+
+                </tr>
+                <tr>
+                    <td>Latitude</td>
+                    <td><%= data.coord.lat%>°</td>
+
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <%} %>
+
+</body>
+
+</html>
