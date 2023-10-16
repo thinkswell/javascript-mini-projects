@@ -1,0 +1,11 @@
+modules = ["nodejs-18:v3-20230608-f4cd419"]
+hidden = [".config", "package-lock.json"]
+run = "npm run start"
+
+[nix]
+channel = "stable-23_05"
+
+[deployment]
+run = ["sh", "-c", "npm run start"]
+deploymentTarget = "cloudrun"
+ignorePorts = false
