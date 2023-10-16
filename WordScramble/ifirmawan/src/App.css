@@ -1,0 +1,28 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.word-scramble {
+  .answer {
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+}
+form.answer-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+input.answer-input {
+  width: 70%;
+  height: 36px;
+  font-size: 28px;
+  line-height: 36px;
+}
