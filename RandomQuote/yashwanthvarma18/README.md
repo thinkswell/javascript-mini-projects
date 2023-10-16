@@ -26,5 +26,5 @@ A simple web application that generates random quotes using the [Type Fit API](h
 
 - [Type Fit API](https://type.fit/api/quotes) for providing the quotes.
 
-Created By YASHWANTH VARMA 
+<!-- Created By YASHWANTH VARMA -->
 
