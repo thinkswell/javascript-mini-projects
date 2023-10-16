@@ -14,7 +14,7 @@
       <img src="https://img.shields.io/github/issues/thinkswell/javascript-mini-projects.svg?style=for-the-badge&logo=appveyor" alt="Issue"/>
     </a>
     <a href="https://github.com/thinkswell/javascript-mini-projects/pulls" target="blank">
-      <img src=" 	https://img.shields.io/github/issues-pr/thinkswell/javascript-mini-projects.svg?style=for-the-badge&logo=appveyor" alt="Open Pull Request"/>
+      <img src="https://img.shields.io/github/issues-pr/thinkswell/javascript-mini-projects.svg?style=for-the-badge&logo=appveyor" alt="Open Pull Request"/>
     </a>
   </p>
 
