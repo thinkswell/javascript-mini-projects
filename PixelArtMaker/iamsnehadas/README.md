@@ -6,7 +6,7 @@ Pixel_Art_Maker
 
 ## **Description 📃**
 
-- This is an app, where one can easily create any pixelated art using various colours.
+- This is a mini app, where one can easily create any pixelated art using various colours.
 
 ## **Languages **
 
