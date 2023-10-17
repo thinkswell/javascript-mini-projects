@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator💘</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+          
+            <h1>Love Calculator 💘💖</h1>
+            <div class="inputarea">
+                <input  type="text" placeholder="Your Name..." id="NameOne" onfocus="this.value = ''">
+                <input type="text" placeholder="Your Lover..." id="NameTwo" onfocus="this.value = ''">
+            </div>
+            <a href="#" onclick="love()">Play</a>
+            <p id="print">You Both are </p>
+            <p id="statement"></p>
+        </div>
+    </div>
+    <!-- <script>
+        function love(){
+        var name1 = document.getElementById("NameOne").value;
+        var name2 = document.getElementById("NameTwo").value;
+        if(name1.length<=2){
+            alert("Enter at least 3 character");
+        }
+        if(name2.length<=2){
+            alert("Enter at least 3 character");
+        }
+        else{
+            var random = Math.floor(Math.random()*100);
+            document.getElementById("print").innerHTML = name1 + " Loves " + name2 + " 😘💖 " +" ➡➡"+random + "%" ;
+        }
+        if(random<=10 || random<=60){
+            document.getElementById("statement").innerHTML = "Moderate Relationship😪😪😗";
+        }
+        else if(random<=61 || random<=100){
+            document.getElementById("statement").innerHTML = "Lovely Relationship😍😍😘😘";
+        }
+    }
+    </script> -->
+    <script src="script.js"></script>
+</body>
+</html>
