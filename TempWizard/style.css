@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+h1{
+	padding:5%;
+	padding-bottom:3%;
+	font-size:50px;
+	color:green;
+}
+
+div{
+	padding-left:1%
+}
+
+label{
+  margin: 10px 0;
+}
+input
+{
+	border:none;
+	height:50px;
+	width:200px;
+	font-size:40px;
+}
