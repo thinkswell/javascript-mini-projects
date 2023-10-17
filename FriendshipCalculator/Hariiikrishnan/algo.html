@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="globalStyles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section>
+        <div class="algo">
+            <h2>How it Works ?</h2>
+            <p>The Algorithm behind it!</p>
+            <ul>
+                <li>Write your and your friend's name and strike out the similar alphabets. For Eg:"Jack" , "Jane".</li>
+                <li>Store the count of similar alphabets sequentially. For Eg: alphabets:['J','J','a','a'], Sequence:[2,2]</li>
+                <li>Count the unique alphabets and store them in the same sequence as before. For Eg:alphabets:['c','k','n','e'], Sequence:[2,2,1,1,1,1]</li>
+                <li>Now add the first and last values from the sequence and store it. For Eg: 2+1 = 3</li>
+                <li>Now do the same for the 2nd character from the beginning and from the end in reverse. For Eg: 3 + ( 2 + 1).</li>
+                <li>Continue doing the same process until the sequence reaches its end. If the sequence length is odd, add the final value.</li>
+                <li>Now calculate the total count of the similar characters that we struck out earlier. For Eg:['J','a'] = 2</li>
+                <li>Multiply that count with the answer we calculated earlier by adding the sequence values.</li>
+            </ul>
+            <a class="btn" href="index.html">Try it out</a>
+        </div>
+    </section>
+</body>
+</html>
