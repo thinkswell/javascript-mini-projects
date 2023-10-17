@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <h1 id="title"> <span id="aalu">आलु</span>  Cross </h1>
+
+
+ 
+
+    <div id="board">
+        <button id="one" row="0" column="0">.</button>
+        <button id="two" row="0" column="1">.</button>
+        <button id="three"  row="0" column="2">.</button>
+        <br>
+        <button id="four"  row="1" column="0">.</button>
+        <button id="five"  row="1" column="1">.</button>
+        <button id="six"  row="1" column="2">.</button>
+        <br>
+        <button id="seven"  row="2" column="0">.</button>
+        <button id="eight" row="2" column="1" >.</button>
+        <button id="nine"  row="2" column="2">.</button>
+
+
+    </div>
+
+
+    <div id="popupMessage" class="popup-message" >
+        <span id="popupCloseButton" class="popup-close-button">&times;</span>
+        <p id="winningMessage" style="color:white">Aalu wins</p>
+        <img  src="./public/img/emoji.png" alt="" id="emoji">
+    </div>
+
+
+    <div id="audio">
+        <audio id="stepMadeAudio" src="./public/audio/stepMade.wav"></audio>
+        <audio id="winningAudio" src="./public/audio/winningAudio.wav"></audio>
+    </div>
+</body>
+</html>

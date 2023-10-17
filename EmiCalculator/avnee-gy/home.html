@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h2>EMI CALCULATOR</h2>
+    </nav>
+    <section class="inputs_">
+        <div class="container">
+            <div class="inputs_labels">
+                Principal Amount (₹):
+            </div>
+            <!-- <div class="sliders">
+                <div class="sliderValue">
+                    <input type="range" min="1000" max="10000000" value="100" steps="1000" id="amt">
+                </div>
+                <div class="field">
+                    <div class="val1">0</div>
+                </div>
+            </div> -->
+            <div class="sliders">
+                <input type="number" id="amt">
+            </div>
+        </div>
+        <div class="container">
+            <div class="inputs_labels">
+                Loan Tenure (months):
+            </div>
+            <div class="sliders">
+                <div class="sliderValue">
+                    <input type="range" min="0" max="360" value="100" steps="1" id="time">
+                </div>
+                <div class="field">
+                    <div class="val2">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="inputs_labels">
+                Interest Rate (%) :
+            </div>
+            <div class="sliders">
+                <input type="number" id="rate">
+            </div>
+        </div>
+    </section>
+
+    <div class="btn">
+        <button class="custom-btn btn-3" id="calc"><span>Calculate</span></button>
+    </div>
+
+    <section class="output_">
+        <div class="labels" id="a">
+            Total Amount to be paid: (₹):
+            <div class="out pay"></div>
+        </div>
+        <div class="labels" id="b">
+            EMI per Month (₹):
+            <div class="out emi"></div>
+        </div>
+        <div class="labels" id="c">
+            Compound Interest: (₹):
+            <div class="out inter"></div>
+        </div>
+        
+    </section>
+    
+    
+
+
+
+    
+    <script src='./js/script.js'></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+/* Reset some default styles */
+body, h1, p {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    color:#ffffff;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+body {
+    /* font-family: Arial, sans-serif; */
+    background-color: #000000;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1aa0c9;
+    background-image: linear-gradient(to top left, rgb(1, 14, 19), rgb(30, 41, 163));
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+p{
+    color: #ffffff;
+}
+
+
+input[type="text"] {
+    font-family: 'Poppins', Arial, sans-serif;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #032b34;
+    border-radius: 24px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+button {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #1db512;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#movieDetails {
+    margin-top: 20px;
+    margin: auto;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+h4{
+    color: #158631;
+}
+
+.float-container {
+    border: 1px solid rgb(255, 255, 255);
+  margin: 1rem;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+
+.float-child {
+    display: inline-block;
+  /* border: 1px solid red; */
+  padding: 1rem 1rem;
+  vertical-align: middle;
+  text-align: left;
+}
