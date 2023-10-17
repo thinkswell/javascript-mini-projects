@@ -10,7 +10,7 @@ NewsWallah is a news reader app built with [React](https://reactjs.org/) that us
 
 ## Installation
 ```bash
-git clone https://github.com/Ankan-cyber/newswallah.git
+git clone https://github.com/tvermaashutosh/newswallah.git
 cd newswallah
 npm install
 ```
@@ -38,3 +38,4 @@ This repository is not under any license, if you want to use or redistribute it 
 - [New York Times API](https://developer.nytimes.com/)
 - [Material-UI](https://material-ui.com/)
 
+Developed with ❤️ by Ash V.
