@@ -1,6 +1,6 @@
 import { Fragment, useState } from "react";
 import { NavLink } from "react-router-dom"; 
-import "../CSS/Navbar.css";
+import "../Css/Navbar.css";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
