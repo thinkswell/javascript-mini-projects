@@ -1,0 +1,337 @@
+*,  
+ *::before,  
+ *::after {  
+  margin: 0;  
+  padding: 0;  
+  box-sizing: border-box;  
+ }  
+ body {  
+  height: 100vh;  
+  width: 100%;  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  justify-content: center;  
+  font-family: Arial, Helvetica, sans-serif;  
+ }  
+ .container {  
+  height: 100%;  
+  width: 100%;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  gap: 2rem;  
+ }  
+ .wrapper {  
+  height: 300px;  
+  width: 300px;  
+  position: relative;  
+  background-color: #7070f3;  
+  border-radius: 50%;  
+  overflow: hidden;  
+ }  
+ .controls {  
+  display: flex;  
+  flex-direction: column;  
+  gap: 2rem;  
+ }  
+ .controls input {  
+  display: none;  
+ }  
+ .body {  
+  height: 80px;  
+  width: 40%;  
+  position: absolute;  
+  bottom: -2%;  
+  right: 50%;  
+  transform: translateX(50%);  
+  background-color: #f4f4f4;  
+  clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);  
+ }  
+ .head {  
+  height: 130px;  
+  width: 58%;  
+  border-radius: 50%;  
+  position: absolute;  
+  z-index: 5;  
+  bottom: 60px;  
+  right: 50%;  
+  transform: translateX(50%);  
+  background-color: #f4f4f4;  
+  overflow: hidden;  
+ }  
+ .head::before {  
+  content: "";  
+  aspect-ratio: 1/1;  
+  width: 60%;  
+  position: absolute;  
+  left: -25%;  
+  top: -20%;  
+  border-radius: 50%;  
+  background-color: #f7bcd1;  
+ }  
+ .head::after {  
+  content: "";  
+  aspect-ratio: 1/1;  
+  width: 60%;  
+  position: absolute;  
+  right: -25%;  
+  top: -20%;  
+  border-radius: 50%;  
+  background-color: #f7bcd1;  
+ }  
+ .ears {  
+  display: flex;  
+  gap: 3rem;  
+  position: absolute;  
+  bottom: 140px;  
+  right: 50%;  
+  transform: translateX(50%);  
+ }  
+ .ear {  
+  height: 70px;  
+  width: 70px;  
+  background-color: #f4f4f4;  
+  border-radius: 10% 40% 0 40%;  
+  transform: rotateY(180deg) rotate(70deg);  
+  transform-origin: center;  
+  transform-box: fill-box;  
+  display: grid;  
+  place-items: center;  
+ }  
+ .ear:nth-child(2) {  
+  transform: rotate(70deg);  
+ }  
+ .ear::before {  
+  content: "";  
+  height: 50%;  
+  width: 50%;  
+  background-color: #f68eb3;  
+  border-radius: 10% 40% 0 40%;  
+ }  
+ .eyes {  
+  display: flex;  
+  gap: 3rem;  
+  position: absolute;  
+  bottom: 60px;  
+  right: 50%;  
+  z-index: 3;  
+  transform: translateX(50%);  
+ }  
+ .eye {  
+  height: 30px;  
+  width: 30px;  
+  border-radius: 50%;  
+  background-color: #010101;  
+  position: relative;  
+ }  
+ .eye::before {  
+  content: "";  
+  height: 40%;  
+  width: 40%;  
+  position: absolute;  
+  top: 7%;  
+  right: 9%;  
+  border-radius: 50%;  
+  background-color: #ffffff69;  
+ }  
+ .nose {  
+  position: absolute;  
+  bottom: 50px;  
+  right: 50%;  
+  transform: translateX(50%);  
+ }  
+ .shape {  
+  height: 22px;  
+  width: 22px;  
+  transform: rotate(45deg);  
+  transform-origin: center;  
+  transform-box: fill-box;  
+  background-color: #000000;  
+  border-radius: 100% 10px 10px 10px;  
+  position: relative;  
+ }  
+ .nose::before {  
+  content: "";  
+  height: 10px;  
+  width: 5px;  
+  position: absolute;  
+  bottom: -10px;  
+  right: 50%;  
+  transform: translateX(50%);  
+  background-color: #000;  
+ }  
+ .mouth {  
+  font-size: 2.2rem;  
+  font-weight: bold;  
+  position: absolute;  
+  bottom: 15px;  
+  right: 50%;  
+  transform: translateX(50%);  
+ }  
+ .mustaches {  
+  display: flex;  
+  gap: 1rem;  
+  position: absolute;  
+  bottom: 27px;  
+  right: 50%;  
+  transform: translateX(50%);  
+  z-index: 2;  
+ }  
+ .mus {  
+  display: flex;  
+  flex-direction: column;  
+ }  
+ .mustach {  
+  height: 20px;  
+  width: 5rem;  
+  border-radius: 50%;  
+  border-top: 2px solid #000000;  
+  margin-top: -15px;  
+ }  
+ .pads {  
+  display: flex;  
+  gap: 2.5rem;  
+  position: absolute;  
+  bottom: -5px;  
+  right: 50%;  
+  z-index: 5;  
+  transform: translateX(50%);  
+ }  
+ .pad {  
+  height: 40px;  
+  width: 50px;  
+  border-radius: 50%;  
+  background-color: #d1d1d1;  
+ }  
+ .hat {  
+  height: 100px;  
+  width: 90px;  
+  background-color: #000;  
+  position: absolute;  
+  bottom: 400px;  
+  right: 50%;  
+  z-index: 5;  
+  transform: translateX(50%);  
+  display: flex;  
+  align-items: end;  
+  justify-content: center;  
+  border-radius: 10px;  
+  transition: bottom 0.3s ease-in-out;  
+ }  
+ .hat .bottom {  
+  height: 30px;  
+  width: 120px;  
+  background-color: #000;  
+  position: absolute;  
+  border-radius: 9999px;  
+ }  
+ .glasses {  
+  display: flex;  
+  gap: 2rem;  
+  position: absolute;  
+  bottom: 110px;  
+  right: -50%;  
+  z-index: 5;  
+  transform: translateX(50%);  
+  transition: right 0.3s ease-in-out;  
+ }  
+ .glasses::before {  
+  content: "";  
+  height: 5px;  
+  width: 2rem;  
+  background-color: #fff;  
+  position: absolute;  
+  top: 50%;  
+  right: 50%;  
+  transform: translate(50%, -50%);  
+ }  
+ .glass {  
+  height: 50px;  
+  width: 50px;  
+  border-radius: 50%;  
+  border: 4px solid #000;  
+  background-color: rgba(255, 255, 255, 0.349);  
+ }  
+ .tie {  
+  height: 50px;  
+  width: 30px;  
+  background-color: #000;  
+  position: absolute;  
+  bottom: -80px;  
+  right: 50%;  
+  z-index: 7;  
+  transform: translateX(50%);  
+  clip-path: polygon(0% 0%, 100% 0%, 70% 20%, 100% 100%, 0% 100%, 30% 20%);  
+  transition: bottom 0.3s ease-in-out;  
+ }  
+ .glassescontrol,  
+ .hatcontrol,  
+ .tiecontrol {  
+  height: 50px;  
+  width: 50px;  
+  background-color: #f290b2;  
+  position: relative;  
+  display: grid;  
+  place-items: center;  
+  border-radius: 50%;  
+  box-shadow: 8px 8px 14px #00000024;  
+  cursor: pointer;  
+  position: relative;  
+ }  
+ .glassescontrol:hover::before,  
+ .hatcontrol:hover::before,  
+ .tiecontrol:hover::before {  
+  content: attr(data-text);  
+  padding: 2px 5px;  
+  border-radius: 5px;  
+  position: absolute;  
+  top: 50%;  
+  left: 110%;  
+  transform: translateY(-50%);  
+  background-color: #7070f3;  
+  color: white;  
+ }  
+ .haticon {  
+  height: 25px;  
+  width: 20px;  
+  background-color: #ffffff;  
+  display: flex;  
+  align-items: end;  
+  justify-content: center;  
+  border-radius: 2px;  
+ }  
+ .haticon .bottom {  
+  height: 7px;  
+  width: 30px;  
+  background-color: #ffffff;  
+  position: absolute;  
+  border-radius: 9999px;  
+ }  
+ .glassesicon {  
+  display: flex;  
+  gap: 0.1rem;  
+ }  
+ .glassesicon::before {  
+  content: "";  
+  height: 5px;  
+  width: 0.2rem;  
+  background-color: #ffffff;  
+  position: absolute;  
+  top: 50%;  
+  right: 50%;  
+  transform: translate(50%, -50%);  
+ }  
+ .glassicon {  
+  height: 20px;  
+  width: 20px;  
+  border-radius: 50%;  
+  border: 4px solid #ffffff;  
+  background-color: rgba(255, 255, 255, 0.349);  
+ }  
+ .tieicon {  
+  height: 30px;  
+  width: 10px;  
+  background-color: #ffffff;  
+  clip-path: polygon(0% 0%, 100% 0%, 70% 20%, 100% 100%, 0% 100%, 30% 20%);  
+ } 
