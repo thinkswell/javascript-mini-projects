@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1f1f1f;
+    gap: 80px;
+}
+
+.colors {
+    position: relative;
+    padding: 30px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    background: #28292b;
+    border-radius: 10px;
+}
+
+.colors span {
+    position: relative;
+    width: 50px;
+    height: 20px;
+    border-radius: 20px;
+    background: #1f1f1f;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.colors span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    transition: 0.5s;
+    scale: 0.8;
+    background-color: var(--clr); 
+}
+
+.colors span:hover::before {
+    left: 30px;
+    opacity: 1;
+    scale: 1;
+}
+
+.colors span#red {
+    --clr: #c1121f;
+}
+
+.colors span#yellow {
+    --clr: #F3CA40;
+}
+
+.colors span#orange {
+    --clr: #bb3e03;
+}
+
+.colors span#green {
+    --clr: #297045;
+}
+
+.colors span#blue {
+    --clr: #087E8B;
+}
+
+.colors span#black {
+    --clr: #222222;
+}
+
+.colors span#pink {
+    --clr: #DA344D;
+}
+
+.colors span#purple {
+    --clr: #736372;
+}
+
+.colors span#brown {
+    --clr: #6A381F;
+}
+
+.colors span#gray {
+    --clr: #F6F0ED;
+}
+
+.canva {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: #28292b;
+    border-radius: 10px;
+    transition: 0.5s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
