@@ -1,0 +1,23 @@
+.tile:hover {
+  background: lightgray;
+}
+
+.tile {
+  border: 1px solid gray;
+  width: 100px;
+  height: 100px;
+  font-size: 70px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.board {
+  width: 306px;
+  height: 306px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  cursor: pointer;
+  /* margin: auto; */
+}

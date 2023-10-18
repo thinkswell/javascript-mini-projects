@@ -1,0 +1,16 @@
+{
+  "name": "weldisson",
+  "version": "1.0.0",
+  "description": "Find a fibonacci number",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node src/fibonacci.test.js",
+    "start": "node src/index.js"
+  },
+  "author": "Weldisson Araujo",
+  "license": "ISC",
+  "dependencies": {
+    "sinon": "^9.2.4",
+    "yargs": "^17.6.0"
+  }
+}

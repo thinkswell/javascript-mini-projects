@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Sorting Visualizer</title>
+
+    <meta charset="UTF-8" />
+    <meta
+      name="keywords"
+      content="Tushar, Tushar, Projects, Sorting Visualizer, Algorithms"
+    />
+    <meta name="description" content="Sorting Algorithm Visualizer" />
+    <meta name="author" content="Tushar" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="intro">
+      <h1>Sorting Algorithm Visualizer!</h1>
+    </div>
+
+    <div class="slider-container">
+      <div class="slider">
+        <h3>Current Array Size: <span id="sizeValue"></span></h3>
+        <input
+          type="range"
+          min="10"
+          max="100"
+          value="20"
+          class="slider"
+          id="sizeSlider"
+        />
+      </div>
+
+      <div class="slider">
+        <h3>
+          Current Delay (lower is faster): <span id="speedValue"></span> ms
+        </h3>
+        <input
+          type="range"
+          min="1"
+          max="25"
+          value="5"
+          class="slider"
+          id="speedSlider"
+        />
+      </div>
+    </div>
+
+    <div class="algo-selection-container">
+      <label for="Sorting_Function">Choose an algorithm:</label>
+      <select id="sortingFunction" name="funcList" form="funcForm">
+        <option value="bubble">Bubble Sort</option>
+        <option value="selection">Selection</option>
+        <option value="insertion">Insertion</option>
+        <option value="merge">Merge</option>
+        <option value="heap">Heap</option>
+      </select>
+    </div>
+
+    <div class="sorting-button-container">
+      <button class="button" type="randomizeBtn" onclick="randomizeArray()">
+        Generate new array
+      </button>
+      <button class="button" type="sortButton" onclick="runSort()">
+        Begin Sorting
+      </button>
+    </div>
+
+    <div class="canvas-container">
+      <canvas
+        id="myCanvas"
+        width="800"
+        height="400"
+        style="border: 1px solid #c3c3c3"
+      >
+        Your browser does not support the canvas element :,(
+      </canvas>
+    </div>
+  </body>
+</html>
+
+<script src="src/main.js"></script>
+<script src="src/sort.js"></script>

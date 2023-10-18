@@ -1,0 +1,327 @@
+:root {
+    font-size: 0.625em;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+    margin: auto;
+    max-width: 60rem;
+    color: #d8edea;
+    background: radial-gradient(
+      circle,
+      rgba(175, 196, 174, 1) 0%,
+      rgba(104, 204, 191, 1) 89%,
+      rgba(94, 191, 178, 1) 100%
+    );
+  }
+  
+  header {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  div {
+    height: 2rem;
+    width: 2rem;
+  }
+  
+  .t-ucase {
+    text-transform: uppercase;
+  }
+  
+  .t-big {
+    font-size: 1.5em;
+  }
+  
+  .t-wide {
+    letter-spacing: 1.5rem;
+  }
+  
+  .t-close {
+    letter-spacing: 1rem;
+  }
+  
+  .fw-300 {
+    font-weight: 300;
+  }
+  
+  .fw-400 {
+    font-weight: 400;
+  }
+  
+  .score-display {
+    font-size: 5rem;
+    color: rgb(133, 121, 107, 0.5);
+  }
+  
+  .game-area {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .game {
+    height: 0;
+    width: 300px;
+  }
+  
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 20rem;
+    height: 40rem;
+  }
+  
+  .previous-shape {
+    width: 10rem;
+    padding-left: 2rem;
+    margin-top: -5rem;
+  }
+  
+  .previous-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 8rem;
+    height: 8rem;
+  }
+  
+  .block {
+    background-image: url(../images/blue_block.png);
+  }
+  
+  .block2 {
+    background-image: url(../images/purple_block.png);
+  }
+  
+  .block3 {
+    background-image: url(../images/green_block.png);
+  }
+  
+  .block4 {
+    background-image: url(../images/navy_block.png);
+  }
+  
+  .block5 {
+    background-image: url(../images/pink_block.png);
+  }
+  
+  .end {
+    background-color: #d8edea;
+  }
+  
+  .button {
+    position: relative;
+    width: 22rem;
+    height: 2.2rem;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    line-height: 23px;
+    font-size: 10px;
+    display: block;
+    margin: 30px;
+    text-shadow: -1px -1px 0 #a84155;
+    background: #d25068;
+    border: 1px solid #d25068;
+    width: 12rem;
+    background-image: linear-gradient(to bottom, #f66c7b, #d25068);
+    border-radius: 5px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset,
+      0 -1px 0 rgba(255, 255, 255, 0.1) inset, 0 4px 0 #ad4257,
+      0 4px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .button:before {
+    background: #f0f0f0;
+    background-image: linear-gradient(#d0d0d0, #f0f0f0);
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
+    position: absolute;
+    content: "";
+    left: -6px;
+    right: -6px;
+    top: -6px;
+    bottom: -10px;
+    z-index: -1;
+  }
+  
+  .button:active {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset,
+      0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    top: 5px;
+  }
+  
+  .button:active:before {
+    top: -11px;
+    bottom: -5px;
+    content: "";
+  }
+  
+  .button:hover {
+    background: #f66c7b;
+    background-image: linear-gradient(top, #d25068, #f66c7b);
+  }
+  
+  .end {
+    background-image: url(/Users/limit/development/Tetris/images/blue_block.png);
+  }
+  
+  .display {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+    width: 17.5rem;
+    height: 25rem;
+    background: #f0f0f0;
+    background-image: linear-gradient(#d0d0d0, #f0f0f0);
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
+    color: #85796b;
+  }
+  
+  .score,
+  .lines-display {
+    padding-top: 1rem;
+    font-size: 1.2rem;
+  }
+  
+
+  .container {
+    max-width: 600px;
+    padding: 0 3rem;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .btn:hover {
+    opacity: 0.7;
+  }
+  
+  
+  .menu-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 1rem;
+    background: rgba(13, 110, 139, 0.75);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .menu-wrap .hamburger > div {
+    position: relative;
+    display: flex;
+    width: 150%;
+    height: 2px;
+    background: #fff;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+  
+ 
+  .menu-wrap .hamburger > div:before,
+  .menu-wrap .hamburger > div:after {
+    position: absolute;
+    top: -7px;
+    z-index: 1;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+    content: "";
+  }
+  
+
+  .menu-wrap .hamburger > div:after {
+    top: 7px;
+  }
+  
+ 
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+  }
+  
+ 
+  .menu-wrap .toggler:checked + .hamburger > div:before,
+  .menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  
+ 
+  .menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(24, 39, 51, 0.85);
+  }
+  
+  .menu-content {
+    text-align: center;
+    width: 600px;
+    align-items: center;
+    margin-top: 230px;
+    justify-content: center;
+    width: 200vw;
+    height: 200vh;
+    border-radius: 50%;
+    transition: all 0.8s ease;
+  }
+  
+  .rules {
+    font-size: 12px;
+    transition: color 0.4s ease;
+  }
+  
+  .key {
+    color: #f8de7e;
+  }
+  
+  .close {
+    border-radius: 5px;
+    color: rgba(24, 39, 51, 0.85);
+  }
+  

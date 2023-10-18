@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Randon Number</title>
+
+  <!-- Include Tailwind CSS and DaisyUI CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@1.20.0/dist/full.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar bg-base-100">
+    <div class="flex-1">
+      <a class="btn btn-ghost normal-case text-xl">Generate Random Number</a>
+    </div>
+  </div>
+
+<section class="py-12 bg-primary-500 text-white">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-semibold mb-4">Generate Random Number</h2>
+        <p class="text-lg mb-4">Enter the range (lowest and highest numbers) for the random number:</p>
+        <div class="flex justify-center space-x-4 text-4xl">
+            <input type="number" id="lowestInput" class="w-20 h-16 text-lg text-center bg-white rounded-md text-black" placeholder="Lowest">
+            <span class="text-4xl">to</span>
+            <input type="number" id="highestInput" class="w-20 h-16 text-lg text-center bg-white rounded-md text-black" placeholder="Highest">
+        </div>
+        <p class="text-lg mt-4">Random Number:</p>
+        <p id="randomNumber" class="text-4xl mt-2">-</p>
+        <button id="generateButton" class="mt-4 btn btn-primary">Generate Random Number</button>
+    </div>
+</section>
+
+  <!-- Footer Section -->
+  <footer class="py-4">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2023 Build with ❤️</p>
+    </div>
+  </footer>
+
+ <script>
+    const lowestInput = document.getElementById("lowestInput");
+    const highestInput = document.getElementById("highestInput");
+    const randomNumberElement = document.getElementById("randomNumber");
+    const generateButton = document.getElementById("generateButton");
+
+    function generateRandomNumber() {
+        const lowest = parseInt(lowestInput.value) || 0;
+        const highest = parseInt(highestInput.value) || 100;
+
+        if (lowest >= highest) {
+            alert("Please enter a valid range where the lowest number is less than the highest number.");
+            return;
+        }
+
+        const randomNum = Math.floor(Math.random() * (highest - lowest + 1)) + lowest;
+        randomNumberElement.textContent = randomNum;
+    }
+
+    generateButton.addEventListener("click", generateRandomNumber);
+</script>
+
+
+
+
+
+</body>
+
+</html>

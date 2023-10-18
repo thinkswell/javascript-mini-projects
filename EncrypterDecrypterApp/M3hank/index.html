@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EncrypterDecrypterApp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>EncrypterDecrypterApp</h2>
+        <textarea id="input" placeholder="Enter your text here..."></textarea>
+
+        <div class="buttons">
+            <button onclick="convert('encode', 'uri')">URL Encode</button>
+            <button onclick="convert('decode', 'uri')">URL Decode</button>
+            <button onclick="convert('encode', 'base64')">Base64 Encode</button>
+            <button onclick="convert('decode', 'base64')">Base64 Decode</button>
+            <button onclick="convert('encode', 'html')">HTML Entity Encode</button>
+            <button onclick="convert('decode', 'html')">HTML Entity Decode</button>
+            <button onclick="convert('encode', 'unicode')">Unicode Escape</button>
+            <button onclick="convert('decode', 'unicode')">Unicode Unescape</button>
+            <button onclick="convert('encode', 'hex')">Hex Encode</button>
+            <button onclick="convert('decode', 'hex')">Hex Decode</button>
+            <button onclick="convert('encode', 'binary')">Binary Encode</button>
+            <button onclick="convert('decode', 'binary')">Binary Decode</button>
+        </div>
+
+        <textarea id="output" readonly placeholder="Output will appear here..."></textarea>
+         <div class="author">
+        Made by M3hank
+    </div>
+</body>
+</html>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

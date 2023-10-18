@@ -1,0 +1,31 @@
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dark-mode body {
+    background-color: #333;
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+    transition: color 0.3s ease-in-out;
+}
+
+.dark-mode .container {
+    color: #fff;
+}
+
+.joke {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

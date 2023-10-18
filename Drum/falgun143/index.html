@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat&display=swap" rel="stylesheet">
+    <title>Drumkit</title>
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+    <div id="main">
+        <h1>PLAY DRUM KIT.</h1>
+    </div>
+    <div class="drumkit">
+        <div class="pad" data-sound="clap" data-sound-key="a">
+            <h1 class="alphabet">A</h1>
+            <img src="./icons/clap.png" alt="clap">
+        </div>
+
+        <div class="pad" data-sound="crash" data-sound-key="s">
+            <h1 class="alphabet">S</h1>
+            <img src="./icons/crash.png" alt="crash">
+        </div>
+
+        <div class="pad" data-sound="openhihat" data-sound-key="d">
+            <h1 class="alphabet">D</h1>
+            <img src="./icons/open-hihat.png" alt="oh">
+        </div>
+
+        <div class="pad" data-sound="kick" data-sound-key="f">
+            <h1 class="alphabet">F</h1>
+            <img src="./icons/kick.png" alt="kick">
+        </div>
+
+        <div class="pad" data-sound="snare" data-sound-key="g">
+            <h1 class="alphabet">G</h1>
+            <img src="./icons/snare.png" alt="snare">
+        </div>
+
+        <div class="pad" data-sound="closedhihat" data-sound-key="h">
+            <h1 class="alphabet">H</h1>
+            <img src="./icons/closed-hihat.png" alt="ch">
+        </div>
+
+        
+
+
+    </div>
+    <script src="howler.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

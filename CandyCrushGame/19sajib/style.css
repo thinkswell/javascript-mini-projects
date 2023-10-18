@@ -1,0 +1,55 @@
+.grid {
+  height: 560px;
+  min-width: 560px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 80px;
+  margin-top: 50px;
+  background-color: rgba(109, 127, 151, 0.5);
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
+  color: #85796b;
+}
+
+.grid div {
+  height: 70px;
+  width: 70px;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  margin-top: -10px;
+}
+
+.invisible {
+  background-color: white;
+}
+
+body {
+  background-image: url('utils/bg.png');
+  max-width: 100vh;
+  display: flex;
+}
+
+.scoreContent {
+  background-color: cyan;
+  border-radius: 20px;
+  margin-top: 200px;
+  margin-left: 200px;
+  width: auto;
+  height: 120px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: #85796b;
+}

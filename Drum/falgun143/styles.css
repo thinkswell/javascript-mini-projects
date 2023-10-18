@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.alphabet{
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 35px;
+  border-radius: 100%;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding: 20px;
+  margin: 15px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+body {
+    background: url(./icons/drumback.jpg);  
+    font-family: 'Montserrat', sans-serif;
+    background-color: hsl(56, 29%, 62%);
+    display: flex;
+    justify-content:center;
+    position: relative;
+    color: white;
+    z-index: -1;
+
+}
+#main h1::before{
+    content: "PLAY DRUM KIT.";
+    position: absolute;
+    color: black;
+    top: -4px;  
+    left: -4px;
+    -webkit-text-stroke:1px #df0efb; 
+    z-index: -1;
+}
+
+#main h1{
+   
+        margin-top: 20px;
+    font-size:140px;
+    font-weight: 900;
+    color: aliceblue;
+    position: relative; ;
+}
+ 
+#cursor{
+    height:30px;
+    width: 30px;
+    background-color: #df0efb;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+#cursor-blur{
+    height:300px;
+    width: 300px;
+    background-color: #dc3ec780;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(30px);
+ 
+}
+.drumkit {
+    display: flex;
+    position: absolute;
+    margin-top: 350px;
+    justify-content: center;
+ 
+}
+.pad {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 90px;
+    margin: 10px;
+    flex: 1 0 calc(33.333% - 20px);
+    background: radial-gradient(#c22acd, #b004a8);
+    border-radius: 10px;
+}
+
+.pad img {
+    width: 100px;
+    pointer-events: none;
+}
