@@ -33,9 +33,6 @@ Pacman.Ghost = function (game, map, colour) {
         };
     };
 
-    /* Collision detection(walls) is done when a ghost lands on an
-     * exact block, make sure they dont skip over it 
-     */
     function addBounded(x1, x2) { 
         var rem    = x1 % 10, 
             result = rem + x2;
