@@ -9,36 +9,36 @@
   </head>
   <body class="bg-image">
     <div
-      class="absolute top-1/2 left-1/2 -translate-x-[50%] translate-y-[-50%] flex justify-center items-center flex-col w-3/5 bg-yellow-200 m-auto p-2 rounded-3xl"
+      class="absolute top-1/2 left-1/2 -translate-x-[50%] translate-y-[-50%] flex justify-center items-center flex-col w-4/5 bg-opacity-20 bg-white backdrop-blur-sm m-auto p-2 rounded-3xl gap-4 border-4 border-black noto-serif font-medium"
     >
-      <h1 class="poppins font-medium text-3xl text-center mt-7">
+      <h1 class="poppins font-semibold text-4xl text-center mt-7">
         Text Analyzer
       </h1>
-      <textarea
-        class="bg-blue-300 m-7 w-4/5 p-2 rounded-lg overflow-hidden resize-none"
+      <textarea rows="5" 
+        class=" bg-white bg-opacity-80 w-4/5  p-2 rounded-lg overflow-hidden resize-none focus-visible:outline-none"
       ></textarea>
-      <div class="bg-red-500 w-4/5 rounded-lg p-2 md:p-3">
+      <div class="bg-black text-white md:text-lg lg:text-xl bg-opacity-80 w-4/5 rounded-lg p-2 md:p-3">
         <p>The converted text is:</p>
-        text
+        <span id="text-result">Text</span>
       </div>
-      <div class="flex flex-wrap m-7 p-2">
+      <div class="flex flex-wrap w-4/5 p-2 md:p-5">
         <button
-          class="bg-gray-600 p-1.5 md:p-2 lg:p-3 m-2 text-base md:text-base rounded-lg text-white border-none"
+          class="bg-black text-white bg-opacity-90  p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
         >
           To Uppercase
         </button>
         <button
-          class="bg-gray-600 p-1.5 md:p-2 lg:p-3 m-2 text-base md:text-lg rounded-lg text-white border-none"
+          class="bg-black text-white bg-opacity-90  p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
         >
           To Lowercase
         </button>
         <button
-          class="bg-gray-600 p-1.5 md:p-2 lg:p-3 m-2 text-base md:text-lg rounded-lg text-white border-none"
+          class="bg-black text-white bg-opacity-90  p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
         >
           Remove Punctuation
         </button>
         <button
-          class="bg-gray-600 p-1.5 md:p-2 lg:p-3 m-2 text-base md:text-lg rounded-lg text-white border-none"
+          class="bg-black text-white bg-opacity-90  p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
         >
           Remove Spaces
         </button>

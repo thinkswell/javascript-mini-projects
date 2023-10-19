@@ -3,7 +3,10 @@
   margin: 0;
   padding: 0;
 }
-.noto-sans {
+html,body{
+  min-height: 100%;
+}
+.noto-serif {
   font-family: "Noto Serif", sans-serif;
 }
 .poppins {
