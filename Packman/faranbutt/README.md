@@ -30,4 +30,4 @@ This is a simple Pacman game created using HTML, CSS, and JavaScript. The game p
 * JavaScript
 
 ## UI
-![y1](https://github.com/faranbutt/javascript-mini-projects/Pacman/faranbutt/pacman.png)
+![y1](https://github.com/faranbutt/javascript-mini-projects/blob/pacman-faranbutt/Packman/faranbutt/pacman.png)
