@@ -22,11 +22,9 @@ body {
     display: flex;
     cursor: pointer;
 
-    /* color: rgb(42, 39, 39); */
     padding-left: 	0.3125em;
     align-items: center; 
     transition: all 500ms;
-    /* justify-content: start; */
     
 }
 
@@ -35,31 +33,22 @@ body {
     height: 3.3em;
     width: 3.3em;
     border-radius: 50%;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* flex-direction: column; */
-    /* margin: 3px 0px 3px 5px; */
+   
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-left: 1em; */
-
-    /* transition:  2s linear; */
-    /* padding: 1em; */
+  
 
 }
 
 #brightlogo{
     height: 3em;
     width: 2em;
-    /* margin-left: 1em; */
 }
 
 #nightlogo{
     height: 3em;
     width: 2em;
-    /* display: none; */
     color: white;
 }
 
