@@ -14,35 +14,61 @@
       <h1 class="poppins font-semibold text-4xl text-center mt-7">
         Text Analyzer
       </h1>
-      <textarea rows="5" 
-        class=" bg-white bg-opacity-80 w-4/5  p-2 rounded-lg overflow-hidden resize-none focus-visible:outline-none"
+      <textarea
+        id="input-text"
+        rows="5"
+        class="bg-white bg-opacity-80 w-4/5 p-2 rounded-lg overflow-hidden resize-none focus-visible:outline-none"
       ></textarea>
-      <div class="bg-black text-white md:text-lg lg:text-xl bg-opacity-80 w-4/5 rounded-lg p-2 md:p-3">
-        <p>The converted text is:</p>
-        <span id="text-result">Text</span>
-      </div>
+      <div
+        id="text-result"
+        class="bg-black text-white md:text-lg lg:text-xl bg-opacity-80 w-4/5 rounded-lg p-2 md:p-3"
+      ></div>
       <div class="flex flex-wrap w-4/5 p-2 md:p-5">
         <button
-          class="bg-black text-white bg-opacity-90  p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
+          onclick="toUpper()"
+          class="bg-black text-white bg-opacity-90 p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
         >
           To Uppercase
         </button>
         <button
-          class="bg-black text-white bg-opacity-90  p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
+          onclick="toLower()"
+          class="bg-black text-white bg-opacity-90 p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
         >
           To Lowercase
         </button>
         <button
-          class="bg-black text-white bg-opacity-90  p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
+          onclick="removePunc()"
+          class="bg-black text-white bg-opacity-90 p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
         >
           Remove Punctuation
         </button>
-        <button
-          class="bg-black text-white bg-opacity-90  p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
+        <button onclick="removeSpaces()"
+          class="bg-black text-white bg-opacity-90 p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
         >
           Remove Spaces
         </button>
+        <button onclick="countCharacters()"
+          class="bg-black text-white bg-opacity-90 p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
+        >
+          Count Characters
+        </button>
+        <button onclick="countWords()"
+          class="bg-black text-white bg-opacity-90 p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
+        >
+          Count Words
+        </button>
+        <button onclick="textReverse()"
+          class="bg-black text-white bg-opacity-90 p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
+        >
+          Reverse Text
+        </button>
+        <button onclick="checkPalindrome()"
+          class="bg-black text-white bg-opacity-90 p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
+        >
+          Check Palindrome
+        </button>
       </div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
