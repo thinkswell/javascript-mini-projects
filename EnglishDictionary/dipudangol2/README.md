@@ -21,7 +21,7 @@ This is a simple web application for looking up definitions of words. It is buil
 - HTML
 - CSS
 - JavaScript
-- Free Dictionary API (API Endpoint: [API_URL_HERE](API_URL_HERE))
+- Free Dictionary API (API Endpoint: (https://api.dictionaryapi.dev/api/v2/entries/en/))
 
 ## How to Set Up
 
