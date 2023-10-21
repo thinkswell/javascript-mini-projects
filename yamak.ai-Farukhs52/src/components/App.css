@@ -1,0 +1,180 @@
+body {
+  font-family: "Montserrat";
+  background: #F6FAFD 0% 0% no-repeat padding-box;
+}
+
+.navbar {
+  height: 94px;
+  box-shadow: 0px 6px 15px #00000029;
+  z-index: 1;
+}
+
+
+.nav-item {
+  margin-right: 5%;
+}
+
+#navbarSupportedContent {
+  position: relative;
+  left: 9%;
+}
+
+
+
+.navbar-brand {
+  margin-left: 2%;
+}
+
+.refreshIcon {
+  position: relative;
+  right: 50%;
+}
+
+
+
+h1 {
+  font-weight: bolder;
+  height: 35px;
+
+}
+
+.firstHeading {
+  width: 100%;
+  color: #0188F3;
+}
+
+.secondHeading {
+  width: 100%;
+  color: #414756;
+
+}
+
+/* ul{
+  list-style-type: none;
+
+} */
+
+.flex {
+  display: flex;
+  list-style-type: none;
+}
+
+@media only screen and (max-width: 685px) {
+  #navbarSupportedContent {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #FCFCFC;
+    box-shadow: 0px -6px 15px #00000029;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+  }
+
+  .nav-item {
+    padding: 0;
+    max-width: 73px;
+
+  }
+
+  .editor-cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vr-middle {
+    display: none;
+  }
+  .fw-bolder{
+    flex-direction: column;
+  }
+  .fw-bolder span{
+    text-align: center;
+  }
+  .save-filter{
+    margin-right: auto;
+  }
+}
+
+
+.vr-middle {
+  height: 800px;
+  margin-left: -20px;
+}
+
+li input{
+  width: 40px;
+  background-color: #F6FAFD;
+  border: 1px solid #7FC3F9;
+}
+
+.type-ground {
+  height: 588px;
+  padding-bottom: 43px;
+  background: #FFFFFF 0% 0% no-repeat;
+  box-shadow: 0px 3px 10px #0000001A;
+
+
+}
+
+.ql-toolbar.ql-snow {
+  border: none !important;
+  border-bottom: solid 10px red;
+}
+
+.ql-editor {
+  border-top: solid 1px black;
+}
+
+.ql-formats {
+  box-shadow: 0px 3px 10px #0000001A;
+  padding: 1%;
+  margin: 1%;
+}
+
+.ql-container.ql-snow {
+  border: none !important;
+}
+
+.editor-options {
+  gap: 5%;
+}
+
+.editor-cards {
+  gap: 5%;
+
+}
+
+.card {
+  height: fit-content;
+  border: 0;
+  margin-left: -20px;
+}
+
+
+
+.card ul {
+  background: #F6FAFD;
+  border: 0;
+}
+
+.card ul li {
+  margin: 5% 0;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 6px 10px #0000001A;
+}
+
+.card ul li .btn {
+  color: #0188F3;
+  border: 0;
+  background-color: white;
+  padding: 0;
+/* margin-right: 1%; */
+}
+
+.btn-primary {
+  border-radius: 0 !important;
+}
