@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NexaNote</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="icon" type="image/svg" href="./assets/img/chart.svg">
+
+    <script
+      src="https://kit.fontawesome.com/4ca68f789c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="popup">
+      <div id="popup-data">
+        <i class="fa-solid fa-xmark close-popup"></i>
+      </div>
+    </div>
+    <div class="message-pop">
+    </div>
+    <div class="bg">
+      <img class="bg-img" src="" />
+    </div>
+    <div id="main-app">
+      <div id="auth-section">
+        <div class="greeting">
+          <h1 class="greet btn-shine">HELLO</h1>
+          <div class="greet-signup-login">
+            <button id="signup" class="button-style1">SIGNUP</button>
+            <button id="login" class="button-style1">LOGIN</button>
+          </div>
+        </div>
+        <div id="close-login-signup"></div>
+        <div id="signup-login">
+          <!-- <p id="signup-login-switch" onclick="switchState()">LOGIN</p> -->
+          <i class="fa-solid fa-xmark close-login"></i>
+          <div class="form">
+            <input type="text" placeholder="USERNAME" id="username" />
+            <input type="password" placeholder="PASSWORD" id="password" />
+            <button
+              id="signup-login-button"
+              class="button-style1"
+              onclick="signup()"
+            >
+              SIGNUP
+            </button>
+          </div>
+          <img class="login-char" src="./assets/img/cute.png" alt="">
+        </div>
+      </div>
+      <div id="task-manager-section">
+        <div class="close-panels"></div>
+        <div id="sidebar">
+
+          <div class="logo-name-wrapper">
+
+            <div class="logo-name">
+                <div class="logo-wrapper"><i class="fa-solid fa-chart-simple logo"></i></div>
+                <div class="name-wrapper"><h1>NexaNote</h1></div>
+            </div>
+          </div>
+          <div class="filter-tasks">
+            <div class="filters-wrapper">
+              <div class="filter-type-wrapper">
+                <div class="filter-type all"><div><i class="fa-solid fa-border-all"></i></i></div>
+                <div><h2>All Tasks</h2></div></div>
+              </div>
+              <div class="filter-type-wrapper">
+                <div class="filter-type completed">
+                  <div><i class="fa-regular fa-circle-check"></i></div>
+                  <div><h2>Completed</h2></div>
+                </div>
+              </div>
+              <div class="filter-type-wrapper">
+                <div class="filter-type incompleted">
+                  <div><i class="fa-regular fa-hourglass"></i></div>
+                  <div><h2>InCompleted</h2></div>
+                </div>
+              </div>
+              
+              
+            </div>
+          </div>
+          <div class="option-for-cateory">
+            <select
+              id="search-bar-filter"
+              onclick="search()"
+              onchange="search()"
+            >
+              <option value="all">all</option>
+              <option value="completed">completed</option>
+              <option value="incompleted">incompleted</option>
+            </select>
+            <select id="sort-task" >
+              <option value="date">date</option>
+              <option value="completed">completed</option>
+              <option value="incompleted">incompleted</option>
+            </select>
+          </div>
+          <div class="sidebar-signout-addtask">
+            <button  class=" add-task-button button-style-2" onclick="">
+              <i class="fa-solid fa-plus add-task-icon"></i>
+              New Task
+            </button>
+            <button id="signout-button " onclick="signout()">
+              <i class="fa-solid fa-right-from-bracket"></i>Sign out
+            </button>
+          </div>
+        </div>
+        <div id="filter-task-add-wrapper">
+          <div id="filter-signout-wrapper">
+            <div id="today-date"></div>
+            <div id="search-date-wrapper">
+              <div id="filter-tasks-section">
+                <i class="fa-solid search-icon fa-magnifying-glass"></i>
+                <input
+                  type="search"
+                  id="search-bar"
+                  placeholder="SEARCH"
+                  oninput="search()"
+                />
+              </div>
+              <div class="date-sort-wrapper">
+                <ul>
+                  <li
+                    class="tooltip expand"
+                    data-title="Sort by Date"
+                  ><i class="fa-regular fa-calendar-days dueDate"></i>
+                </ul>
+              </div>
+            </div>
+            
+            <div id="signout-wrapper">
+              
+              <button  class="add-task-button button-style-2" onclick="">
+                <i class="fa-solid fa-plus add-task-icon"></i>
+                New Task
+              </button>
+              <button id="signout-button " onclick="signout()">
+                <i class="fa-solid fa-right-from-bracket"></i>Sign out
+              </button>
+            </div>
+          </div>
+          <div id="task-wrapper">
+            <div id="add-task-section">
+              <div class="input-field-con">
+                <label class="input-heading" for="input-task-title">Title</label>
+              <input
+                type="text"
+                class="enter-event"
+                id="input-task-title"
+                placeholder="enter task"
+              />
+              </div>
+              <div class="input-field-con">
+                <label class="input-heading" for="input-task-desc">Desc</label>
+              <textarea
+                id="input-task-desc"
+                placeholder="enter task description"
+              ></textarea>
+              </div>
+              <div class="input-field-con">
+                <label class="input-heading" for="due-date">Due Date</label>
+              <input type="date" id="due-date" />
+              </div>
+              <div class="input-field-con">
+                <label class="input-heading" for="categories">Categories</label>
+              <div id="categories">
+                <div class="category-item work ">Work</div>
+                <div class="category-item personal">Personal</div>
+                <div class="category-item study">Study</div>
+              </div>
+              </div>
+
+              <div class="add-task-button-con">
+                <button
+                class="enter-event"
+                type="submit"
+                onclick="addTask()"
+                id="add-task-btn"
+              >
+                add task
+              </button>
+              </div>
+            </div>
+
+            <div id="edit-task">
+                <div class="edit-task-con">
+                  <div class="title-con">
+                    <div class="edit-title" contenteditable spellcheck="false">Lorem ipsum
+                    </div>
+                    <i class="fa-solid fa-xmark close-edit"></i>
+                  </div>
+                  <div class="date-con">
+                    <i class="fa-solid fa-clock-rotate-left timer"></i>
+                    <div class="edit-date">16 Apr</div>
+                  </div>
+                  <div class="desc-con">
+                    <div class="date-name-con">
+                      <i class="fa-solid fa-file-lines timer"></i> 
+                      <div>Description</div>
+                    </div>
+                    <div class="edit-desc " contenteditable spellcheck="false"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo eveniet deleniti possimus vel consectetur doloribus? Ipsam eligendi eaque dolores, error voluptates quibusdam earum eveniet numquam assumenda rem repellendus modi corporis voluptatum commodi nobis in explicabo unde. Suscipit praesentium, nam vero et eius rem! Sint animi illum quidem, inventore iusto vero.</div>
+                  </div>
+                  
+                  <div id="categories">
+                    <div class="category-item edit-work ">Work</div>
+                    <div class="category-item edit-personal">Personal</div>
+                    <div class="category-item edit-study">Study</div>
+                  </div>
+                  <button class="save">Save</button>
+                </div>
+            </div>
+
+            <div id="task-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/index.js"></script>
+  </body>
+</html>
