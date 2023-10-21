@@ -105,7 +105,7 @@ Contribute to this repository by adding your awesome JavaScript projects. Here's
 6. **Add & commit**:
 
    ```bash
-   git add -A
+   git add . or git add <filename> 
    git commit -m "Your commit message about the project"
    ```
 
