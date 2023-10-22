@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .author__name {
+        @apply text-[#333] text-[18px] md:text-[36px] font-bold leading-normal not-italic capitalize;
+    }
+    .main {
+        @apply flex flex-col items-center  pb-[74px] md:pb-[208px];
+    }
+    .footer {
+        @apply mb-[12px] md:mb-[24px];
+    }
+    .author__banner {
+        @apply mt-[54.5px] md:mt-[109px] items-center flex justify-between pr-[16.5px] md:pr-[33px] hover:bg-[#333] cursor-pointer w-[90%] md:w-[672px] mx-0 flex-shrink-0 pl-[13.5px] md:pl-[29px] py-[25px] md:py-[50px];
+    }
+    .genre {
+        @apply mt-[8px] leading-normal text-[#828282] font-medium text-[12px] md:text-[14px] not-italic;
+    }
+}
