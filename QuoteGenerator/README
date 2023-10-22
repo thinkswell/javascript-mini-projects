@@ -1,0 +1,39 @@
+# Quote Generator
+
+Quote Generator - a simple mini projects for generating quotes
+
+<img src="https://i.ibb.co/dKgJqb9/Screen-Shot-2023-10-22-at-08-49-18.png" alt="Screen-Shot-2023-10-22-at-08-49-18" border="0">
+
+### Tools
+
+> - React + Vite
+> - Tailwind CSS
+> - TypeScript
+> - API
+
+### How to Run Locally
+
+```git
+    // clone repo
+    git clone https://github.com/awyyyn/javascript-mini-projects.git
+
+    // go to qutote generator directory
+    cd quotegenerator
+
+    // install dependencies
+    npm install
+
+    // run development
+    npm run dev
+
+    // build project
+    npm run build
+
+    // preview build project
+    npm run preview
+
+```
+
+#### Deployed Project
+
+[Quote Generator](https://random-quote-2iyl.onrender.com/)
