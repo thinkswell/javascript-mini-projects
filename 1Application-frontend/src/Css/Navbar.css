@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Croissant+One&family=Inconsolata:wght@200;900&family=Rubik:wght@300&display=swap");
+
+:root {
+  --color-2: black;
+  --color-6: whitesmoke;
+
+  /* font family */
+
+  --font-1: "Bebas Neue", sans-serif;
+  --font-2: "Croissant One", cursive;
+  --font-inconsolata: "Inconsolata", monospace;
+  --font-rubik: "Rubik", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-component {
+  position: fixed;
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  gap: 32rem;
+  z-index: 999;
+  background-color: var(--color-2); 
+  backdrop-filter: blur(10px);
+}
+
+.head-main {
+  display: flex;
+}
+
+.head-main h3 {
+  position: relative;
+  top: -0.5rem;
+  margin-left: 6rem;
+  font-family: var(--font-1);
+  font-size: 2.5rem;
+  color: rgb(41, 6, 241);
+  font-weight: 700;
+  text-shadow: 1px 1px 1px #919191;
+}
+
+span {
+  margin-left: -0.9rem;
+  font-size: 2rem;
+  position: relative;
+  top: -1rem;
+}
+
+.routes ul {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.routes ul li {
+  list-style: none;
+  text-decoration: none;
+  font-family: var(--font-2);
+  cursor: pointer;
+  color: rgb(41, 6, 241);
+  font-size: 20px;
+}
+
+.routes ul li:hover {
+  text-shadow: 2px 2px 10px rgba(70, 11, 70, 1);
+}
+
+.button {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .head-main h3 {
+    font-size: 2rem;
+  }
+
+  span {
+    font-size: 1.5rem;
+  }
+
+  .routes ul {
+    display: none;
+  }
+
+  .button {
+    position: absolute;
+    display: flex;
+    right: 1rem;
+    top: 2rem;
+  }
+
+  .menu-open {
+    background-color: rgba(194, 139, 187, 0.5); /* Use rgba for transparency */
+    backdrop-filter: blur(10px); /* Apply a blur effect */
+    height: 100vh;
+    width: 15rem;
+    position: fixed;
+    top: 0;
+    left: -15rem;
+    transition: left 0.5s ease;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: slideInLeft 0.5s ease;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      left: -15rem;
+    }
+    to {
+      left: 0;
+    }
+  }
+
+  .menu-open.show {
+    left: 0;
+  }
+
+  .menu-open .navbar_list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .menu-open .navbar_list li {
+    position: relative;
+    top: -20rem;
+    font-size: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .menu-open .navbar_list li:hover {
+    border: 2px solid black;
+  }
+
+  .btn {
+    position: relative;
+    top: -1rem;
+    left: -2rem;
+  }
+
+  .btn1 {
+    position: relative;
+    top: -2rem;
+    left: 0.5rem;
+  }
+}
