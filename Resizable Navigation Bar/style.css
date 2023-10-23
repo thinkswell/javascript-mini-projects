@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+body {
+  height: 100vh;
+  background: #242932;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  background: #2F343D;
+  padding: 20px 0 10px 10px;
+  border-right: 5px solid #3F83EF;
+  width: 120px;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+ul li {
+  list-style: none;
+  padding: 15px;
+  padding-right: 0;
+  color: white;
+  font-size: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+}
+
+ul li:hover {
+  transition: 0s;
+  background: #242932;
+}
+
+ul li.active:before {
+  content: '';
+  position: absolute;
+  top:-20px;
+  right: 0px;
+  width: 20px;
+  height:20px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 10px 10px 0 #3F83EF;
+}
+
+ul li.active:after {
+  content: '';
+  position: absolute;
+  bottom:-20px;
+  right: 0px;
+  width: 20px;
+  height:20px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 10px -10px 0 #3F83EF;
+
+}
+
+ul li.active {
+  background: #3F83EF;
+}
+
+ul:hover {
+  width: 300px
+}
