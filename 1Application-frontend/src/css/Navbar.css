@@ -27,6 +27,7 @@
   z-index: 999;
   background-color: black;
   backdrop-filter: blur(10px);
+  top: 0;
 }
 
 .head-main {
