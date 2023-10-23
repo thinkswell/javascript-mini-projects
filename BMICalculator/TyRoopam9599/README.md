@@ -15,9 +15,7 @@
 
 
 
-## Demo
-![Screenshot](https://github.com/TyRoopam9599/javascript-mini-projects/blob/BMICalculator-TyRoopam9599/BMICalculator/TyRoopam9599/BMICalc.png)
-![GIF](https://raw.githubusercontent.com/TyRoopam9599/javascript-mini-projects/BMICalculator-TyRoopam9599/BMICalculator/TyRoopam9599/BMICalc.gif)
-![Video](https://raw.githubusercontent.com/TyRoopam9599/javascript-mini-projects/BMICalculator-TyRoopam9599/BMICalculator/TyRoopam9599/BMICalc.webm)
+## Demo 
+[Video](https://github.com/TyRoopam9599/javascript-mini-projects/assets/91320513/7162945d-55cb-4e1a-a5bd-b6dd65cb7f10)
 
-- This is how the project works.
+![Screenshot](https://github.com/TyRoopam9599/javascript-mini-projects/assets/91320513/4865629c-b9d1-4501-9848-252d9a846ba6)
