@@ -39,7 +39,6 @@ const Projects = () => {
                 )}
             </Grid>
         </Container>     
-      <Footer />
     </ThemeProvider>
   )
 }
