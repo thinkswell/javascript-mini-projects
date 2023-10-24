@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calendar">
+        <div class="calendar-header">
+            <h2 id="currentMonth"></h2>
+        </div>
+        <table class="calendar-table">
+            <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody id="calendar-body">
+            </tbody>
+        </table>
+        <div class="calendar-footer">
+        <button id="prevMonth">Previous</button>
+        <button id="nextMonth">Next</button>
+        </div>
+        <div class="jump">
+            <h3>Jump to: </h3>
+            <div id="1" class="dropdown">
+                <div id="month" class="dropdown-button">Month...</div>
+                <ul class="dropdown-list">
+                    <li>January</li>
+                    <li>February</li>
+                    <li>March</li>
+                    <li>April</li>
+                    <li>May</li>
+                    <li>June</li>
+                    <li>July</li>
+                    <li>August</li>
+                    <li>September</li>
+                    <li>October</li>
+                    <li>November</li>
+                    <li>December</li>
+                </ul>
+            </div>
+            <div id="2" class="dropdown">
+                <div id="year" class="dropdown-button">Year...</div>
+                <ul id="list-2" class="dropdown-list">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
