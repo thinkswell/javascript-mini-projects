@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+#drawingCanvas {
+    border: 1px solid #ccc;
+    margin: 20px;
+}
+
+#controls {
+    margin-top: 20px;
+}
+
+#clearButton {
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#colorPicker {
+    margin-left: 20px;
+}
+
