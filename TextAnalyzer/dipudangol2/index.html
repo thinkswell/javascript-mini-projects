@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Text-Manipulator</title>
+  </head>
+  <body class="bg-image">
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-[50%] translate-y-[-50%] flex justify-center items-center flex-col w-4/5 bg-opacity-20 bg-white backdrop-blur-sm m-auto p-2 rounded-3xl gap-4 border-4 border-black noto-serif font-medium"
+    >
+      <h1 class="poppins font-semibold text-4xl text-center mt-7">
+        Text Analyzer
+      </h1>
+      <textarea
+        id="input-text"
+        rows="5"
+        class="bg-white bg-opacity-80 w-4/5 p-2 rounded-lg overflow-hidden resize-none focus-visible:outline-none"
+      ></textarea>
+      <div
+        id="text-result"
+        class="bg-black text-white md:text-lg lg:text-xl bg-opacity-80 w-4/5 rounded-lg p-2 md:p-3"
+      ></div>
+      <div class="flex flex-wrap w-4/5 p-2 md:p-5">
+        <button
+          onclick="toUpper()"
+          class="bg-black text-white bg-opacity-90 p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
+        >
+          To Uppercase
+        </button>
+        <button
+          onclick="toLower()"
+          class="bg-black text-white bg-opacity-90 p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
+        >
+          To Lowercase
+        </button>
+        <button
+          onclick="removePunc()"
+          class="bg-black text-white bg-opacity-90 p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
+        >
+          Remove Punctuation
+        </button>
+        <button onclick="removeSpaces()"
+          class="bg-black text-white bg-opacity-90 p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
+        >
+          Remove Spaces
+        </button>
+        <button onclick="countCharacters()"
+          class="bg-black text-white bg-opacity-90 p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
+        >
+          Count Characters
+        </button>
+        <button onclick="countWords()"
+          class="bg-black text-white bg-opacity-90 p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
+        >
+          Count Words
+        </button>
+        <button onclick="textReverse()"
+          class="bg-black text-white bg-opacity-90 p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
+        >
+          Reverse Text
+        </button>
+        <button onclick="checkPalindrome()"
+          class="bg-black text-white bg-opacity-90 p-2 md:p-3 lg:p-4 m-1.5 md:m-2 text-base md:text-lg rounded-lg border-none"
+        >
+          Check Palindrome
+        </button>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

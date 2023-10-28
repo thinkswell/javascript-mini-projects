@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,200;0,300;0,400;0,500;1,100;1,300;1,400;1,500&family=Poppins:ital,wght@0,400;0,500;0,600;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  min-height: 100%;
+}
+.noto-serif {
+  font-family: "Noto Serif", sans-serif;
+}
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+.bg-image {
+  background-image: url("bg-image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
