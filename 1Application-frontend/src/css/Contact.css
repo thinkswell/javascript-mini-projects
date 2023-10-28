@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Croissant+One&family=Inconsolata:wght@200;900&family=Rubik:wght@300&display=swap");
+
+:root {
+  --color-2: black;
+  --color-6: whitesmoke;
+
+  /* font family */
+
+  --font-1: "Bebas Neue", sans-serif;
+  --font-2: "Croissant One", cursive;
+  --font-inconsolata: "Inconsolata", monospace;
+  --font-rubik: "Rubik", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  gap: 40px;
+  padding: 7rem 3.5rem;
+  background: var(--color-2);
+  font-family: var(--font-rubik);
+  color: var(--color-6);
+  border: 2px solid whitesmoke;
+  border-left: none;
+  border-right: none;
+}
+
+.contact-form {
+  min-width: 500px;
+  max-width: 900px;
+  padding: 20px;
+  border: 3px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-radius: 30px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.contact-form:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+.form-group{
+  margin-bottom: 2rem;
+}
+
+.contact-heading {
+  font-family: var(--font-1);
+  color: var(--color-6);
+  font-size: 3rem;
+}
+
+.contact-subheading {
+  font-family: var(--font-1);
+  color: var(--color-6);
+  font-size: 2rem;
+  margin-bottom: 1px;
+}
+
+.contact-paragraph {
+  font-family: var(--font-2);
+  color: var(--color-6);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 2px solid var(--color-6); /* You can choose your desired border color */
+  border-radius: 8px;
+  background-color: rgb(255, 210, 255);
+  width: 100%; /* Make sure the input boxes take up the full width of their container */
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--color-6);
+  color: var(--color-2);
+  font-family: var(--font-rubik);
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+
+
+@media (max-width: 768px) {
+  .contact-form {
+    min-width: auto;
+    width: 80%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    width: 90%; 
+  }
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
