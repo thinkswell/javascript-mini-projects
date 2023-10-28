@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+} 
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column; 
+}
+
+h2{
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+.box{
+    position: relative;
+    width: 600px;
+    height: 200px;
+    display: flex;
+    border: 2px solid #555;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box label{
+    position: relative;
+    width: 100%;
+    height: 33.3%;
+    border: 2px solid #555;
+    border-bottom: none;
+}
+
+.box label input{
+    appearance: none;
+    z-index: 10;
+    position: relative;
+}
+
+.box label i{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 600px;
+}
+
+.box label:nth-child(1) i{
+    background-image: url(01.jpg); 
+    animation: animate 0.4s steps(3) infinite;
+}
+
+.box label:nth-child(2) i{
+    background-image: url(02.jpg);
+    animation: animate 0.5s steps(3) infinite;
+}
+
+.box label:nth-child(3) i{
+    background-image: url(03.jpg);
+    animation: animate 0.7s steps(3)infinite;
+}
+
+@keyframes animate
+{
+    0%{
+        background-position: 0px;
+    }
+    100%{
+        background-position: 600px;
+    }
+}
+
+.box label input:checked ~ i{
+    animation-play-state: paused;
+}
+
+.reset
+{
+    margin-top: 40px;
+    border: none;
+    font-size: 1.25em;
+    padding: 10px 25px;
+    background: #333;
+    color: #fff;
+}
+
+.reset:active{
+    background: #d63c3c;
+    transform: scale(.95);
+}
