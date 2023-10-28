@@ -1,0 +1,234 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+    background-image: url('/images/aes.jpeg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
+    width: 90%;
+}
+
+div.heading h1 {
+    color: #2C76D5;
+    text-align: center;
+    font-size: 70px;
+    text-shadow: 3px 3px 1px black;
+    font-family: 'Libre Baskerville', serif;
+}
+
+input {
+    background-color: rgba(212, 229, 242, 80%);
+    border-color: #2C76D5;
+    border-style: ridge;
+    border-radius: 25px 25px;
+    box-shadow: 3px 3px 5px black;
+    font-size: clamp(21px, 4vw, 30px);
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    color: #0f3363;
+}
+
+.search {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.searchbtn {
+    border-color: #2C76D5;
+    border-style: ridge;
+    border-radius: 25px 25px;
+    box-shadow: 3px 3px 8px black;
+    font-size: clamp(22px, 4vw, 24px);
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    color: #0f3363;
+    width: min-content;
+}
+
+.searchbtn:hover {
+    box-shadow: 3px 3px 5px black;
+}
+
+.context {
+    background-color: #8BFD8A;
+    padding: 5px;
+    text-align: center;
+    vertical-align: center;
+    font-family: sans-serif;
+    color: #2C76D5;
+}
+
+.secondSearch {
+    margin: 50px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    background-color: #C5FEC5;
+    border-radius: 25px 25px;
+    box-shadow: 3px 3px 5px black;
+    margin: auto;
+    width: clamp(300px, 95vw, 80vw);
+}
+
+p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: clamp(22px, 4vw, 25px);
+    font-weight: 500;
+    color: #0A4C7E;
+    width: max-content;
+    opacity: 80%;
+    margin: 9px auto 1px auto;
+}
+
+.name {
+    padding: 20px;
+}
+
+
+div.name h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: clamp(32px, 4vw, 38px);
+    color: #0A4C7E;
+    margin: 3px;
+}
+
+div.name p {
+    margin: 3px;
+}
+
+.description {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.mini {
+    box-shadow: 5px 3px 9px rgb(52, 52, 52);
+    background-color: #dbf8db;
+    margin: auto;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 2fr;
+    border-radius: 20px 20px;
+}
+
+div.mini h1 {
+    margin: auto;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: clamp(2rem, 7vh, 9rem);
+    color: #0A4C7E;
+    height: min-content;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.icon{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   margin: auto;
+
+
+}
+div.icon img {
+    display: inline;  
+    height: min-content;
+    filter: drop-shadow(3px 3px 5px black);
+}
+
+div.icon p {
+    display: inline;
+
+    font-size: clamp(22px, 4vw, 4vh);
+}
+
+.minmax {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr auto 1fr;
+    padding: 10px;
+    color: #0A4C7E;
+}
+
+h3 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+    width: max-content;
+    font-size: clamp(22px, 4vw, 24px);
+}
+
+div.item h3 {
+    margin: auto;
+    font-weight: 400;
+}
+
+.tempcontainer {
+    margin: 20px;
+    padding: 30px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+div.tempcontainer p {
+    color: #C5FEC5;
+    font-size: clamp(20px, 2.5vw, 4vh);
+}
+
+.item {
+    background-color: rgb(10, 76, 126, 80%);
+    border-radius: 25px 25px;
+    color: #C5FEC5;
+    padding: 10px;
+}
+
+.data {
+    margin: 40px;
+}
+
+table {
+    font-family: 'Roboto Slab', serif;
+    font-size: clamp(22px, 4vw, 24px);
+    border-collapse: collapse;
+    width: 100%;
+    color: #0A4C7E;
+    box-shadow: 5px 3px 9px rgb(52, 52, 52);
+    padding: 4vh;
+}
+
+td,
+th {
+    border: 1px solid #062a46;
+    text-align: center;
+    padding: 10px;
+    background-color: #dbf8db;
+}
+
+th {
+    color: #07375c;
+}
+
+td:nth-child(2) {
+    color: #0e63a3;
+    opacity: 80%;
+}
