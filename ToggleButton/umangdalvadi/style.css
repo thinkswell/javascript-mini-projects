@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:aliceblue;
+    transition: all 500ms;
+
+}
+
+#maincontainer {
+    height: 4em;
+    width: 9em;
+    border: 2px solid black;
+    border-radius: 2em;
+    display: flex;
+    cursor: pointer;
+
+    padding-left: 	0.3125em;
+    align-items: center; 
+    transition: all 500ms;
+    
+}
+
+#innercircle {
+    border: 2px solid black;
+    height: 3.3em;
+    width: 3.3em;
+    border-radius: 50%;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+
+}
+
+#brightlogo{
+    height: 3em;
+    width: 2em;
+}
+
+#nightlogo{
+    height: 3em;
+    width: 2em;
+    color: white;
+}
+
