@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 150%;
+    background-color: #dff6f6;
+    background-image: url("../img/bg.png");
+    background-size: 800px;
+    background-repeat: repeat;
+    color: #305050;
+  }
+  
+  .logo {
+    width: 70%;
+    max-width: 484px;
+  }
+  
+  h1 {
+    width: 100%;
+    padding-top: 1em;
+    margin: 0;
+    font-family: "Unlock", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 44px;
+    text-align: center;
+  }
+  
+  .container {
+    background: radial-gradient(50% 50% at 50% 50%,
+      rgba(167, 237, 237, 0.3) 0%,
+      rgba(156, 226, 226, 0) 100%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .highlight {
+    padding: 0.25em;
+    background: #ffe2d6;
+    font-size: 1em;
+  }
+  
+  .underline {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 3px;
+  }
+  
+  .word-in-progress {
+    letter-spacing: 15px;
+    color: #28bdbd;
+    font-size: 30px;
+  }
+  
+  .guessed-letters {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .guessed-letters li {
+    display: inline-block;
+    padding: 0 0.5em;
+  }
+  
+  .message {
+    text-align: center;
+  }
+  
+  .guess-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .guess-form label {
+    width: 100%;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  input {
+    width: 2.25em;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 0.5em;
+    padding: 0.5em;
+    border: 3px solid #28bdbd;
+  }
+  
+  input:active,
+  input:focus {
+    outline: 0;
+    border: 4px solid #28bdbd;
+  }
+  
+  .guess,
+  .play-again {
+    padding: 1em 3em;
+    border-radius: 50px;
+    margin-top: 1em;
+    color: #fff;
+    background: #ff8d5c;
+    font-size: 1em;
+    align-self: center;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+  }
+  
+  .guess:active,
+  .play-again:active,
+  .guess:focus,
+  .play-again:focus,
+  .guess:hover,
+  .play-again:hover {
+    outline: 0;
+    transform: scale(0.98);
+    filter: brightness(0.9);
+    color: white;
+  }
+  
+  /* animatied background */
+  .win {
+    padding: 0 1em;
+    background: linear-gradient(-45deg, #ff9d64, #f5620c);
+    background-size: 400% 400%;
+    animation: gradient 2s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  

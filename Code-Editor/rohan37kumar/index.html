@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="view">
+        <h1 class="title">
+            Micro Code Editor
+            <small>With syntax highlight*</small>
+        </h1>
+
+        <div class="window">
+            <div class="window-header">
+                <div class="action-buttons"></div>
+                <select class="language">
+                    <option value="javascript" selected>JavaScript</option>
+                    <option value="markup">HTML</option>
+                    <option value="php">PHP</option>
+                </select>
+            </div>
+            <div class="window-body">
+                <textarea class="code-input">
+
+    function greetings(name){
+        name = name || "stranger";
+        return "Hello, " + name + "!";
+    }
+    
+    window.onLoad = alert(greetings());</textarea>
+                <pre class="code-output">
+                    <code class="language-javascript">
+                        
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="credits">
+            *thanks to <a href="https://twitter.com/leaverou">Lea Verou</a> for <a
+                href="http://prismjs.com/">Prism.js</a>
+        </div>
+    </main>
+    <script src="style.css"></script>
+</body>
+
+</html>
