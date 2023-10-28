@@ -1,0 +1,64 @@
+/* main styles */ 
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgba(100, 41, 41, 0.705);
+}
+
+.quotes-container {
+    position: absolute;
+    left: 30%;
+    margin: auto;
+    top:15%;
+    padding: 5px;
+    width: 700px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.q-btn {
+    /* position param */ 
+    position: absolute;
+    left :40%;
+    top: 10%;
+    /* style of the btn */
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    width: 150px;
+    height: 40px;
+    background-color: rgb(13, 117, 117);
+    color: white;
+    cursor: pointer;
+}
+.q-btn:hover{
+    color: rgb(13, 117, 117);
+    background-color: white;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+.q-span {
+    /* position param */ 
+    position: absolute;
+    left: 80%;
+    top: 90%;
+    /* style of the span */
+    color: rgb(13, 117, 117);
+    font-weight: lighter;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+}
+.quote {
+    /* position params*/
+    position: absolute;
+    left: 15%;
+    top: 40%;
+    width: 70%;
+    text-align: center;
+    /* text params */
+    color: rgb(27, 27, 27);
+    font-size: 30px;
+    font-family: inherit;
+    cursor: pointer;
+}
