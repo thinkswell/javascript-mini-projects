@@ -1,5 +1,5 @@
 const new_bookmark_btn = document.getElementById("new_bkm");
-const new_grp = document.getElementById("new_grp");
+const new_grp_btn = document.getElementById("new_grp");
 const overlay = document.querySelector(".overlay");
 const closeBkmModal = document.querySelector(".closeBkm");
 const closeGrpModal = document.querySelector(".closeGrp");
@@ -14,9 +14,15 @@ const getBookmarks = JSON.parse(localStorage.getItem("data"));
 const getGroups = JSON.parse(localStorage.getItem("groups"));
 const display_grp = document.getElementById("group_list");
 const display_bkm = document.getElementById("bookmarks_list");
+const groups_list_ul = document.querySelector(".list");
+const bkm_list_ul = document.querySelector(".bookmarks_block");
 
+let tab_url;
+let tab_title;
+let list_item = "";
 let bookmarks_list = [];
 let groups_list = [];
+let current_grp;
 if(getBookmarks){
     bookmarks_list = getBookmarks;
 }
@@ -25,21 +31,35 @@ if(getGroups){
     groups_list = getGroups;
 }
 
-const addBookmark = (name, url, groupName) =>{
-    bookmarks_list.push({ name: name,
-        url : url, 
-        grpName : groupName
+function addBookmark(name, url, groupName) {
+    bookmarks_list.push({
+        name: toTitleCase(name),
+        url: url,
+        grpName: groupName
     });
-};
+}
 
-const addGroup = (name) => {
+function addGroup(name) {
     groups_list.push({
-        name : name
-    })
+        name: toTitleCase(name)
+    });
 }
 
 function grp_name(e){
-    console.log(e);
+    let bkm_to_display = [];
+    let bkm_to_display_url = [];
+    bkm_names_list = bookmarks_list.map(a => a.name);
+    bkm_url_list = bookmarks_list.map(a => a.url);
+    let bkm_grp_list = bookmarks_list.map(a => a.grpName);
+    console.log(bkm_names_list)
+    for(let i = 0; i < bookmarks_list.length; i++){
+        if(bkm_grp_list[i] == e){
+            bkm_to_display.push(bkm_names_list[i]);
+            bkm_to_display_url.push(bkm_url_list[i]);
+            console.log(bkm_to_display)
+        }
+    }
+    render_bkm(bkm_to_display, bkm_to_display_url);
 }
 
 function render_grp(){
@@ -49,28 +69,34 @@ function render_grp(){
     button.href = element.name;
     button.value = element.name;
     button.onclick = ()=>{
+        current_grp = element.name;
         grp_name(element.name);
+        groups_list_ul.classList.add("hidden");
+        bkm_list_ul.classList.toggle("hidden");
+        new_bookmark_btn.classList.toggle("hidden");
+        new_grp_btn.classList.add("hidden");
     };
     let li = document.createElement('li');
-    button.innerText = toTitleCase(element.name);
+    button.innerText = element.name;
     li.appendChild(button);
     display_grp.appendChild(li);
     });
 }
 
-function render_bkm(){
+function render_bkm(names_list, url_list){
     display_bkm.innerText = "";
-    bookmarks_list.forEach(element =>{
-        let anchor = document.createElement('a');
-        anchor.href = `${element.url}`;
-        let li = document.createElement('li');
-        li.innerText = toTitleCase(element.name);
-        anchor.appendChild(li);
-        display_bkm.appendChild(anchor);
-    });
+    list_item = "";
+    for(let i = 0; i < names_list.length; i++){
+        list_item += `
+            <a href="${url_list[i]}" target="_blank">
+                <li>${names_list[i]}</li>
+            </a>
+            <span class="delete">x</span>
+        `
+    }
+    display_bkm.innerHTML = list_item;
 }
 
-let grp = "adsf"
 // Functions Declaration 
 function openModal(e){
     e.classList.remove("hidden");
@@ -84,13 +110,13 @@ function closeModal(e){
     render_grp();
 }
 
+
 new_items_submit.addEventListener('click', ()=>{
-    if(new_bkm_name.value != "" && new_bkm_url.value != ""){
-        addBookmark(new_bkm_name.value, new_bkm_url.value, grp);
-        localStorage.setItem('data', JSON.stringify(bookmarks_list));
-        new_bkm_name.value = "";
-        new_bkm_url.value = "";
-    }
+    addBookmark(new_bkm_name.value, new_bkm_url.value, current_grp);
+    localStorage.setItem('data', JSON.stringify(bookmarks_list));
+    new_bkm_name.value = "";
+    new_bkm_url.value = "";
+    grp_name(current_grp);
     closeModal(new_items_modal)
 });
 
@@ -104,10 +130,18 @@ new_grp_submit.addEventListener('click', ()=>{
 });
 
 // Open and close New bookmarks modal
-new_bookmark_btn.addEventListener('click',()=>{openModal(new_items_modal)})
+new_bookmark_btn.addEventListener('click',()=>{
+    chrome.tabs.query({active: true, lastFocusedWindow: true}, (tabs) => {
+        tab_url = tabs[0].url;
+        tab_title = tabs[0].title;
+        new_bkm_name.value = tab_title;
+        new_bkm_url.value = tab_url;
+    });
+    openModal(new_items_modal)
+})
 closeBkmModal.addEventListener('click',()=>{closeModal(new_items_modal)});
 // Open and close New Group Modal
-new_grp.addEventListener('click', ()=>{openModal(new_grp_modal)});
+new_grp_btn.addEventListener('click', ()=>{openModal(new_grp_modal)});
 closeGrpModal.addEventListener('click', ()=>{closeModal(new_grp_modal)});
 // Close on clicking on overlay
 overlay.addEventListener('click', ()=>{

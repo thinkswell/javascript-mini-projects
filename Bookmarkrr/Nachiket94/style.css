@@ -180,11 +180,6 @@ ul{
 #group_list li{
     list-style-type: none;
 }
-#group_list li:hover button:hover{
-    cursor: pointer;
-    text-decoration: underline;
-    color: var(--white-clr);
-}
 
 #bookmarks_list{
     display: grid;
@@ -198,11 +193,24 @@ ul{
 }
 
 #bookmarks_list li{
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     padding: 8px;
+    color: var(--white-clr);
+    max-width: 44ch;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    border-bottom: 1px solid var(--back-clr-d1);
+}
+
+#bookmarks_list a{
+    text-decoration: none;
+}
+
+#group_list li:hover button:hover , #bookmarks_list a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--white-clr);
 }
 
 #bookmarks_list:first-child {
@@ -213,6 +221,11 @@ ul{
 #bookmarks_list:last-child {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+    border-bottom: 0;
+}
+
+.delete{
+    position: absolute;
 }
 
 ::-webkit-scrollbar {
