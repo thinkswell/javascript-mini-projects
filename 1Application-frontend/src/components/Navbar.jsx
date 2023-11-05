@@ -17,10 +17,11 @@ const Navbar = () => {
       <nav>
         <div className={`main-component ${menuOpen ? "menu-open show" : ""}`}>
           <div className="head-main">
-            <h3 style={{ marginTop: "1rem" }}>
+            <h3 className="row" style={{ marginTop: "0.8rem" }}>
               Thinks Well
-              <br />
-              <span>JAVASCRIPT PROJECTS</span>
+            </h3>
+            <h3 className="row">
+              JAVASCRIPT PROJECTS
             </h3>
           </div>
           <div className="routes">
