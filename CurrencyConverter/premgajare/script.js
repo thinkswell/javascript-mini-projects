@@ -1,35 +1,32 @@
-const currencyOne =document.getElementById('currency-one');
-const amountOne =document.getElementById('amount-one');
-const currencyTwo =document.getElementById('currency-two');
-const amountTwo =document.getElementById('amount-two');
-const swap =document.getElementById('swap');
-const rate =document.getElementById('rate');
+<!DOCTYPE html>
+<html>
 
+<head>
+  <title>Currency Converter</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 
-function calculate(){
-  const currency_one = currencyOne.value;
-  const currency_two = currencyTwo.value;
-  fetch(" https://v6.exchangerate-api.com/v6/3e8ffaddefcdd36522ddc01f/latest/USD")
-  .then(res => res.json())
-  .then(data=>{
-    // console.log(data);
-    const rate_new=data.conversion_rates[currency_two]/data.conversion_rates[currency_one];
-    rate.innerText= `1 ${currency_one} = ${rate_new.toFixed(2)} ${currency_two}`;
-    amountTwo.value=(amountOne.value*(rate_new)).toFixed(2);
-  });
-}
+<body>
+  <h1>Currency Converter</h1>
+  <div>
+    <label for="amount">Amount (INR):</label>
+    <input type="number" id="amount" placeholder="Enter amount">
+  </div>
+  <div>
+    <label for="toCurrency">To Currency:</label>
+    <select id="toCurrency">
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="GBP">GBP</option>
+      <option value="JPY">JPY</option>
+      <option value="AUD">AUD</option>
+    </select>
+  </div>
+  <button onclick="convertCurrency()">Convert</button>
+  <div>
+    <p>Result: <span id="result"></span></p>
+  </div>
+  <script src="script.js"></script>
+</body>
 
-// event listener
-currencyOne.addEventListener('change',calculate);
-amountOne.addEventListener('input',calculate);
-currencyTwo.addEventListener('change',calculate);
-amountTwo.addEventListener('input',calculate);
-
-swap.addEventListener('click',()=>{
-  const temp=currencyOne.value;
-  currencyOne.value=currencyTwo.value;
-  currencyTwo.value=temp;
-  calculate();
-});
-
-// calculate();
+</html>
