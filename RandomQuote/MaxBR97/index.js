@@ -2,7 +2,7 @@ const allQuotes = [
     {sentence: "Two things are infinite: the universe and human stupidity, and I'm not sure about the universe.", person: "Albert Einstein"},
     {sentence:"You can't reason with a tiger when your head is in its mouth." , person:"Winston Churchill"},
     {sentence:"An appeaser is one who feeds a crocodile, hoping it will eat him last.", person:"Winston Churchill"},
-    {sentence:"Peace will come when the Arabs will love their children more than they hate us.", preson:"Golda Meir"},
+    {sentence:"Peace will come when the Arabs will love their children more than they hate us.", person:"Golda Meir"},
     {sentence:"Anyone who doesn't belive in miracles is not a realist." , person:"David Ben Gurion" },
     {sentence:"We Jews have a secret weapon in our struggle with the Arabs; We have no place to go." , person: "Golda Meir" },
     {sentence:"We shall fight in France, we shall fight on the seas and oceans, we shall fight with growing confidence and growing strength in the air, we shall defend our island, whatever the cost may be. We shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields and in the streets, we shall fight in the hills; we shall never surrender." , person: "Winston Churchill"},
