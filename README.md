@@ -71,8 +71,6 @@ Contribute to this repository by adding your awesome JavaScript projects. Here's
 
 ### Steps to Raise and Get Your PR Merged Successfully
 
-### Steps to Raise and Get Your PR Merged Successfully
-
 1. **Fork this repository.**
 
 2. **Clone the repository into your local system:**
