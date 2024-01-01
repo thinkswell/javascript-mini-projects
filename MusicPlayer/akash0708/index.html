@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mp3/Video Player</title>
+</head>
+<script src="style.css"></script>
+<body>
+    
+    <div class="player">
+        <video id="myVideo" preload width="640" height="360">
+                             <source src="https://mainline.i3s.unice.fr/mooc/mi5.mp4" />
+                         </video>
+                         <div>
+                             <button type="button" id="pl">Play</button>
+                             <button type="button" id="pr">Previous</button>
+                             <input id="slide" type="range" value="0" />
+                             <button type="button" id="nx">Next</button>
+                             <button type="button"> <span id="volDown">- &nbsp; </span>Vol<span id="volUp"> &nbsp; +</span></button>
+                         </div>
+                         <div class="thumbs">
+                             <img id="vid1" src="https://i.imgur.com/y6RTkIi.gif" width="128" height="72" alt="video 1">
+                             <img id="vid2" src="https://i.imgur.com/MUG6cex.gif" width="128" height="72" alt="video 2">
+                             <img id="vid3" src="https://i.imgur.com/Ey7oJdj.gif" width="128" height="72" alt="video 3">
+                         </div>
+                     </div>
+     
+         </div>
+         <script src="script.js"></script>
+     </body>
+     
+</html>
