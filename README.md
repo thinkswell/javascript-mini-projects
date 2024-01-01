@@ -22,7 +22,7 @@
 
 ## 🚀 Getting Started with the Frontend
 
-**IMPORTANT! Setting up the Frontend to Showcase All the Projects**
+**Important! Setting up the Frontend to Showcase All the Projects**
 
 Dear contributors,
 
@@ -93,7 +93,7 @@ Contribute to this repository by adding your awesome JavaScript projects. Here's
 
 5. **Add one project at a time.**
 
-6. **Important! Make sure to add a README.md to your project directory**:
+6.  _**❗Important❗**_ Make sure to add a README.md to your project directory**:
 
    - For developers, include what framework, library, language you have used.
    - Include the steps to run the project on a local machine.
@@ -174,5 +174,16 @@ We are deeply committed to fostering genuine open-source contributions. Conseque
 Please be aware that we do not accept responsibility for any potential damages resulting from the scripts or programs included in this repository. These projects are publicly curated and do not undergo stringent malware or virus checks. Therefore, neither the maintainers nor the owner of this repository can be held accountable for any issues arising from running any of the programs or applications found within this repository.
 
 ##### <p align="center">Hurray! Now you are a part of the open-source community 🚀🚀🚀</p>
+
+
+## Maintainers
+- [Maintainer Name](https://github.com/NitkarshChourasia)
+<!--- [Another Maintainer](https://github.com/anothermaintainer)-->
+
+### Contributors
+<a href="https://github.com/thinkswell/javascript-mini-projects/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=thinkswell/javascript-mini-projects" />
+</a>
+
 
 ---
