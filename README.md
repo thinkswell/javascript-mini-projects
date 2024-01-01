@@ -76,7 +76,7 @@ Contribute to this repository by adding your awesome JavaScript projects. Here's
 2. **Clone the repository into your local system:**
 
    ```bash
-   git clone https://github.com/<username>/javascript-mini-projects.git
+   git clone https://github.com/thinkswell/javascript-mini-projects.git
    ```
 
 3. **Create a branch `projectname-username`, e.g. - `git checkout -b ChatApp-thinkswell`:**
