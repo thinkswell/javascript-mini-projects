@@ -71,21 +71,23 @@ Contribute to this repository by adding your awesome JavaScript projects. Here's
 
 ### Steps to Raise and Get Your PR Merged Successfully
 
-1. Fork this repository.
+### Steps to Raise and Get Your PR Merged Successfully
 
-2. Clone the repository into your local system:
+1. **Fork this repository.**
+
+2. **Clone the repository into your local system:**
 
    ```bash
    git clone https://github.com/<username>/javascript-mini-projects.git
    ```
 
-3. Create a branch `projectname-username`, e.g. - `git checkout -b ChatApp-thinkswell`:
+3. **Create a branch `projectname-username`, e.g. - `git checkout -b ChatApp-thinkswell`:**
 
    ```bash
    git checkout -b ChatApp-thinkswell
    ```
 
-4. Add your projects in the respective directory (if it exists; otherwise, create one). The directory name should be your `ProjectName/USERNAME`.
+4. **Add your projects in the respective directory (if it exists; otherwise, create one). The directory name should be your `ProjectName/USERNAME`.**
 
    Examples: `ChatApp/thinkswell`
 
@@ -93,7 +95,7 @@ Contribute to this repository by adding your awesome JavaScript projects. Here's
 
 5. **Add one project at a time.**
 
-6.  _**❗Important❗**_ Make sure to add a README.md to your project directory**:
+6.  _**❗Important❗**_ **Make sure to add a README.md to your project directory:**
 
    - For developers, include what framework, library, language you have used.
    - Include the steps to run the project on a local machine.
@@ -102,26 +104,26 @@ Contribute to this repository by adding your awesome JavaScript projects. Here's
    - For non-developers, describe the features of your project and how to use it.
    - **Include a screenshot of your working project.**
 
-6. **Add & commit**:
+7. **Add & commit:**
 
    ```bash
    git add -A
    git commit -m "Your commit message about the project"
    ```
 
-7. **Push changes to GitHub**:
+8. **Push changes to GitHub:**
 
    ```bash
    git push origin ChatApp-thinkswell
    ```
 
-8. **Click** on `Create a Pull Request`.
+9. **Click** on `Create a Pull Request`.
 
-9. Attach **SCREENSHOTS/GIFs** or a **link to your working project** in the description _**❗Important❗**_.
+10. **Attach SCREENSHOTS/GIFs or a link to your working project in the description _❗Important❗_.**
 
-10. **Submit** the PR.
+11. **Submit the PR.**
 
-11. **Leave a ⭐ on the repo and `FOLLOW` if you liked the project.**
+12. **Leave a ⭐ on the repo and `FOLLOW` if you liked the project.**
 
 ## 🌟 What You Can Contribute
 
@@ -177,7 +179,7 @@ Please be aware that we do not accept responsibility for any potential damages r
 
 
 ## Maintainers
-- [Maintainer Name](https://github.com/NitkarshChourasia)
+- [Nitkarsh Chourasia](https://github.com/NitkarshChourasia)
 <!--- [Another Maintainer](https://github.com/anothermaintainer)-->
 
 ### Contributors
