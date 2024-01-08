@@ -175,11 +175,6 @@ Please be aware that we do not accept responsibility for any potential damages r
 
 ##### <p align="center">Hurray! Now you are a part of the open-source community 🚀🚀🚀</p>
 
-
-## Maintainers
-- [Nitkarsh Chourasia](https://github.com/NitkarshChourasia)
-<!--- [Another Maintainer](https://github.com/anothermaintainer)-->
-
 ### Contributors
 <a href="https://github.com/thinkswell/javascript-mini-projects/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=thinkswell/javascript-mini-projects" />
