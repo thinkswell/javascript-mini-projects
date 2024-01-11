@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--META information-->
+        <meta charset="UTF-8">
+        <meta name="description" content="Random Quote Generator">
+        <meta name="keywords" content="HTML,CSS,JavaScript, Quotes, API">
+        <meta name="author" content="Neha Soni">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--End of META information-->
+
+        <title>Random Quote Generator</title>
+
+        <!--LINK CUSTOM CSS FILE-->
+        <link rel="stylesheet" href="style.css">
+
+        <!--FONTAWESOME CDN-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    </head>
+    <body>
+        <!-- Quote Container -->
+        <div class="container">
+             <!-- Quote to be Displayed Here -->
+            <h1>
+            <i class="fas fa-quote-left"></i>
+            <span class="quote" id="quote"></span>
+            <i class="fas fa-quote-right"></i>
+            </h1>
+            <!-- Author to be Displayed Here -->
+            <p class="author" id="author"></p>
+
+            <hr/>
+            <div class="buttons">
+               <!--Button to tweet the quote -->
+                <a class="twitter" id="tweet" href="https://twitter.com/intent/tweet?text=Greetings" data-size="large" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+
+                <!--Add an onclick event on 'next quote' button. Upon the click of a button, a new random quote is generated-->
+                <button class="next" onclick="getNewQuote()">Next quote</button>
+            </div>
+        </div>
+
+        <!--LINK CUSTOM JS FILE-->
+        <script src="script.js"></script>
+    </body>
+</html>
