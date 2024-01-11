@@ -1,0 +1,102 @@
+
+.player {
+    background: #000;
+    margin: 0 auto;
+    max-width: 640px;
+    overflow: hidden;
+    width: 95%;
+}
+
+.player button {
+    background-color: #004080;
+    border: none;
+    color: #D3D3D3;
+    float: left;
+    font-size: 100%;
+    height: 1.75em;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    white-space: nowrap;
+    width: 15%;
+}
+
+.player button:hover,
+.player input:hover {
+    background-color: #00509F;
+    color: #fff;
+    cursor: pointer;
+}
+
+.player input {
+   
+    background-color: #004080;
+    border: none;
+    color: #D3D3D3;
+    float: left;
+    height: 1.5em;
+    margin: 0;
+    padding: 0;
+    width: 40%;
+}
+
+.player input[type=range]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+    cursor: pointer;
+    width: 100%;
+}
+
+.player input[type=range]::-webkit-slider-thumb {
+    
+    -webkit-appearance: none;
+    background: #00509F;
+    border: 1px solid #D3D3D3;
+    box-sizing: border-box;
+    height: 1.5em;
+    width: 1em;
+}
+
+.player video {
+    background: #000;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 10% auto;
+    max-width: 640px;
+    width: 100%;
+}
+
+
+
+.signup span {
+    margin-left: .2em;
+    width: 20%;
+}
+
+.thumbs {
+    background-color: darkgrey;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%;
+}
+
+.thumbs img {
+    height: 100%;
+    margin: 2%;
+    max-width: 128px;
+    width: 20%;
+}
+
+.thumbs img:hover {
+    border: 1px solid #FFF;
+    cursor: pointer;
+}
+
+
+img {
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
