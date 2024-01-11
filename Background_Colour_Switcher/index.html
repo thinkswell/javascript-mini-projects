@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bacground Colour Switcher</title>
+    <style>
+        .warper {
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .button {
+            height: 10vh;
+            width: 10vh;
+            border: 1px solid black;
+        }
+
+        #grey {
+            background-color: gray;
+        }
+
+        #white {
+            background-color: white;
+        }
+
+        #blue {
+            background-color: blue;
+        }
+
+        #yellow {
+            background-color: yellow;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Color Scheme Switcher</h1>
+    <div class="warper">
+      <span class="button" id="grey"></span>
+      <span class="button" id="white"></span>
+      <span class="button" id="blue"></span>
+      <span class="button" id="yellow"></span>
+    </div>
+
+    <h2>Click to one colors to change the background of this page</h2>
+    <script src="script.js"></script>
+  </body>
+</html>
