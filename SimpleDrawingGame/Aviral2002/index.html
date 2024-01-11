@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href ="style.css">
+    <title>SimpleDrawingGame</title>
+</head>
+<body>
+    <section class="container">
+        <div id="toolbar">
+            <h1>Draw</h1>
+            <label for="stroke">Stroke</label>
+            <input id="stroke" name="stroke" type="color">
+            <label for="LineWidth">Line Width</label>
+            <input id="LineWidth" name="LineWidth" type="number" value="5">
+            <button id="clear">Clear</button>
+        </div>
+        <div class="drawingBoard">
+            <canvas id="drawingBoard">
+
+            </canvas>
+        </div>
+    </section>
+    <script src="index.js" type="application/javascript"></script>
+</body>
+</html>
