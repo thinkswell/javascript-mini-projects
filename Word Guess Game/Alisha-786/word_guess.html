@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Word Guessing Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    #word {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    #letters {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    #message {
+      font-size: 18px;
+      margin-top: 10px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1>Word Guessing Game</h1>
+  <div id="word">_ _ _ _ _</div>
+  <div id="letters">Letters Guessed: </div>
+  <input type="text" id="guess" placeholder="Enter a letter">
+  <button onclick="guessLetter()">Guess</button>
+  <div id="message"></div>
+
+  <script>
+    const words = ["apple", "banana", "cherry", "date", "elderberry", "fig"];
+    let selectedWord = words[Math.floor(Math.random() * words.length)];
+    let guessedWord = Array(selectedWord.length).fill("_");
+    let guessedLetters = [];
+    let attempts = 6;
+
+    function displayWord() {
+      document.getElementById("word").textContent = guessedWord.join(" ");
+    }
+
+    function displayLetters() {
+      document.getElementById("letters").textContent =
+        "Letters Guessed: " + guessedLetters.join(", ");
+    }
+
+    function displayMessage(message) {
+      document.getElementById("message").textContent = message;
+    }
+
+    function guessLetter() {
+      let guess = document.getElementById("guess").value.toLowerCase();
+      if (guess.length !== 1 || !/[a-z]/.test(guess)) {
+        alert("Please enter a single letter.");
+        return;
+      }
+
+      if (guessedLetters.includes(guess)) {
+        alert("You already guessed that letter.");
+        return;
+      }
+
+      guessedLetters.push(guess);
+      displayLetters();
+
+      let found = false;
+      for (let i = 0; i < selectedWord.length; i++) {
+        if (selectedWord[i] === guess) {
+          guessedWord[i] = guess;
+          found = true;
+        }
+      }
+
+      if (!found) {
+        attempts--;
+      }
+
+      displayWord();
+
+      if (guessedWord.join("") === selectedWord) {
+        displayMessage("Congratulations! You've won!");
+        document.getElementById("guess").disabled = true;
+      } else if (attempts === 0) {
+        displayMessage("Sorry, you've run out of attempts. The word was: " + selectedWord);
+        document.getElementById("guess").disabled = true;
+      }
+    }
+
+    displayWord();
+  </script>
+</body>
+</html>
