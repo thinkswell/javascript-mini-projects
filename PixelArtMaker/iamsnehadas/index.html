@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixelArtMaker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Pixel Art Maker</h1>
+<p><br>
+<!-- Create input elements for the user to enter the number of rows and columns -->
+<label for="rows">Enter the number of rows as required:</label>
+<input type="number" id="rows" min="1" max="15">
+<br>
+<label for="cols">Enter the number of columns as required:</label>
+<input type="number" id="cols" min="1" max="15">
+<br>
+<br>
+<!-- Create a button element with id create-grid to allow the user to create the grid -->
+<button id="create-grid">Create Grid</button>
+<p>
+<!-- Create a table element with id grid to hold the grid of squares -->
+<table id="grid">
+  <!-- The rows and columns will be created here -->
+</table>
+<br>
+Please choose the color according to your choice from the color-picker below: <p>
+<!-- Create an input element with type color and id color-picker to allow the user to select a color -->
+<input type="color" id="color-picker">
+
+<!-- Create button elements with id clear to allow the user to clear their pixel art -->
+<button id="clear">Clear</button>
+
+<!-- Link the JS file to the HTML file -->
+<script src="script.js"></script>
+
+</body>
+</html>
