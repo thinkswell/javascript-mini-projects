@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background: white;
+}
+.container{
+    text-align: center;
+    justify-content: center;
+    padding: 20px 10px;
+    align-items: center;
+}
+.line{
+    width: 100px;
+    height: 4px;
+    background: #b19723;
+    margin: auto;
+    border-radius: 5px;
+}
+.review-container{
+    width: 300px;
+    padding: 10px 10px;
+    width: 400px;
+    height: 350px;
+    background: whitesmoke;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0px 10px 15px grey;
+}
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #3EBDA2;
+}
+#info{
+    height: 150px;
+}
+#job{
+    font-size: 18px;
+    font-weight: 700;
+    color: #3EBDA2;
+}
+.bi-quote{
+    position: absolute;
+    top: 70px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+    background: #3EBDA2;
+    color: black;
+    border-radius: 50%;
+}
+.bi-chevron-left, .bi-chevron-right{
+    padding: 10px 15px;
+    color: #3EBDA2;
+}
+button{
+    border: none;
+    cursor: pointer;
+}
