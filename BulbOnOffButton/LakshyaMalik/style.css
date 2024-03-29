@@ -28,15 +28,13 @@
   }
   
   .btn {
-    border-radius: 100%;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    background-color: rgba(0, 0, 0, 0.768);
+   width: 100px;
   }
   
   #bulbimg {
     width: 100%;
     max-width: 200px;
+    margin: 35px;
   }
   
   @media (max-width: 576px) {
