@@ -4,7 +4,7 @@
 }
 
 .bg{
-    background-color: #070707;
+    background-color: #8c8686;
 }
 
 .container {
@@ -52,6 +52,37 @@
         justify-self: auto;
         margin: 0;
     }
+    .dialogue-box {
+
+      margin-left: 600px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+
+     
+  }
+  
+  .dialogue-box p {
+   
+    margin-bottom: 10px;
+}
+
+
+  .ok-button {
+      width: 200px;
+      padding: 5px 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: #8c8686;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-top: 10px; /* Add some space between the paragraph and the button */
+      margin-left: 600px;
+  }
+  
+
   
     #bulbimg {
       width: 100%;
