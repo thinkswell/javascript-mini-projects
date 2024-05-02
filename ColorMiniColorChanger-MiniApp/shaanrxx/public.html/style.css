@@ -1,0 +1,243 @@
+/* styles.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Fascinate", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #333; 
+    /* background-color: #333; */
+}
+body{
+    background-color: #333;
+
+}
+
+h1{
+    font-family: "Fascinate", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+
+}
+
+.soundboard {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-columns: repeat(2, 4fr); /* Adjust based on your number of modules */
+    grid-gap: 10px; /* Spacing between modules */
+}
+
+.soundboard-header {
+    text-align: center;
+    margin-bottom: 20px;
+    grid-column: span 2; /* Header spans across all columns */
+}
+
+.module {
+    padding: 20px;
+    background: #444;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates a responsive number of columns */
+    grid-gap: 10px; /* Spacing between items in a module */
+}
+
+.module > * {
+    padding: 10px;
+    background: #555;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+input[type="color"], input[type="text"] {
+    width: 100%; /* Ensure inputs take full width of their grid cell */
+    box-sizing: border-box; /* Includes padding and border in the element's width */
+}
+
+button {
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: #666;
+}
+
+
+button, select, input[type="color"], input[type="text"] {
+    font-family:'Poppins', sans-serif;
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+#presetColors button {
+    font-family:'Poppins', sans-serif;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Additional styles for seasonal palette buttons */
+#seasonalPalettes button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+#seasonalPalettes button:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+
+#seasonalPalettes button:active {
+    transform: scale(0.95);
+}
+
+/* Specific colors for each button to match the season */
+#seasonalPalettes button:nth-child(1) { /* Summer */
+    background-color: #FF6347;
+    box-shadow: 0 4px #DD513A;
+}
+
+#seasonalPalettes button:nth-child(2) { /* Winter */
+    background-color: #4682B4;
+    box-shadow: 0 4px #3B6F91;
+}
+
+#seasonalPalettes button:nth-child(3) { /* Autumn */
+    background-color: #FF8C00;
+    box-shadow: 0 4px #E07B00;
+}
+
+#seasonalPalettes button:nth-child(4) { /* Spring */
+    background-color: #BA55D3;
+    box-shadow: 0 4px #9E49B6;
+}
+
+/* Highlight the active button */
+#seasonalPalettes button.active {
+    transform: scale(1.05); /* Slightly increase size */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    border: 2px solid #fff; /* White border */
+    background-color: rgba(0, 0, 0, 0.01); /* Semi-transparent background */
+}
+
+img {
+    border: 2px solid transparent; /* Makes border color changes visible */
+}
+
+
+
+
+.container { /* Assuming your main content wrapper has the class 'container' */
+    width: auto; /* or 100% if it should take the full width */
+    max-width: 960px; /* or any other max-width */
+    margin: 0 auto; /* This centers the container */
+    padding: 0;
+}
+
+/* Adjusted styles for all inputs */
+input {
+    padding: 10px;
+    width: 60%;                      /* Reduced width for a compact appearance */
+    border: 2px solid #dfe1e5;       /* Subtle border */
+    border-radius: 8px;              /* Rounded corners for aesthetics */
+    font-size: 16px;                 /* Clear readability */
+    box-sizing: border-box;          /* Border and padding included in width calculation */
+    outline: none;                   /* Removes the default focus outline */
+    transition: border-color 0.2s, box-shadow 0.2s; /* Smooth transitions */
+}
+
+/* Hover and focus enhancements for inputs */
+input:hover, input:focus {
+    border-color: #4285f4;           /* Enhanced border color for visibility */
+    box-shadow: 0 0 8px rgba(66, 133, 244, 0.5); /* Glow effect for focus and hover */
+}
+
+/* Specific adjustments for the color picker */
+#colorPicker {
+    cursor: pointer;                 /* Indicates that the element is interactive */
+    width: 70px;                     /* Suitable width for touch interaction */
+    height: 40px;                    /* Ensures a square aspect ratio */
+}
+
+
+
+/******* elements of the wbe pages knobs *****/
+
+
+
+.control-knob {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #555;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.knob {
+    background: #555;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.knob button {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.knob button:hover {
+    color: #ccc;
+}
+
+.image-preview img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+label {
+    margin-bottom: 10px;
+    color: white;
+}
+
+select {
+    background: #666;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+select:hover {
+    background: #777;
+}
+/********** end ************/
