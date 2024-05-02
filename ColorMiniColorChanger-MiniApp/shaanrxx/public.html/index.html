@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@100;300&display=swap" rel="stylesheet">
+    <title>Color Changer App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="header">Color Changer</h1>
+    <button id="button">Change my color!</button>
+    <img src="example.jpg" alt="Sample" id="image" style="border: 3px solid;">
+
+    <select id="elementSelector">
+        <option value="header">Header</option>
+        <option value="button">Button</option>
+        <option value="image">Image Border</option>
+        <option value="background">Background</option> <!-- Added option for background -->
+    </select>
+    
+    <div class="container">
+        <input type="color" id="colorPicker">
+        <input type="text" id="colorInput" placeholder="Enter color code (e.g., #ff0000 or rgb(255,0,0))">
+    </div>
+
+    <div id="presetColors">
+        <button class="preset" style="background-color: #ff0000;">Red</button>
+        <button class="preset" style="background-color: #00ff00;">Green</button>
+        <button class="preset" style="background-color: #0000ff;">Blue</button>
+    </div>
+
+    <h2 id="subheader" class="colorable">Subheader</h2>
+    <p id="paragraph" class="colorable">This paragraph is also colorable.</p>
+
+    <div id="seasonalPalettes">
+        <button id="summerBtn" onclick="applySeasonalPalette(colorPalettes.Summer)">Summer</button>
+        <button id="winterBtn" onclick="applySeasonalPalette(colorPalettes.Winter)">Winter</button>
+        <button id="autumnBtn" onclick="applySeasonalPalette(colorPalettes.Autumn)">Autumn</button>
+        <button id="springBtn" onclick="applySeasonalPalette(colorPalettes.Spring)">Spring</button>
+    </div>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>

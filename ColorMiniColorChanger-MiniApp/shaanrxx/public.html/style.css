@@ -1,0 +1,107 @@
+/* styles.css */
+body {
+    font-family:'Poppins', sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+button, select, input[type="color"], input[type="text"] {
+    font-family:'Poppins', sans-serif;
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+#presetColors button {
+    font-family:'Poppins', sans-serif;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Additional styles for seasonal palette buttons */
+#seasonalPalettes button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+#seasonalPalettes button:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+
+#seasonalPalettes button:active {
+    transform: scale(0.95);
+}
+
+/* Specific colors for each button to match the season */
+#seasonalPalettes button:nth-child(1) { /* Summer */
+    background-color: #FF6347;
+    box-shadow: 0 4px #DD513A;
+}
+
+#seasonalPalettes button:nth-child(2) { /* Winter */
+    background-color: #4682B4;
+    box-shadow: 0 4px #3B6F91;
+}
+
+#seasonalPalettes button:nth-child(3) { /* Autumn */
+    background-color: #FF8C00;
+    box-shadow: 0 4px #E07B00;
+}
+
+#seasonalPalettes button:nth-child(4) { /* Spring */
+    background-color: #BA55D3;
+    box-shadow: 0 4px #9E49B6;
+}
+
+/* Highlight the active button */
+#seasonalPalettes button.active {
+    transform: scale(1.05); /* Slightly increase size */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    border: 2px solid #fff; /* White border */
+    background-color: rgba(0, 0, 0, 0.01); /* Semi-transparent background */
+}
+
+img {
+    border: 2px solid transparent; /* Makes border color changes visible */
+}
+
+
+/* Container for inputs to aid in centering */
+.container {
+    width: 100%;                     /* Container takes full width to allow centering */
+    display: flex;                   /* Flexbox for easy alignment */
+    flex-direction: column;          /* Stack children vertically */
+    align-items: center;             /* Center-align children horizontally */
+    padding: 20px;                   /* Padding for spacing around the container's content */
+}
+
+/* Adjusted styles for all inputs */
+input {
+    padding: 10px;
+    width: 60%;                      /* Reduced width for a compact appearance */
+    border: 2px solid #dfe1e5;       /* Subtle border */
+    border-radius: 8px;              /* Rounded corners for aesthetics */
+    font-size: 16px;                 /* Clear readability */
+    box-sizing: border-box;          /* Border and padding included in width calculation */
+    outline: none;                   /* Removes the default focus outline */
+    transition: border-color 0.2s, box-shadow 0.2s; /* Smooth transitions */
+}
+
+/* Hover and focus enhancements for inputs */
+input:hover, input:focus {
+    border-color: #4285f4;           /* Enhanced border color for visibility */
+    box-shadow: 0 0 8px rgba(66, 133, 244, 0.5); /* Glow effect for focus and hover */
+}
+
+/* Specific adjustments for the color picker */
+#colorPicker {
+    cursor: pointer;                 /* Indicates that the element is interactive */
+    width: 70px;                     /* Suitable width for touch interaction */
+    height: 40px;                    /* Ensures a square aspect ratio */
+}
