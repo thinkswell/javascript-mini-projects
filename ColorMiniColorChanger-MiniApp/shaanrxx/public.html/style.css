@@ -1,4 +1,5 @@
 /* styles.css */
+<<<<<<< HEAD
 
 body, html {
     margin: 0;
@@ -74,6 +75,13 @@ button:hover {
 }
 
 
+=======
+body {
+    font-family:'Poppins', sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+>>>>>>> 04379e150083dc4d6f509b73dba0ab7a61cd45e2
 button, select, input[type="color"], input[type="text"] {
     font-family:'Poppins', sans-serif;
     margin: 10px;
@@ -142,6 +150,7 @@ img {
 }
 
 
+<<<<<<< HEAD
 
 
 .container { /* Assuming your main content wrapper has the class 'container' */
@@ -149,6 +158,15 @@ img {
     max-width: 960px; /* or any other max-width */
     margin: 0 auto; /* This centers the container */
     padding: 0;
+=======
+/* Container for inputs to aid in centering */
+.container {
+    width: 100%;                     /* Container takes full width to allow centering */
+    display: flex;                   /* Flexbox for easy alignment */
+    flex-direction: column;          /* Stack children vertically */
+    align-items: center;             /* Center-align children horizontally */
+    padding: 20px;                   /* Padding for spacing around the container's content */
+>>>>>>> 04379e150083dc4d6f509b73dba0ab7a61cd45e2
 }
 
 /* Adjusted styles for all inputs */
@@ -175,6 +193,7 @@ input:hover, input:focus {
     width: 70px;                     /* Suitable width for touch interaction */
     height: 40px;                    /* Ensures a square aspect ratio */
 }
+<<<<<<< HEAD
 
 
 
@@ -241,3 +260,5 @@ select:hover {
     background: #777;
 }
 /********** end ************/
+=======
+>>>>>>> 04379e150083dc4d6f509b73dba0ab7a61cd45e2

@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setupPresetButtons(presetButtons);
 });
 
+<<<<<<< HEAD
 // JavaScript for handling color changes based on knob interactions
 
 // Object to track the currently selected element
@@ -46,6 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+=======
+>>>>>>> 04379e150083dc4d6f509b73dba0ab7a61cd45e2
 document.addEventListener('DOMContentLoaded', function() {
     const presetButtons = document.querySelectorAll('.preset');
     presetButtons.forEach(button => {
