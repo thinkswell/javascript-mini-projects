@@ -1,4 +1,4 @@
-export let capitals = [
+export const capitals = [
   "A",
   "B",
   "C",

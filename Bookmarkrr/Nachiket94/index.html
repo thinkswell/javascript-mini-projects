@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarkrr</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"><img src="svgicon.png" alt="icon">
+            <input type="text" class="search_bar" placeholder="Search Here">
+        </div>
+    </nav>
+    <section class="new_items_modal hidden">
+        <button class="btn-close closeBkm">⨉</button>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" id="bkm_name"><br></td>
+            </tr>
+            <tr>
+                <td>URL</td>
+                <td><input type="text" id="url">
+            </tr>
+        </table>
+        <button type="submit" class="submitBtn" id="new_items_submit">Save</button>
+    </section>
+    <section class="new_group_modal hidden">
+        <button class="btn-close closeGrp">⨉</button>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" id="group_name"><br></td>
+            </tr>
+        </table>
+        <button type="submit" class="submitBtn" id="new_grp_submit">Save</button>
+    </section>
+    <div class="overlay hidden"></div>
+    <div class="new_items_bar">
+        <button class="btn new_grp" id="new_grp">New Group</button>
+        <button class="btn new_bkm hidden" id="new_bkm">New Bookmark</button>
+    </div>
+    <div class="list">
+        <ul id="group_list">
+        </ul>
+    </div>
+    <div class="bookmarks_block hidden">
+        <ul id="bookmarks_list">
+            <!-- <li>;alsdjkf;alskdjfa;lsdkfj;aldskfja;lsdkjf;alskdjfa;kldsfj</li> -->
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <title>TypeRow</title>
+</head>
+
+<body>
+    <main>
+        <section id="main-container">
+            <div id="paragraph-box" onclick="focus_now()"></div>
+            <input type="text" id="input-field" oninput='check()'>
+            <div id="input-box">
+            </div>
+        </section>
+        <button id="start-bttn" onclick="again()">Start</button>
+        <section id="stats-container">
+            <div id="accuracy">Accuracy
+                <div id="acc_con"></Div>
+            </div>
+            <div id="time">Time<span id="small-sec">(sec)</span>
+                <div id="time_con"></div>
+            </div>
+            <div id="wpm">WPM
+                <div id="wpm_con"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

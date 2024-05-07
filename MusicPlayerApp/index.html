@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicPlayer App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="musicPlayer">
+        <h2>Music Player</h2>
+        <audio id="audioPlayer" controls></audio>
+        <div>
+            <button onclick="prevSong()">Prev</button>
+            <button onclick="nextSong()">Next</button>
+        </div>
+        <p id="duration">0:00</p>
+        <input type="range" id="seekbar" value="0" step="1" min="0" max="100" onchange="seek()">
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

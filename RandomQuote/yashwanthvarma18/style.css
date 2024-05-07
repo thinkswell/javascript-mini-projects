@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('https://images4.alphacoders.com/133/1330757.png');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3); /* Grayish background with 30% opacity */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(206, 192, 192, 0.2);
+    backdrop-filter: blur(5px); /* Apply a blur effect */
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    height: 300px; /* Fixed height for the box */
+    overflow-y: auto; /* Allow vertical scrolling if needed */
+    text-align: center; /* Center-align text */
+}
+
+h1 {
+    margin-top: 60px;
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s ease; /* Add transition for smooth scaling */
+    font-family: 'Fjalla One', sans-serif;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Scale up by 5% on hover */
+}
+
+#quoteText {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.5; /* You can adjust this value as needed for spacing */
+    font-family: 'Merriweather', serif;
+}

@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #76b9e0;
+    color: #fff;
+  }
+  .container {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+  .container :hover{
+    border: #050f49;
+  }
+  h1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 48px;
+    color: #0c395e;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
+  }
+  .dice {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dice p {
+    font-family: 'Lobster', cursive;
+    font-size: 32px;
+    color: #050f49;
+    margin: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  .img1,
+  .img2 {
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.4));
+    transition: transform 0.30s ease-in-out;
+  }
+  .img1:hover,
+  .img2:hover {
+    transform: rotate(180deg) scale(1.1);
+  }
+  .dice-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background: url('your-custom-dice-background.png') no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+  }

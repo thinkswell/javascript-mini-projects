@@ -1,0 +1,95 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    color: #060506 /* #ff6525 */; 
+    background-color: #e4e6e7;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.calculator {
+    border-color: #010c15 /* #ecf0f3 */;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 12px #e9eee7, 5px 5px 12px rgba(0, 0, 0, 0.14);
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    background-image: url(bg_inner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+input {
+    grid-column: span 4;
+    width: 260px;
+    height: 90px;
+    background-color: #e4cee7 /* #ecf0f3 */;
+    border: none;
+    box-shadow: inset 5px 5px 12px #9a9999, inset 5px 5px 12px rgba(0, 0, 0, 0.14);
+    border-radius: 30px;
+    outline: none;
+    font-size: 50px;
+    text-align: end;
+    margin: 30px auto;
+    padding: 10px;
+    background-image: url(https://png.pngtree.com/background/20210717/original/pngtree-round-beautiful-pink-white-yellow-baby-background-picture-image_1432600.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+input::placeholder {
+    color:#ff6525;
+}
+
+.clr {
+    color: rgb(197, 26, 17);
+}
+
+.del {
+    color: #dcc043;
+}
+
+.dot {
+    color: rgb(51, 93, 95);
+}
+
+.equal {
+    color: rgb(198, 106, 189);
+    width: 125px;
+    border-radius: 40%;
+    margin: 8px 12px;
+}
+
+.operator {
+    color: rgb(116, 157, 55);
+}
+
+.zero {
+    color: rgb(143, 207, 207);
+}
+
+button {
+    width: 48px;
+    height: 48px;
+    background-color: #ecf0f3 /* #ecf0f3 */;
+    box-shadow: inset 5px 5px 12px #fff, inset 5px 5px 12px rgba(0, 0, 0, 0.14);
+    border-radius: 50%;
+    border: none;
+    margin: 8px auto;
+    background-image: url(bg_button.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

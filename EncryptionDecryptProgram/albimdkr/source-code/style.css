@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#container {
+    border-radius: 20px;
+    padding: 50px;
+    margin: 50px auto;
+    transition: all 0.5s;
+  }
+
+#container:hover {
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0px 0px 60px -6px rgba(255, 255, 255, 0.35);
+    -webkit-box-shadow: 0px 0px 60px -6px rgba(255, 255, 255, 0.35);
+    -moz-box-shadow: 0px 0px 60px -6px rgba(255, 255, 255, 0.35);
+  }
+
+#enter-message{
+  color: #ffff;
+}
+
+#enter-key{
+  color: #ffff;
+} 
+
+#result-encrypt{
+  color: #ffff;
+}
+
+#encrypted-message{
+  color: #ffff;
+}
+
+#value-key{
+  color: #ffff;
+}
+
+#result-decrypt{
+  color: #ffff;
+}

@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    padding: 0;
+    height:100%;
+    overflow:hidden;
+    color:white;
+}
+
+h1 {
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-style: oblique;
+    background-clip: text;
+    color: black;
+    margin-top: 5px;
+}
+
+.container{
+    display: flex;
+    height:100%;
+}
+
+#toolbar{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 80px;
+    border: 8px solid #404040; 
+    background-color: #e47bae
+}
+
+#toolbar *{
+    margin-bottom: 12px;
+
+}
+
+#toolbar label{
+    font-size: 16px;
+    font-family:'Times New Roman', Times, serif;
+    font-style: oblique;
+    color:#000000;
+    font-weight:bold;
+}
+
+#toolbar input{
+    background-color: grey;
+    color:floralwhite;
+}
+#toolbar button {
+    background-color: #1565ce;
+    border-radius: 4px;
+    color :white;
+    padding: 2px;
+}

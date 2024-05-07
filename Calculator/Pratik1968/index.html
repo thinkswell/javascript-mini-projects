@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    var functionVar = {
+        add:"1",
+        substraction:"2",
+        multiplication:"3",
+        equal:"4",
+        division:"5",
+        percentage:"6",
+        power:"7",
+        clear:"8",
+        backspace:"9",
+        decimal:"."
+    }
+  </script>
+  <script src="main.js"></script>
+    <title>Document</title>
+</head>
+<body  class="bg-black text-white font-light flex items-center justify-center">
+    <div class="flex flex-col lg:w-[40%] md:w-[60%] sm-[80%]">
+<input readonly id="ans" class="w-full h-[5rem] border rounded-lg text-right text-black p-3">
+<div class="h-[2rem]"></div>
+<div class="grid grid-cols-4 gap-2 ">
+<button class="flex items-center justify-center bg-[#4E505F] rounded-lg p-3" onclick="functionButton(functionVar.clear)">C</button>
+<button class="flex items-center justify-center bg-[#4E505F] rounded-lg p-3" onclick="functionButton(functionVar.power)">^</button>
+<button class="flex items-center justify-center bg-[#4E505F] rounded-lg p-3" onclick="functionButton(functionVar.percentage)">%</button>
+<button class="flex items-center justify-center bg-[#4B5EFC] rounded-lg p-3" onclick="functionButton(functionVar.division)">/</button>
+<button class="flex items-center justify-center bg-[#2E2F38] rounded-lg p-3" onclick="NumberButtonClick(7)">7</button>
+<button class="flex items-center justify-center bg-[#2E2F38] rounded-lg p-3" onclick="NumberButtonClick(8)">8</button>
+<button class="flex items-center justify-center bg-[#2E2F38] rounded-lg p-3" onclick="NumberButtonClick(9)">9</button>
+<button class="flex items-center justify-center bg-[#4B5EFC] rounded-lg p-3" onclick="functionButton(functionVar.multiplication)">x</button>
+<button class="flex items-center justify-center bg-[#2E2F38] rounded-lg p-3" onclick="NumberButtonClick(4)">4</button>
+<button class="flex items-center justify-center bg-[#2E2F38] rounded-lg p-3" onclick="NumberButtonClick(5)">5</button>
+<button class="flex items-center justify-center bg-[#2E2F38] rounded-lg p-3" onclick="NumberButtonClick(6)">6</button>
+<button class="flex items-center justify-center bg-[#4B5EFC] rounded-lg p-3" onclick="functionButton(functionVar.substraction)">-</button>
+<button class="flex items-center justify-center bg-[#2E2F38] rounded-lg p-3" onclick="NumberButtonClick(1)">1</button>
+<button class="flex items-center justify-center bg-[#2E2F38] rounded-lg p-3" onclick="NumberButtonClick(2)">2</button>
+<button class="flex items-center justify-center bg-[#2E2F38] rounded-lg p-3" onclick="NumberButtonClick(3)">3</button>
+<button class="flex items-center justify-center bg-[#4B5EFC] rounded-lg p-3" onclick="functionButton(functionVar.add)">+</button>
+<button class="flex items-center justify-center bg-[#2E2F38] rounded-lg p-3" onclick="functionButton(functionVar.decimal)">.</button>
+<button class="flex items-center justify-center bg-[#2E2F38] rounded-lg p-3" onclick="NumberButtonClick(0)">0</button>
+<button class="flex items-center justify-center bg-[#2E2F38] rounded-lg flex items-center" onclick="functionButton(functionVar.backspace)"><span class="material-symbols-outlined">
+    backspace
+    </span></button>
+<button class="bg-[#4B5EFC] rounded-lg flex items-center justify-center" onclick="functionButton(functionVar.equal)">=</button>
+</div>
+</div>
+</body>
+</html>

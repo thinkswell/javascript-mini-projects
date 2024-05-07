@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.search {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  background-color: #f7f7f7;
+  color: #3c4048;
+  justify-content: space-between;
+}
+
+.search__bar {
+  width: 30rem;
+  padding: 15px 30px;
+  border: none;
+  border: 1px solid #b2b2b2;
+  border-radius: 10px;
+}
+
+.menus {
+  display: flex;
+  gap: 30px;
+}
+
+.menus--icons {
+  width: 20px;
+}
+
+.pokeball--icons {
+  width: 18px;
+}
+
+.edit,
+.sort,
+.fetch--button {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #3c4048;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 30px;
+}
+
+.fetch--button {
+  background-color: #f7f7f7;
+  padding: 20px;
+  font-size: 1rem;
+  gap: 15px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.pokeball {
+  width: 25px;
+}
+
+.edit:hover,
+.sort:hover,
+.fetch--button:hover {
+  cursor: pointer;
+  background-color: rgb(209, 209, 209);
+}
+
+.table--heading {
+  display: flex;
+  background-color: #f7f7f7;
+  width: 50rem;
+  align-items: center;
+  padding: 20px;
+  font-weight: bolder;
+  margin: auto;
+  font-size: 0.8rem;
+  justify-content: flex-start;
+  gap: 150px;
+}
+
+.table--body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: auto;
+}
+
+.table--name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 60px;
+}
+
+.table--sn {
+  margin: 0 0 0 30px;
+}
+
+.delete-img {
+  width: 20px;
+  cursor: pointer;
+}
+
+.mainDiv {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.details {
+  display: flex;
+  width: 50rem;
+  align-items: center;
+  padding: 20px;
+  font-weight: bolder;
+  margin: auto;
+  font-size: 0.8rem;
+  justify-content: space-between;
+}
+
+footer {
+  padding: 100px;
+}
+
+a {
+  all: unset;
+}
+
+a:hover {
+  cursor: pointer;
+  color: #00abb3;
+}
+
+.load {
+  color: #00abb3;
+}
+
+.pokemons--image {
+  width: 30px;
+}
+
+.hidden {
+  display: none;
+}

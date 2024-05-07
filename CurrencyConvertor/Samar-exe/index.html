@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Rupee convertor</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <h1>Welcome!!!!</h1>
+    <div class="para">
+      <p>
+        This site contains a Javascript program that converts Indian rupee into
+        different country's currency.
+      </p>
+      <p>Please enter the amount you desire to convert and then click submit</p>
+    </div>
+    <div class="input">
+      <input type="number" value="0" id="num1" />
+    </div>
+    <div class="button">
+      <button type="button" onclick="run()" id="submit">Submit</button>
+      <button type="button" onclick="location.reload()" id="reset">
+        Reset
+      </button>
+    </div>
+    <div class="result">
+      <h1>Output</h1>
+      <div id="final">
+        <ul id="mylist"></ul>
+      </div>
+    </div>
+    <div class="contact">
+      <h2>Contact me at : samarik2004@gmail.com</h2>
+    </div>
+    <script src="rupee-convertor.js"></script>
+  </body>
+</html>

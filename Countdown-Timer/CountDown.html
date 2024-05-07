@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="countdown.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="card-container">
+    <div class="card" id="minutesCard">
+      <div class="flip">
+        <div class="front" id="minutesFront">05</div>
+        <div class="back" id="minutesBack">04</div>
+      </div>
+      <div class="label">Hours</div>
+    </div>
+    <div class="seperator">:</div>
+
+    <div class="card" id="hoursCard">
+      <div class="flip">
+        <div class="front" id="hoursFront">02</div>
+        <div class="back" id="hoursBack">01</div>
+      </div>
+      <div class="label">Minutes</div>
+    </div>
+     <div class="seperator">:</div>
+
+    <div class="card" id="secondsCard">
+      <div class="flip">
+        <div class="front" id="secondsFront">30</div>
+        <div class="back" id="secondsBack">29</div>
+      </div>
+      <div class="label">Seconds</div>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <button id="startButton" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+      Start
+    </button>
+    <button id="pauseButton" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+      Pause
+    </button>
+    <button id="resetButton" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+      Reset
+    </button>
+  </div>
+</div>
+
+</body>
+</html>

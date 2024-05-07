@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    /* color: rgb(244, 238, 224); */
+
+}
+
+body {
+    background-color: rgb(57, 54, 70);
+    text-align: center;
+    font-size: x-large;
+}
+
+#main-container {
+    background-color: rgb(79, 69, 87);
+    min-height: 100px;
+    min-width: 50vw;
+    max-height: 60vh;
+    height: fit-content;
+    width: 80vw;
+
+    padding: 5px;
+    align-self: center;
+    border-radius: 0.7rem;
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2rem;
+
+}
+
+#paragraph-box {
+    background-color: rgb(109, 93, 110);
+    color: rgba(244, 238, 224, 0.5);
+    margin: 2.5px;
+    min-height: 4rem;
+    border-radius: 0.5rem;
+    text-align: left;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 2rem;
+    min-width: 2rem;
+    width: fill;
+    font-family: 'JetBrains Mono', monospace;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+#input-box {
+    /* border: 1px rgb(244, 238, 224) solid; */
+    overflow-y: auto;
+    /* height: 9rem; */
+
+}
+
+#input-field {
+    font-family: 'Courier New', Courier, monospace;
+    /* font-size: x-large; */
+    color: rgb(79, 69, 87);
+    background: none;
+    outline: none;
+    border: none;
+    height: 0;
+    width: 100%;
+    /*--debug purposes--*/
+    /* border: 1px red solid; */
+}
+
+#start-bttn {
+    width: 100px;
+    height: 50px;
+    color: rgba(244, 238, 224);
+    position: relative;
+    margin: 10px;
+    border: none;
+    background-color: rgb(79, 69, 87);
+    border-radius: 10px;
+    box-shadow: 0 1px 1px rgba(244, 238, 224, 0.4);
+}
+
+#stats-container {
+    /* width: 620px; */
+    width: fit-content;
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px;
+    column-gap: 30px;
+    text-align: center;
+    align-self: center;
+    justify-items: center;
+    margin: auto;
+    margin-top: 20px;
+    background-color: rgb(79, 69, 87);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+#accuracy,
+#time,
+#wpm {
+    background-color: rgb(109, 93, 110);
+    width: 100%;
+    margin: 10px;
+    border-radius: 5px;
+    color: rgb(244, 238, 224);
+    padding: 5px;
+    font-family: JetBrains Mono;
+    font-weight: bold;
+}
+
+#wpm_con,
+#time_con {
+    height: 85%;
+    padding: 20px;
+    font-size: 5rem;
+}
+
+#acc_con {
+    height: 85%;
+    padding: 20px;
+    font-size: 5rem;
+}
+
+#small-sec {
+    font-size: 0.7rem;
+}
+
+.wrong {
+    background-color: Red;
+}
+
+.correct {
+    color: rgb(244, 238, 224);
+}
+
+.background-fix {
+    background-color: rgb(109, 93, 110);
+}
+
+.cursor-highlight {
+    background-color: rgba(57, 54, 70, 0.4);
+}
+
+.space-wrong {
+    background-color: Red;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.broken {
+    background-color: red;
+    color: green;
+}
