@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <h1 id="header">
+        The Library
+    </h1>
+
+    <div id="book-form-container" style="display: none;">
+        <form id="book-form">
+            <input type="text" id="title" placeholder="Title" required>
+            <input type="text" id="author" placeholder="Author" required>
+            <input type="number" id="pages" placeholder="Number of Pages" required>
+            <label>
+                <input type="checkbox" id="readStatus">
+                Read?
+            </label>
+            <button type="submit">Add Book</button>
+        </form>
+    </div>
+
+    <div id="library-container"></div>
+    <div id="book-exists-component"></div>
+    <div>
+        <button id="new-book-btn" class="add-button">NEW BOOK</button>
+    </div>
+    <script src="books.js"></script>
+</body>
+
+</html>
