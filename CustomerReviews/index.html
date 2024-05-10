@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <!-- Sidebar to show all reviews -->
+    </div>
+
+    <!-- Reviews -->
+    <div class="review-container">
+        <img id="customer-image" src="default.jpg" alt="Customer Photo">
+        <div id="customer-name">John Doe</div>
+        <div id="customer-review">John's review goes here...</div>
+        <div class="buttons">
+            <button onclick="previousReview()">Prev</button>
+            <button onclick="nextReview()">Next</button>
+            <button onclick="randomReview()">Random</button>
+        </div>
+        <button class="add-review" onclick="toggleForm()">Add Review</button>
+    </div>
+
+
+    <!--  Add customer review form -->
+    <div id="review-form" class="modal">
+        <div class="modal-content">
+            <span onclick="toggleForm()" class="close">&times;</span>
+            <form id="new-review-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="image">Image URL:</label>
+                <input type="text" id="image" name="image" required><br>
+                <label for="review">Review:</label>
+                <textarea id="review" name="review" required></textarea><br>
+                <button type="submit">Submit Review</button>
+            </form>
+        </div>
+    </div>
+    <script src="customer-reviews.js"></script>
+</body>
+
+</html>
