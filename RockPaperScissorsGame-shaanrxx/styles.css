@@ -1,0 +1,181 @@
+/* Base styles for the body to set font, alignment, and background */
+body {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(165deg, #002c08, #000000); /* Dark green to black gradient */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    overflow: hidden;
+}
+/* Styling for the main title with specific margin, color, and a smooth scaling transition */
+h1 {
+    text-align: center;
+    margin-top: 5%;
+    color: rgb(0, 210, 39); /* Neon green color */
+    transition: transform 0.5s ease-in-out;
+    word-wrap: break-word; /* Wrap long text */
+    max-width: 90%;
+}
+
+/* Styling for images, ensuring they fill their container and are rounded */
+img {
+    width: 100%; /* Full width of their container */
+    height: 100%; /* Full height, adjusted to maintain aspect ratio */
+    display: block; /* Block display to remove bottom space */
+    border-radius: 10px; /* Rounded corners */
+}
+
+
+
+/* Additional text color settings for headings and paragraphs */
+h2, p {
+    color: rgb(0, 210, 39);
+    word-wrap: break-word; /* Wrap long text */
+    max-width: 90%; /* Prevents overflow */
+    margin: 10px auto; /* Center horizontally with auto margins */
+    text-align: center; /* Center text */
+}
+
+
+/* Styling for the game container with gradients, shadows, and rounded borders */
+#game {
+    margin: 20px auto;
+    padding: 20px;
+    width: 70%;
+    max-width: 600px;
+    height: auto; /* Adjust height dynamically based on content */
+    background: linear-gradient(165deg, #031e02, #041502);
+    box-shadow: 0 4px 8px rgba(5, 158, 66, 0.6);
+    border-radius: 8px;
+    overflow: hidden; /* Prevent overflow issues */
+}
+
+/* Styling for choice buttons to ensure the image and label fit perfectly */
+.choice {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    padding: 0;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(5, 158, 66, 0.6);
+    position: relative;
+    background: none;
+    border-radius: 10px;
+    overflow: hidden; /* Prevent child overflow */
+}
+
+/* Hidden span elements that show on hover, providing interactive feedback */
+.choice span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+
+
+
+/* Hover effect to show the text within the choice button */
+.choice:hover span {
+    opacity: 1;
+}
+
+/* Reset button styling with transition effects on hover */
+#reset {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: transparent;
+    color: rgb(130, 204, 130);
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 0 4px 8px rgba(5, 158, 66, 0.6);
+    border-radius: 5px;
+}
+
+#reset:hover {
+    background-color: green; /* Changes to solid green on hover */
+    color: black;
+}
+
+/* Animation for zoom effect used in the game title */
+@keyframes zoomInZoomOut {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+}
+
+/* Apply transformation properties to the title spans */
+h1 span {
+    display: inline-block;
+    transition: transform 1s ease-in-out;
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+/* Class for animating title spans, called dynamically */
+.zoom-effect {
+    animation: zoomInZoomOut 2s ease-in-out;
+}
+
+
+@media screen and (max-width: 768px) {
+    #game {
+        width: 90%;
+        height: auto;
+    }
+
+    .choice {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 24px;
+        max-width: 100%;
+    }
+
+    #reset {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #game {
+        width: 100%;
+        padding: 5px;
+       
+    }
+
+    .choice {
+        width: 80px;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 25px;
+        max-width: 100%;
+    }
+
+    #reset {
+        font-size: 20px;
+    }
+}
