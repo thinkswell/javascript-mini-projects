@@ -10,6 +10,7 @@ body {
     flex-direction: column;
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
+<<<<<<< HEAD
     overflow: hidden;
 }
 /* Styling for the main title with specific margin, color, and a smooth scaling transition */
@@ -20,6 +21,16 @@ h1 {
     transition: transform 0.5s ease-in-out;
     word-wrap: break-word; /* Wrap long text */
     max-width: 90%;
+=======
+}
+
+/* Styling for the main title with specific margin, color, and a smooth scaling transition */
+h1 {
+    text-align: center;
+    margin-top: 30px; /* Fixed redundant margin-top */
+    color: rgb(0, 210, 39); /* Neon green color */
+    transition: transform 0.5s ease-in-out;
+>>>>>>> 29069c5f68373c5a68908b35ab002d92c35c037f
 }
 
 /* Styling for images, ensuring they fill their container and are rounded */
@@ -30,6 +41,7 @@ img {
     border-radius: 10px; /* Rounded corners */
 }
 
+<<<<<<< HEAD
 
 
 /* Additional text color settings for headings and paragraphs */
@@ -42,10 +54,18 @@ h2, p {
 }
 
 
+=======
+/* Additional text color settings for headings and paragraphs */
+h2, p {
+    color: rgb(0, 210, 39); /* Uniform neon green text color for consistency */
+}
+
+>>>>>>> 29069c5f68373c5a68908b35ab002d92c35c037f
 /* Styling for the game container with gradients, shadows, and rounded borders */
 #game {
     margin: 20px auto;
     padding: 20px;
+<<<<<<< HEAD
     width: 70%;
     max-width: 600px;
     height: auto; /* Adjust height dynamically based on content */
@@ -53,12 +73,22 @@ h2, p {
     box-shadow: 0 4px 8px rgba(5, 158, 66, 0.6);
     border-radius: 8px;
     overflow: hidden; /* Prevent overflow issues */
+=======
+    width: 50%;
+    height: 500px;
+    background-color: linear-gradient(165deg, #001952, #000000); /* Gradient background */
+    box-shadow: 0 4px 8px rgba(5, 158, 66, 0.6);
+    border-radius: 8px;
+>>>>>>> 29069c5f68373c5a68908b35ab002d92c35c037f
 }
 
 /* Styling for choice buttons to ensure the image and label fit perfectly */
 .choice {
+<<<<<<< HEAD
     font-family: 'Orbitron', sans-serif;
     font-weight: 700;
+=======
+>>>>>>> 29069c5f68373c5a68908b35ab002d92c35c037f
     padding: 0;
     width: 150px;
     height: 150px;
@@ -70,7 +100,10 @@ h2, p {
     position: relative;
     background: none;
     border-radius: 10px;
+<<<<<<< HEAD
     overflow: hidden; /* Prevent child overflow */
+=======
+>>>>>>> 29069c5f68373c5a68908b35ab002d92c35c037f
 }
 
 /* Hidden span elements that show on hover, providing interactive feedback */
@@ -91,9 +124,12 @@ h2, p {
     border-radius: 10px;
 }
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 29069c5f68373c5a68908b35ab002d92c35c037f
 /* Hover effect to show the text within the choice button */
 .choice:hover span {
     opacity: 1;
@@ -125,16 +161,22 @@ h2, p {
 
 /* Apply transformation properties to the title spans */
 h1 span {
+<<<<<<< HEAD
     display: inline-block;
     transition: transform 1s ease-in-out;
     word-wrap: break-word;
     max-width: 100%;
+=======
+    display: inline-block; /* Allows transformation */
+    transition: transform 1s ease-in-out;
+>>>>>>> 29069c5f68373c5a68908b35ab002d92c35c037f
 }
 
 /* Class for animating title spans, called dynamically */
 .zoom-effect {
     animation: zoomInZoomOut 2s ease-in-out;
 }
+<<<<<<< HEAD
 
 
 @media screen and (max-width: 768px) {
@@ -179,3 +221,5 @@ h1 span {
         font-size: 20px;
     }
 }
+=======
+>>>>>>> 29069c5f68373c5a68908b35ab002d92c35c037f
