@@ -11,4 +11,11 @@ HTML, CSS, and JS.
 
 ## Bonuses ✨
 A site can have an image of the customer and its testimony.
-Next or Prev button also it can have a random button.
+Next or Prev button also it can have a random button.'
+
+
+## Screenshot
+
+![Screenshot]Screenshot 2024-05-15 at 1.06.32 PM.png)
+
+
