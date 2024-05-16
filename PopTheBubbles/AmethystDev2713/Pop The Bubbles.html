@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Pop The Bubbles!</title>
+        <meta charset="UTF-8"/>
+        <script>
+            var layer = 0;
+            var count = 0;
+            setInterval(function() {
+                var newBubble = document.createElement("div");
+                newBubble.style.position = "absolute";
+                newBubble.style.marginLeft = (Math.floor(Math.random() * (window.innerWidth)) + 1) + "px";
+                newBubble.style.marginTop = (Math.floor(Math.random() * (window.innerHeight)) + 1) + "px";
+                newBubble.style.height = "24px";
+                newBubble.style.width = "24px";
+                newBubble.style.border = "1px solid DodgerBlue";
+                newBubble.style.borderRadius = "24px";
+                newBubble.style.backgroundColor = "DodgerBlue";
+                layer += 1;
+                newBubble.style.zIndex = layer;
+                document.body.appendChild(newBubble);
+                count += 1;
+                document.getElementById("count").innerHTML = count;
+		newBubble.onclick = function() {
+			newBubble.innerHTML = "POP!";
+			newBubble.style.border = "none";
+			newBubble.style.backgroundColor = "";
+			count -= 1;
+		}
+            }, 200);
+        </script>
+    </head>
+    <body style="position: relative;">
+        <div>Bubbles! There are currently <span id="count">0</span> bubbles on the screen. Click a bubble to pop it</div>
+    </body>
+</html>
