@@ -1,15 +1,35 @@
-const fortunes = [
-    "Your future is looking bright!",
-    "A new opportunity will come your way soon.",
-    "You will find happiness in unexpected places.",
-    "Don't be afraid to take risks.",
-    "Good things will happen when you least expect them.",
-    "Believe in yourself, and you will succeed."
-  
-];
-
-document.getElementById("generate-fortune").addEventListener("click", () => {
-    const randomIndex = Math.floor(Math.random() * fortunes.length);
-    const fortuneText = fortunes[randomIndex];
-    document.querySelector(".fortune").textContent = fortuneText;
-});
+//controls  
+const hatcheck = document.querySelector("#hat");  
+const glassescheck = document.querySelector("#eyeglasses");  
+const tiecheck = document.querySelector("#tie");  
+//accessories  
+const hat = document.querySelector(".hat");  
+const glasses = document.querySelector(".glasses");  
+const tie = document.querySelector(".tie");  
+//Reveal Hat  
+hatcheck.addEventListener("change", hatfun);  
+function hatfun() {  
+ if (hatcheck.checked == true) {  
+  hat.style.bottom = "165px";  
+ } else {  
+  hat.style.bottom = "400px";  
+ }  
+}  
+//Reveal Eyeglasses  
+glassescheck.addEventListener("change", glassesfun);  
+function glassesfun() {  
+ if (glassescheck.checked == true) {  
+  glasses.style.right = "50%";  
+ } else {  
+  glasses.style.right = "-50%";  
+ }  
+}  
+//Reveal Tie  
+tiecheck.addEventListener("change", tiefun);  
+function tiefun() {  
+ if (tiecheck.checked == true) {  
+  tie.style.bottom = "10px";  
+ } else {  
+  tie.style.bottom = "-80px";  
+ }  
+}  
