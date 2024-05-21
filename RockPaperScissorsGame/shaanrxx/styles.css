@@ -1,0 +1,118 @@
+/* Base styles for the body to set font, alignment, and background */
+body {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(165deg, #002c08, #000000); /* Dark green to black gradient */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+/* Styling for the main title with specific margin, color, and a smooth scaling transition */
+h1 {
+    text-align: center;
+    margin-top: 30px; /* Fixed redundant margin-top */
+    color: rgb(0, 210, 39); /* Neon green color */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Styling for images, ensuring they fill their container and are rounded */
+img {
+    width: 100%; /* Full width of their container */
+    height: 100%; /* Full height, adjusted to maintain aspect ratio */
+    display: block; /* Block display to remove bottom space */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Additional text color settings for headings and paragraphs */
+h2, p {
+    color: rgb(0, 210, 39); /* Uniform neon green text color for consistency */
+}
+
+/* Styling for the game container with gradients, shadows, and rounded borders */
+#game {
+    margin: 20px auto;
+    padding: 20px;
+    width: 50%;
+    height: 500px;
+    background-color: linear-gradient(165deg, #001952, #000000); /* Gradient background */
+    box-shadow: 0 4px 8px rgba(5, 158, 66, 0.6);
+    border-radius: 8px;
+}
+
+/* Styling for choice buttons to ensure the image and label fit perfectly */
+.choice {
+    padding: 0;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(5, 158, 66, 0.6);
+    position: relative;
+    background: none;
+    border-radius: 10px;
+}
+
+/* Hidden span elements that show on hover, providing interactive feedback */
+.choice span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+/* Hover effect to show the text within the choice button */
+.choice:hover span {
+    opacity: 1;
+}
+
+/* Reset button styling with transition effects on hover */
+#reset {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: transparent;
+    color: rgb(130, 204, 130);
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 0 4px 8px rgba(5, 158, 66, 0.6);
+    border-radius: 5px;
+}
+
+#reset:hover {
+    background-color: green; /* Changes to solid green on hover */
+    color: black;
+}
+
+/* Animation for zoom effect used in the game title */
+@keyframes zoomInZoomOut {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+}
+
+/* Apply transformation properties to the title spans */
+h1 span {
+    display: inline-block; /* Allows transformation */
+    transition: transform 1s ease-in-out;
+}
+
+/* Class for animating title spans, called dynamically */
+.zoom-effect {
+    animation: zoomInZoomOut 2s ease-in-out;
+}
