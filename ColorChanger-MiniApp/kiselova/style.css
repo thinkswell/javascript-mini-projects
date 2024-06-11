@@ -1,0 +1,105 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #142b37;
+}
+
+.random-element {
+  width: 60%;
+  border: 4px solid black;
+  margin: 2em auto;
+  padding: 1em;
+  border-radius: 10px;
+  background-color: white;
+}
+
+h1 {
+  font-size: 100px;
+  margin-bottom: 0.2em;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+.color-pallets-div {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 1.5em;
+}
+
+.pallet {
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  border-radius: 7px;
+  background-color: blue;
+}
+
+[data-color="red"] {
+  background-color: red;
+}
+
+[data-color="green"] {
+  background-color: green;
+}
+
+[data-color="purple"] {
+  background-color: purple;
+}
+
+.container {
+  background-color: #ffffff;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  padding: 20px 0;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.2);
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #142b37;
+  border-radius: 5px;
+  display: grid;
+  justify-items: center;
+  margin-top: 6em;
+}
+
+.wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+input[type="range"] {
+  display: inline-block;
+  width: 80%;
+  margin-left: 10px;
+  margin-top: 25px;
+}
+
+span {
+  display: inline-block;
+  text-align: center;
+  margin: 20px 0;
+  background-color: #0075ff;
+  color: #ffffff;
+  padding: 10px 30px;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  border-radius: 2px;
+}
