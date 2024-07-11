@@ -1,1 +1,0 @@
-This repo demonstartes drum app using html,css and javascript. 
