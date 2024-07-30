@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background-attachment: fixed;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+.review-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.review-container:hover {
+    transform: translateY(-5px);
+}
+.customer-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    float: left;
+}
+.review-text {
+    overflow: hidden;
+}
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #45a049;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal input, .modal textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.modal input[type="text"] {
+    height: 40px;
+}
+.modal textarea {
+    height: 100px;
+    resize: vertical;
+}
+.modal input[type="file"] {
+    padding: 10px 0;
+}
+.emoji-picker {
+    margin-top: 10px;
+}
+.emoji-picker button {
+    font-size: 20px;
+    margin: 2px;
+    padding: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.star-rating {
+    font-size: 24px;
+    color: #ddd;
+}
+.star-rating .fa-star.checked {
+    color: #ffd700;
+}
+@media (max-width: 600px) {
+    .customer-image {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+    }
+}
