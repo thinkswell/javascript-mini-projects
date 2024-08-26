@@ -1,0 +1,9 @@
+.time {
+	display: grid;
+	place-items: center;
+}
+
+.date {
+	display: grid;
+	place-items: center;
+}
