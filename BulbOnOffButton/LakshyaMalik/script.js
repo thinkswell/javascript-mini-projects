@@ -1,3 +1,4 @@
+
 const ToggleBulb = () =>{
     console.log('d');
     
@@ -18,8 +19,8 @@ const openDialogue = () => {
     document.getElementById("dialogueBox");
     dialogueBox.style.display = "inline-grid";
     dialogueBox.style.position = "fixed"; // Use absolute if you want it relative to a positioned ancestor
-    dialogueBox.style.top = "60%";
-    dialogueBox.style.left = "56%";
+    dialogueBox.style.top = "80%";
+    dialogueBox.style.left = "37%";
 
     
 }
@@ -29,3 +30,4 @@ const openDialogue = () => {
 const closeDialogue = () => {
     document.getElementById("dialogueBox").style.display = "none";
 }
+
