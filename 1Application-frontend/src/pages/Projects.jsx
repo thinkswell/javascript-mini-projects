@@ -26,7 +26,7 @@ const Projects = () => {
       <Navbar />
         
         <Container size="sm" sx={{ mt: "7rem", mb: 4 }}>
-            <Grid container spacing={2} gutterBottom>
+            <Grid container spacing={2}>
                 {names.map((name) => (
                    <Grid item xs={12} sm={6} md={4} key={name}>
                         <Cards 
