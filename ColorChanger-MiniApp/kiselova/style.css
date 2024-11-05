@@ -103,3 +103,9 @@ span {
   letter-spacing: 0.5px;
   border-radius: 2px;
 }
+
+@media only screen and (max-width: 1220px) {
+  .container {
+    margin-top: 13em;
+  }
+}
