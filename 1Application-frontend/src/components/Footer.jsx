@@ -31,9 +31,9 @@ const Footer = () => {
 
         <div className="section">
           <h2>About Us</h2>
-          <z>Our github</z>
-          <z>Github stars</z>
-          <z>Repositories</z>
+          <p>Our github</p>
+          <p>Github stars</p>
+          <p>Repositories</p>
         </div>
 
         <div className="section">
