@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Reviews</h1>
+        <div id="review-container" class="review-container">
+            <img id="customer-image" class="customer-image" src="https://via.placeholder.com/100" alt="Customer">
+            <div class="review-text">
+                <h3 id="customer-name">John Doe</h3>
+                <div id="customer-rating" class="star-rating"></div>
+                <p id="customer-review">This is an amazing product! I highly recommend it to everyone.</p>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="prev-btn">Previous</button>
+            <button id="random-btn">Random</button>
+            <button id="next-btn">Next</button>
+            <button id="add-review-btn">Add Review</button>
+        </div>
+    </div>
+
+    <div id="add-review-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add a Review</h2>
+            <input type="text" id="new-name" placeholder="Your Name">
+            <input type="file" id="new-image" accept="image/*">
+            <div class="star-rating">
+                <i class="far fa-star" data-rating="1"></i>
+                <i class="far fa-star" data-rating="2"></i>
+                <i class="far fa-star" data-rating="3"></i>
+                <i class="far fa-star" data-rating="4"></i>
+                <i class="far fa-star" data-rating="5"></i>
+            </div>
+            <textarea id="new-review" placeholder="Your Review"></textarea>
+            <div class="emoji-picker">
+                <button onclick="addEmoji('😀')">😀</button>
+                <button onclick="addEmoji('👍')">👍</button>
+                <button onclick="addEmoji('❤️')">❤️</button>
+                <button onclick="addEmoji('🌟')">🌟</button>
+                <button onclick="addEmoji('🎉')">🎉</button>
+                <button onclick="addEmoji('☹️')">☹️</button>
+            </div>
+            <button id="submit-review">Submit Review</button>
+        </div>
+    </div>
+
+    <script src="customer-reviews.js"></script>
+</body>
+</html>
