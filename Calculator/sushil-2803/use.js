@@ -14,6 +14,12 @@ function number_handler(event) {
   var currentString = input.innerHTML;
   var lastChar = currentString[currentString.length - 1];
 
+  // enhancement added here: Prevent multiple decimals in a single number
+  if (event.target.innerHTML === '.' && currentString.includes('.')) {
+    console.log("Multiple decimal points not allowed in a single number.");
+    return;
+  }
+
   // if result is not diplayed, just keep adding
   if (resultDisplayed === false) {
     input.innerHTML += event.target.innerHTML;
@@ -40,6 +46,12 @@ function operator_handler(event) {
   // storing current input string and its last character in variables - used later
   var currentString = input.innerHTML;
   var lastChar = currentString[currentString.length - 1];
+
+  // enhancement added here: Prevent consecutive operators
+  if (lastChar === "+" || lastChar === "-" || lastChar === "×" || lastChar === "÷") {
+    input.innerHTML = currentString.slice(0, -1) + event.target.innerHTML;
+    return;
+  }
 
   // if last character entered is an operator, replace it with the currently pressed one
   if (lastChar === "+" || lastChar === "-" || lastChar === "x" || lastChar === "÷") {
@@ -121,6 +133,12 @@ function output(){
   // forming an array of operators. for above string it will be: operators = ["+", "+", "-", "*", "/"]
   // first we replace all the numbers and dot with empty string and then split
   var operators = inputString.replace(/[0-9]|\./g, "").split("");
+
+  // enhancement added here: Division by zero check
+  if (operators.includes("÷") && numbers[numbers.indexOf("÷") + 1] == 0) {
+    alert("Error: Division by zero is undefined.");
+    return;
+  }
 
   console.log(inputString);
   console.log(operators);
