@@ -10,7 +10,7 @@ This project is a particle system simulation created using the p5.js library. Us
 ### Getting Started
 1. Clone this repository to your local machine.
 2. Open the provided HTML file in a web browser.
-3. Have fun :)
+3. Have fun 
 
 ### Technical Info
 - **Framework**: None

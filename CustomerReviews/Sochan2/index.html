@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <!-- Sidebar to show all reviews -->
+    </div>
+
+    <!-- Reviews -->
+    <div class="review-container">
+        <img id="customer-image" src="" alt="Customer Photo">
+        <div id="customer-name"></div>
+        <div id="customer-review"></div>
+        <div class="buttons">
+            <button id="prev">Prev</button>
+            <button id="next">Next</button>
+            <button id="random">Random</button>
+        </div>
+    </div>
+
+    <div id="review-form" class="modal">
+        <div class="modal-content">
+          <span class="close" id="close-form">&times;</span>
+          <h2>Add Your Review</h2>
+          <form id="new-review-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="image">Image URL</label>
+              <input type="text" id="image" name="image" placeholder="Link to your photo" required>
+            </div>
+            <div class="form-group">
+              <label for="review">Review</label>
+              <textarea id="review" name="review" placeholder="Write your review" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit Review</button>
+          </form>
+        </div>
+      </div>
+      <button id="open-form" class="add-review-btn">Add Review</button>
+
+    <script src="js/customerData.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
