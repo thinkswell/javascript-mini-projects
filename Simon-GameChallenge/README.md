@@ -20,3 +20,6 @@
 - **HTML**: Provides the structure for the game's interface.
 - **CSS**: Adds styles, animations, and ensures responsiveness.
 - **JavaScript**: Implements game logic, sequence tracking, and animations.
+
+### 📡 **Live Demo**
+Check out the live demo of the Simon Game: [Simon Game Challenge](https://simongame-challenge.netlify.app/)
