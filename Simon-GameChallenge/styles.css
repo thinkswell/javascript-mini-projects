@@ -1,0 +1,206 @@
+/* General Styles */
+body {
+  text-align: center;
+  background-color: #ecf2ec;
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s, color 0.5s; /* Smooth transition for mode change */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+#level-title {
+  font-size: 3rem;
+  margin-top: 5%;
+  color: #FEF2BF;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 20px auto;
+  width: 80%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  grid-gap: 25px;
+}
+
+.info-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #ebe1e1; 
+  border: 1px solid #e0e0e0; 
+  border-radius: 15px; 
+  box-shadow: 0px 4px 8px rgba(221, 212, 212, 0.2); 
+  padding: 20px;
+  width: 200px;
+  font-family: 'Arial', sans-serif;
+}
+
+.info-panel p {
+  margin: 10px 0;
+}
+
+.mode-selection {
+  margin: 10px 0;
+}
+
+.mode-selection label {
+  margin-right: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.mode-selection input {
+  margin-right: 5px;
+}
+
+#start-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #82b182;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#start-button:hover {
+  background-color: #4cae4c;
+}
+
+#end-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#end-button:hover {
+  background-color: #c9302c;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.red {
+  background-color: rgb(226, 61, 61);
+}
+
+.green {
+  background-color: rgb(105, 226, 105);
+}
+
+.blue {
+  background-color: rgb(113, 113, 246);
+}
+
+.yellow {
+  background-color: rgb(229, 229, 76);
+}
+
+.btn {
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+#level-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  color: white;
+  background: linear-gradient(90deg, #00eaff, #3a7bd5, #6a0dad, #00d2ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 8px rgba(7, 123, 149, 0.8),
+                 0 0 15px rgba(54, 89, 138, 0.6),
+                 0 0 20px rgba(152, 96, 192, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 12px rgba(0, 210, 255, 1),
+                 0 0 20px rgba(58, 123, 213, 0.8),
+                 0 0 25px rgba(106, 13, 173, 0.7);
+  }
+}
+
+/* Robot Icon Link */
+#github-link {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  font-size: 3rem;
+  color: #333;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+#robot-icon {
+  cursor: pointer;
+  font-size: 4rem; /* For emoji, adjust size */
+}
+
+#robot-icon:hover {
+  transform: scale(1.1);
+  color: #00bfff; /* Add a color change effect on hover */
+}
+
+/* Dark/Light Mode Button */
+#mode-toggle {
+  position: fixed;
+  top: 10px; /* Position it near the top */
+  right: 10px; /* Position it in the right corner */
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#mode-toggle.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+#mode-toggle.dark-mode:hover {
+  background-color: #444;
+}
+
+body.dark-mode p, body.dark-mode h1 {
+  color: #fff;
+}
