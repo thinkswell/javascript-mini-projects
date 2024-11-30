@@ -6,6 +6,7 @@ let level = 0;
 let highScore = 0;
 let gameMode = null; // Game mode is null initially
 
+
 // Display the high score and level
 $("#high-score").text(highScore);
 $("#current-level").text(level);

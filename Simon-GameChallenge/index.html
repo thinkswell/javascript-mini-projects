@@ -22,6 +22,7 @@
       </div>
     </div>    
 
+    
     <!-- Info Section -->
     <div class="info-panel">
       <p>Level: <span id="current-level">0</span></p>
@@ -42,6 +43,22 @@
       <button id="start-button">Start Game</button>
       <button id="end-button">End Game</button> <!-- New End Game Button -->
     </div>
+    
+    <div class="how-to-panel">
+      <h2>How to Play</h2>
+      <ul>
+        <li>Press <strong>Start Game</strong> to begin.</li>
+        <li>Watch the sequence of button flashes carefully.</li>
+        <li>Repeat the sequence by clicking the buttons in the same order.</li>
+        <li>If you get it wrong:
+          <ul>
+            <li><strong>Normal Mode:</strong> Retry the same sequence.</li>
+            <li><strong>Tricky Mode:</strong> Game resets to level 0.</li>
+          </ul>
+        </li>
+        <li>Try to achieve the highest score!</li>
+      </ul>
+    </div>
   </div>
 
   <!-- Robot Icon Link -->
@@ -49,8 +66,6 @@
     <span id="robot-icon">🤖</span>
   </a>
 
-  <!-- Dark/Light Mode Button -->
-  <button id="mode-toggle" class="mode-button">🌙</button>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="./game.js" rel="javascript"></script>
