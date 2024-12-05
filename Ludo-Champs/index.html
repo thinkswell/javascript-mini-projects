@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo Game</title>
+    <link rel="icon" type="image/jpg" href="./ludo/dice.png"/>
+    <link rel="stylesheet" href="./ludo/style.css">
+</head>
+<body>
+    <div class="ludo-container">
+        <div class="ludo">
+            <div class="player-pieces">
+                <div class="player-piece" player-id="P1" piece="0"></div>
+                <div class="player-piece" player-id="P1" piece="1"></div>
+                <div class="player-piece" player-id="P1" piece="2"></div>
+                <div class="player-piece" player-id="P1" piece="3"></div>
+
+                <div class="player-piece" player-id="P2" piece="0"></div>
+                <div class="player-piece" player-id="P2" piece="1"></div>
+                <div class="player-piece" player-id="P2" piece="2"></div>
+                <div class="player-piece" player-id="P2" piece="3"></div>
+
+                <div class="player-piece" player-id="P3" piece="0"></div>
+                <div class="player-piece" player-id="P3" piece="1"></div>
+                <div class="player-piece" player-id="P3" piece="2"></div>
+                <div class="player-piece" player-id="P3" piece="3"></div>
+
+                <div class="player-piece" player-id="P4" piece="0"></div>
+                <div class="player-piece" player-id="P4" piece="1"></div>
+                <div class="player-piece" player-id="P4" piece="2"></div>
+                <div class="player-piece" player-id="P4" piece="3"></div>
+            </div>
+
+            <div class="player-bases">
+                <div class="player-base" player-id="P1"></div>
+                <div class="player-base" player-id="P2"></div>
+                <div class="player-base" player-id="P3"></div>
+                <div class="player-base" player-id="P4"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="row">
+                <button id="dice-btn" class="btn btn-dice">Roll</button>
+                <div class="dice-value"></div>
+                <button id="reset-btn" class="btn btn-reset">Reset</button>
+            </div>
+            <h2 class="active-player">Active Player: <span></span></h2>
+        </div>
+    </div>
+
+
+
+
+    <div class="containeer">
+        <div class="dice">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+            <div class="face right"></div>
+            <div class="face left"></div>
+        </div>
+    
+        <button class="roll">
+            Roll Dice
+        </button>
+    
+        <div class="result">Result: 0</div> <!-- Result display area -->
+    </div>
+
+    <!-- JS File -->
+    <script src="script.js" type="text/javascript"></script>
+
+    <script src="./main.js" type="module"></script>
+</body>
+</html>
+
