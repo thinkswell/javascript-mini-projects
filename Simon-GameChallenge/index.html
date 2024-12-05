@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Simon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/jpg" href="./game.png" />
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+<body>
+  <h1 id="level-title">Press Start to Begin</h1>
+  <div class="main-container">
+    <!-- Game Layout -->
+    <div class="container">
+      <div class="row">
+        <div type="button" id="green" class="btn green"></div>
+        <div type="button" id="blue" class="btn blue"></div>
+      </div>
+      <div class="row">
+        <div type="button" id="red" class="btn red"></div>
+        <div type="button" id="yellow" class="btn yellow"></div>
+      </div>
+    </div>    
+
+    
+    <!-- Info Section -->
+    <div class="info-panel">
+      <p>Level: <span id="current-level">0</span></p>
+      <p>High Score: <span id="high-score">0</span></p>
+
+       <!-- Mode Selection -->
+       <div class="mode-selection">
+        <label>
+          <input type="radio" name="mode" value="normal">
+          Normal
+        </label>
+        <label>
+          <input type="radio" name="mode" value="strict">
+          Tricky
+        </label>
+      </div>
+
+      <button id="start-button">Start Game</button>
+      <button id="end-button">End Game</button> <!-- New End Game Button -->
+    </div>
+    
+    <div class="how-to-panel">
+      <h2>How to Play</h2>
+      <ul>
+        <li>Press <strong>Start Game</strong> to begin.</li>
+        <li>Watch the sequence of button flashes carefully.</li>
+        <li>Repeat the sequence by clicking the buttons in the same order.</li>
+        <li>If you get it wrong:
+          <ul>
+            <li><strong>Normal Mode:</strong> Retry the same sequence.</li>
+            <li><strong>Tricky Mode:</strong> Game resets to level 0.</li>
+          </ul>
+        </li>
+        <li>Try to achieve the highest score!</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Robot Icon Link -->
+  <a href="https://github.com/Saiharitha3/Simon-GameChallenge" target="_blank" id="github-link">
+    <span id="robot-icon">🤖</span>
+  </a>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="./game.js" rel="javascript"></script>
+</body>
+</html>
