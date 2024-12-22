@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .color-picker-container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #colorPicker {
+    margin: 10px 0;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  #colorCode {
+    border: none;
+    padding: 5px;
+    width: 100px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .color-preview {
+    margin-top: 15px;
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
