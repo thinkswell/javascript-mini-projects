@@ -1694,5 +1694,21 @@
       "git": "https://api.github.com/repos/thinkswell/javascript-mini-projects/git/trees/4fba75c60b6899102568affe79ed9271aaea1239",
       "html": "https://github.com/thinkswell/javascript-mini-projects/tree/master/randomPassword"
     }
+  },
+  {
+    "name": "GifMaker",
+    "path": "GifMaker",
+    "sha": "newsha1234567890",
+    "size": 0,
+    "url": "https://api.github.com/repos/thinkswell/javascript-mini-projects/contents/GifMaker?ref=master",
+    "html_url": "https://github.com/thinkswell/javascript-mini-projects/tree/master/GifMaker",
+    "git_url": "https://api.github.com/repos/thinkswell/javascript-mini-projects/git/trees/newsha1234567890",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/thinkswell/javascript-mini-projects/contents/GifMaker?ref=master",
+      "git": "https://api.github.com/repos/thinkswell/javascript-mini-projects/git/trees/newsha1234567890",
+      "html": "https://github.com/thinkswell/javascript-mini-projects/tree/master/GifMaker"
+    }
   }
 ]

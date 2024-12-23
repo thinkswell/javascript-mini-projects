@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import Team from "./pages/Team";
 import Project from "./pages/Projects";
 import Profile from "./pages/Profile";
+import GifMaker from "./components/GifMaker";
 import "./index.css";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/team" element={<Team />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/gif-maker" element={<GifMaker />} />
       </Routes>
       <Footer />
     </Fragment>
