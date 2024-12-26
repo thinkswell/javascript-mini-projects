@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0 ;
+    box-sizing: border-box;
+}
+
+#main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #dfe6e9;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 90px;
+}
+
+#addBtn{
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    background-color: #2d3436;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.note{
+    width: 400px;
+    height: 450px;
+    background-color: aliceblue;
+    margin: 90px;
+    border-radius: 15px;
+}
+
+.tool{
+    width: 100%;
+    background-color: #636e72;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+    border-radius: 15px 15px 0px 0px;
+    
+}
+
+.tool i{
+    padding: 7px;
+}
+
+.note textarea{
+    border: none;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    padding: 10px;
+    font-size: 17px;
+    border-radius: 15px;
+}
+.note textarea focus{
+    border: 0;
+    outline: 0;
+
+}
