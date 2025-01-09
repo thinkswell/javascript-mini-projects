@@ -44,7 +44,8 @@ function Home() {
 
   return (
     <div>
-      <HeroSec searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      {/* <HeroSec searchTerm={searchTerm} setSearchTerm={setSearchTerm} /> */}
+      <HeroSec />
 
       <div className="grid grid-cols-3 p-8 gap-4 justify-center ">
         {filteredFolders.map((folder, index) => (
