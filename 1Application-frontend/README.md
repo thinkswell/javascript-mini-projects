@@ -13,7 +13,7 @@ Here're some of the project's best features:
 *   Diverse Project Portfolio: Explore a rich array of projects including web applications APIs and full-stack solutions each demonstrating the capabilities of the MERN stack.
 *   In-Depth Documentation: Every project is accompanied by detailed documentation offering insights into its features architecture and usage.
 *   Search and Filter: Easily find projects by name category technology stack or specific features making it simple to discover projects aligned with your interests.
-*   ontributions: Contribute your own MERN stack projects to the showcase allowing others to learn from and be inspired by your work.
+*   Contributions: Contribute your own MERN stack projects to the showcase allowing others to learn from and be inspired by your work.
 *   Community Interaction: Engage with the MERN development community by discussing projects sharing feedback asking questions and fostering collaboration.
 
 <h2>🛠️ Installation Steps:</h2>
