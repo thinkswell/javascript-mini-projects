@@ -6,14 +6,13 @@ export default function HeroSec({ searchTerm, setSearchTerm }) {
     setSearchTerm(e.target.value);
   };
   return (
-
-    <div>  
-  <section className="bg-center bg-no-repeat bg-[url('https://plus.unsplash.com/premium_photo-1661764393655-1dbffee8c0ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')] bg-gray-700 bg-blend-multiply">
+    <div>
+      <section className="bg-center bg-no-repeat bg-[url('https://plus.unsplash.com/premium_photo-1661764393655-1dbffee8c0ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')] bg-gray-700 bg-blend-multiply">
         <div class="bg-white dark:bg-gray-900">
           <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
             <div class="mr-auto place-self-center lg:col-span-7">
               <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
-               Javascript Mini-Projects
+                Javascript Mini-Projects
               </h1>
               <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"></p>
               <button
@@ -30,7 +29,6 @@ export default function HeroSec({ searchTerm, setSearchTerm }) {
         </div>
       </section>
 
-      
       <div class="flex items-center p-5 bg-gray-900">
         <label for="simple-search" class="sr-only">
           Search
@@ -82,7 +80,6 @@ export default function HeroSec({ searchTerm, setSearchTerm }) {
           <span class="sr-only">Search</span>
         </button>
       </div>
-    
     </div>
   );
 }

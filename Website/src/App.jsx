@@ -7,10 +7,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState("");
+
   return (
     <div>
       {/* <FoldersComponent/> */}
-      <Navbar />
+      {/* <Navbar /> */}
+      <Navbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />;
 
       <Routes>
         <Route exact path="/" element={<Home />}></Route>
