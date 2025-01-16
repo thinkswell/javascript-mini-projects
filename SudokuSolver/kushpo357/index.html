@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudoku Solver</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="container mx-auto text-center py-8">
+    <h1 class="text-4xl font-bold mb-4">Sudoku Solver</h1>
+    <p class="text-lg mb-4">Enter your 9x9 Sudoku puzzle:</p>
+    <form>
+      <table id="sudokuTable" class="mx-auto border-collapse">
+      </table>
+      <div class="mt-4 flex justify-center space-x-4">
+        <button id="resetButton" type="reset" class="button bg-gray-200 px-6 py-3 rounded-md shadow-md hover:bg-gray-300">
+          Reset
+        </button>
+        <button id="solveButton" type="button" onclick="solveSudoku()" class="button bg-blue-500 text-white px-6 py-3 rounded-md shadow-md hover:bg-blue-600">
+          Solve
+        </button>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
