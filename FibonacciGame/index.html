@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fibonacci Click Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Game container -->
+  <div class="game-container">
+    <h1>Fibonacci Click Challenge</h1>
+    <p>Click the Fibonacci numbers in the correct order to advance to the next stage!</p>
+
+    <div class="controls">
+      <div id="levelDisplay" class="level-display">Level: 1</div>
+      <div id="timerDisplay" class="timer-display">Time: 60s</div>
+      <button id="pauseButton">Pause</button>
+      <div class="difficulty-settings">
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="gameBoard" class="game-board">
+      <!-- Floating numbers will appear here -->
+    </div>
+
+    <div id="message" class="message"></div>
+
+    <div id="correctSequence" class="correct-sequence">Correct Sequence: </div>
+
+    <!-- Restart Button moved between Correct Sequence and Leaderboard -->
+    <button id="restartButton" style="display: block; margin: 20px auto; padding: 10px 20px; font-size: 18px; background-color: #0097e6; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Restart Game
+    </button>
+
+    <div class="leaderboard">
+      <h2>Leaderboard</h2>
+      <ol id="leaderboardList">
+        <!-- Leaderboard entries will be added here -->
+      </ol>
+    </div>
+  </div>
+
+  <!-- Sound Effects -->
+  <audio id="correctSound" src="sounds/correct.mp3"></audio>
+  <audio id="incorrectSound" src="sounds/incorrect.mp3"></audio>
+  <audio id="levelUpSound" src="sounds/levelup.mp3"></audio>
+
+  <script src="game.js"></script>
+</body>
+</html>
