@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Number guessing game</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @media (max-width: 500px) {
+      .moving-bar p {
+        animation-duration: 20s;
+      }
+    }
+
+    @media (min-width: 501px) {
+      .moving-bar p {
+        animation-duration: 35s;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="headers">
+    <p id="home">Home</p>
+    <p id="game">About The game</p>
+    <p id="author">Author Details</p>
+  </div>
+
+  <!--Details for headers-->
+  <div class="about-game">
+    <p>The Number Guessing Game is an interactive computational exercise in probabilistic reasoning,
+      designed to engage users in iterative hypothesis testing within a predefined numerical range. The objective is to
+      accurately determine a randomly generated integer within the inclusive bounds of 1 to 100, constrained by a
+      maximum
+      of 10 attempts. The system provides immediate feedback on the relative positioning of each guess in relation to
+      the
+      target value, thereby enabling the player to refine subsequent predictions. The game concludes either upon
+      successful identification of the number or upon exhaustion of the allotted attempts, at which point a reset
+      mechanism facilitates replayability.
+    </p>
+    <div class="close">
+      <img src="icons8-close.svg">
+    </div>
+  </div>
+  <div class="author-details">
+    <p>Developer : Mayank Raj</p>
+    <a href="https://github.com/mayank-0103">My Github Profile</a>
+    <div class="close">
+      <img src="icons8-close.svg">
+    </div>
+  </div>
+
+  <div class="bucket">
+    <h1>Number guessing game</h1>
+    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you
+      if
+      your guess was too high or too low.</p>
+
+    <div class="form">
+      <div>
+        <label for="guessField">Enter a guess: </label>
+        <input type="number" min="1" max="100" required id="guessField" class="guessField">
+      </div>
+      <input type="submit" value="SUBMIT GUESS" class="button" id="guessSubmit" style="position: relative;">
+    </div>
+
+    <div class="resultParas">
+      <p class="guesses"></p>
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
+    </div>
+  </div>
+
+  <div class="moving-bar">
+    <div>
+      <p>Copyright (c) 2025 Mayank Raj
+        🔹 Software Disclaimer 🔹
+        This game is for entertainment purposes only. There are no guarantees of accuracy, fairness, or specific
+        outcomes. The developers are not responsible for any issues arising from its use. Play responsibly and have fun!
+      </p>
+    </div>
+  </div>
+
+  <div class="black"></div>
+  <script src="script.js" defer></script>
+</body>
+
+</html>
