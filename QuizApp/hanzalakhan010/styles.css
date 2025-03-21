@@ -1,0 +1,63 @@
+* {
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgb(159, 70, 241);
+}
+
+#userDetails form {
+  font-size: x-large;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#userDetails form input,
+#userDetails form select,
+#userDetails form button {
+  font-size: x-large;
+  outline: none;
+}
+
+#quizBoard {
+  position: relative;
+  width: 80%;
+  padding: 5%;
+  height: 73vh;
+  background-color: rgb(82, 200, 204);
+}
+#choicesForm button {
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(188, 255, 120);
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  &:hover {
+    cursor: pointer;
+  }
+}
+#choices {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#quizTitle {
+  font-size: x-large;
+}
+
+#choices label,
+#quizBoard p,
+#choicesForm button {
+  font-size: x-large;
+}
+#scoreBoard p{
+  font-size: large;
+}

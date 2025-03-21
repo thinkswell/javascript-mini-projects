@@ -1,0 +1,1041 @@
+{
+  "Physics": [
+    {
+      "question": "What is the SI unit of force?",
+      "type": "radio",
+      "options": [
+        {
+          "text": "Newton",
+          "isCorrect": true
+        },
+        {
+          "text": "Joule",
+          "isCorrect": false
+        },
+        {
+          "text": "Watt",
+          "isCorrect": false
+        }
+      ],
+      "id": "1"
+    },
+    {
+      "question": "What is the speed of light in a vacuum?",
+      "type": "text",
+      "correctAnswer": "299,792,458 m/s",
+      "id": "2"
+    },
+    {
+      "question": "Which of the following are fundamental forces of nature? (Select all that apply)",
+      "type": "checkbox",
+      "options": [
+        {
+          "text": "Gravity",
+          "isCorrect": true
+        },
+        {
+          "text": "Electromagnetism",
+          "isCorrect": true
+        },
+        {
+          "text": "Friction",
+          "isCorrect": false
+        },
+        {
+          "text": "Strong Nuclear Force",
+          "isCorrect": true
+        }
+      ],
+      "id": "3"
+    },
+    {
+      "question": "What is the formula for kinetic energy?",
+      "type": "list",
+      "options": [
+        {
+          "text": "½mv²",
+          "isCorrect": true
+        },
+        {
+          "text": "mgh",
+          "isCorrect": false
+        },
+        {
+          "text": "F=ma",
+          "isCorrect": false
+        },
+        {
+          "text": "PV=nRT",
+          "isCorrect": false
+        }
+      ],
+      "id": "4"
+    },
+    {
+      "question": "Who discovered gravity?",
+      "type": "radio",
+      "options": [
+        {
+          "text": "Isaac Newton",
+          "isCorrect": true
+        },
+        {
+          "text": "Albert Einstein",
+          "isCorrect": false
+        },
+        {
+          "text": "Galileo Galilei",
+          "isCorrect": false
+        }
+      ],
+      "id": "5"
+    },
+    {
+      "question": "What is the unit of electric current?",
+      "type": "text",
+      "correctAnswer": "Ampere",
+      "id": "6"
+    },
+    {
+      "question": "Which of the following are types of energy? (Select all that apply)",
+      "type": "checkbox",
+      "options": [
+        {
+          "text": "Kinetic",
+          "isCorrect": true
+        },
+        {
+          "text": "Potential",
+          "isCorrect": true
+        },
+        {
+          "text": "Thermal",
+          "isCorrect": true
+        },
+        {
+          "text": "Magnetic",
+          "isCorrect": false
+        }
+      ],
+      "id": "7"
+    },
+    {
+      "question": "What is the acceleration due to gravity on Earth?",
+      "type": "list",
+      "options": [
+        {
+          "text": "9.8 m/s²",
+          "isCorrect": true
+        },
+        {
+          "text": "10 m/s²",
+          "isCorrect": false
+        },
+        {
+          "text": "8.9 m/s²",
+          "isCorrect": false
+        },
+        {
+          "text": "11.2 m/s²",
+          "isCorrect": false
+        }
+      ],
+      "id": "8"
+    },
+    {
+      "question": "What is the first law of motion?",
+      "type": "radio",
+      "options": [
+        {
+          "text": "Inertia",
+          "isCorrect": true
+        },
+        {
+          "text": "F=ma",
+          "isCorrect": false
+        },
+        {
+          "text": "Action and Reaction",
+          "isCorrect": false
+        }
+      ],
+      "id": "9"
+    },
+    {
+      "question": "What is the unit of power?",
+      "type": "text",
+      "correctAnswer": "Watt",
+      "id": "10"
+    }
+  ],
+  "Mathematics": [
+    {
+      "question": "What is the value of π (pi) to two decimal places?",
+      "type": "radio",
+      "options": [
+        {
+          "text": "3.14",
+          "isCorrect": true
+        },
+        {
+          "text": "3.16",
+          "isCorrect": false
+        },
+        {
+          "text": "3.12",
+          "isCorrect": false
+        }
+      ],
+      "id": "1"
+    },
+    {
+      "question": "What is the square root of 64?",
+      "type": "text",
+      "correctAnswer": "8",
+      "id": "2"
+    },
+    {
+      "question": "Which of the following are prime numbers? (Select all that apply)",
+      "type": "checkbox",
+      "options": [
+        {
+          "text": "2",
+          "isCorrect": true
+        },
+        {
+          "text": "4",
+          "isCorrect": false
+        },
+        {
+          "text": "7",
+          "isCorrect": true
+        },
+        {
+          "text": "9",
+          "isCorrect": false
+        }
+      ],
+      "id": "3"
+    },
+    {
+      "question": "What is the area of a circle with radius 5?",
+      "type": "list",
+      "options": [
+        {
+          "text": "78.54",
+          "isCorrect": true
+        },
+        {
+          "text": "31.42",
+          "isCorrect": false
+        },
+        {
+          "text": "15.71",
+          "isCorrect": false
+        },
+        {
+          "text": "50.27",
+          "isCorrect": false
+        }
+      ],
+      "id": "4"
+    },
+    {
+      "question": "What is 2 + 2 × 2?",
+      "type": "radio",
+      "options": [
+        {
+          "text": "6",
+          "isCorrect": true
+        },
+        {
+          "text": "8",
+          "isCorrect": false
+        },
+        {
+          "text": "4",
+          "isCorrect": false
+        }
+      ],
+      "id": "5"
+    },
+    {
+      "question": "What is the derivative of x²?",
+      "type": "text",
+      "correctAnswer": "2x",
+      "id": "6"
+    },
+    {
+      "question": "Which of the following are even numbers? (Select all that apply)",
+      "type": "checkbox",
+      "options": [
+        {
+          "text": "2",
+          "isCorrect": true
+        },
+        {
+          "text": "3",
+          "isCorrect": false
+        },
+        {
+          "text": "4",
+          "isCorrect": true
+        },
+        {
+          "text": "5",
+          "isCorrect": false
+        }
+      ],
+      "id": "7"
+    },
+    {
+      "question": "What is the sum of angles in a triangle?",
+      "type": "list",
+      "options": [
+        {
+          "text": "180°",
+          "isCorrect": true
+        },
+        {
+          "text": "90°",
+          "isCorrect": false
+        },
+        {
+          "text": "360°",
+          "isCorrect": false
+        },
+        {
+          "text": "270°",
+          "isCorrect": false
+        }
+      ],
+      "id": "8"
+    },
+    {
+      "question": "What is 10% of 100?",
+      "type": "radio",
+      "options": [
+        {
+          "text": "10",
+          "isCorrect": true
+        },
+        {
+          "text": "1",
+          "isCorrect": false
+        },
+        {
+          "text": "100",
+          "isCorrect": false
+        }
+      ],
+      "id": "9"
+    },
+    {
+      "question": "What is the next number in the sequence: 2, 4, 6, 8, ___?",
+      "type": "text",
+      "correctAnswer": "10",
+      "id": "10"
+    }
+  ],
+  "Geography": [
+    {
+      "question": "What is the longest river in the world?",
+      "type": "radio",
+      "options": [
+        {
+          "text": "Nile",
+          "isCorrect": true
+        },
+        {
+          "text": "Amazon",
+          "isCorrect": false
+        },
+        {
+          "text": "Yangtze",
+          "isCorrect": false
+        }
+      ],
+      "id": "1"
+    },
+    {
+      "question": "Which country has the largest population?",
+      "type": "text",
+      "correctAnswer": "China",
+      "id": "2"
+    },
+    {
+      "question": "Which of the following are continents? (Select all that apply)",
+      "type": "checkbox",
+      "options": [
+        {
+          "text": "Africa",
+          "isCorrect": true
+        },
+        {
+          "text": "Antarctica",
+          "isCorrect": true
+        },
+        {
+          "text": "Greenland",
+          "isCorrect": false
+        },
+        {
+          "text": "Australia",
+          "isCorrect": true
+        }
+      ],
+      "id": "3"
+    },
+    {
+      "question": "What is the capital of France?",
+      "type": "list",
+      "options": [
+        {
+          "text": "Paris",
+          "isCorrect": true
+        },
+        {
+          "text": "London",
+          "isCorrect": false
+        },
+        {
+          "text": "Berlin",
+          "isCorrect": false
+        },
+        {
+          "text": "Rome",
+          "isCorrect": false
+        }
+      ],
+      "id": "4"
+    },
+    {
+      "question": "Which desert is the largest in the world?",
+      "type": "radio",
+      "options": [
+        {
+          "text": "Sahara",
+          "isCorrect": true
+        },
+        {
+          "text": "Arabian",
+          "isCorrect": false
+        },
+        {
+          "text": "Gobi",
+          "isCorrect": false
+        }
+      ],
+      "id": "5"
+    },
+    {
+      "question": "What is the tallest mountain in the world?",
+      "type": "text",
+      "correctAnswer": "Mount Everest",
+      "id": "6"
+    },
+    {
+      "question": "Which of the following are oceans? (Select all that apply)",
+      "type": "checkbox",
+      "options": [
+        {
+          "text": "Pacific",
+          "isCorrect": true
+        },
+        {
+          "text": "Atlantic",
+          "isCorrect": true
+        },
+        {
+          "text": "Mediterranean",
+          "isCorrect": false
+        },
+        {
+          "text": "Indian",
+          "isCorrect": true
+        }
+      ],
+      "id": "7"
+    },
+    {
+      "question": "Which country is known as the Land of the Rising Sun?",
+      "type": "list",
+      "options": [
+        {
+          "text": "Japan",
+          "isCorrect": true
+        },
+        {
+          "text": "China",
+          "isCorrect": false
+        },
+        {
+          "text": "South Korea",
+          "isCorrect": false
+        },
+        {
+          "text": "Thailand",
+          "isCorrect": false
+        }
+      ],
+      "id": "8"
+    },
+    {
+      "question": "What is the capital of Canada?",
+      "type": "radio",
+      "options": [
+        {
+          "text": "Ottawa",
+          "isCorrect": true
+        },
+        {
+          "text": "Toronto",
+          "isCorrect": false
+        },
+        {
+          "text": "Vancouver",
+          "isCorrect": false
+        }
+      ],
+      "id": "9"
+    },
+    {
+      "question": "Which river flows through Egypt?",
+      "type": "text",
+      "correctAnswer": "Nile",
+      "id": "10"
+    }
+  ],
+  "Biology": [
+    {
+      "question": "What is the powerhouse of the cell?",
+      "type": "radio",
+      "options": [
+        {
+          "text": "Mitochondria",
+          "isCorrect": true
+        },
+        {
+          "text": "Nucleus",
+          "isCorrect": false
+        },
+        {
+          "text": "Ribosome",
+          "isCorrect": false
+        }
+      ],
+      "id": "1"
+    },
+    {
+      "question": "Which gas do plants absorb during photosynthesis?",
+      "type": "text",
+      "correctAnswer": "Carbon dioxide",
+      "id": "2"
+    },
+    {
+      "question": "Which of the following are parts of a plant cell? (Select all that apply)",
+      "type": "checkbox",
+      "options": [
+        {
+          "text": "Cell wall",
+          "isCorrect": true
+        },
+        {
+          "text": "Chloroplast",
+          "isCorrect": true
+        },
+        {
+          "text": "Centriole",
+          "isCorrect": false
+        },
+        {
+          "text": "Vacuole",
+          "isCorrect": true
+        }
+      ],
+      "id": "3"
+    },
+    {
+      "question": "What is the largest organ in the human body?",
+      "type": "list",
+      "options": [
+        {
+          "text": "Skin",
+          "isCorrect": true
+        },
+        {
+          "text": "Liver",
+          "isCorrect": false
+        },
+        {
+          "text": "Heart",
+          "isCorrect": false
+        },
+        {
+          "text": "Brain",
+          "isCorrect": false
+        }
+      ],
+      "id": "4"
+    },
+    {
+      "question": "Which blood type is the universal donor?",
+      "type": "radio",
+      "options": [
+        {
+          "text": "O negative",
+          "isCorrect": true
+        },
+        {
+          "text": "A positive",
+          "isCorrect": false
+        },
+        {
+          "text": "B negative",
+          "isCorrect": false
+        }
+      ],
+      "id": "5"
+    },
+    {
+      "question": "What is the process by which plants make their own food?",
+      "type": "text",
+      "correctAnswer": "Photosynthesis",
+      "id": "6"
+    },
+    {
+      "question": "Which of the following are mammals? (Select all that apply)",
+      "type": "checkbox",
+      "options": [
+        {
+          "text": "Whale",
+          "isCorrect": true
+        },
+        {
+          "text": "Shark",
+          "isCorrect": false
+        },
+        {
+          "text": "Bat",
+          "isCorrect": true
+        },
+        {
+          "text": "Frog",
+          "isCorrect": false
+        }
+      ],
+      "id": "7"
+    },
+    {
+      "question": "What is the smallest unit of life?",
+      "type": "list",
+      "options": [
+        {
+          "text": "Cell",
+          "isCorrect": true
+        },
+        {
+          "text": "Atom",
+          "isCorrect": false
+        },
+        {
+          "text": "Molecule",
+          "isCorrect": false
+        },
+        {
+          "text": "Organelle",
+          "isCorrect": false
+        }
+      ],
+      "id": "8"
+    },
+    {
+      "question": "Which part of the brain controls balance and coordination?",
+      "type": "radio",
+      "options": [
+        {
+          "text": "Cerebellum",
+          "isCorrect": true
+        },
+        {
+          "text": "Cerebrum",
+          "isCorrect": false
+        },
+        {
+          "text": "Medulla",
+          "isCorrect": false
+        }
+      ],
+      "id": "9"
+    },
+    {
+      "question": "What is the study of living organisms called?",
+      "type": "text",
+      "correctAnswer": "Biology",
+      "id": "10"
+    }
+  ],
+  "History": [
+    {
+      "question": "Who was the first President of the United States?",
+      "type": "radio",
+      "options": [
+        {
+          "text": "George Washington",
+          "isCorrect": true
+        },
+        {
+          "text": "Thomas Jefferson",
+          "isCorrect": false
+        },
+        {
+          "text": "Abraham Lincoln",
+          "isCorrect": false
+        }
+      ],
+      "id": "1"
+    },
+    {
+      "question": "Which ancient civilization built the pyramids?",
+      "type": "text",
+      "correctAnswer": "Egyptians",
+      "id": "2"
+    },
+    {
+      "question": "Which of the following were major World War II battles? (Select all that apply)",
+      "type": "checkbox",
+      "options": [
+        {
+          "text": "Battle of Stalingrad",
+          "isCorrect": true
+        },
+        {
+          "text": "Battle of Gettysburg",
+          "isCorrect": false
+        },
+        {
+          "text": "D-Day",
+          "isCorrect": true
+        },
+        {
+          "text": "Battle of Waterloo",
+          "isCorrect": false
+        }
+      ],
+      "id": "3"
+    },
+    {
+      "question": "In which year did the Titanic sink?",
+      "type": "list",
+      "options": [
+        {
+          "text": "1912",
+          "isCorrect": true
+        },
+        {
+          "text": "1905",
+          "isCorrect": false
+        },
+        {
+          "text": "1920",
+          "isCorrect": false
+        },
+        {
+          "text": "1898",
+          "isCorrect": false
+        }
+      ],
+      "id": "4"
+    },
+    {
+      "question": "Who wrote the Declaration of Independence?",
+      "type": "radio",
+      "options": [
+        {
+          "text": "Thomas Jefferson",
+          "isCorrect": true
+        },
+        {
+          "text": "Benjamin Franklin",
+          "isCorrect": false
+        },
+        {
+          "text": "John Adams",
+          "isCorrect": false
+        }
+      ],
+      "id": "5"
+    },
+    {
+      "question": "Which empire was ruled by Genghis Khan?",
+      "type": "text",
+      "correctAnswer": "Mongol Empire",
+      "id": "6"
+    },
+    {
+      "question": "Which of the following were ancient Greek city-states? (Select all that apply)",
+      "type": "checkbox",
+      "options": [
+        {
+          "text": "Athens",
+          "isCorrect": true
+        },
+        {
+          "text": "Sparta",
+          "isCorrect": true
+        },
+        {
+          "text": "Rome",
+          "isCorrect": false
+        },
+        {
+          "text": "Troy",
+          "isCorrect": false
+        }
+      ],
+      "id": "7"
+    },
+    {
+      "question": "When did the French Revolution begin?",
+      "type": "list",
+      "options": [
+        {
+          "text": "1789",
+          "isCorrect": true
+        },
+        {
+          "text": "1776",
+          "isCorrect": false
+        },
+        {
+          "text": "1804",
+          "isCorrect": false
+        },
+        {
+          "text": "1812",
+          "isCorrect": false
+        }
+      ],
+      "id": "8"
+    },
+    {
+      "question": "Who discovered America?",
+      "type": "radio",
+      "options": [
+        {
+          "text": "Christopher Columbus",
+          "isCorrect": true
+        },
+        {
+          "text": "Vasco da Gama",
+          "isCorrect": false
+        },
+        {
+          "text": "Ferdinand Magellan",
+          "isCorrect": false
+        }
+      ],
+      "id": "9"
+    },
+    {
+      "question": "Which war was fought between the North and South in the United States?",
+      "type": "text",
+      "correctAnswer": "Civil War",
+      "id": "10"
+    }
+  ],
+  "Computer-Science": [
+    {
+      "question": "What does HTML stand for?",
+      "type": "radio",
+      "options": [
+        {
+          "text": "HyperText Markup Language",
+          "isCorrect": true
+        },
+        {
+          "text": "Hyperlinks and Text Markup Language",
+          "isCorrect": false
+        },
+        {
+          "text": "Home Tool Markup Language",
+          "isCorrect": false
+        }
+      ],
+      "id": "1"
+    },
+    {
+      "question": "Which of the following are JavaScript frameworks? (Select all that apply)",
+      "type": "checkbox",
+      "options": [
+        {
+          "text": "React",
+          "isCorrect": true
+        },
+        {
+          "text": "Angular",
+          "isCorrect": true
+        },
+        {
+          "text": "Django",
+          "isCorrect": false
+        },
+        {
+          "text": "Vue.js",
+          "isCorrect": true
+        }
+      ],
+      "id": "2"
+    },
+    {
+      "question": "What is the output of `console.log(typeof null)` in JavaScript?",
+      "type": "text",
+      "correctAnswer": "object",
+      "id": "3"
+    },
+    {
+      "question": "Which data structure uses LIFO (Last In, First Out)?",
+      "type": "list",
+      "options": [
+        {
+          "text": "Queue",
+          "isCorrect": false
+        },
+        {
+          "text": "Stack",
+          "isCorrect": true
+        },
+        {
+          "text": "Array",
+          "isCorrect": false
+        },
+        {
+          "text": "Linked List",
+          "isCorrect": false
+        }
+      ],
+      "id": "4"
+    },
+    {
+      "question": "What is the time complexity of binary search in a sorted array?",
+      "type": "radio",
+      "options": [
+        {
+          "text": "O(1)",
+          "isCorrect": false
+        },
+        {
+          "text": "O(log n)",
+          "isCorrect": true
+        },
+        {
+          "text": "O(n)",
+          "isCorrect": false
+        },
+        {
+          "text": "O(n log n)",
+          "isCorrect": false
+        }
+      ],
+      "id": "5"
+    },
+    {
+      "question": "Which of the following are valid Python data types? (Select all that apply)",
+      "type": "checkbox",
+      "options": [
+        {
+          "text": "int",
+          "isCorrect": true
+        },
+        {
+          "text": "float",
+          "isCorrect": true
+        },
+        {
+          "text": "char",
+          "isCorrect": false
+        },
+        {
+          "text": "string",
+          "isCorrect": true
+        }
+      ],
+      "id": "6"
+    },
+    {
+      "question": "What does CSS stand for?",
+      "type": "text",
+      "correctAnswer": "Cascading Style Sheets",
+      "id": "7"
+    },
+    {
+      "question": "Which protocol is used for secure communication over a computer network?",
+      "type": "list",
+      "options": [
+        {
+          "text": "HTTP",
+          "isCorrect": false
+        },
+        {
+          "text": "FTP",
+          "isCorrect": false
+        },
+        {
+          "text": "HTTPS",
+          "isCorrect": true
+        },
+        {
+          "text": "SMTP",
+          "isCorrect": false
+        }
+      ],
+      "id": "8"
+    },
+    {
+      "question": "What is the main purpose of a database index?",
+      "type": "radio",
+      "options": [
+        {
+          "text": "To store data permanently",
+          "isCorrect": false
+        },
+        {
+          "text": "To speed up data retrieval",
+          "isCorrect": true
+        },
+        {
+          "text": "To encrypt data",
+          "isCorrect": false
+        },
+        {
+          "text": "To compress data",
+          "isCorrect": false
+        }
+      ],
+      "id": "9"
+    },
+    {
+      "question": "Which of the following are NoSQL databases? (Select all that apply)",
+      "type": "checkbox",
+      "options": [
+        {
+          "text": "MongoDB",
+          "isCorrect": true
+        },
+        {
+          "text": "MySQL",
+          "isCorrect": false
+        },
+        {
+          "text": "Cassandra",
+          "isCorrect": true
+        },
+        {
+          "text": "PostgreSQL",
+          "isCorrect": false
+        }
+      ],
+      "id": "10"
+    }
+  ]
+}

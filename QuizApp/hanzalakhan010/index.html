@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script2.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="userDetails">
+      <h2><b>User Details</b></h2>
+      <form>
+        <input type="Username" id="uname" name="uname" placeholder="Username" />
+        <input type="Name" id="name" name="name" placeholder="Name" />
+        <select id="quizSelect" name="quizSelect">
+          <option value="" disabled selected>Select Subject</option>
+          <option value="Computer-Science">Computer-Science</option>
+          <option value="Mathematics">Mathematics</option>
+          <option value="Physics">Physics</option>
+          <option value="Geography">Geography</option>
+          <option value="Biology">Biology</option>
+          <option value="History">History</option>
+        </select>
+        <select id="difficulty" name="difficulty">
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
+          <option value="Challenge">Challenge</option>
+        </select>
+        <button type="submit">Start Quiz</button>
+      </form>
+    </div>
+    <div id="quizBoard" style="display: none">
+      <div>
+        <span id="quizTitle"></span>
+        <span id="timer"></span>
+      </div>
+      <p id="currentQuestionNo"></p>
+      <p id="currentQuestion"></p>
+      <form id="choicesForm">
+        <div id="choices"></div>
+        <button id="nextQueBtn" type="submit">Next</button>
+      </form>
+    </div>
+    <div id="scoreBoard" style="display: none">
+      <table id="scoreTable">
+        <thead>
+          <tr>
+            <td>Quiz Name</td>
+            <td>Score</td>
+            <td>Difficulty</td>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <p id="uname"></p>
+      <p id="quizName"></p>
+      <p id="quizScore"></p>
+      <p id="advice"></p>
+      <button id="playAgainBtn">Play Again</button>
+    </div>
+  </body>
+</html>
