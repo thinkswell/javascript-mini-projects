@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.calculator {
+    
+    min-width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 2px;
+}
+
+input {
+    width: 100%;
+    border: 2px solid rgb(52, 216, 52);
+    border-radius: 0.3rem;
+    background-color: rgba(52, 216, 52, 0.527);
+    height: 7%;
+    font-size: 2rem;
+    text-align: right;
+    padding-right: 4px;
+    color: black;
+}
+
+button {
+    width: 100%;
+    height: 3rem;
+    transition: transform 0.1s ease-in-out;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+.num-btn {
+    background-color: rgba(163, 88, 218, 0.527);
+    border: 2px solid rgb(162, 88, 214);
+    color: rgb(162, 88, 214);
+    border-radius: 0.14rem;
+    font-size: 1.4rem;
+}
+
+.num-btn:active {
+    background-color: rgb(81, 41, 110);
+    border: 2px solid rgb(81, 41, 110);
+    color: white;
+}
+
+.action-btn {
+    background-color: rgba(51, 104, 173, 0.527);
+    border: 2px solid rgb(51, 104, 173);
+    color: rgb(51, 104, 173);
+    border-radius: 0.15rem;
+    font-size: 1.5rem;
+}
+
+.action-btn:active {
+    border: 2px solid rgb(35, 74, 124);
+    background-color: rgb(35, 74, 124);
+    color: white;
+}
+
+.mega-btn {
+    background-color: rgba(233, 171, 55, 0.527);
+    border: 2px solid rgb(233, 171, 55);
+    border-radius: 0.15rem;
+    font-size: 1rem;
+    color: black;
+}
+
+.mega-btn:active {
+    background-color: rgb(233, 171, 55);
+    color: black;
+}
