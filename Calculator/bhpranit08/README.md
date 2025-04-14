@@ -12,6 +12,3 @@
 
  ## Screenshot
  ![Screenshot](images/screenshot.png)
- 
- ## Preview
- - You can get the preview on <a href="" target="_blank">The Calculator</a>
