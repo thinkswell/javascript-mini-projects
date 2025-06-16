@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f8f8f8;
+  color: #333;
+}
+
+.container {
+  padding: 2rem;
+}
+
+input, button {
+  padding: 0.5rem;
+  margin: 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1.5px solid #1b3a6b; /* darker blue border */
+  outline: none;
+  transition: border-color 0.25s ease;
+}
+
+input:focus {
+  border-color: #14315a;
+}
+
+button {
+  background-color: #1b3a6b; /* darker blue */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: #14315a;
+  outline: none;
+}
+
+#results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.recipe {
+  border: 1px solid #ccc;
+  margin: 1rem;
+  padding: 1rem;
+  width: 200px;
+  background: #fff;
+  border-radius: 16px;      /* rounder corners */
+  box-shadow: 0 2px 6px rgba(27, 58, 107, 0.15);  /* subtle shadow */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.recipe:hover,
+.recipe:focus {
+  box-shadow: 0 6px 20px rgba(27, 58, 107, 0.4);
+  transform: translateY(-4px);
+  outline: none;
+}
+
+.recipe h3 {
+  color: #1b3a6b;
+  margin: 0.5rem 0 0.8rem;
+}
+
+.recipe img {
+  max-width: 100%;
+  border-radius: 12px;  /* round image corners */
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  border-radius: 12px;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close:hover,
+.close:focus {
+  color: #1b3a6b;
+  outline: none;
+}
+
+.veg-badge {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 3px 8px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: 600;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  user-select: none;
+}
