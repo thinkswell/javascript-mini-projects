@@ -162,3 +162,25 @@ button#equal {
     background-color: #223323;
     color: #ffffff;
 }
+
+.display-screen {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: right;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-family: monospace;
+}
+
+.expression {
+    font-size: 20px;
+    color: #aaaaaa;
+    min-height: 24px;
+}
+
+.result {
+    font-size: 32px;
+    font-weight: bold;
+    min-height: 40px;
+}
