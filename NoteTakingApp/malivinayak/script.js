@@ -1,11 +1,11 @@
 let notes = [];
+     let noteItem = document.createElement('div');
+let noteList = document.getElementById('noteList');
 
 function showNotes() {
-    const noteList = document.getElementById('noteList');
     noteList.innerHTML = '<h3>Notes</h3>';
 
     for (let i = 0; i < notes.length; i++) {
-        const noteItem = document.createElement('div');
         noteItem.classList.add('note-item');
         noteItem.innerHTML = `
             <p><a href="#" onclick="showNoteDetails(${i})">${notes[i].title}</a></p>
@@ -55,3 +55,4 @@ function deleteNote(index) {
 }
 
 showNotes();
+
