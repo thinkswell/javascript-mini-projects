@@ -335,3 +335,16 @@
   background-color: #ffffff;  
   clip-path: polygon(0% 0%, 100% 0%, 70% 20%, 100% 100%, 0% 100%, 30% 20%);  
  } 
+@keyframes blink {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    transform: scaleY(1);
+  }
+  10%, 50%, 90% {
+    transform: scaleY(0.1);
+  }
+}
+
+.eye {
+  animation: blink 5s infinite;
+  transform-origin: center center;
+}
