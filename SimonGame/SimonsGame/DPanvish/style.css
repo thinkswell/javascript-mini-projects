@@ -1,0 +1,321 @@
+/* Modern Simon's Game Styles */
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main page layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Game info display */
+.game-info {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(255,255,255,0.95);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+.game-info > div {
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    min-width: 120px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.game-info span {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+/* Game board */
+.game-board {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.simon-container {
+    width: 450px;
+    height: 450px;
+    position: relative;
+}
+
+.simon-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #2c3e50;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    overflow: hidden;
+    position: relative;
+    border: 8px solid #34495e;
+}
+
+/* Color buttons */
+.color-button {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 4px solid #2c3e50;
+    opacity: 0.8;
+}
+
+.color-button:hover {
+    transform: scale(1.02);
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+.color-button.active {
+    opacity: 1;
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255,255,255,0.8);
+    filter: brightness(1.3);
+}
+
+/* Button positions and colors */
+.color-button.red {
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    border-radius: 100% 0 0 0;
+}
+
+.color-button.blue {
+    top: 0;
+    right: 0;
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    border-radius: 0 100% 0 0;
+}
+
+.color-button.green {
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    border-radius: 0 0 0 100%;
+}
+
+.color-button.yellow {
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(45deg, #f1c40f, #f39c12);
+    border-radius: 0 0 100% 0;
+}
+
+/* Center control panel */
+.center-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+    height: 140px;
+    background: linear-gradient(135deg, #ecf0f1, #bdc3c7);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 8px 20px rgba(0,0,0,0.1);
+    border: 6px solid #34495e;
+}
+
+.center-content {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.game-status {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    min-height: 25px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Buttons */
+.start-btn, .endless-btn, .reset-btn {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 3px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.start-btn:hover, .endless-btn:hover, .reset-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.endless-btn {
+    background: linear-gradient(45deg, #f39c12, #e67e22);
+}
+
+.reset-btn {
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+}
+
+
+
+/* Instructions */
+.instructions {
+    background: rgba(255,255,255,0.95);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+.instructions h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.instructions ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.instructions li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #34495e;
+}
+
+.instructions li:before {
+    content: "▶";
+    color: #667eea;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 0.9rem;
+}
+
+.instructions li:last-child {
+    margin-bottom: 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .simon-container {
+        width: 320px;
+        height: 320px;
+    }
+    
+    .center-circle {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .game-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .game-info > div {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .simon-container {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .center-circle {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .game-status {
+        font-size: 0.9rem;
+    }
+    
+    .start-btn, .endless-btn, .reset-btn {
+        font-size: 0.8rem;
+        padding: 8px 14px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+}
