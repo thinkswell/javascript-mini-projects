@@ -1,0 +1,29 @@
+
+
+# Online Education Website
+
+## 📖 Description
+
+A responsive **Online Education Website** built with **HTML, CSS, and JavaScript**.
+It features course listings, an about section, and a contact form with offline support.
+The project is a **Progressive Web App (PWA)** with caching, background sync, and push notification support.
+
+## 🚀 Features
+
+* Responsive design with smooth navigation
+* Courses showcase with images and details
+
+
+## 🛠️ Tech Stack
+
+* **Frontend:** HTML5, CSS3, JavaScript (jQuery)
+* **PWA Support:** Service Worker, Cache API, Background Sync, Push API
+
+## 📂 Project Structure
+
+```
+├── index.html        # Main webpage
+├── style.css         # Stylesheet
+├── script.js         # Frontend logic
+├── service-worker.js # Service worker for PWA features
+└── images/           # Project images
