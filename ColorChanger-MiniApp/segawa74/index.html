@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Changer Mini-App</title>
+    <!-- jQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="control-panel">
+        <h1>Color Changer Mini-App</h1>
+
+        <!-- Target Element Selection -->
+        <div class="section">
+          <h2>Select Element</h2>
+          <div class="element-list">
+            <div class="element-item selected" data-element="box">
+              Box Background
+            </div>
+            <div class="element-item" data-element="heading">Headings</div>
+            <div class="element-item" data-element="text">Text</div>
+            <div class="element-item" data-element="button-primary">
+              Primary Button
+            </div>
+            <div class="element-item" data-element="button-secondary">
+              Secondary Button
+            </div>
+            <div class="element-item" data-element="button-accent">
+              Accent Button
+            </div>
+            <div class="element-item" data-element="border">Borders</div>
+          </div>
+        </div>
+
+        <!-- Color Selection -->
+        <div class="section">
+          <h2>Choose Color</h2>
+          <div class="color-input-group">
+            <input type="color" id="color-picker" value="#3498db" />
+            <input type="text" id="color-code" placeholder="#HEX" />
+          </div>
+
+          <div class="form-group">
+            <label>Opacity: <span id="opacity-value">100%</span></label>
+            <input
+              type="range"
+              id="opacity-slider"
+              min="0"
+              max="100"
+              value="100"
+            />
+          </div>
+
+          <h3>Color Palette</h3>
+          <div class="color-palette" id="basic-palette">
+            <div
+              class="color-swatch selected"
+              style="background-color: #3498db"
+              data-color="#3498db"
+            ></div>
+            <div
+              class="color-swatch"
+              style="background-color: #2ecc71"
+              data-color="#2ecc71"
+            ></div>
+            <div
+              class="color-swatch"
+              style="background-color: #e74c3c"
+              data-color="#e74c3c"
+            ></div>
+            <div
+              class="color-swatch"
+              style="background-color: #f1c40f"
+              data-color="#f1c40f"
+            ></div>
+            <div
+              class="color-swatch"
+              style="background-color: #9b59b6"
+              data-color="#9b59b6"
+            ></div>
+            <div
+              class="color-swatch"
+              style="background-color: #1abc9c"
+              data-color="#1abc9c"
+            ></div>
+            <div
+              class="color-swatch"
+              style="background-color: #e67e22"
+              data-color="#e67e22"
+            ></div>
+            <div
+              class="color-swatch"
+              style="background-color: #34495e"
+              data-color="#34495e"
+            ></div>
+          </div>
+        </div>
+
+        <!-- Saved Colors -->
+        <div class="section">
+          <h2>Saved Colors</h2>
+          <div id="saved-colors">
+            <!-- Saved colors will be inserted here -->
+          </div>
+          <button id="save-color" class="button">Save Current Color</button>
+        </div>
+      </div>
+
+      <div class="preview-area">
+        <div class="preview-box" id="box-preview">
+          <h2 id="heading-preview">Preview Box</h2>
+          <p id="text-preview">
+            This box changes color based on your selection.
+          </p>
+        </div>
+
+        <div class="preview-buttons">
+          <button class="button" id="button-preview">Primary Button</button>
+          <button class="button secondary">Secondary Button</button>
+          <button class="button accent">Accent Button</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
