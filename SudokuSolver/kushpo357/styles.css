@@ -1,0 +1,43 @@
+/* General Body Styling */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Sudoku Table Styling */
+#sudokuTable {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+#sudokuTable td {
+  border: 1px solid #000; /* Standard Grid Borders */
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#sudokuTable tr:nth-child(3n) td {
+  border-bottom: 3px solid #000; /* Thick Line After Every 3rd Row */
+}
+
+#sudokuTable td:nth-child(3n) {
+  border-right: 3px solid #000; /* Thick Line After Every 3rd Column */
+}
+
+#sudokuTable tr:last-child td {
+  border-bottom: none; /* Remove Border for Last Row */
+}
+
+#sudokuTable td:last-child {
+  border-right: none; /* Remove Border for Last Column */
+}
+
+/* Button Styling */
+.button {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
