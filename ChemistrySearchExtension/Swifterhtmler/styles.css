@@ -1,0 +1,10 @@
+body {
+    background-color: rgb(rgb(198, 214, 205), green, blue);
+    width: 200px;
+    max-width: 500px;
+}
+
+#content {
+    display: grid;
+    place-items: center;
+}
