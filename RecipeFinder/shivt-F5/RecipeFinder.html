@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Recipe Finder</h1>
+    <h4>For multiple ingredients, separate keywords by space.</h4>
+    <h4>If no recipes found, try searching ingredient in plural form.</h4>
+    <input type="text" id="ingredient" placeholder="ingredient(s)" />
+    <button id="searchBtn">Search</button>
+    <div id="results"></div>
+  </div>
+  <div id="recipeModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
