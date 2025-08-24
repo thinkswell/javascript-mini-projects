@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Education Website</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Online Education Logo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="menuToggle">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>Welcome to Online Education</h1>
+      <p>Learn from the best instructors and enhance your skills.</p>
+      <a href="#courses" class="btn">Explore Courses</a>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses" class="courses">
+    <div class="container">
+      <h2>Our Courses</h2>
+      <div class="course-list">
+        <div class="course-item">
+          <img src="images/course1.jpg" alt="Course 1">
+          <h3>Web Development</h3>
+          <p>Learn to build modern websites and web applications.</p>
+        </div>
+        <div class="course-item">
+          <img src="images/course2.jpg" alt="Course 2">
+          <h3>Data Science</h3>
+          <p>Master data analysis and machine learning.</p>
+        </div>
+        <div class="course-item">
+          <img src="images/course3.webp" alt="Course 3">
+          <h3>Graphic Design</h3>
+          <p>Create stunning visuals and designs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>We are a leading online education platform offering high-quality courses in various fields. Our mission is to make education accessible to everyone.</p>
+      <img src="images/instructor.jpg" alt="Instructor">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Online Education. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
