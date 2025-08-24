@@ -1,0 +1,190 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Changed from center to flex-start */
+  height: 100vh;
+  color: #ecf0f1;
+  padding-top: 0px; /* Added padding to create space at the top */
+}
+
+h1 {
+  margin: 20px 0; /* Added margin for spacing */
+  color: #00cec9;
+  text-align: center;
+}
+
+.game-container {
+  background-color: #1e272e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  color: #dcdde1;
+}
+
+p {
+  margin-bottom: 20px;
+  color: #b2bec3;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.level-display,
+.timer-display {
+  font-size: 18px;
+  color: #74b9ff;
+  margin: 5px 0;
+}
+
+.pause-button {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: #636e72;
+  color: #ecf0f1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.difficulty-settings {
+  margin-top: 10px;
+}
+
+.difficulty-settings label {
+  margin-right: 5px;
+  color: #dfe6e9;
+}
+
+.game-board {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: #2f3640;
+  border: 2px solid #718093;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.number {
+  position: absolute;
+  background-color: #4cd137;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.number:hover {
+  transform: scale(1.2);
+  background-color: #44bd32;
+}
+
+.message {
+  margin-top: 15px;
+  font-size: 20px;
+  height: 24px;
+}
+
+.message.correct {
+  color: #00b894;
+  animation: fadeIn 0.5s;
+}
+
+.message.incorrect {
+  color: #d63031;
+  animation: shake 0.5s;
+}
+
+.correct-sequence {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #74b9ff;
+}
+
+.leaderboard {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.leaderboard h2 {
+  color: #00cec9;
+}
+
+.leaderboard ol {
+  padding-left: 20px;
+  color: #dcdde1;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .game-board {
+    height: 300px;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .difficulty-settings {
+    margin-top: 10px;
+  }
+}
+
+/* Restart Button Style */
+#restartButton {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #0097e6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#restartButton:hover {
+  background-color: #00a8ff;
+}
+
+#restartButton:focus {
+  outline: none;
+}
+
+#restartButton:active {
+  background-color: #273c75;
+}
