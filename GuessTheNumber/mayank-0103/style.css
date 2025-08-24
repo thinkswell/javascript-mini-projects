@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Press+Start+2P&display=swap');
+
+html {
+    font-family: "Kelly Slab", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    width: 90vw;
+    margin: auto;
+}
+
+.headers {
+    position: absolute;
+    width: 98vw;
+    background-color:rgb(255, 245, 231);
+    padding: 0px 10px;
+    top: 10px;
+    border-radius: 0px;
+    border: 1px solid rgb(116, 48, 5);
+    overflow: hidden;
+}
+
+.headers>p {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 5px 15px;
+    background-color:darkgoldenrod;
+    font-size: 1.4rem;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.about-game, .author-details {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    z-index: 2;
+    background-color: antiquewhite;
+}
+
+.about-game>p, .author-details>p {
+    margin: 0;
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease-out, visibility 0.5s linear;
+}
+
+.hide {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-out, visibility 0.5s linear 0.5s;
+}
+
+.close img {
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.close img:hover {
+    transform: scale(1.2);
+}
+
+.black-bg {
+    position: absolute;
+    visibility: visible;
+    background-color: black;
+    opacity: 0.8;
+    height: 100vh;
+    width: 100vw;
+    transition: all 0.5s linear;
+}
+
+/*
+.black-bg .bucket,
+.black-bg .moving-bar,
+.black-bg .headers {
+    pointer-events: none;
+    user-select: none;
+    transition: all 2000ms linear;
+}
+*/
+
+.bucket {
+    max-width: 600px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px 40px;
+    background-color: aliceblue;
+}
+
+h1 {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 2em;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    width: fit-content;
+    gap: 10px;
+}
+
+.button {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.2em;
+    background-color: rgb(255, 215, 141);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    border: 1.5px solid rgb(104, 11, 5);
+    box-shadow: 1px 1px 1px;
+    cursor: pointer;
+}
+
+.new {
+    background-color: greenyellow;
+    border: 1px solid black;
+}
+
+#guessField {
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#guessField:focus {
+    outline: none;
+    background-color: rgb(255, 255, 235);
+}
+
+.form input[type="number"] {
+    width: 200px;
+}
+
+.lastResult {
+    color: white;
+    padding: 3px;
+}
+
+.moving-bar {
+    position: absolute;
+    background-color:rgb(255, 245, 231);
+    padding: 0px 5px;
+    margin: 0px 0px;
+    width: 100%;
+    bottom: 10px;
+    border-radius: 40px;
+    border: 1px solid rgb(116, 48, 5);
+    overflow: hidden;
+}
+
+.moving-bar>div {
+    position: relative;
+    margin: 5px 10px;
+    font-weight: bold;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.moving-bar>div>p {
+    font-size: 1.5em;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    white-space: nowrap;  /* Prevents text from wrapping */
+    overflow: hidden;  /* Hides overflowing text */
+}
+
+@media (max-width: 650px) {
+    .headers {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 98vw;
+        background-color:rgb(255, 245, 231);
+        padding: 5px 10px;
+        top: 10px;
+        border-radius: 0px;
+        border: 1px solid rgb(116, 48, 5);
+        overflow: hidden;
+    }
+
+    .headers>p {
+        margin: 5px 0px;
+        padding: 5px 4px;
+        font-size: 1.2em;
+    }
+
+    .about-game, .author-details {
+        width: 90%;
+    }
+
+    .bucket {
+        padding: 20px 20px;
+        background-color: aliceblue;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-top: 0px;
+    }
+
+    .bucket>p {
+        text-align: justify;
+    }
+
+    .form {
+        gap: 5px;
+    }
+
+    .form input[type="number"] {
+        width: 150px;
+    }
+
+    #guessField:focus {
+        background-color: white;
+    }
+}
