@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon's Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Game Title -->
+        <header>
+            <h1>Simon's Game</h1>
+        </header>
+
+        <!-- Score and Level Display -->
+        <div class="game-info">
+            <div>Score: <span id="score">0</span></div>
+            <div>Level: <span id="level">1</span></div>
+            <div>Mode: <span id="mode">Classic</span></div>
+        </div>
+
+        <!-- Main Game Board -->
+        <div class="game-board">
+            <div class="simon-container">
+                <div class="simon-circle">
+                    <!-- Color Buttons -->
+                    <div class="color-button red" id="red"></div>
+                    <div class="color-button blue" id="blue"></div>
+                    <div class="color-button green" id="green"></div>
+                    <div class="color-button yellow" id="yellow"></div>
+                    
+                    <!-- Center Control Panel -->
+                    <div class="center-circle">
+                        <div class="center-content">
+                            <div class="game-status" id="gameStatus">Press Start</div>
+                            <button id="startBtn" class="start-btn">Start Game</button>
+                            <button id="endlessBtn" class="endless-btn">Endless Mode</button>
+                            <button id="resetBtn" class="reset-btn" style="display: none;">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <ul>
+                <li>Click "Start Game" to begin</li>
+                <li>Watch the pattern of colors</li>
+                <li>Click the colors in the same order</li>
+                <li>Each level adds one more color</li>
+                <li>Try to get the highest score!</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Audio Files (Optional - will use beep sounds if files not found) -->
+    <audio id="sound1" preload="auto">
+        <source src="sound1.mp3" type="audio/mpeg">
+        <source src="sound1.wav" type="audio/wav">
+    </audio>
+    <audio id="sound2" preload="auto">
+        <source src="sound2.mp3" type="audio/mpeg">
+        <source src="sound2.wav" type="audio/wav">
+    </audio>
+    <audio id="sound3" preload="auto">
+        <source src="sound3.mp3" type="audio/mpeg">
+        <source src="sound3.wav" type="audio/wav">
+    </audio>
+    <audio id="sound4" preload="auto">
+        <source src="sound4.mp3" type="audio/mpeg">
+        <source src="sound4.wav" type="audio/wav">
+    </audio>
+    <audio id="gameOverSound" preload="auto">
+        <source src="GameOver.mp3" type="audio/mpeg">
+        <source src="GameOver.wav" type="audio/wav">
+    </audio>
+
+    <!-- Game Script -->
+    <script src="main.js"></script>
+</body>
+</html>
