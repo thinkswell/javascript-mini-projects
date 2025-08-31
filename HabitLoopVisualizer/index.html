@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cue → Routine → Reward App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1>✨ Cue → Routine → Reward ✨</h1>
+    
+    <!-- Navigation Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="main">Habit Loop</button>
+      <button class="tab-btn" data-tab="calendar">Calendar</button>
+      <button class="tab-btn" data-tab="stats">Statistics</button>
+    </div>
+
+    <!-- Main Tab Content -->
+    <div class="tab-content active" id="main-tab">
+      <!-- Cue Input -->
+      <div class="cue-section">
+        <input type="text" id="cueInput" placeholder="Enter your current mood/cue (e.g., sad, stressed)">
+        <button id="cueBtn">Find Routines</button>
+      </div>
+
+      <!-- Routine Options -->
+      <div class="routine-section" id="routineSection"></div>
+
+      <!-- Timer Section -->
+      <div class="timer-section" id="timerSection" style="display: none;">
+        <h3>Routine Timer</h3>
+        <div class="timer-display" id="timerDisplay">00:00</div>
+        <div class="timer-controls">
+          <button id="startTimer">Start</button>
+          <button id="pauseTimer" disabled>Pause</button>
+          <button id="resetTimer" disabled>Reset</button>
+          <button id="completeRoutine">Complete</button>
+        </div>
+      </div>
+
+      <!-- Motivation -->
+      <div class="motivation" id="motivation"></div>
+
+      <!-- Reward -->
+      <div class="reward" id="reward"></div>
+
+      <!-- Checklist -->
+      <div class="checklist" id="checklist"></div>
+
+      <!-- Streak + Quote -->
+      <div class="extras">
+        <p id="quote"></p>
+        <p>🔥 Streak: <span id="streak">0</span> days</p>
+      </div>
+    </div>
+
+    <!-- Calendar Tab Content -->
+    <div class="tab-content" id="calendar-tab">
+      <h2>Consistency Calendar</h2>
+      <div class="calendar-header">
+        <button id="prevMonth">&lt;</button>
+        <h3 id="currentMonth">January 2023</h3>
+        <button id="nextMonth">&gt;</button>
+      </div>
+      <div class="calendar" id="calendar"></div>
+      <div class="calendar-legend">
+        <div class="legend-item">
+          <span class="legend-color completed"></span>
+          <span>Completed</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-color partial"></span>
+          <span>Partial</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-color missed"></span>
+          <span>Missed</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Statistics Tab Content -->
+    <div class="tab-content" id="stats-tab">
+      <h2>Your Habit Statistics</h2>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>Most Common Cues</h3>
+          <div id="cuesChart" class="chart-container"></div>
+        </div>
+        
+        <div class="stat-card">
+          <h3>Most Completed Routines</h3>
+          <div id="routinesChart" class="chart-container"></div>
+        </div>
+        
+        <div class="stat-card">
+          <h3>Average Routine Time</h3>
+          <div class="big-number" id="avgTime">0 min</div>
+        </div>
+        
+        <div class="stat-card">
+          <h3>Completion Rate</h3>
+          <div class="big-number" id="completionRate">0%</div>
+        </div>
+      </div>
+      
+      <div class="recent-activities">
+        <h3>Recent Activities</h3>
+        <div id="recentActivities" class="activities-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
