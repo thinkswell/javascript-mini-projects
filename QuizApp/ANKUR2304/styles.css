@@ -83,3 +83,32 @@
   .hide {
     display: none;
   }
+
+  /*--================================== 
+  Dark theme styles
+  ==================================--*/
+  .theme-button {
+    width: 100%;
+    padding: 30px;
+    text-align: right;
+    position: fixed;
+    top: 0;
+  }
+
+  .theme-button button {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .theme-button #light-theme-btn {
+    display: none;
+  }
+
+  .container-dark {
+    background: #000000;
+    color: #ffffff;
+    box-shadow: 0 0 10px 2px #000000;
+  }

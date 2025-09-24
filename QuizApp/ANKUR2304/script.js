@@ -6,6 +6,13 @@ const questionContainerElement = document.getElementById("question-container");
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 
+// Theme buttons
+const lightThemeButton = document.getElementById('light-theme-btn');
+const darkThemeButton = document.getElementById('dark-theme-btn');
+// Theme body
+const mainContainer = document.querySelector('.container');
+
+
 let shuffledQuestions, currentQuestionIndex;
 
 startButton.addEventListener("click", startGame);
@@ -123,3 +130,40 @@ const questions = [
     ],
   },
 ];
+
+
+// Check for saved theme preference on page load
+window.addEventListener('load', () => {
+  const savedDarkMode = localStorage.getItem('darkMode');
+  if (savedDarkMode === 'enabled') {
+    applyDarkTheme();
+  } else {
+    applyLightTheme();
+  }
+});
+
+// Dark theme activation
+darkThemeButton.addEventListener('click', () => {
+  applyDarkTheme();
+  localStorage.setItem('darkMode', 'enabled');
+});
+
+// Dark theme deactivation
+lightThemeButton.addEventListener('click', () => {
+  applyLightTheme();
+  localStorage.setItem('darkMode', 'disabled');
+});
+
+// Function to apply dark theme styles
+function applyDarkTheme() {
+  darkThemeButton.style.display = 'none';
+  lightThemeButton.style.display = 'initial';
+  mainContainer.classList.add('container-dark');
+}
+
+// Function to apply light theme styles
+function applyLightTheme() {
+  darkThemeButton.style.display = 'initial';
+  lightThemeButton.style.display = 'none';
+  mainContainer.classList.remove('container-dark');
+}
