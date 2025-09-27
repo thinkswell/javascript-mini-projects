@@ -10,14 +10,34 @@ buttons.forEach((item) => {
       display.innerText = string.substr(0, string.length - 1);
     } else if (display.innerText != "" && item.id == "equal") {
       try {
-        if (display.innerText.includes("/0")) {
+        // Division by zero validation
+        if (/\/(0+(?![0-9\.]))/.test(display.innerText)) {
           throw new Error("Division by zero");
+        }
+        // Consecutive operators validation
+        if (/([+\-*/]{2,})/.test(display.innerText)) {
+          throw new Error("Consecutive operators");
+        }
+        // Multiple decimal points in a number validation
+        const tokens = display.innerText.split(/([+\-*/])/);
+        for (let token of tokens) {
+          if (token.split(".").length > 2) {
+            throw new Error("Multiple decimals in a number");
+          }
         }
         display.innerText = Function(
           '"use strict";return (' + display.innerText + ")"
         )();
       } catch (e) {
-        display.innerText = "Cannot divide by zero!";
+        let errorMsg = "Error!";
+        if (e.message === "Division by zero") {
+          errorMsg = "Cannot divide by zero!";
+        } else if (e.message === "Consecutive operators") {
+          errorMsg = "Invalid consecutive operators!";
+        } else if (e.message === "Multiple decimals in a number") {
+          errorMsg = "Invalid decimal usage!";
+        }
+        display.innerText = errorMsg;
         setTimeout(() => (display.innerText = ""), 2000);
       }
     } else if (display.innerText == "" && item.id == "equal") {
@@ -25,12 +45,24 @@ buttons.forEach((item) => {
       setTimeout(() => (display.innerText = ""), 2000);
     } else {
       const lastChar = display.innerText.slice(-1);
-      if (
-        ["+", "-", "*", "/"].includes(lastChar) &&
-        ["+", "-", "*", "/"].includes(item.innerText)
-      ) {
-        // Prevent adding multiple consecutive operators
-        display.innerText = display.innerText.slice(0, -1) + item.innerText;
+      if (["+", "-", "*", "/"].includes(item.innerText)) {
+        // Prevent consecutive operators
+        if (
+          display.innerText === "" ||
+          ["+", "-", "*", "/"].includes(lastChar)
+        ) {
+          // Don't allow operator at start or after another operator
+          return;
+        }
+        display.innerText += item.innerText;
+      } else if (item.innerText === ".") {
+        // Prevent multiple decimals in a number
+        const parts = display.innerText.split(/([+\-*/])/);
+        const lastNum = parts[parts.length - 1];
+        if (lastNum.includes(".")) {
+          return;
+        }
+        display.innerText += item.innerText;
       } else {
         display.innerText += item.innerText;
       }
