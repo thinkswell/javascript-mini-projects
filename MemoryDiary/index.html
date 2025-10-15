@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemoryDiary - Your Encrypted Diary</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="book-cover">
+        <div class="book-binding"></div>
+        <div class="book-content">
+            <header>
+                <h1><i class="fas fa-book"></i> MemoryDiary</h1>
+                <p class="tagline">Your thoughts, encrypted and secure</p>
+            </header>
+
+            <div class="auth-panel" id="authPanel">
+                <div class="auth-container">
+                    <h2>Welcome to Your Diary</h2>
+                    <div class="input-group">
+                        <label for="passphrase">Set Your Passphrase</label>
+                        <input type="password" id="passphrase" placeholder="Enter a strong passphrase">
+                        <small>This will encrypt your diary. Make it strong and don't forget it!</small>
+                    </div>
+                    <button id="initBtn" class="btn-primary">Initialize Diary</button>
+                </div>
+            </div>
+
+            <div class="main-app hidden" id="mainApp">
+                <div class="sidebar">
+                    <div class="user-area">
+                        <div class="user-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <p class="user-greeting">Hello, Diarist!</p>
+                    </div>
+                    
+                    <div class="entry-list" id="entryList">
+                        <h3>Your Entries</h3>
+                        <div class="search-box">
+                            <input type="text" id="searchInput" placeholder="Search entries...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="entries" id="entriesContainer">
+                            <!-- Entries will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <button id="newEntryBtn" class="btn-new-entry">
+                        <i class="fas fa-plus"></i> New Entry
+                    </button>
+                </div>
+
+                <div class="editor-container">
+                    <div class="page-texture">
+                        <div class="editor-header">
+                            <input type="text" id="entryTitle" placeholder="Entry Title">
+                            <div class="editor-actions">
+                                <button id="saveBtn" class="btn-save"><i class="fas fa-lock"></i> Save & Encrypt</button>
+                                <button id="deleteBtn" class="btn-delete"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="editor-content">
+                            <textarea id="entryContent" placeholder="Dear Diary..."></textarea>
+                        </div>
+                        <div class="editor-footer">
+                            <p class="encryption-status">
+                                <i class="fas fa-shield-alt"></i> This entry will be encrypted with AES-256
+                            </p>
+                            <p id="wordCount">0 words</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="unlock-modal hidden" id="unlockModal">
+                <div class="modal-content">
+                    <h3><i class="fas fa-lock"></i> Unlock Entry</h3>
+                    <div class="input-group">
+                        <label for="unlockPassphrase">Enter your passphrase</label>
+                        <input type="password" id="unlockPassphrase" placeholder="Your passphrase">
+                    </div>
+                    <div class="modal-buttons">
+                        <button id="unlockBtn" class="btn-primary">Unlock</button>
+                        <button id="cancelUnlockBtn" class="btn-cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notification" id="notification">
+                <span id="notificationText"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

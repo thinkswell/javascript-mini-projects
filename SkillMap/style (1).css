@@ -1,0 +1,355 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.page {
+  display: none;
+  min-height: 90vh;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.active {
+  display: block;
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: #fdbb2d;
+  text-shadow: 0 0 10px rgba(253, 187, 45, 0.7);
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.btn {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  background: linear-gradient(to right, #fdbb2d, #b21f1f);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  position: relative;
+  z-index: 10;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.skill-map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.back-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.progress-container {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 20px;
+  background: linear-gradient(to right, #fdbb2d, #b21f1f);
+  border-radius: 10px;
+  width: 0%;
+  transition: width 0.5s ease;
+}
+
+.skill-map {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.skill-node {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+.skill-node:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #fdbb2d;
+}
+
+.skill-node.completed {
+  background: rgba(76, 175, 80, 0.3);
+  border-color: #4caf50;
+}
+
+.skill-node.locked {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.skill-node.locked:hover {
+  transform: none;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: transparent;
+}
+
+.skill-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.skill-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.skill-desc {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.lock-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fdbb2d;
+}
+
+.quiz-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.quiz-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.quiz-progress {
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+.question-container {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.question {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.options {
+  display: grid;
+  gap: 15px;
+}
+
+.option {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.option.selected {
+  background: rgba(253, 187, 45, 0.3);
+  border: 2px solid #fdbb2d;
+}
+
+.code-editor {
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  font-family: "Courier New", monospace;
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.code-title {
+  font-size: 1.2rem;
+}
+
+.code-area {
+  width: 100%;
+  min-height: 200px;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.quiz-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.completion-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.completion-icon {
+  font-size: 8rem;
+  color: #4caf50;
+  margin-bottom: 30px;
+  animation: bounce 1s infinite alternate;
+}
+
+.completion-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.completion-message {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+.xp-earned {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-20px);
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .skill-map {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+}
