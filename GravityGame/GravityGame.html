@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gravity Runner</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+    canvas {
+      background: #111;
+      border: 3px solid #fff;
+      border-radius: 10px;
+    }
+    #score {
+      position: absolute;
+      top: 20px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div id="score">Score: 0</div>
+  <canvas id="gameCanvas" width="600" height="400"></canvas>
+  <script>
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+
+    let player = {
+      x: 50,
+      y: 300,
+      size: 30,
+      gravity: 1,
+      onCeiling: false
+    };
+
+    let obstacles = [];
+    let score = 0;
+    let gameOver = false;
+
+    function startGame() {
+      obstacles = [];
+      score = 0;
+      gameOver = false;
+      player.y = 300;
+      player.onCeiling = false;
+      document.getElementById("score").textContent = "Score: 0";
+      requestAnimationFrame(gameLoop);
+    }
+
+    function drawPlayer() {
+      ctx.fillStyle = "#ff9800";
+      ctx.fillRect(player.x, player.y, player.size, player.size);
+    }
+
+    function drawObstacles() {
+      ctx.fillStyle = "#4caf50";
+      obstacles.forEach(obs => {
+        ctx.fillRect(obs.x, obs.y, obs.width, obs.height);
+      });
+    }
+
+    function updateObstacles() {
+      obstacles.forEach(obs => obs.x -= 4);
+      obstacles = obstacles.filter(obs => obs.x + obs.width > 0);
+
+      if (Math.random() < 0.02) {
+        let height = 40;
+        let y = player.onCeiling ? 0 : canvas.height - height;
+        obstacles.push({ x: canvas.width, y, width: 30, height });
+      }
+    }
+
+    function detectCollision() {
+      for (let obs of obstacles) {
+        if (
+          player.x < obs.x + obs.width &&
+          player.x + player.size > obs.x &&
+          player.y < obs.y + obs.height &&
+          player.y + player.size > obs.y
+        ) {
+          gameOver = true;
+        }
+      }
+    }
+
+    function gameLoop() {
+      if (gameOver) {
+        ctx.fillStyle = "red";
+        ctx.font = "30px Arial";
+        ctx.fillText("Game Over! Click to Restart", 100, canvas.height / 2);
+        return;
+      }
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Flip player position if ceiling
+      player.y = player.onCeiling ? 0 : canvas.height - player.size;
+
+      drawPlayer();
+      drawObstacles();
+      updateObstacles();
+      detectCollision();
+
+      score++;
+      document.getElementById("score").textContent = "Score: " + score;
+
+      requestAnimationFrame(gameLoop);
+    }
+
+    function flipGravity() {
+      if (!gameOver) {
+        player.onCeiling = !player.onCeiling;
+      }
+    }
+
+    document.addEventListener("keydown", e => {
+      if (e.code === "Space") flipGravity();
+    });
+
+    canvas.addEventListener("click", () => {
+      if (gameOver) {
+        startGame();
+      } else {
+        flipGravity();
+      }
+    });
+
+    startGame();
+  </script>
+</body>
+</html>
