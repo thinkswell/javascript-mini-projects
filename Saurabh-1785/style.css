@@ -1,0 +1,237 @@
+body{
+  background-color: #a5d8a6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /*for different os, default size*/
+  color: #003400;
+  line-height: 1.6;
+  margin: 0;
+}
+
+header h1{
+  display: flex;
+  justify-content: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: clamp(20px, 4vw, 50px);
+}
+
+.calculator-container {
+  background-color: #FFFFFF;
+  padding: 32px;
+  border-radius: 15px;
+  max-width: 800px;
+  width: 90%;
+  /*
+  For viewports narrower than what max-width would allow (effectively, viewports narrower than 800px / 0.90 = ~889px), the calculator will take up 90% of the available width. This ensures it scales down gracefully on smaller screens and doesn't touch the edges of the viewport immediately.
+  */
+  margin: 50px auto;
+  box-shadow: 10px 15px 50px rgba(4, 52, 15, 0.4);
+  /* x y blur color*/ 
+  box-sizing: border-box;
+  display: flex; 
+  gap: 30px;
+}
+
+.input-section,
+.output-section{
+  flex: 1;
+}
+
+.input-field{
+  width: 100%;
+  padding: 10px 12px;
+  margin: 0 0 16px 0; /*top right bottom left*/
+  border: 1px solid #098f07;
+  border-radius: 4px;
+  font-size: 1rem; /* 1rem usually matches body font size */
+  background-color: #fff;
+  box-sizing: border-box;
+
+}
+
+label,
+.form-control p{
+  display: block;
+  font-size: 1rem;/* Makes labels slightly smaller than input text (1rem) */
+  font-weight: 600;
+  color: #095d16;
+  margin-bottom: 10px;
+
+} 
+
+.tip-buttons-container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tip-percent-btn{
+  padding: 10px;
+  /* width: 100%; */
+  background-color: #003400;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem; /* Slightly larger font size for button text */
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;/* [Property to animate] [duration] [type], [another prop] .... */
+
+}
+
+.tip-percent-btn:hover{
+  background-color: #a5d8a6;
+  color: #003400;
+  transform: translateY(-2px)scale(1.05);
+}
+
+.tip-percent-btn.active { /*target button which is  active in javascript*/
+  background-color: #a5d8a6;
+  color: #0a5e03;
+}
+
+#custom-tip {
+  padding: 10px;
+  border: 1px solid #00474b;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+}
+
+.output-section{
+  background-color: #003400;
+  padding: 30px 25px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+
+}
+
+.result-line{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-label p{
+  color: #ffffff;
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 600;
+
+}
+
+.result-label span{
+  color: #7fa8a9;
+  font-size: 1rem;
+  display: block;
+}
+
+.result-value span {
+  color: #a5d8a6;
+  font-size: 2.2rem;
+  font-weight: 700;
+  /* display: block; */
+  text-align: right;
+}
+
+.reset-btn {
+
+  width: 100%;                
+  padding: 12px;
+  background-color: #a5d8a6; 
+  color: #003400;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 700;          
+  text-transform: uppercase;/* Makes "RESET" text more prominent and command-like */
+  text-align: center; 
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.reset-btn:hover {
+  background-color: #ffffff;
+  color: #00474B;
+}
+
+.reset-btn:active {
+    background-color: #003400;
+    color: #a5d8a6;
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .calculator-container { 
+    flex-direction: column;
+    align-items: stretch; 
+    padding: 15px;
+  }
+
+  .inputs-section,
+  .outputs-section { 
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .outputs-section {
+    margin-bottom: 0;
+  }
+
+  .input-label {
+    font-size: 0.875rem;
+    margin-bottom: 6px;
+  }
+
+  input[type="number"]#bill-input,
+  input[type="number"]#custom-tip-input,
+  input[type="number"]#people-input { 
+    font-size: 1rem;     
+    padding: 10px 12px;
+  }
+
+  .input-field-group { 
+    margin-bottom: 16px;
+  }
+
+  .tip-percent-btn { 
+    font-size: 0.9rem;  
+    padding: 10px 8px; 
+  }
+
+  .output-description .per-person-label { 
+    font-size: 0.8rem;  
+  }
+
+  label {
+    font-size: 0.9rem; 
+  }
+
+  #reset-button { 
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+    margin-top: 20px; 
+  }
+
+  .result-value, 
+  #tip-amount-display,
+  #total-amount-display {
+    font-size: 1.75rem;
+  }
+
+  .input-group {
+    margin-bottom: 15px;
+  }
+
+  .output-label {
+    font-size: 0.85rem;
+  }
+}

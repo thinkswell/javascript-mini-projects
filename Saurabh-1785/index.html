@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INTERACTIVE TIP CALCULATOR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Interactive Tip Calculator</h1>
+  </header>
+  
+  <div class="calculator-container">
+
+    <div class="input-section">                     
+
+      <div class="form-control">
+
+        <label for="bill">Bill</label>
+        <input type="number" id="bill" class="input-field" placeholder="0" min="0">
+
+        <div class="tip-selection">
+          <p>Select Tip Percentage</p>
+          
+          <div class="tip-buttons-container">
+
+            <button type="button" class="tip-percent-btn" data-tip="5">5%</button>
+            <button type="button" class="tip-percent-btn" data-tip="10">10%</button>
+            <button type="button" class="tip-percent-btn" data-tip="15">15%</button>
+            <button type="button" class="tip-percent-btn" data-tip="25">25%</button>
+            <button type="button" class="tip-percent-btn" data-tip="50">50%</button>
+            <input type="number" id="custom-tip" class="input-field" placeholder="Custom" min="0">
+              
+          </div>
+        </div>
+
+      </div>
+
+      <label for="num-people">Number Of People</label>
+      <input type="number" id="num-people" class="input-field" placeholder="1" min="1">
+
+    </div>
+
+    <div class="output-section">
+
+      <div class="result-line">
+
+        <div class="result-label">
+
+          <p>Tip Amount</p>
+          <span>/ person</span>
+
+        </div>
+
+        <div class="result-value">
+
+          <span id="tip-amount-display">&#8377 0.00</span>
+        </div>
+
+      </div>
+
+      <div class="result-line">
+       
+        <div class="result-label">
+
+          <p>Total</p>
+          <span>/ person</span>
+
+        </div>
+       
+        <div class="result-value">
+
+            <span id="total-amount-display">&#8377 0.00</span>
+
+        </div>
+
+      </div>
+
+      <button type="button" id="reset-button" class="reset-btn">RESET</button>
+
+    </div>
+
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
