@@ -2,13 +2,12 @@ let value = ""
 
 let ans = 0
 
-
 function setInput() {
     let input = document.getElementById("ans");
     input.value = value
 }
 
-window.onload = function() {
+window.onload = function () {
     setInput()
 }
 
@@ -22,7 +21,6 @@ function NumberButtonClick(number) {
         value += number
     }
 
-
     setInput()
 }
 
@@ -35,7 +33,6 @@ function isOperator(value) {
 }
 
 function functionButton(Function) {
-
     let input = document.getElementById("ans");
     if (input.value == "" || input.value == null) { return; }
     let lastChar = value[value.length - 1];
@@ -43,7 +40,6 @@ function functionButton(Function) {
     if (isOperator(lastChar) && Function !== '8') {
         return;
     }
-
 
     switch (Function) {
         case functionVar.add:
@@ -59,7 +55,12 @@ function functionButton(Function) {
                 value += "x";
             break;
         case functionVar.equal:
-            ans = eval(value.replace("x", "*").replace("%", "*1/100").replace("^", "**"));
+            ans = eval(
+                value
+                    .replace(/x/g, "*")
+                    .replace(/%/g, "*1/100")
+                    .replace(/\^/g, "**")
+            );
             value = ans;
             break;
         case functionVar.division:
@@ -81,12 +82,15 @@ function functionButton(Function) {
             value = value.slice(0, -1)
             break;
         case functionVar.decimal:
-            if (lastChar !== "." && !value.includes('.'))
+            let parts = value.split(/[\+\-\x\/\%\^]/); // split by any operator
+            let currentPart = parts[parts.length - 1];
+
+            if (!currentPart.includes(".")) {
                 value += ".";
+            }
             break;
+
     }
 
-
     setInput()
-
 }
