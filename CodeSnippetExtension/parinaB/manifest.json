@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Code Snippet Saver",
+  "version": "1.0",
+  "description": "Save, search and manage your favorite code snippets instantly!",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Code Snippet Saver"
+  },
+  
+  "permissions": ["storage"]
+}
