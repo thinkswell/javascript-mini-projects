@@ -5,28 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>BMI Calculator</title>
 </head>
 <body>
+    <div class="background"></div>
     <div class="container">
-    <h1>BMI Calculator</h1>
-    <form>
-    <p class="units"><label>Units: </label><select type="select" id="units">
-      <option>Metric</option>
-      <option>Imperial</option>
-    </select></p>
-    <p><label id="height-label">Height in CM: </label><input type="text" name="height" id="height"></p>
-    <p><label id="weight-label">Weight in KG: </label><input type="text" name="weight" id="weight"></p>
-    <button type="submit">Calculate</button>
-    <div id="results"></div>
-    <div id="weight-guide">
-    <h3>BMI Weight Guide</h3>
-    <p>Under Weight = Less than 18.6</p>
-    <p>Normal Range = 18.6 and 24.9</p>
-    <p>Overweight = Greater than 24.9</p>
+        <div class="calculator-card">
+            <div class="header">
+                <h1>BMI Calculator</h1>
+                <p class="subtitle">Calculate your Body Mass Index</p>
+            </div>
+            
+            <form id="bmi-form">
+                <div class="form-group">
+                    <label class="form-label">Measurement Units</label>
+                    <div class="unit-toggle">
+                        <button type="button" class="unit-btn active" data-unit="metric">Metric</button>
+                        <button type="button" class="unit-btn" data-unit="imperial">Imperial</button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label id="height-label" class="input-label">Height (cm)</label>
+                    <div class="input-wrapper">
+                        <input type="number" name="height" id="height" placeholder="Enter height" step="0.1" min="0">
+                        <span class="input-unit" id="height-unit">cm</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label id="weight-label" class="input-label">Weight (kg)</label>
+                    <div class="input-wrapper">
+                        <input type="number" name="weight" id="weight" placeholder="Enter weight" step="0.1" min="0">
+                        <span class="input-unit" id="weight-unit">kg</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="calculate-btn">
+                    <span>Calculate BMI</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </form>
+
+            <div id="results" class="results hidden">
+                <div class="bmi-value">
+                    <span class="bmi-number" id="bmi-number">0</span>
+                    <span class="bmi-label">BMI</span>
+                </div>
+                <div class="bmi-category" id="bmi-category">
+                    <span id="category-text"></span>
+                </div>
+                <div class="bmi-range" id="bmi-range"></div>
+            </div>
+
+            <div class="weight-guide">
+                <h3>BMI Categories</h3>
+                <div class="guide-items">
+                    <div class="guide-item underweight">
+                        <div class="guide-color"></div>
+                        <div class="guide-text">
+                            <span class="guide-label">Underweight</span>
+                            <span class="guide-range">&lt; 18.5</span>
+                        </div>
+                    </div>
+                    <div class="guide-item normal">
+                        <div class="guide-color"></div>
+                        <div class="guide-text">
+                            <span class="guide-label">Normal</span>
+                            <span class="guide-range">18.5 - 24.9</span>
+                        </div>
+                    </div>
+                    <div class="guide-item overweight">
+                        <div class="guide-color"></div>
+                        <div class="guide-text">
+                            <span class="guide-label">Overweight</span>
+                            <span class="guide-range">25 - 29.9</span>
+                        </div>
+                    </div>
+                    <div class="guide-item obese">
+                        <div class="guide-color"></div>
+                        <div class="guide-text">
+                            <span class="guide-label">Obese</span>
+                            <span class="guide-range">≥ 30</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    </form>
-    </div>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
