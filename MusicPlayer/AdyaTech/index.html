@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/1935d064dd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="main">
+      <div class="container box">
+        <div class="music">
+          <!-- Music player -->
+          <div class="music-player">
+            <!-- Header -->
+            <div class="header">
+              <i class="fas fa-music"></i>
+              <h2>Now Playing</h2>
+              <i class="fas fa-bars"></i>
+            </div>
+            <!-- Song Details -->
+            <div class="details">
+              <img class="track-image" src="./images/img1.jpg" alt="" />
+              <p class="title">Song Title</p>
+              <p class="artist">Artist Name</p>
+            </div>
+            <!-- Player Controls -->
+            <div class="controls">
+              <div class="song-timer">
+                <span class="current-time">00:12</span>
+                <span class="duration-time">04:10</span>
+              </div>
+              <!-- Song duration -->
+              <div class="duration">
+                <input
+                  type="range"
+                  class="duration-slider"
+                  min="0"
+                  max="100"
+                  value="0"
+                />
+              </div>
+              <!-- Buttons - Play, next and Prev -->
+              <div class="buttons">
+                <button class="prev">
+                  <i class="fas fa-step-backward"></i>
+                </button>
+                <button class="play">
+                  <i class="fas fa-play"></i>
+                </button>
+                <button class="next">
+                  <i class="fas fa-step-forward"></i>
+                </button>
+              </div>
+              <!-- Autoplay -->
+              <button class="play-all">
+                Play All <i class="fas fa-sync-alt"></i>
+              </button>
+              <!-- Volume -->
+              <div class="volume">
+                <p id="show-volume">50</p>
+                <i class="fas fa-volume-mute" id="volume-icon"></i>
+                <input type="range" id="volume" min="0" max="100" value="50" />
+              </div>
+            </div>
+          </div>
+
+          <!-- PlayList -->
+          <div class="music-playlist">
+            <!-- Header -->
+            <div class="header playlist-header">
+              <i class="fas fa-music"></i>
+              <h2>Playlist</h2>
+              <i class="fas fa-times"></i>
+            </div>
+            <!-- Playlist Item -->
+            <div class="playlist-div">
+              <!-- <div class="playlist">
+                <span class="song-index">1</span>
+                <p class="single-song">Song one</p>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="music.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
