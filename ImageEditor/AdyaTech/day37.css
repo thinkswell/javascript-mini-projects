@@ -1,0 +1,111 @@
+  /* // delete the following line if no text is used */
+  /* // edit the line if you wanna use other fonts */
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+  /* // use only the available space inside the 400x400 frame */
+  .frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+    background: #869dfa;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .center{
+    width: 100%;
+    height: 130px;
+    position: absolute;
+    top: 135px;
+    left: 0px;
+    transform: perspective(60px);
+    transform-style: preserve-3d;
+  }
+
+  .card{
+    width: 140px;
+    height: 130px;
+    background-color: #fff;
+    position: absolute;
+    left: 130px;
+    top: 0px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .header{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(255, 197, 39);
+  }
+
+  .line{
+    width: 120px;
+    height: 3px;
+    background-color: #e7e2e2;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .card-1 {
+    animation: switch-1 5s ease-in-out infinite both;	
+  }
+  .card-2 {
+    animation: switch-2 5s ease-in-out infinite both;	
+  }
+  .card-3 {
+    animation: switch-3 5s ease-in-out infinite both;	
+  }
+
+  @keyframes switch-1 {
+    0%, 100% {
+      transform: translate3d(0,0,0);
+      box-shadow: 4px 8px 12px 0px rgba(0,0,0,0.2);
+    }
+    33.33% {
+      transform: translate3d(145px,0,-45px);
+      box-shadow: 2px 4px 6px 0px rgba(0,0,0,0.2);
+    }
+    66.66% {
+      transform: translate3d(-145px,0,-45px);
+      box-shadow: 2px 4px 6px 0px rgba(0,0,0,0.2);
+    }
+  }
+
+  @keyframes switch-2 {
+    0%, 100% {
+      transform: translate3d(145px,0,-45px);
+      box-shadow: 2px 4px 6px 0px rgba(0,0,0,0.2);
+    }
+    33.33% {
+      transform: translate3d(-145px,0,-45px);
+      box-shadow: 2px 4px 6px 0px rgba(0,0,0,0.2);
+    }
+    66.66% {
+      transform: translate3d(0,0,0);
+      box-shadow: 4px 8px 12px 0px rgba(0,0,0,0.2);
+    }
+  }
+
+  @keyframes switch-3 {
+    0%, 100% {
+      transform: translate3d(-145px,0,-45px);
+      box-shadow: 2px 4px 6px 0px rgba(0,0,0,0.2);
+    }
+    33.33% {
+      transform: translate3d(0,0,0);
+      box-shadow: 4px 8px 12px 0px rgba(0,0,0,0.2);
+    }
+    66.66% {
+      transform: translate3d(145px,0,-45px);
+      box-shadow: 2px 4px 6px 0px rgba(0,0,0,0.2);
+    }
+  }
