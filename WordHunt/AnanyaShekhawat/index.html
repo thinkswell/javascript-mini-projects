@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Hunt</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🔤 Word Hunt</h1>
+        
+        <div class="game-info">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="words-found">Words: <span id="wordsFound">0</span></div>
+            <div class="timer">Time: <span id="timer">3:00</span></div>
+        </div>
+
+        <div class="timer-controls">
+            <button class="timer-btn" id="timer1min">1 Min</button>
+            <button class="timer-btn active" id="timer3min">3 Min</button>
+            <button class="timer-btn" id="timer5min">5 Min</button>
+            <button class="timer-btn" id="timerUnlimited">Unlimited</button>
+        </div>
+
+        <div class="current-word" id="currentWord"></div>
+
+        <div class="grid-container">
+            <canvas id="connectionCanvas"></canvas>
+            <div class="grid" id="grid"></div>
+        </div>
+
+        <div class="message" id="message"></div>
+
+        <div class="buttons">
+            <button class="clear-btn" id="clearBtn">Clear</button>
+            <button class="new-game-btn" id="newGameBtn">New Game</button>
+        </div>
+
+        <div class="word-list">
+            <h3>Found Words:</h3>
+            <div id="foundWords"></div>
+        </div>
+    </div>
+</body>
+</html>
