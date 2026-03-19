@@ -36,3 +36,19 @@ function calculate() {
         alert("Error: Invalid operation.");
     }
 }
+
+function calculateSqrt() {
+    const value = parseFloat(display.value);
+    
+    if (isNaN(value)) {
+        alert("Error: 请输入有效数字");
+        return;
+    }
+    
+    if (value < 0) {
+        display.value = "请输入非负数";
+        return;
+    }
+    
+    display.value = Math.sqrt(value);
+}
