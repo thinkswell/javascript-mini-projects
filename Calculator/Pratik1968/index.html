@@ -17,7 +17,9 @@
         power:"7",
         clear:"8",
         backspace:"9",
-        decimal:"."
+        decimal:".",
+        sqrt:"10",
+        negate:"11"
     }
   </script>
   <script src="main.js"></script>
@@ -30,6 +32,7 @@
 <div class="grid grid-cols-4 gap-2 ">
 <button class="flex items-center justify-center bg-[#4E505F] rounded-lg p-3" onclick="functionButton(functionVar.clear)">C</button>
 <button class="flex items-center justify-center bg-[#4E505F] rounded-lg p-3" onclick="functionButton(functionVar.power)">^</button>
+<button class="flex items-center justify-center bg-[#4E505F] rounded-lg p-3" onclick="functionButton(functionVar.sqrt)">√</button>
 <button class="flex items-center justify-center bg-[#4E505F] rounded-lg p-3" onclick="functionButton(functionVar.percentage)">%</button>
 <button class="flex items-center justify-center bg-[#4B5EFC] rounded-lg p-3" onclick="functionButton(functionVar.division)">/</button>
 <button class="flex items-center justify-center bg-[#2E2F38] rounded-lg p-3" onclick="NumberButtonClick(7)">7</button>
@@ -45,6 +48,7 @@
 <button class="flex items-center justify-center bg-[#2E2F38] rounded-lg p-3" onclick="NumberButtonClick(3)">3</button>
 <button class="flex items-center justify-center bg-[#4B5EFC] rounded-lg p-3" onclick="functionButton(functionVar.add)">+</button>
 <button class="flex items-center justify-center bg-[#2E2F38] rounded-lg p-3" onclick="functionButton(functionVar.decimal)">.</button>
+<button class="flex items-center justify-center bg-[#2E2F38] rounded-lg p-3" onclick="functionButton(functionVar.negate)">+/-</button>
 <button class="flex items-center justify-center bg-[#2E2F38] rounded-lg p-3" onclick="NumberButtonClick(0)">0</button>
 <button class="flex items-center justify-center bg-[#2E2F38] rounded-lg flex items-center" onclick="functionButton(functionVar.backspace)"><span class="material-symbols-outlined">
     backspace
