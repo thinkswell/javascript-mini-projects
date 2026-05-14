@@ -17,6 +17,7 @@
           id="site_name"
           placeholder="enter name (atlest 4 charecter)"
         />.
+        
         <button onclick="save_site()">save</button>
         <button onclick="cancel_site()">cancel</button>
       </div>
@@ -40,26 +41,39 @@
     <!--Sites______________________________________________________________-->
     <!--Sites______________________________________________________________-->
     <div id="sites">
-      <div id="create_site" class="site_iteam">
-        <a> <div>+</div></a>
-        <i>add iteam</i>
-      </div>
+
+    <div id="create_site" class="site_iteam">
+      <a class="add_icon">+</a>
+      <i>Add Item</i>
     </div>
+
+  </div>
 
     <!-- to-do____________________________________________________________ -->
     <!-- to-do____________________________________________________________ -->
     <div id="note">
       <div class="note">
-        <h2>TO_DO List</h2>
-
+        <h2>
+        TO_DO List
+        <button onclick="exportCSV()">Export CSV</button>
+      </h2>
+      <div class="task_controls">
         <input
           type="text"
-          placeholder=" Write here ...."
+          placeholder="Write here..."
           id="input"
           autofocus
-          value="  "
         />
-        <ul id="in"></ul>
+
+        <select id="priority">
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+        <button id="add_task">Add</button>
+      </div>
+
+      <ul id="in"></ul>
       </div>
       <!-- note_______________________________________________________ -->
       <!-- note_______________________________________________________ -->
