@@ -74,6 +74,19 @@ function functionButton(Function) {
             if (lastChar !== "^")
                 value += "^";
             break;
+        case functionVar.sqrt:
+            let num = parseFloat(value);
+            if (isNaN(num)) {
+                return;
+            }
+            if (num < 0) {
+                value = "请输入非负数";
+                setInput();
+                value = "";
+                return;
+            }
+            value = Math.sqrt(num).toString();
+            break;
         case functionVar.clear:
             value = "";
             break;
@@ -83,6 +96,12 @@ function functionButton(Function) {
         case functionVar.decimal:
             if (lastChar !== "." && !value.includes('.'))
                 value += ".";
+            break;
+        case functionVar.negate:
+            let numToNegate = parseFloat(value);
+            if (!isNaN(numToNegate)) {
+                value = (numToNegate * -1).toString();
+            }
             break;
     }
 

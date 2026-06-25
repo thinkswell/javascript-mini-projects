@@ -59,3 +59,26 @@ const equal = () => {
         inputEl.value = "Error"
     }
 }
+
+const squareRoot = () => {
+    const inputEl = document.getElementById("input-el")
+    const realInput = document.getElementById("real-input-el")
+    
+    const currentValue = realInput.value
+    
+    if (currentValue === "" || currentValue === "Error") {
+        return
+    }
+    
+    const number = parseFloat(currentValue)
+    
+    if (number < 0) {
+        inputEl.value = "请输入非负数"
+        realInput.value = ""
+        return
+    }
+    
+    const result = Math.sqrt(number)
+    realInput.value = result.toString()
+    inputEl.value = result.toString()
+}
