@@ -53,6 +53,10 @@ body{
     height:28px;
     width:220px;
 }
+#inputBtn.error{
+    color: #b91c1c;
+    border: 2px solid #b91c1c;
+}
 .clearBtn{
     border-radius:3px;
     padding:2px;
