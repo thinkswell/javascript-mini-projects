@@ -1,5 +1,6 @@
 
 const list = document.querySelector("#input")
+const priority = document.querySelector("#priority")
 const uo = document.querySelector("#in")
 const date_ = document.querySelector("#date")
 const time = document.querySelector("#time")
@@ -15,6 +16,10 @@ function update()
      var s = now.getSeconds()
     if (h > 12)
         h = h - 12
+    h = String(h).padStart(2, "0");
+    m = String(m).padStart(2, "0");
+    s = String(s).padStart(2, "0");
+
     time.innerHTML = `${h}:${m}:${s}`
    
     
@@ -78,7 +83,19 @@ document.querySelector("#google").addEventListener("keypress",
         
     })
 
+document.querySelector("#add_task").addEventListener("click", function ()
+{
+    if(list.value.trim() !== "")
+    {
+        add(
+            list.value,
+            priority.value,
+            true
+        );
 
+        list.value = "";
+    }
+});
 
 
 
@@ -109,104 +126,149 @@ list.addEventListener("keyup",
     function (event) {
 
         if (event.key == "Enter" && this.value!= "") {
-               add(this.value,true) 
+            add(this.value, priority.value, true)
             this.value = ""
 
         }    }
 )
+const add = (iteam, priorityValue, waha) => {
 
-const add = (iteam ,waha) => {
-    var i = document.createElement("li");
+    const i = document.createElement("li");
 
+    let priorityClass = priorityValue.toLowerCase();
 
-       
-  
-    i.innerHTML = `<button class="but" > x </button> ${iteam}  `
-        ;
-    console.log(iteam);
-   
-    var b = true
+    i.innerHTML = `
+    
+    <div class="task_content">
+
+        <span class="priority_badge ${priorityClass}">
+            ${priorityValue}
+        </span>
+
+        <span class="task_text">
+            ${iteam}
+        </span>
+
+    </div>
+
+    <button class="but">×</button>
+    `;
+
+    var b = true;
+
     i.addEventListener("click",
-        function (event) {
-            if (b == true) {
-                this.firstChild.style.visibility = "visible"
-                this.style.backgroundColor = "blue";
-                this.style.textDecoration = "line-through"
-                b = false
+        function (event)
+        {
+            if(event.target.classList.contains("but"))
+                return;
+
+            if (b)
+            {
+                this.style.opacity = "0.6";
+                this.style.textDecoration = "line-through";
+                b = false;
             }
-            else {
-                this.firstChild.style.visibility = "hidden"
-                this.style.backgroundColor = "deepskyblue";
-                this.style.textDecoration = "none"
-                b = true
+            else
+            {
+                this.style.opacity = "1";
+                this.style.textDecoration = "none";
+                b = true;
             }
-            
         }
+    );
 
-        
-    
-    )
-
- 
-    
     uo.appendChild(i);
+
     if (waha == true)
     {
-        var count = localStorage.getItem("num")
-        count = parseInt(count);
-        count = count + 1
-        localStorage.setItem("num", count)
-        localStorage.setItem(count.toString(), iteam)
+        let count = parseInt(localStorage.getItem("num"));
+
+        count++;
+
+        localStorage.setItem("num", count);
+
+        const task = {
+            text: iteam,
+            priority: priorityValue
+        };
+
+        localStorage.setItem(
+            count.toString(),
+            JSON.stringify(task)
+        );
     }
 
-    i.querySelector("button").addEventListener("click",
-        function (event) {
-            var chil = 0 
-            for (j = 0; j < 100;j++)
-            {
-                if (uo.childNodes[j] == i) {
-                    chil = j + 1;
-                    break;
-                }
-            }
-            
-
+    i.querySelector(".but").addEventListener("click",
+        function ()
+        {
             i.remove();
-
-             del(chil)
-
-          }
-      )
-
-      
-    
-    
+        }
+    );
 }
-
 
 function del(num)
 {
     for (i = num; i < parseInt(localStorage.getItem("num")); i++)
     {
-        localStorage.setItem(num.toString(),localStorage.getItem((num+1).toString()))
-
-        
+        localStorage.setItem(
+            i.toString(),
+            localStorage.getItem((i + 1).toString())
+        );
     }
-    localStorage.removeItem(localStorage.getItem("num"))
-    localStorage.setItem("num",parseInt(localStorage.getItem("num"))-1)
-    
+
+    localStorage.removeItem(localStorage.getItem("num"));
+
+    localStorage.setItem(
+        "num",
+        parseInt(localStorage.getItem("num")) - 1
+    );
 }
 
-    
+function exportCSV()
+{
+    let csv = "Task,Priority\n";
+
+    for (
+        let i = 1;
+        i <= parseInt(localStorage.getItem("num"));
+        i++
+    )
+    {
+        const task = JSON.parse(
+            localStorage.getItem(i.toString())
+        );
+
+        if (task)
+        {
+            csv += `${task.text},${task.priority}\n`;
+        }
+    }
+
+    const blob = new Blob([csv], {
+        type: "text/csv"
+    });
+
+    const link = document.createElement("a");
+
+    link.href = URL.createObjectURL(blob);
+
+    link.download = "tasks.csv";
+
+    link.click();
+}  
 
 
 
 for (i = 1; i <= parseInt(localStorage.getItem("num")); i++)
 {
-    if (localStorage.getItem(i.toString())) 
-        add(localStorage.getItem(i.toString()), false)
-    
+    if (localStorage.getItem(i.toString()))
+    {
+        const task = JSON.parse(
+            localStorage.getItem(i.toString())
+        );
 
+        add(task.text, task.priority, false);
+    }
 }
 
 // note-2__________________________________________________________________________________________
@@ -216,9 +278,11 @@ for (i = 1; i <= parseInt(localStorage.getItem("num")); i++)
 if ( !localStorage.getItem("note_counter"))
     localStorage.setItem("note_counter", 1)
 
- if (!localStorage.getItem("current_note")) 
-{localStorage.setItem("current_note", 1)
-localStorage.setItem("note1", "_null")}
+if (!localStorage.getItem("current_note"))
+{
+    localStorage.setItem("current_note", 1);
+    localStorage.setItem("note1", "");
+}
 
 
 
@@ -231,28 +295,38 @@ const save = document.querySelector("#save")
 
 function add_note()
 {
+    let count = parseInt(localStorage.getItem("note_counter"));
 
-    localStorage.setItem("note_counter", (parseInt(localStorage.getItem("note_counter")) + 1))
-    localStorage.setItem("note" + localStorage.getItem("note_counter"), " ")
-    localStorage.setItem("current_note",localStorage.getItem("note_counter"))
-    display(parseInt(localStorage.getItem("note_counter")))
-    
+    count++;
+
+    localStorage.setItem("note_counter", count);
+
+    localStorage.setItem("note" + count, "");
+
+    localStorage.setItem("current_note", count);
+
+    display(count);
 }
 
 function display(no)
 {
-    console.log("display")
-    co.innerHTML = "jobie"
-    if (no > 0 && no <= parseInt(localStorage.getItem("note_counter")))
+    if (
+        no > 0 &&
+        no <= parseInt(localStorage.getItem("note_counter"))
+    )
     {
-        co.value = " "
+        const savedNote =
+            localStorage.getItem("note" + no);
 
-        co.value = localStorage.getItem("note" + no.toString())
-        var total = localStorage.getItem("note_counter")
-        document.querySelector("#show_count").innerHTML = `${no}/${total}`
-        }
+        co.value = savedNote || "";
+
+        let total =
+            localStorage.getItem("note_counter");
+
+        document.querySelector("#show_count")
+        .innerHTML = `${no}/${total}`;
+    }
 }
-
 
 function pre_note()
 {
@@ -364,11 +438,15 @@ function add_site(path, nam )
 
     iteam.className = "site_iteam"
 
-    iteam.innerHTML = `<a title="${nam}" href="${path}" target = "_blank"
-    ><img src="${path}favicon.ico" alt="${nam}" />
-  </a>
-  <i>${nam}</i>
-  <button class = "remove_site"> X</button>`
+    iteam.innerHTML = `
+    <a title="${nam}" href="${path}" target="_blank">
+        <img src="https://www.google.com/s2/favicons?domain=${path}&sz=64" alt="${nam}" />
+    </a>
+
+    <i>${nam}</i>
+
+    <button class="remove_site">X</button>
+    `;
     
   
 
@@ -405,12 +483,14 @@ function add_site(path, nam )
                         var del;
                     
                     
-                        for (i = 1; i <= parseInt(localStorage.getItem("site_counter")); i++) {
-                            if (iteam == sites.children[i]) {
-                                del = i;
-                                break;
+                        for (let i = 0; i < sites.children.length; i++)
+                            {
+                                if (iteam == sites.children[i])
+                                {
+                                    del = i;
+                                    break;
+                                }
                             }
-                        }
                     
                   
                         iteam.remove()
