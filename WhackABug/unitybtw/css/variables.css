@@ -1,0 +1,48 @@
+/* css/variables.css */
+:root {
+  /* Minimalist Professional Dark Theme (Vercel/GitHub inspired) */
+  --color-bg-base: #0a0a0a;
+  --color-bg-panel: #111111;
+  --color-border-panel: #333333;
+  
+  --color-text-primary: #ededed;
+  --color-text-secondary: #a1a1aa;
+  
+  --color-highlight: #0070f3; /* Clean tech blue */
+  --color-bug: #e00000; /* High contrast red for bugs */
+  
+  --color-hole-bg: #1a1a1a;
+  --color-hole-border: #222222;
+  --color-hole-shadow: #000000;
+  
+  /* Buttons */
+  --color-btn-primary: #ededed;
+  --color-btn-primary-hover: #ffffff;
+  --color-btn-primary-text: #0a0a0a;
+  
+  --color-btn-secondary: #111111;
+  --color-btn-secondary-border: #333333;
+  --color-btn-secondary-hover: #222222;
+  
+  /* Typography */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  
+  /* Spacing & Sizes */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --border-radius-sm: 6px;
+  --border-radius-md: 12px;
+  
+  /* Grid & Game sizes */
+  --grid-gap: 24px;
+  --hole-size: 100px;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --hole-size: 80px;
+    --grid-gap: 16px;
+  }
+}
