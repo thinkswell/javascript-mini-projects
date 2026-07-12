@@ -1,0 +1,241 @@
+/* css/main.css */
+
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-bg-base);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+.highlight {
+  color: var(--color-highlight);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.header__title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--spacing-sm);
+}
+
+.header__subtitle {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-md);
+  width: 100%;
+  max-width: 500px;
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+  width: 100%;
+}
+
+/* Clean Panels */
+.glass-panel {
+  background: var(--color-bg-panel);
+  border: 1px solid var(--color-border-panel);
+  border-radius: var(--border-radius-md);
+  /* Removed all blur and glassmorphism. Flat, clean look instead. */
+}
+
+/* Stats */
+.stats-panel {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stat__label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.stat__value {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* Grid & Holes */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--grid-gap);
+  padding: var(--spacing-lg);
+}
+
+.hole {
+  width: var(--hole-size);
+  height: var(--hole-size);
+  background: var(--color-hole-bg);
+  border: 1px solid var(--color-hole-border);
+  border-radius: var(--border-radius-sm); /* Square with slightly rounded corners */
+  box-shadow: inset 0 4px 10px var(--color-hole-shadow);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Focus rings for accessibility */
+.hole:focus-visible {
+  outline: 2px solid var(--color-highlight);
+  outline-offset: 2px;
+}
+
+/* The Bug (Pure CSS Art - Clean Vector Style) */
+.bug {
+  width: 60%;
+  height: 60%;
+  background: var(--color-bug);
+  border-radius: 4px;
+  position: absolute;
+  bottom: -100%;
+  left: 20%;
+  transition: bottom 0.15s cubic-bezier(0.2, 0, 0, 1);
+  pointer-events: none; /* Clicking passes through to the hole */
+}
+
+/* Flat Bug details */
+.bug::before, .bug::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border-radius: 50%;
+  top: 20%;
+}
+
+.bug::before { left: 15%; }
+.bug::after { right: 15%; }
+
+/* Animation States */
+.hole--active .bug {
+  bottom: 10%;
+}
+
+.hole--whacked .bug {
+  background: var(--color-text-secondary);
+  transform: scaleY(0.1);
+  transform-origin: bottom;
+  transition: transform 0.05s ease-out, background 0.05s;
+}
+
+/* Buttons */
+.btn {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 10px 24px;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+  border: 1px solid transparent;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-highlight);
+  outline-offset: 2px;
+}
+
+.btn--primary {
+  background: var(--color-btn-primary);
+  color: var(--color-btn-primary-text);
+  width: 100%;
+}
+
+.btn--primary:hover {
+  background: var(--color-btn-primary-hover);
+}
+
+.btn--secondary {
+  background: var(--color-btn-secondary);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-btn-secondary-border);
+}
+
+.btn--secondary:hover {
+  background: var(--color-btn-secondary-hover);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  padding: var(--spacing-lg);
+  text-align: center;
+  border: 1px solid var(--color-border-panel);
+  border-radius: var(--border-radius-md);
+  background: var(--color-bg-panel);
+  color: var(--color-text-primary);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.modal[open] {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: all;
+}
+
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.modal__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+}
+
+.modal__text {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-lg);
+}

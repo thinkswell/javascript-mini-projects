@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whack-A-Bug | Developer Edition</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Google Fonts for a modern monospaced and sans-serif look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header class="header">
+      <h1 class="header__title">WHACK-A-<span class="highlight">BUG</span></h1>
+      <p class="header__subtitle">Smash the bugs before they reach production!</p>
+    </header>
+
+    <main class="game-board">
+      <div class="stats-panel glass-panel">
+        <div class="stat">
+          <span class="stat__label">SCORE</span>
+          <span class="stat__value" id="score">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat__label">TIME</span>
+          <span class="stat__value" id="time">30</span>
+        </div>
+      </div>
+
+      <div class="grid glass-panel" id="grid">
+        <!-- 9 Holes generated dynamically or statically -->
+        <div class="hole" data-index="0">
+          <div class="bug"></div>
+        </div>
+        <div class="hole" data-index="1">
+          <div class="bug"></div>
+        </div>
+        <div class="hole" data-index="2">
+          <div class="bug"></div>
+        </div>
+        <div class="hole" data-index="3">
+          <div class="bug"></div>
+        </div>
+        <div class="hole" data-index="4">
+          <div class="bug"></div>
+        </div>
+        <div class="hole" data-index="5">
+          <div class="bug"></div>
+        </div>
+        <div class="hole" data-index="6">
+          <div class="bug"></div>
+        </div>
+        <div class="hole" data-index="7">
+          <div class="bug"></div>
+        </div>
+        <div class="hole" data-index="8">
+          <div class="bug"></div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn--primary" id="start-btn">START DEBUGGING</button>
+      </div>
+    </main>
+
+    <!-- Game Over Modal -->
+    <dialog class="modal glass-panel" id="game-over-modal">
+      <h2 class="modal__title">Sprint Ended!</h2>
+      <p class="modal__text">You squashed <span id="final-score" class="highlight">0</span> bugs.</p>
+      <button class="btn btn--secondary" id="restart-btn">Play Again</button>
+    </dialog>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
