@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flashcards + Quiz App</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      text-align: center;
+      background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+      margin: 0;
+      padding: 30px;
+      color: #333;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #222;
+    }
+    .flashcard {
+      width: 350px;
+      height: 220px;
+      margin: 20px auto;
+      perspective: 1000px;
+      cursor: pointer;
+      display: none;
+    }
+    .card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+    .card.flipped {
+      transform: rotateY(180deg);
+    }
+    .front, .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: bold;
+      border-radius: 15px;
+      background: #fff;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+    .back {
+      transform: rotateY(180deg);
+      background: #ffe082;
+    }
+    button {
+      margin: 8px;
+      padding: 12px 18px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      background: #4cafef;
+      color: white;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      transition: 0.2s ease;
+    }
+    button:hover {
+      background: #2196f3;
+      transform: scale(1.05);
+    }
+    #createForm {
+      margin-top: 20px;
+      display: none;
+      background: rgba(255,255,255,0.9);
+      padding: 15px;
+      border-radius: 12px;
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    input {
+      padding: 8px;
+      margin: 6px;
+      font-size: 14px;
+      width: 85%;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    #quizSection {
+      display: none;
+      margin-top: 20px;
+      background: rgba(255,255,255,0.9);
+      padding: 20px;
+      border-radius: 15px;
+      width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    }
+    #quizQuestion {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    #result {
+      margin-top: 12px;
+      font-weight: bold;
+    }
+    #modeButtons {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>📖 Flashcards + Quiz App</h1>
+
+  <div id="modeButtons">
+    <button onclick="switchMode('flashcard')">Flashcard Mode</button>
+    <button onclick="switchMode('quiz')">Quiz Mode</button>
+  </div>
+
+  <!-- Flashcard Section -->
+  <div class="flashcard" id="flashcardSection">
+    <div class="card" id="card">
+      <div class="front" id="front">Click "Next" to Start</div>
+      <div class="back" id="back">Answer</div>
+    </div>
+  </div>
+  <div id="flashButtons" style="display:none;">
+    <button onclick="prevCard()">Previous</button>
+    <button onclick="nextCard()">Next</button>
+    <button onclick="toggleCreateForm()">➕ Add Card</button>
+    <button onclick="shuffleCards()">🔀 Shuffle</button>
+  </div>
+
+  <div id="createForm">
+    <h3>Create New Flashcard</h3>
+    <input type="text" id="newQuestion" placeholder="Enter question">
+    <input type="text" id="newAnswer" placeholder="Enter answer">
+    <button onclick="addCard()">Add</button>
+  </div>
+
+  <!-- Quiz Section -->
+  <div id="quizSection">
+    <div id="quizQuestion">Press Next Question to Start!</div>
+    <input type="text" id="quizAnswer" placeholder="Your answer">
+    <button onclick="checkAnswer()">Submit</button>
+    <button onclick="nextQuiz()">Next Question</button>
+    <div id="result"></div>
+    <p>Score: <span id="score">0</span></p>
+  </div>
+
+  <script>
+    let flashcards = [
+      { question: "What is the capital of France?", answer: "Paris" },
+      { question: "What is 2 + 2?", answer: "4" },
+      { question: "Who wrote Hamlet?", answer: "William Shakespeare" },
+      { question: "Largest planet in the solar system?", answer: "Jupiter" },
+      { question: "What is the chemical symbol for water?", answer: "H2O" },
+      { question: "Speed of light?", answer: "299,792 km/s" }
+    ];
+
+    let currentIndex = 0;
+    let quizIndex = 0;
+    let score = 0;
+
+    const card = document.getElementById("card");
+    const front = document.getElementById("front");
+    const back = document.getElementById("back");
+
+    function switchMode(mode) {
+      document.getElementById("flashcardSection").style.display = "none";
+      document.getElementById("flashButtons").style.display = "none";
+      document.getElementById("createForm").style.display = "none";
+      document.getElementById("quizSection").style.display = "none";
+
+      if (mode === "flashcard") {
+        document.getElementById("flashcardSection").style.display = "block";
+        document.getElementById("flashButtons").style.display = "block";
+        showCard(currentIndex);
+      } else {
+        document.getElementById("quizSection").style.display = "block";
+        nextQuiz();
+      }
+    }
+
+    function showCard(index) {
+      const flashcard = flashcards[index];
+      front.textContent = flashcard.question;
+      back.textContent = flashcard.answer;
+      card.classList.remove("flipped");
+    }
+
+    function nextCard() {
+      currentIndex = (currentIndex + 1) % flashcards.length;
+      showCard(currentIndex);
+    }
+
+    function prevCard() {
+      currentIndex = (currentIndex - 1 + flashcards.length) % flashcards.length;
+      showCard(currentIndex);
+    }
+
+    card.addEventListener("click", () => {
+      card.classList.toggle("flipped");
+    });
+
+    function toggleCreateForm() {
+      const form = document.getElementById("createForm");
+      form.style.display = form.style.display === "none" ? "block" : "none";
+    }
+
+    function addCard() {
+      const question = document.getElementById("newQuestion").value.trim();
+      const answer = document.getElementById("newAnswer").value.trim();
+      if (question && answer) {
+        flashcards.push({ question, answer });
+        document.getElementById("newQuestion").value = "";
+        document.getElementById("newAnswer").value = "";
+        alert("✅ Flashcard added!");
+      } else {
+        alert("⚠️ Please enter both question and answer.");
+      }
+    }
+
+    function shuffleCards() {
+      flashcards.sort(() => Math.random() - 0.5);
+      currentIndex = 0;
+      showCard(currentIndex);
+      alert("🔀 Flashcards shuffled!");
+    }
+
+    function nextQuiz() {
+      quizIndex = Math.floor(Math.random() * flashcards.length);
+      document.getElementById("quizQuestion").textContent = flashcards[quizIndex].question;
+      document.getElementById("quizAnswer").value = "";
+      document.getElementById("result").textContent = "";
+    }
+
+    function checkAnswer() {
+      const userAnswer = document.getElementById("quizAnswer").value.trim();
+      const correctAnswer = flashcards[quizIndex].answer;
+
+      if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+        document.getElementById("result").textContent = "✅ Correct!";
+        score++;
+      } else {
+        document.getElementById("result").textContent = `❌ Wrong! Correct: ${correctAnswer}`;
+      }
+      document.getElementById("score").textContent = score;
+    }
+  </script>
+</body>
+</html>
