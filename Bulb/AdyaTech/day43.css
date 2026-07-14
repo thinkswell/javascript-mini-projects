@@ -1,0 +1,97 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+	background-color: #404556;
+width: 400px;
+  height: 400px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.object{
+	width: 50%;
+	height:70%;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+}
+.bulb{
+	cursor:pointer;
+	width: 90px;
+	height: 110px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+}
+.bulb:hover .top, .bulb:hover .bottom{
+		background-color:grey;
+	box-shadow:none;
+	
+	}
+
+.top{
+	width:100%;
+	height: 90%;
+	background-color:#FFF35B;
+	border-radius: 50%;
+	box-shadow: 0px 0px 50px 20px rgba(255,243,91,0.91);
+	transition: all ease-in-out 0.35s;
+}
+.bottom{
+	width:50%;
+	height: 25%;
+	background-color:#FFF35B;
+	border-radius: 0 0 50% 50%;
+	position:relative;
+	top:-6px;
+	transition: all ease-in-out 0.35s;
+}
+
+.screw{
+	width: 40px;
+	height: 40px;
+	display: flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	gap: 0.2rem;
+}
+.line{
+	width: 100%;
+	height: 20%;
+	border-radius: 30%;
+	background-color: #E5E5E5;
+}
+.end{
+	width: 100%;
+	height: 40%;
+	background-color: #E5E5E5;
+	border-radius: 0 0 50px 50px;
+}
