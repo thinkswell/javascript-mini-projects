@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "AI Webpage Reader",
+  "version": "1.0",
+  "description": "Reads webpage content using JavaScript",
+
+  "permissions": ["activeTab"],
+
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/contentScript.js"]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+body {
+  font-family: Arial;
+  width: 300px;
+  padding: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+#output {
+  font-size: 13px;
+  max-height: 200px;
+  overflow-y: auto;
+}
