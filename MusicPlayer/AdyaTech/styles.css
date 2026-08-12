@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --color-grey: #eee;
+  --color-dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Start Here */
+body {
+  background: var(--color-dark-grey);
+}
+
+.box {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.music {
+  position: relative;
+  background: var(--white);
+  width: 25rem;
+  border-radius: 5px;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.header .fas {
+  font-size: 1.6rem;
+}
+
+.fa-bars {
+  cursor: pointer;
+}
+
+.header h2 {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+/* Details */
+.details {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.details img {
+  width: 70%;
+  border: 3px solid var(--color-sec);
+  margin-bottom: 1rem;
+}
+
+.details .artist {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2974ff;
+}
+
+/* Controls */
+.controls {
+  background: var(--color-dark-grey);
+  padding: 2rem 1rem;
+  border-radius: 5rem 5rem 0 0;
+}
+
+.song-timer {
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+/* Range slider */
+input[type="range"] {
+  appearance: none;
+  width: 50%;
+  outline: none;
+  height: 2px;
+  margin: 0 10%;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  height: 2rem;
+  width: 2rem;
+  background: #2974ff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.duration input[type="range"] {
+  width: 80%;
+}
+
+/* Buttons */
+.buttons {
+  text-align: center;
+  margin: 2rem auto;
+  width: 60%;
+  padding: 5px 0;
+  background: var(--white);
+  border-radius: 5px;
+}
+
+.buttons > * {
+  border: none;
+  outline: none;
+  background: var(--white);
+  padding: 1rem;
+  cursor: pointer;
+  color: var(--color-dark-grey);
+}
+
+.play {
+  background: #2974ff;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  color: var(--white);
+}
+
+.play-all {
+  display: block;
+  margin: 0 auto;
+  padding: 3px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+}
+
+.volume input[type="range"] {
+  margin: 0;
+}
+
+/* Volume */
+.volume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 1rem 0;
+}
+.volume p {
+  background: #2974ff;
+  color: var(--white);
+  font-size: 1.4rem;
+  height: 2rem;
+  padding: 0 3px;
+  margin-right: 8px;
+}
+
+.volume i {
+  background: var(--color-sec);
+  color: var(--white);
+  font-size: 1.2rem;
+  height: 2rem;
+  padding: 0 3px;
+  margin-right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Music Playlist */
+.music-playlist {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: all 0.5s;
+}
+
+.playlist-header {
+  color: var(--white);
+  padding: 5px 0;
+  border-bottom: 1px solid var(--color-grey);
+}
+
+.playlist-header .fa-times {
+  cursor: pointer;
+}
+.playlist-div {
+  width: 100%;
+  height: 80vh;
+  overflow-y: auto;
+}
+
+/* Playlist Scroll Bar */
+.playlist-div::-webkit-scrollbar {
+  height: 5px;
+  width: 4px;
+  border: 1px solid #d5d5d5;
+  background: #d5d5d5;
+}
+
+.playlist-div::-webkit-scrollbar-track {
+  --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.playlist-div::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  outline: 1px solid #eee;
+}
+
+.playlist {
+  display: flex;
+  align-items: center;
+  color: var(--white);
+}
+
+.song-index {
+  font-size: 1.4rem;
+  margin-right: 5px;
+}
+
+.playlist p {
+  width: 90%;
+  font-size: 1.4rem;
+  border-bottom: 1px solid var(--color-grey);
+  padding: 5px 0;
+  cursor: pointer;
+}
