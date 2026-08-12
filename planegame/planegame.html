@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Plane Avoider Game</title>
+<style>
+  body {
+    margin: 0;
+    background: linear-gradient(to bottom, #87ceeb, #ffffff);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+  }
+  canvas {
+    display: block;
+    margin: 20px auto;
+    border: 3px solid #333;
+    border-radius: 12px;
+    background: #a0d8ef;
+  }
+  #scoreBoard {
+    font-size: 22px;
+    font-weight: bold;
+    color: #222;
+  }
+  button {
+    margin: 10px;
+    padding: 10px 18px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #4cafef;
+    color: white;
+    font-weight: bold;
+  }
+  button:hover { background: #2196f3; transform: scale(1.05); }
+</style>
+</head>
+<body>
+<h1>✈️ Plane Avoider</h1>
+<canvas id="gameCanvas" width="600" height="500"></canvas>
+<div id="scoreBoard">Score: 0</div>
+<button onclick="restartGame()">🔄 Restart</button>
+
+<script>
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+
+let plane = { x: 280, y: 400, w: 50, h: 50, speed: 5 };
+let obstacles = [];
+let keys = {};
+let score = 0;
+let gameOver = false;
+
+// Controls
+document.addEventListener('keydown', e => keys[e.key] = true);
+document.addEventListener('keyup', e => keys[e.key] = false);
+
+// Spawn obstacles
+function spawnObstacle() {
+  if(gameOver) return;
+  const width = 40 + Math.random()*40;
+  const x = Math.random()*(canvas.width - width);
+  obstacles.push({ x, y: -50, w: width, h: 20, speed: 3 + Math.random()*2 });
+}
+setInterval(spawnObstacle, 1500);
+
+// Draw everything
+function draw() {
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  // Draw plane
+  ctx.fillStyle = 'red';
+  ctx.fillRect(plane.x, plane.y, plane.w, plane.h);
+
+  // Draw obstacles
+  ctx.fillStyle = 'black';
+  obstacles.forEach(o => ctx.fillRect(o.x, o.y, o.w, o.h));
+}
+
+// Collision detection
+function collision(a,b){
+  return a.x < b.x+b.w && a.x+a.w > b.x && a.y < b.y+b.h && a.y+a.h > b.y;
+}
+
+// Update game
+function update() {
+  if(gameOver) return;
+
+  // Move plane
+  if(keys['ArrowLeft'] && plane.x>0) plane.x -= plane.speed;
+  if(keys['ArrowRight'] && plane.x<canvas.width-plane.w) plane.x += plane.speed;
+  if(keys['ArrowUp'] && plane.y>0) plane.y -= plane.speed;
+  if(keys['ArrowDown'] && plane.y<canvas.height-plane.h) plane.y += plane.speed;
+
+  // Move obstacles
+  obstacles.forEach((o,i) => {
+    o.y += o.speed;
+    if(collision(plane,o)) endGame();
+    if(o.y > canvas.height) obstacles.splice(i,1);
+  });
+
+  // Update score
+  score += 0.01;
+  document.getElementById('scoreBoard').textContent = 'Score: ' + Math.floor(score);
+
+  draw();
+  requestAnimationFrame(update);
+}
+
+// End game
+function endGame() {
+  gameOver = true;
+  ctx.fillStyle = 'black';
+  ctx.font = '40px Arial';
+  ctx.fillText('Game Over!', canvas.width/2-120, canvas.height/2);
+}
+
+// Restart game
+function restartGame() {
+  plane = { x: 280, y: 400, w: 50, h: 50, speed: 5 };
+  obstacles = [];
+  score = 0;
+  gameOver = false;
+  update();
+}
+
+update();
+</script>
+</body>
+</html>
