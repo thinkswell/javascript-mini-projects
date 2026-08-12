@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Emoji Invaders</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #141e30, #243b55, #0f3460);
+      overflow: hidden;
+      color: white;
+    }
+    
+    .game-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 600px;
+      padding: 20px;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+    
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+      color: #00ffcc;
+      letter-spacing: 2px;
+    }
+    
+    .stats {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 20px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 15px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .stat {
+      text-align: center;
+      flex: 1;
+    }
+    
+    .stat-value {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #00ffcc;
+    }
+    
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    
+    .game-area {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      background: #000;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+    }
+    
+    canvas {
+      display: block;
+      border-radius: 15px;
+    }
+    
+    .controls {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    
+    button {
+      padding: 12px 25px;
+      background: linear-gradient(to right, #00ffcc, #0099ff);
+      border: none;
+      border-radius: 50px;
+      color: #000;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+    
+    button:active {
+      transform: translateY(1px);
+    }
+    
+    .instructions {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 15px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      text-align: center;
+      width: 100%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .instructions p {
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+    
+    .instructions i {
+      color: #00ffcc;
+      margin-right: 5px;
+    }
+    
+    .game-over {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      z-index: 10;
+      backdrop-filter: blur(5px);
+    }
+    
+    .game-over h2 {
+      font-size: 3rem;
+      color: #ff3366;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
+    }
+    
+    .game-over p {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    
+    .final-score {
+      font-size: 2.5rem;
+      color: #00ffcc;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+    
+    .hidden {
+      display: none;
+    }
+    
+    .power-up-indicator {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 215, 0, 0.8);
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    }
+    
+    .level-indicator {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(0, 255, 204, 0.8);
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+    }
+    
+    .boss-health {
+      position: absolute;
+      top: 60px;
+      left: 20px;
+      width: 200px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    .boss-health-bar {
+      height: 100%;
+      background: linear-gradient(to right, #ff3366, #ff9933);
+      border-radius: 10px;
+      transition: width 0.3s ease;
+    }
+    
+    .shield-indicator {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: rgba(0, 204, 255, 0.8);
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 0 15px rgba(0, 204, 255, 0.5);
+    }
+    
+    @media (max-width: 600px) {
+      .game-area {
+        height: 500px;
+      }
+      
+      h1 {
+        font-size: 2.2rem;
+      }
+      
+      .stats {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .controls {
+        flex-direction: column;
+        width: 100%;
+      }
+      
+      button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <div class="header">
+      <h1>Emoji Invaders</h1>
+    </div>
+    
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-value" id="score">0</div>
+        <div class="stat-label">SCORE</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" id="lives">5</div>
+        <div class="stat-label">LIVES</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" id="level">1</div>
+        <div class="stat-label">LEVEL</div>
+      </div>
+    </div>
+    
+    <div class="game-area">
+      <canvas id="gameCanvas" width="560" height="600"></canvas>
+      <div class="level-indicator">Level: <span id="current-level">1</span></div>
+      <div class="power-up-indicator hidden" id="power-up-indicator">Power: <span id="power-type">None</span></div>
+      <div class="shield-indicator hidden" id="shield-indicator">Shield: <span id="shield-time">0</span>s</div>
+      <div class="boss-health hidden" id="boss-health">
+        <div class="boss-health-bar" id="boss-health-bar"></div>
+      </div>
+      <div class="game-over hidden" id="game-over">
+        <h2>GAME OVER</h2>
+        <p id="game-over-reason">Your planet has been invaded!</p>
+        <div class="final-score" id="final-score">0</div>
+        <p id="result-message">Better luck next time!</p>
+        <button id="restart-btn">
+          <i class="fas fa-redo"></i> Play Again
+        </button>
+      </div>
+    </div>
+    
+    <div class="controls">
+      <button id="start-btn">
+        <i class="fas fa-play"></i> Start Game
+      </button>
+      <button id="pause-btn">
+        <i class="fas fa-pause"></i> Pause
+      </button>
+    </div>
+    
+    <div class="instructions">
+      <p><i class="fas fa-arrow-left"></i> <i class="fas fa-arrow-right"></i> Move | <i class="fas fa-space-shuttle"></i> Shoot</p>
+      <p><i class="fas fa-bolt"></i> Collect power-ups for special abilities</p>
+      <p><i class="fas fa-shield-alt"></i> You have a temporary shield after being hit</p>
+    </div>
+  </div>
+
+  <script>
+    // Game variables
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+    const scoreElement = document.getElementById('score');
+    const livesElement = document.getElementById('lives');
+    const levelElement = document.getElementById('level');
+    const currentLevelElement = document.getElementById('current-level');
+    const powerUpIndicator = document.getElementById('power-up-indicator');
+    const powerTypeElement = document.getElementById('power-type');
+    const shieldIndicator = document.getElementById('shield-indicator');
+    const shieldTimeElement = document.getElementById('shield-time');
+    const bossHealth = document.getElementById('boss-health');
+    const bossHealthBar = document.getElementById('boss-health-bar');
+    const gameOverScreen = document.getElementById('game-over');
+    const gameOverReason = document.getElementById('game-over-reason');
+    const finalScoreElement = document.getElementById('final-score');
+    const resultMessage = document.getElementById('result-message');
+    const startBtn = document.getElementById('start-btn');
+    const pauseBtn = document.getElementById('pause-btn');
+    const restartBtn = document.getElementById('restart-btn');
+
+    // Game state
+    let gameState = {
+      isRunning: false,
+      isPaused: false,
+      score: 0,
+      lives: 5, // Increased from 3 to 5
+      level: 1,
+      enemySpeed: 0.8, // Reduced from 1
+      enemySpawnRate: 0.008, // Reduced from 0.02
+      bossActive: false,
+      gameOverReason: "",
+      invulnerable: false,
+      invulnerableTimer: 0
+    };
+
+    // Game objects
+    let player = {
+      x: canvas.width / 2 - 25,
+      y: canvas.height - 60,
+      width: 50,
+      height: 30,
+      speed: 7, // Increased from 6
+      color: '#00ffcc',
+      isShooting: false,
+      powerUp: null,
+      powerUpTimer: 0
+    };
+
+    let bullets = [];
+    let enemies = [];
+    let powerUps = [];
+    let particles = [];
+    let boss = null;
+
+    // Enemy types with different properties
+    const enemyTypes = [
+      { emoji: "👾", points: 10, health: 1, color: "#ff3366", speed: 1.2, spawnWeight: 3 }, // Reduced speeds
+      { emoji: "💀", points: 20, health: 1, color: "#ffffff", speed: 0.8, spawnWeight: 2 }, // Reduced health from 2 to 1
+      { emoji: "😈", points: 30, health: 2, color: "#ff9933", speed: 0.6, spawnWeight: 1 }, // Reduced speed
+      { emoji: "👻", points: 15, health: 1, color: "#ccccff", speed: 1.5, spawnWeight: 3 }, // Reduced speed from 2
+      { emoji: "🤖", points: 25, health: 1, color: "#66ff66", speed: 1.0, spawnWeight: 2 }  // Reduced health from 2 to 1
+    ];
+
+    // Power-up types
+    const powerUpTypes = [
+      { type: "rapid", emoji: "⚡", color: "#ffff00", duration: 8000, spawnWeight: 3 }, // Increased duration
+      { type: "spread", emoji: "🔫", color: "#ff6600", duration: 10000, spawnWeight: 2 }, // Increased duration
+      { type: "shield", emoji: "🛡️", color: "#00ccff", duration: 12000, spawnWeight: 2 }, // Increased duration
+      { type: "life", emoji: "❤️", color: "#ff3366", duration: 0, spawnWeight: 1 } // New power-up: extra life
+    ];
+
+    // Initialize game
+    function init() {
+      drawStartScreen();
+    }
+
+    // Draw start screen
+    function drawStartScreen() {
+      ctx.fillStyle = '#000';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      // Draw stars
+      drawStars();
+      
+      // Draw title
+      ctx.fillStyle = '#00ffcc';
+      ctx.font = 'bold 48px Arial';
+      ctx.textAlign = 'center';
+      ctx.fillText('EMOJI INVADERS', canvas.width / 2, canvas.height / 2 - 50);
+      
+      // Draw subtitle
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '24px Arial';
+      ctx.fillText('Defend your planet from emoji invaders!', canvas.width / 2, canvas.height / 2);
+      
+      // Draw start instruction
+      ctx.fillStyle = '#ffff00';
+      ctx.font = '20px Arial';
+      ctx.fillText('Click START or press SPACE to begin', canvas.width / 2, canvas.height / 2 + 50);
+      
+      // Draw player ship
+      drawPlayer(true);
+    }
+
+    // Draw stars in background
+    function drawStars() {
+      ctx.fillStyle = '#ffffff';
+      for (let i = 0; i < 100; i++) {
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height;
+        const size = Math.random() * 2;
+        ctx.fillRect(x, y, size, size);
+      }
+    }
+
+    // Draw player with optional animation
+    function drawPlayer(isStartScreen = false) {
+      // Draw invulnerability effect
+      if (gameState.invulnerable) {
+        const pulse = Math.sin(Date.now() * 0.02) * 10;
+        ctx.strokeStyle = '#ffff00';
+        ctx.lineWidth = 3;
+        ctx.setLineDash([5, 5]);
+        ctx.beginPath();
+        ctx.arc(player.x + player.width / 2, player.y + player.height / 2, player.width / 2 + 5 + pulse, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+      
+      ctx.fillStyle = player.color;
+      
+      // Draw player ship
+      ctx.beginPath();
+      ctx.moveTo(player.x, player.y + player.height);
+      ctx.lineTo(player.x + player.width / 2, player.y);
+      ctx.lineTo(player.x + player.width, player.y + player.height);
+      ctx.closePath();
+      ctx.fill();
+      
+      // Draw engine glow
+      if (!isStartScreen) {
+        const glowSize = 5 + Math.sin(Date.now() * 0.01) * 3;
+        ctx.fillStyle = '#ffff00';
+        ctx.beginPath();
+        ctx.moveTo(player.x + player.width / 2 - 10, player.y + player.height);
+        ctx.lineTo(player.x + player.width / 2, player.y + player.height + glowSize);
+        ctx.lineTo(player.x + player.width / 2 + 10, player.y + player.height);
+        ctx.closePath();
+        ctx.fill();
+      }
+      
+      // Draw shield if active
+      if (player.powerUp === 'shield') {
+        ctx.strokeStyle = '#00ccff';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.arc(player.x + player.width / 2, player.y + player.height / 2, player.width / 2 + 15, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+    }
+
+    // Draw bullets
+    function drawBullets() {
+      bullets.forEach(bullet => {
+        ctx.fillStyle = bullet.color;
+        ctx.beginPath();
+        ctx.arc(bullet.x, bullet.y, bullet.radius, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Add trail effect
+        ctx.fillStyle = bullet.color + '80';
+        ctx.beginPath();
+        ctx.arc(bullet.x, bullet.y + 5, bullet.radius * 0.7, 0, Math.PI * 2);
+        ctx.fill();
+      });
+    }
+
+    // Draw enemies
+    function drawEnemies() {
+      enemies.forEach(enemy => {
+        ctx.font = `${enemy.size}px Arial`;
+        ctx.fillStyle = enemy.color;
+        ctx.fillText(enemy.emoji, enemy.x, enemy.y);
+        
+        // Draw health bar for enemies with health > 1
+        if (enemy.health > 1) {
+          const barWidth = enemy.size;
+          const barHeight = 5;
+          const barX = enemy.x;
+          const barY = enemy.y - 10;
+          
+          ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+          ctx.fillRect(barX, barY, barWidth, barHeight);
+          
+          ctx.fillStyle = '#00ff00';
+          ctx.fillRect(barX, barY, barWidth * (enemy.health / enemy.maxHealth), barHeight);
+        }
+      });
+    }
+
+    // Draw power-ups
+    function drawPowerUps() {
+      powerUps.forEach(powerUp => {
+        // Pulsing effect
+        const pulse = 20 + Math.sin(Date.now() * 0.01) * 5;
+        ctx.font = `${pulse}px Arial`;
+        ctx.fillStyle = powerUp.color;
+        ctx.fillText(powerUp.emoji, powerUp.x, powerUp.y);
+        
+        // Draw glow
+        ctx.shadowColor = powerUp.color;
+        ctx.shadowBlur = 15;
+        ctx.fillText(powerUp.emoji, powerUp.x, powerUp.y);
+        ctx.shadowBlur = 0;
+      });
+    }
+
+    // Draw particles
+    function drawParticles() {
+      particles.forEach(particle => {
+        ctx.fillStyle = particle.color;
+        ctx.globalAlpha = particle.alpha;
+        ctx.fillRect(particle.x, particle.y, particle.size, particle.size);
+        ctx.globalAlpha = 1;
+      });
+    }
+
+    // Draw boss
+    function drawBoss() {
+      if (!boss) return;
+      
+      ctx.font = '60px Arial';
+      ctx.fillStyle = boss.color;
+      ctx.fillText(boss.emoji, boss.x, boss.y);
+      
+      // Draw boss health bar
+      const barWidth = 200;
+      const barHeight = 20;
+      const barX = canvas.width / 2 - barWidth / 2;
+      const barY = 30;
+      
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+      ctx.fillRect(barX, barY, barWidth, barHeight);
+      
+      ctx.fillStyle = '#ff3366';
+      ctx.fillRect(barX, barY, barWidth * (boss.health / boss.maxHealth), barHeight);
+      
+      // Update DOM health bar
+      bossHealthBar.style.width = `${(boss.health / boss.maxHealth) * 100}%`;
+    }
+
+    // Update bullets
+    function updateBullets() {
+      bullets.forEach(bullet => {
+        bullet.y -= bullet.speed;
+        
+        // Remove bullets that go off screen
+        if (bullet.y < 0) {
+          bullets.splice(bullets.indexOf(bullet), 1);
+        }
+      });
+    }
+
+    // Update enemies
+    function updateEnemies() {
+      enemies.forEach(enemy => {
+        enemy.y += enemy.speed;
+        
+        // Remove enemies that go off screen
+        if (enemy.y > canvas.height) {
+          enemies.splice(enemies.indexOf(enemy), 1);
+          
+          // Only lose a life if the enemy passes the player
+          if (gameState.isRunning && !gameState.invulnerable) {
+            gameState.lives--;
+            livesElement.textContent = gameState.lives;
+            
+            // Give temporary invulnerability after losing a life
+            gameState.invulnerable = true;
+            gameState.invulnerableTimer = 2000; // 2 seconds of invulnerability
+            
+            if (gameState.lives <= 0) {
+              gameState.gameOverReason = "Too many invaders reached your planet!";
+              endGame();
+            }
+          }
+        }
+      });
+      
+      // Spawn new enemies - with weighted random selection
+      if (Math.random() < gameState.enemySpawnRate && !gameState.bossActive) {
+        spawnEnemy();
+      }
+    }
+
+    // Spawn a new enemy with weighted randomness
+    function spawnEnemy() {
+      // Calculate total weight
+      let totalWeight = 0;
+      enemyTypes.forEach(type => {
+        totalWeight += type.spawnWeight;
+      });
+      
+      // Select random enemy based on weight
+      let random = Math.random() * totalWeight;
+      let selectedType = null;
+      
+      for (let type of enemyTypes) {
+        random -= type.spawnWeight;
+        if (random <= 0) {
+          selectedType = type;
+          break;
+        }
+      }
+      
+      const size = 28 + Math.random() * 10;
+      
+      enemies.push({
+        emoji: selectedType.emoji,
+        x: Math.random() * (canvas.width - size),
+        y: -size,
+        size: size,
+        points: selectedType.points,
+        health: selectedType.health,
+        maxHealth: selectedType.health,
+        color: selectedType.color,
+        speed: selectedType.speed * gameState.enemySpeed
+      });
+    }
+
+    // Update power-ups
+    function updatePowerUps() {
+      powerUps.forEach(powerUp => {
+        powerUp.y += 2;
+        
+        // Remove power-ups that go off screen
+        if (powerUp.y > canvas.height) {
+          powerUps.splice(powerUps.indexOf(powerUp), 1);
+        }
+      });
+      
+      // Spawn new power-ups randomly - with weighted random selection
+      if (Math.random() < 0.003) { // Reduced from 0.005
+        spawnPowerUp();
+      }
+      
+      // Update player power-up timer
+      if (player.powerUp && player.powerUpTimer > 0) {
+        player.powerUpTimer -= 16; // Approximately 60fps
+        
+        if (player.powerUpTimer <= 0) {
+          player.powerUp = null;
+          powerUpIndicator.classList.add('hidden');
+        }
+      }
+      
+      // Update invulnerability timer
+      if (gameState.invulnerable) {
+        gameState.invulnerableTimer -= 16;
+        shieldTimeElement.textContent = Math.ceil(gameState.invulnerableTimer / 1000);
+        
+        if (gameState.invulnerableTimer <= 0) {
+          gameState.invulnerable = false;
+          shieldIndicator.classList.add('hidden');
+        }
+      }
+    }
+
+    // Spawn a power-up with weighted randomness
+    function spawnPowerUp() {
+      // Calculate total weight
+      let totalWeight = 0;
+      powerUpTypes.forEach(type => {
+        totalWeight += type.spawnWeight;
+      });
+      
+      // Select random power-up based on weight
+      let random = Math.random() * totalWeight;
+      let selectedType = null;
+      
+      for (let type of powerUpTypes) {
+        random -= type.spawnWeight;
+        if (random <= 0) {
+          selectedType = type;
+          break;
+        }
+      }
+      
+      powerUps.push({
+        type: selectedType.type,
+        emoji: selectedType.emoji,
+        x: Math.random() * (canvas.width - 30),
+        y: -30,
+        color: selectedType.color,
+        duration: selectedType.duration
+      });
+    }
+
+    // Update particles
+    function updateParticles() {
+      particles.forEach(particle => {
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+        particle.alpha -= 0.02;
+        particle.size -= 0.1;
+        
+        if (particle.alpha <= 0 || particle.size <= 0) {
+          particles.splice(particles.indexOf(particle), 1);
+        }
+      });
+    }
+
+    // Update boss
+    function updateBoss() {
+      if (!boss) return;
+      
+      // Move boss in a pattern
+      boss.x += boss.vx;
+      boss.y += boss.vy;
+      
+      // Bounce off walls
+      if (boss.x <= 0 || boss.x + 60 >= canvas.width) {
+        boss.vx *= -1;
+      }
+      
+      if (boss.y <= 50 || boss.y >= canvas.height / 3) {
+        boss.vy *= -1;
+      }
+      
+      // Boss shooting - reduced frequency
+      if (Math.random() < 0.02) { // Reduced from 0.03
+        bullets.push({
+          x: boss.x + 30,
+          y: boss.y + 60,
+          radius: 8,
+          speed: -3, // Reduced from -4
+          color: '#ff3366'
+        });
+      }
+    }
+
+    // Check collisions
+    function checkCollisions() {
+      // Bullet vs Enemy
+      bullets.forEach((bullet, bIndex) => {
+        enemies.forEach((enemy, eIndex) => {
+          // More accurate collision detection
+          const enemyCenterX = enemy.x + enemy.size/2;
+          const enemyCenterY = enemy.y - enemy.size/2;
+          const dx = bullet.x - enemyCenterX;
+          const dy = bullet.y - enemyCenterY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          // Use a smaller collision radius for better accuracy
+          if (distance < enemy.size/3 + bullet.radius) {
+            // Hit enemy
+            enemy.health--;
+            
+            // Create explosion particles
+            createExplosion(enemyCenterX, enemyCenterY, enemy.color);
+            
+            if (enemy.health <= 0) {
+              // Add score
+              gameState.score += enemy.points;
+              scoreElement.textContent = gameState.score;
+              
+              // Remove enemy
+              enemies.splice(eIndex, 1);
+              
+              // Chance to spawn power-up
+              if (Math.random() < 0.15) { // Increased from 0.1
+                spawnPowerUp();
+              }
+            }
+            
+            // Remove bullet
+            bullets.splice(bIndex, 1);
+          }
+        });
+        
+        // Bullet vs Boss
+        if (boss) {
+          const bossCenterX = boss.x + 30;
+          const bossCenterY = boss.y + 30;
+          const dx = bullet.x - bossCenterX;
+          const dy = bullet.y - bossCenterY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          if (distance < 30 + bullet.radius) {
+            // Hit boss
+            boss.health--;
+            
+            // Create explosion particles
+            createExplosion(bossCenterX, bossCenterY, boss.color);
+            
+            if (boss.health <= 0) {
+              // Add score
+              gameState.score += 500;
+              scoreElement.textContent = gameState.score;
+              
+              // Remove boss
+              boss = null;
+              gameState.bossActive = false;
+              bossHealth.classList.add('hidden');
+              
+              // Level up
+              levelUp();
+            }
+            
+            // Remove bullet
+            bullets.splice(bIndex, 1);
+          }
+        }
+      });
+      
+      // Player vs Enemy - only if not invulnerable
+      if (!gameState.invulnerable) {
+        enemies.forEach((enemy, eIndex) => {
+          const enemyCenterX = enemy.x + enemy.size/2;
+          const enemyCenterY = enemy.y - enemy.size/2;
+          const playerCenterX = player.x + player.width/2;
+          const playerCenterY = player.y + player.height/2;
+          
+          const dx = playerCenterX - enemyCenterX;
+          const dy = playerCenterY - enemyCenterY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          // More accurate collision detection
+          const collisionDistance = (player.width/2) + (enemy.size/3);
+          
+          if (distance < collisionDistance) {
+            if (player.powerUp !== 'shield') {
+              // Player hit
+              gameState.lives--;
+              livesElement.textContent = gameState.lives;
+              
+              // Give temporary invulnerability after being hit
+              gameState.invulnerable = true;
+              gameState.invulnerableTimer = 2000; // 2 seconds of invulnerability
+              shieldIndicator.classList.remove('hidden');
+              
+              if (gameState.lives <= 0) {
+                gameState.gameOverReason = "An invader crashed into your ship!";
+                endGame();
+              }
+            }
+            
+            // Remove enemy
+            enemies.splice(eIndex, 1);
+            
+            // Create explosion
+            createExplosion(enemyCenterX, enemyCenterY, enemy.color);
+          }
+        });
+      }
+      
+      // Player vs Power-up
+      powerUps.forEach((powerUp, pIndex) => {
+        const powerUpCenterX = powerUp.x + 15;
+        const powerUpCenterY = powerUp.y - 15;
+        const playerCenterX = player.x + player.width/2;
+        const playerCenterY = player.y + player.height/2;
+        
+        const dx = playerCenterX - powerUpCenterX;
+        const dy = playerCenterY - powerUpCenterY;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        
+        if (distance < player.width/2 + 15) {
+          // Collect power-up
+          if (powerUp.type === 'life') {
+            // Extra life power-up
+            gameState.lives++;
+            livesElement.textContent = gameState.lives;
+          } else {
+            player.powerUp = powerUp.type;
+            player.powerUpTimer = powerUp.duration;
+            
+            // Update UI
+            powerTypeElement.textContent = powerUp.type.toUpperCase();
+            powerUpIndicator.classList.remove('hidden');
+          }
+          
+          // Remove power-up
+          powerUps.splice(pIndex, 1);
+        }
+      });
+      
+      // Player vs Boss Bullet - only if not invulnerable
+      if (!gameState.invulnerable) {
+        bullets.forEach((bullet, bIndex) => {
+          if (bullet.speed < 0) { // Boss bullets have negative speed
+            const playerCenterX = player.x + player.width/2;
+            const playerCenterY = player.y + player.height/2;
+            const dx = playerCenterX - bullet.x;
+            const dy = playerCenterY - bullet.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            
+            if (distance < player.width/2 + bullet.radius) {
+              if (player.powerUp !== 'shield') {
+                // Player hit
+                gameState.lives--;
+                livesElement.textContent = gameState.lives;
+                
+                // Give temporary invulnerability after being hit
+                gameState.invulnerable = true;
+                gameState.invulnerableTimer = 2000; // 2 seconds of invulnerability
+                shieldIndicator.classList.remove('hidden');
+                
+                if (gameState.lives <= 0) {
+                  gameState.gameOverReason = "A boss projectile destroyed your ship!";
+                  endGame();
+                }
+              }
+              
+              // Remove bullet
+              bullets.splice(bIndex, 1);
+              
+              // Create explosion
+              createExplosion(bullet.x, bullet.y, bullet.color);
+            }
+          }
+        });
+      }
+    }
+
+    // Create explosion particles
+    function createExplosion(x, y, color) {
+      for (let i = 0; i < 15; i++) {
+        particles.push({
+          x: x,
+          y: y,
+          vx: (Math.random() - 0.5) * 5,
+          vy: (Math.random() - 0.5) * 5,
+          size: Math.random() * 5 + 2,
+          color: color,
+          alpha: 1
+        });
+      }
+    }
+
+    // Level up
+    function levelUp() {
+      gameState.level++;
+      levelElement.textContent = gameState.level;
+      currentLevelElement.textContent = gameState.level;
+      
+      // Increase difficulty more gradually
+      gameState.enemySpeed += 0.1; // Reduced from 0.2
+      gameState.enemySpawnRate += 0.002; // Reduced from 0.005
+      
+      // Spawn boss every 5 levels
+      if (gameState.level % 5 === 0) {
+        spawnBoss();
+      }
+    }
+
+    // Spawn boss
+    function spawnBoss() {
+      gameState.bossActive = true;
+      bossHealth.classList.remove('hidden');
+      
+      boss = {
+        emoji: "👹",
+        x: canvas.width / 2 - 30,
+        y: 50,
+        health: 15 * gameState.level, // Reduced from 20
+        maxHealth: 15 * gameState.level,
+        color: '#ff3366',
+        vx: 1.5, // Reduced from 2
+        vy: 0.8  // Reduced from 1
+      };
+    }
+
+    // Player shooting
+    function shoot() {
+      if (!gameState.isRunning || gameState.isPaused) return;
+      
+      const bulletConfig = {
+        radius: 4,
+        speed: 8,
+        color: '#ffff00'
+      };
+      
+      if (player.powerUp === 'rapid') {
+        // Rapid fire - smaller, faster bullets
+        bulletConfig.radius = 3;
+        bulletConfig.speed = 10;
+        bulletConfig.color = '#00ffff';
+      }
+      
+      if (player.powerUp === 'spread') {
+        // Spread shot - three bullets
+        bullets.push({
+          x: player.x + player.width / 2 - 10,
+          y: player.y,
+          ...bulletConfig
+        });
+        
+        bullets.push({
+          x: player.x + player.width / 2,
+          y: player.y,
+          ...bulletConfig
+        });
+        
+        bullets.push({
+          x: player.x + player.width / 2 + 10,
+          y: player.y,
+          ...bulletConfig
+        });
+      } else {
+        // Normal shot
+        bullets.push({
+          x: player.x + player.width / 2,
+          y: player.y,
+          ...bulletConfig
+        });
+      }
+    }
+
+    // Game loop
+    function gameLoop() {
+      if (!gameState.isRunning || gameState.isPaused) return;
+      
+      // Clear canvas
+      ctx.fillStyle = '#000';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      // Draw stars
+      drawStars();
+      
+      // Update game objects
+      updateBullets();
+      updateEnemies();
+      updatePowerUps();
+      updateParticles();
+      updateBoss();
+      
+      // Check collisions
+      checkCollisions();
+      
+      // Draw game objects
+      drawPlayer();
+      drawBullets();
+      drawEnemies();
+      drawPowerUps();
+      drawParticles();
+      drawBoss();
+      
+      // Continue game loop
+      requestAnimationFrame(gameLoop);
+    }
+
+    // End game
+    function endGame() {
+      gameState.isRunning = false;
+      
+      // Update final score
+      finalScoreElement.textContent = gameState.score;
+      
+      // Set game over reason
+      gameOverReason.textContent = gameState.gameOverReason || "Your planet has been invaded!";
+      
+      // Set result message based on performance
+      if (gameState.score > 3000) {
+        resultMessage.textContent = "Incredible! You're an emoji master!";
+      } else if (gameState.score > 1500) {
+        resultMessage.textContent = "Great job! You defended well!";
+      } else if (gameState.score > 500) {
+        resultMessage.textContent = "Good effort! Try to beat your score!";
+      } else {
+        resultMessage.textContent = "Keep practicing! You'll get better!";
+      }
+      
+      // Show game over screen
+      gameOverScreen.classList.remove('hidden');
+    }
+
+    // Start game
+    function startGame() {
+      // Reset game state
+      gameState.isRunning = true;
+      gameState.isPaused = false;
+      gameState.score = 0;
+      gameState.lives = 5;
+      gameState.level = 1;
+      gameState.enemySpeed = 0.8;
+      gameState.enemySpawnRate = 0.008;
+      gameState.bossActive = false;
+      gameState.gameOverReason = "";
+      gameState.invulnerable = false;
+      gameState.invulnerableTimer = 0;
+      
+      // Reset UI
+      scoreElement.textContent = '0';
+      livesElement.textContent = '5';
+      levelElement.textContent = '1';
+      currentLevelElement.textContent = '1';
+      
+      // Reset game objects
+      player.x = canvas.width / 2 - 25;
+      player.y = canvas.height - 60;
+      player.powerUp = null;
+      player.powerUpTimer = 0;
+      
+      bullets = [];
+      enemies = [];
+      powerUps = [];
+      particles = [];
+      boss = null;
+      
+      // Hide UI elements
+      gameOverScreen.classList.add('hidden');
+      powerUpIndicator.classList.add('hidden');
+      shieldIndicator.classList.add('hidden');
+      bossHealth.classList.add('hidden');
+      
+      // Update button text
+      pauseBtn.innerHTML = '<i class="fas fa-pause"></i> Pause';
+      
+      // Start game loop
+      gameLoop();
+    }
+
+    // Toggle pause
+    function togglePause() {
+      if (!gameState.isRunning) return;
+      
+      gameState.isPaused = !gameState.isPaused;
+      
+      if (gameState.isPaused) {
+        pauseBtn.innerHTML = '<i class="fas fa-play"></i> Resume';
+      } else {
+        pauseBtn.innerHTML = '<i class="fas fa-pause"></i> Pause';
+        gameLoop();
+      }
+    }
+
+    // Event listeners
+    startBtn.addEventListener('click', startGame);
+    pauseBtn.addEventListener('click', togglePause);
+    restartBtn.addEventListener('click', startGame);
+
+    // Keyboard controls
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'ArrowLeft') {
+        player.x -= player.speed;
+      } else if (e.code === 'ArrowRight') {
+        player.x += player.speed;
+      } else if (e.code === 'Space') {
+        if (!gameState.isRunning && gameOverScreen.classList.contains('hidden')) {
+          startGame();
+        } else {
+          shoot();
+        }
+        e.preventDefault();
+      } else if (e.code === 'KeyP') {
+        togglePause();
+      }
+      
+      // Keep player within bounds
+      player.x = Math.max(0, Math.min(canvas.width - player.width, player.x));
+    });
+
+    // Initialize game
+    init();
+  </script>
+</body>
+</html>
