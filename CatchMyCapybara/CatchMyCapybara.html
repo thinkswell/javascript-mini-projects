@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CatchMyCapybara</title>
+<style>
+  :root{
+    --bg:#f3efe7;
+    --ink:#1f1d1a;
+    --grass:#cfe8b4;
+    --puddle:#a8d8ff;
+    --capy:#8a5a44;
+    --capy-dark:#6f4636;
+    --accent:#ff7a59;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; font-family:system-ui,Segoe UI,Arial,sans-serif; color:var(--ink);
+    background:radial-gradient(1200px 800px at 20% 20%,#fff 0%,#f9f7f2 60%,#efeae0 100%);
+    display:flex; flex-direction:column; align-items:center; gap:14px; padding:16px;
+  }
+
+  h1{margin:6px 0 2px; font-weight:800; letter-spacing:.2px}
+  .hud{
+    display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center
+  }
+  .pill{
+    background:#fff; border:1px solid #e8e1d5; padding:8px 12px; border-radius:999px;
+    box-shadow:0 3px 10px rgba(0,0,0,.06)
+  }
+  .btn{
+    border:none; padding:10px 16px; border-radius:12px; font-weight:700; cursor:pointer;
+    background:var(--ink); color:#fff; box-shadow:0 6px 14px rgba(0,0,0,.2); transition:.15s;
+  }
+  .btn:hover{transform:translateY(-1px)}
+  .btn:active{transform:translateY(0)}
+  .board-wrap{
+    position:relative; width:min(92vw,800px); aspect-ratio:16/9; max-height:68vh;
+    border-radius:20px; border:2px solid #e8e1d5; overflow:hidden;
+    background:
+      radial-gradient(200px 120px at 15% 75%, #d6f1b9 0%, #cbe7ad 60%, #c2e09f 100%),
+      radial-gradient(240px 160px at 80% 25%, #d6f1b9 0%, #cbe7ad 60%, #c2e09f 100%),
+      var(--grass);
+    box-shadow:0 12px 28px rgba(0,0,0,.15), inset 0 0 0 1px rgba(255,255,255,.5);
+    touch-action:manipulation;
+  }
+
+  /* Puddles (safe-ish zones where capybara slows down) */
+  .puddle{
+    position:absolute; width:160px; height:110px; background:var(--puddle);
+    opacity:.7; border-radius:50% 48% 54% 46% / 56% 44% 56% 44%;
+    filter:blur(.4px); box-shadow:inset 0 0 12px rgba(0,0,0,.12);
+  }
+
+  /* Carrot powerup */
+  .carrot{
+    position:absolute; width:28px; height:28px; transform:translate(-50%,-50%) rotate(-12deg);
+  }
+  .carrot:before, .carrot:after{
+    content:""; position:absolute; border-radius:6px;
+  }
+  .carrot:before{ /* body */
+    left:8px; top:8px; width:14px; height:18px; background:linear-gradient(#ffa35e,#ff7a2d);
+    border:1px solid rgba(0,0,0,.1);
+  }
+  .carrot:after{ /* leaves */
+    left:5px; top:-2px; width:20px; height:10px; background:linear-gradient(#6bd58c,#3fbf6c);
+    border-radius:10px 10px 2px 2px; transform:rotate(8deg);
+  }
+
+  /* Capybara sprite (CSS art) */
+  .capy{
+    position:absolute; width:70px; height:46px; transform:translate(-50%,-50%);
+    filter:drop-shadow(0 6px 6px rgba(0,0,0,.25));
+  }
+  .capy .body{
+    position:absolute; inset:0; background:linear-gradient(180deg,var(--capy),var(--capy-dark));
+    border-radius:18px 24px 22px 22px;
+  }
+  .capy .head{
+    position:absolute; right:-18px; top:8px; width:36px; height:26px;
+    background:linear-gradient(180deg,var(--capy),var(--capy-dark));
+    border-radius:18px; transform:rotate(4deg);
+  }
+  .capy .ear{
+    position:absolute; right:10px; top:-6px; width:14px; height:10px;
+    background:var(--capy-dark); border-radius:10px 10px 2px 2px;
+  }
+  .capy .eye{
+    position:absolute; right:10px; top:12px; width:6px; height:6px; background:#111; border-radius:50%;
+  }
+  .capy .nose{
+    position:absolute; right:-2px; top:18px; width:6px; height:6px; background:#2a2220; border-radius:50%;
+  }
+  .capy .foot{
+    position:absolute; bottom:-4px; width:12px; height:6px; background:#3a2b24; border-radius:6px;
+  }
+  .capy .f1{left:10px} .capy .f2{left:28px} .capy .f3{left:48px}
+
+  .toast{
+    position:absolute; left:50%; top:10px; transform:translateX(-50%);
+    background:#111; color:#fff; padding:8px 12px; border-radius:999px;
+    font-weight:700; opacity:0; transition:.25s; pointer-events:none;
+  }
+  .toast.show{opacity:1; transform:translateX(-50%) translateY(6px)}
+  .muted{opacity:.5}
+</style>
+</head>
+<body>
+  <h1>CatchMyCapybara</h1>
+  <div class="hud">
+    <div class="pill">⏱️ Time: <span id="time">30</span>s</div>
+    <div class="pill">⭐ Score: <span id="score">0</span></div>
+    <div class="pill">🏆 Best: <span id="best">0</span></div>
+    <button id="startBtn" class="btn">Start</button>
+    <button id="pauseBtn" class="btn" disabled>Pause</button>
+  </div>
+
+  <div id="board" class="board-wrap" aria-label="Play area">
+    <!-- Puddles -->
+    <div class="puddle" style="left:18%; top:68%"></div>
+    <div class="puddle" style="left:76%; top:34%"></div>
+    <div class="puddle" style="left:50%; top:82%"></div>
+
+    <!-- Capybara -->
+    <div id="capy" class="capy" role="button" aria-label="Capybara" tabindex="0">
+      <div class="body"></div>
+      <div class="head"></div>
+      <div class="ear"></div>
+      <div class="eye"></div>
+      <div class="nose"></div>
+      <div class="foot f1"></div>
+      <div class="foot f2"></div>
+      <div class="foot f3"></div>
+    </div>
+
+    <!-- Carrot powerup (spawned by JS) -->
+  </div>
+
+  <div id="toast" class="toast">Nice catch! +1</div>
+
+<script>
+(() => {
+  const board = document.getElementById('board');
+  const capy  = document.getElementById('capy');
+  const timeEl= document.getElementById('time');
+  const scoreEl=document.getElementById('score');
+  const bestEl =document.getElementById('best');
+  const startBtn=document.getElementById('startBtn');
+  const pauseBtn=document.getElementById('pauseBtn');
+  const toast=document.getElementById('toast');
+
+  // State
+  let running=false, paused=false, timer=30, score=0, speed=220; // px/sec base
+  let vx=0, vy=0; // current vector
+  let lastT=0, rafId=null, dodgeCooldown=0, slowMoUntil=0;
+  const puddles=[...board.querySelectorAll('.puddle')].map(p=>rectOf(p));
+  let carrotEl=null, nextCarrotAt=0;
+
+  // Persist best
+  const BEST_KEY='catchmycapybara_best';
+  bestEl.textContent = localStorage.getItem(BEST_KEY) || 0;
+
+  function rectOf(el){
+    const r=el.getBoundingClientRect();
+    const br=board.getBoundingClientRect();
+    return {x:r.left-br.left, y:r.top-br.top, w:r.width, h:r.height};
+  }
+  function capyPos(){
+    return rectOf(capy);
+  }
+  function inPuddle(x,y){
+    return puddles.some(p => x>p.x && x<p.x+p.w && y>p.y && y<p.y+p.h);
+  }
+  function clamp(v,min,max){ return Math.max(min, Math.min(max, v)); }
+  function rnd(a,b){ return Math.random()*(b-a)+a; }
+
+  function setCapy(x,y){
+    const b=rectOf(board);
+    const cx = clamp(x, 40, b.w-40);
+    const cy = clamp(y, 30, b.h-30);
+    capy.style.left = cx+'px';
+    capy.style.top  = cy+'px';
+  }
+
+  function randomizeVector(){
+    const angle = rnd(0, Math.PI*2);
+    vx = Math.cos(angle);
+    vy = Math.sin(angle);
+  }
+
+  function toastMsg(msg){
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toast._t);
+    toast._t = setTimeout(()=>toast.classList.remove('show'), 800);
+  }
+
+  function reset(){
+    running=false; paused=false;
+    timer=30; score=0; speed=220; vx=0; vy=0; lastT=0; dodgeCooldown=0; slowMoUntil=0;
+    timeEl.textContent=timer; scoreEl.textContent=score;
+    startBtn.disabled=false; pauseBtn.disabled=true; pauseBtn.textContent='Pause';
+    // center capy
+    setCapy(board.clientWidth*0.5, board.clientHeight*0.5);
+    // remove carrot
+    if(carrotEl){ carrotEl.remove(); carrotEl=null; }
+    nextCarrotAt = performance.now() + 2500;
+  }
+
+  function start(){
+    if(running){ return; }
+    running=true; paused=false; startBtn.disabled=true; pauseBtn.disabled=false;
+    randomizeVector();
+    lastT=performance.now();
+    rafId = requestAnimationFrame(loop);
+  }
+
+  function pauseToggle(){
+    if(!running) return;
+    paused=!paused;
+    pauseBtn.textContent = paused ? 'Resume' : 'Pause';
+    if(!paused){
+      lastT=performance.now();
+      rafId=requestAnimationFrame(loop);
+    }else{
+      cancelAnimationFrame(rafId);
+    }
+  }
+
+  function spawnCarrot(){
+    if(carrotEl) return;
+    carrotEl = document.createElement('div');
+    carrotEl.className='carrot';
+    const x=rnd(40, board.clientWidth-40);
+    const y=rnd(40, board.clientHeight-40);
+    carrotEl.style.left=x+'px';
+    carrotEl.style.top =y+'px';
+    board.appendChild(carrotEl);
+  }
+
+  function collectCarrotIfHit(px,py){
+    if(!carrotEl) return;
+    const r = rectOf(carrotEl);
+    const dx = px - r.x, dy = py - r.y;
+    if(Math.abs(dx)<22 && Math.abs(dy)<22){
+      // Slow motion 3s
+      slowMoUntil = performance.now()+3000;
+      carrotEl.remove(); carrotEl=null;
+      toastMsg('🥕 Slow-mo!');
+    }
+  }
+
+  function onCatch(){
+    if(!running || paused) return;
+    score++; scoreEl.textContent=score;
+    speed = Math.min(520, speed + 14); // ramps difficulty
+    toastMsg('Nice catch! +1');
+    // hop to a new random spot
+    setCapy(rnd(40, board.clientWidth-40), rnd(30, board.clientHeight-30));
+  }
+
+  // Evasive movement near pointer/touch
+  function nudgeAwayFrom(px,py){
+    const c = capyPos();
+    const cx = c.x + c.w/2, cy=c.y + c.h/2;
+    const dx = cx - px, dy = cy - py;
+    const dist = Math.hypot(dx,dy);
+    if(dist<140){
+      vx = (dx/dist) || vx;
+      vy = (dy/dist) || vy;
+      dodgeCooldown = 220; // ms resist randomization
+    }
+  }
+
+  // Pointer handling
+  let lastPointer={x:0,y:0};
+  board.addEventListener('mousemove', e=>{
+    const br=board.getBoundingClientRect();
+    lastPointer={x:e.clientX-br.left, y:e.clientY-br.top};
+    nudgeAwayFrom(lastPointer.x,lastPointer.y);
+  });
+  board.addEventListener('touchmove', e=>{
+    const t=e.touches[0]; if(!t) return;
+    const br=board.getBoundingClientRect();
+    lastPointer={x:t.clientX-br.left, y:t.clientY-br.top};
+    nudgeAwayFrom(lastPointer.x,lastPointer.y);
+  }, {passive:true});
+
+  // Catch interactions
+  capy.addEventListener('click', onCatch);
+  capy.addEventListener('touchstart', (e)=>{ e.preventDefault(); onCatch(); }, {passive:false});
+  capy.addEventListener('keydown', (e)=>{ if(e.key==='Enter' || e.key===' ') onCatch(); });
+
+  startBtn.addEventListener('click', start);
+  pauseBtn.addEventListener('click', pauseToggle);
+
+  function loop(t){
+    if(!running || paused) return;
+
+    const dt = (t - lastT) / 1000; // seconds
+    lastT = t;
+
+    // Timer
+    timer -= dt;
+    if(timer<=0){
+      timer=0; running=false;
+      timeEl.textContent='0';
+      cancelAnimationFrame(rafId);
+      // Best
+      const best = Math.max(Number(localStorage.getItem(BEST_KEY)||0), score);
+      localStorage.setItem(BEST_KEY, best);
+      bestEl.textContent=best;
+      toastMsg(`Time! Final: ${score}`);
+      startBtn.disabled=false; pauseBtn.disabled=true; pauseBtn.textContent='Pause';
+      return;
+    }
+    timeEl.textContent = Math.ceil(timer);
+
+    // Randomize vector occasionally (unless dodging)
+    if(dodgeCooldown>0){ dodgeCooldown -= (t - lastT); }
+    else if(Math.random()<0.015){ randomizeVector(); }
+
+    // Slow-mo factor
+    const slowFactor = (t<slowMoUntil) ? 0.45 : 1.0;
+    (t<slowMoUntil) ? capy.classList.add('muted') : capy.classList.remove('muted');
+
+    // Prefer puddles: if not inside any, bias vector toward nearest puddle
+    const c = capyPos();
+    const cx = c.x + c.w/2, cy=c.y + c.h/2;
+    if(!inPuddle(cx,cy) && puddles.length){
+      let best=null, bd=1e9;
+      for(const p of puddles){
+        const px = clamp(cx, p.x, p.x+p.w);
+        const py = clamp(cy, p.y, p.y+p.h);
+        const d = Math.hypot(px-cx, py-cy);
+        if(d<bd){ bd=d; best={x:px,y:py}; }
+      }
+      if(best && bd>1){
+        vx += (best.x - cx)/bd * 0.015;
+        vy += (best.y - cy)/bd * 0.015;
+        const mag=Math.hypot(vx,vy)||1; vx/=mag; vy/=mag;
+      }
+    }else{
+      // When in puddle, capy goes slower (nice for player)
+    }
+
+    // Move
+    const base = speed * slowFactor * (inPuddle(cx,cy)? 0.55 : 1);
+    let nx = cx + vx * base * dt;
+    let ny = cy + vy * base * dt;
+
+    // Bounce on edges
+    const b=rectOf(board);
+    if(nx<40 || nx>b.w-40){ vx*=-1; nx=clamp(nx,40,b.w-40); }
+    if(ny<30 || ny>b.h-30){ vy*=-1; ny=clamp(ny,30,b.h-30); }
+
+    setCapy(nx, ny);
+
+    // Spawn carrot every ~2.5–5s
+    if(t > nextCarrotAt){
+      spawnCarrot();
+      nextCarrotAt = t + (2500 + Math.random()*2500);
+    }
+    // Collect carrot if capy overlaps
+    collectCarrotIfHit(nx,ny);
+
+    rafId = requestAnimationFrame(loop);
+  }
+
+  // Initialize
+  window.addEventListener('resize', () => setCapy(board.clientWidth*0.5, board.clientHeight*0.5));
+  reset();
+})();
+</script>
+</body>
+</html>
