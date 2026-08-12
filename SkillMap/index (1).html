@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillMap - Interactive Learning Journey</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Landing Page -->
+    <div id="landing-page" class="page active">
+      <div class="landing-page">
+        <div class="logo">
+          <i class="fas fa-map-marked-alt"></i>
+        </div>
+        <h1>Welcome to SkillMap!</h1>
+        <p class="subtitle">
+          Embark on an interactive coding journey. Master programming skills
+          through engaging challenges and track your progress as you level up!
+        </p>
+        <button id="start-btn" class="btn">Start Learning</button>
+      </div>
+    </div>
+
+    <!-- Skill Map Page -->
+    <div id="skill-map-page" class="page">
+      <div class="skill-map-header">
+        <button id="back-to-landing" class="back-btn">
+          <i class="fas fa-arrow-left"></i> Back to Home
+        </button>
+        <h2>Your Learning Journey</h2>
+        <div class="user-xp">XP: <span id="xp-count">0</span></div>
+      </div>
+
+      <div class="progress-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+
+      <div class="skill-map">
+        <div class="skill-node" data-skill="html">
+          <div class="skill-icon">
+            <i class="fab fa-html5"></i>
+          </div>
+          <div class="skill-name">HTML Basics</div>
+          <div class="skill-desc">Learn the structure of web pages</div>
+        </div>
+
+        <div class="skill-node locked" data-skill="css">
+          <div class="skill-icon">
+            <i class="fab fa-css3-alt"></i>
+          </div>
+          <div class="skill-name">CSS Styling</div>
+          <div class="skill-desc">Make your websites beautiful</div>
+          <div class="lock-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+        </div>
+
+        <div class="skill-node locked" data-skill="js">
+          <div class="skill-icon">
+            <i class="fab fa-js-square"></i>
+          </div>
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-desc">Add interactivity to your sites</div>
+          <div class="lock-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+        </div>
+
+        <div class="skill-node locked" data-skill="python">
+          <div class="skill-icon">
+            <i class="fab fa-python"></i>
+          </div>
+          <div class="skill-name">Python</div>
+          <div class="skill-desc">Versatile programming language</div>
+          <div class="lock-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+        </div>
+
+        <div class="skill-node locked" data-skill="react">
+          <div class="skill-icon">
+            <i class="fab fa-react"></i>
+          </div>
+          <div class="skill-name">React</div>
+          <div class="skill-desc">Build modern web applications</div>
+          <div class="lock-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+        </div>
+
+        <div class="skill-node locked" data-skill="node">
+          <div class="skill-icon">
+            <i class="fab fa-node-js"></i>
+          </div>
+          <div class="skill-name">Node.js</div>
+          <div class="skill-desc">Server-side JavaScript</div>
+          <div class="lock-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Learning Level Page -->
+    <div id="learning-level-page" class="page">
+      <div class="quiz-container">
+        <div class="quiz-header">
+          <div>
+            <h2 class="quiz-title" id="current-skill">HTML Basics</h2>
+            <p>Complete the challenge to earn XP</p>
+          </div>
+          <div class="quiz-progress">
+            Question <span id="current-question">1</span>/<span
+              id="total-questions"
+              >3</span
+            >
+          </div>
+        </div>
+
+        <div class="question-container">
+          <div class="question" id="question-text">
+            What does HTML stand for?
+          </div>
+          <div class="options" id="options-container"></div>
+        </div>
+
+        <div class="code-editor" id="code-editor" style="display: none;">
+          <div class="code-header">
+            <div class="code-title">Code Editor</div>
+            <div class="code-actions">
+              <button class="btn" id="run-code">Run Code</button>
+            </div>
+          </div>
+          <textarea
+            class="code-area"
+            id="code-area"
+            placeholder="Write your code here..."
+          ></textarea>
+          <div
+            id="output"
+            style="
+              margin-top: 15px;
+              padding: 10px;
+              background: #2d2d2d;
+              border-radius: 5px;
+              min-height: 50px;
+            "
+          ></div>
+        </div>
+
+        <div class="quiz-actions">
+          <button id="prev-question" class="btn" style="display: none;">
+            Previous
+          </button>
+          <button id="next-question" class="btn">Next Question</button>
+          <button id="submit-quiz" class="btn" style="display: none;">
+            Submit Quiz
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Completion Page -->
+    <div id="completion-page" class="page">
+      <div class="completion-page">
+        <div class="completion-icon">
+          <i class="fas fa-trophy"></i>
+        </div>
+        <h2 class="completion-title">Skill Completed!</h2>
+        <p class="completion-message" id="completion-message">
+          Congratulations! You've mastered HTML Basics. Your dedication has paid
+          off!
+        </p>
+        <div class="xp-earned">+<span id="earned-xp">50</span> XP Earned</div>
+        <button id="continue-learning" class="btn">Continue Learning</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
