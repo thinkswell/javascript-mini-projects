@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --color-grey: #eee;
+  --color-dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 30%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Start Here */
+body {
+  background: var(--color-dark-grey);
+}
+
+.main {
+  width: 100%;
+  display: flex;
+}
+
+header {
+  display: fixed;
+  top: 0;
+  left: 0;
+  background: #14120a;
+  padding: 2rem;
+  color: var(--white);
+  text-align: center;
+  min-height: 100%;
+  padding-bottom: 100%;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header input {
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 1px solid var(--white);
+  margin: 2rem 0;
+  color: var(--white);
+  font-size: 1.6rem;
+  padding: 3px;
+}
+
+.movies-container {
+  padding: 2rem;
+}
+
+.movies-container > p {
+  font-size: 2rem;
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+.movies {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.movie {
+  display: flex;
+  background: var(--color-grey);
+  padding: 1rem;
+  width: 40rem;
+  border-radius: 3px;
+  margin: 0 2rem 2rem 0;
+}
+
+.movie img {
+  width: 35%;
+}
+
+.details {
+  padding: 0 1rem;
+}
+
+.details h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.details p.rate {
+  font-weight: 600;
+}
+
+.rating {
+  background: var(--color-sec);
+  padding: 0 3px;
+  border-radius: 3px;
+  color: var(--white);
+}
+
+.overview {
+  font-size: 1.2rem;
+  width: 100%;
+  height: 135px;
+  overflow-y: auto;
+}
+
+.overview::-webkit-scrollbar {
+  height: 5px;
+  width: 4px;
+  border: 1px solid #d5d5d5;
+  background: #d5d5d5;
+}
+
+.overview::-webkit-scrollbar-track {
+  --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.overview::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  outline: 1px solid #eee;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    flex-direction: column;
+  }
+
+  header {
+    padding: 2rem;
+  }
+
+  .movie {
+    padding: 5px;
+    width: 32rem;
+    margin: 5px 0;
+  }
+}
