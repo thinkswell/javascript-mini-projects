@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ludo Mini Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Ludo Game</h1>
+
+    <div class="control-panel">
+      <div class="status-box">
+        <span>Current Turn: </span>
+        <strong id="turn-indicator" class="turn-red">Red</strong>
+      </div>
+      <div class="dice-section">
+        <button id="roll-btn">Roll Dice</button>
+        <div id="dice-view" class="dice-display">🎲</div>
+      </div>
+      <p id="msg">Click "Roll Dice" to start!</p>
+    </div>
+
+    <!-- 15x15 Ludo Board Grid -->
+    <div id="board" class="ludo-board"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
