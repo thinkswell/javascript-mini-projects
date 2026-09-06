@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Shot List Planner</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">PLAN YOUR NEXT PHOTO SESSION</p>
+      <h1>Photo Shot List Planner</h1>
+      <p>Keep your ideas organized and capture every shot that matters.</p>
+    </header>
+
+    <section class="panel" aria-labelledby="add-heading">
+      <h2 id="add-heading">Add a shot</h2>
+
+      <form id="shot-form">
+        <div class="field">
+          <label for="shot-title">Shot idea</label>
+          <input
+            type="text"
+            id="shot-title"
+            placeholder="Example: Sunset over the city skyline"
+            maxlength="120"
+            required
+          >
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="shot-category">Category</label>
+            <select id="shot-category">
+              <option value="Landscape">Landscape</option>
+              <option value="Street">Street</option>
+              <option value="Portrait">Portrait</option>
+              <option value="Architecture">Architecture</option>
+              <option value="Detail">Detail</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="shot-priority">Priority</label>
+            <select id="shot-priority">
+              <option value="High">High</option>
+              <option value="Medium" selected>Medium</option>
+              <option value="Low">Low</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="primary-button">Add shot</button>
+      </form>
+
+      <p id="feedback" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="panel" aria-labelledby="list-heading">
+      <div class="list-header">
+        <h2 id="list-heading">Your shot list</h2>
+        <p id="shot-count" aria-live="polite">0 of 0 shots completed</p>
+      </div>
+
+      <div class="field filter-field">
+        <label for="shot-filter">Show shots</label>
+        <select id="shot-filter">
+          <option value="all">All shots</option>
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+        </select>
+      </div>
+
+      <p id="empty-message">Your list is empty. Add your first shot above.</p>
+      <ul id="shot-list" class="shot-list"></ul>
+    </section>
+
+    <footer>
+      <p>Your shot list is saved in this browser on this device.</p>
+    </footer>
+  </main>
+</body>
+</html>
