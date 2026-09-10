@@ -1,0 +1,13 @@
+:root {
+  --slider-width: 600px;
+  --slider-height: 400px;
+}
+
+.slider-container {
+  display: flex;
+  overflow: hidden;
+  width: var(--slider-width);
+  height: var(--slider-height);
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
