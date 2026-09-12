@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="A picture sliding puzzle with solvable shuffling and a move counter."
+  >
+  <title>Slide Puzzle Game</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="game">
+    <header class="game-header">
+      <p class="eyebrow">A little challenge for your brain</p>
+      <h1>Slide Puzzle Game</h1>
+      <p>
+        Slide the picture tiles into the correct order.
+        Can you complete the image?
+      </p>
+    </header>
+
+    <section class="game-panel" aria-labelledby="puzzle-heading">
+      <h2 id="puzzle-heading">Picture puzzle</h2>
+
+      <div class="toolbar">
+        <p class="move-counter">
+          Moves: <span id="move-count">0</span>
+        </p>
+        <button id="shuffle-button" type="button">
+          Shuffle and start
+        </button>
+      </div>
+
+      <p id="instructions">
+        Select a tile next to the empty space to move it.
+        You can also use Tab to focus a tile and Enter or Space to select it.
+      </p>
+
+      <div
+        id="puzzle-board"
+        class="puzzle-board"
+        role="group"
+        aria-label="Sliding picture puzzle"
+        aria-describedby="instructions"
+      ></div>
+
+      <p id="game-status" class="game-status" role="status">
+        Select Shuffle and start to begin.
+      </p>
+    </section>
+
+    <aside class="reference-panel" aria-labelledby="reference-heading">
+      <h2 id="reference-heading">Your goal</h2>
+      <div
+        id="reference-image"
+        class="reference-image"
+        role="img"
+        aria-label="The complete landscape picture to recreate"
+      ></div>
+      <p>
+        Arrange tiles 1–8 in order, with the empty space in the
+        bottom-right corner.
+      </p>
+    </aside>
+
+    <footer>
+      <p>Built with HTML, CSS, and JavaScript.</p>
+    </footer>
+  </main>
+</body>
+</html>
