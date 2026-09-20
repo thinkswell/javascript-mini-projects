@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoundSpace Music Player</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="player">
+    <header>
+      <p class="eyebrow">YOUR MUSIC. YOUR SPACE.</p>
+      <h1>SoundSpace</h1>
+      <p>A simple player for your favorite tracks.</p>
+    </header>
+
+    <section aria-labelledby="now-playing">
+      <div class="artwork" aria-hidden="true">♫</div>
+      <h2 id="now-playing">No track selected</h2>
+      <p id="status" role="status">Choose audio files to get started.</p>
+
+      <label for="files">Add audio files</label>
+      <input id="files" type="file" accept="audio/*" multiple>
+      <p class="hint">Files stay on your device. Adding files replaces the playlist.</p>
+
+      <audio id="audio" preload="metadata"></audio>
+
+      <div class="timeline">
+        <label for="seek">Track position</label>
+        <input id="seek" type="range" min="0" max="100"
+               value="0" step="0.1" disabled>
+        <div class="times">
+          <span id="elapsed">0:00</span>
+          <span id="duration">0:00</span>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="previous" type="button" disabled>Previous</button>
+        <button id="play" class="primary" type="button" disabled>Play</button>
+        <button id="next" type="button" disabled>Next</button>
+      </div>
+
+      <div class="volume-control">
+        <label for="volume">Volume</label>
+        <input id="volume" type="range" min="0" max="1"
+               step="0.01" value="0.7">
+      </div>
+    </section>
+
+    <section class="playlist-section" aria-labelledby="playlist-heading">
+      <h2 id="playlist-heading">Your playlist</h2>
+      <p id="empty">Your added tracks will appear here.</p>
+      <ol id="playlist"></ol>
+    </section>
+  </main>
+</body>
+</html>
