@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinite Photo Slider</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 40px 16px;
+      background: #101820;
+      color: #f5f7fa;
+      font-family: Arial, sans-serif;
+    }
+
+    main {
+      max-width: 960px;
+      margin: auto;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+    }
+
+    .intro, .instructions {
+      color: #c5d0db;
+      line-height: 1.6;
+    }
+
+    .slider {
+      margin-top: 28px;
+      padding: 16px;
+      background: #1b2936;
+      border: 1px solid #536578;
+      border-radius: 16px;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    .photo-frame {
+      display: grid;
+      place-items: center;
+      aspect-ratio: 3 / 2;
+      overflow: hidden;
+      background: #080d12;
+      border-radius: 10px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    figcaption {
+      padding: 18px 0;
+      font-size: 1.1rem;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    button {
+      min-height: 44px;
+      padding: 12px 18px;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      background: #dde8f2;
+      color: #101820;
+      font: inherit;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ffffff;
+    }
+
+    button:focus-visible {
+      outline: 3px solid #ffce70;
+      outline-offset: 4px;
+    }
+
+    #play {
+      background: #ffce70;
+    }
+
+    .counter {
+      text-align: center;
+      color: #c5d0db;
+    }
+
+    .instructions {
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 24px 12px;
+      }
+
+      .slider {
+        padding: 12px;
+      }
+
+      button {
+        flex: 1 1 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Life Through the Lens</h1>
+    <p class="intro">
+      An infinite photo slider built with HTML, CSS, and JavaScript.
+    </p>
+
+    <section
+      class="slider"
+      aria-label="Photography gallery"
+      aria-roledescription="carousel"
+    >
+      <figure>
+        <div class="photo-frame">
+          <img id="photo" src="images/photo1.jpg" alt="Gallery photo 1">
+        </div>
+        <figcaption id="caption">Photo 1</figcaption>
+      </figure>
+
+      <div class="controls" aria-label="Slideshow controls">
+        <button id="previous" type="button" aria-label="Previous photo">
+          &#8592; Previous
+        </button>
+        <button id="play" type="button">Play slideshow</button>
+        <button id="next" type="button" aria-label="Next photo">
+          Next &#8594;
+        </button>
+      </div>
+
+      <p id="counter" class="counter" role="status" aria-live="polite">
+        Photo 1 of 3
+      </p>
+
+      <p class="instructions">
+        Use the arrow keys while a slideshow control is focused.
+        The gallery loops from the last photo back to the first.
+      </p>
+
+      <noscript>Enable JavaScript to use the slideshow controls.</noscript>
+    </section>
+  </main>
+
+  <script>
+    const photos = [
+  {
+    src: "images/photo1.jpg",
+    alt: "Pedestrians crossing a city street beside a columned building with glass skyscrapers rising behind it",
+    caption: "City Streets and Glass Towers"
+  },
+  {
+    src: "images/photo2.jpg",
+    alt: "City buildings at night illuminated with blue, red, and gold lights",
+    caption: "City Lights After Dark"
+  },
+  {
+    src: "images/photo3.jpg",
+    alt: "Sunset over railway tracks and a station platform beneath purple clouds",
+    caption: "Sunset at the Station"
+  }
+];
+
+    const slider = document.querySelector(".slider");
+    const photo = document.querySelector("#photo");
+    const caption = document.querySelector("#caption");
+    const counter = document.querySelector("#counter");
+    const previousButton = document.querySelector("#previous");
+    const nextButton = document.querySelector("#next");
+    const playButton = document.querySelector("#play");
+
+    let currentIndex = 0;
+    let timer = null;
+
+    function showPhoto(index) {
+      // Wrap in both directions without leaving the array.
+      currentIndex = (index + photos.length) % photos.length;
+      const currentPhoto = photos[currentIndex];
+
+      photo.src = currentPhoto.src;
+      photo.alt = currentPhoto.alt;
+      caption.textContent = currentPhoto.caption;
+      counter.textContent =
+        `Photo ${currentIndex + 1} of ${photos.length}`;
+    }
+
+    function pauseSlideshow() {
+      window.clearInterval(timer);
+      timer = null;
+      playButton.textContent = "Play slideshow";
+      counter.setAttribute("aria-live", "polite");
+    }
+
+    function startSlideshow() {
+      if (timer !== null) return;
+
+      // Avoid repeated screen-reader announcements during playback.
+      counter.setAttribute("aria-live", "off");
+      playButton.textContent = "Pause slideshow";
+      timer = window.setInterval(() => {
+        showPhoto(currentIndex + 1);
+      }, 4000);
+    }
+
+    function navigate(direction) {
+      pauseSlideshow();
+      showPhoto(currentIndex + direction);
+    }
+
+    previousButton.addEventListener("click", () => navigate(-1));
+    nextButton.addEventListener("click", () => navigate(1));
+
+    playButton.addEventListener("click", () => {
+      if (timer === null) {
+        startSlideshow();
+      } else {
+        pauseSlideshow();
+      }
+    });
+
+    slider.addEventListener("keydown", (event) => {
+      if (event.altKey || event.ctrlKey || event.metaKey) return;
+
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        navigate(-1);
+      } else if (event.key === "ArrowRight") {
+        event.preventDefault();
+        navigate(1);
+      }
+    });
+
+    // Pause when keyboard focus enters the gallery.
+    slider.addEventListener("focusin", (event) => {
+      if (!slider.contains(event.relatedTarget)) {
+        pauseSlideshow();
+      }
+    });
+
+    // Stop playback when the user switches tabs.
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) pauseSlideshow();
+    });
+
+    showPhoto(0);
+  </script>
+</body>
+</html>
