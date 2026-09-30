@@ -1,0 +1,704 @@
+/* ---------- Colour variables ---------- */
+
+:root {
+    --red: #e63946;
+    --green: #2a9d62;
+    --yellow: #f4b942;
+    --blue: #2878d0;
+
+    --ink: #1e293b;
+    --muted: #64748b;
+    --paper: #ffffff;
+    --surface: #f8fafc;
+    --line: #cbd5e1;
+
+    --shadow: 0 18px 45px rgba(15, 23, 42, 0.15);
+}
+
+
+/* ---------- Basic page styling ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: var(--ink);
+
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(40, 120, 208, 0.16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 90%,
+            rgba(230, 57, 70, 0.14),
+            transparent 30%
+        ),
+        #eef2f7;
+}
+
+button {
+    font: inherit;
+}
+
+button:focus-visible {
+    outline: 4px solid rgba(37, 99, 235, 0.3);
+    outline-offset: 3px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ---------- Main page container ---------- */
+
+.app-shell {
+    width: min(1180px, 94vw);
+    margin: 0 auto;
+    padding: 32px 0 48px;
+}
+
+
+/* ---------- Heading ---------- */
+
+header {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.eyebrow {
+    margin: 0 0 4px;
+
+    color: #2563eb;
+
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 0;
+
+    font-size: clamp(2.2rem, 7vw, 4.5rem);
+    line-height: 1;
+}
+
+.subtitle {
+    margin: 10px 0 0;
+    color: var(--muted);
+}
+
+
+/* ---------- Cards ---------- */
+
+.setup-card,
+.control-panel {
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 24px;
+
+    box-shadow: var(--shadow);
+}
+
+
+/* ---------- Player setup card ---------- */
+
+.setup-card {
+    width: min(540px, 100%);
+    margin: 48px auto;
+    padding: 32px;
+    text-align: center;
+}
+
+.setup-card h2 {
+    margin-top: 0;
+}
+
+.player-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+    margin: 22px 0;
+}
+
+.player-option,
+.secondary-button {
+    padding: 12px;
+
+    color: var(--ink);
+    background: var(--paper);
+
+    border: 1px solid var(--line);
+    border-radius: 12px;
+
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.player-option.selected {
+    color: #ffffff;
+    background: #2563eb;
+    border-color: #2563eb;
+}
+
+
+/* ---------- Main buttons ---------- */
+
+.primary-button {
+    width: 100%;
+    padding: 14px 18px;
+
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    border: none;
+    border-radius: 14px;
+
+    box-shadow:
+        0 10px 20px rgba(37, 99, 235, 0.23);
+
+    font-weight: 800;
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.primary-button:hover {
+    transform: translateY(-1px);
+}
+
+.primary-button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* ---------- Game layout ---------- */
+
+.game-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(300px, 760px)
+        minmax(240px, 320px);
+
+    gap: 24px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.board-wrap {
+    width: 100%;
+}
+
+
+/* ---------- Ludo board ---------- */
+
+.board {
+    position: relative;
+
+    width: min(76vw, 720px);
+    aspect-ratio: 1;
+
+    margin: auto;
+    overflow: hidden;
+
+    background: #f1f5f9;
+
+    border: 8px solid #ffffff;
+    border-radius: 26px;
+
+    box-shadow: var(--shadow);
+}
+
+
+/* ---------- Player home areas ---------- */
+
+.home {
+    position: absolute;
+
+    width: 31%;
+    height: 31%;
+
+    display: grid;
+    place-items: center;
+
+    color: #ffffff;
+
+    border-radius: 22px;
+
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.home::after {
+    content: "";
+
+    position: absolute;
+
+    width: 58%;
+    height: 58%;
+
+    border: 4px solid rgba(255, 255, 255, 0.75);
+    border-radius: 50%;
+}
+
+.home span {
+    position: relative;
+    z-index: 1;
+}
+
+.red-home {
+    top: 8%;
+    left: 8%;
+    background: var(--red);
+}
+
+.green-home {
+    top: 8%;
+    right: 8%;
+    background: var(--green);
+}
+
+.yellow-home {
+    right: 8%;
+    bottom: 8%;
+    background: var(--yellow);
+}
+
+.blue-home {
+    bottom: 8%;
+    left: 8%;
+    background: var(--blue);
+}
+
+.inactive-home {
+    opacity: 0.28;
+    filter: grayscale(1);
+}
+
+
+/* ---------- Finishing area ---------- */
+
+.centre-finish {
+    position: absolute;
+
+    top: 41%;
+    left: 41%;
+
+    width: 18%;
+    height: 18%;
+
+    display: grid;
+    place-items: center;
+
+    color: #475569;
+
+    background: conic-gradient(
+        var(--red) 0 25%,
+        var(--green) 0 50%,
+        var(--yellow) 0 75%,
+        var(--blue) 0
+    );
+
+    border: 7px solid #ffffff;
+    border-radius: 50%;
+
+    font-size: clamp(0.55rem, 1.7vw, 0.9rem);
+    font-weight: 950;
+
+    z-index: 1;
+}
+
+
+/* ---------- Track cells ---------- */
+
+.cell {
+    position: absolute;
+
+    width: 5.4%;
+    aspect-ratio: 1;
+
+    display: grid;
+    place-items: center;
+
+    color: #475569;
+    background: #ffffff;
+
+    border: 1px solid #94a3b8;
+    border-radius: 7px;
+
+    font-size: clamp(0.45rem, 1.25vw, 0.7rem);
+    font-weight: 800;
+
+    transform: translate(-50%, -50%);
+}
+
+.cell.safe {
+    background: #e2e8f0;
+}
+
+.cell.start-red {
+    background: #fecdd3;
+    border-color: var(--red);
+}
+
+.cell.start-green {
+    background: #bbf7d0;
+    border-color: var(--green);
+}
+
+.cell.start-yellow {
+    background: #fef08a;
+    border-color: var(--yellow);
+}
+
+.cell.start-blue {
+    background: #bfdbfe;
+    border-color: var(--blue);
+}
+
+
+/* ---------- Player tokens ---------- */
+
+.token {
+    position: absolute;
+
+    width: 4.4%;
+    aspect-ratio: 1;
+
+    border: 3px solid #ffffff;
+
+    border-radius:
+        50%
+        50%
+        50%
+        12%;
+
+    box-shadow:
+        0 3px 7px rgba(15, 23, 42, 0.45);
+
+    transform: translate(-50%, -50%);
+
+    cursor: default;
+    z-index: 5;
+
+    transition:
+        left 0.25s ease,
+        top 0.25s ease,
+        transform 0.15s ease;
+}
+
+.token::after {
+    content: "";
+
+    position: absolute;
+
+    top: 24%;
+    left: 24%;
+
+    width: 32%;
+    height: 32%;
+
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 50%;
+}
+
+.token.red {
+    background: var(--red);
+}
+
+.token.green {
+    background: var(--green);
+}
+
+.token.yellow {
+    background: var(--yellow);
+}
+
+.token.blue {
+    background: var(--blue);
+}
+
+.token.movable {
+    cursor: pointer;
+    animation: pulse 1s infinite;
+}
+
+.token.movable:hover {
+    transform:
+        translate(-50%, -50%)
+        scale(1.2);
+}
+
+.token.finished {
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 4px rgba(255, 255, 255, 0.6);
+}
+
+
+/* ---------- Token animation ---------- */
+
+@keyframes pulse {
+    50% {
+        filter: brightness(1.25);
+
+        box-shadow:
+            0 0 0 7px rgba(255, 255, 255, 0.65);
+    }
+}
+
+
+/* ---------- Control panel ---------- */
+
+.control-panel {
+    padding: 24px;
+    text-align: center;
+}
+
+.turn-banner {
+    padding: 10px;
+
+    color: #ffffff;
+    background: var(--red);
+
+    border-radius: 12px;
+
+    font-weight: 900;
+}
+
+
+/* ---------- Dice ---------- */
+
+.dice {
+    width: 92px;
+    height: 92px;
+
+    display: grid;
+    place-items: center;
+
+    margin: 24px auto;
+
+    color: #1d4ed8;
+    background: #ffffff;
+
+    border: 4px solid #dbeafe;
+    border-radius: 20px;
+
+    box-shadow:
+        inset 0 0 18px rgba(37, 99, 235, 0.1);
+
+    font-size: 3rem;
+    font-weight: 950;
+}
+
+.dice.rolling {
+    animation: shake 0.45s linear;
+}
+
+@keyframes shake {
+    25% {
+        transform:
+            rotate(12deg)
+            scale(0.92);
+    }
+
+    50% {
+        transform:
+            rotate(-12deg)
+            scale(1.06);
+    }
+
+    75% {
+        transform: rotate(8deg);
+    }
+}
+
+
+/* ---------- Status message ---------- */
+
+.message {
+    min-height: 48px;
+
+    color: var(--muted);
+    font-weight: 650;
+}
+
+
+/* ---------- Scoreboard ---------- */
+
+.scoreboard {
+    display: grid;
+    gap: 8px;
+
+    margin: 18px 0;
+
+    text-align: left;
+}
+
+.score-row {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 8px 10px;
+
+    background: var(--surface);
+
+    border-left: 8px solid;
+    border-radius: 8px;
+}
+
+.score-row strong {
+    text-transform: capitalize;
+}
+
+
+/* ---------- Board legend ---------- */
+
+.legend {
+    display: flex;
+    justify-content: center;
+
+    gap: 14px;
+    margin: 16px 0;
+
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.safe-dot {
+    display: inline-block;
+
+    width: 10px;
+    height: 10px;
+
+    background: #cbd5e1;
+    border-radius: 50%;
+}
+
+.secondary-button {
+    width: 100%;
+}
+
+
+/* ---------- Winner popup ---------- */
+
+.modal {
+    position: fixed;
+    inset: 0;
+
+    z-index: 20;
+
+    display: grid;
+    place-items: center;
+
+    padding: 20px;
+
+    background: rgba(15, 23, 42, 0.72);
+}
+
+.modal-card {
+    width: min(400px, 100%);
+
+    padding: 34px;
+
+    text-align: center;
+    background: #ffffff;
+
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+}
+
+.modal-card h2 {
+    margin: 8px 0;
+}
+
+.modal-card p {
+    color: var(--muted);
+}
+
+.trophy {
+    font-size: 4rem;
+}
+
+
+/* ---------- Tablet screens ---------- */
+
+@media (max-width: 860px) {
+    .game-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .board {
+        width: min(94vw, 650px);
+    }
+
+    .control-panel {
+        width: min(520px, 100%);
+        margin: auto;
+    }
+}
+
+
+/* ---------- Mobile screens ---------- */
+
+@media (max-width: 520px) {
+    .app-shell {
+        padding-top: 20px;
+    }
+
+    .setup-card {
+        padding: 22px 16px;
+    }
+
+    .player-options {
+        grid-template-columns: 1fr;
+    }
+
+    .board {
+        border-width: 4px;
+        border-radius: 16px;
+    }
+
+    .home {
+        border-radius: 12px;
+        font-size: 0.65rem;
+    }
+
+    .cell {
+        border-radius: 4px;
+    }
+
+    .token {
+        border-width: 2px;
+    }
+}

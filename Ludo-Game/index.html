@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="A responsive multiplayer Ludo game built using HTML, CSS and JavaScript."
+    >
+
+    <title>Ludo Game | Gauravi</title>
+
+    <!-- Connect the CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app-shell">
+
+        <!-- Game heading -->
+        <header>
+            <p class="eyebrow">JavaScript Mini Project</p>
+
+            <h1>Ludo Game</h1>
+
+            <p class="subtitle">
+                Roll a six, bring your tokens out and race to the finish!
+            </p>
+        </header>
+
+        <!-- Player-selection section -->
+        <section
+            class="setup-card"
+            id="setupCard"
+            aria-labelledby="setupTitle"
+        >
+            <h2 id="setupTitle">Choose Players</h2>
+
+            <div
+                class="player-options"
+                role="group"
+                aria-label="Number of players"
+            >
+                <button
+                    class="player-option selected"
+                    data-count="2"
+                    type="button"
+                >
+                    2 Players
+                </button>
+
+                <button
+                    class="player-option"
+                    data-count="3"
+                    type="button"
+                >
+                    3 Players
+                </button>
+
+                <button
+                    class="player-option"
+                    data-count="4"
+                    type="button"
+                >
+                    4 Players
+                </button>
+            </div>
+
+            <button
+                class="primary-button"
+                id="startButton"
+                type="button"
+            >
+                Start Game
+            </button>
+        </section>
+
+        <!-- Main game section -->
+        <section
+            class="game hidden"
+            id="game"
+            aria-label="Ludo game"
+        >
+            <div class="game-layout">
+
+                <!-- Ludo board -->
+                <div class="board-wrap">
+
+                    <div
+                        class="board"
+                        id="board"
+                        aria-label="Ludo board"
+                    >
+                        <!-- Red home -->
+                        <div class="home red-home" id="home-0">
+                            <span>Red</span>
+                        </div>
+
+                        <!-- Green home -->
+                        <div class="home green-home" id="home-1">
+                            <span>Green</span>
+                        </div>
+
+                        <!-- Yellow home -->
+                        <div class="home yellow-home" id="home-2">
+                            <span>Yellow</span>
+                        </div>
+
+                        <!-- Blue home -->
+                        <div class="home blue-home" id="home-3">
+                            <span>Blue</span>
+                        </div>
+
+                        <!-- Centre finishing area -->
+                        <div
+                            class="centre-finish"
+                            aria-label="Finish area"
+                        >
+                            FINISH
+                        </div>
+
+                        <!-- Track cells will be created by JavaScript -->
+                        <div class="track" id="track"></div>
+
+                        <!-- Player tokens will be created by JavaScript -->
+                        <div
+                            class="tokens-layer"
+                            id="tokensLayer"
+                        ></div>
+                    </div>
+                </div>
+
+                <!-- Game controls -->
+                <aside class="control-panel">
+
+                    <!-- Current player's turn -->
+                    <div
+                        class="turn-banner"
+                        id="turnBanner"
+                    >
+                        Red's Turn
+                    </div>
+
+                    <!-- Dice result -->
+                    <div
+                        class="dice"
+                        id="dice"
+                        aria-live="polite"
+                        aria-label="Dice has not been rolled"
+                    >
+                        –
+                    </div>
+
+                    <!-- Roll button -->
+                    <button
+                        class="primary-button"
+                        id="rollButton"
+                        type="button"
+                    >
+                        Roll Dice
+                    </button>
+
+                    <!-- Game instruction or result message -->
+                    <p
+                        class="message"
+                        id="message"
+                        aria-live="polite"
+                    >
+                        Roll the dice to begin.
+                    </p>
+
+                    <!-- Player progress -->
+                    <div
+                        class="scoreboard"
+                        id="scoreboard"
+                        aria-label="Player progress"
+                    ></div>
+
+                    <!-- Board information -->
+                    <div class="legend">
+                        <span>
+                            <i class="safe-dot"></i>
+                            Safe Cell
+                        </span>
+
+                        <span>
+                            ★ Start Cell
+                        </span>
+                    </div>
+
+                    <!-- Restart game -->
+                    <button
+                        class="secondary-button"
+                        id="newGameButton"
+                        type="button"
+                    >
+                        New Game
+                    </button>
+                </aside>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Winner popup -->
+    <div
+        class="modal hidden"
+        id="winnerModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="winnerTitle"
+    >
+        <div class="modal-card">
+
+            <div class="trophy">🏆</div>
+
+            <h2 id="winnerTitle">
+                We Have a Winner!
+            </h2>
+
+            <p id="winnerText"></p>
+
+            <button
+                class="primary-button"
+                id="playAgainButton"
+                type="button"
+            >
+                Play Again
+            </button>
+
+        </div>
+    </div>
+
+    <!-- Connect the JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
