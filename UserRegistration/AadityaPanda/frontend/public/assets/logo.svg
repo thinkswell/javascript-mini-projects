@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" role="img" aria-label="User Registration">
+  <rect width="300" height="100" rx="18" fill="#007bff"/>
+  <circle cx="50" cy="38" r="15" fill="#fff"/>
+  <path d="M22 80a28 24 0 0 1 56 0z" fill="#fff"/>
+  <text x="92" y="66" textLength="186" lengthAdjust="spacingAndGlyphs" fill="#fff" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="44" font-weight="700">UserReg</text>
+</svg>

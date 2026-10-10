@@ -1,0 +1,57 @@
+.dashboard-page {
+  height: 100vh;
+  background: linear-gradient(135deg, #f4f4f9, #ff4d4d);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.dashboard-content {
+  margin-top: 240px; 
+  padding: 3rem;
+  background: linear-gradient(135deg, #ffffff, #e0e0e0);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.dashboard-content h1 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.user-details {
+  margin-top: 20px;
+  display: table;
+  width: 100%;
+}
+
+.user-details p {
+  display: table-row;
+  font-size: 1rem;
+  margin: 0;
+  color: #333;
+}
+
+.user-details p strong {
+  display: table-cell;
+  font-weight: bold;
+  padding-right: 10px;
+  text-align: left;
+  color: #555;
+}
+
+.user-details p span {
+  display: table-cell;
+  padding-left: 10px;
+  color: #333;
+}
+
+.user-details p:not(:last-child) {
+  margin-bottom: 10px;
+}

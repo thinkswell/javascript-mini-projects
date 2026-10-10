@@ -1,0 +1,75 @@
+.login-page-app {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #6f86d6, #48c6ef);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.login-container-app {
+  width: 400px;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+.login-title-app {
+  font-size: 2rem;
+  color: #333333;
+  margin-top: 1.5rem;
+  text-align: center;  
+}
+
+.form-login-app .form-group-app {
+  margin-bottom: 1.25rem;
+}
+
+.form-login-app .form-control-app {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-login-app .form-control-app:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+.btn-block-app {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.btn-primary-app {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary-app:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.logo-link-app {
+  display: block;
+  margin: 0 auto; /* Center the logo horizontally */
+}
+
+.logo-app {
+  height: 50px;
+  margin-bottom: 1rem; /* Space between logo and title */
+}

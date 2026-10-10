@@ -1,0 +1,37 @@
+.sidebar-container {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 100%;
+  }
+  
+  .sidebar-logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #ecf0f1;
+  }
+  
+  .sidebar-menu-item {
+    margin: 15px 0;
+    padding: 10px;
+    font-size: 18px;
+    color: #ecf0f1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sidebar-menu-item:hover {
+    background-color: #34495e;
+    color: #fff; /* override Bootstrap's dark-blue link hover, unreadable on the dark sidebar */
+    text-decoration: none;
+  }
+
+  .logo {
+    width: 200px; 
+    height: auto; 
+  }
+  
