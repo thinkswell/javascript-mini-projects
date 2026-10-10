@@ -1,0 +1,52 @@
+.hero-section {
+  height: 100vh;
+  background: radial-gradient(ellipse at 50% 30%, #1d4ed8 0%, #0b1f5c 55%, #030a1f 100%);
+  background-attachment: fixed; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0;
+  position: relative;
+  z-index: 0;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: auto;
+  z-index: 1; 
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.action-buttons .btn {
+  font-size: 1.2rem;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+}
+
+/* Footer */
+.home-footer {
+  position: fixed; 
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1); 
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2); 
+  color: white;
+  text-align: center;
+  padding: 0.5rem 2rem; 
+  font-size: 1rem;
+  z-index: 1000; 
+}

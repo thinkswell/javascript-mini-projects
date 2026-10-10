@@ -1,0 +1,28 @@
+.admin-dashboard-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.main-content-area {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.content-section {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+.page-header {
+  color: #333;
+}
+
+.page-description {
+  color: #666;
+}

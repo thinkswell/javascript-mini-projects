@@ -1,0 +1,66 @@
+.signup-page-app {
+  background: linear-gradient(135deg, #6f86d6, #48c6ef);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+.signup-container-app {
+  width: 500px;
+  background-color: #ffffff;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.logo-link-app {
+  display: block;
+  margin: 0 auto 2rem auto; 
+}
+
+.logo-app {
+  height: 50px; 
+}
+
+.form-signup-app .form-group-app {
+  margin-bottom: 1.25rem;
+}
+
+.form-signup-app .form-control-app {
+  width: 93%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.form-signup-app .form-control-app:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+.btn-block-app {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.btn-primary-app {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-primary-app:hover {
+  background-color: #0056b3;
+}
+
+.login-link-app {
+  margin-top: 1rem;
+}

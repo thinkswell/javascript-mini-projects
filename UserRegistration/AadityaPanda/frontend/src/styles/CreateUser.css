@@ -1,0 +1,96 @@
+.create-user-container {
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  max-width: 600px;
+
+}
+
+.create-user-container h1 {
+  text-align: center;
+  /* font-size: 1.8rem; */
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.create-user-container .form-group {
+  margin-bottom: 15px;
+}
+
+.create-user-container label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.create-user-container .form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  /* border: 1px solid #ddd; */
+}
+
+.create-user-container .form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.create-user-container .btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.create-user-container .btn-primary {
+  background-color: #007bff;
+  border: 1px solid #007bff;
+  color: #fff;
+}
+
+.create-user-container .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+.create-user-container .btn-secondary {
+  background-color: #6c757d;
+  border: 1px solid #6c757d;
+  color: #fff;
+}
+
+.create-user-container .btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
+}
+
+/* Sidebar Styles */
+.sidebar-container {
+  width: 250px;
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 100%;
+}
+
+.sidebar-logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #ecf0f1;
+}
+
+.sidebar-menu-item {
+  margin: 15px 0;
+  padding: 10px;
+  font-size: 18px;
+  color: #ecf0f1;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-menu-item:hover {
+  background-color: #34495e;
+}
