@@ -1,0 +1,55 @@
+{
+  "name": "express-email-otp-login",
+  "version": "1.0.0",
+  "description": "Passwordless login for Express with email one-time codes and magic links, delivered through the Mailtrap Email API.",
+  "keywords": [
+    "express",
+    "nodejs",
+    "typescript",
+    "passwordless",
+    "passwordless-login",
+    "otp",
+    "email-otp",
+    "magic-link",
+    "authentication",
+    "transactional-email",
+    "mailtrap",
+    "email-api"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manishgupta412/express-email-otp-login.git"
+  },
+  "homepage": "https://github.com/manishgupta412/express-email-otp-login#readme",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/server.js",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "user:add": "tsx src/cli/addUser.ts"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.11.1",
+    "dotenv": "^18.0.7",
+    "express": "^5.3.0",
+    "mailtrap": "^5.0.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/express": "^5.0.6",
+    "@types/node": "^20.19.43",
+    "@types/supertest": "^7.2.1",
+    "supertest": "^7.3.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.11"
+  }
+}
