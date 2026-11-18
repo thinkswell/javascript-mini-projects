@@ -1,0 +1,66 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  padding: 16px;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 { font-size: 1.6rem; color: #1f2937; margin-bottom: 4px; }
+.sub { color: #6b7280; margin-bottom: 20px; font-size: 0.95rem; }
+
+label { display: block; font-weight: 600; margin-bottom: 6px; color: #374151; }
+
+input[type="date"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover { background: #4338ca; }
+
+.error { color: #dc2626; min-height: 1.2em; margin-top: 10px; font-size: 0.9rem; }
+
+.result { margin-top: 16px; }
+.hidden { display: none; }
+
+.age { display: flex; gap: 10px; margin-bottom: 14px; }
+.age div {
+  flex: 1;
+  text-align: center;
+  background: #eef2ff;
+  border-radius: 10px;
+  padding: 12px 4px;
+}
+.age span { display: block; font-size: 1.8rem; font-weight: 700; color: #4f46e5; }
+.age small { color: #6b7280; }
+
+ul { list-style: none; color: #374151; line-height: 1.8; }
