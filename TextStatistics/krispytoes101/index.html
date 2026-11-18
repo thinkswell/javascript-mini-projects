@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Statistics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Text Statistics</h1>
+        <p>Analyze your text instantly.</p>
+
+        <textarea id="textInput" placeholder="Start typing or paste your text here..."></textarea>
+
+        <div class="stats">
+            <div class="stat">
+                <h2 id="words">0</h2>
+                <p>Words</p>
+            </div>
+
+            <div class="stat">
+                <h2 id="characters">0</h2>
+                <p>Characters</p>
+            </div>
+
+            <div class="stat">
+                <h2 id="noSpaces">0</h2>
+                <p>Without Spaces</p>
+            </div>
+
+            <div class="stat">
+                <h2 id="sentences">0</h2>
+                <p>Sentences</p>
+            </div>
+
+            <div class="stat">
+                <h2 id="paragraphs">0</h2>
+                <p>Paragraphs</p>
+            </div>
+
+            <div class="stat">
+                <h2 id="readingTime">0</h2>
+                <p>Reading Time (min)</p>
+            </div>
+        </div>
+
+        <button id="clearButton">Clear Text</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
